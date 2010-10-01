@@ -1,0 +1,99 @@
+
+                          An inchoate, community-based
+                       Software Development Kit for Risen
+                        Version 1.0.96124.0 (Patch 1.10)
+
+1. License
+~~~~~~~~~~
+
+  The whole RisenSDK is licensed under a Creative Commons BY-NC-SA 3.0 License
+  (please visit http://creativecommons.org/licenses/by-nc-sa/3.0/ for details).
+  All other names used in the SDK may be trademarks of their respective owners.
+
+  The RisenSDK is completely independent and has (besides the game) absolutely
+  no relationship to the developer Piranha Bytes and the publisher Deep Silver.
+  Do not annoy them with support requests. They have contributed nothing (yet).
+
+2. Preface
+~~~~~~~~~~
+
+    Player: How do I get into the castle?
+    Guards: You don't. Only Gomez' people get to go in there.
+    Player: I see.
+
+  This SDK is intended for software developers with a strong background in C++
+  and reverse engineering (Microsoft Visual C++ binary programs in particular).
+  Without this expertise you are expected to get lost in space sooner or later.
+
+  The idea of this project is to use the exported classes, functions, and data
+  of the Genome libraries to extend Risen and develop custom tools or plug-ins.
+  For several reasons (name mangling, memory layout, etc.) we are bound to the
+  compiler that was used by Piranha Bytes to build Risen (Visual C++ 2005 SP1).
+  Fortunately the Visual C++ 2005 Express Edition ISO image is still available
+  on Microsoft's download server (google 0434C5AF-8FB5-4D64-B8D8-E9BDF3C83152).
+  Combined with the "Windows Server 2003 R2 Platform SDK" (has been superceded
+  by the Windows SDK, but the new SDKs do not include ATL/MFC headers) it adds
+  up to a development environment for free, that can be used with the RisenSDK.
+
+  To correctly handle exported data and functions with C linkage, I was forced
+  to develop a custom tool for creating the import libraries that can be found
+  in the /lib directory of the SDK. This tool is not part of this project (but
+  I think this is not a problem, it seems to work and no changes are expected).
+
+  For your own research, you might remove the protection wrapper (Solidshield)
+  from the application (bin/Risen.exe) and protected libraries (bin/Engine.dll,
+  bin/Game.dll, and bin/scripts/Script_Game.dll) to allow static code analysis.
+  Do not waste our time, such binaries will not be published for legal reasons.
+
+3. Loading
+~~~~~~~~~~
+
+    Player: I need to get into the castle!
+            I have a letter here for the High Fire Mage.
+    Thorus: And you expect me to let you stroll inside the castle
+            to hand it over and collect your reward?
+    Player: Yeah.
+
+  Checkout the "trunk" (main line of development) of the Subversion repository
+  at svn://nicode.net/risensdk/trunk/ into Risen's program installation folder.
+  For commits (write access) you need an account + password (send me an email).
+
+  Go to http://svn.nicode.net/risensdk/trunk/ to browse through the repository.
+
+4. Playing
+~~~~~~~~~~
+
+    Xardas: WHO DARES TO DISTURB ME IN MY STUDIES?
+    Player: My name is...
+    Xardas: I don't wish to know your name. It is insignificant.
+            All that matters is that you are the first person in years to have
+            solved my Golem's riddles.
+
+  As you will notice, the RisenSDK is in a very rudimentary state. All exports
+  of the SharedBase.dll are covered, but the source is full of FIXMEs 'n TODOs.
+  Expect to find problems and bugs in the template classes (has been developed
+  from scratch, and some should have been rewritten) and nearly all parameters
+  are unnamed. The reason is quite simple - lack of time. Most of the code has
+  been written in about two weeks. The SharedBase.dll was the easiest part. It
+  will require even more research and work to add support for the "foundation"
+  (FF) and "framework" (FX) modules. Virtual inheritance is a nice feature for
+  interfaces that might have been changed during the life cycle of the product.
+  But it is no fun to analyze the thunks and data access with negative offsets.
+
+  To get your code loaded by the engine, you can develop a script library that
+  follows the naming convention /bin/scripts/Script_*.dll - have a look at the
+  project in /source/Scripts/Script_Library (implements a new console command).
+
+5. Closing
+~~~~~~~~~~
+
+    Jackal: Hey, watch who you're trying to fool!
+            Come back when you have the ore!
+
+  This project is just a little too sparse and too late to be useful for Risen.
+  But if Piranha Bytes re-uses parts of the Genome engine for the next project,
+  it might speed up the development of community tools or plug-ins for Risen 2.
+
+  So Long, and Thanks for All the Fish
+  Nico Bendlin <nicode@gmx.net>
+
