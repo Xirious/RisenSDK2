@@ -38,8 +38,8 @@ class GE_DLLIMPORT bCPropertyTypeBase
 /* [0000].0034 */ public:    virtual void                             PropertyRead( bCIStream &, bCObjectBase * ) = 0;
 /* [0000].0038 */ public:    virtual GEU16                            Read( bCIStream & );
 /* [0000].003C */ public:    virtual void                             Write( bCOStream & );
-/* [0000].0040 */ private:   virtual GEBool                           Deserialize( void * a_pPropertyObject, bCXMLParserNode const * ) = 0;
-/* [0000].0044 */ private:   virtual GEBool                           Serialize( void * a_pPropertyObject, bCXMLParserNode * ) = 0;
+/* [0000].0040 */ public:    virtual GEBool                           Deserialize( bCObjectBase *, bCXMLParserNode const * ) = 0;
+/* [0000].0044 */ public:    virtual GEBool                           Serialize( bCObjectBase const *, bCXMLParserNode * ) = 0;
 /* [0000].0048 */ protected: virtual void                             Destroy( void );
 /* [0000].004C */ protected: virtual void                             Create( void );
 /* [0000].0050 */ protected: virtual bCPropertyTypeBase *             DoClone( void ) const;
