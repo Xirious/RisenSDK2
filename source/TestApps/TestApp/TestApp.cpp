@@ -38,30 +38,33 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
     }
 
     g_LoadModule( "Game.dll" );
-    g_LoadModule( "Importer.dll" );
 
-    bCString strMessage;
-    for( bCPropertyObjectTypeBase * pObjectType = bCPropertyObjectTypeBase::GetListHead(); pObjectType; pObjectType = pObjectType->GetListNext() )
+    bCPropertyObjectTypeBase * pObjectType = bCPropertyObjectTypeBase::FromName( "gCInfoCommandCreateItem" );
+    if( pObjectType )
     {
-        for( bTPtrArray< bCPropertyTypeBase * >::bCConstIterator ppPropertyType = pObjectType->BeginIterator(); ppPropertyType != pObjectType->EndIterator(); ++ppPropertyType )
+        bCObjectBase * pObject = pObjectType->CreateNewObject();
+        if( pObject )
         {
-            bCPropertyTypeBase * pPropertyType = *ppPropertyType;
-            GEInt iEnumValuesCount = pPropertyType->GetEnumValuesCount();
-            if( iEnumValuesCount > 0 )
+            bCString strMessage;
+            for( bTPtrArray< bCPropertyTypeBase * >::bCConstIterator ppPropertyType = pObjectType->BeginIterator(); ppPropertyType != pObjectType->EndIterator(); ++ppPropertyType )
             {
-                strMessage += bCString::GetFormattedString( "%s { ", pPropertyType->GetValueTypeName().GetText() );
-                for( GEInt iEnumValue = 0; iEnumValue < iEnumValuesCount; ++iEnumValue )
+                bCPropertyTypeBase * pPropertyType = *ppPropertyType;
+                strMessage += bCString::GetFormattedString( "%s (%s)", pPropertyType->GetPropertyName(), pPropertyType->GetValueTypeName() );
                 {
-                    bSEnumValue const & EnumValue = pPropertyType->GetEnumValue( iEnumValue );
-                    if( iEnumValue )
-                        strMessage += ", ";
-                    strMessage += bCString::GetFormattedString( "%s = 0x%8.8X", EnumValue.m_strValue.GetText(), EnumValue.m_u32Value );
+                    bCString strValue;
+                    if( pPropertyType->PropertyGetValue( pObject, strValue ) )
+                        strMessage += bCString::GetFormattedString( " = \"%s\"", strValue );
                 }
-                strMessage += bCString::GetFormattedString( " };  // %s.%s\n", pPropertyType->GetClassName().GetText(), pPropertyType->GetPropertyName().GetText() );
+                strMessage += "\n";
             }
+            {
+                bCXMLParserNode XMLParserNode;
+                if( pObject->Serialize( &XMLParserNode ) )
+                    strMessage += XMLParserNode.GetXML( 0, GETrue );
+            }
+            g_MessageBox( 0, strMessage, pObjectType->GetClassName(), 0 );
         }
     }
-    g_MessageBox( 0, strMessage, "EnumValues", 0 );
 
     return 0;
 }
