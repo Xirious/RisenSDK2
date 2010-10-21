@@ -27,12 +27,12 @@ class GE_DLLIMPORT bCPropertyTypeBase
 /* [0000].0008 */ public:    virtual bCString const &                 GetValueTypeName( void ) const = 0;
 /* [0000].000C */ public:    virtual bCPropertyObjectTypeBase const & GetClassType( void ) const = 0;
 /* [0000].0010 */ public:    virtual void                             PropertyInitialize( bCObjectBase * ) = 0;
-/* [0000].0014 */ public:    virtual GEBool                           HasEnumValues( void ) const = 0;
-/* [0000].0018 */ public:    virtual GEInt                            GetEnumValuesCount( void ) const = 0;
+/* [0000].0014 */ public:    virtual GEBool                           IsEnum( void ) const = 0;
+/* [0000].0018 */ public:    virtual GEInt                            GetEnumCount( void ) const = 0;
 /* [0000].001C */ public:    virtual bSEnumValue const &              GetEnumValue( GEInt ) const = 0;
-/* [0000].0020 */ public:    virtual bCPropertyConverterPtr           GetNativeProperty( bCObjectBase const * ) = 0;
-/* [0000].0024 */ public:    virtual GEBool                           PropertySetValue( bCObjectBase *, bCString const & ) = 0;
-/* [0000].0028 */ public:    virtual GEBool                           PropertyGetValue( bCObjectBase const *, bCString & ) const = 0;
+/* [0000].0020 */ public:    virtual bCPropertyConverterPtr           GetPropertyConverter( bCObjectBase const * ) = 0;
+/* [0000].0024 */ public:    virtual GEBool                           ConvertStringToValue( bCObjectBase *, bCString const & ) = 0;
+/* [0000].0028 */ public:    virtual GEBool                           ConvertValueToString( bCObjectBase const *, bCString & ) = 0;
 /* [0000].002C */ public:    virtual GEBool                           PropertyCopy( bCObjectBase *, bCObjectBase const * ) = 0;
 /* [0000].0030 */ public:    virtual void                             PropertyWrite( bCOStream &, bCObjectBase const * ) = 0;
 /* [0000].0034 */ public:    virtual void                             PropertyRead( bCIStream &, bCObjectBase * ) = 0;

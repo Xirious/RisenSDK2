@@ -52,7 +52,7 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
                 strMessage += bCString::GetFormattedString( "%s (%s)", pPropertyType->GetPropertyName(), pPropertyType->GetValueTypeName() );
                 {
                     bCString strValue;
-                    if( pPropertyType->PropertyGetValue( pObject, strValue ) )
+                    if( pPropertyType->ConvertValueToString( pObject, strValue ) )
                         strMessage += bCString::GetFormattedString( " = \"%s\"", strValue );
                 }
                 strMessage += "\n";
