@@ -4,7 +4,7 @@
 class bCObjectBase;              // forward
 class bCPropertyObjectTypeBase;  // forward
 
-//FIXME: Identifier is bSEnumValue pure guesswork.
+//FIXME: UDT name bSEnumValue guessed.
 struct bSEnumValue
 {
     bCString m_strValue;
@@ -13,7 +13,8 @@ struct bSEnumValue
 
 enum bEPropertyType
 {
-    //FIXME: bEPropertyType constants.
+    bEPropertyType_Member = 1,
+    bEPropertyType_Func,
     bEPropertyType_ForceDWORD = GE_FORCE_DWORD
 };
 
