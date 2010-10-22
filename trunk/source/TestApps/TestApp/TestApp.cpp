@@ -39,32 +39,23 @@ int WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
 
     g_LoadModule( "Game.dll" );
 
-    bCPropertyObjectTypeBase * pObjectType = bCPropertyObjectTypeBase::FromName( "gCInfoCommandCreateItem" );
-    if( pObjectType )
+    bCString strMessage;
+    for( bCPropertyObjectTypeBase * pObjectType = bCPropertyObjectTypeBase::GetListHead(); pObjectType; pObjectType = pObjectType->GetListNext() )
     {
-        bCObjectBase * pObject = pObjectType->CreateNewObject();
-        if( pObject )
+        for( bTPtrArray< bCPropertyTypeBase * >::bCConstIterator ppPropertyType = pObjectType->BeginIterator(); ppPropertyType != pObjectType->EndIterator(); ++ppPropertyType )
         {
-            bCString strMessage;
-            for( bTPtrArray< bCPropertyTypeBase * >::bCConstIterator ppPropertyType = pObjectType->BeginIterator(); ppPropertyType != pObjectType->EndIterator(); ++ppPropertyType )
+            bCPropertyTypeBase * pPropertyType = *ppPropertyType;
+            if( bEPropertyType_Func == pPropertyType->GetPropertyType() )
             {
-                bCPropertyTypeBase * pPropertyType = *ppPropertyType;
-                strMessage += bCString::GetFormattedString( "%s (%s)", pPropertyType->GetPropertyName(), pPropertyType->GetValueTypeName() );
-                {
-                    bCString strValue;
-                    if( pPropertyType->ConvertValueToString( pObject, strValue ) )
-                        strMessage += bCString::GetFormattedString( " = \"%s\"", strValue );
-                }
-                strMessage += "\n";
+                strMessage += bCString::GetFormattedString( "%s.%s (%s)\n",
+                    pPropertyType->GetClassName(),
+                    pPropertyType->GetPropertyName(),
+                    pPropertyType->GetValueTypeName()
+                    );
             }
-            {
-                bCXMLParserNode XMLParserNode;
-                if( pObject->Serialize( &XMLParserNode ) )
-                    strMessage += XMLParserNode.GetXML( 0, GETrue );
-            }
-            g_MessageBox( 0, strMessage, pObjectType->GetClassName(), 0 );
         }
     }
+    g_MessageBox( 0, strMessage, "bTPropertyTypeFunc", 0 );
 
     return 0;
 }
