@@ -1,0 +1,13 @@
+#
+# Genome library dependencies (by static imports)
+#
+FFCore:      SharedBase
+FileSystem2: SharedBase FFCore
+GUI2:        SharedBase FFCore
+FFC:         SharedBase FFCore FileSystem2 GUI2
+Engine:      SharedBase FFCore                  FFC
+Music:       SharedBase FFCore
+Game:        SharedBase FFCore                  FFC Engine Music
+Importer:    SharedBase FFCore                  FFC Engine       Game
+Script:      SharedBase                             Engine       Game
+Script_Game: SharedBase                             Engine       Game Script
