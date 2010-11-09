@@ -1,8 +1,7 @@
 #ifndef ENGINE_H_INCLUDED
 #define ENGINE_H_INCLUDED
 
-#include "FileSystem2.h"
-#include "GUI2.h"
+#include "FFC.h"
 
 /** /
 #ifdef _OPENMP
