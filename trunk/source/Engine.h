@@ -2,6 +2,7 @@
 #define ENGINE_H_INCLUDED
 
 #include "FileSystem2.h"
+#include "GUI2.h"
 
 /** /
 #ifdef _OPENMP
