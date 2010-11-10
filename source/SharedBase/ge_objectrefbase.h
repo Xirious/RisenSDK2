@@ -39,7 +39,7 @@ public: virtual                           ~bCObjectRefBase( void );
 private:
     static bCPropertyObjectTypeBase thisType;
 private:
-    GEU32 m_u32ReferenceCount: 31;
+    GEU32 m_u32ReferenceCount: 31;  // 0004
     GEU32 m_bIsValid         :  1;
 protected:
     void Invalidate( void );

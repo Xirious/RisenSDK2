@@ -102,4 +102,6 @@ enum eEShapeMaterial
 
 #include "Engine/ge_animshared.h"
 
+#include "Engine/ge_node.h"
+
 #endif
