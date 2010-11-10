@@ -124,6 +124,14 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\Script\gs_entity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_template.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script.cpp"
 			>
 		</File>

@@ -132,6 +132,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_animshared.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_archivefile.h"
 			>
 		</File>
