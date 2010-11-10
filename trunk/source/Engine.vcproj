@@ -152,6 +152,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_node.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_virtualfilesystem.h"
 			>
 		</File>

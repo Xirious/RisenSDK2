@@ -1,8 +1,6 @@
 #ifndef GS_TEMPLATE_H_INCLUDED
 #define GS_TEMPLATE_H_INCLUDED
 
-//HACK: class eCEntity.
-class eCEntity{};
 //HACK: class eCTemplateEntityProxy.
 class eCTemplateEntityProxy{};
 
