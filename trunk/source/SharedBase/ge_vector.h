@@ -23,14 +23,15 @@ public:
 private:
     union
     {
-        GEFloat m_fCoordinates[ bECoordinate_Count ];
+        GEFloat m_fCoordinates[ bECoordinate_Count ];  // 0000
         struct
         {
-            GEFloat m_fX;
-            GEFloat m_fY;
-            GEFloat m_fZ;
+            GEFloat m_fX;                              // 0000
+            GEFloat m_fY;                              // 0004
+            GEFloat m_fZ;                              // 0008
         };
     };
+    // sizeof(bCVector)                                   000C
 public:
     static bCVector         GE_STDCALL CrossProduct( bCVector const &, bCVector const & );
     static GEFloat          GE_STDCALL DotProduct( bCVector const &, bCVector const & );

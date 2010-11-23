@@ -152,7 +152,47 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_dynamicentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_entity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_entitypropertyset.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_entityproxy.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_frustumelementitem.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_geometryentity.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_node.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_processible.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_processor.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_templateentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_templateentityproxy.h"
 			>
 		</File>
 		<File

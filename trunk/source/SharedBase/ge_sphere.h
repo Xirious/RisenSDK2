@@ -5,8 +5,9 @@ class GE_DLLIMPORT bCSphere
 {
     friend class bTVolume< bCSphere >;
 private:
-    GEFloat  m_fRadius;
-    bCVector m_vecPosition;
+    GEFloat  m_fRadius;      // 0000
+    bCVector m_vecPosition;  // 0004
+    // sizeof(bCSphere)         0010
 protected:
     static GEFloat m_fDummy;
 public:
