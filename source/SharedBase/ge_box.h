@@ -23,13 +23,14 @@ public:
     };
     enum bEVertex
     {
-        //FIXME: bCBox::bEIntersection constants.
+        //FIXME: bCBox::bEVertex constants.
         bEVertex_Count = 8,
         bEVertex_ForceDWORD = GE_FORCE_DWORD
     };
 private:
-    bCVector m_vecMin;
-    bCVector m_vecMax;
+    bCVector m_vecMin;  // 0000
+    bCVector m_vecMax;  // 000C
+    // sizeof(bCBox)       0018
 protected:
     static GEFloat m_fDummy;
 public:

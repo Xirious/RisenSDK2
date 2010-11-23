@@ -8,7 +8,12 @@ class eCTemplateEntity;  // forward
 
 struct eSEntityID
 {
-    //FIXME: eSEntityID members.
+    eCEntity *     m_pEntity;        // 0000
+    GEU16          m_u16RegCounter;  // 0004
+    GEU8           __FIXME_0006;
+                   GE_PADDING( 1 );
+    bCPropertyID * m_pID;            // 0008
+    //FIXME: sizeof(eSEntityID)
 };
 
 class GE_DLLIMPORT eCNode :

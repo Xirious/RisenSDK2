@@ -46,9 +46,10 @@ public:
 private:
     union
     {
-        GEFloat m_fElements[ bEElement_Count ];
-        GEFloat m_fRowColumn[ bERow_Count ][ bEColumn_Count ];
+        GEFloat m_fElements[ bEElement_Count ];                 // 0000
+        GEFloat m_fRowColumn[ bERow_Count ][ bEColumn_Count ];  // 0000
     };
+    // sizeof(bCMatrix)                                            0040
 protected:
     bCVector4 &       AccessRow4( GEInt );
     bCVector &        AccessRow( GEInt );
