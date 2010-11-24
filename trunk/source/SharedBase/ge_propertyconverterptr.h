@@ -1,10 +1,13 @@
 #ifndef GE_PROPERTYCONVERTERPTR_H_INCLUDED
 #define GE_PROPERTYCONVERTERPTR_H_INCLUDED
 
+class bCPropertyConverter;  // forward
+
 class GE_DLLIMPORT bCPropertyConverterPtr
 {
 private:
-    bCPropertyConverter * m_pInstance;
+    bCPropertyConverter * m_pInstance;  // 0000
+    // sizeof(bCPropertyConverterPtr)      0004
 protected:
     void CopyFrom( bCPropertyConverterPtr const & );
     void Create( void );
