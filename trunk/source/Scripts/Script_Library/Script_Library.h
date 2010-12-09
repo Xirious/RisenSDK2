@@ -7,8 +7,6 @@
 
 #define bTObjStack bTObjArray
 
-#define eCGeometryEntity void
-
 #define eSScriptBase void
 
 class GE_DLLIMPORT eCScriptProxy

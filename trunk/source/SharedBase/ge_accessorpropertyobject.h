@@ -4,8 +4,9 @@
 class GE_DLLIMPORT bCAccessorPropertyObject
 {
 private:
-    bCPropertyObjectTypeBase * m_pBase;
-    bCObjectBase *             m_pObject;
+    bCPropertyObjectTypeBase * m_pBase;    // 0000
+    bCObjectBase *             m_pObject;  // 0004
+    // sizeof(bCAccessorPropertyObject)       0008
 protected:
     void Invalidate( void );
     void SetInstance( bCObjectBase * );

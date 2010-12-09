@@ -4,8 +4,9 @@
 class GE_DLLIMPORT bCPoint
 {
 private:
-    GEI32 m_i32X;
-    GEI32 m_i32Y;
+    GEI32 m_i32X;   // 0000
+    GEI32 m_i32Y;   // 0004
+    // sizeof(bCPoint) 0008
 public:
     GEI32 & AccessX( void );
     GEI32 & AccessY( void );
