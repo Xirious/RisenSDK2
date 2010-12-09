@@ -169,7 +169,7 @@ public:
 protected:
     eCEntity const & operator = ( eCEntity const & );
 public:
-    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static GELPChar s_carrAllocBuffer;
+    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static char s_carrAllocBuffer[];
 protected:
     eCEntity( eCEntity const & );
     eCEntity( void );

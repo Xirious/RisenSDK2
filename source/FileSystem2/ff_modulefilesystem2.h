@@ -34,7 +34,7 @@ struct SFFVolumeInfo
 };
 
 FF_DECLARE_INTERFACE( IFFModuleFileSystem2, "842E0AAF-C883-4B09-BF9F-581C134B047E" ) :
-    virtual public IFFUnknown
+    public virtual IFFUnknown
 {
 public:
     /* [0000].0000 */ virtual IFFFileSystemNode2 * GetRootNode( void ) const = 0;

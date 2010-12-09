@@ -61,6 +61,8 @@ class eCPortalRoom_PS{};
 #include "Engine/ge_messagehandler.h"
 #include "Engine/ge_window.h"
 
+#include "Engine/ge_guiresource2.h"
+
 #pragma warning( pop )
 
 #endif

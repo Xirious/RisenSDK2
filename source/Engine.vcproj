@@ -180,6 +180,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_guiresource2.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_messagehandler.h"
 			>
 		</File>
