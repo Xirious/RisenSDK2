@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="8,00"
 	Name="Importer"
-	ProjectGUID="{CB92AD57-168E-432d-8ADB-C01471CE7979}"
+	ProjectGUID="{CB92AD57-168E-432D-8ADB-C01471CE7979}"
 	RootNamespace="Importer"
 	>
 	<Platforms>
