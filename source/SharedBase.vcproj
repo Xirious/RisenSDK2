@@ -314,6 +314,10 @@
 				Name="message"
 				>
 				<File
+					RelativePath=".\SharedBase\ge_message.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\SharedBase\ge_message.h"
 					>
 				</File>
@@ -480,6 +484,10 @@
 			</File>
 			<File
 				RelativePath=".\SharedBase\ge_md5.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SharedBase\ge_propertycontainer.cpp"
 				>
 			</File>
 			<File
@@ -755,10 +763,6 @@
 				>
 			</File>
 		</Filter>
-		<File
-			RelativePath=".\SharedBase.cpp"
-			>
-		</File>
 		<File
 			RelativePath=".\SharedBase.h"
 			>
