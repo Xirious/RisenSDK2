@@ -132,6 +132,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\EngineEnum.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_animshared.h"
 			>
 		</File>
@@ -176,6 +180,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_messagehandler.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_node.h"
 			>
 		</File>
@@ -197,6 +205,10 @@
 		</File>
 		<File
 			RelativePath=".\Engine\ge_virtualfilesystem.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_window.h"
 			>
 		</File>
 	</Files>
