@@ -1,26 +1,3 @@
-void bCPropertyContainer::Invalidate( void )
-{
-}
-
-bEResult bCPropertyContainer::Read( bCIStream & )
-{
-    return bEResult_Ok;
-}
-
-bEResult bCPropertyContainer::Write( bCOStream & ) const
-{
-    return bEResult_Ok;
-}
-
-bCPropertyContainer::bCPropertyContainer( void )
-{
-    this->Invalidate();
-}
-
-bCPropertyContainer::~bCPropertyContainer( void )
-{
-}
-
 template< typename T >
 void bTPropertyContainer< T >::Invalidate( void )
 {
@@ -139,9 +116,9 @@ bTPropertyContainer< T >::bTPropertyContainer( bTPropertyContainer< T > const & 
 }
 
 template< typename T >
-bTPropertyContainer< T >::bTPropertyContainer( void ) :
-    bCPropertyContainer()
+bTPropertyContainer< T >::bTPropertyContainer( void )
 {
+    this->Invalidate();
 }
 
 template< typename T >
