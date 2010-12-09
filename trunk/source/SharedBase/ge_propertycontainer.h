@@ -18,8 +18,6 @@ public:
    ~bCPropertyContainer( void );
 };
 
-#pragma warning( pop )
-
 template< typename T >
 class bTPropertyContainer :
     public bCPropertyContainer
@@ -57,6 +55,8 @@ public:
     bTPropertyContainer( void );
    ~bTPropertyContainer( void );
 };
+
+#pragma warning( pop )
 
 #include "ge_propertycontainer.inl"
 
