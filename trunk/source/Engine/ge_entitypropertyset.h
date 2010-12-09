@@ -139,7 +139,7 @@ public:
     GEBool                   IsRenderingEnabled( void ) const;
     GEBool                   IsTemplateEntityAttached( void ) const;
 public:
-    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static GELPChar s_carrAllocBuffer;
+    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static char s_carrAllocBuffer[];
 public:
     eCEntityPropertySet & operator = ( eCEntityPropertySet const & );
 public:
