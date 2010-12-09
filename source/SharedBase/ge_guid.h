@@ -4,9 +4,10 @@
 class GE_DLLIMPORT bCGuid
 {
 private:
-    bSGuid m_Guid;
-    GEBool m_Valid;
+    bSGuid m_Guid;   // 0000
+    GEBool m_Valid;  // 0010
            GE_PADDING( 3 )
+    // sizeof(bCGuid)   0014
 protected:
     GEBool IsEqualTo( bCGuid const & ) const;
     GEBool IsGreaterThan( bCGuid const & ) const;

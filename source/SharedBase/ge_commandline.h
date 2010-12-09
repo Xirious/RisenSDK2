@@ -8,8 +8,9 @@
 class GE_DLLIMPORT bCCommandLine
 {
 private:
-    bTStringObjMap< bCString > m_mapOptions;
-    bTObjArray< bCString >     m_arrArguments;
+    bTStringObjMap< bCString > m_mapOptions;    // 0000
+    bTObjArray< bCString >     m_arrArguments;  // 0010
+    // sizeof(bCCommandLine)                       001C
 protected:
     static GEBool GE_STDCALL SkipOption( bCString &, bCString &, bCString & );
     static GEBool GE_STDCALL SkipOptionDelimiter( bCString & );

@@ -21,8 +21,9 @@ public:
         bEPoint_ForceDWORD = GE_FORCE_DWORD
     };
 private:
-    bCPoint m_TopLeft;
-    bCPoint m_BottomRight;
+    bCPoint m_TopLeft;      // 0000
+    bCPoint m_BottomRight;  // 0008
+    // sizeof(bCRect)          0010
 public:
     GEI32 &         AccessBottom( void );
     bCPoint &       AccessBottomRight( void );
