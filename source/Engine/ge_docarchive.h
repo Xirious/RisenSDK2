@@ -15,13 +15,8 @@ struct eSDocArchiveConfig
     bCString               m_strBinaryExt;
     bCString               m_strRawPath;
     bTObjArray< bCString > m_arrRawExts;
-    __forceinline eSDocArchiveConfig( GELPCChar a_pcBinaryPath, GELPCChar a_pcBinaryName, GELPCChar a_pcBinaryExt, GELPCChar a_pcRawPath ) :
-        m_strBinaryPath( a_pcBinaryPath ), m_strBinaryName( a_pcBinaryName ), m_strBinaryExt( a_pcBinaryExt ), m_strRawPath( a_pcRawPath )
-    {
-    }
-    __forceinline ~eSDocArchiveConfig( void )
-    {
-    }
+    eSDocArchiveConfig( GELPCChar a_pcBinaryPath, GELPCChar a_pcBinaryName, GELPCChar a_pcBinaryExt, GELPCChar a_pcRawPath );
+    ~eSDocArchiveConfig( void );
 };
 
 #pragma warning( push )

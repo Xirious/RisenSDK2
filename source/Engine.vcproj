@@ -124,10 +124,6 @@
 	</References>
 	<Files>
 		<File
-			RelativePath=".\Engine.cpp"
-			>
-		</File>
-		<File
 			RelativePath=".\Engine.h"
 			>
 		</File>
@@ -145,6 +141,10 @@
 		</File>
 		<File
 			RelativePath=".\Engine\ge_archivemanager.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_docarchive.cpp"
 			>
 		</File>
 		<File

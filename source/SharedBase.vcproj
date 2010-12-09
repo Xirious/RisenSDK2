@@ -435,6 +435,10 @@
 			Name="types"
 			>
 			<File
+				RelativePath=".\SharedBase\ge_datetime.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\SharedBase\ge_datetime.h"
 				>
 			</File>
@@ -447,6 +451,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\SharedBase\ge_string.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\SharedBase\ge_string.h"
 				>
 			</File>
@@ -456,6 +464,10 @@
 			</File>
 			<File
 				RelativePath=".\SharedBase\ge_types.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SharedBase\ge_unicodestring.cpp"
 				>
 			</File>
 			<File
