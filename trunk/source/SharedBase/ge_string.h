@@ -10,10 +10,7 @@ protected:
     {
         GEU32 m_u32Length;
         GEU32 m_u32RefCount;
-        inline GELPChar GetText( void )
-        {
-            return reinterpret_cast< GELPChar >( this + 1 );
-        }
+        GELPChar GetText( void );
     };
 protected:
     GELPChar m_pcText;

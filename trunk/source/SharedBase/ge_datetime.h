@@ -7,10 +7,7 @@ typedef struct tagUI_FILETIME {
         GEU64      m_u64DateTime;
         bSFileTime m_FileTime;
     };
-    inline GEU64 GetDateTime( void ) const
-    {
-        return m_u64DateTime * 20000000 / 20000000;
-    }
+    GEU64 GetDateTime( void ) const;
 } bSUIFileTime;
 
 class GE_DLLIMPORT bCDateTime

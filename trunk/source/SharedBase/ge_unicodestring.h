@@ -9,10 +9,7 @@ protected:
         GEInt m_iRefCount;
         GEInt m_iLength;
         GEInt m_iAllocLength;
-        inline GELPUnicodeChar GetText( void )
-        {
-            return reinterpret_cast< GELPUnicodeChar >( this + 1 );
-        }
+        GELPUnicodeChar GetText( void );
     };
 protected:
     GELPUnicodeChar m_pwText;
