@@ -131,6 +131,14 @@
 			RelativePath=".\FFC.h"
 			>
 		</File>
+		<File
+			RelativePath=".\FFC\fx_locstring.h"
+			>
+		</File>
+		<File
+			RelativePath=".\FFC\fx_tableitem.h"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
