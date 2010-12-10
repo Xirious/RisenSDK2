@@ -2,6 +2,8 @@
 #define FF_DEF_H_INCLUDED
 
 #define FF_PADDING( X ) char __padding[ X ];
+#define FF_PADDING1( X ) char __padding1[ X ];
+#define FF_PADDING2( X ) char __padding2[ X ];
 
 #define FF_FORCE_DWORD 0x7FFFFFFFL
 

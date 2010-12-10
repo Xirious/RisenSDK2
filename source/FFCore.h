@@ -4,7 +4,9 @@
 #include "SharedBase.h"
 
 #include "FFCore/ff_def.h"
+#include "FFCore/ff_enum.h"
 #include "FFCore/ff_types.h"
+#include "FFCore/ff_struct.h"
 #include "FFCore/ff_system.h"
 #include "FFCore/ff_unknown.h"
 #include "FFCore/ff_criticalsection.h"

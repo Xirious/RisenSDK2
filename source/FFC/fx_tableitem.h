@@ -1,15 +1,15 @@
 #ifndef FX_TABLEITEM_H_INCLUDED
 #define FX_TABLEITEM_H_INCLUDED
 
-class GE_DLLIMPORT CFXTableItem
+class FF_DLLIMPORT CFXTableItem
 {
 protected:
     struct SData
     {
         bCUnicodeString m_strText;    // 0000
-        GEBool          m_bModified;  // 0004
-                        GE_PADDING( 3 )
-        GEU32           m_u32Ref;     // 0008
+        FFBool          m_bModified;  // 0004
+                        FF_PADDING( 3 )
+        FFU32           m_u32Ref;     // 0008
         // sizeof(CFXTableItem::SData)   000C
     };
 protected:
@@ -23,8 +23,8 @@ protected:
 public:
     void            Detach( void );
     bCUnicodeString GetText( void ) const;
-    GEBool          IsAttached( void ) const;
-    GEBool          IsModified( void ) const;
+    FFBool          IsAttached( void ) const;
+    FFBool          IsModified( void ) const;
     void            SetText( bCUnicodeString const & );
 public:
     CFXTableItem & operator = ( CFXTableItem const & );

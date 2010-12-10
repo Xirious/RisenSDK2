@@ -131,15 +131,19 @@
 				>
 			</File>
 			<File
-				RelativePath=".\FFCore\ff_types.h"
+				RelativePath=".\FFCore\ff_enum.h"
 				>
 			</File>
-		</Filter>
-		<Filter
-			Name="system"
-			>
+			<File
+				RelativePath=".\FFCore\ff_struct.h"
+				>
+			</File>
 			<File
 				RelativePath=".\FFCore\ff_system.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFCore\ff_types.h"
 				>
 			</File>
 		</Filter>
