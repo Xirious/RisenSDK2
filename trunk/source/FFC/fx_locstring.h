@@ -1,14 +1,14 @@
 #ifndef FX_LOCSTRING_H_INCLUDED
 #define FX_LOCSTRING_H_INCLUDED
 
-class GE_DLLIMPORT CFXLocString :
+class FF_DLLIMPORT CFXLocString :
     public CFXTableItem
 {
 protected:
     bCUnicodeString m_strKey;  // 0004
     // sizeof(CFXLocString)       0008
 protected:
-    GEBool IsModified( void ) const;
+    FFBool IsModified( void ) const;
     void   Resolve( void ) const;
     void   Update( void ) const;
 public:
@@ -19,16 +19,16 @@ public:
     bCUnicodeString GetText( void ) const;
     bCUnicodeString GetText( bCString const & ) const;
     bCUnicodeString GetText( bCUnicodeString const & ) const;
-    GEBool          InsertText( bCString const & );
-    GEBool          InsertText( bCUnicodeString const &, bCUnicodeString const & );
-    GEBool          InsertText( bCUnicodeString const & );
-    GEBool          IsAttached( void ) const;
-    GEBool          IsKeyValid( void ) const;
+    FFBool          InsertText( bCString const & );
+    FFBool          InsertText( bCUnicodeString const &, bCUnicodeString const & );
+    FFBool          InsertText( bCUnicodeString const & );
+    FFBool          IsAttached( void ) const;
+    FFBool          IsKeyValid( void ) const;
     void            SetKey( bCString const & );
     void            SetKey( bCUnicodeString const & );
-    GEBool          SetText( bCString const & );
-    GEBool          SetText( bCUnicodeString const & );
-    GEBool          SetText( bCUnicodeString const &, bCUnicodeString const & );
+    FFBool          SetText( bCString const & );
+    FFBool          SetText( bCUnicodeString const & );
+    FFBool          SetText( bCUnicodeString const &, bCUnicodeString const & );
 public:
                    operator bCString        ( void ) const;
                    operator bCUnicodeString ( void ) const;

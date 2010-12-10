@@ -4,6 +4,9 @@
 #include "FileSystem2.h"
 #include "GUI2.h"
 
+#include "FFC/fx_iostatistics.h"
+#include "FFC/fx_iostream.h"
+
 #include "FFC/fx_tableitem.h"
 #include "FFC/fx_locstring.h"
 

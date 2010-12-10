@@ -123,20 +123,40 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="io"
+			>
+			<File
+				RelativePath=".\FFC\fx_iostatistics.h"
+				>
+			</File>
+			<Filter
+				Name="streams"
+				>
+				<File
+					RelativePath=".\FFC\fx_iostream.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="loc"
+			>
+			<File
+				RelativePath=".\FFC\fx_locstring.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFC\fx_tableitem.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\FFC.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\FFC.h"
-			>
-		</File>
-		<File
-			RelativePath=".\FFC\fx_locstring.h"
-			>
-		</File>
-		<File
-			RelativePath=".\FFC\fx_tableitem.h"
 			>
 		</File>
 	</Files>
