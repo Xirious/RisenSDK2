@@ -124,6 +124,10 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\GUI2\ff_guifont2.h"
+			>
+		</File>
+		<File
 			RelativePath=".\GUI2\ff_modulegui2.h"
 			>
 		</File>
