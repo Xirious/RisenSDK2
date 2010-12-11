@@ -48,7 +48,7 @@ public:
     };
 public: virtual ~CFXTable( void );  // [0000].0000
 protected:
-    bTValMap< bCUnicodeString, FFInt > m_mapItems;         // 0004
+    bTValMap< bCUnicodeString, FFInt > m_mapRows;          // 0004
     bTValMap< bCUnicodeString, FFInt > m_mapColumns;       // 0014
     bTPtrArray< CFXTableColumn * >     m_arrColumns;       // 0024
     FFU32                              m_iSelectedColumn;  // 0030
