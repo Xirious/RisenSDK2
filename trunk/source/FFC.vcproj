@@ -147,6 +147,18 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FFC\fx_table.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFC\fx_tablecolumn.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFC\fx_tablediff.h"
+				>
+			</File>
+			<File
 				RelativePath=".\FFC\fx_tableitem.h"
 				>
 			</File>

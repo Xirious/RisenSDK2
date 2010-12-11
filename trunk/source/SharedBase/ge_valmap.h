@@ -16,7 +16,7 @@ public:
 protected:
     bTPtrArray< bSNode * > m_arrNodes;
     GEU32                  m_u32Count;
-protected:                                                                                                                  // Protected Creation/Deletion Methods
+protected:
     bSNode *       AccessNode( K const & _k, GEU32 & _h );
     bSNode const * GetNode( K const & _k, GEU32 & _h ) const;
     void           Init( void );
