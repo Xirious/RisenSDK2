@@ -162,6 +162,10 @@
 				RelativePath=".\FFC\fx_tableitem.h"
 				>
 			</File>
+			<File
+				RelativePath=".\FFC\fx_tableitemproxy.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\FFC.cpp"

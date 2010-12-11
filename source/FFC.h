@@ -11,6 +11,7 @@
 #include "FFC/fx_tablecolumn.h"
 #include "FFC/fx_tablediff.h"
 #include "FFC/fx_table.h"
+#include "FFC/fx_tableitemproxy.h"
 #include "FFC/fx_locstring.h"
 
 #endif
