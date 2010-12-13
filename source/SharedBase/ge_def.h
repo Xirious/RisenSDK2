@@ -15,4 +15,15 @@
 #define GE_C_LINKAGE extern "C"
 #define GE_DLLIMPORT __declspec( dllimport )
 
+#define GE_PASTE_TOKENS( A, B ) GE_PASTE_TOKENS_( A, B )
+#define GE_PASTE_TOKENS_( A, B ) GE_PASTE_TOKENS__( A, B )
+#define GE_PASTE_TOKENS__( A, B ) A##B
+namespace Genome
+{
+    template< bool match > struct SIZEOF_ASSERTION;
+    template<> struct SIZEOF_ASSERTION< true >{ enum { value = 1 }; };
+    template< int x > struct sizeof_test{};
+}
+#define GE_ASSERT_SIZEOF( TYPE, SIZE ) typedef ::Genome::sizeof_test< sizeof( ::Genome::SIZEOF_ASSERTION< sizeof( TYPE ) == ( SIZE ) > ) > GE_PASTE_TOKENS( Genome_sizeof_, __COUNTER__ );
+
 #endif
