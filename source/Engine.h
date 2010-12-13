@@ -30,6 +30,8 @@
 
 #include "Engine/ge_animshared.h"
 
+#include "Engine/ge_gfxobject.h"
+
 //HACK: bTRefPtrArray is like bTPtrArray but uses Add/ReleaseReference of the elements.
 #define bTRefPtrArray bTPtrArray
 //HACK: Get Entity classes it compiling...
