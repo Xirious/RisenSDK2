@@ -15,6 +15,7 @@
 #include "FFC/fx_tablemapitem.h"
 #include "FFC/fx_tablemap.h"
 #include "FFC/fx_locstring.h"
+#include "FFC/fx_locstringex.h"
 #include "FFC/fx_loctable.h"
 
 #endif

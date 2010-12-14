@@ -1,10 +1,10 @@
 #ifndef FX_LOCSTRING_H_INCLUDED
 #define FX_LOCSTRING_H_INCLUDED
 
-class FF_DLLIMPORT CFXLocString :
-    public CFXTableItem
+class FF_DLLIMPORT CFXLocString
 {
 protected:
+    CFXTableItem    m_Item;    // 0000
     bCUnicodeString m_strKey;  // 0004
 protected:
     FFBool IsModified( void ) const;
