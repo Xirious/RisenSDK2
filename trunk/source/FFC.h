@@ -7,6 +7,12 @@
 #include "FFC/fx_iostatistics.h"
 #include "FFC/fx_iostream.h"
 
+#include "FFC/fx_physicalfilestream.h"
+#include "FFC/fx_physicalfile.h"
+#include "FFC/fx_physicalfilefind.h"
+#include "FFC/fx_physicalfilemapping.h"
+#include "FFC/fx_physicalfilesystem.h"
+
 #include "FFC/fx_tableitem.h"
 #include "FFC/fx_tablecolumn.h"
 #include "FFC/fx_tablediff.h"
