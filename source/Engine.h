@@ -28,9 +28,14 @@
 #include "Engine/ge_docobject.h"
 #include "Engine/ge_docarchive.h"
 
-#include "Engine/ge_animshared.h"
-
+//FIXME: eCVideoPlayer class.
+class eCVideoPlayer{};  // sizeof 0030
+#include "Engine/ge_gfxshared.h"
+#include "Engine/ge_apitexture.h"
 #include "Engine/ge_gfxobject.h"
+#include "Engine/ge_gfximagedata.h"
+
+#include "Engine/ge_animshared.h"
 
 //HACK: bTRefPtrArray is like bTPtrArray but uses Add/ReleaseReference of the elements.
 #define bTRefPtrArray bTPtrArray
