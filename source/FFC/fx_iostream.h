@@ -7,8 +7,6 @@ public: virtual FFU32  Read( FFLPVoid,  FFU32 ) const    = 0;  // [0000].0000
 public: virtual FFU32  Write( FFLPCVoid, FFU32 )         = 0;  // [0000].0004
 public: virtual FFBool GetPosition( FFI64 & ) const      = 0;  // [0000].0008
 public: virtual FFBool SetPosition( FFI64, EFFFileSeek ) = 0;  // [0000].000C
-protected:
-    // sizeof(CFXIOStream) 0004
 public:
     FFU32 Read( FFI8 & ) const;
 	FFU32 Read( FFU8 & ) const;
@@ -48,5 +46,6 @@ public:
     CFXIOStream( CFXIOStream const & );
     CFXIOStream( void );
 };
+GE_ASSERT_SIZEOF( CFXIOStream, 0x0004 )
 
 #endif

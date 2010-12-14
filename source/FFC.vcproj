@@ -130,11 +130,31 @@
 				RelativePath=".\FFC\fx_iostatistics.h"
 				>
 			</File>
+			<File
+				RelativePath=".\FFC\fx_iostream.h"
+				>
+			</File>
 			<Filter
-				Name="streams"
+				Name="physical"
 				>
 				<File
-					RelativePath=".\FFC\fx_iostream.h"
+					RelativePath=".\FFC\fx_physicalfile.h"
+					>
+				</File>
+				<File
+					RelativePath=".\FFC\fx_physicalfilefind.h"
+					>
+				</File>
+				<File
+					RelativePath=".\FFC\fx_physicalfilemapping.h"
+					>
+				</File>
+				<File
+					RelativePath=".\FFC\fx_physicalfilestream.h"
+					>
+				</File>
+				<File
+					RelativePath=".\FFC\fx_physicalfilesystem.h"
 					>
 				</File>
 			</Filter>
