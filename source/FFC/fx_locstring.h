@@ -6,7 +6,6 @@ class FF_DLLIMPORT CFXLocString :
 {
 protected:
     bCUnicodeString m_strKey;  // 0004
-    // sizeof(CFXLocString)       0008
 protected:
     FFBool IsModified( void ) const;
     void   Resolve( void ) const;
@@ -39,5 +38,6 @@ public:
     CFXLocString( void );
    ~CFXLocString( void );
 };
+GE_ASSERT_SIZEOF( CFXLocString, 0x0008 )
 
 #endif

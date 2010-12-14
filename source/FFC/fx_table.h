@@ -3,10 +3,9 @@
 
 class IFXTableController
 {
-public: virtual FFBool RequestCheckout( CFXTable * ) = 0;  // [0000].0000
-protected:
-    // sizeof(IFXTableController) 0004
+protected: virtual FFBool PreTableModify( CFXTable const * ) = 0;  // [0000].0000
 };
+GE_ASSERT_SIZEOF( IFXTableController, 0x0004 )
 
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTValMap<>' needs to have dll-interface to be used by clients of class 'CFXTable'
@@ -17,10 +16,10 @@ class FF_DLLIMPORT CFXTable
 protected:
     struct SReadFilter
     {
-        bCUnicodeString m_strColumn;
-        FFI32           m_iMaxItems;
-        // sizeof(CFXTable::SReadFilter) 0008
+        bCUnicodeString m_strColumn;  // 0000
+        FFI32           m_iMaxItems;  // 0004
     };
+    GE_ASSERT_SIZEOF( SReadFilter, 0x0008 )
 public:
     enum EEncoding
     {
@@ -34,18 +33,18 @@ public:
         FFU16       m_u16Version1;   // 0004
         FFU16       m_u16Version2;   // 0006
         SFFFileTime m_RawTimeStamp;  // 0008
-        // sizeof(SBinaryHeader)        0010
     };
+    GE_ASSERT_SIZEOF( SBinaryHeader, 0x0010 )
     struct SRead
     {
         bCUnicodeString m_strColumn;  // 0000
-        // sizeof(CFXTable::SRead)       0004
     };
+    GE_ASSERT_SIZEOF( SRead, 0x0004 )
     struct SWrite
     {
         SFFFileTime m_RawTimeStamp;  // 0000
-        // sizeof(CFXTable::SWrite)     0008
     };
+    GE_ASSERT_SIZEOF( SWrite, 0x0008 )
 public: virtual ~CFXTable( void );  // [0000].0000
 protected:
     bTValMap< bCUnicodeString, FFInt > m_mapRows;          // 0004
@@ -55,7 +54,6 @@ protected:
     FFBool                             m_bModified;        // 0034
                                        FF_PADDING( 3 )
     IFXTableController *               m_pController;      // 0038
-    // sizeof(CFXTable)                                       003C
 protected:
     FFBool           AppendAsciiCsv( CFXIOStream &, SReadFilter & );
     FFBool           AppendCsv( CFXIOStream &, SReadFilter & );
@@ -118,6 +116,7 @@ public:
     CFXTable( CFXTable const & );
     CFXTable( void );
 };
+GE_ASSERT_SIZEOF( CFXTable, 0x003C )
 
 #pragma warning( pop )
 

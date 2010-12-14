@@ -10,11 +10,10 @@ protected:
         FFBool          m_bModified;  // 0004
                         FF_PADDING( 3 )
         FFU32           m_u32Ref;     // 0008
-        // sizeof(CFXTableItem::SData)   000C
     };
+    GE_ASSERT_SIZEOF( SData, 0x000C )
 protected:
-    SData * m_pData;     // 0000
-    // sizeof(CFXTableItem) 0004
+    SData * m_pData;  // 0000
 protected:
     void    AddDataRef( void );
     SData * EnsureData( void );
@@ -33,5 +32,6 @@ public:
     CFXTableItem( void );
    ~CFXTableItem( void );
 };
+GE_ASSERT_SIZEOF( CFXTableItem, 0x0004 )
 
 #endif
