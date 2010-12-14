@@ -7,7 +7,6 @@ protected:
     CFXTableItem     m_Item;    // 0000
     CFXTable const * m_pTable;  // 0004
     bCUnicodeString  m_strKey;  // 0008
-    // sizeof(CFXTableItemProxy)   000C
 protected:
     FFBool IsModified( void ) const;
     void   Resolve( void ) const;
@@ -24,5 +23,6 @@ public:
     CFXTableItemProxy( CFXTableItemProxy const & );
    ~CFXTableItemProxy( void );
 };
+GE_ASSERT_SIZEOF( CFXTableItemProxy, 0x000C )
 
 #endif

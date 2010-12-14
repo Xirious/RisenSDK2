@@ -22,11 +22,11 @@ public:
         bCUnicodeString  m_strItem;    // 0008
         CFXTable const * m_pTable;     // 000C
         FFU32            __FIXME;      // 0010
-        // sizeof(CFXTableDiff::SItem)    0014
     };
+    GE_ASSERT_SIZEOF( SItem, 0x0014 )
 public:
     bTObjArray< SItem > m_arrItems;  // 0000
-    // sizeof(CFXTableDiff)             000C
 };
+GE_ASSERT_SIZEOF( CFXTableDiff, 0x000C )
 
 #endif

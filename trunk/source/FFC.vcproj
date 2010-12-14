@@ -147,6 +147,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FFC\fx_loctable.h"
+				>
+			</File>
+			<File
 				RelativePath=".\FFC\fx_table.h"
 				>
 			</File>
@@ -164,6 +168,14 @@
 			</File>
 			<File
 				RelativePath=".\FFC\fx_tableitemproxy.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFC\fx_tablemap.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FFC\fx_tablemapitem.h"
 				>
 			</File>
 		</Filter>
