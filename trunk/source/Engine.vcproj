@@ -136,6 +136,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_apitexture.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_archivefile.h"
 			>
 		</File>
@@ -180,7 +184,15 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_gfximagedata.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_gfxobject.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_gfxshared.h"
 			>
 		</File>
 		<File
