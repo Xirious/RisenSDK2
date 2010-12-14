@@ -147,6 +147,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FFC\fx_locstringex.h"
+				>
+			</File>
+			<File
 				RelativePath=".\FFC\fx_loctable.h"
 				>
 			</File>
