@@ -2,7 +2,7 @@
 #define FF_MODULEMUSIC_H_INLCUDED
 
 FF_DECLARE_INTERFACE( IFFModuleMusic, "BBF55EF7-BAA5-49D4-A0C0-ACA6AAE7145E" ) :
-    public virtual IFFUnknown
+    virtual public IFFUnknown
 {
 private: virtual void __FIXME_0000( void ) = 0; // [0000].0000
 private: virtual void __FIXME_0004( void ) = 0; // [0000].0004

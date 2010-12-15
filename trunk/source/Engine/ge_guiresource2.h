@@ -3,7 +3,7 @@
 
 class GE_DLLIMPORT eCGuiResource2 :
     public eCDocObject,
-    public virtual IFFUnknown
+    virtual public IFFUnknown
 {
 public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;                   // [0000].0000
 public:    using             bCObjectRefBase::GetVersion;                                    // [0000].0004
