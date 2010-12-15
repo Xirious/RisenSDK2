@@ -2,7 +2,7 @@
 #define FF_MODULEGUI2_H_INLCUDED
 
 FF_DECLARE_INTERFACE( IFFModuleGui2, "1FAC7850-5319-4E7D-A4EB-B89855B4B907" ) :
-    public virtual IFFUnknown
+    virtual public IFFUnknown
 {
 private: virtual void __FIXME_0000( void ) = 0; // [0000].0000
 private: virtual void __FIXME_0004( void ) = 0; // [0000].0004

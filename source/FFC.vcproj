@@ -158,6 +158,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="virtual"
+				>
+				<File
+					RelativePath=".\FFC\fx_virtualfilemapping.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="loc"

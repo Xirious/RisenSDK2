@@ -3,6 +3,8 @@
 
 #include "FFCore.h"
 
+#include "FileSystem2/ff_filemapping2.h"
+
 #include "FileSystem2/ff_modulefilesystem2.h"
 
 #endif

@@ -124,15 +124,19 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\FileSystem2\ff_filemapping2.h"
+			>
+		</File>
+		<File
+			RelativePath=".\FileSystem2\ff_modulefilesystem2.h"
+			>
+		</File>
+		<File
 			RelativePath=".\FileSystem2.cpp"
 			>
 		</File>
 		<File
 			RelativePath=".\FileSystem2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\FileSystem2\ff_modulefilesystem2.h"
 			>
 		</File>
 	</Files>
