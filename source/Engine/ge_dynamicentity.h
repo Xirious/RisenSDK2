@@ -12,10 +12,10 @@ private:
     public: virtual GEU32 GetAppStateFlags( void ) const;    // [0000].0004
     public: virtual void  OnProcess( void );                 // [0000].0008
     public: virtual      ~CProcessor( void );                // [0000].000C
-    private:
+    protected:
         eCDynamicEntity * m_pEntity;       // 000C
-        //sizeof(eCDynamicEntity::CProcessor) 0010
     };
+    GE_ASSERT_SIZEOF( CProcessor, 0x0010 )
 public:    using                    eCNode::GetObjectType;                                                          // [0000].0000
 public:    virtual GEU16                    GetVersion( void ) const;                                               // [0000].0004
 public:    using                    eCNode::IsValid;                                                                // [0000].0008
@@ -110,7 +110,7 @@ public:    virtual void                     SetWorldNodeBoundary( bCBox const & 
 protected: virtual void                     OnUpdatedLocalMatrix( void );                                           // [0000].0168
 protected: virtual void                     DoSaveGameEntityPostRead( void );                                       // [0000].016C
 protected: virtual void                     UpdateChildBoundaries( void );                                          // [0000].0170
-private:
+protected:
     CProcessor    m_Processor;                   // 00D0
     bCMatrix      m_matLocalMatrix;              // 00E0
     bCBox         m_boxWorldNodeBoundary;        // 0120
@@ -127,7 +127,6 @@ private:
     GEU16         m_bIsInOnTrigger         : 1;
     GEU16         m_bIsInOnUntrigger       : 1;
                   GE_PADDING( 6 )
-    // sizeof(eCDynamicEntity)                      0178
 protected:
     void Invalidate( void );
 public:
@@ -146,5 +145,6 @@ protected:
     eCDynamicEntity( eCDynamicEntity const & );
     eCDynamicEntity( void );
 };
+GE_ASSERT_SIZEOF( eCDynamicEntity, 0x0178 )
 
 #endif

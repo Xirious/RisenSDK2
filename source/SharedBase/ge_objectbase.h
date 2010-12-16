@@ -72,5 +72,6 @@ public:
     friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, bCObjectBase & );
     friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, bCObjectBase & );
 };
+GE_ASSERT_SIZEOF( bCObjectBase, 0x0004 )
 
 #endif
