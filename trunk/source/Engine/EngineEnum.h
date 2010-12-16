@@ -27,7 +27,9 @@ enum eECollisionGroup
 
 enum eEDecayState
 {
-    //FIXME: eEDecayState constants.
+    eEDecayState_None       = 0x00000000,
+    eEDecayState_Pending    = 0x00000001,
+    eEDecayState_Decayed    = 0x00000002,
     eEDecayState_ForceDWORD = GE_FORCE_DWORD
 };
 

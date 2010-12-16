@@ -17,8 +17,8 @@ struct eSEntityListenerEvent
     GEI64   m_i64PropertySet;     // 0000 // eCEntityPropertySet *
     eEEvent m_enuEvent;           // 0008
             GE_PADDING( 4 )
-    // sizeof(eSEntityListenerEvent) 0010
 };
+GE_ASSERT_SIZEOF( eSEntityListenerEvent, 0x0010 )
 
 class GE_DLLIMPORT eCEntityPropertySet :
     public bCObjectRefBase
@@ -117,13 +117,12 @@ protected: virtual void                       OnCacheOut( void );               
 protected: virtual void                       OnPrefetch( bCVector const & );                                                                                // [0000].0154
 private:
     static bCPropertyObjectTypeBase thisType;
-private:
+protected:
     eCEntity * m_pEntity;                      // 0008
-    GEU8       m_IsRenderingEnabled      : 1;  // 000C
-    GEU8       m_DecayState              : 3;  //      // eEDecayState
-    GEU8       m_IsTemplateEntityAttached: 1;
+    GEU8       m_IsRenderingEnabled      : 1;  // 000C // GEBool
+    GEU8       m_DecayState              : 3;  // 000C // eEDecayState
+    GEU8       m_IsTemplateEntityAttached: 1;  // 000C // GEBool
                GE_PADDING( 3 )
-    // sizeof(eCEntityPropertySet)                0010
 protected:
     void Invalidate( void );
 public:
@@ -146,5 +145,6 @@ public:
     eCEntityPropertySet( eCEntityPropertySet const & );
     eCEntityPropertySet( void );
 };
+GE_ASSERT_SIZEOF( eCEntityPropertySet, 0x0010 )
 
 #endif
