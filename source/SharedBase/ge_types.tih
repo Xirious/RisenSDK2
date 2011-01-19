@@ -1,0 +1,52 @@
+typedef signed char           GEI8;
+typedef unsigned char         GEU8;
+typedef signed short          GEI16;
+typedef unsigned short        GEU16;
+typedef signed long           GEI32;
+typedef unsigned long         GEU32;
+typedef int                   GEInt;
+typedef unsigned int          GEUInt;
+typedef signed __int64        GEI64;
+typedef unsigned __int64      GEU64;
+typedef float                 GEFloat;
+typedef double                GEDouble;
+typedef void *                GELPVoid;
+typedef void const *          GELPCVoid;
+typedef char                  GEChar;
+typedef char *                GELPChar;
+typedef char const *          GELPCChar;
+typedef unsigned char         GEUChar;
+typedef unsigned char *       GELPUChar;
+typedef unsigned char const * GELPCUChar;
+typedef wchar_t               GEUnicodeChar;
+typedef wchar_t *             GELPUnicodeChar;
+typedef wchar_t const *       GELPCUnicodeChar;
+
+enum GEBool : __int8
+{
+    GEFalse,
+    GETrue
+};
+
+enum bEResult : __int32
+{
+    bEResult_False,
+    bEResult_Ok
+};
+
+GEFloat const DLLIMPORT g_f2PI;
+GEFloat const DLLIMPORT g_fDegToRad;
+GEFloat const DLLIMPORT g_fEpsilon;
+GEFloat const DLLIMPORT g_fHuge;
+GEFloat const DLLIMPORT g_fInvEpsilon;
+GEFloat const DLLIMPORT g_fInvPI;
+GEFloat const DLLIMPORT g_fNegInfinity;
+GEFloat const DLLIMPORT g_fPI;
+GEFloat const DLLIMPORT g_fPIDiv2;
+GEFloat const DLLIMPORT g_fPIDiv4;
+GEFloat const DLLIMPORT g_fPosInfinity;
+GEFloat const DLLIMPORT g_fRadToDeg;
+GEFloat const DLLIMPORT g_fSqrt2;
+GEFloat const DLLIMPORT g_fZFar;
+GEFloat const DLLIMPORT g_fZNear;
+GEInt   const DLLIMPORT g_idInvalid;

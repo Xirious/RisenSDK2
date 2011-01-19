@@ -1,0 +1,4 @@
+#include "SharedBase/ge_def.tih"
+#include "SharedBase/ge_types.tih"
+
+GEFloat DLLIMPORT g_fFOV;
