@@ -1,0 +1,51 @@
+struct bCFPUAdmin
+{
+    GEU32 m_u32SavedControlWord;
+    GEU32 m_u32DefaultControlWord;
+};
+// ??0bCFPUAdmin@@IAE@ABV0@@Z protected: __thiscall bCFPUAdmin::bCFPUAdmin(bCFPUAdmin const &)
+bCFPUAdmin * __thiscall __0bCFPUAdmin__IAE_ABV0__Z( bCFPUAdmin *, bCFPUAdmin const * );
+// ??0bCFPUAdmin@@IAE@XZ protected: __thiscall bCFPUAdmin::bCFPUAdmin(void)
+bCFPUAdmin * __thiscall __0bCFPUAdmin__IAE_XZ( bCFPUAdmin * );
+// ??1bCFPUAdmin@@QAE@XZ public: __thiscall bCFPUAdmin::~bCFPUAdmin(void)
+void __thiscall __1bCFPUAdmin__QAE_XZ( bCFPUAdmin * );
+// ??4bCFPUAdmin@@IAEABV0@ABV0@@Z protected: bCFPUAdmin const & __thiscall bCFPUAdmin::operator=(bCFPUAdmin const &)
+bCFPUAdmin const * __thiscall __4bCFPUAdmin__IAEABV0_ABV0__Z( bCFPUAdmin *, bCFPUAdmin const * );
+// ?ComputeDefaultControlWord@bCFPUAdmin@@AAEXXZ private: void __thiscall bCFPUAdmin::ComputeDefaultControlWord(void)
+void __thiscall _ComputeDefaultControlWord_bCFPUAdmin__AAEXXZ( bCFPUAdmin * );
+// ?Create@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::Create(void)
+void __thiscall _Create_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?Destroy@bCFPUAdmin@@IAEXXZ protected: void __thiscall bCFPUAdmin::Destroy(void)
+void __thiscall _Destroy_bCFPUAdmin__IAEXXZ( bCFPUAdmin * );
+// ?EnableDenormalFloatExceptions@bCFPUAdmin@@QAEX_N@Z public: void __thiscall bCFPUAdmin::EnableDenormalFloatExceptions(bool)
+void __thiscall _EnableDenormalFloatExceptions_bCFPUAdmin__QAEX_N_Z( bCFPUAdmin *, GEBool );
+// ?EnableInvalidFloatExceptions@bCFPUAdmin@@QAEX_N@Z public: void __thiscall bCFPUAdmin::EnableInvalidFloatExceptions(bool)
+void __thiscall _EnableInvalidFloatExceptions_bCFPUAdmin__QAEX_N_Z( bCFPUAdmin *, GEBool );
+// ?EnableOverflowExceptions@bCFPUAdmin@@QAEX_N@Z public: void __thiscall bCFPUAdmin::EnableOverflowExceptions(bool)
+void __thiscall _EnableOverflowExceptions_bCFPUAdmin__QAEX_N_Z( bCFPUAdmin *, GEBool );
+// ?EnableUnderflowExceptions@bCFPUAdmin@@QAEX_N@Z public: void __thiscall bCFPUAdmin::EnableUnderflowExceptions(bool)
+void __thiscall _EnableUnderflowExceptions_bCFPUAdmin__QAEX_N_Z( bCFPUAdmin *, GEBool );
+// ?EnableZeroDevideExceptions@bCFPUAdmin@@QAEX_N@Z public: void __thiscall bCFPUAdmin::EnableZeroDevideExceptions(bool)
+void __thiscall _EnableZeroDevideExceptions_bCFPUAdmin__QAEX_N_Z( bCFPUAdmin *, GEBool );
+// ?GetCurrentControlWord@bCFPUAdmin@@QAEKXZ public: unsigned long __thiscall bCFPUAdmin::GetCurrentControlWord(void)
+GEU32 __thiscall _GetCurrentControlWord_bCFPUAdmin__QAEKXZ( bCFPUAdmin * );
+// ?GetInstance@bCFPUAdmin@@SGAAV1@XZ public: static bCFPUAdmin & __stdcall bCFPUAdmin::GetInstance(void)
+bCFPUAdmin * __stdcall _GetInstance_bCFPUAdmin__SGAAV1_XZ( void );
+// ?Invalidate@bCFPUAdmin@@IAEXXZ protected: void __thiscall bCFPUAdmin::Invalidate(void)
+void __thiscall _Invalidate_bCFPUAdmin__IAEXXZ( bCFPUAdmin * );
+// ?PrintStatus@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::PrintStatus(void)
+void __thiscall _PrintStatus_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?RestoreDefaultControlWord@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::RestoreDefaultControlWord(void)
+void __thiscall _RestoreDefaultControlWord_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?RestoreSavedControlWord@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::RestoreSavedControlWord(void)
+void __thiscall _RestoreSavedControlWord_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?SaveCurrentControlWord@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::SaveCurrentControlWord(void)
+void __thiscall _SaveCurrentControlWord_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?SetControlWord@bCFPUAdmin@@QAEXK@Z public: void __thiscall bCFPUAdmin::SetControlWord(unsigned long)
+void __thiscall _SetControlWord_bCFPUAdmin__QAEXK_Z( bCFPUAdmin *, GEU32 );
+// ?SetHighPrecision@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::SetHighPrecision(void)
+void __thiscall _SetHighPrecision_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?SetLowPrecision@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::SetLowPrecision(void)
+void __thiscall _SetLowPrecision_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
+// ?SetMidPrecision@bCFPUAdmin@@QAEXXZ public: void __thiscall bCFPUAdmin::SetMidPrecision(void)
+void __thiscall _SetMidPrecision_bCFPUAdmin__QAEXXZ( bCFPUAdmin * );
