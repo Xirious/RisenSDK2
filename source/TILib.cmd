@@ -57,5 +57,15 @@ if "%2"=="-u+" (
   popd
 )
 
+set IDSNAMES=%IDAROOT%\ids\idsnames
+find /I "%DLLNAME%.ids" "%IDSNAMES%"
+if errorlevel 1 (
+  echo.>>                                                              "%IDSNAMES%"
+  echo ; [Risen]\bin\%DLLNAME%.dll>>                                   "%IDSNAMES%"
+  echo %DLLNAME%.ids Risen%DLLNAME%.ids - pc ? 32 ? Risen%DLLNAME%;;>> "%IDSNAMES%"
+  echo %DLLNAME%.ids Risen%DLLNAME%.ids - pc ? 32 ? Risen%DLLNAME%;;
+)
+echo.
+
 :done
 endlocal
