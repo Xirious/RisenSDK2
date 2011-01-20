@@ -1,0 +1,39 @@
+struct bCTimer
+{
+    GEFloat m_fUnitsPerMillisecond;
+    GEU32   m_u32LastTimeStamp;
+    GEFloat m_fLastTime;
+    GEFloat m_fElapsedMilliseconds;
+    GEBool  m_bIsPaused;
+            GE_PADDING( 3 )
+};
+// ??0bCTimer@@QAE@ABV0@@Z public: __thiscall bCTimer::bCTimer(bCTimer const &)
+bCTimer * __thiscall __0bCTimer__QAE_ABV0__Z( bCTimer *, bCTimer const * );
+// ??0bCTimer@@QAE@XZ public: __thiscall bCTimer::bCTimer(void)
+bCTimer * __thiscall __0bCTimer__QAE_XZ( bCTimer * );
+// ??1bCTimer@@QAE@XZ public: __thiscall bCTimer::~bCTimer(void)
+void __thiscall __1bCTimer__QAE_XZ( bCTimer * );
+// ??4bCTimer@@QAEAAV0@ABV0@@Z public: bCTimer & __thiscall bCTimer::operator=(bCTimer const &)
+bCTimer * __thiscall __4bCTimer__QAEAAV0_ABV0__Z( bCTimer *, bCTimer const * );
+// ?Adjust@bCTimer@@QAEXM@Z public: void __thiscall bCTimer::Adjust(float)
+void __thiscall _Adjust_bCTimer__QAEXM_Z( bCTimer *, GEFloat );
+// ?GetLastTime@bCTimer@@QBEXAAM@Z public: void __thiscall bCTimer::GetLastTime(float &)const
+void __thiscall _GetLastTime_bCTimer__QBEXAAM_Z( bCTimer const *, GEFloat * );
+// ?GetTime@bCTimer@@QAEXAAM@Z public: void __thiscall bCTimer::GetTime(float &)
+void __thiscall _GetTime_bCTimer__QAEXAAM_Z( bCTimer *, GEFloat * );
+// ?GetTimeDifference@bCTimer@@QBEXAAM@Z public: void __thiscall bCTimer::GetTimeDifference(float &)const
+void __thiscall _GetTimeDifference_bCTimer__QBEXAAM_Z( bCTimer const *, GEFloat *);
+// ?GetTimeStamp@bCTimer@@SGKXZ public: static unsigned long __stdcall bCTimer::GetTimeStamp(void)
+GEU32 __stdcall _GetTimeStamp_bCTimer__SGKXZ( void );
+// ?Pause@bCTimer@@QAEXXZ public: void __thiscall bCTimer::Pause(void)
+void __thiscall _Pause_bCTimer__QAEXXZ( bCTimer * );
+// ?QueryPerformanceCounter@bCTimer@@SG_KXZ public: static unsigned __int64 __stdcall bCTimer::QueryPerformanceCounter(void)
+GEU64 __stdcall _QueryPerformanceCounter_bCTimer__SG_KXZ( void );
+// ?QueryPerformanceFrequency@bCTimer@@SG_KXZ public: static unsigned __int64 __stdcall bCTimer::QueryPerformanceFrequency(void)
+GEU64 __stdcall _QueryPerformanceFrequency_bCTimer__SG_KXZ( void );
+// ?Reset@bCTimer@@QAEXXZ public: void __thiscall bCTimer::Reset(void)
+void __thiscall _Reset_bCTimer__QAEXXZ( bCTimer * );
+// ?Resume@bCTimer@@QAEXXZ public: void __thiscall bCTimer::Resume(void)
+void __thiscall _Resume_bCTimer__QAEXXZ( bCTimer * );
+// ?Set@bCTimer@@QAEXM@Z public: void __thiscall bCTimer::Set(float)
+void __thiscall _Set_bCTimer__QAEXM_Z( bCTimer *, GEFloat );

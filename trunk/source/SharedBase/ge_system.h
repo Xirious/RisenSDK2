@@ -36,9 +36,9 @@ GE_C_LINKAGE GE_DLLIMPORT void         GE_STDCALL g_CopyGUID( bSGuid *, bSGuid c
 GE_C_LINKAGE GE_DLLIMPORT GELPVoid     GE_STDCALL g_CreateMutex( GELPCChar );
 GE_C_LINKAGE GE_DLLIMPORT GEInt        GE_STDCALL g_DateToChar( bSFileTime const *, GELPChar );
 GE_C_LINKAGE GE_DLLIMPORT GEInt        GE_STDCALL g_DateToCharW( bSFileTime const *, GELPUnicodeChar );
-GE_C_LINKAGE GE_DLLIMPORT void         GE_STDCALL g_DebugBreak();
-GE_C_LINKAGE GE_DLLIMPORT GEU32        GE_STDCALL g_GetCurrentProcessId();
-GE_C_LINKAGE GE_DLLIMPORT GELPVoid     GE_STDCALL g_GetCurrentThread();
+GE_C_LINKAGE GE_DLLIMPORT void         GE_STDCALL g_DebugBreak( void );
+GE_C_LINKAGE GE_DLLIMPORT GEU32        GE_STDCALL g_GetCurrentProcessId( void );
+GE_C_LINKAGE GE_DLLIMPORT GELPVoid     GE_STDCALL g_GetCurrentThread( void );
 GE_C_LINKAGE GE_DLLIMPORT GEInt        GE_STDCALL g_GetFileDate( GELPCChar, GELPChar, GEU32 );
 GE_C_LINKAGE GE_DLLIMPORT GEU32        GE_STDCALL g_GetModuleFileName( GELPVoid, GELPChar, GEU32 );
 GE_C_LINKAGE GE_DLLIMPORT GELPVoid     GE_STDCALL g_GetProcAddress( GELPVoid, GELPCChar );

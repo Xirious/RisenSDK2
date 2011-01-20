@@ -1,0 +1,82 @@
+typedef BOOL               GELongBool;
+typedef CRITICAL_SECTION   bSCriticalSection;
+typedef EXCEPTION_POINTERS bSExceptionPointers;
+typedef FILETIME           bSFileTime;
+typedef GUID               bSGuid;
+typedef POINT              bSPoint;
+typedef RECT               bSRect;
+
+void __cdecl GE_SILENTLOG_ERR( GELPCChar, ... );
+void __cdecl GE_SILENTLOG_OUT( GELPCChar, ... );
+
+// _GetVersion@4 conflicts with mssdk.til
+GEBool   __stdcall CheckFileVersion( GELPCChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
+GEBool   __stdcall GetDLLVersion( GELPCChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
+//GELPChar __stdcall GetVersion( GELPCChar );
+GEBool   __stdcall ParseVersionString( GELPChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
+
+GELongBool   __stdcall g_CloseMutex( GELPVoid );
+GEInt        __stdcall g_CoCreateGuid( bSGuid * );
+void         __stdcall g_CopyGUID( bSGuid *, bSGuid const * );
+GELPVoid     __stdcall g_CreateMutex( GELPCChar );
+GEInt        __stdcall g_DateToChar( bSFileTime const *, GELPChar );
+GEInt        __stdcall g_DateToCharW( bSFileTime const *, GELPUnicodeChar );
+void         __stdcall g_DebugBreak();
+GEU32        __stdcall g_GetCurrentProcessId();
+GELPVoid     __stdcall g_GetCurrentThread();
+GEInt        __stdcall g_GetFileDate( GELPCChar, GELPChar, GEU32 );
+GEU32        __stdcall g_GetModuleFileName( GELPVoid, GELPChar, GEU32 );
+GELPVoid     __stdcall g_GetProcAddress( GELPVoid, GELPCChar );
+GEInt        __stdcall g_GetShortDateChar( bSFileTime const *, GELPChar );
+bSFileTime * __stdcall g_GetSystemTime( bSFileTime * );
+GEInt        __stdcall g_GetThreadPriority( GELPVoid );
+GEBool       __stdcall g_IIDFromString( GELPCUnicodeChar, bSGuid * );
+GEBool       __stdcall g_IsEqualGUID( bSGuid const *, bSGuid const * );
+GELPVoid     __stdcall g_LoadModule( GELPCChar );
+GEInt        __stdcall g_MemCmp( GELPCVoid, GELPCVoid, GEU32 );
+GELPVoid     __stdcall g_MemCpy( GELPVoid, GELPCVoid, GEU32 );
+GELPVoid     __stdcall g_MemSet( GELPVoid, GEInt, GEInt );
+GEInt        __stdcall g_MessageBox( GELPVoid, GELPCChar, GELPCChar, GEU32 );
+GEInt        __stdcall g_MultiByteToWideChar( GEU32, GEU32, GELPCChar, GEInt, GELPUnicodeChar, GEInt );
+void         __stdcall g_OutputDebugString( GELPCChar );
+GEBool       __stdcall g_SetThreadPriority( GELPVoid, GEInt );
+GEInt        __stdcall g_StringFromGUID2( bSGuid const *, GELPUnicodeChar, GEInt );
+GEInt        __stdcall g_TimeToChar( bSFileTime const *, GELPChar );
+GELongBool   __stdcall g_UnloadModule( GELPVoid );
+GEInt        __stdcall g_WideCharToMultiByte( GEU32, GEU32, GELPCUnicodeChar, GEInt, GELPChar, GEInt, GELPCChar, GELongBool * );
+GELPVoid     __stdcall g_ZeroMemory( GELPVoid, GEU32 );
+
+GEFloat __stdcall g_acosf( GEFloat );
+GEFloat __stdcall g_asinf( GEFloat );
+GEFloat __stdcall g_atan2f( GEFloat, GEFloat );
+GEFloat __stdcall g_cosf( GEFloat );
+GEFloat __stdcall g_fabsf( GEFloat );
+GEFloat __stdcall g_fcopysign( GEFloat, GEFloat );
+GEFloat __stdcall g_floorf( GEFloat );
+GEFloat __stdcall g_pow( GEFloat, GEFloat );
+GEFloat __stdcall g_sinf( GEFloat );
+GEFloat __stdcall g_sqrtf( GEFloat );
+
+GEBool          __stdcall g_iswalnum( GEUnicodeChar );
+GEBool          __stdcall g_iswalpha( GEUnicodeChar );
+GEBool          __stdcall g_iswascii( GEUnicodeChar );
+GEBool          __stdcall g_iswdigit( GEUnicodeChar );
+GEBool          __stdcall g_iswlower( GEUnicodeChar );
+GEBool          __stdcall g_iswspace( GEUnicodeChar );
+GEBool          __stdcall g_iswupper( GEUnicodeChar );
+GEUnicodeChar   __stdcall g_towlower( GEUnicodeChar );
+GEUnicodeChar   __stdcall g_towupper( GEUnicodeChar );
+GELPUnicodeChar __stdcall g_wcschr( GELPCUnicodeChar, GEUnicodeChar );
+GEInt           __stdcall g_wcscmp( GELPCUnicodeChar, GELPCUnicodeChar );
+GEU32           __stdcall g_wcscspn( GELPCUnicodeChar, GELPCUnicodeChar );
+GEInt           __stdcall g_wcsicmp( GELPCUnicodeChar, GELPCUnicodeChar );
+GEU32           __stdcall g_wcslen( GELPCUnicodeChar );
+GEInt           __stdcall g_wcsncmp( GELPCUnicodeChar, GELPCUnicodeChar, GEU32 );
+GELPUnicodeChar __stdcall g_wcspbrk( GELPCUnicodeChar, GELPCUnicodeChar );
+GELPUnicodeChar __stdcall g_wcsrchr( GELPCUnicodeChar, GEUnicodeChar );
+GEU32           __stdcall g_wcsspn( GELPCUnicodeChar, GELPCUnicodeChar );
+GELPUnicodeChar __stdcall g_wcsstr( GELPCUnicodeChar, GELPCUnicodeChar );
+GEDouble        __stdcall g_wcstod( GELPCUnicodeChar, GELPUnicodeChar * );
+GEInt           __stdcall g_wcstol( GELPCUnicodeChar, GELPUnicodeChar *, GEInt );
+
+GEInt __stdcall g_vsscanf( GELPChar, GELPCChar, GELPVoid );

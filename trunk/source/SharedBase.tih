@@ -1,4 +1,6 @@
 #include "SharedBase/ge_def.tih"
 #include "SharedBase/ge_types.tih"
+#include "SharedBase/ge_system.tih"
+#include "SharedBase/ge_timer.tih"
 
 GEFloat DLLIMPORT g_fFOV;
