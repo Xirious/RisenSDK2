@@ -15,7 +15,7 @@ echo     (the default is C:\IDA if both values are missing)
 echo   * Existing .\%~n0{BaseName}.cfg + .\{BaseName}.tih.
 echo.
 pause
-goto :eof
+exit /B 1
 :init
 setlocal
 
@@ -32,8 +32,9 @@ echo %CD%\%TILNAME%.til
 "%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dp0%DLLNAME%.tih" "-DDLLIMPORT=*" "%TILNAME%.til"
 popd
 if errorlevel 1 (
+  endlocal
   pause
-  goto :done
+  exit /B 2
 )
 
 if "%2"=="-u+" (
@@ -47,8 +48,9 @@ echo %CD%\%TILNAME%_dll.til
 "%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dp0%DLLNAME%.tih" "-DDLLIMPORT=" "%TILNAME%_dll.til"
 popd
 if errorlevel 1 (
+  endlocal
   pause
-  goto :done
+  exit /B 3
 )
 
 if "%2"=="-u+" (
@@ -67,5 +69,5 @@ if errorlevel 1 (
 )
 echo.
 
-:done
 endlocal
+exit /B 0
