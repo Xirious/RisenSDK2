@@ -1,0 +1,21 @@
+//FIXME: Seems like Piranha Bytes used a Windows SDK where struct _RTL_CRITICAL_SECTION is packed at byte level.
+#pragma pack(push, 1)
+struct bCCriticalSection
+{
+    bSCriticalSection m_CriticalSection;
+};
+#pragma pack(pop)
+// ??0bCCriticalSection@@QAE@XZ public: __thiscall bCCriticalSection::bCCriticalSection(void)
+bCCriticalSection * __thiscall __0bCCriticalSection__QAE_XZ( bCCriticalSection * );
+// ??1bCCriticalSection@@QAE@XZ public: __thiscall bCCriticalSection::~bCCriticalSection(void)
+void __thiscall __1bCCriticalSection__QAE_XZ( bCCriticalSection * );
+// ?Acquire@bCCriticalSection@@QAEXXZ public: void __thiscall bCCriticalSection::Acquire(void)
+void __thiscall _Acquire_bCCriticalSection__QAEXXZ( bCCriticalSection * );
+// ?GetLockCount@bCCriticalSection@@QBEKXZ public: unsigned long __thiscall bCCriticalSection::GetLockCount(void)const
+GEU32 __thiscall _GetLockCount_bCCriticalSection__QBEKXZ( bCCriticalSection const * );
+// ?Release@bCCriticalSection@@QAEXXZ public: void __thiscall bCCriticalSection::Release(void)
+void __thiscall _Release_bCCriticalSection__QAEXXZ( bCCriticalSection * );
+// ?SetSpinCount@bCCriticalSection@@QAEXK@Z public: void __thiscall bCCriticalSection::SetSpinCount(unsigned long)
+void __thiscall _SetSpinCount_bCCriticalSection__QAEXK_Z( bCCriticalSection *, GEU32 );
+// ?TryAcquire@bCCriticalSection@@QAE_NXZ public: bool __thiscall bCCriticalSection::TryAcquire(void)
+GEBool __thiscall _TryAcquire_bCCriticalSection__QAE_NXZ( bCCriticalSection * );

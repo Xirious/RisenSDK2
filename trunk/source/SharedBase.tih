@@ -2,5 +2,9 @@
 #include "SharedBase/ge_types.tih"
 #include "SharedBase/ge_system.tih"
 #include "SharedBase/ge_timer.tih"
+#include "SharedBase/ge_clock.tih"
+#include "SharedBase/ge_fpuadmin.tih"
+#include "SharedBase/ge_criticalsection.tih"
+#include "SharedBase/ge_locksystem.tih"
 
 GEFloat DLLIMPORT g_fFOV;

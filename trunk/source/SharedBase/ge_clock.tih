@@ -1,0 +1,41 @@
+struct bSClockAdjustment
+{
+    GEFloat m_fUnitsPerSecond;
+    GEU32   m_u32SecondsPerDay;
+    GEU32   m_u32DaysPerYear;
+};
+
+struct bSTimeAndDate
+{
+    GEU32   m_u32Year;
+    GEU32   m_u32Days;
+    GEFloat m_fSeconds;
+};
+
+struct bCClock
+{
+    bSClockAdjustment m_ClockAdjustment;
+    bSTimeAndDate     m_TimeAndDate;
+    GEU32             m_u32LastTimeStamp;
+    GEFloat           m_fElapsedSeconds;
+    GEBool            m_bIsPaused;
+                      GE_PADDING( 3 )
+};
+// ??0bCClock@@QAE@ABV0@@Z public: __thiscall bCClock::bCClock(bCClock const &)
+bCClock * __thiscall __0bCClock__QAE_ABV0__Z( bCClock *, bCClock const * );
+// ??0bCClock@@QAE@XZ public: __thiscall bCClock::bCClock(void)
+bCClock * __thiscall __0bCClock__QAE_XZ( bCClock * );
+// ??1bCClock@@QAE@XZ public: __thiscall bCClock::~bCClock(void)
+void __thiscall __1bCClock__QAE_XZ( bCClock * );
+// ??4bCClock@@QAEAAV0@ABV0@@Z public: bCClock & __thiscall bCClock::operator=(bCClock const &)
+bCClock * __thiscall __4bCClock__QAEAAV0_ABV0__Z( bCClock *, bCClock const * );
+// ?Adjust@bCClock@@QAEXABUbSClockAdjustment@@@Z public: void __thiscall bCClock::Adjust(bSClockAdjustment const &)
+void __thiscall _Adjust_bCClock__QAEXABUbSClockAdjustment___Z( bCClock *, bSClockAdjustment const * );
+// ?GetTimeAndDate@bCClock@@QAEXAAUbSTimeAndDate@@@Z public: void __thiscall bCClock::GetTimeAndDate(bSTimeAndDate &)
+void __thiscall _GetTimeAndDate_bCClock__QAEXAAUbSTimeAndDate___Z( bCClock *, bSTimeAndDate * );
+// ?IsPaused@bCClock@@QBE_NXZ public: bool __thiscall bCClock::IsPaused(void)const
+GEBool __thiscall _IsPaused_bCClock__QBE_NXZ( bCClock const * );
+// ?Set@bCClock@@QAEXABUbSTimeAndDate@@@Z public: void __thiscall bCClock::Set(bSTimeAndDate const &)
+void __thiscall _Set_bCClock__QAEXABUbSTimeAndDate___Z( bCClock *, bSTimeAndDate const * );
+// ?SetPause@bCClock@@QAEX_N@Z public: void __thiscall bCClock::SetPause(bool)
+void __thiscall _SetPause_bCClock__QAEX_N_Z( bCClock *, GEBool );
