@@ -1,3 +1,3 @@
-#define GE_PADDING( X ) char __padding[ X ];
-#define GE_PADDING1( X ) char __padding1[ X ];
-#define GE_PADDING2( X ) char __padding2[ X ];
+#define GE_PADDING( X ) byte __padding[ X ];
+#define GE_PADDING1( X ) byte __padding1[ X ];
+#define GE_PADDING2( X ) byte __padding2[ X ];

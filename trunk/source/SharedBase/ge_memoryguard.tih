@@ -1,0 +1,14 @@
+struct bCMemoryGuard
+{
+    bEMemorySubSystem m_enuMemorySubSystem;
+    GEBool            m_bPopMemorySubSystem;
+                      GE_PADDING( 3 )
+};
+// ??0bCMemoryGuard@@QAE@W4bEMemorySubSystem@@@Z public: __thiscall bCMemoryGuard::bCMemoryGuard(bEMemorySubSystem)
+bCMemoryGuard * __thiscall __0bCMemoryGuard__QAE_W4bEMemorySubSystem___Z( bCMemoryGuard *, bEMemorySubSystem );
+// ??1bCMemoryGuard@@QAE@XZ public: __thiscall bCMemoryGuard::~bCMemoryGuard(void)
+void __thiscall __1bCMemoryGuard__QAE_XZ( bCMemoryGuard * );
+// ??4bCMemoryGuard@@QAEAAV0@ABV0@@Z public: bCMemoryGuard & __thiscall bCMemoryGuard::operator=(bCMemoryGuard const &)
+bCMemoryGuard * __thiscall __4bCMemoryGuard__QAEAAV0_ABV0__Z( bCMemoryGuard *, bCMemoryGuard const * );
+// ?GetMemorySubSystem@bCMemoryGuard@@QBE?AW4bEMemorySubSystem@@XZ public: bEMemorySubSystem __thiscall bCMemoryGuard::GetMemorySubSystem(void)const
+bEMemorySubSystem __thiscall _GetMemorySubSystem_bCMemoryGuard__QBE_AW4bEMemorySubSystem__XZ( bCMemoryGuard const * );

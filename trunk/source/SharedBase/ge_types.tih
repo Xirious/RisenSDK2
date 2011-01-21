@@ -22,13 +22,15 @@ typedef wchar_t               GEUnicodeChar;
 typedef wchar_t *             GELPUnicodeChar;
 typedef wchar_t const *       GELPCUnicodeChar;
 
-enum GEBool : __int8
+enum GEBool : byte
 {
     GEFalse,
     GETrue
 };
 
-enum bEResult : __int32
+typedef GEU32 GEEnum;
+
+enum bEResult : GEEnum
 {
     bEResult_False,
     bEResult_Ok
