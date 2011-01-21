@@ -1,0 +1,199 @@
+enum bECheckPtr : GEEnum
+{
+    bECheckPtr_Valid,
+    bECheckPtr_Invalid,
+    bECheckPtr_Corrupted,
+    bECheckPtr_Disabled,
+    bECheckPtr_Null
+};
+
+enum bEMemoryAllocationType : GEEnum
+{
+    bEMemoryAllocationType_Malloc,
+    bEMemoryAllocationType_Calloc,
+    bEMemoryAllocationType_New,
+    bEMemoryAllocationType_NewArray,
+    bEMemoryAllocationType_Realloc,
+    bEMemoryAllocationType_Delete,
+    bEMemoryAllocationType_DeleteArray,
+    bEMemoryAllocationType_Free,
+    bEMemoryAllocationType_Max
+};
+
+struct bSAllocationSummery
+{
+    GEU32                 m_u32PtrSizeCurrent;
+    GEU32                 m_u32HeapSizeCurrent;
+    GEU32                 m_u32PtrSizePeak;
+    GEU32                 m_u32Unknown1;
+    GEU32                 m_u32Unknown2;
+    GEU32                 m_u32Unknown3;
+    GEChar                m_carrFileName[ 255 ];
+    GEChar                m_carrObjectName[ 255 ];
+    GEChar                m_carrContructor[ 255 ];
+                          GE_PADDING( 3 )
+    GEU32                 m_u32SourceLine;
+    bEMemorySubSystem     m_enuSubSystem;
+    GEU32                 m_u32SmallBlockCount;
+    GEU32                 m_u32MediumBlockCount;
+    GEU32                 m_u32LargeBlockCount;
+    bSAllocationSummery * m_pNext;
+};
+
+struct bSAllocationItem
+{
+    GEU32                  m_u32HeapSize;
+    GEU32                  m_u32PtrSize;
+    GELPVoid               m_pHeapAddress;
+    GELPVoid               m_pPtrAddress;
+    bEMemoryAllocationType m_enuAllocType;
+    GEU32                  m_u32AllocID;
+    bSAllocationSummery *  m_pSummery;
+    bSAllocationItem *     m_pNext;
+    bSAllocationItem *     m_pPrev;
+};
+
+struct bSMemoryStatistics
+{
+    GEU32 m_u32CurrentMemory;
+    GEU32 m_u32CurrentHeap;
+    GEU32 m_u32CurrentElements;
+    GEU32 m_u32PeakMemory;
+    GEU32 m_u32PeakHeap;
+    GEU32 m_u32PeakElements;
+    GEU32 m_u32AccumulatedMemory;
+    GEU32 m_u32AccumulatedHeap;
+    GEU32 m_u32AccumulatedElements;
+    GEU32 m_u32TotalMemory;
+    GEU32 m_u32TotalElements;
+};
+
+typedef GEBool (__stdcall * GEFMemoryCallback)( GELPCChar, bSAllocationItem const * );
+
+struct bCMemoryAdmin
+{
+    GEU32                  m_u32AllocationCount;
+    GEU32                  m_u32MemoryPoolDescCount;
+    bSAllocationItem *     m_pMemoryPoolDesc;
+    bSAllocationItem * *   m_ppMemoryPoolDescList;
+    bSMemoryStatistics     m_Statistics[ bEMemorySubSystem_Count ];
+    GEBool                 m_bWipeAll;
+    GEBool                 m_bAllocationReport;
+    GEBool                 m_bHeapProfilerActive;
+    GEBool                 m_bMemoryLeakReport;
+    bCMemPool *            m_pMemPool;
+    bCCriticalSection      m_CriticalSection;
+    bCMemorySubSystemStack m_MemorySubSystemStack;
+};
+// ??0bCMemoryAdmin@@QAE@XZ public: __thiscall bCMemoryAdmin::bCMemoryAdmin(void)
+bCMemoryAdmin * __thiscall __0bCMemoryAdmin__QAE_XZ( bCMemoryAdmin * );
+// ??0bCMemoryAdmin@@QAE@_N@Z public: __thiscall bCMemoryAdmin::bCMemoryAdmin(bool)
+bCMemoryAdmin * __thiscall __0bCMemoryAdmin__QAE__N_Z( bCMemoryAdmin *, GEBool );
+// ??1bCMemoryAdmin@@QAE@XZ public: __thiscall bCMemoryAdmin::~bCMemoryAdmin(void)
+void __thiscall __1bCMemoryAdmin__QAE_XZ( bCMemoryAdmin * );
+// ?AllocatePure@bCMemoryAdmin@@IAEPAXQBDH0PBDW4bEMemoryAllocationType@@K@Z protected: void * __thiscall bCMemoryAdmin::AllocatePure(char const * const,int,char const * const,char const *,bEMemoryAllocationType,unsigned long)
+GELPVoid __thiscall _AllocatePure_bCMemoryAdmin__IAEPAXQBDH0PBDW4bEMemoryAllocationType__K_Z( bCMemoryAdmin *, GELPCChar const, GEInt, GELPCChar const, GELPCChar, bEMemoryAllocationType, GEU32 );
+// ?CalculateHeapSize@bCMemoryAdmin@@IBEKK@Z protected: unsigned long __thiscall bCMemoryAdmin::CalculateHeapSize(unsigned long)const
+GEU32 __thiscall _CalculateHeapSize_bCMemoryAdmin__IBEKK_Z( bCMemoryAdmin const *, GEU32 );
+// ?CalculatePtrAddress@bCMemoryAdmin@@IBEPAXPBX@Z protected: void * __thiscall bCMemoryAdmin::CalculatePtrAddress(void const *)const
+GELPVoid __thiscall _CalculatePtrAddress_bCMemoryAdmin__IBEPAXPBX_Z( bCMemoryAdmin const *, GELPCVoid );
+// ?CalculatePtrSize@bCMemoryAdmin@@IBEKK@Z protected: unsigned long __thiscall bCMemoryAdmin::CalculatePtrSize(unsigned long)const
+GEU32 __thiscall _CalculatePtrSize_bCMemoryAdmin__IBEKK_Z( bCMemoryAdmin const *, GEU32 );
+// ?CheckMemoryBlock@bCMemoryAdmin@@QBE?AW4bECheckPtr@@PAX@Z public: bECheckPtr __thiscall bCMemoryAdmin::CheckMemoryBlock(void *)const
+bECheckPtr __thiscall _CheckMemoryBlock_bCMemoryAdmin__QBE_AW4bECheckPtr__PAX_Z( bCMemoryAdmin const *, GELPVoid );
+// ?CollectItemSummary@bCMemoryAdmin@@QBE_NP6G_NPBDPBUbSAllocationItem@@@Z@Z public: bool __thiscall bCMemoryAdmin::CollectItemSummary(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+GEBool __thiscall _CollectItemSummary_bCMemoryAdmin__QBE_NP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?CollectItemSummaryDiff@bCMemoryAdmin@@QBE_NP6G_NPBDPBUbSAllocationItem@@@Z@Z public: bool __thiscall bCMemoryAdmin::CollectItemSummaryDiff(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+GEBool __thiscall _CollectItemSummaryDiff_bCMemoryAdmin__QBE_NP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?Create@bCMemoryAdmin@@IAEXXZ protected: void __thiscall bCMemoryAdmin::Create(void)
+void __thiscall _Create_bCMemoryAdmin__IAEXXZ( bCMemoryAdmin * );
+// ?CreateNewMemoryPoolDescriptor@bCMemoryAdmin@@IAE_NXZ protected: bool __thiscall bCMemoryAdmin::CreateNewMemoryPoolDescriptor(void)
+GEBool __thiscall _CreateNewMemoryPoolDescriptor_bCMemoryAdmin__IAE_NXZ( bCMemoryAdmin * );
+// ?DeleteObject@bCMemoryAdmin@@QAEXPAX@Z public: void __thiscall bCMemoryAdmin::DeleteObject(void *)
+void __thiscall _DeleteObject_bCMemoryAdmin__QAEXPAX_Z( bCMemoryAdmin *, GELPVoid );
+// ?DeleteObjectArray@bCMemoryAdmin@@QAEXPAX@Z public: void __thiscall bCMemoryAdmin::DeleteObjectArray(void *)
+void __thiscall _DeleteObjectArray_bCMemoryAdmin__QAEXPAX_Z( bCMemoryAdmin *, GELPVoid );
+// ?Destroy@bCMemoryAdmin@@QAEXXZ public: void __thiscall bCMemoryAdmin::Destroy(void)
+void __thiscall _Destroy_bCMemoryAdmin__QAEXXZ( bCMemoryAdmin * );
+// ?DumpAllocationItem@bCMemoryAdmin@@QBEXP6G_NPBDPBUbSAllocationItem@@@ZABU2@@Z public: void __thiscall bCMemoryAdmin::DumpAllocationItem(bool (__stdcall*)(char const *,bSAllocationItem const *),bSAllocationItem const &)const
+void __thiscall _DumpAllocationItem_bCMemoryAdmin__QBEXP6G_NPBDPBUbSAllocationItem___ZABU2__Z( bCMemoryAdmin const *, GEFMemoryCallback, bSAllocationItem const * );
+// ?DumpGrowSize@bCMemoryAdmin@@QAEXXZ public: void __thiscall bCMemoryAdmin::DumpGrowSize(void)
+void __thiscall _DumpGrowSize_bCMemoryAdmin__QAEXXZ( bCMemoryAdmin * );
+// ?DumpHeapStatistics@bCMemoryAdmin@@QBEXP6G_NPBDPBUbSAllocationItem@@@Z@Z public: void __thiscall bCMemoryAdmin::DumpHeapStatistics(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+void __thiscall _DumpHeapStatistics_bCMemoryAdmin__QBEXP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?DumpLeakReport@bCMemoryAdmin@@QAEXP6G_NPBDPBUbSAllocationItem@@@Z@Z public: void __thiscall bCMemoryAdmin::DumpLeakReport(bool (__stdcall*)(char const *,bSAllocationItem const *))
+void __thiscall _DumpLeakReport_bCMemoryAdmin__QAEXP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin *, GEFMemoryCallback );
+// ?DumpStatisticsByItem@bCMemoryAdmin@@QBEXP6G_NPBDPBUbSAllocationItem@@@Z@Z public: void __thiscall bCMemoryAdmin::DumpStatisticsByItem(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+void __thiscall _DumpStatisticsByItem_bCMemoryAdmin__QBEXP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?DumpStatisticsBySubSystem@bCMemoryAdmin@@QBEXP6G_NPBDPBUbSAllocationItem@@@Z@Z public: void __thiscall bCMemoryAdmin::DumpStatisticsBySubSystem(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+void __thiscall _DumpStatisticsBySubSystem_bCMemoryAdmin__QBEXP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?EnableAllocationReport@bCMemoryAdmin@@QAEX_N@Z public: void __thiscall bCMemoryAdmin::EnableAllocationReport(bool)
+void __thiscall _EnableAllocationReport_bCMemoryAdmin__QAEX_N_Z( bCMemoryAdmin *, GEBool );
+// ?EnableMemoryLeakReport@bCMemoryAdmin@@QAEX_N@Z public: void __thiscall bCMemoryAdmin::EnableMemoryLeakReport(bool)
+void __thiscall _EnableMemoryLeakReport_bCMemoryAdmin__QAEX_N_Z( bCMemoryAdmin *, GEBool );
+// ?FindAllocationItem@bCMemoryAdmin@@QBEPAUbSAllocationItem@@PBX@Z public: bSAllocationItem * __thiscall bCMemoryAdmin::FindAllocationItem(void const *)const
+bSAllocationItem * __thiscall _FindAllocationItem_bCMemoryAdmin__QBEPAUbSAllocationItem__PBX_Z( bCMemoryAdmin const *, GELPCVoid );
+// ?Free@bCMemoryAdmin@@QAEXPAX@Z public: void __thiscall bCMemoryAdmin::Free(void *)
+void __thiscall _Free_bCMemoryAdmin__QAEXPAX_Z( bCMemoryAdmin *, GELPVoid );
+// ?FreePure@bCMemoryAdmin@@IAEXPAX@Z protected: void __thiscall bCMemoryAdmin::FreePure(void *)
+void __thiscall _FreePure_bCMemoryAdmin__IAEXPAX_Z( bCMemoryAdmin *, GELPVoid );
+// ?GetAllocationSummery@bCMemoryAdmin@@QBEPAUbSAllocationSummery@@K@Z public: bSAllocationSummery * __thiscall bCMemoryAdmin::GetAllocationSummery(unsigned long)const
+bSAllocationSummery * __thiscall _GetAllocationSummery_bCMemoryAdmin__QBEPAUbSAllocationSummery__K_Z( bCMemoryAdmin const *, GEU32 );
+// ?GetAllocationSummeryHashSize@bCMemoryAdmin@@QBEKXZ public: unsigned long __thiscall bCMemoryAdmin::GetAllocationSummeryHashSize(void)const
+GEU32 __thiscall _GetAllocationSummeryHashSize_bCMemoryAdmin__QBEKXZ( bCMemoryAdmin const * );
+// ?GetArrayBlockCount@bCMemoryAdmin@@QBEHPAX@Z public: int __thiscall bCMemoryAdmin::GetArrayBlockCount(void *)const
+GEInt __thiscall _GetArrayBlockCount_bCMemoryAdmin__QBEHPAX_Z( bCMemoryAdmin const *, GELPVoid );
+// ?GetInstance@bCMemoryAdmin@@SGAAV1@XZ public: static bCMemoryAdmin & __stdcall bCMemoryAdmin::GetInstance(void)
+bCMemoryAdmin * __stdcall _GetInstance_bCMemoryAdmin__SGAAV1_XZ( void );
+// ?GetMemoryStatistics@bCMemoryAdmin@@QBE?AUbSMemoryStatistics@@W4bEMemorySubSystem@@@Z public: bSMemoryStatistics __thiscall bCMemoryAdmin::GetMemoryStatistics(bEMemorySubSystem)const
+bSMemoryStatistics * __thiscall _GetMemoryStatistics_bCMemoryAdmin__QBE_AUbSMemoryStatistics__W4bEMemorySubSystem___Z( bCMemoryAdmin const *, bSMemoryStatistics *, bEMemorySubSystem );
+// ?GetMemorySubSystemStack@bCMemoryAdmin@@QAEAAVbCMemorySubSystemStack@@XZ public: bCMemorySubSystemStack & __thiscall bCMemoryAdmin::GetMemorySubSystemStack(void)
+bCMemorySubSystemStack * __thiscall _GetMemorySubSystemStack_bCMemoryAdmin__QAEAAVbCMemorySubSystemStack__XZ( bCMemoryAdmin * );
+// ?GetSummeryFootprintGrowTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@H@Z public: int __thiscall bCMemoryAdmin::GetSummeryFootprintGrowTopTen(bSAllocationSummery *,int)
+GEInt __thiscall _GetSummeryFootprintGrowTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__H_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt );
+// ?GetSummeryFootprintTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@H@Z public: int __thiscall bCMemoryAdmin::GetSummeryFootprintTopTen(bSAllocationSummery *,int)
+GEInt __thiscall _GetSummeryFootprintTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__H_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt );
+// ?GetSummeryFreeListAllocTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@HAAH@Z public: int __thiscall bCMemoryAdmin::GetSummeryFreeListAllocTopTen(bSAllocationSummery *,int,int &)
+GEInt __thiscall _GetSummeryFreeListAllocTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__HAAH_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt, GEInt * );
+// ?GetSummeryHeapAllocTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@HAAH@Z public: int __thiscall bCMemoryAdmin::GetSummeryHeapAllocTopTen(bSAllocationSummery *,int,int &)
+GEInt __thiscall _GetSummeryHeapAllocTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__HAAH_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt, GEInt * );
+// ?GetSummeryItemCountGrowTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@H@Z public: int __thiscall bCMemoryAdmin::GetSummeryItemCountGrowTopTen(bSAllocationSummery *,int)
+GEInt __thiscall _GetSummeryItemCountGrowTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__H_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt );
+// ?GetSummeryItemCountTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@H@Z public: int __thiscall bCMemoryAdmin::GetSummeryItemCountTopTen(bSAllocationSummery *,int)
+GEInt __thiscall _GetSummeryItemCountTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__H_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt );
+// ?GetSummeryMaxFootprintTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@H@Z public: int __thiscall bCMemoryAdmin::GetSummeryMaxFootprintTopTen(bSAllocationSummery *,int)
+GEInt __thiscall _GetSummeryMaxFootprintTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__H_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt );
+// ?GetSummeryObservedTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@HPBD@Z public: int __thiscall bCMemoryAdmin::GetSummeryObservedTopTen(bSAllocationSummery *,int,char const *)
+GEInt __thiscall _GetSummeryObservedTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__HPBD_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt, GELPCChar );
+// ?GetSummerySmallAllocTopTen@bCMemoryAdmin@@QAEHPAUbSAllocationSummery@@HAAH@Z public: int __thiscall bCMemoryAdmin::GetSummerySmallAllocTopTen(bSAllocationSummery *,int,int &)
+GEInt __thiscall _GetSummerySmallAllocTopTen_bCMemoryAdmin__QAEHPAUbSAllocationSummery__HAAH_Z( bCMemoryAdmin *, bSAllocationSummery *, GEInt, GEInt * );
+// ?GetTotalNumAllocatedBytes@bCMemoryAdmin@@QAE_KXZ public: unsigned __int64 __thiscall bCMemoryAdmin::GetTotalNumAllocatedBytes(void)
+GEU64 __thiscall _GetTotalNumAllocatedBytes_bCMemoryAdmin__QAE_KXZ( bCMemoryAdmin * );
+// ?Invalidate@bCMemoryAdmin@@IAEXXZ protected: void __thiscall bCMemoryAdmin::Invalidate(void)
+void __thiscall _Invalidate_bCMemoryAdmin__IAEXXZ( bCMemoryAdmin * );
+// ?IsMemoryAdminInitialized@bCMemoryAdmin@@SG_NXZ public: static bool __stdcall bCMemoryAdmin::IsMemoryAdminInitialized(void)
+GEBool __stdcall _IsMemoryAdminInitialized_bCMemoryAdmin__SG_NXZ( void );
+// ?IsPoolValid@bCMemoryAdmin@@QBE_NXZ public: bool __thiscall bCMemoryAdmin::IsPoolValid(void)const
+GEBool __thiscall _IsPoolValid_bCMemoryAdmin__QBE_NXZ( bCMemoryAdmin const * );
+// ?MakeSummeryItemGrowSnapshot@bCMemoryAdmin@@QAEXXZ public: void __thiscall bCMemoryAdmin::MakeSummeryItemGrowSnapshot(void)
+void __thiscall _MakeSummeryItemGrowSnapshot_bCMemoryAdmin__QAEXXZ( bCMemoryAdmin * );
+// ?Malloc@bCMemoryAdmin@@QAEPAXKPBD00H@Z public: void * __thiscall bCMemoryAdmin::Malloc(unsigned long,char const *,char const *,char const *,int)
+GELPVoid __thiscall _Malloc_bCMemoryAdmin__QAEPAXKPBD00H_Z( bCMemoryAdmin *, GEU32, GELPCChar, GELPCChar, GELPCChar, GEInt );
+// ?NewObject@bCMemoryAdmin@@QAEPAXKPBD00H@Z public: void * __thiscall bCMemoryAdmin::NewObject(unsigned long,char const *,char const *,char const *,int)
+GELPVoid __thiscall _NewObject_bCMemoryAdmin__QAEPAXKPBD00H_Z( bCMemoryAdmin *, GEU32, GELPCChar, GELPCChar, GELPCChar, GEInt );
+// ?NewObjectArray@bCMemoryAdmin@@QAEPAXKHPBD00H@Z public: void * __thiscall bCMemoryAdmin::NewObjectArray(unsigned long,int,char const *,char const *,char const *,int)
+GELPVoid __thiscall _NewObjectArray_bCMemoryAdmin__QAEPAXKHPBD00H_Z( bCMemoryAdmin *, GEU32, GEInt, GELPCChar, GELPCChar, GELPCChar, GEInt );
+// ?Realloc@bCMemoryAdmin@@QAEPAXPAXKPBD11H@Z public: void * __thiscall bCMemoryAdmin::Realloc(void *,unsigned long,char const *,char const *,char const *,int)
+GELPVoid __thiscall _Realloc_bCMemoryAdmin__QAEPAXPAXKPBD11H_Z( bCMemoryAdmin *, GELPVoid, GEU32, GELPCChar, GELPCChar, GELPCChar, GEInt );
+// ?ReallocPure@bCMemoryAdmin@@IAEPAXPBDH00W4bEMemoryAllocationType@@KPAX@Z protected: void * __thiscall bCMemoryAdmin::ReallocPure(char const *,int,char const *,char const *,bEMemoryAllocationType,unsigned long,void *)
+GELPVoid __thiscall _ReallocPure_bCMemoryAdmin__IAEPAXPBDH00W4bEMemoryAllocationType__KPAX_Z( bCMemoryAdmin *, GELPCChar, GEInt, GELPCChar, GELPCChar, bEMemoryAllocationType, GEU32, GELPVoid );
+// ?ResetGrowSizeAndCount@bCMemoryAdmin@@QAEXW4bEMemorySubSystem@@@Z public: void __thiscall bCMemoryAdmin::ResetGrowSizeAndCount(bEMemorySubSystem)
+void __thiscall _ResetGrowSizeAndCount_bCMemoryAdmin__QAEXW4bEMemorySubSystem___Z( bCMemoryAdmin *, bEMemorySubSystem );
+// ?ValidateAllAllocationItems@bCMemoryAdmin@@QBE_NP6G_NPBDPBUbSAllocationItem@@@Z@Z public: bool __thiscall bCMemoryAdmin::ValidateAllAllocationItems(bool (__stdcall*)(char const *,bSAllocationItem const *))const
+GEBool __thiscall _ValidateAllAllocationItems_bCMemoryAdmin__QBE_NP6G_NPBDPBUbSAllocationItem___Z_Z( bCMemoryAdmin const *, GEFMemoryCallback );
+// ?ValidateAllocationItem@bCMemoryAdmin@@QBE_NP6G_NPBDPBUbSAllocationItem@@@ZABU2@@Z public: bool __thiscall bCMemoryAdmin::ValidateAllocationItem(bool (__stdcall*)(char const *,bSAllocationItem const *),bSAllocationItem const &)const
+GEBool __thiscall _ValidateAllocationItem_bCMemoryAdmin__QBE_NP6G_NPBDPBUbSAllocationItem___ZABU2__Z( bCMemoryAdmin const *, GEFMemoryCallback, bSAllocationItem const * );
+// ?WipeWithPattern@bCMemoryAdmin@@IAEXABUbSAllocationItem@@KK@Z protected: void __thiscall bCMemoryAdmin::WipeWithPattern(bSAllocationItem const &,unsigned long,unsigned long)
+void __thiscall _WipeWithPattern_bCMemoryAdmin__IAEXABUbSAllocationItem__KK_Z( bCMemoryAdmin *, bSAllocationItem const *, GEU32, GEU32 );
+// ?ms_bInitialized@bCMemoryAdmin@@0_NA private: static bool bCMemoryAdmin::ms_bInitialized
+GEBool DLLIMPORT _ms_bInitialized_bCMemoryAdmin__0_NA;

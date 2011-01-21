@@ -6,5 +6,11 @@
 #include "SharedBase/ge_fpuadmin.tih"
 #include "SharedBase/ge_criticalsection.tih"
 #include "SharedBase/ge_locksystem.tih"
+#include "SharedBase/ge_mempool.tih"
+#include "SharedBase/ge_memorysubsystemstack.tih"
+#include "SharedBase/ge_memoryadmin.tih"
+#include "SharedBase/ge_memory.tih"
+#include "SharedBase/ge_memoryguard.tih"
+#include "SharedBase/ge_validatememory.tih"
 
 GEFloat DLLIMPORT g_fFOV;

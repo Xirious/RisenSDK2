@@ -1,0 +1,37 @@
+struct bCValidateMemory
+{
+    GEBool m_bBreakOnError;
+    GEBool m_bTraceOnError;
+    GEBool m_bWarningMessageOnError;
+    GEBool m_bFatalErrorOnError;
+};
+// ??0bCValidateMemory@@IAE@XZ protected: __thiscall bCValidateMemory::bCValidateMemory(void)
+bCValidateMemory * __thiscall __0bCValidateMemory__IAE_XZ( bCValidateMemory * );
+// ??0bCValidateMemory@@IAE@_N000@Z protected: __thiscall bCValidateMemory::bCValidateMemory(bool,bool,bool,bool)
+bCValidateMemory * __thiscall __0bCValidateMemory__IAE__N000_Z( bCValidateMemory *, GEBool, GEBool, GEBool, GEBool );
+// ??1bCValidateMemory@@IAE@XZ protected: __thiscall bCValidateMemory::~bCValidateMemory(void)
+void __thiscall __1bCValidateMemory__IAE_XZ( bCValidateMemory * );
+// ??4bCValidateMemory@@QAEAAV0@ABV0@@Z public: bCValidateMemory & __thiscall bCValidateMemory::operator=(bCValidateMemory const &)
+bCValidateMemory * __thiscall __4bCValidateMemory__QAEAAV0_ABV0__Z( bCValidateMemory *, bCValidateMemory const * );
+// ?GetBreakOnError@bCValidateMemory@@QBE_NXZ public: bool __thiscall bCValidateMemory::GetBreakOnError(void)const
+GEBool __thiscall _GetBreakOnError_bCValidateMemory__QBE_NXZ( bCValidateMemory const * );
+// ?GetFatalErrorOnError@bCValidateMemory@@QBE_NXZ public: bool __thiscall bCValidateMemory::GetFatalErrorOnError(void)const
+GEBool __thiscall _GetFatalErrorOnError_bCValidateMemory__QBE_NXZ( bCValidateMemory const * );
+// ?GetInstance@bCValidateMemory@@SGAAV1@XZ public: static bCValidateMemory & __stdcall bCValidateMemory::GetInstance(void)
+bCValidateMemory * __stdcall _GetInstance_bCValidateMemory__SGAAV1_XZ( void );
+// ?GetTraceOnError@bCValidateMemory@@QBE_NXZ public: bool __thiscall bCValidateMemory::GetTraceOnError(void)const
+GEBool __thiscall _GetTraceOnError_bCValidateMemory__QBE_NXZ( bCValidateMemory const * );
+// ?GetWarningMessageOnError@bCValidateMemory@@QBE_NXZ public: bool __thiscall bCValidateMemory::GetWarningMessageOnError(void)const
+GEBool __thiscall _GetWarningMessageOnError_bCValidateMemory__QBE_NXZ( bCValidateMemory const * );
+// ?Invalidate@bCValidateMemory@@IAEXXZ protected: void __thiscall bCValidateMemory::Invalidate(void)
+void __thiscall _Invalidate_bCValidateMemory__IAEXXZ( bCValidateMemory * );
+// ?SetBreakOnError@bCValidateMemory@@QAEX_N@Z public: void __thiscall bCValidateMemory::SetBreakOnError(bool)
+void __thiscall _SetBreakOnError_bCValidateMemory__QAEX_N_Z( bCValidateMemory *, GEBool );
+// ?SetFatalErrorOnError@bCValidateMemory@@QAEX_N@Z public: void __thiscall bCValidateMemory::SetFatalErrorOnError(bool)
+void __thiscall _SetFatalErrorOnError_bCValidateMemory__QAEX_N_Z( bCValidateMemory *, GEBool );
+// ?SetTraceOnError@bCValidateMemory@@QAEX_N@Z public: void __thiscall bCValidateMemory::SetTraceOnError(bool)
+void __thiscall _SetTraceOnError_bCValidateMemory__QAEX_N_Z( bCValidateMemory *, GEBool );
+// ?SetWarningMessageOnError@bCValidateMemory@@QAEX_N@Z public: void __thiscall bCValidateMemory::SetWarningMessageOnError(bool)
+void __thiscall _SetWarningMessageOnError_bCValidateMemory__QAEX_N_Z( bCValidateMemory *, GEBool );
+// ?Validate@bCValidateMemory@@QAEXXZ public: void __thiscall bCValidateMemory::Validate(void)
+void __thiscall _Validate_bCValidateMemory__QAEXXZ( bCValidateMemory * );

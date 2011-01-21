@@ -1,0 +1,43 @@
+enum bEMemorySubSystem : GEEnum
+{
+    bEMemorySubSystem_None,
+    bEMemorySubSystem_Global,
+    bEMemorySubSystem_PropertySystem,
+    bEMemorySubSystem_FileSystem,
+    bEMemorySubSystem_Material,
+    bEMemorySubSystem_Animation,
+    bEMemorySubSystem_Mesh,
+    bEMemorySubSystem_Audio,
+    bEMemorySubSystem_Physics,
+    bEMemorySubSystem_Rendering,
+    bEMemorySubSystem_Scene,
+    bEMemorySubSystem_ResourceCache,
+    bEMemorySubSystem_Localization,
+    bEMemorySubSystem_Navigation,
+    bEMemorySubSystem_GUI,
+    bEMemorySubSystem_All,
+    bEMemorySubSystem_Count
+};
+
+struct bCMemorySubSystemStack
+{
+    bEMemorySubSystem m_arrStack[ 256 ];
+    GEU8              m_u8Index;
+                      GE_PADDING( 3 )
+};
+// ??0bCMemorySubSystemStack@@QAE@XZ public: __thiscall bCMemorySubSystemStack::bCMemorySubSystemStack(void)
+bCMemorySubSystemStack * __thiscall __0bCMemorySubSystemStack__QAE_XZ( bCMemorySubSystemStack * );
+// ??1bCMemorySubSystemStack@@QAE@XZ public: __thiscall bCMemorySubSystemStack::~bCMemorySubSystemStack(void)
+void __thiscall __1bCMemorySubSystemStack__QAE_XZ( bCMemorySubSystemStack * );
+// ??4bCMemorySubSystemStack@@QAEAAV0@ABV0@@Z public: bCMemorySubSystemStack & __thiscall bCMemorySubSystemStack::operator=(bCMemorySubSystemStack const &)
+bCMemorySubSystemStack * __thiscall __4bCMemorySubSystemStack__QAEAAV0_ABV0__Z( bCMemorySubSystemStack *, bCMemorySubSystemStack const * );
+// ?GetActualMemorySubSystem@bCMemorySubSystemStack@@QAE?AW4bEMemorySubSystem@@XZ public: bEMemorySubSystem __thiscall bCMemorySubSystemStack::GetActualMemorySubSystem(void)
+bEMemorySubSystem __thiscall _GetActualMemorySubSystem_bCMemorySubSystemStack__QAE_AW4bEMemorySubSystem__XZ( bCMemorySubSystemStack * );
+// ?GetMemorySubSystemName@bCMemorySubSystemStack@@SGPADW4bEMemorySubSystem@@@Z public: static char * __stdcall bCMemorySubSystemStack::GetMemorySubSystemName(bEMemorySubSystem)
+GELPChar __stdcall _GetMemorySubSystemName_bCMemorySubSystemStack__SGPADW4bEMemorySubSystem___Z( bEMemorySubSystem );
+// ?IsSubSystemActual@bCMemorySubSystemStack@@QAE_NW4bEMemorySubSystem@@@Z public: bool __thiscall bCMemorySubSystemStack::IsSubSystemActual(bEMemorySubSystem)
+GEBool __thiscall _IsSubSystemActual_bCMemorySubSystemStack__QAE_NW4bEMemorySubSystem___Z( bCMemorySubSystemStack *, bEMemorySubSystem );
+// ?PopMemorySubSystem@bCMemorySubSystemStack@@QAEXXZ public: void __thiscall bCMemorySubSystemStack::PopMemorySubSystem(void)
+void __thiscall _PopMemorySubSystem_bCMemorySubSystemStack__QAEXXZ( bCMemorySubSystemStack * );
+// ?PushMemorySubSystem@bCMemorySubSystemStack@@QAEXW4bEMemorySubSystem@@@Z public: void __thiscall bCMemorySubSystemStack::PushMemorySubSystem(bEMemorySubSystem)
+void __thiscall _PushMemorySubSystem_bCMemorySubSystemStack__QAEXW4bEMemorySubSystem___Z( bCMemorySubSystemStack *, bEMemorySubSystem );
