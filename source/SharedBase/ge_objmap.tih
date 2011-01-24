@@ -1,0 +1,1 @@
+#define bTObjMap( C, K, T ) bTValMap( C, K, T )

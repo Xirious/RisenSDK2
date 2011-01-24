@@ -1,0 +1,15 @@
+enum bTQueueBase_bEIndex : GEInt
+{
+    bTQueueBase_bEIndex_Invalid = 0xFFFFFFFF
+};
+
+#define bTQueueBase( C, T ) \
+struct C##_##T              \
+{                           \
+    T *    m_pArray;        \
+    GEInt  m_u32Capacity;   \
+    GEInt  m_u32Head;       \
+    GEInt  m_u32Tail;       \
+    GEBool m_bFull;         \
+           GE_PADDING( 3 )  \
+};
