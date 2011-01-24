@@ -29,5 +29,7 @@
 #include "SharedBase/ge_message.tih"
 #include "SharedBase/ge_erroradmin.tih"
 #include "SharedBase/ge_error.tih"
+#include "SharedBase/ge_string.tih"
+#include "SharedBase/ge_stringmap.tih"
 
 GEFloat DLLIMPORT g_fFOV;
