@@ -44,7 +44,7 @@ private:
 private:
     static GEBool ms_bIsInSilentLogMode;
 private:
-    bTValArray< bSMessageCallback > * m_arrCallbacks;
+    bTValArray< bSMessageCallback > * m_parrCallbacks;
     bCCriticalSection                 m_CriticalSection;
     GEU32                             m_reserved[ 2 ];
     bEMessageFilterTypes              m_enuFilterType;

@@ -1,0 +1,2 @@
+GEChar     (DLLIMPORT g_carrMsgBuffer)[ 2048 ];
+GEInt const DLLIMPORT g_iDefaultMessagePriority;
