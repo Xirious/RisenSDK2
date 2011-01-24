@@ -25,5 +25,7 @@
 #include "SharedBase/ge_valqueue.tih"
 #include "SharedBase/ge_gcmemgeneration.tih"
 #include "SharedBase/ge_gcmem.tih"
+#include "SharedBase/ge_messageadmin.tih"
+#include "SharedBase/ge_message.tih"
 
 GEFloat DLLIMPORT g_fFOV;
