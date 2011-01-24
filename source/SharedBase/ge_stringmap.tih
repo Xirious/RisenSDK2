@@ -1,0 +1,7 @@
+// ??$g_GetHashValue@PAD@@YGKABQAD@Z unsigned long __stdcall g_GetHashValue<char *>(char * const &)
+GEU32 __stdcall ___g_GetHashValue_PAD__YGKABQAD_Z( GELPChar const * );
+// ??$g_GetHashValue@VbCString@@@@YGKABVbCString@@@Z unsigned long __stdcall g_GetHashValue<bCString>(bCString const &)
+GEU32 __stdcall ___g_GetHashValue_VbCString____YGKABVbCString___Z( bCString const * );
+
+#define bTStringValMap( T ) bTValMap( bTStringValMap, bCString, T )
+#define bTStringObjMap( T ) bTObjMap( bTStringObjMap, bCString, T )
