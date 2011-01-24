@@ -13,5 +13,15 @@
 #include "SharedBase/ge_memoryguard.tih"
 #include "SharedBase/ge_validatememory.tih"
 #include "SharedBase/ge_enginedialogs.tih"
+#include "SharedBase/ge_arraybase.tih"
+#include "SharedBase/ge_arraymap.tih"
+#include "SharedBase/ge_objarray.tih"
+#include "SharedBase/ge_valarray.tih"
+#include "SharedBase/ge_ptrarray.tih"
+#include "SharedBase/ge_autoptrarray.tih"
+#include "SharedBase/ge_valmap.tih"
+#include "SharedBase/ge_objmap.tih"
+#include "SharedBase/ge_queuebase.tih"
+#include "SharedBase/ge_valqueue.tih"
 
 GEFloat DLLIMPORT g_fFOV;
