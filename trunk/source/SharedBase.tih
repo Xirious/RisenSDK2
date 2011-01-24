@@ -27,5 +27,7 @@
 #include "SharedBase/ge_gcmem.tih"
 #include "SharedBase/ge_messageadmin.tih"
 #include "SharedBase/ge_message.tih"
+#include "SharedBase/ge_erroradmin.tih"
+#include "SharedBase/ge_error.tih"
 
 GEFloat DLLIMPORT g_fFOV;
