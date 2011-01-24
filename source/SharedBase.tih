@@ -12,5 +12,6 @@
 #include "SharedBase/ge_memory.tih"
 #include "SharedBase/ge_memoryguard.tih"
 #include "SharedBase/ge_validatememory.tih"
+#include "SharedBase/ge_enginedialogs.tih"
 
 GEFloat DLLIMPORT g_fFOV;
