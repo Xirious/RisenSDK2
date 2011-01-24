@@ -25,7 +25,6 @@ private:
 public:
     bSGCRootDesc * Allocate( GEU16 );
     void           CopyBuffer( bSGCRootDesc * & );
-    bSGCRootDesc * GCNew( GEU32 );
     GEU16          GetGenerationNumber( void ) const;
     GEU32          GetRemainingMemory( void ) const;
     GEU32          GetTotalMemory( void ) const;
