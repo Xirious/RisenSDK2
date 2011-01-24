@@ -23,5 +23,7 @@
 #include "SharedBase/ge_objmap.tih"
 #include "SharedBase/ge_queuebase.tih"
 #include "SharedBase/ge_valqueue.tih"
+#include "SharedBase/ge_gcmemgeneration.tih"
+#include "SharedBase/ge_gcmem.tih"
 
 GEFloat DLLIMPORT g_fFOV;
