@@ -1,1 +1,1 @@
-#define bTValQueue( C, T ) bTQueueBase( C, T )
+#define bTValQueue( T ) bTQueueBase( bTValQueue, T )
