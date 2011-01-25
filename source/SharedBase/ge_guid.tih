@@ -1,0 +1,93 @@
+struct bCGuid
+{
+    bSGuid m_Guid;
+    GEBool m_Valid;
+           GE_PADDING( 3 )
+};
+// ??0bCGuid@@QAE@ABU_GUID@@@Z public: __thiscall bCGuid::bCGuid(_GUID const &)
+bCGuid * __thiscall __0bCGuid__QAE_ABU_GUID___Z( bCGuid *, bSGuid const * );
+// ??0bCGuid@@QAE@ABV0@@Z public: __thiscall bCGuid::bCGuid(bCGuid const &)
+bCGuid * __thiscall __0bCGuid__QAE_ABV0__Z( bCGuid *, bCGuid const * );
+// ??0bCGuid@@QAE@ABVbCString@@@Z public: __thiscall bCGuid::bCGuid(bCString const &)
+bCGuid * __thiscall __0bCGuid__QAE_ABVbCString___Z( bCGuid *, bCString const * );
+// ??0bCGuid@@QAE@PBU_GUID@@@Z public: __thiscall bCGuid::bCGuid(_GUID const *)
+bCGuid * __thiscall __0bCGuid__QAE_PBU_GUID___Z( bCGuid *, bSGuid const * );
+// ??0bCGuid@@QAE@XZ public: __thiscall bCGuid::bCGuid(void)
+bCGuid * __thiscall __0bCGuid__QAE_XZ( bCGuid * );
+// ??1bCGuid@@QAE@XZ public: __thiscall bCGuid::~bCGuid(void)
+void __thiscall __1bCGuid__QAE_XZ( bCGuid * );
+// ??4bCGuid@@QAEAAV0@ABU_GUID@@@Z public: bCGuid & __thiscall bCGuid::operator=(_GUID const &)
+bCGuid * __thiscall __4bCGuid__QAEAAV0_ABU_GUID___Z( bCGuid *, bSGuid const * );
+// ??4bCGuid@@QAEAAV0@ABV0@@Z public: bCGuid & __thiscall bCGuid::operator=(bCGuid const &)
+bCGuid * __thiscall __4bCGuid__QAEAAV0_ABV0__Z( bCGuid *, bCGuid const * );
+// ??4bCGuid@@QAEAAV0@ABVbCString@@@Z public: bCGuid & __thiscall bCGuid::operator=(bCString const &)
+bCGuid * __thiscall __4bCGuid__QAEAAV0_ABVbCString___Z( bCGuid *, bCString const * );
+// ??4bCGuid@@QAEAAV0@PBU_GUID@@@Z public: bCGuid & __thiscall bCGuid::operator=(_GUID const *)
+bCGuid * __thiscall __4bCGuid__QAEAAV0_PBU_GUID___Z( bCGuid *, bSGuid const * );
+// ??8bCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator==(bCGuid const &)const
+GEBool __thiscall __8bCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ??9bCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator!=(bCGuid const &)const
+GEBool __thiscall __9bCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ??BbCGuid@@QAEAAU_GUID@@XZ public: __thiscall bCGuid::operator _GUID &(void)
+bSGuid * __thiscall __BbCGuid__QAEAAU_GUID__XZ( bCGuid * );
+// ??BbCGuid@@QAEPAU_GUID@@XZ public: __thiscall bCGuid::operator _GUID *(void)
+bSGuid * __thiscall __BbCGuid__QAEPAU_GUID__XZ( bCGuid * );
+// ??BbCGuid@@QBEABU_GUID@@XZ public: __thiscall bCGuid::operator _GUID const &(void)const
+bSGuid const * __thiscall __BbCGuid__QBEABU_GUID__XZ( bCGuid const * );
+// ??BbCGuid@@QBEPBU_GUID@@XZ public: __thiscall bCGuid::operator _GUID const *(void)const
+bSGuid const * __thiscall __BbCGuid__QBEPBU_GUID__XZ( bCGuid const * );
+// ??MbCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator<(bCGuid const &)const
+GEBool __thiscall __MbCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ??NbCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator<=(bCGuid const &)const
+GEBool __thiscall __NbCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ??ObCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator>(bCGuid const &)const
+GEBool __thiscall __ObCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ??PbCGuid@@QBE_NABV0@@Z public: bool __thiscall bCGuid::operator>=(bCGuid const &)const
+GEBool __thiscall __PbCGuid__QBE_NABV0__Z( bCGuid const *, bCGuid const * );
+// ?Clear@bCGuid@@IAEXXZ protected: void __thiscall bCGuid::Clear(void)
+void __thiscall _Clear_bCGuid__IAEXXZ( bCGuid * );
+// ?Compare@bCGuid@@IBEHABV1@@Z protected: int __thiscall bCGuid::Compare(bCGuid const &)const
+GEInt __thiscall _Compare_bCGuid__IBEHABV1__Z( bCGuid const *, bCGuid const * );
+// ?CopyFrom@bCGuid@@QAEXABV1@@Z public: void __thiscall bCGuid::CopyFrom(bCGuid const &)
+void __thiscall _CopyFrom_bCGuid__QAEXABV1__Z( bCGuid *, bCGuid const * );
+// ?CopyTo@bCGuid@@QBEXAAV1@@Z public: void __thiscall bCGuid::CopyTo(bCGuid &)const
+void __thiscall _CopyTo_bCGuid__QBEXAAV1__Z( bCGuid const *, bCGuid * );
+// ?Generate@bCGuid@@QAEXXZ public: void __thiscall bCGuid::Generate(void)
+void __thiscall _Generate_bCGuid__QAEXXZ( bCGuid * );
+// ?GetGuid@bCGuid@@QAEPAU_GUID@@XZ public: _GUID * __thiscall bCGuid::GetGuid(void)
+bSGuid * __thiscall _GetGuid_bCGuid__QAEPAU_GUID__XZ( bCGuid * );
+// ?GetGuid@bCGuid@@QBEPBU_GUID@@XZ public: _GUID const * __thiscall bCGuid::GetGuid(void)const
+bSGuid const * __thiscall _GetGuid_bCGuid__QBEPBU_GUID__XZ( bCGuid const * );
+// ?GetInvalidGuid@bCGuid@@SGABV1@XZ public: static bCGuid const & __stdcall bCGuid::GetInvalidGuid(void)
+bCGuid const * __stdcall _GetInvalidGuid_bCGuid__SGABV1_XZ( void );
+// ?GetNullGuid@bCGuid@@SGABV1@XZ public: static bCGuid const & __stdcall bCGuid::GetNullGuid(void)
+bCGuid const * __stdcall _GetNullGuid_bCGuid__SGABV1_XZ( void );
+// ?GetText@bCGuid@@QBE?AVbCString@@XZ public: bCString __thiscall bCGuid::GetText(void)const
+bCString * __thiscall _GetText_bCGuid__QBE_AVbCString__XZ( bCGuid const *, bCString * );
+// ?Init@bCGuid@@IAEXXZ protected: void __thiscall bCGuid::Init(void)
+void __thiscall _Init_bCGuid__IAEXXZ( bCGuid * );
+// ?IsEqualTo@bCGuid@@IBE_NABV1@@Z protected: bool __thiscall bCGuid::IsEqualTo(bCGuid const &)const
+GEBool __thiscall _IsEqualTo_bCGuid__IBE_NABV1__Z( bCGuid const *, bCGuid const * );
+// ?IsGreaterThan@bCGuid@@IBE_NABV1@@Z protected: bool __thiscall bCGuid::IsGreaterThan(bCGuid const &)const
+GEBool __thiscall _IsGreaterThan_bCGuid__IBE_NABV1__Z( bCGuid const *, bCGuid const * );
+// ?IsLessThan@bCGuid@@IBE_NABV1@@Z protected: bool __thiscall bCGuid::IsLessThan(bCGuid const &)const
+GEBool __thiscall _IsLessThan_bCGuid__IBE_NABV1__Z( bCGuid const *, bCGuid const * );
+// ?IsNull@bCGuid@@QBE_NXZ public: bool __thiscall bCGuid::IsNull(void)const
+GEBool __thiscall _IsNull_bCGuid__QBE_NXZ( bCGuid const * );
+// ?IsValid@bCGuid@@QBE_NXZ public: bool __thiscall bCGuid::IsValid(void)const
+GEBool __thiscall _IsValid_bCGuid__QBE_NXZ( bCGuid const * );
+// ?MakeInvalidGuid@bCGuid@@QAEXXZ public: void __thiscall bCGuid::MakeInvalidGuid(void)
+void __thiscall _MakeInvalidGuid_bCGuid__QAEXXZ( bCGuid * );
+// ?MakeNullGuid@bCGuid@@QAEXXZ public: void __thiscall bCGuid::MakeNullGuid(void)
+void __thiscall _MakeNullGuid_bCGuid__QAEXXZ( bCGuid * );
+// ?SetGuid@bCGuid@@QAEXABU_GUID@@@Z public: void __thiscall bCGuid::SetGuid(_GUID const &)
+void __thiscall _SetGuid_bCGuid__QAEXABU_GUID___Z( bCGuid *, bSGuid const * );
+// ?SetGuid@bCGuid@@QAEXABVbCString@@@Z public: void __thiscall bCGuid::SetGuid(bCString const &)
+void __thiscall _SetGuid_bCGuid__QAEXABVbCString___Z( bCGuid *, bCString const * );
+// ?SetGuid@bCGuid@@QAEXPBU_GUID@@@Z public: void __thiscall bCGuid::SetGuid(_GUID const *)
+void __thiscall _SetGuid_bCGuid__QAEXPBU_GUID___Z( bCGuid *, bSGuid const * );
+// ?SetText@bCGuid@@QAE_NABVbCString@@@Z public: bool __thiscall bCGuid::SetText(bCString const &)
+GEBool __thiscall _SetText_bCGuid__QAE_NABVbCString___Z( bCGuid *, bCString const * );
+
+// ??$g_GetHashValue@VbCGuid@@@@YGKABVbCGuid@@@Z unsigned long __stdcall g_GetHashValue<bCGuid>(bCGuid const &)
+GEU32 __stdcall ___g_GetHashValue_VbCGuid____YGKABVbCGuid___Z( bCGuid const * );
