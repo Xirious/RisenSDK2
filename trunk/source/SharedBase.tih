@@ -32,5 +32,6 @@
 #include "SharedBase/ge_string.tih"
 #include "SharedBase/ge_stringmap.tih"
 #include "SharedBase/ge_unicodestring.tih"
+#include "SharedBase/ge_guid.tih"
 
 GEFloat DLLIMPORT g_fFOV;
