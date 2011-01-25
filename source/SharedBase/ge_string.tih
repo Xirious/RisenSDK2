@@ -1,4 +1,4 @@
-struct bCUnicodeString{ GELPUnicodeChar m_pcText; };
+struct bCUnicodeString;
 
 struct bCString_bSStringData
 {
@@ -11,6 +11,7 @@ struct bCString
 {
     GELPChar m_pcText;
 };
+bTObjArray( bCString )
 // ??0bCString@@QAE@ABV0@@Z public: __thiscall bCString::bCString(bCString const &)
 bCString * __thiscall __0bCString__QAE_ABV0__Z( bCString *, bCString const * );
 // ??0bCString@@QAE@ABV0@H@Z public: __thiscall bCString::bCString(bCString const &,int)

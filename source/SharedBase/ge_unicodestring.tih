@@ -1,0 +1,296 @@
+struct bCUnicodeString_bSUnicodeStringData
+{
+    GEInt         m_iRefCount;
+    GEInt         m_iLength;
+    GEInt         m_iAllocLength;
+    GEUnicodeChar m_warrText[ 0 ];
+};
+
+struct bCUnicodeString
+{
+    GELPUnicodeChar m_pwText;
+};
+bTObjArray( bCUnicodeString )
+// ??0bCUnicodeString@@QAE@ABV0@@Z public: __thiscall bCUnicodeString::bCUnicodeString(bCUnicodeString const &)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_ABV0__Z( bCUnicodeString *, bCUnicodeString const * );
+// ??0bCUnicodeString@@QAE@ABV0@H@Z public: __thiscall bCUnicodeString::bCUnicodeString(bCUnicodeString const &,int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_ABV0_H_Z( bCUnicodeString *, bCUnicodeString const *, GEInt );
+// ??0bCUnicodeString@@QAE@H@Z public: __thiscall bCUnicodeString::bCUnicodeString(int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_H_Z( bCUnicodeString *, GEInt );
+// ??0bCUnicodeString@@QAE@J@Z public: __thiscall bCUnicodeString::bCUnicodeString(long)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_J_Z( bCUnicodeString *, GEI32 );
+// ??0bCUnicodeString@@QAE@K@Z public: __thiscall bCUnicodeString::bCUnicodeString(unsigned long)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_K_Z( bCUnicodeString *, GEU32 );
+// ??0bCUnicodeString@@QAE@MH@Z public: __thiscall bCUnicodeString::bCUnicodeString(float,int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_MH_Z( bCUnicodeString *, GEFloat, GEInt );
+// ??0bCUnicodeString@@QAE@PBD@Z public: __thiscall bCUnicodeString::bCUnicodeString(char const *)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_PBD_Z( bCUnicodeString *, GELPCChar );
+// ??0bCUnicodeString@@QAE@PBDH@Z public: __thiscall bCUnicodeString::bCUnicodeString(char const *,int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_PBDH_Z( bCUnicodeString *, GELPCChar, GEInt );
+// ??0bCUnicodeString@@QAE@PB_W@Z public: __thiscall bCUnicodeString::bCUnicodeString(wchar_t const *)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_PB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ??0bCUnicodeString@@QAE@PB_WH@Z public: __thiscall bCUnicodeString::bCUnicodeString(wchar_t const *,int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_PB_WH_Z( bCUnicodeString *, GELPCUnicodeChar, GEInt );
+// ??0bCUnicodeString@@QAE@XZ public: __thiscall bCUnicodeString::bCUnicodeString(void)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE_XZ( bCUnicodeString * );
+// ??0bCUnicodeString@@QAE@_WH@Z public: __thiscall bCUnicodeString::bCUnicodeString(wchar_t,int)
+bCUnicodeString * __thiscall __0bCUnicodeString__QAE__WH_Z( bCUnicodeString *, GEUnicodeChar, GEInt );
+// ??1bCUnicodeString@@QAE@XZ public: __thiscall bCUnicodeString::~bCUnicodeString(void)
+void __thiscall __1bCUnicodeString__QAE_XZ( bCUnicodeString * );
+// ??4bCUnicodeString@@QAEAAV0@ABV0@@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator=(bCUnicodeString const &)
+bCUnicodeString * __thiscall __4bCUnicodeString__QAEAAV0_ABV0__Z( bCUnicodeString *, bCUnicodeString const * );
+// ??4bCUnicodeString@@QAEAAV0@PBD@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator=(char const *)
+bCUnicodeString * __thiscall __4bCUnicodeString__QAEAAV0_PBD_Z( bCUnicodeString *, GELPCChar );
+// ??4bCUnicodeString@@QAEAAV0@PB_W@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator=(wchar_t const *)
+bCUnicodeString * __thiscall __4bCUnicodeString__QAEAAV0_PB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ??4bCUnicodeString@@QAEAAV0@_W@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator=(wchar_t)
+bCUnicodeString * __thiscall __4bCUnicodeString__QAEAAV0__W_Z( bCUnicodeString *, GEUnicodeChar );
+// ??8bCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator==(bCUnicodeString const &)const
+GEBool __thiscall __8bCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??8bCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator==(wchar_t const *)const
+GEBool __thiscall __8bCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??9bCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator!=(bCUnicodeString const &)const
+GEBool __thiscall __9bCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??9bCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator!=(wchar_t const *)const
+GEBool __thiscall __9bCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??AbCUnicodeString@@QAEAA_WH@Z public: wchar_t & __thiscall bCUnicodeString::operator[](int)
+GEUnicodeChar * __thiscall __AbCUnicodeString__QAEAA_WH_Z( bCUnicodeString *, GEInt );
+// ??AbCUnicodeString@@QBE_WH@Z public: wchar_t __thiscall bCUnicodeString::operator[](int)const
+GEUnicodeChar __thiscall __AbCUnicodeString__QBE_WH_Z( bCUnicodeString const *, GEInt );
+// ??BbCUnicodeString@@QAEPA_WXZ public: __thiscall bCUnicodeString::operator wchar_t *(void)
+GELPUnicodeChar __thiscall __BbCUnicodeString__QAEPA_WXZ( bCUnicodeString * );
+// ??BbCUnicodeString@@QBEPB_WXZ public: __thiscall bCUnicodeString::operator wchar_t const *(void)const
+GELPCUnicodeChar __thiscall __BbCUnicodeString__QBEPB_WXZ( bCUnicodeString const * );
+// ??HbCUnicodeString@@QBE?AV0@ABV0@@Z public: bCUnicodeString __thiscall bCUnicodeString::operator+(bCUnicodeString const &)const
+bCUnicodeString * __thiscall __HbCUnicodeString__QBE_AV0_ABV0__Z( bCUnicodeString const *, bCUnicodeString *, bCUnicodeString const * );
+// ??HbCUnicodeString@@QBE?AV0@PB_W@Z public: bCUnicodeString __thiscall bCUnicodeString::operator+(wchar_t const *)const
+bCUnicodeString * __thiscall __HbCUnicodeString__QBE_AV0_PB_W_Z( bCUnicodeString const *, bCUnicodeString *, GELPCUnicodeChar );
+// ??HbCUnicodeString@@QBE?AV0@_W@Z public: bCUnicodeString __thiscall bCUnicodeString::operator+(wchar_t)const
+bCUnicodeString * __thiscall __HbCUnicodeString__QBE_AV0__W_Z( bCUnicodeString const *, bCUnicodeString *, GEUnicodeChar );
+// ??MbCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator<(bCUnicodeString const &)const
+GEBool __thiscall __MbCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??MbCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator<(wchar_t const *)const
+GEBool __thiscall __MbCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??NbCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator<=(bCUnicodeString const &)const
+GEBool __thiscall __NbCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??NbCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator<=(wchar_t const *)const
+GEBool __thiscall __NbCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??ObCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator>(bCUnicodeString const &)const
+GEBool __thiscall __ObCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??ObCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator>(wchar_t const *)const
+GEBool __thiscall __ObCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??PbCUnicodeString@@QBE_NABV0@@Z public: bool __thiscall bCUnicodeString::operator>=(bCUnicodeString const &)const
+GEBool __thiscall __PbCUnicodeString__QBE_NABV0__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ??PbCUnicodeString@@QBE_NPB_W@Z public: bool __thiscall bCUnicodeString::operator>=(wchar_t const *)const
+GEBool __thiscall __PbCUnicodeString__QBE_NPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ??YbCUnicodeString@@QAEAAV0@ABV0@@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator+=(bCUnicodeString const &)
+bCUnicodeString * __thiscall __YbCUnicodeString__QAEAAV0_ABV0__Z( bCUnicodeString *, bCUnicodeString const * );
+// ??YbCUnicodeString@@QAEAAV0@PB_W@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator+=(wchar_t const *)
+bCUnicodeString * __thiscall __YbCUnicodeString__QAEAAV0_PB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ??YbCUnicodeString@@QAEAAV0@_W@Z public: bCUnicodeString & __thiscall bCUnicodeString::operator+=(wchar_t)
+bCUnicodeString * __thiscall __YbCUnicodeString__QAEAAV0__W_Z( bCUnicodeString *, GEUnicodeChar );
+// ?Alloc@bCUnicodeString@@IAEXH@Z protected: void __thiscall bCUnicodeString::Alloc(int)
+void __thiscall _Alloc_bCUnicodeString__IAEXH_Z( bCUnicodeString *, GEInt );
+// ?Clear@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::Clear(void)
+void __thiscall _Clear_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?Compare@bCUnicodeString@@QBEHABV1@@Z public: int __thiscall bCUnicodeString::Compare(bCUnicodeString const &)const
+GEInt __thiscall _Compare_bCUnicodeString__QBEHABV1__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ?Compare@bCUnicodeString@@QBEHPB_W@Z public: int __thiscall bCUnicodeString::Compare(wchar_t const *)const
+GEInt __thiscall _Compare_bCUnicodeString__QBEHPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ?CompareNoCase@bCUnicodeString@@QBEHABV1@@Z public: int __thiscall bCUnicodeString::CompareNoCase(bCUnicodeString const &)const
+GEInt __thiscall _CompareNoCase_bCUnicodeString__QBEHABV1__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ?CompareNoCase@bCUnicodeString@@QBEHPB_W@Z public: int __thiscall bCUnicodeString::CompareNoCase(wchar_t const *)const
+GEInt __thiscall _CompareNoCase_bCUnicodeString__QBEHPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ?ConcatCopy@bCUnicodeString@@IAEXPB_WH0H@Z protected: void __thiscall bCUnicodeString::ConcatCopy(wchar_t const *,int,wchar_t const *,int)
+void __thiscall _ConcatCopy_bCUnicodeString__IAEXPB_WH0H_Z( bCUnicodeString *, GELPCUnicodeChar, GEInt, GELPCUnicodeChar, GEInt );
+// ?ConcatInPlace@bCUnicodeString@@IAEXPB_WH@Z protected: void __thiscall bCUnicodeString::ConcatInPlace(wchar_t const *,int)
+void __thiscall _ConcatInPlace_bCUnicodeString__IAEXPB_WH_Z( bCUnicodeString *, GELPCUnicodeChar, GEInt );
+// ?Contains@bCUnicodeString@@QBE_NPB_WH@Z public: bool __thiscall bCUnicodeString::Contains(wchar_t const *,int)const
+GEBool __thiscall _Contains_bCUnicodeString__QBE_NPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?Contains@bCUnicodeString@@QBE_N_WH@Z public: bool __thiscall bCUnicodeString::Contains(wchar_t,int)const
+GEBool __thiscall _Contains_bCUnicodeString__QBE_N_WH_Z( bCUnicodeString const *, GEUnicodeChar, GEInt );
+// ?ContainsOneOf@bCUnicodeString@@QBE_NPB_WH@Z public: bool __thiscall bCUnicodeString::ContainsOneOf(wchar_t const *,int)const
+GEBool __thiscall _ContainsOneOf_bCUnicodeString__QBE_NPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?CopyAnsi@bCUnicodeString@@IAEXPBDH@Z protected: void __thiscall bCUnicodeString::CopyAnsi(char const *,int)
+void __thiscall _CopyAnsi_bCUnicodeString__IAEXPBDH_Z( bCUnicodeString *, GELPCChar, GEInt );
+// ?CopyBeforeWrite@bCUnicodeString@@IAEXXZ protected: void __thiscall bCUnicodeString::CopyBeforeWrite(void)
+void __thiscall _CopyBeforeWrite_bCUnicodeString__IAEXXZ( bCUnicodeString * );
+// ?CountWords@bCUnicodeString@@QBEHABV1@@Z public: int __thiscall bCUnicodeString::CountWords(bCUnicodeString const &)const
+GEInt __thiscall _CountWords_bCUnicodeString__QBEHABV1__Z( bCUnicodeString const *, bCUnicodeString const * );
+// ?Decrement@bCUnicodeString@@KGHPAUbSUnicodeStringData@1@@Z protected: static int __stdcall bCUnicodeString::Decrement(bCUnicodeString::bSUnicodeStringData *)
+GEInt __stdcall _Decrement_bCUnicodeString__KGHPAUbSUnicodeStringData_1__Z( bCUnicodeString_bSUnicodeStringData * );
+// ?Delete@bCUnicodeString@@QAEHHH@Z public: int __thiscall bCUnicodeString::Delete(int,int)
+GEInt __thiscall _Delete_bCUnicodeString__QAEHHH_Z( bCUnicodeString *, GEInt, GEInt );
+// ?Find@bCUnicodeString@@QBEHPB_WH@Z public: int __thiscall bCUnicodeString::Find(wchar_t const *,int)const
+GEInt __thiscall _Find_bCUnicodeString__QBEHPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?Find@bCUnicodeString@@QBEH_WH@Z public: int __thiscall bCUnicodeString::Find(wchar_t,int)const
+GEInt __thiscall _Find_bCUnicodeString__QBEH_WH_Z( bCUnicodeString const *, GEUnicodeChar, GEInt );
+// ?FindOneOf@bCUnicodeString@@QBEHPB_WH@Z public: int __thiscall bCUnicodeString::FindOneOf(wchar_t const *,int)const
+GEInt __thiscall _FindOneOf_bCUnicodeString__QBEHPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?Format@bCUnicodeString@@QAAXPB_WZZ public: void __cdecl bCUnicodeString::Format(wchar_t const *,...)
+void __cdecl _Format_bCUnicodeString__QAAXPB_WZZ( bCUnicodeString *, GELPCUnicodeChar, ... );
+// ?FreeData@bCUnicodeString@@KGXPAUbSUnicodeStringData@1@@Z protected: static void __stdcall bCUnicodeString::FreeData(bCUnicodeString::bSUnicodeStringData *)
+void __stdcall _FreeData_bCUnicodeString__KGXPAUbSUnicodeStringData_1__Z( bCUnicodeString_bSUnicodeStringData * );
+// ?FreeExtra@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::FreeExtra(void)
+void __thiscall _FreeExtra_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?GetAllocLength@bCUnicodeString@@QBEHXZ public: int __thiscall bCUnicodeString::GetAllocLength(void)const
+GEInt __thiscall _GetAllocLength_bCUnicodeString__QBEHXZ( bCUnicodeString const * );
+// ?GetAnsiText@bCUnicodeString@@QBE?AVbCString@@XZ public: bCString __thiscall bCUnicodeString::GetAnsiText(void)const
+bCString * __thiscall _GetAnsiText_bCUnicodeString__QBE_AVbCString__XZ( bCUnicodeString const *, bCString * );
+// ?GetAsHexCodedString@bCUnicodeString@@QBE?AVbCString@@XZ public: bCString __thiscall bCUnicodeString::GetAsHexCodedString(void)const
+bCString * __thiscall _GetAsHexCodedString_bCUnicodeString__QBE_AVbCString__XZ( bCUnicodeString const *, bCString * );
+// ?GetAt@bCUnicodeString@@QBE_WH@Z public: wchar_t __thiscall bCUnicodeString::GetAt(int)const
+GEUnicodeChar __thiscall _GetAt_bCUnicodeString__QBE_WH_Z( bCUnicodeString const *, GEInt );
+// ?GetBool@bCUnicodeString@@QBE_NXZ public: bool __thiscall bCUnicodeString::GetBool(void)const
+GEBool __thiscall _GetBool_bCUnicodeString__QBE_NXZ( bCUnicodeString const * );
+// ?GetBuffer@bCUnicodeString@@QAEPA_WH@Z public: wchar_t * __thiscall bCUnicodeString::GetBuffer(int)
+GELPUnicodeChar __thiscall _GetBuffer_bCUnicodeString__QAEPA_WH_Z( bCUnicodeString *, GEInt );
+// ?GetBufferSetLength@bCUnicodeString@@QAEPA_WH@Z public: wchar_t * __thiscall bCUnicodeString::GetBufferSetLength(int)
+GELPUnicodeChar __thiscall _GetBufferSetLength_bCUnicodeString__QAEPA_WH_Z( bCUnicodeString *, GEInt );
+// ?GetData@bCUnicodeString@@IBEPAUbSUnicodeStringData@1@XZ protected: bCUnicodeString::bSUnicodeStringData * __thiscall bCUnicodeString::GetData(void)const
+bCUnicodeString_bSUnicodeStringData * __thiscall _GetData_bCUnicodeString__IBEPAUbSUnicodeStringData_1_XZ( bCUnicodeString const * );
+// ?GetDouble@bCUnicodeString@@QBENXZ public: double __thiscall bCUnicodeString::GetDouble(void)const
+GEDouble __thiscall _GetDouble_bCUnicodeString__QBENXZ( bCUnicodeString const * );
+// ?GetFloat@bCUnicodeString@@QBEMXZ public: float __thiscall bCUnicodeString::GetFloat(void)const
+GEFloat __thiscall _GetFloat_bCUnicodeString__QBEMXZ( bCUnicodeString const * );
+// ?GetFormattedString@bCUnicodeString@@SA?AV1@PB_WZZ public: static bCUnicodeString __cdecl bCUnicodeString::GetFormattedString(wchar_t const *,...)
+bCUnicodeString * __cdecl _GetFormattedString_bCUnicodeString__SA_AV1_PB_WZZ( bCUnicodeString *, GELPCUnicodeChar, ... );
+// ?GetInteger@bCUnicodeString@@QBEHXZ public: int __thiscall bCUnicodeString::GetInteger(void)const
+GEInt __thiscall _GetInteger_bCUnicodeString__QBEHXZ( bCUnicodeString const * );
+// ?GetLength@bCUnicodeString@@QBEHXZ public: int __thiscall bCUnicodeString::GetLength(void)const
+GEInt __thiscall _GetLength_bCUnicodeString__QBEHXZ( bCUnicodeString const * );
+// ?GetRefCount@bCUnicodeString@@IBEHXZ protected: int __thiscall bCUnicodeString::GetRefCount(void)const
+GEInt __thiscall _GetRefCount_bCUnicodeString__IBEHXZ( bCUnicodeString const * );
+// ?GetText@bCUnicodeString@@QAEPA_WXZ public: wchar_t * __thiscall bCUnicodeString::GetText(void)
+GELPUnicodeChar __thiscall _GetText_bCUnicodeString__QAEPA_WXZ( bCUnicodeString * );
+// ?GetText@bCUnicodeString@@QBEPB_WXZ public: wchar_t const * __thiscall bCUnicodeString::GetText(void)const
+GELPCUnicodeChar __thiscall _GetText_bCUnicodeString__QBEPB_WXZ( bCUnicodeString const * );
+// ?GetWord@bCUnicodeString@@QBEHHABV1@AAV1@_N2@Z public: int __thiscall bCUnicodeString::GetWord(int,bCUnicodeString const &,bCUnicodeString &,bool,bool)const
+GEInt __thiscall _GetWord_bCUnicodeString__QBEHHABV1_AAV1__N2_Z( bCUnicodeString const *, GEInt, bCUnicodeString const *, bCUnicodeString *, GEBool, GEBool );
+// ?Increment@bCUnicodeString@@KGXPAUbSUnicodeStringData@1@@Z protected: static void __stdcall bCUnicodeString::Increment(bCUnicodeString::bSUnicodeStringData *)
+void __stdcall _Increment_bCUnicodeString__KGXPAUbSUnicodeStringData_1__Z( bCUnicodeString_bSUnicodeStringData * );
+// ?Insert@bCUnicodeString@@QAEHHABV1@@Z public: int __thiscall bCUnicodeString::Insert(int,bCUnicodeString const &)
+GEInt __thiscall _Insert_bCUnicodeString__QAEHHABV1__Z( bCUnicodeString *, GEInt, bCUnicodeString const * );
+// ?Insert@bCUnicodeString@@QAEHHPB_W@Z public: int __thiscall bCUnicodeString::Insert(int,wchar_t const *)
+GEInt __thiscall _Insert_bCUnicodeString__QAEHHPB_W_Z( bCUnicodeString *, GEInt, GELPCUnicodeChar );
+// ?Insert@bCUnicodeString@@QAEHH_W@Z public: int __thiscall bCUnicodeString::Insert(int,wchar_t)
+GEInt __thiscall _Insert_bCUnicodeString__QAEHH_W_Z( bCUnicodeString *, GEInt, GEUnicodeChar );
+// ?IsAnsiText@bCUnicodeString@@QBE_NXZ public: bool __thiscall bCUnicodeString::IsAnsiText(void)const
+GEBool __thiscall _IsAnsiText_bCUnicodeString__QBE_NXZ( bCUnicodeString const * );
+// ?IsEmpty@bCUnicodeString@@QBE_NXZ public: bool __thiscall bCUnicodeString::IsEmpty(void)const
+GEBool __thiscall _IsEmpty_bCUnicodeString__QBE_NXZ( bCUnicodeString const * );
+// ?Left@bCUnicodeString@@QBE?AV1@H@Z public: bCUnicodeString __thiscall bCUnicodeString::Left(int)const
+bCUnicodeString * __thiscall _Left_bCUnicodeString__QBE_AV1_H_Z( bCUnicodeString const *, bCUnicodeString *, GEInt );
+// ?LockBuffer@bCUnicodeString@@QAEPA_WXZ public: wchar_t * __thiscall bCUnicodeString::LockBuffer(void)
+GELPUnicodeChar __thiscall _LockBuffer_bCUnicodeString__QAEPA_WXZ( bCUnicodeString * );
+// ?MakeLower@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::MakeLower(void)
+void __thiscall _MakeLower_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?MakeReverse@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::MakeReverse(void)
+void __thiscall _MakeReverse_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?MakeUpper@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::MakeUpper(void)
+void __thiscall _MakeUpper_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?Mid@bCUnicodeString@@QBE?AV1@H@Z public: bCUnicodeString __thiscall bCUnicodeString::Mid(int)const
+bCUnicodeString * __thiscall _Mid_bCUnicodeString__QBE_AV1_H_Z( bCUnicodeString const *, bCUnicodeString *, GEInt );
+// ?Mid@bCUnicodeString@@QBE?AV1@HH@Z public: bCUnicodeString __thiscall bCUnicodeString::Mid(int,int)const
+bCUnicodeString * __thiscall _Mid_bCUnicodeString__QBE_AV1_HH_Z( bCUnicodeString const *, bCUnicodeString *, GEInt, GEInt );
+// ?Realloc@bCUnicodeString@@IAEXH@Z protected: void __thiscall bCUnicodeString::Realloc(int)
+void __thiscall _Realloc_bCUnicodeString__IAEXH_Z( bCUnicodeString *, GEInt );
+// ?Release@bCUnicodeString@@IAEXXZ protected: void __thiscall bCUnicodeString::Release(void)
+void __thiscall _Release_bCUnicodeString__IAEXXZ( bCUnicodeString * );
+// ?Release@bCUnicodeString@@KGXPAUbSUnicodeStringData@1@@Z protected: static void __stdcall bCUnicodeString::Release(bCUnicodeString::bSUnicodeStringData *)
+void __stdcall _Release_bCUnicodeString__KGXPAUbSUnicodeStringData_1__Z( bCUnicodeString_bSUnicodeStringData * );
+// ?ReleaseBuffer@bCUnicodeString@@QAEXH@Z public: void __thiscall bCUnicodeString::ReleaseBuffer(int)
+void __thiscall _ReleaseBuffer_bCUnicodeString__QAEXH_Z( bCUnicodeString *, GEInt );
+// ?Remove@bCUnicodeString@@QAEHPB_W@Z public: int __thiscall bCUnicodeString::Remove(wchar_t const *)
+GEInt __thiscall _Remove_bCUnicodeString__QAEHPB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ?Remove@bCUnicodeString@@QAEH_W@Z public: int __thiscall bCUnicodeString::Remove(wchar_t)
+GEInt __thiscall _Remove_bCUnicodeString__QAEH_W_Z( bCUnicodeString *, GEUnicodeChar );
+// ?Replace@bCUnicodeString@@QAEHPB_W0@Z public: int __thiscall bCUnicodeString::Replace(wchar_t const *,wchar_t const *)
+GEInt __thiscall _Replace_bCUnicodeString__QAEHPB_W0_Z( bCUnicodeString *, GELPCUnicodeChar, GELPCUnicodeChar );
+// ?Replace@bCUnicodeString@@QAEH_W0@Z public: int __thiscall bCUnicodeString::Replace(wchar_t,wchar_t)
+GEInt __thiscall _Replace_bCUnicodeString__QAEH_W0_Z( bCUnicodeString *, GEUnicodeChar, GEUnicodeChar );
+// ?ReverseFind@bCUnicodeString@@QBEHPB_W@Z public: int __thiscall bCUnicodeString::ReverseFind(wchar_t const *)const
+GEInt __thiscall _ReverseFind_bCUnicodeString__QBEHPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ?ReverseFind@bCUnicodeString@@QBEHPB_WH@Z public: int __thiscall bCUnicodeString::ReverseFind(wchar_t const *,int)const
+GEInt __thiscall _ReverseFind_bCUnicodeString__QBEHPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?ReverseFind@bCUnicodeString@@QBEH_W@Z public: int __thiscall bCUnicodeString::ReverseFind(wchar_t)const
+GEInt __thiscall _ReverseFind_bCUnicodeString__QBEH_W_Z( bCUnicodeString const *, GEUnicodeChar );
+// ?ReverseFind@bCUnicodeString@@QBEH_WH@Z public: int __thiscall bCUnicodeString::ReverseFind(wchar_t,int)const
+GEInt __thiscall _ReverseFind_bCUnicodeString__QBEH_WH_Z( bCUnicodeString const *, GEUnicodeChar, GEInt );
+// ?ReverseFindOneOf@bCUnicodeString@@QBEHPB_W@Z public: int __thiscall bCUnicodeString::ReverseFindOneOf(wchar_t const *)const
+GEInt __thiscall _ReverseFindOneOf_bCUnicodeString__QBEHPB_W_Z( bCUnicodeString const *, GELPCUnicodeChar );
+// ?ReverseFindOneOf@bCUnicodeString@@QBEHPB_WH@Z public: int __thiscall bCUnicodeString::ReverseFindOneOf(wchar_t const *,int)const
+GEInt __thiscall _ReverseFindOneOf_bCUnicodeString__QBEHPB_WH_Z( bCUnicodeString const *, GELPCUnicodeChar, GEInt );
+// ?Right@bCUnicodeString@@QBE?AV1@H@Z public: bCUnicodeString __thiscall bCUnicodeString::Right(int)const
+bCUnicodeString * __thiscall _Right_bCUnicodeString__QBE_AV1_H_Z( bCUnicodeString const *, bCUnicodeString *, GEInt );
+// ?SetAnsiText@bCUnicodeString@@QAEXABVbCString@@@Z public: void __thiscall bCUnicodeString::SetAnsiText(bCString const &)
+void __thiscall _SetAnsiText_bCUnicodeString__QAEXABVbCString___Z( bCUnicodeString *, bCString const * );
+// ?SetAnsiText@bCUnicodeString@@QAEXABVbCString@@H@Z public: void __thiscall bCUnicodeString::SetAnsiText(bCString const &,int)
+void __thiscall _SetAnsiText_bCUnicodeString__QAEXABVbCString__H_Z( bCUnicodeString *, bCString const *, GEInt );
+// ?SetAnsiText@bCUnicodeString@@QAEXPBD@Z public: void __thiscall bCUnicodeString::SetAnsiText(char const *)
+void __thiscall _SetAnsiText_bCUnicodeString__QAEXPBD_Z( bCUnicodeString *, GELPCChar );
+// ?SetAnsiText@bCUnicodeString@@QAEXPBDH@Z public: void __thiscall bCUnicodeString::SetAnsiText(char const *,int)
+void __thiscall _SetAnsiText_bCUnicodeString__QAEXPBDH_Z( bCUnicodeString *, GELPCChar, GEInt );
+// ?SetAt@bCUnicodeString@@QAEXH_W@Z public: void __thiscall bCUnicodeString::SetAt(int,wchar_t)
+void __thiscall _SetAt_bCUnicodeString__QAEXH_W_Z( bCUnicodeString *, GEInt, GEUnicodeChar );
+// ?SetFromHexCodedString@bCUnicodeString@@QAE_NABVbCString@@@Z public: bool __thiscall bCUnicodeString::SetFromHexCodedString(bCString const &)
+GEBool __thiscall _SetFromHexCodedString_bCUnicodeString__QAE_NABVbCString___Z( bCUnicodeString *, bCString const * );
+// ?SetText@bCUnicodeString@@QAEXABV1@@Z public: void __thiscall bCUnicodeString::SetText(bCUnicodeString const &)
+void __thiscall _SetText_bCUnicodeString__QAEXABV1__Z( bCUnicodeString *, bCUnicodeString const * );
+// ?SetText@bCUnicodeString@@QAEXABV1@H@Z public: void __thiscall bCUnicodeString::SetText(bCUnicodeString const &,int)
+void __thiscall _SetText_bCUnicodeString__QAEXABV1_H_Z( bCUnicodeString *, bCUnicodeString const *, GEInt );
+// ?SetText@bCUnicodeString@@QAEXPB_W@Z public: void __thiscall bCUnicodeString::SetText(wchar_t const *)
+void __thiscall _SetText_bCUnicodeString__QAEXPB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ?SetText@bCUnicodeString@@QAEXPB_WH@Z public: void __thiscall bCUnicodeString::SetText(wchar_t const *,int)
+void __thiscall _SetText_bCUnicodeString__QAEXPB_WH_Z( bCUnicodeString *, GELPCUnicodeChar, GEInt );
+// ?SetText@bCUnicodeString@@QAEX_WH@Z public: void __thiscall bCUnicodeString::SetText(wchar_t,int)
+void __thiscall _SetText_bCUnicodeString__QAEX_WH_Z( bCUnicodeString *, GEUnicodeChar, GEInt );
+// ?SpanExcluding@bCUnicodeString@@QBE?AV1@PB_W@Z public: bCUnicodeString __thiscall bCUnicodeString::SpanExcluding(wchar_t const *)const
+bCUnicodeString * __thiscall _SpanExcluding_bCUnicodeString__QBE_AV1_PB_W_Z( bCUnicodeString const *, bCUnicodeString *, GELPCUnicodeChar );
+// ?SpanIncluding@bCUnicodeString@@QBE?AV1@PB_W@Z public: bCUnicodeString __thiscall bCUnicodeString::SpanIncluding(wchar_t const *)const
+bCUnicodeString * __thiscall _SpanIncluding_bCUnicodeString__QBE_AV1_PB_W_Z( bCUnicodeString const *, bCUnicodeString *, GELPCUnicodeChar );
+// ?Split@bCUnicodeString@@QAEKAAV1@PAV?$bTObjArray@VbCUnicodeString@@@@@Z public: unsigned long __thiscall bCUnicodeString::Split(bCUnicodeString &,bTObjArray<bCUnicodeString> *)
+GEU32 __thiscall _Split_bCUnicodeString__QAEKAAV1_PAV__bTObjArray_VbCUnicodeString_____Z( bCUnicodeString *, bCUnicodeString *, bTObjArray_bCUnicodeString * );
+// ?ToLower@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::ToLower(void)
+void __thiscall _ToLower_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?ToUpper@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::ToUpper(void)
+void __thiscall _ToUpper_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?Trim@bCUnicodeString@@QAEXPB_W@Z public: void __thiscall bCUnicodeString::Trim(wchar_t const *)
+void __thiscall _Trim_bCUnicodeString__QAEXPB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ?Trim@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::Trim(void)
+void __thiscall _Trim_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?Trim@bCUnicodeString@@QAEX_N0@Z public: void __thiscall bCUnicodeString::Trim(bool,bool)
+void __thiscall _Trim_bCUnicodeString__QAEX_N0_Z( bCUnicodeString *, GEBool, GEBool );
+// ?Trim@bCUnicodeString@@QAEX_W@Z public: void __thiscall bCUnicodeString::Trim(wchar_t)
+void __thiscall _Trim_bCUnicodeString__QAEX_W_Z( bCUnicodeString *, GEUnicodeChar );
+// ?TrimLeft@bCUnicodeString@@QAEXPB_W@Z public: void __thiscall bCUnicodeString::TrimLeft(wchar_t const *)
+void __thiscall _TrimLeft_bCUnicodeString__QAEXPB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ?TrimLeft@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::TrimLeft(void)
+void __thiscall _TrimLeft_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?TrimLeft@bCUnicodeString@@QAEX_W@Z public: void __thiscall bCUnicodeString::TrimLeft(wchar_t)
+void __thiscall _TrimLeft_bCUnicodeString__QAEX_W_Z( bCUnicodeString *, GEUnicodeChar );
+// ?TrimRight@bCUnicodeString@@QAEXPB_W@Z public: void __thiscall bCUnicodeString::TrimRight(wchar_t const *)
+void __thiscall _TrimRight_bCUnicodeString__QAEXPB_W_Z( bCUnicodeString *, GELPCUnicodeChar );
+// ?TrimRight@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::TrimRight(void)
+void __thiscall _TrimRight_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+// ?TrimRight@bCUnicodeString@@QAEX_W@Z public: void __thiscall bCUnicodeString::TrimRight(wchar_t)
+void __thiscall _TrimRight_bCUnicodeString__QAEX_W_Z( bCUnicodeString *, GEUnicodeChar );
+// ?UnlockBuffer@bCUnicodeString@@QAEXXZ public: void __thiscall bCUnicodeString::UnlockBuffer(void)
+void __thiscall _UnlockBuffer_bCUnicodeString__QAEXXZ( bCUnicodeString * );
+
+// ??8@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator==(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __8_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
+// ??9@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator!=(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __9_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
+// ??H@YG?AVbCUnicodeString@@PB_WABV0@@Z bCUnicodeString __stdcall operator+(wchar_t const *,bCUnicodeString const &)
+bCUnicodeString * __stdcall __H_YG_AVbCUnicodeString__PB_WABV0__Z( bCUnicodeString *, GELPCUnicodeChar, bCUnicodeString const * );
+// ??H@YG?AVbCUnicodeString@@_WABV0@@Z bCUnicodeString __stdcall operator+(wchar_t,bCUnicodeString const &)
+bCUnicodeString * __stdcall __H_YG_AVbCUnicodeString___WABV0__Z( bCUnicodeString *, GEUnicodeChar, bCUnicodeString const * );
+// ??M@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator<(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __M_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
+// ??N@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator<=(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __N_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
+// ??O@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator>(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __O_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
+// ??P@YG_NPB_WABVbCUnicodeString@@@Z bool __stdcall operator>=(wchar_t const *,bCUnicodeString const &)
+GEBool __stdcall __P_YG_NPB_WABVbCUnicodeString___Z( GELPCUnicodeChar, bCUnicodeString const * );
