@@ -1,6 +1,6 @@
 struct tagUI_FILETIME
 {
-    union
+    union u
     {
         GEU64      m_u64DateTime;
         bSFileTime m_FileTime;
