@@ -1,4 +1,4 @@
-enum bEMemorySubSystem : GEEnum
+enum bEMemorySubSystem : __int32
 {
     bEMemorySubSystem_None,
     bEMemorySubSystem_Global,

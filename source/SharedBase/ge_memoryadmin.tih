@@ -1,4 +1,4 @@
-enum bECheckPtr : GEEnum
+enum bECheckPtr : __int32
 {
     bECheckPtr_Valid,
     bECheckPtr_Invalid,
@@ -7,7 +7,7 @@ enum bECheckPtr : GEEnum
     bECheckPtr_Null
 };
 
-enum bEMemoryAllocationType : GEEnum
+enum bEMemoryAllocationType : __int32
 {
     bEMemoryAllocationType_Malloc,
     bEMemoryAllocationType_Calloc,

@@ -1,11 +1,11 @@
-enum bEErrorPositionHandling : GEEnum
+enum bEErrorPositionHandling : __int32
 {
     bEErrorCallbackType_Pre,
     bEErrorCallbackType_Post,
     bEErrorCallbackType_Count
 };
 
-enum bEErrorType : GEEnum
+enum bEErrorType : __int32
 {
     bEErrorType_Exception,
     bEErrorType_Fatal,

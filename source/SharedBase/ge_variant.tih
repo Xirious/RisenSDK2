@@ -1,4 +1,4 @@
-enum bCVariant_bEType : GEEnum
+enum bCVariant_bEType : __int32
 {
     bEType_Empty,
     bEType_U8,

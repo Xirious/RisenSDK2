@@ -1,4 +1,4 @@
-enum bEMessageCallbackPriority : GEEnum
+enum bEMessageCallbackPriority : __int32
 {
     bEMessageCallbackPriority_Critical,
     bEMessageCallbackPriority_Normal,
@@ -6,7 +6,7 @@ enum bEMessageCallbackPriority : GEEnum
     bEMessageCallbackPriority_Count
 };
 
-enum bEMessageFilterTypes : GEEnum
+enum bEMessageFilterTypes : __int32
 {
     bEMessageFilter_OK,
     bEMessageFilter_Info,
@@ -15,7 +15,7 @@ enum bEMessageFilterTypes : GEEnum
     bEMessageFilter_Fatal
 };
 
-enum bEMessageTypes : GEEnum
+enum bEMessageTypes : __int32
 {
     bEMessageType_OK = 1,
     bEMessageType_Info,

@@ -1,4 +1,4 @@
-enum bCEngineDialogs_bEGE3DialogsLogMessageType : GEEnum
+enum bCEngineDialogs_bEGE3DialogsLogMessageType : __int32
 {
 	bEGE3DialogsLogMessageType_Error = 1,
 	bEGE3DialogsLogMessageType_ErrorHistory,
