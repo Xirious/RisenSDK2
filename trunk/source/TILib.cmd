@@ -12,7 +12,7 @@ echo     extracted/installed in the root folder of IDA Pro.
 echo   * Environment variable set (IDAROOT or NLSPATH) that
 echo     points to the root folder of the IDA installation.
 echo     (the default is C:\IDA if both values are missing)
-echo   * Existing .\%~n0{BaseName}.cfg + .\{BaseName}.tih.
+echo   * %~n0{BaseName}.cfg and %~n0{BaseName}.tih exist.
 echo.
 pause
 exit /B 1
@@ -29,7 +29,7 @@ set TILPATH=%IDAROOT%\til\pc
 
 pushd "%TILPATH%"
 echo %CD%\%TILNAME%.til
-"%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dp0%DLLNAME%.tih" "-DDLLIMPORT=*" "%TILNAME%.til"
+"%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dpn0%DLLNAME%.tih" "-DDLLIMPORT=*" "%TILNAME%.til"
 popd
 if errorlevel 1 (
   endlocal
@@ -45,7 +45,7 @@ if "%2"=="-u+" (
 
 pushd "%TILPATH%"
 echo %CD%\%TILNAME%_dll.til
-"%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dp0%DLLNAME%.tih" "-DDLLIMPORT=" "%TILNAME%_dll.til"
+"%IDAROOT%\tilib.exe" -c %2 "@%~dpn0%DLLNAME%.cfg" "-h%~dpn0%DLLNAME%.tih" "-DDLLIMPORT=" "%TILNAME%_dll.til"
 popd
 if errorlevel 1 (
   endlocal

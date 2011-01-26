@@ -1,6 +1,6 @@
 struct bCMemPool
 {
-    byte __empty;
+    __int8 __empty;
 };
 // ??0bCMemPool@@QAE@XZ public: __thiscall bCMemPool::bCMemPool(void)
 bCMemPool * __thiscall __0bCMemPool__QAE_XZ( bCMemPool * );

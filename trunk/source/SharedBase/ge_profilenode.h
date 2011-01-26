@@ -36,13 +36,13 @@ private:
     GEI64                 m_i64StartTimeCount;
     GEInt                 m_iCallDepth;
     GEBool                m_bAbsolute;
-                          GE_PADDING1( 3 )
+                          GE_PADDING( 3 )
     bTValQueue< bSFrame > m_queFrames;
     bSProfileStats        m_Stats;
     bCProfileNode *       m_pParent;
     bCProfileNode *       m_pChild;
     bCProfileNode *       m_pSibling;
-                          GE_PADDING2( 4 )
+                          GE_PADDING1( 4 )
 public:
     void                   Call( void );
     GEInt                  GetCalls( void ) const;

@@ -1,10 +1,7 @@
-//FIXME: Seems like Piranha Bytes used a Windows SDK where struct _RTL_CRITICAL_SECTION is packed at byte level.
-#pragma pack(push, 1)
 struct bCCriticalSection
 {
     bSCriticalSection m_CriticalSection;
 };
-#pragma pack(pop)
 // ??0bCCriticalSection@@QAE@XZ public: __thiscall bCCriticalSection::bCCriticalSection(void)
 bCCriticalSection * __thiscall __0bCCriticalSection__QAE_XZ( bCCriticalSection * );
 // ??1bCCriticalSection@@QAE@XZ public: __thiscall bCCriticalSection::~bCCriticalSection(void)

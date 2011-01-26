@@ -1,3 +1,6 @@
+#ifndef TILIB_SHAREDBASE
+#define TILIB_SHAREDBASE
+
 #include "SharedBase/ge_def.tih"
 #include "SharedBase/ge_types.tih"
 #include "SharedBase/ge_system.tih"
@@ -35,5 +38,9 @@
 #include "SharedBase/ge_guid.tih"
 #include "SharedBase/ge_datetime.tih"
 #include "SharedBase/ge_variant.tih"
+#include "SharedBase/ge_profilenode.tih"
+#include "SharedBase/ge_profilemanager.tih"
 
 GEFloat DLLIMPORT g_fFOV;
+
+#endif

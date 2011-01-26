@@ -1,10 +1,118 @@
-typedef BOOL               GELongBool;
-typedef CRITICAL_SECTION   bSCriticalSection;
-typedef EXCEPTION_POINTERS bSExceptionPointers;
-typedef FILETIME           bSFileTime;
-typedef GUID               bSGuid;
-typedef POINT              bSPoint;
-typedef RECT               bSRect;
+// mssdk.BOOL
+typedef int GELongBool;
+
+//FIXME: Seems like Piranha Bytes used a Windows SDK where struct _RTL_CRITICAL_SECTION is packed at byte level.
+#pragma pack( push, 1 )
+// mssdk.CRITICAL_SECTION
+struct bSCriticalSection
+{
+    struct Debug
+    {
+        unsigned __int16    Type;                       // WORD
+        unsigned __int16    CreatorBackTraceIndex;      // WORD
+        bSCriticalSection * CriticalSection;            // struct _RTL_CRITICAL_SECTION *
+        struct ListEntry {
+            ListEntry * Flink;  // struct _LIST_ENTRY *
+            ListEntry * Blink;  // struct _LIST_ENTRY *
+        }                   ProcessLocksList;           // LIST_ENTRY
+        unsigned __int32    EntryCount;                 // DWORD
+        unsigned __int32    ContentionCount;            // DWORD
+        unsigned __int32    Flags;                      // DWORD
+        unsigned __int16    CreatorBackTraceIndexHigh;  // WORD
+        unsigned __int16    SpareWORD;                  // WORD
+    } *              DebugInfo;       // PRTL_CRITICAL_SECTION_DEBUG
+    __int32          LockCount;       // LONG
+    __int32          RecursionCount;  // LONG
+    void *           OwningThread;    // HANDLE
+    void *           LockSemaphore;   // HANDLE
+    unsigned __int32 SpinCount;       // ULONG_PTR
+};
+#pragma pack( pop );
+
+// mssdk.EXCEPTION_POINTERS
+struct bSExceptionPointers
+{
+    struct Record
+    {
+        unsigned __int32 ExceptionCode;               // DWORD
+        unsigned __int32 ExceptionFlags;              // DWORD
+        Record *         ExceptionRecord;             // struct _EXCEPTION_RECORD *
+        void *           ExceptionAddress;            // PVOID
+        unsigned __int32 NumberParameters;            // DWORD
+        unsigned __int32 ExceptionInformation[ 15 ];  // ULONG_PTR[EXCEPTION_MAXIMUM_PARAMETERS]
+    } * ExceptionRecord;  // PEXCEPTION_RECORD
+    struct Context
+    {
+        unsigned __int32 ContextFlags;              // DWORD
+        unsigned __int32 Dr0;                       // DWORD
+        unsigned __int32 Dr1;                       // DWORD
+        unsigned __int32 Dr2;                       // DWORD
+        unsigned __int32 Dr3;                       // DWORD
+        unsigned __int32 Dr6;                       // DWORD
+        unsigned __int32 Dr7;                       // DWORD
+        struct FloatingSaveArea
+        {
+            unsigned __int32 ControlWord;         // DWORD
+            unsigned __int32 StatusWord;          // DWORD
+            unsigned __int32 TagWord;             // DWORD
+            unsigned __int32 ErrorOffset;         // DWORD
+            unsigned __int32 ErrorSelector;       // DWORD
+            unsigned __int32 DataOffset;          // DWORD
+            unsigned __int32 DataSelector;        // DWORD
+            unsigned __int8  RegisterArea[ 80 ];  // BYTE[SIZE_OF_80387_REGISTERS]
+            unsigned __int32 Cr0NpxState;         // DWORD
+        }                FloatSave;                 // FLOATING_SAVE_AREA
+        unsigned __int32 SegGs;                     // DWORD
+        unsigned __int32 SegFs;                     // DWORD
+        unsigned __int32 SegEs;                     // DWORD
+        unsigned __int32 SegDs;                     // DWORD
+        unsigned __int32 Edi;                       // DWORD
+        unsigned __int32 Esi;                       // DWORD
+        unsigned __int32 Ebx;                       // DWORD
+        unsigned __int32 Edx;                       // DWORD
+        unsigned __int32 Ecx;                       // DWORD
+        unsigned __int32 Eax;                       // DWORD
+        unsigned __int32 Ebp;                       // DWORD
+        unsigned __int32 Eip;                       // DWORD
+        unsigned __int32 SegCs;                     // DWORD
+        unsigned __int32 EFlags;                    // DWORD
+        unsigned __int32 Esp;                       // DWORD
+        unsigned __int32 SegSs;                     // DWORD
+        unsigned __int8  ExtendedRegisters[ 512 ];  // BYTE[MAXIMUM_SUPPORTED_EXTENSION]
+    } * ContextRecord;    // PCONTEXT
+};
+
+// mssdk.FILETIME
+struct bSFileTime
+{
+    unsigned __int32 dwLowDateTime;   // DWORD
+    unsigned __int32 dwHighDateTime;  // DWORD
+};
+
+// mssdk.GUID
+struct bSGuid
+{
+    unsigned __int32 Data1;       // unsigned long
+    unsigned __int16 Data2;       // unsigned short
+    unsigned __int16 Data3;       // unsigned short
+    unsigned __int8  Data4[ 8 ];  // unsigned char[ 8 ]
+};
+
+// mssdk.POINT
+struct bSPoint
+{
+    __int32 x;  // LONG
+    __int32 y;  // LONG
+};
+
+// mssdk.RECT
+struct bSRect
+{
+    __int32 left;    // LONG
+    __int32 top;     // LONG
+    __int32 right;   // LONG
+    __int32 bottom;  // LONG
+};
 
 void __cdecl GE_SILENTLOG_ERR( GELPCChar, ... );
 void __cdecl GE_SILENTLOG_OUT( GELPCChar, ... );

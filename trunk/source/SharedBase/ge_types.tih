@@ -1,36 +1,34 @@
-typedef signed char           GEI8;
-typedef unsigned char         GEU8;
-typedef signed short          GEI16;
-typedef unsigned short        GEU16;
-typedef signed long           GEI32;
-typedef unsigned long         GEU32;
-typedef int                   GEInt;
-typedef unsigned int          GEUInt;
-typedef signed __int64        GEI64;
-typedef unsigned __int64      GEU64;
-typedef float                 GEFloat;
-typedef double                GEDouble;
-typedef void *                GELPVoid;
-typedef void const *          GELPCVoid;
-typedef char                  GEChar;
-typedef char *                GELPChar;
-typedef char const *          GELPCChar;
-typedef unsigned char         GEUChar;
-typedef unsigned char *       GELPUChar;
-typedef unsigned char const * GELPCUChar;
-typedef wchar_t               GEUnicodeChar;
-typedef wchar_t *             GELPUnicodeChar;
-typedef wchar_t const *       GELPCUnicodeChar;
+typedef signed __int8            GEI8;
+typedef unsigned __int8          GEU8;
+typedef signed __int16           GEI16;
+typedef unsigned __int16         GEU16;
+typedef signed __int32           GEI32;
+typedef unsigned __int32         GEU32;
+typedef int                      GEInt;
+typedef unsigned int             GEUInt;
+typedef signed __int64           GEI64;
+typedef unsigned __int64         GEU64;
+typedef float                    GEFloat;
+typedef double                   GEDouble;
+typedef void *                   GELPVoid;
+typedef void const *             GELPCVoid;
+typedef char                     GEChar;
+typedef char *                   GELPChar;
+typedef char const *             GELPCChar;
+typedef unsigned __int8          GEByte;
+typedef unsigned __int8 *        GELPByte;
+typedef unsigned __int8 const *  GELPCByte;
+typedef unsigned __int16         GEUnicodeChar;
+typedef unsigned __int16 *       GELPUnicodeChar;
+typedef unsigned __int16 const * GELPCUnicodeChar;
 
-enum GEBool : byte
+enum GEBool : __int8
 {
     GEFalse,
     GETrue
 };
 
-typedef GEU32 GEEnum;
-
-enum bEResult : GEEnum
+enum bEResult : __int32
 {
     bEResult_False,
     bEResult_Ok
