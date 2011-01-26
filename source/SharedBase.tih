@@ -34,5 +34,6 @@
 #include "SharedBase/ge_unicodestring.tih"
 #include "SharedBase/ge_guid.tih"
 #include "SharedBase/ge_datetime.tih"
+#include "SharedBase/ge_variant.tih"
 
 GEFloat DLLIMPORT g_fFOV;
