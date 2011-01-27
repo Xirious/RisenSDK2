@@ -40,6 +40,9 @@
 #include "SharedBase/ge_variant.tih"
 #include "SharedBase/ge_profilenode.tih"
 #include "SharedBase/ge_profilemanager.tih"
+#include "SharedBase/ge_istream.tih"
+#include "SharedBase/ge_ostream.tih"
+#include "SharedBase/ge_iostream.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

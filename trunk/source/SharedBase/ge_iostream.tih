@@ -1,0 +1,32 @@
+enum bEStreamSeekMode : __int32
+{
+    bEStreamSeekMode_Begin,
+    bEStreamSeekMode_Current,
+    bEStreamSeekMode_End
+};
+
+struct bCIOStream;
+struct bCIOStream_vftable
+{
+    bCIStream_vftable bCIStream;
+    GEI64  (__thiscall * GetPosition)( bCIOStream const * );
+    GEBool (__thiscall * Seek)( bCIOStream *, GEI64, bEStreamSeekMode );
+};
+struct bCIOStream
+{
+    bCIOStream_vftable const * __vfptr;
+    bCIStream_members          bCIStream;
+    bCOStream                  bCOStream;
+};
+// ??0bCIOStream@@QAE@ABV0@@Z public: __thiscall bCIOStream::bCIOStream(bCIOStream const &)
+bCIOStream * __thiscall __0bCIOStream__QAE_ABV0__Z( bCIOStream *, bCIOStream const * );
+// ??0bCIOStream@@QAE@XZ public: __thiscall bCIOStream::bCIOStream(void)
+bCIOStream * __thiscall __0bCIOStream__QAE_XZ( bCIOStream * );
+// ??1bCIOStream@@UAE@XZ public: virtual __thiscall bCIOStream::~bCIOStream(void)
+void __thiscall __1bCIOStream__UAE_XZ( bCIOStream * );
+// ??4bCIOStream@@QAEAAV0@ABV0@@Z public: bCIOStream & __thiscall bCIOStream::operator=(bCIOStream const &)
+bCIOStream * __thiscall __4bCIOStream__QAEAAV0_ABV0__Z( bCIOStream *, bCIOStream const * );
+// ??_7bCIOStream@@6BbCIStream@@@ const bCIOStream::`vftable'{for `bCIStream'}
+bCIOStream_vftable const DLLIMPORT ___7bCIOStream__6BbCIStream___;
+// ??_7bCIOStream@@6BbCOStream@@@ const bCIOStream::`vftable'{for `bCOStream'}
+bCOStream_vftable const DLLIMPORT ___7bCIOStream__6BbCOStream___;
