@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>/Risen/bin/SharedBase.dll</title>
+</head>
+<body bgcolor="white">
+<span style="white-space: pre; font-family: FixedSys; color: blue; background: white">
+
+<span style="color:navy">void __thiscall bCIStream::`vector deleting destructor'( bCIStream * this, unsigned int flags )
+{
+  </span><span style="color:gray">void *      array</span><span style="color:navy">;
+  </span><span style="color:gray">int         count;
+  </span><span style="color:gray">bCIStream * element</span><span style="color:navy">;
+  </span><span style="color:gray">int         index</span><span style="color:navy">;
+  </span><span style="color:navy">
+  if( </span><span style="color:#8080ff">flags &amp; </span><span style="color:navy">2 )
+  {
+    </span><span style="color:#8080ff">array </span><span style="color:navy">= (</span><span style="color:gray">char *</span><span style="color:navy">)</span><span style="color:#8080ff">this </span><span style="color:navy">- 4;
+    </span><span style="color:#8080ff">count </span><span style="color:navy">= *((</span><span style="color:gray">int *</span><span style="color:navy">)</span><span style="color:#8080ff">this </span><span style="color:navy">- 1);
+    </span><span style="color:#8080ff">element </span><span style="color:navy">= &amp;</span><span style="color:#8080ff">this</span><span style="color:navy">[</span> <span style="color:#8080ff">count</span> <span style="color:navy">];
+    for( </span><span style="color:#8080ff">index </span><span style="color:navy">= </span><span style="color:#8080ff">count </span><span style="color:navy">- 1; </span><span style="color:#8080ff">index &gt;</span><span style="color:navy">= 0; --</span><span style="color:#8080ff">index </span><span style="color:navy">)
+    {
+      --</span><span style="color:#8080ff">element</span><span style="color:navy">;
+      </span>bCIStream::~bCIStream<span style="color:navy">(</span> <span style="color:#8080ff">element</span> <span style="color:navy">);
+    </span><span style="background:navy"></span><span style="color:navy">}
+    if( </span><span style="color:#8080ff">flags &amp; </span><span style="color:navy">1 )
+      </span>free<span style="color:navy">(</span> <span style="color:#8080ff">array</span> <span style="color:navy">);
+  </span><span style="background:navy"></span><span style="color:navy">}
+  else
+  {
+    </span>bCIStream::~bCIStream<span style="color:navy">(</span> <span style="color:#8080ff">this</span> <span style="color:navy">);
+    if( </span><span style="color:#8080ff">flags &amp; </span><span style="color:navy">1 )
+      </span>free<span style="color:navy">(</span> <span style="color:#8080ff">this</span> <span style="color:navy">);
+  </span><span style="background:navy"></span><span style="color:navy">}
+</span><span style="background:blue"></span><span style="color:navy">}
+</span></body></html>
