@@ -1,0 +1,72 @@
+struct bCFileSystem;
+struct bCFileSystem_vftable
+{
+    GEInt        (__thiscall * GetResult)( bCFileSystem const * );
+    bCString *   (__thiscall * GetCurrentDirPath)( bCFileSystem const *, bCString * );
+    GEBool       (__thiscall * DeleteFileA)( bCFileSystem *, bCString const * );
+    GEBool       (__thiscall * CopyFileA)( bCFileSystem *, bCString const *, bCString const * );
+    GEBool       (__thiscall * RenameFile)( bCFileSystem *, bCString const *, bCString const * );
+    GEBool       (__thiscall * ExistsFile)( bCFileSystem const *, bCString const * );
+    GEI64        (__thiscall * GetFileSize)( bCFileSystem const *, bCString const * );
+    bCDateTime * (__thiscall * GetFileTime)( bCFileSystem const *, bCDateTime *, bCString const * );
+    GEBool       (__thiscall * MakeAbsolutePath)( bCFileSystem *, bCString *, bCString const * );
+    GEBool       (__thiscall * MakePath)( bCFileSystem *, bCString *, bCString const *, bCString const *, bCString const *, bCString const * );
+    GEBool       (__thiscall * SplitPath)( bCFileSystem *, bCString const *, bCString *, bCString *, bCString *, bCString * );
+    GEBool       (__thiscall * MakePathDir)( bCFileSystem *, bCString * );
+    GEBool       (__thiscall * ChangeDir)( bCFileSystem *, bCString const * );
+    GEBool       (__thiscall * MakeDir)( bCFileSystem *, bCString const * );
+    GEBool       (__thiscall * DeleteDir)( bCFileSystem *, bCString const * );
+    GEBool       (__thiscall * FindFiles)( bCFileSystem *, bCString, bTObjArray_bCString * );
+    GEBool       (__thiscall * FindDirectories)( bCFileSystem *, bCString, bTObjArray_bCString * );
+    void         (__thiscall * __vecDelDtor)( bCFileSystem *, unsigned int );
+};
+struct bCFileSystem
+{
+    bCFileSystem_vftable const * __vfptr;
+};
+// ??0bCFileSystem@@QAE@ABV0@@Z public: __thiscall bCFileSystem::bCFileSystem(bCFileSystem const &)
+bCFileSystem * __thiscall __0bCFileSystem__QAE_ABV0__Z( bCFileSystem *, bCFileSystem const * );
+// ??0bCFileSystem@@QAE@XZ public: __thiscall bCFileSystem::bCFileSystem(void)
+bCFileSystem * __thiscall __0bCFileSystem__QAE_XZ( bCFileSystem * );
+// ??1bCFileSystem@@UAE@XZ public: virtual __thiscall bCFileSystem::~bCFileSystem(void)
+void __thiscall __1bCFileSystem__UAE_XZ( bCFileSystem * );
+// ??4bCFileSystem@@QAEAAV0@ABV0@@Z public: bCFileSystem & __thiscall bCFileSystem::operator=(bCFileSystem const &)
+bCFileSystem * __thiscall __4bCFileSystem__QAEAAV0_ABV0__Z( bCFileSystem *, bCFileSystem const * );
+// ??_7bCFileSystem@@6B@ const bCFileSystem::`vftable'
+bCFileSystem_vftable const DLLIMPORT ___7bCFileSystem__6B_;
+// ?ChangeDir@bCFileSystem@@UAE_NABVbCString@@@Z public: virtual bool __thiscall bCFileSystem::ChangeDir(bCString const &)
+GEBool __thiscall _ChangeDir_bCFileSystem__UAE_NABVbCString___Z( bCFileSystem *, bCString const * );
+// ?CopyFileA@bCFileSystem@@UAE_NABVbCString@@0@Z public: virtual bool __thiscall bCFileSystem::CopyFileA(bCString const &,bCString const &)
+GEBool __thiscall _CopyFileA_bCFileSystem__UAE_NABVbCString__0_Z( bCFileSystem *, bCString const *, bCString const * );
+// ?DeleteDir@bCFileSystem@@UAE_NABVbCString@@@Z public: virtual bool __thiscall bCFileSystem::DeleteDir(bCString const &)
+GEBool __thiscall _DeleteDir_bCFileSystem__UAE_NABVbCString___Z( bCFileSystem *, bCString const * );
+// ?DeleteFileA@bCFileSystem@@UAE_NABVbCString@@@Z public: virtual bool __thiscall bCFileSystem::DeleteFileA(bCString const &)
+GEBool __thiscall _DeleteFileA_bCFileSystem__UAE_NABVbCString___Z( bCFileSystem *, bCString const * );
+// ?ExistsFile@bCFileSystem@@UBE_NABVbCString@@@Z public: virtual bool __thiscall bCFileSystem::ExistsFile(bCString const &)const
+GEBool __thiscall _ExistsFile_bCFileSystem__UBE_NABVbCString___Z( bCFileSystem const *, bCString const * );
+// ?FindDirectories@bCFileSystem@@UAE_NVbCString@@AAV?$bTObjArray@VbCString@@@@@Z public: virtual bool __thiscall bCFileSystem::FindDirectories(bCString,bTObjArray<bCString> &)
+GEBool __thiscall _FindDirectories_bCFileSystem__UAE_NVbCString__AAV__bTObjArray_VbCString_____Z( bCFileSystem *, bCString, bTObjArray_bCString * );
+// ?FindFiles@bCFileSystem@@UAE_NVbCString@@AAV?$bTObjArray@VbCString@@@@@Z public: virtual bool __thiscall bCFileSystem::FindFiles(bCString,bTObjArray<bCString> &)
+GEBool __thiscall _FindFiles_bCFileSystem__UAE_NVbCString__AAV__bTObjArray_VbCString_____Z( bCFileSystem *, bCString, bTObjArray_bCString * );
+// ?GetCurrentDirPath@bCFileSystem@@UBE?AVbCString@@XZ public: virtual bCString __thiscall bCFileSystem::GetCurrentDirPath(void)const
+bCString * __thiscall _GetCurrentDirPath_bCFileSystem__UBE_AVbCString__XZ( bCFileSystem const *, bCString * );
+// ?GetFileSize@bCFileSystem@@UBE_JABVbCString@@@Z public: virtual __int64 __thiscall bCFileSystem::GetFileSize(bCString const &)const
+GEI64 __thiscall _GetFileSize_bCFileSystem__UBE_JABVbCString___Z( bCFileSystem const *, bCString const * );
+// ?GetFileTime@bCFileSystem@@UBE?AVbCDateTime@@ABVbCString@@@Z public: virtual bCDateTime __thiscall bCFileSystem::GetFileTime(bCString const &)const
+bCDateTime * __thiscall _GetFileTime_bCFileSystem__UBE_AVbCDateTime__ABVbCString___Z( bCFileSystem const *, bCDateTime *, bCString const * );
+// ?GetResult@bCFileSystem@@UBEHXZ public: virtual int __thiscall bCFileSystem::GetResult(void)const
+GEInt __thiscall _GetResult_bCFileSystem__UBEHXZ( bCFileSystem const * );
+// ?MakeAbsolutePath@bCFileSystem@@UAE_NAAVbCString@@ABV2@@Z public: virtual bool __thiscall bCFileSystem::MakeAbsolutePath(bCString &,bCString const &)
+GEBool __thiscall _MakeAbsolutePath_bCFileSystem__UAE_NAAVbCString__ABV2__Z( bCFileSystem *, bCString *, bCString const * );
+// ?MakeCommonFilename@bCFileSystem@@QAEXAAVbCString@@@Z public: void __thiscall bCFileSystem::MakeCommonFilename(bCString &)
+void __thiscall _MakeCommonFilename_bCFileSystem__QAEXAAVbCString___Z( bCFileSystem *, bCString * );
+// ?MakeDir@bCFileSystem@@UAE_NABVbCString@@@Z public: virtual bool __thiscall bCFileSystem::MakeDir(bCString const &)
+GEBool __thiscall _MakeDir_bCFileSystem__UAE_NABVbCString___Z( bCFileSystem *, bCString const * );
+// ?MakePath@bCFileSystem@@UAE_NAAVbCString@@ABV2@111@Z public: virtual bool __thiscall bCFileSystem::MakePath(bCString &,bCString const &,bCString const &,bCString const &,bCString const &)
+GEBool __thiscall _MakePath_bCFileSystem__UAE_NAAVbCString__ABV2_111_Z( bCFileSystem *, bCString *, bCString const *, bCString const *, bCString const *, bCString const * );
+// ?MakePathDir@bCFileSystem@@UAE_NAAVbCString@@@Z public: virtual bool __thiscall bCFileSystem::MakePathDir(bCString &)
+GEBool __thiscall _MakePathDir_bCFileSystem__UAE_NAAVbCString___Z( bCFileSystem *, bCString * );
+// ?RenameFile@bCFileSystem@@UAE_NABVbCString@@0@Z public: virtual bool __thiscall bCFileSystem::RenameFile(bCString const &,bCString const &)
+GEBool __thiscall _RenameFile_bCFileSystem__UAE_NABVbCString__0_Z( bCFileSystem *, bCString const *, bCString const * );
+// ?SplitPath@bCFileSystem@@UAE_NABVbCString@@AAV2@111@Z public: virtual bool __thiscall bCFileSystem::SplitPath(bCString const &,bCString &,bCString &,bCString &,bCString &)
+GEBool __thiscall _SplitPath_bCFileSystem__UAE_NABVbCString__AAV2_111_Z( bCFileSystem *, bCString const *, bCString *, bCString *, bCString *, bCString * );
