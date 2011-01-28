@@ -6,18 +6,17 @@ struct bCMemoryStream_vftable
     GEBool (__thiscall * GetPosition)( bCMemoryStream const *, GEI64 * );
     GEBool (__thiscall * SetPosition)( bCMemoryStream *, GEI64, bEStreamSeekMode );
 };
-#pragma pack( push, 4 )
-struct bCMemoryStream_data
+struct bCMemoryStream_bCOStream
 {
-    bCIOStream_data bCIOStream;
+    bCOStream       bCOStream;
     bTValArray_GEU8 m_arrBuffer;
     GEI64           m_i64Position;
 };
-#pragma pack( pop )
 struct bCMemoryStream
 {
     bCMemoryStream_vftable const * __vfptr;
-    bCMemoryStream_data            data;
+    bCIStream_data                 bCIStream;
+    bCMemoryStream_bCOStream       data;
 };
 // ??0bCMemoryStream@@QAE@ABV0@@Z public: __thiscall bCMemoryStream::bCMemoryStream(bCMemoryStream const &)
 bCMemoryStream * __thiscall __0bCMemoryStream__QAE_ABV0__Z( bCMemoryStream *, bCMemoryStream const * );
@@ -64,4 +63,4 @@ void __thiscall _SetCount_bCMemoryStream__QAEXK_Z( bCMemoryStream *, GEU32 );
 // ?SetPosition@bCMemoryStream@@UAE_N_JW4bEStreamSeekMode@@@Z public: virtual bool __thiscall bCMemoryStream::SetPosition(__int64,bEStreamSeekMode)
 GEBool __thiscall _SetPosition_bCMemoryStream__UAE_N_JW4bEStreamSeekMode___Z( bCMemoryStream *, GEI64, bEStreamSeekMode );
 // ?Write@bCMemoryStream@@UAEKPBXK@Z public: virtual unsigned long __thiscall bCMemoryStream::Write(void const *,unsigned long)
-GEU32 __thiscall _Write_bCMemoryStream__UAEKPBXK_Z( bCMemoryStream *, GELPCVoid, GEU32 );
+GEU32 __thiscall _Write_bCMemoryStream__UAEKPBXK_Z( bCMemoryStream_bCOStream *, GELPCVoid, GEU32 );
