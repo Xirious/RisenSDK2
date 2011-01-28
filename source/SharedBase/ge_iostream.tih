@@ -12,15 +12,11 @@ struct bCIOStream_vftable
     GEI64  (__thiscall * GetPosition)( bCIOStream const * );
     GEBool (__thiscall * Seek)( bCIOStream *, GEI64, bEStreamSeekMode );
 };
-struct bCIOStream_data
-{
-    bCIStream_data bCIStream;
-    bCOStream      bCOStream;
-};
 struct bCIOStream
 {
     bCIOStream_vftable const * __vfptr;
-    bCIOStream_data            data;
+    bCIStream_data             bCIStream;
+    bCOStream                  bCOStream;
 };
 // ??0bCIOStream@@QAE@ABV0@@Z public: __thiscall bCIOStream::bCIOStream(bCIOStream const &)
 bCIOStream * __thiscall __0bCIOStream__QAE_ABV0__Z( bCIOStream *, bCIOStream const * );
