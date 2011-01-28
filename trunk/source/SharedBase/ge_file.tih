@@ -16,11 +16,14 @@ struct bCFile_vftable
     GEBool (__thiscall * Close)( bCFile * );
     GEBool (__thiscall * Seek)( bCFile const *, GEI64, bEStreamSeekMode );
 };
+struct bCFile_data
+{
+    bCIOStream_data bCIOStream;
+};
 struct bCFile
 {
     bCFile_vftable const * __vfptr;
-    bCIStream_members      bCIStream;
-    bCOStream              bCOStream;
+    bCFile_data            data;
 };
 // ??0bCFile@@QAE@ABV0@@Z public: __thiscall bCFile::bCFile(bCFile const &)
 bCFile * __thiscall __0bCFile__QAE_ABV0__Z( bCFile *, bCFile const * );

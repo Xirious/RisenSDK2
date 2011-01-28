@@ -1,1 +1,3 @@
 #define bTValArray( T ) bTArrayBase( bTValArray, T, )
+
+bTValArray( GEU8 )

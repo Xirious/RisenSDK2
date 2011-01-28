@@ -5,7 +5,7 @@ struct bCIStream_vftable
     GEU32 (__thiscall * ReadBuffer)( bCIStream *, GELPVoid, GEU32 );
     void  (__thiscall * __vecDelDtor)( bCIStream *, unsigned int );
 };
-struct bCIStream_members
+struct bCIStream_data
 {
     GEU16 m_u16StreamVersion;
           GE_PADDING( 2 )
@@ -13,7 +13,7 @@ struct bCIStream_members
 struct bCIStream
 {
     bCIStream_vftable const * __vfptr;
-    bCIStream_members         members;
+    bCIStream_data            data;
 };
 // ??0bCIStream@@QAE@ABV0@@Z public: __thiscall bCIStream::bCIStream(bCIStream const &)
 bCIStream * __thiscall __0bCIStream__QAE_ABV0__Z( bCIStream *, bCIStream const * );
