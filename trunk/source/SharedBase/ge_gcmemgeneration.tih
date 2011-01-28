@@ -17,6 +17,7 @@ struct bCGCMemGeneration
     GELPVoid                                  m_pNext;
     GEU8                                      m_arrHeap[ 20000 ];
 };
+bTPtrArray( bCGCMemGeneration )
 // ??0bCGCMemGeneration@@QAE@ABV0@@Z public: __thiscall bCGCMemGeneration::bCGCMemGeneration(bCGCMemGeneration const &)
 bCGCMemGeneration * __thiscall __0bCGCMemGeneration__QAE_ABV0__Z( bCGCMemGeneration *, bCGCMemGeneration const * );
 // ??0bCGCMemGeneration@@QAE@G@Z public: __thiscall bCGCMemGeneration::bCGCMemGeneration(unsigned short)

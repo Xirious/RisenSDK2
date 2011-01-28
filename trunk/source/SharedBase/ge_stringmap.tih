@@ -3,5 +3,34 @@ GEU32 __stdcall ___g_GetHashValue_PAD__YGKABQAD_Z( GELPChar const * );
 // ??$g_GetHashValue@VbCString@@@@YGKABVbCString@@@Z unsigned long __stdcall g_GetHashValue<bCString>(bCString const &)
 GEU32 __stdcall ___g_GetHashValue_VbCString____YGKABVbCString___Z( bCString const * );
 
-#define bTStringValMap( T ) bTValMap( bTStringValMap, bCString, T )
-#define bTStringObjMap( T ) bTObjMap( bTStringObjMap, bCString, T )
+#define bTStringMap( C, T )                            \
+struct C##_##T##_bSNode                                \
+{                                                      \
+    bCString           m_Key;                          \
+    T                  m_Element;                      \
+    GEU32              m_u32Hash;                      \
+    C##_##T##_bSNode * m_pNext;                        \
+};                                                     \
+bTPtrArray( C##_##T##_bSNode )                         \
+struct C##_##T##_bCConstIterator                       \
+{                                                      \
+    bTPtrArray_##C##_##T##_bSNode const * m_parrNodes; \
+    GEInt                                 m_iHash;     \
+    C##_##T##_bSNode const *              m_pNode;     \
+};                                                     \
+struct C##_##T##_bCIterator                            \
+{                                                      \
+    bTPtrArray_##C##_##T##_bSNode * m_parrNodes;       \
+    GEInt                           m_iHash;           \
+    C##_##T##_bSNode *              m_pNode;           \
+};                                                     \
+struct C##_##T                                         \
+{                                                      \
+    bTPtrArray_##C##_##T##_bSNode m_arrNodes;          \
+    GEInt                         m_u32Count;          \
+};
+
+#define bTStringValMap( T ) bTStringMap( bTStringValMap, T )
+#define bTStringObjMap( T ) bTStringMap( bTStringObjMap, T )
+
+bTStringObjMap( bCString )

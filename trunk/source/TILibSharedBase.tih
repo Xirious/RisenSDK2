@@ -43,6 +43,7 @@
 #include "SharedBase/ge_istream.tih"
 #include "SharedBase/ge_ostream.tih"
 #include "SharedBase/ge_iostream.tih"
+#include "SharedBase/ge_commandline.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
