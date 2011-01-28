@@ -30,7 +30,8 @@ struct C##_##T                                         \
     GEInt                         m_u32Count;          \
 };
 
-#define bTStringValMap( T ) bTStringMap( bTStringValMap, T )
 #define bTStringObjMap( T ) bTStringMap( bTStringObjMap, T )
+#define bTStringValMap( T ) bTStringMap( bTStringValMap, T )
 
 bTStringObjMap( bCString )
+bTStringValMap( GEI32 )
