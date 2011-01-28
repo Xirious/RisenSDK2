@@ -10,17 +10,17 @@ bTPtrArray( C##_##K##_##T##_bSNode )                         \
 struct C##_##K##_##T##_bCConstIterator                       \
 {                                                            \
     bTPtrArray_##C##_##K##_##T##_bSNode const * m_parrNodes; \
-    GEInt                                          m_iHash;  \
-    C##_##K##_##T##_bSNode const *            m_pNode;       \
+    GEInt                                       m_iHash;     \
+    C##_##K##_##T##_bSNode const *              m_pNode;     \
 };                                                           \
 struct C##_##K##_##T##_bCIterator                            \
 {                                                            \
     bTPtrArray_##C##_##K##_##T##_bSNode * m_parrNodes;       \
-    GEInt                                    m_iHash;        \
-    C##_##K##_##T##_bSNode *            m_pNode;             \
+    GEInt                                 m_iHash;           \
+    C##_##K##_##T##_bSNode *              m_pNode;           \
 };                                                           \
 struct C##_##K##_##T                                         \
 {                                                            \
     bTPtrArray_##C##_##K##_##T##_bSNode m_arrNodes;          \
-    GEU32                                  m_u32Count;       \
+    GEInt                               m_u32Count;          \
 };

@@ -1,5 +1,3 @@
-bTPtrArray( bCGCMemGeneration )
-
 struct bCGCMem
 {
     bTPtrArray_bCGCMemGeneration m_arrGenerations;
