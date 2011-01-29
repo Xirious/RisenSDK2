@@ -49,6 +49,8 @@
 #include "SharedBase/ge_memorystream.tih"
 #include "SharedBase/ge_nullstream.tih"
 #include "SharedBase/ge_postream.tih"
+#include "SharedBase/ge_propertyid.tih"
+#include "SharedBase/ge_md5.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
