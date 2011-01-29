@@ -1,0 +1,34 @@
+typedef bCPropertyID_bSCore bCMd5_bSDigest;
+
+struct bCMd5
+{
+    GEU32  m_u32Size[ 2 ];
+    GEU32  m_u32ABCD[ 4 ];
+    GEU8   m_u8Chunk[ 64 ];
+    GEBool m_bIsInProcess;
+           GE_PADDING( 3 )
+};
+// ??0bCMd5@@QAE@XZ public: __thiscall bCMd5::bCMd5(void)
+bCMd5 * __thiscall __0bCMd5__QAE_XZ( bCMd5 * );
+// ??1bCMd5@@QAE@XZ public: __thiscall bCMd5::~bCMd5(void)
+void __thiscall __1bCMd5__QAE_XZ( bCMd5 * );
+// ?Append@bCMd5@@QAEXPBXK@Z public: void __thiscall bCMd5::Append(void const *,unsigned long)
+void __thiscall _Append_bCMd5__QAEXPBXK_Z( bCMd5 *, GELPCVoid, GEU32 );
+// ?Create@bCMd5@@QAE_NXZ public: bool __thiscall bCMd5::Create(void)
+GEBool __thiscall _Create_bCMd5__QAE_NXZ( bCMd5 * );
+// ?Destroy@bCMd5@@QAEXXZ public: void __thiscall bCMd5::Destroy(void)
+void __thiscall _Destroy_bCMd5__QAEXXZ( bCMd5 * );
+// ?Finish@bCMd5@@QAEXAAUbSCore@bCPropertyID@@@Z public: void __thiscall bCMd5::Finish(bCPropertyID::bSCore &)
+void __thiscall _Finish_bCMd5__QAEXAAUbSCore_bCPropertyID___Z( bCMd5 *, bCMd5_bSDigest * );
+// ?Finish@bCMd5@@QAEXXZ public: void __thiscall bCMd5::Finish(void)
+void __thiscall _Finish_bCMd5__QAEXXZ( bCMd5 * );
+// ?GetDigest16@bCMd5@@QBEXAAUbSCore@bCPropertyID@@@Z public: void __thiscall bCMd5::GetDigest16(bCPropertyID::bSCore &)const
+void __thiscall _GetDigest16_bCMd5__QBEXAAUbSCore_bCPropertyID___Z( bCMd5 const *, bCMd5_bSDigest * );
+// ?GetDigest32@bCMd5@@QBEXAAUbSCore@bCPropertyID@@@Z public: void __thiscall bCMd5::GetDigest32(bCPropertyID::bSCore &)const
+void __thiscall _GetDigest32_bCMd5__QBEXAAUbSCore_bCPropertyID___Z( bCMd5 const *, bCMd5_bSDigest * );
+// ?GetDigest8@bCMd5@@QBEXAAUbSCore@bCPropertyID@@@Z public: void __thiscall bCMd5::GetDigest8(bCPropertyID::bSCore &)const
+void __thiscall _GetDigest8_bCMd5__QBEXAAUbSCore_bCPropertyID___Z( bCMd5 const *, bCMd5_bSDigest * );
+// ?Invalidate@bCMd5@@IAEXXZ protected: void __thiscall bCMd5::Invalidate(void)
+void __thiscall _Invalidate_bCMd5__IAEXXZ( bCMd5 * );
+// ?Process@bCMd5@@AAEXQBE@Z private: void __thiscall bCMd5::Process(unsigned char const * const)
+void __thiscall _Process_bCMd5__AAEXQBE_Z( bCMd5 *, GEU8 const (*)[ 64 ] );
