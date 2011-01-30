@@ -1,0 +1,166 @@
+enum bCTrackBitField_bEIndex : GEInt
+{
+    bCTrackBitField_bEIndex_Invalid = 0xFFFFFFFF
+};
+
+struct bCTrackBitField
+{
+    bTValArray_GEU32 m_arrSlots;
+    GEInt            m_iCount;
+    GEInt            m_iEnabled;
+    GEInt            m_iIndex;
+};
+// ??0bCTrackBitField@@QAE@ABV0@@Z public: __thiscall bCTrackBitField::bCTrackBitField(bCTrackBitField const &)
+bCTrackBitField * __thiscall __0bCTrackBitField__QAE_ABV0__Z( bCTrackBitField *, bCTrackBitField const * );
+// ??0bCTrackBitField@@QAE@H@Z public: __thiscall bCTrackBitField::bCTrackBitField(int)
+bCTrackBitField * __thiscall __0bCTrackBitField__QAE_H_Z( bCTrackBitField *, GEInt );
+// ??1bCTrackBitField@@QAE@XZ public: __thiscall bCTrackBitField::~bCTrackBitField(void)
+void __thiscall __1bCTrackBitField__QAE_XZ( bCTrackBitField * );
+// ??4bCTrackBitField@@QAEAAV0@ABV0@@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator=(bCTrackBitField const &)
+bCTrackBitField * __thiscall __4bCTrackBitField__QAEAAV0_ABV0__Z( bCTrackBitField *, bCTrackBitField const * );
+// ??5bCTrackBitField@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCTrackBitField::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCTrackBitField__QBEAAVbCOStream__AAV1__Z( bCTrackBitField const *, bCOStream * );
+// ??5bCTrackBitField@@QBEABV0@J@Z public: bCTrackBitField const & __thiscall bCTrackBitField::operator>>(long)const
+bCTrackBitField const * __thiscall __5bCTrackBitField__QBEABV0_J_Z( bCTrackBitField const *, GEI32 );
+// ??6bCTrackBitField@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCTrackBitField::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCTrackBitField__QAEAAVbCIStream__AAV1__Z( bCTrackBitField *, bCIStream * );
+// ??6bCTrackBitField@@QBEABV0@J@Z public: bCTrackBitField const & __thiscall bCTrackBitField::operator<<(long)const
+bCTrackBitField const * __thiscall __6bCTrackBitField__QBEABV0_J_Z( bCTrackBitField const *, GEI32 );
+// ??8bCTrackBitField@@QBE_NABV0@@Z public: bool __thiscall bCTrackBitField::operator==(bCTrackBitField const &)const
+GEBool __thiscall __8bCTrackBitField__QBE_NABV0__Z( bCTrackBitField const *, bCTrackBitField const * );
+// ??9bCTrackBitField@@QBE_NABV0@@Z public: bool __thiscall bCTrackBitField::operator!=(bCTrackBitField const &)const
+GEBool __thiscall __9bCTrackBitField__QBE_NABV0__Z( bCTrackBitField const *, bCTrackBitField const * );
+// ??AbCTrackBitField@@QBE_NH@Z public: bool __thiscall bCTrackBitField::operator[](int)const
+GEBool __thiscall __AbCTrackBitField__QBE_NH_Z( bCTrackBitField const *, GEInt );
+// ??IbCTrackBitField@@QBEABV0@ABV0@@Z public: bCTrackBitField const & __thiscall bCTrackBitField::operator&(bCTrackBitField const &)const
+bCTrackBitField const * __thiscall __IbCTrackBitField__QBEABV0_ABV0__Z( bCTrackBitField const *, bCTrackBitField const * );
+// ??SbCTrackBitField@@QBEABV0@XZ public: bCTrackBitField const & __thiscall bCTrackBitField::operator~(void)const
+bCTrackBitField const * __thiscall __SbCTrackBitField__QBEABV0_XZ( bCTrackBitField const * );
+// ??TbCTrackBitField@@QBEABV0@ABV0@@Z public: bCTrackBitField const & __thiscall bCTrackBitField::operator^(bCTrackBitField const &)const
+bCTrackBitField const * __thiscall __TbCTrackBitField__QBEABV0_ABV0__Z( bCTrackBitField const *, bCTrackBitField const * );
+// ??UbCTrackBitField@@QBEABV0@ABV0@@Z public: bCTrackBitField const & __thiscall bCTrackBitField::operator|(bCTrackBitField const &)const
+bCTrackBitField const * __thiscall __UbCTrackBitField__QBEABV0_ABV0__Z( bCTrackBitField const *, bCTrackBitField const * );
+// ??_2bCTrackBitField@@QAEAAV0@J@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator>>=(long)
+bCTrackBitField * __thiscall ___2bCTrackBitField__QAEAAV0_J_Z( bCTrackBitField *, GEI32 );
+// ??_3bCTrackBitField@@QAEAAV0@J@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator<<=(long)
+bCTrackBitField * __thiscall ___3bCTrackBitField__QAEAAV0_J_Z( bCTrackBitField *, GEI32 );
+// ??_4bCTrackBitField@@QAEAAV0@ABV0@@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator&=(bCTrackBitField const &)
+bCTrackBitField * __thiscall ___4bCTrackBitField__QAEAAV0_ABV0__Z( bCTrackBitField *, bCTrackBitField const * );
+// ??_5bCTrackBitField@@QAEAAV0@ABV0@@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator|=(bCTrackBitField const &)
+bCTrackBitField * __thiscall ___5bCTrackBitField__QAEAAV0_ABV0__Z( bCTrackBitField *, bCTrackBitField const * );
+// ??_6bCTrackBitField@@QAEAAV0@ABV0@@Z public: bCTrackBitField & __thiscall bCTrackBitField::operator^=(bCTrackBitField const &)
+bCTrackBitField * __thiscall ___6bCTrackBitField__QAEAAV0_ABV0__Z( bCTrackBitField *, bCTrackBitField const * );
+// ??_B?2???5bCTrackBitField@@QBEABV0@J@Z@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator>>(long)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___5bCTrackBitField__QBEABV0_J_Z_52;
+// ??_B?2???6bCTrackBitField@@QBEABV0@J@Z@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator<<(long)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___6bCTrackBitField__QBEABV0_J_Z_52;
+// ??_B?2???IbCTrackBitField@@QBEABV0@ABV0@@Z@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator&(bCTrackBitField const &)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___IbCTrackBitField__QBEABV0_ABV0__Z_52;
+// ??_B?2???SbCTrackBitField@@QBEABV0@XZ@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator~(void)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___SbCTrackBitField__QBEABV0_XZ_52;
+// ??_B?2???TbCTrackBitField@@QBEABV0@ABV0@@Z@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator^(bCTrackBitField const &)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___TbCTrackBitField__QBEABV0_ABV0__Z_52;
+// ??_B?2???UbCTrackBitField@@QBEABV0@ABV0@@Z@52 `public: bCTrackBitField const & __thiscall bCTrackBitField::operator|(bCTrackBitField const &)const '::`3'::`local static guard'{3}'
+__int32 DLLIMPORT ___B_2___UbCTrackBitField__QBEABV0_ABV0__Z_52;
+// ??_FbCTrackBitField@@QAEXXZ public: void __thiscall bCTrackBitField::`default constructor closure'(void)
+void __thiscall ___FbCTrackBitField__QAEXXZ( bCTrackBitField * );
+// ?AccessBitField@bCTrackBitField@@QAEPAKXZ public: unsigned long * __thiscall bCTrackBitField::AccessBitField(void)
+GEU32 * __thiscall _AccessBitField_bCTrackBitField__QAEPAKXZ( bCTrackBitField * );
+// ?And@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::And(bCTrackBitField const &)
+void __thiscall _And_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?CopyFrom@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::CopyFrom(bCTrackBitField const &)
+void __thiscall _CopyFrom_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?CopyTo@bCTrackBitField@@QBEXAAV1@@Z public: void __thiscall bCTrackBitField::CopyTo(bCTrackBitField &)const
+void __thiscall _CopyTo_bCTrackBitField__QBEXAAV1__Z( bCTrackBitField const *, bCTrackBitField * );
+// ?Disable@bCTrackBitField@@QAEXH@Z public: void __thiscall bCTrackBitField::Disable(int)
+void __thiscall _Disable_bCTrackBitField__QAEXH_Z( bCTrackBitField *, GEInt );
+// ?DisableAll@bCTrackBitField@@QAEXXZ public: void __thiscall bCTrackBitField::DisableAll(void)
+void __thiscall _DisableAll_bCTrackBitField__QAEXXZ( bCTrackBitField * );
+// ?Enable@bCTrackBitField@@QAEXH@Z public: void __thiscall bCTrackBitField::Enable(int)
+void __thiscall _Enable_bCTrackBitField__QAEXH_Z( bCTrackBitField *, GEInt );
+// ?EnableAll@bCTrackBitField@@QAEXXZ public: void __thiscall bCTrackBitField::EnableAll(void)
+void __thiscall _EnableAll_bCTrackBitField__QAEXXZ( bCTrackBitField * );
+// ?ExpandAnd@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::ExpandAnd(bCTrackBitField const &)
+void __thiscall _ExpandAnd_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?ExpandOr@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::ExpandOr(bCTrackBitField const &)
+void __thiscall _ExpandOr_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?ExpandXor@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::ExpandXor(bCTrackBitField const &)
+void __thiscall _ExpandXor_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?GetAt@bCTrackBitField@@QBE_NH@Z public: bool __thiscall bCTrackBitField::GetAt(int)const
+GEBool __thiscall _GetAt_bCTrackBitField__QBE_NH_Z( bCTrackBitField const *, GEInt );
+// ?GetCapacity@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetCapacity(void)const
+GEInt __thiscall _GetCapacity_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetCount@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetCount(void)const
+GEInt __thiscall _GetCount_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetCountDisabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetCountDisabled(void)const
+GEInt __thiscall _GetCountDisabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetCountEnabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetCountEnabled(void)const
+GEInt __thiscall _GetCountEnabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetFirstDisabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetFirstDisabled(void)const
+GEInt __thiscall _GetFirstDisabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetFirstEnabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetFirstEnabled(void)const
+GEInt __thiscall _GetFirstEnabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetMask@bCTrackBitField@@IBEKH@Z protected: unsigned long __thiscall bCTrackBitField::GetMask(int)const
+GEU32 __thiscall _GetMask_bCTrackBitField__IBEKH_Z( bCTrackBitField const *, GEInt );
+// ?GetNextDisabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetNextDisabled(void)const
+GEInt __thiscall _GetNextDisabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetNextEnabled@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetNextEnabled(void)const
+GEInt __thiscall _GetNextEnabled_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?GetOffset@bCTrackBitField@@IBEHH@Z protected: int __thiscall bCTrackBitField::GetOffset(int)const
+GEInt __thiscall _GetOffset_bCTrackBitField__IBEHH_Z( bCTrackBitField const *, GEInt );
+// ?GetSlotIndex@bCTrackBitField@@IBEHH@Z protected: int __thiscall bCTrackBitField::GetSlotIndex(int)const
+GEInt __thiscall _GetSlotIndex_bCTrackBitField__IBEHH_Z( bCTrackBitField const *, GEInt );
+// ?GetUpperBound@bCTrackBitField@@QBEHXZ public: int __thiscall bCTrackBitField::GetUpperBound(void)const
+GEInt __thiscall _GetUpperBound_bCTrackBitField__QBEHXZ( bCTrackBitField const * );
+// ?Invert@bCTrackBitField@@QAEXXZ public: void __thiscall bCTrackBitField::Invert(void)
+void __thiscall _Invert_bCTrackBitField__QAEXXZ( bCTrackBitField * );
+// ?IsAnyDisabled@bCTrackBitField@@QBE_NXZ public: bool __thiscall bCTrackBitField::IsAnyDisabled(void)const
+GEBool __thiscall _IsAnyDisabled_bCTrackBitField__QBE_NXZ( bCTrackBitField const * );
+// ?IsAnyEnabled@bCTrackBitField@@QBE_NXZ public: bool __thiscall bCTrackBitField::IsAnyEnabled(void)const
+GEBool __thiscall _IsAnyEnabled_bCTrackBitField__QBE_NXZ( bCTrackBitField const * );
+// ?IsDisabled@bCTrackBitField@@QBE_NH@Z public: bool __thiscall bCTrackBitField::IsDisabled(int)const
+GEBool __thiscall _IsDisabled_bCTrackBitField__QBE_NH_Z( bCTrackBitField const *, GEInt );
+// ?IsEmpty@bCTrackBitField@@QBE_NXZ public: bool __thiscall bCTrackBitField::IsEmpty(void)const
+GEBool __thiscall _IsEmpty_bCTrackBitField__QBE_NXZ( bCTrackBitField const * );
+// ?IsEnabled@bCTrackBitField@@QBE_NH@Z public: bool __thiscall bCTrackBitField::IsEnabled(int)const
+GEBool __thiscall _IsEnabled_bCTrackBitField__QBE_NH_Z( bCTrackBitField const *, GEInt );
+// ?IsValidIndex@bCTrackBitField@@QBE_NH@Z public: bool __thiscall bCTrackBitField::IsValidIndex(int)const
+GEBool __thiscall _IsValidIndex_bCTrackBitField__QBE_NH_Z( bCTrackBitField const *, GEInt );
+// ?Or@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::Or(bCTrackBitField const &)
+void __thiscall _Or_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?SetAt@bCTrackBitField@@QAEXH_N@Z public: void __thiscall bCTrackBitField::SetAt(int,bool)
+void __thiscall _SetAt_bCTrackBitField__QAEXH_N_Z( bCTrackBitField *, GEInt, GEBool );
+// ?SetCount@bCTrackBitField@@QAEXH@Z public: void __thiscall bCTrackBitField::SetCount(int)
+void __thiscall _SetCount_bCTrackBitField__QAEXH_Z( bCTrackBitField *, GEInt );
+// ?ShiftLeft@bCTrackBitField@@QAEXJ@Z public: void __thiscall bCTrackBitField::ShiftLeft(long)
+void __thiscall _ShiftLeft_bCTrackBitField__QAEXJ_Z( bCTrackBitField *, GEI32 );
+// ?ShiftRight@bCTrackBitField@@QAEXJ@Z public: void __thiscall bCTrackBitField::ShiftRight(long)
+void __thiscall _ShiftRight_bCTrackBitField__QAEXJ_Z( bCTrackBitField *, GEI32 );
+// ?Toggle@bCTrackBitField@@QAEXH@Z public: void __thiscall bCTrackBitField::Toggle(int)
+void __thiscall _Toggle_bCTrackBitField__QAEXH_Z( bCTrackBitField *, GEInt );
+// ?Xor@bCTrackBitField@@QAEXABV1@@Z public: void __thiscall bCTrackBitField::Xor(bCTrackBitField const &)
+void __thiscall _Xor_bCTrackBitField__QAEXABV1__Z( bCTrackBitField *, bCTrackBitField const * );
+// ?arrResult@?2???5bCTrackBitField@@QBEABV1@J@Z@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator>>(long)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___5bCTrackBitField__QBEABV1_J_Z_4V1_A;
+// ?arrResult@?2???6bCTrackBitField@@QBEABV1@J@Z@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator<<(long)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___6bCTrackBitField__QBEABV1_J_Z_4V1_A;
+// ?arrResult@?2???IbCTrackBitField@@QBEABV1@ABV1@@Z@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator&(bCTrackBitField const &)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___IbCTrackBitField__QBEABV1_ABV1__Z_4V1_A;
+// ?arrResult@?2???SbCTrackBitField@@QBEABV1@XZ@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator~(void)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___SbCTrackBitField__QBEABV1_XZ_4V1_A;
+// ?arrResult@?2???TbCTrackBitField@@QBEABV1@ABV1@@Z@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator^(bCTrackBitField const &)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___TbCTrackBitField__QBEABV1_ABV1__Z_4V1_A;
+// ?arrResult@?2???UbCTrackBitField@@QBEABV1@ABV1@@Z@4V1@A bCTrackBitField `public: bCTrackBitField const & __thiscall bCTrackBitField::operator|(bCTrackBitField const &)const '::`3'::arrResult
+bCTrackBitField DLLIMPORT _arrResult__2___UbCTrackBitField__QBEABV1_ABV1__Z_4V1_A;
+// ?bEBits_All@bCTrackBitField@@1KB protected: static unsigned long const bCTrackBitField::bEBits_All
+GEU32 const DLLIMPORT _bEBits_All_bCTrackBitField__1KB;
+
+
+
+
+
+
+
+
+
+

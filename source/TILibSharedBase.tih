@@ -52,6 +52,7 @@
 #include "SharedBase/ge_propertyid.tih"
 #include "SharedBase/ge_md5.tih"
 #include "SharedBase/ge_bitfield.tih"
+#include "SharedBase/ge_trackbitfield.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

@@ -34,7 +34,7 @@ GEBool __thiscall __AbCBitField__QBE_NH_Z( bCBitField const *, GEInt );
 // ??IbCBitField@@QBEABV0@ABV0@@Z public: bCBitField const & __thiscall bCBitField::operator&(bCBitField const &)const
 bCBitField const * __thiscall __IbCBitField__QBEABV0_ABV0__Z( bCBitField const *, bCBitField const * );
 // ??SbCBitField@@QBEABV0@XZ public: bCBitField const & __thiscall bCBitField::operator~(void)const
-bCBitField const & __thiscall __SbCBitField__QBEABV0_XZ( bCBitField const * );
+bCBitField const * __thiscall __SbCBitField__QBEABV0_XZ( bCBitField const * );
 // ??TbCBitField@@QBEABV0@ABV0@@Z public: bCBitField const & __thiscall bCBitField::operator^(bCBitField const &)const
 bCBitField const * __thiscall __TbCBitField__QBEABV0_ABV0__Z( bCBitField const *, bCBitField const * );
 // ??UbCBitField@@QBEABV0@ABV0@@Z public: bCBitField const & __thiscall bCBitField::operator|(bCBitField const &)const
