@@ -3,6 +3,14 @@
 
 class GE_DLLIMPORT bCPoint
 {
+public:
+    enum bECoordinate
+    {
+        bECoordinate_X,
+        bECoordinate_Y,
+        bECoordinate_Count,
+        bECoordinate_ForceDWORD = GE_FORCE_DWORD
+    };
 private:
     GEI32 m_i32X;   // 0000
     GEI32 m_i32Y;   // 0004

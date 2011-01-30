@@ -1,3 +1,10 @@
+enum bCPoint_bECoordinate : GEInt
+{
+    bCPoint_bECoordinate_X,
+    bCPoint_bECoordinate_Y,
+    bCPoint_bECoordinate_Count
+};
+
 struct bCPoint
 {
     GEI32 m_i32X;
@@ -26,9 +33,9 @@ GEBool __thiscall __8bCPoint__QBE_NABV0__Z( bCPoint const  *, bCPoint const * );
 // ??9bCPoint@@QBE_NABV0@@Z public: bool __thiscall bCPoint::operator!=(bCPoint const &)const
 GEBool __thiscall __9bCPoint__QBE_NABV0__Z( bCPoint const *, bCPoint const * );
 // ??AbCPoint@@QAEAAJH@Z public: long & __thiscall bCPoint::operator[](int)
-GEI32 * __thiscall __AbCPoint__QAEAAJH_Z( bCPoint *, GEInt );
+GEI32 * __thiscall __AbCPoint__QAEAAJH_Z( bCPoint *, bCPoint_bECoordinate );
 // ??AbCPoint@@QBEJH@Z public: long __thiscall bCPoint::operator[](int)const
-GEI32 __thiscall __AbCPoint__QBEJH_Z( bCPoint const *, GEInt );
+GEI32 __thiscall __AbCPoint__QBEJH_Z( bCPoint const *, bCPoint_bECoordinate );
 // ??BbCPoint@@QAEAAUtagPOINT@@XZ public: __thiscall bCPoint::operator tagPOINT &(void)
 bSPoint * __thiscall __BbCPoint__QAEAAUtagPOINT__XZ( bCPoint * );
 // ??BbCPoint@@QAEPAUtagPOINT@@XZ public: __thiscall bCPoint::operator tagPOINT *(void)
