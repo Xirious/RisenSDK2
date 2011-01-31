@@ -57,6 +57,7 @@
 #include "SharedBase/ge_rect.tih"
 #include "SharedBase/ge_vector2.tih"
 #include "SharedBase/ge_matrix2.tih"
+#include "SharedBase/ge_sphericalrotation.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

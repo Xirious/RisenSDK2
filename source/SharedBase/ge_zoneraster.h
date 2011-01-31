@@ -1,8 +1,6 @@
 #ifndef GE_ZONERASTER_H_INCLUDED
 #define GE_ZONERASTER_H_INCLUDED
 
-class bCVector;  // forward
-
 #pragma warning( push )
 #pragma warning( disable: 4251 )  // class 'bTValArray<>' needs to have dll-interface to be used by clients of class 'bCZoneRaster'
 
@@ -12,17 +10,15 @@ class bCVector;  // forward
 class GE_DLLIMPORT bCZoneRaster
 {
 public:
-    struct bCFIXME
+    struct bCZoneRect
     {
         bCRect  m_Rect;
-        bCPoint m_FIXME_10;
-        bCPoint m_FIXME_1C;
+        bCPoint m_Points[ 2 ];
     };
 private:
-    bCRect                m_Rect;
-    bTValArray< bCRect >  m_arrFIXME_10;
-    bTValArray< bCRect >  m_arrFIXME_1C;
-    bTValArray< bCFIXME > m_arrFIXME_28;
+    bCRect                   m_Rect;
+    bTValArray< bCRect >     m_Rects[ 2 ];
+    bTValArray< bCZoneRect > m_ZoneRects;
 public:
     bCZoneRaster & operator = ( bCZoneRaster const & );
 public:
