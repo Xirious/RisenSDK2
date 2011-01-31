@@ -149,7 +149,7 @@ GEDouble __thiscall _GetDouble_bCString__QBENH_Z( bCString const *, GEInt );
 // ?GetFloat@bCString@@QBEMH@Z public: float __thiscall bCString::GetFloat(int)const
 GEFloat __thiscall _GetFloat_bCString__QBEMH_Z( bCString const *, GEInt );
 // ?GetFormattedString@bCString@@SA?AV1@PBDZZ public: static bCString __cdecl bCString::GetFormattedString(char const *,...)
-bCString * __cdecl _GetFormattedString_bCString__SA_AV1_PBDZZ( GELPCChar, ... );
+bCString * __cdecl _GetFormattedString_bCString__SA_AV1_PBDZZ( bCString *, GELPCChar, ... );
 // ?GetI64@bCString@@QBE_JH@Z public: __int64 __thiscall bCString::GetI64(int)const
 GEI64 __thiscall _GetI64_bCString__QBE_JH_Z( bCString const *, GEInt );
 // ?GetInteger@bCString@@QBEHH_N@Z public: int __thiscall bCString::GetInteger(int,bool)const
