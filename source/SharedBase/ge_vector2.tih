@@ -1,0 +1,186 @@
+struct bCMatrix2;
+
+enum bCVector2_bECoordinate : GEInt
+{
+    bCVector2_bECoordinate_X,
+    bCVector2_bECoordinate_Y,
+    bCVector2_bECoordinate_Count
+};
+
+struct bCVector2
+{
+    GEFloat m_fX;
+    GEFloat m_fY;
+};
+// ??0bCVector2@@QAE@ABV0@@Z public: __thiscall bCVector2::bCVector2(bCVector2 const &)
+bCVector2 * __thiscall __0bCVector2__QAE_ABV0__Z( bCVector2 *, bCVector2 const * );
+// ??0bCVector2@@QAE@M@Z public: __thiscall bCVector2::bCVector2(float)
+bCVector2 * __thiscall __0bCVector2__QAE_M_Z( bCVector2 *, GEFloat );
+// ??0bCVector2@@QAE@MM@Z public: __thiscall bCVector2::bCVector2(float,float)
+bCVector2 * __thiscall __0bCVector2__QAE_MM_Z( bCVector2 *, GEFloat, GEFloat );
+// ??0bCVector2@@QAE@QBM@Z public: __thiscall bCVector2::bCVector2(float const * const)
+bCVector2 * __thiscall __0bCVector2__QAE_QBM_Z( bCVector2 *, GEFloat const [ bCVector2_bECoordinate_Count ] );
+// ??0bCVector2@@QAE@XZ public: __thiscall bCVector2::bCVector2(void)
+bCVector2 * __thiscall __0bCVector2__QAE_XZ( bCVector2 * );
+// ??1bCVector2@@QAE@XZ public: __thiscall bCVector2::~bCVector2(void)
+void __thiscall __1bCVector2__QAE_XZ( bCVector2 * );
+// ??4bCVector2@@QAEAAV0@ABV0@@Z public: bCVector2 & __thiscall bCVector2::operator=(bCVector2 const &)
+bCVector2 * __thiscall __4bCVector2__QAEAAV0_ABV0__Z( bCVector2 *, bCVector2 const * );
+// ??5bCVector2@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCVector2::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCVector2__QBEAAVbCOStream__AAV1__Z( bCVector2 const *, bCOStream * );
+// ??6bCVector2@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCVector2::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCVector2__QAEAAVbCIStream__AAV1__Z( bCVector2 *, bCIStream * );
+// ??8bCVector2@@QBE_NABV0@@Z public: bool __thiscall bCVector2::operator==(bCVector2 const &)const
+GEBool __thiscall __8bCVector2__QBE_NABV0__Z( bCVector2 const *, bCVector2 const * );
+// ??9bCVector2@@QBE_NABV0@@Z public: bool __thiscall bCVector2::operator!=(bCVector2 const &)const
+GEBool __thiscall __9bCVector2__QBE_NABV0__Z( bCVector2 const *, bCVector2 const * );
+// ??AbCVector2@@QAEAAMH@Z public: float & __thiscall bCVector2::operator[](int)
+GEFloat * __thiscall __AbCVector2__QAEAAMH_Z( bCVector2 *, bCVector2_bECoordinate );
+// ??AbCVector2@@QBEABMH@Z public: float const & __thiscall bCVector2::operator[](int)const
+GEFloat const * __thiscall __AbCVector2__QBEABMH_Z( bCVector2 const *, bCVector2_bECoordinate );
+// ??DbCVector2@@QBE?AV0@M@Z public: bCVector2 __thiscall bCVector2::operator*(float)const
+bCVector2 * __thiscall __DbCVector2__QBE_AV0_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ??GbCVector2@@QBE?AV0@ABV0@@Z public: bCVector2 __thiscall bCVector2::operator-(bCVector2 const &)const
+bCVector2 * __thiscall __GbCVector2__QBE_AV0_ABV0__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ??GbCVector2@@QBE?AV0@XZ public: bCVector2 __thiscall bCVector2::operator-(void)const
+bCVector2 * __thiscall __GbCVector2__QBE_AV0_XZ( bCVector2 const *, bCVector2 * );
+// ??HbCVector2@@QBE?AV0@ABV0@@Z public: bCVector2 __thiscall bCVector2::operator+(bCVector2 const &)const
+bCVector2 * __thiscall __HbCVector2__QBE_AV0_ABV0__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ??KbCVector2@@QBE?AV0@M@Z public: bCVector2 __thiscall bCVector2::operator/(float)const
+bCVector2 * __thiscall __KbCVector2__QBE_AV0_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ??XbCVector2@@QAEAAV0@ABVbCMatrix2@@@Z public: bCVector2 & __thiscall bCVector2::operator*=(bCMatrix2 const &)
+bCVector2 * __thiscall __XbCVector2__QAEAAV0_ABVbCMatrix2___Z( bCVector2 *, bCMatrix2 const * );
+// ??XbCVector2@@QAEAAV0@M@Z public: bCVector2 & __thiscall bCVector2::operator*=(float)
+bCVector2 * __thiscall __XbCVector2__QAEAAV0_M_Z( bCVector2 *, GEFloat );
+// ??YbCVector2@@QAEAAV0@ABV0@@Z public: bCVector2 & __thiscall bCVector2::operator+=(bCVector2 const &)
+bCVector2 * __thiscall __YbCVector2__QAEAAV0_ABV0__Z( bCVector2 *, bCVector2 const * );
+// ??ZbCVector2@@QAEAAV0@ABV0@@Z public: bCVector2 & __thiscall bCVector2::operator-=(bCVector2 const &)
+bCVector2 * __thiscall __ZbCVector2__QAEAAV0_ABV0__Z( bCVector2 *, bCVector2 const * );
+// ??_0bCVector2@@QAEAAV0@ABVbCMatrix2@@@Z public: bCVector2 & __thiscall bCVector2::operator/=(bCMatrix2 const &)
+bCVector2 * __thiscall ___0bCVector2__QAEAAV0_ABVbCMatrix2___Z( bCVector2 *, bCMatrix2 const * );
+// ??_0bCVector2@@QAEAAV0@M@Z public: bCVector2 & __thiscall bCVector2::operator/=(float)
+bCVector2 * __thiscall ___0bCVector2__QAEAAV0_M_Z( bCVector2 *, GEFloat );
+// ?AccessCoordinate@bCVector2@@QAEAAMH@Z public: float & __thiscall bCVector2::AccessCoordinate(int)
+GEFloat * __thiscall _AccessCoordinate_bCVector2__QAEAAMH_Z( bCVector2 *, bCVector2_bECoordinate );
+// ?AccessCoordinates@bCVector2@@QAEAAY01MXZ public: float (& __thiscall bCVector2::AccessCoordinates(void))[2]
+GEFloat (* __thiscall _AccessCoordinates_bCVector2__QAEAAY01MXZ( bCVector2 * )) [ bCVector2_bECoordinate_Count ];
+// ?AccessX@bCVector2@@QAEAAMXZ public: float & __thiscall bCVector2::AccessX(void)
+GEFloat * __thiscall _AccessX_bCVector2__QAEAAMXZ( bCVector2 * );
+// ?AccessY@bCVector2@@QAEAAMXZ public: float & __thiscall bCVector2::AccessY(void)
+GEFloat * __thiscall _AccessY_bCVector2__QAEAAMXZ( bCVector2 * );
+// ?Clear@bCVector2@@QAEXXZ public: void __thiscall bCVector2::Clear(void)
+void __thiscall _Clear_bCVector2__QAEXXZ( bCVector2 * );
+// ?CrossProduct@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::CrossProduct(bCVector2 const &)
+void __thiscall _CrossProduct_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?CrossProduct@bCVector2@@SG?AV1@ABV1@0@Z public: static bCVector2 __stdcall bCVector2::CrossProduct(bCVector2 const &,bCVector2 const &)
+bCVector2 * __stdcall _CrossProduct_bCVector2__SG_AV1_ABV1_0_Z( bCVector2 *, bCVector2 const *, bCVector2 const * );
+// ?DotProduct@bCVector2@@SGMABV1@0@Z public: static float __stdcall bCVector2::DotProduct(bCVector2 const &,bCVector2 const &)
+GEFloat __stdcall _DotProduct_bCVector2__SGMABV1_0_Z( bCVector2 const *, bCVector2 const * );
+// ?GetCoordinate@bCVector2@@QBEABMH@Z public: float const & __thiscall bCVector2::GetCoordinate(int)const
+GEFloat const * __thiscall _GetCoordinate_bCVector2__QBEABMH_Z( bCVector2 const *, bCVector2_bECoordinate );
+// ?GetCoordinate@bCVector2@@QBEXHAAM@Z public: void __thiscall bCVector2::GetCoordinate(int,float &)const
+void __thiscall _GetCoordinate_bCVector2__QBEXHAAM_Z( bCVector2 const *, bCVector2_bECoordinate, GEFloat * );
+// ?GetCoordinates@bCVector2@@QBEAAY01$$CBMXZ public: float const (& __thiscall bCVector2::GetCoordinates(void)const )[2]
+GEFloat const (* __thiscall _GetCoordinates_bCVector2__QBEAAY01__CBMXZ( bCVector2 const * )) [ bCVector2_bECoordinate_Count ];
+// ?GetCoordinates@bCVector2@@QBEXAAM0@Z public: void __thiscall bCVector2::GetCoordinates(float &,float &)const
+void __thiscall _GetCoordinates_bCVector2__QBEXAAM0_Z( bCVector2 const *, GEFloat *, GEFloat * );
+// ?GetCoordinates@bCVector2@@QBEXQAM@Z public: void __thiscall bCVector2::GetCoordinates(float * const)const
+void __thiscall _GetCoordinates_bCVector2__QBEXQAM_Z( bCVector2 const *, GEFloat [ bCVector2_bECoordinate_Count ] );
+// ?GetCrossProduct@bCVector2@@QBE?AV1@ABV1@@Z public: bCVector2 __thiscall bCVector2::GetCrossProduct(bCVector2 const &)const
+bCVector2 * __thiscall _GetCrossProduct_bCVector2__QBE_AV1_ABV1__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ?GetDotProduct@bCVector2@@QBEMABV1@@Z public: float __thiscall bCVector2::GetDotProduct(bCVector2 const &)const
+GEFloat __thiscall _GetDotProduct_bCVector2__QBEMABV1__Z( bCVector2 const *, bCVector2 const * );
+// ?GetInvScaled@bCVector2@@QBE?AV1@ABV1@@Z public: bCVector2 __thiscall bCVector2::GetInvScaled(bCVector2 const &)const
+bCVector2 * __thiscall _GetInvScaled_bCVector2__QBE_AV1_ABV1__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ?GetInvScaled@bCVector2@@QBE?AV1@M@Z public: bCVector2 __thiscall bCVector2::GetInvScaled(float)const
+bCVector2 * __thiscall _GetInvScaled_bCVector2__QBE_AV1_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ?GetInvTransformed@bCVector2@@QBE?AV1@ABVbCMatrix2@@@Z public: bCVector2 __thiscall bCVector2::GetInvTransformed(bCMatrix2 const &)const
+bCVector2 * __thiscall _GetInvTransformed_bCVector2__QBE_AV1_ABVbCMatrix2___Z( bCVector2 const *, bCVector2 *, bCMatrix2 const * );
+// ?GetInvTranslated@bCVector2@@QBE?AV1@ABV1@@Z public: bCVector2 __thiscall bCVector2::GetInvTranslated(bCVector2 const &)const
+bCVector2 * __thiscall _GetInvTranslated_bCVector2__QBE_AV1_ABV1__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ?GetInvTranslated@bCVector2@@QBE?AV1@M@Z public: bCVector2 __thiscall bCVector2::GetInvTranslated(float)const
+bCVector2 * __thiscall _GetInvTranslated_bCVector2__QBE_AV1_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ?GetInverted@bCVector2@@QBE?AV1@XZ public: bCVector2 __thiscall bCVector2::GetInverted(void)const
+bCVector2 * __thiscall _GetInverted_bCVector2__QBE_AV1_XZ( bCVector2 const *, bCVector2 * );
+// ?GetMagnitude@bCVector2@@QBEMXZ public: float __thiscall bCVector2::GetMagnitude(void)const
+GEFloat __thiscall _GetMagnitude_bCVector2__QBEMXZ( bCVector2 const * );
+// ?GetMagnitudeApprox@bCVector2@@QBEMXZ public: float __thiscall bCVector2::GetMagnitudeApprox(void)const
+GEFloat __thiscall _GetMagnitudeApprox_bCVector2__QBEMXZ( bCVector2 const * );
+// ?GetMagnitudeNormalize@bCVector2@@QAEMXZ public: float __thiscall bCVector2::GetMagnitudeNormalize(void)
+GEFloat __thiscall _GetMagnitudeNormalize_bCVector2__QAEMXZ( bCVector2 * );
+// ?GetNormalized@bCVector2@@QBE?AV1@XZ public: bCVector2 __thiscall bCVector2::GetNormalized(void)const
+bCVector2 * __thiscall _GetNormalized_bCVector2__QBE_AV1_XZ( bCVector2 const *, bCVector2 * );
+// ?GetScaled@bCVector2@@QBE?AV1@ABV1@@Z public: bCVector2 __thiscall bCVector2::GetScaled(bCVector2 const &)const
+bCVector2 * __thiscall _GetScaled_bCVector2__QBE_AV1_ABV1__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ?GetScaled@bCVector2@@QBE?AV1@M@Z public: bCVector2 __thiscall bCVector2::GetScaled(float)const
+bCVector2 * __thiscall _GetScaled_bCVector2__QBE_AV1_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ?GetSquareMagnitude@bCVector2@@QBEMXZ public: float __thiscall bCVector2::GetSquareMagnitude(void)const
+GEFloat __thiscall _GetSquareMagnitude_bCVector2__QBEMXZ( bCVector2 const * );
+// ?GetTransformed@bCVector2@@QBE?AV1@ABVbCMatrix2@@@Z public: bCVector2 __thiscall bCVector2::GetTransformed(bCMatrix2 const &)const
+bCVector2 * __thiscall _GetTransformed_bCVector2__QBE_AV1_ABVbCMatrix2___Z( bCVector2 const *, bCVector2 *, bCMatrix2 const * );
+// ?GetTranslated@bCVector2@@QBE?AV1@ABV1@@Z public: bCVector2 __thiscall bCVector2::GetTranslated(bCVector2 const &)const
+bCVector2 * __thiscall _GetTranslated_bCVector2__QBE_AV1_ABV1__Z( bCVector2 const *, bCVector2 *, bCVector2 const * );
+// ?GetTranslated@bCVector2@@QBE?AV1@M@Z public: bCVector2 __thiscall bCVector2::GetTranslated(float)const
+bCVector2 * __thiscall _GetTranslated_bCVector2__QBE_AV1_M_Z( bCVector2 const *, bCVector2 *, GEFloat );
+// ?GetX@bCVector2@@QBEMXZ public: float __thiscall bCVector2::GetX(void)const
+GEFloat __thiscall _GetX_bCVector2__QBEMXZ( bCVector2 const * );
+// ?GetX@bCVector2@@QBEXAAM@Z public: void __thiscall bCVector2::GetX(float &)const
+void __thiscall _GetX_bCVector2__QBEXAAM_Z( bCVector2 const *, GEFloat * );
+// ?GetY@bCVector2@@QBEMXZ public: float __thiscall bCVector2::GetY(void)const
+GEFloat __thiscall _GetY_bCVector2__QBEMXZ( bCVector2 const * );
+// ?GetY@bCVector2@@QBEXAAM@Z public: void __thiscall bCVector2::GetY(float &)const
+void __thiscall _GetY_bCVector2__QBEXAAM_Z( bCVector2 const *, GEFloat * );
+// ?InvScale@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::InvScale(bCVector2 const &)
+void __thiscall _InvScale_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?InvScale@bCVector2@@QAEXM@Z public: void __thiscall bCVector2::InvScale(float)
+void __thiscall _InvScale_bCVector2__QAEXM_Z( bCVector2 *, GEFloat );
+// ?InvTransform@bCVector2@@QAEXABVbCMatrix2@@@Z public: void __thiscall bCVector2::InvTransform(bCMatrix2 const &)
+void __thiscall _InvTransform_bCVector2__QAEXABVbCMatrix2___Z( bCVector2 *, bCMatrix2 const * );
+// ?InvTranslate@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::InvTranslate(bCVector2 const &)
+void __thiscall _InvTranslate_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?InvTranslate@bCVector2@@QAEXM@Z public: void __thiscall bCVector2::InvTranslate(float)
+void __thiscall _InvTranslate_bCVector2__QAEXM_Z( bCVector2 *, GEFloat );
+// ?Invert@bCVector2@@QAEXXZ public: void __thiscall bCVector2::Invert(void)
+void __thiscall _Invert_bCVector2__QAEXXZ( bCVector2 * );
+// ?IsEqual@bCVector2@@QBE_NABV1@@Z public: bool __thiscall bCVector2::IsEqual(bCVector2 const &)const
+GEBool __thiscall _IsEqual_bCVector2__QBE_NABV1__Z( bCVector2 const *, bCVector2 const * );
+// ?Normalize@bCVector2@@QAEABV1@XZ public: bCVector2 const & __thiscall bCVector2::Normalize(void)
+bCVector2 const * __thiscall _Normalize_bCVector2__QAEABV1_XZ( bCVector2 * );
+// ?NormalizeApprox@bCVector2@@QAEABV1@XZ public: bCVector2 const & __thiscall bCVector2::NormalizeApprox(void)
+bCVector2 const * __thiscall _NormalizeApprox_bCVector2__QAEABV1_XZ( bCVector2 * );
+// ?NormalizeSafe@bCVector2@@QAEABV1@XZ public: bCVector2 const & __thiscall bCVector2::NormalizeSafe(void)
+bCVector2 const * __thiscall _NormalizeSafe_bCVector2__QAEABV1_XZ( bCVector2 * );
+// ?Scale@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::Scale(bCVector2 const &)
+void __thiscall _Scale_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?Scale@bCVector2@@QAEXM@Z public: void __thiscall bCVector2::Scale(float)
+void __thiscall _Scale_bCVector2__QAEXM_Z( bCVector2 *, GEFloat );
+// ?SetCoordinate@bCVector2@@QAEXHM@Z public: void __thiscall bCVector2::SetCoordinate(int,float)
+void __thiscall _SetCoordinate_bCVector2__QAEXHM_Z( bCVector2 *, bCVector2_bECoordinate, GEFloat );
+// ?SetCoordinates@bCVector2@@QAEXMM@Z public: void __thiscall bCVector2::SetCoordinates(float,float)
+void __thiscall _SetCoordinates_bCVector2__QAEXMM_Z( bCVector2 *, GEFloat, GEFloat );
+// ?SetCoordinates@bCVector2@@QAEXQBM@Z public: void __thiscall bCVector2::SetCoordinates(float const * const)
+void __thiscall _SetCoordinates_bCVector2__QAEXQBM_Z( bCVector2 *, GEFloat const [ bCVector2_bECoordinate_Count ] );
+// ?SetCrossProduct@bCVector2@@QAEXABV1@0@Z public: void __thiscall bCVector2::SetCrossProduct(bCVector2 const &,bCVector2 const &)
+void __thiscall _SetCrossProduct_bCVector2__QAEXABV1_0_Z( bCVector2 *, bCVector2 const *, bCVector2 const * );
+// ?SetTransformed@bCVector2@@QAEXABV1@ABVbCMatrix2@@@Z public: void __thiscall bCVector2::SetTransformed(bCVector2 const &,bCMatrix2 const &)
+void __thiscall _SetTransformed_bCVector2__QAEXABV1_ABVbCMatrix2___Z( bCVector2 *, bCVector2 const *, bCMatrix2 const * );
+// ?SetTransposedTransformed@bCVector2@@QAEXABV1@ABVbCMatrix2@@@Z public: void __thiscall bCVector2::SetTransposedTransformed(bCVector2 const &,bCMatrix2 const &)
+void __thiscall _SetTransposedTransformed_bCVector2__QAEXABV1_ABVbCMatrix2___Z( bCVector2 *, bCVector2 const *, bCMatrix2 const * );
+// ?SetVector@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::SetVector(bCVector2 const &)
+void __thiscall _SetVector_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?SetVector@bCVector2@@QAEXM@Z public: void __thiscall bCVector2::SetVector(float)
+void __thiscall _SetVector_bCVector2__QAEXM_Z( bCVector2 *, GEFloat );
+// ?SetVector@bCVector2@@QAEXMM@Z public: void __thiscall bCVector2::SetVector(float,float)
+void __thiscall _SetVector_bCVector2__QAEXMM_Z( bCVector2 *, GEFloat, GEFloat );
+// ?SetX@bCVector2@@QAEXABM@Z public: void __thiscall bCVector2::SetX(float const &)
+void __thiscall _SetX_bCVector2__QAEXABM_Z( bCVector2 *, GEFloat const * );
+// ?SetY@bCVector2@@QAEXABM@Z public: void __thiscall bCVector2::SetY(float const &)
+void __thiscall _SetY_bCVector2__QAEXABM_Z( bCVector2 *, GEFloat const * );
+// ?Transform@bCVector2@@QAEXABVbCMatrix2@@@Z public: void __thiscall bCVector2::Transform(bCMatrix2 const &)
+void __thiscall _Transform_bCVector2__QAEXABVbCMatrix2___Z( bCVector2 *, bCMatrix2 const * );
+// ?Translate@bCVector2@@QAEXABV1@@Z public: void __thiscall bCVector2::Translate(bCVector2 const &)
+void __thiscall _Translate_bCVector2__QAEXABV1__Z( bCVector2 *, bCVector2 const * );
+// ?Translate@bCVector2@@QAEXM@Z public: void __thiscall bCVector2::Translate(float)
+void __thiscall _Translate_bCVector2__QAEXM_Z( bCVector2 *, GEFloat );
+// ?TransposedTransform@bCVector2@@QAEXABVbCMatrix2@@@Z public: void __thiscall bCVector2::TransposedTransform(bCMatrix2 const &)
+void __thiscall _TransposedTransform_bCVector2__QAEXABVbCMatrix2___Z( bCVector2 *, bCMatrix2 const * );

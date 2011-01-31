@@ -31,4 +31,4 @@ void __thiscall _GetDigest8_bCMd5__QBEXAAUbSCore_bCPropertyID___Z( bCMd5 const *
 // ?Invalidate@bCMd5@@IAEXXZ protected: void __thiscall bCMd5::Invalidate(void)
 void __thiscall _Invalidate_bCMd5__IAEXXZ( bCMd5 * );
 // ?Process@bCMd5@@AAEXQBE@Z private: void __thiscall bCMd5::Process(unsigned char const * const)
-void __thiscall _Process_bCMd5__AAEXQBE_Z( bCMd5 *, GEU8 const (*)[ 64 ] );
+void __thiscall _Process_bCMd5__AAEXQBE_Z( bCMd5 *, GEU8 const [ 64 ] );
