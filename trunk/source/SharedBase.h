@@ -62,7 +62,6 @@
 #include "SharedBase/ge_rect.h"
 #include "SharedBase/ge_vector2.h"
 #include "SharedBase/ge_matrix2.h"
-#include "SharedBase/ge_zoneraster.h"
 #include "SharedBase/ge_sphericalrotation.h"
 #include "SharedBase/ge_vector.h"
 #include "SharedBase/ge_vector4.h"
@@ -123,6 +122,7 @@
 #include "SharedBase/ge_accessorcreator.h"
 #include "SharedBase/ge_accessorpropertyobject.h"
 #include "SharedBase/ge_accessorproperty.h"
+#include "SharedBase/ge_zoneraster.h"
 
 #include "SharedBase/ge_obsoleteclass.h"
 #include "SharedBase/ge_propertycontainer.h"

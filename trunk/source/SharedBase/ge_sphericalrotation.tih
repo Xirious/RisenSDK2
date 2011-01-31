@@ -1,0 +1,40 @@
+struct bCSphericalRotation
+{
+    GEFloat m_fLatitude;
+    GEFloat m_fLongitude;
+    GEFloat m_fAzimuth;
+};
+// ??0bCSphericalRotation@@QAE@XZ public: __thiscall bCSphericalRotation::bCSphericalRotation(void)
+bCSphericalRotation * __thiscall __0bCSphericalRotation__QAE_XZ( bCSphericalRotation * );
+// ??1bCSphericalRotation@@QAE@XZ public: __thiscall bCSphericalRotation::~bCSphericalRotation(void)
+void __thiscall __1bCSphericalRotation__QAE_XZ( bCSphericalRotation * );
+// ??4bCSphericalRotation@@QAEAAV0@ABV0@@Z public: bCSphericalRotation & __thiscall bCSphericalRotation::operator=(bCSphericalRotation const &)
+bCSphericalRotation * __thiscall __4bCSphericalRotation__QAEAAV0_ABV0__Z( bCSphericalRotation *, bCSphericalRotation const * );
+// ??5bCSphericalRotation@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCSphericalRotation::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCSphericalRotation__QBEAAVbCOStream__AAV1__Z( bCSphericalRotation const *, bCOStream * );
+// ??6bCSphericalRotation@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCSphericalRotation::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCSphericalRotation__QAEAAVbCIStream__AAV1__Z( bCSphericalRotation *, bCIStream * );
+// ?AccessAzimuth@bCSphericalRotation@@QAEAAMXZ public: float & __thiscall bCSphericalRotation::AccessAzimuth(void)
+GEFloat * __thiscall _AccessAzimuth_bCSphericalRotation__QAEAAMXZ( bCSphericalRotation * );
+// ?AccessLatitude@bCSphericalRotation@@QAEAAMXZ public: float & __thiscall bCSphericalRotation::AccessLatitude(void)
+GEFloat * __thiscall _AccessLatitude_bCSphericalRotation__QAEAAMXZ( bCSphericalRotation * );
+// ?AccessLongitude@bCSphericalRotation@@QAEAAMXZ public: float & __thiscall bCSphericalRotation::AccessLongitude(void)
+GEFloat * __thiscall _AccessLongitude_bCSphericalRotation__QAEAAMXZ( bCSphericalRotation * );
+// ?GetAzimuth@bCSphericalRotation@@QBEMXZ public: float __thiscall bCSphericalRotation::GetAzimuth(void)const
+GEFloat __thiscall _GetAzimuth_bCSphericalRotation__QBEMXZ( bCSphericalRotation const * );
+// ?GetAzimuth@bCSphericalRotation@@QBEXAAM@Z public: void __thiscall bCSphericalRotation::GetAzimuth(float &)const
+void __thiscall _GetAzimuth_bCSphericalRotation__QBEXAAM_Z( bCSphericalRotation const *, GEFloat * );
+// ?GetLatitude@bCSphericalRotation@@QBEMXZ public: float __thiscall bCSphericalRotation::GetLatitude(void)const
+GEFloat __thiscall _GetLatitude_bCSphericalRotation__QBEMXZ( bCSphericalRotation const * );
+// ?GetLatitude@bCSphericalRotation@@QBEXAAM@Z public: void __thiscall bCSphericalRotation::GetLatitude(float &)const
+void __thiscall _GetLatitude_bCSphericalRotation__QBEXAAM_Z( bCSphericalRotation const *, GEFloat * );
+// ?GetLongitude@bCSphericalRotation@@QBEMXZ public: float __thiscall bCSphericalRotation::GetLongitude(void)const
+GEFloat __thiscall _GetLongitude_bCSphericalRotation__QBEMXZ( bCSphericalRotation const * );
+// ?GetLongitude@bCSphericalRotation@@QBEXAAM@Z public: void __thiscall bCSphericalRotation::GetLongitude(float &)const
+void __thiscall _GetLongitude_bCSphericalRotation__QBEXAAM_Z( bCSphericalRotation const *, GEFloat * );
+// ?SetAzimuth@bCSphericalRotation@@QAEXM@Z public: void __thiscall bCSphericalRotation::SetAzimuth(float)
+void __thiscall _SetAzimuth_bCSphericalRotation__QAEXM_Z( bCSphericalRotation *, GEFloat );
+// ?SetLatitude@bCSphericalRotation@@QAEXM@Z public: void __thiscall bCSphericalRotation::SetLatitude(float)
+void __thiscall _SetLatitude_bCSphericalRotation__QAEXM_Z( bCSphericalRotation *, GEFloat );
+// ?SetLongitude@bCSphericalRotation@@QAEXM@Z public: void __thiscall bCSphericalRotation::SetLongitude(float)
+void __thiscall _SetLongitude_bCSphericalRotation__QAEXM_Z( bCSphericalRotation *, GEFloat );
