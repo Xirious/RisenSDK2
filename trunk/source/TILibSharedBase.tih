@@ -55,6 +55,8 @@
 #include "SharedBase/ge_trackbitfield.tih"
 #include "SharedBase/ge_point.tih"
 #include "SharedBase/ge_rect.tih"
+#include "SharedBase/ge_vector2.tih"
+#include "SharedBase/ge_matrix2.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

@@ -1,0 +1,251 @@
+enum bCMatrix2_bEElement : GEInt
+{
+    bCMatrix2_bEElement_11,
+    bCMatrix2_bEElement_12,
+    bCMatrix2_bEElement_21,
+    bCMatrix2_bEElement_22,
+    bCMatrix2_bEElement_Count
+};
+
+enum bCMatrix2_bERow : GEInt
+{
+    bCMatrix2_bERow_XAxis,
+    bCMatrix2_bERow_YAxis,
+    bCMatrix2_bERow_Count
+};
+
+enum bCMatrix2_bEColumn : GEInt
+{
+    bCMatrix2_bEColumn_X,
+    bCMatrix2_bEColumn_Y,
+    bCMatrix2_bEColumn_Count
+};
+
+struct bCMatrix2
+{
+    bCVector2 m_vec2Rows[ bCMatrix2_bERow_Count ];
+};
+// ??0bCMatrix2@@QAE@ABV0@@Z public: __thiscall bCMatrix2::bCMatrix2(bCMatrix2 const &)
+bCMatrix2 * __thiscall __0bCMatrix2__QAE_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
+// ??0bCMatrix2@@QAE@M@Z public: __thiscall bCMatrix2::bCMatrix2(float)
+bCMatrix2 * __thiscall __0bCMatrix2__QAE_M_Z( bCMatrix2 *, GEFloat );
+// ??0bCMatrix2@@QAE@QAY01$$CBM@Z public: __thiscall bCMatrix2::bCMatrix2(float const (* const)[2])
+bCMatrix2 *__thiscall __0bCMatrix2__QAE_QAY01__CBM_Z( bCMatrix2 *, GEFloat const [ bCMatrix2_bERow_Count ][ bCMatrix2_bEColumn_Count ] );
+// ??0bCMatrix2@@QAE@QBM@Z public: __thiscall bCMatrix2::bCMatrix2(float const * const)
+bCMatrix2 * __thiscall __0bCMatrix2__QAE_QBM_Z( bCMatrix2 *, GEFloat const [ bCMatrix2_bEElement_Count ] );
+// ??0bCMatrix2@@QAE@QBVbCVector2@@@Z public: __thiscall bCMatrix2::bCMatrix2(bCVector2 const * const)
+bCMatrix2 * __thiscall __0bCMatrix2__QAE_QBVbCVector2___Z( bCMatrix2 *, bCVector2 const [ bCMatrix2_bERow_Count ] );
+// ??0bCMatrix2@@QAE@XZ public: __thiscall bCMatrix2::bCMatrix2(void)
+bCMatrix2 * __thiscall __0bCMatrix2__QAE_XZ( bCMatrix2 * );
+// ??1bCMatrix2@@QAE@XZ public: __thiscall bCMatrix2::~bCMatrix2(void)
+void __thiscall __1bCMatrix2__QAE_XZ( bCMatrix2 * );
+// ??4bCMatrix2@@QAEAAV0@ABV0@@Z public: bCMatrix2 & __thiscall bCMatrix2::operator=(bCMatrix2 const &)
+bCMatrix2 * __thiscall __4bCMatrix2__QAEAAV0_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
+// ??5bCMatrix2@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCMatrix2::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCMatrix2__QBEAAVbCOStream__AAV1__Z( bCMatrix2 const *, bCOStream * );
+// ??6bCMatrix2@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCMatrix2::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCMatrix2__QAEAAVbCIStream__AAV1__Z( bCMatrix2 *, bCIStream * );
+// ??8bCMatrix2@@QBE_NABV0@@Z public: bool __thiscall bCMatrix2::operator==(bCMatrix2 const &)const
+GEBool __thiscall __8bCMatrix2__QBE_NABV0__Z( bCMatrix2 const *, bCMatrix2 const * );
+// ??9bCMatrix2@@QBE_NABV0@@Z public: bool __thiscall bCMatrix2::operator!=(bCMatrix2 const &)const
+GEBool __thiscall __9bCMatrix2__QBE_NABV0__Z( bCMatrix2 const *, bCMatrix2 const * );
+// ??AbCMatrix2@@QAEAAMH@Z public: float & __thiscall bCMatrix2::operator[](int)
+GEFloat * __thiscall __AbCMatrix2__QAEAAMH_Z( bCMatrix2 *, bCMatrix2_bEElement );
+// ??AbCMatrix2@@QBEMH@Z public: float __thiscall bCMatrix2::operator[](int)const
+GEFloat __thiscall __AbCMatrix2__QBEMH_Z( bCMatrix2 const *, bCMatrix2_bEElement );
+// ??DbCMatrix2@@QBE?AV0@ABV0@@Z public: bCMatrix2 __thiscall bCMatrix2::operator*(bCMatrix2 const &)const
+bCMatrix2 * __thiscall __DbCMatrix2__QBE_AV0_ABV0__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ??DbCMatrix2@@QBE?AV0@M@Z public: bCMatrix2 __thiscall bCMatrix2::operator*(float)const
+bCMatrix2 * __thiscall __DbCMatrix2__QBE_AV0_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ??DbCMatrix2@@QBE?AVbCVector2@@ABV1@@Z public: bCVector2 __thiscall bCMatrix2::operator*(bCVector2 const &)const
+bCVector2 * __thiscall __DbCMatrix2__QBE_AVbCVector2__ABV1__Z( bCMatrix2 const *, bCVector2 *, bCVector2 const * );
+// ??GbCMatrix2@@QBE?AV0@ABV0@@Z public: bCMatrix2 __thiscall bCMatrix2::operator-(bCMatrix2 const &)const
+bCMatrix2 * __thiscall __GbCMatrix2__QBE_AV0_ABV0__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ??GbCMatrix2@@QBE?AV0@XZ public: bCMatrix2 __thiscall bCMatrix2::operator-(void)const
+bCMatrix2 * __thiscall __GbCMatrix2__QBE_AV0_XZ( bCMatrix2 const *, bCMatrix2 * );
+// ??HbCMatrix2@@QBE?AV0@ABV0@@Z public: bCMatrix2 __thiscall bCMatrix2::operator+(bCMatrix2 const &)const
+bCMatrix2 * __thiscall __HbCMatrix2__QBE_AV0_ABV0__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ??KbCMatrix2@@QBE?AV0@M@Z public: bCMatrix2 __thiscall bCMatrix2::operator/(float)const
+bCMatrix2 * __thiscall __KbCMatrix2__QBE_AV0_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ??RbCMatrix2@@QAEAAMHH@Z public: float & __thiscall bCMatrix2::operator()(int,int)
+GEFloat * __thiscall __RbCMatrix2__QAEAAMHH_Z( bCMatrix2 *, bCMatrix2_bERow, bCMatrix2_bEColumn );
+// ??RbCMatrix2@@QAEAAVbCVector2@@H@Z public: bCVector2 & __thiscall bCMatrix2::operator()(int)
+bCVector2 * __thiscall __RbCMatrix2__QAEAAVbCVector2__H_Z( bCMatrix2 *, bCMatrix2_bERow );
+// ??RbCMatrix2@@QBEABVbCVector2@@H@Z public: bCVector2 const & __thiscall bCMatrix2::operator()(int)const
+bCVector2 const * __thiscall __RbCMatrix2__QBEABVbCVector2__H_Z( bCMatrix2 const *, bCMatrix2_bERow );
+// ??RbCMatrix2@@QBEMHH@Z public: float __thiscall bCMatrix2::operator()(int,int)const
+GEFloat __thiscall __RbCMatrix2__QBEMHH_Z( bCMatrix2 const *, bCMatrix2_bERow, bCMatrix2_bEColumn );
+// ??SbCMatrix2@@QBE?AV0@XZ public: bCMatrix2 __thiscall bCMatrix2::operator~(void)const
+bCMatrix2 * __thiscall __SbCMatrix2__QBE_AV0_XZ( bCMatrix2 const *, bCMatrix2 * );
+// ??XbCMatrix2@@QAEAAV0@ABV0@@Z public: bCMatrix2 & __thiscall bCMatrix2::operator*=(bCMatrix2 const &)
+bCMatrix2 * __thiscall __XbCMatrix2__QAEAAV0_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
+// ??XbCMatrix2@@QAEAAV0@M@Z public: bCMatrix2 & __thiscall bCMatrix2::operator*=(float)
+bCMatrix2 * __thiscall __XbCMatrix2__QAEAAV0_M_Z( bCMatrix2 *, GEFloat );
+// ??YbCMatrix2@@QAEAAV0@ABV0@@Z public: bCMatrix2 & __thiscall bCMatrix2::operator+=(bCMatrix2 const &)
+bCMatrix2 * __thiscall __YbCMatrix2__QAEAAV0_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
+// ??ZbCMatrix2@@QAEAAV0@ABV0@@Z public: bCMatrix2 & __thiscall bCMatrix2::operator-=(bCMatrix2 const &)
+bCMatrix2 * __thiscall __ZbCMatrix2__QAEAAV0_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
+// ??_0bCMatrix2@@QAEAAV0@M@Z public: bCMatrix2 & __thiscall bCMatrix2::operator/=(float)
+bCMatrix2 * __thiscall ___0bCMatrix2__QAEAAV0_M_Z( bCMatrix2 *, GEFloat );
+// ??_B?5??SetToInverse@bCMatrix2@@QAEXABV1@@Z@55 `public: void __thiscall bCMatrix2::SetToInverse(bCMatrix2 const &)'::`6'::`local static guard'{6}'
+__int32 DLLIMPORT ___B_5__SetToInverse_bCMatrix2__QAEXABV1__Z_55;
+// ??_B?5??SetToProduct@bCMatrix2@@QAEXABV1@0@Z@55 `public: void __thiscall bCMatrix2::SetToProduct(bCMatrix2 const &,bCMatrix2 const &)'::`6'::`local static guard'{6}'
+__int32 DLLIMPORT ___B_5__SetToProduct_bCMatrix2__QAEXABV1_0_Z_55;
+// ?AccessElement@bCMatrix2@@QAEAAMH@Z public: float & __thiscall bCMatrix2::AccessElement(int)
+GEFloat * __thiscall _AccessElement_bCMatrix2__QAEAAMH_Z( bCMatrix2 *, bCMatrix2_bEElement );
+// ?AccessElement@bCMatrix2@@QAEAAMHH@Z public: float & __thiscall bCMatrix2::AccessElement(int,int)
+GEFloat * __thiscall _AccessElement_bCMatrix2__QAEAAMHH_Z( bCMatrix2 *, bCMatrix2_bERow, bCMatrix2_bEColumn );
+// ?AccessRow@bCMatrix2@@QAEAAVbCVector2@@H@Z public: bCVector2 & __thiscall bCMatrix2::AccessRow(int)
+bCVector2 * __thiscall _AccessRow_bCMatrix2__QAEAAVbCVector2__H_Z( bCMatrix2 *, bCMatrix2_bERow );
+// ?AccessXAxis@bCMatrix2@@QAEAAVbCVector2@@XZ public: bCVector2 & __thiscall bCMatrix2::AccessXAxis(void)
+bCVector2 * __thiscall _AccessXAxis_bCMatrix2__QAEAAVbCVector2__XZ( bCMatrix2 * );
+// ?AccessYAxis@bCMatrix2@@QAEAAVbCVector2@@XZ public: bCVector2 & __thiscall bCMatrix2::AccessYAxis(void)
+bCVector2 * __thiscall _AccessYAxis_bCMatrix2__QAEAAVbCVector2__XZ( bCMatrix2 * );
+// ?Add@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::Add(bCMatrix2 const &)
+void __thiscall _Add_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?Clear@bCMatrix2@@QAEXXZ public: void __thiscall bCMatrix2::Clear(void)
+void __thiscall _Clear_bCMatrix2__QAEXXZ( bCMatrix2 * );
+// ?Divide@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::Divide(float)
+void __thiscall _Divide_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?GetColumn@bCMatrix2@@QBE?AVbCVector2@@H@Z public: bCVector2 __thiscall bCMatrix2::GetColumn(int)const
+bCVector2 * __thiscall _GetColumn_bCMatrix2__QBE_AVbCVector2__H_Z( bCMatrix2 const *, bCVector2 *, bCMatrix2_bEColumn );
+// ?GetColumn@bCMatrix2@@QBEXHAAVbCVector2@@@Z public: void __thiscall bCMatrix2::GetColumn(int,bCVector2 &)const
+void __thiscall _GetColumn_bCMatrix2__QBEXHAAVbCVector2___Z( bCMatrix2 const *, bCMatrix2_bEColumn, bCVector2 * );
+// ?GetColumn@bCMatrix2@@QBEXHQAM@Z public: void __thiscall bCMatrix2::GetColumn(int,float * const)const
+void __thiscall _GetColumn_bCMatrix2__QBEXHQAM_Z( bCMatrix2 const *, bCMatrix2_bEColumn, GEFloat [ bCMatrix2_bERow_Count ] );
+// ?GetDeterminant@bCMatrix2@@QBEMXZ public: float __thiscall bCMatrix2::GetDeterminant(void)const
+GEFloat __thiscall _GetDeterminant_bCMatrix2__QBEMXZ( bCMatrix2 const * );
+// ?GetDifference@bCMatrix2@@QBE?AV1@ABV1@@Z public: bCMatrix2 __thiscall bCMatrix2::GetDifference(bCMatrix2 const &)const
+bCMatrix2 * __thiscall _GetDifference_bCMatrix2__QBE_AV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetDifference@bCMatrix2@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix2::GetDifference(bCMatrix2 &,bCMatrix2 const &)const
+void __thiscall _GetDifference_bCMatrix2__QBEXAAV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetElement@bCMatrix2@@QBEMH@Z public: float __thiscall bCMatrix2::GetElement(int)const
+GEFloat __thiscall _GetElement_bCMatrix2__QBEMH_Z( bCMatrix2 const *, bCMatrix2_bEElement );
+// ?GetElement@bCMatrix2@@QBEMHH@Z public: float __thiscall bCMatrix2::GetElement(int,int)const
+GEFloat __thiscall _GetElement_bCMatrix2__QBEMHH_Z( bCMatrix2 const *, bCMatrix2_bERow, bCMatrix2_bEColumn );
+// ?GetElement@bCMatrix2@@QBEXHAAM@Z public: void __thiscall bCMatrix2::GetElement(int,float &)const
+void __thiscall _GetElement_bCMatrix2__QBEXHAAM_Z( bCMatrix2 const *, bCMatrix2_bEElement, GEFloat * );
+// ?GetElement@bCMatrix2@@QBEXHHAAM@Z public: void __thiscall bCMatrix2::GetElement(int,int,float &)const
+void __thiscall _GetElement_bCMatrix2__QBEXHHAAM_Z( bCMatrix2 const *, bCMatrix2_bERow, bCMatrix2_bEColumn, GEFloat * );
+// ?GetIdentity@bCMatrix2@@SG?AV1@XZ public: static bCMatrix2 __stdcall bCMatrix2::GetIdentity(void)
+bCMatrix2 * __stdcall _GetIdentity_bCMatrix2__SG_AV1_XZ( bCMatrix2 * );
+// ?GetIdentity@bCMatrix2@@SGXAAV1@@Z public: static void __stdcall bCMatrix2::GetIdentity(bCMatrix2 &)
+void __stdcall _GetIdentity_bCMatrix2__SGXAAV1__Z( bCMatrix2 * );
+// ?GetInverted@bCMatrix2@@QBE?AV1@XZ public: bCMatrix2 __thiscall bCMatrix2::GetInverted(void)const
+bCMatrix2 * __thiscall _GetInverted_bCMatrix2__QBE_AV1_XZ( bCMatrix2 const *, bCMatrix2 * );
+// ?GetInverted@bCMatrix2@@QBEXAAV1@@Z public: void __thiscall bCMatrix2::GetInverted(bCMatrix2 &)const
+void __thiscall _GetInverted_bCMatrix2__QBEXAAV1__Z( bCMatrix2 const *, bCMatrix2 * );
+// ?GetNegated@bCMatrix2@@QBE?AV1@XZ public: bCMatrix2 __thiscall bCMatrix2::GetNegated(void)const
+bCMatrix2 * __thiscall _GetNegated_bCMatrix2__QBE_AV1_XZ( bCMatrix2 const *, bCMatrix2 * );
+// ?GetNegated@bCMatrix2@@QBEXAAV1@@Z public: void __thiscall bCMatrix2::GetNegated(bCMatrix2 &)const
+void __thiscall _GetNegated_bCMatrix2__QBEXAAV1__Z( bCMatrix2 const *, bCMatrix2 * );
+// ?GetProduct@bCMatrix2@@QBE?AV1@ABV1@@Z public: bCMatrix2 __thiscall bCMatrix2::GetProduct(bCMatrix2 const &)const
+bCMatrix2 * __thiscall _GetProduct_bCMatrix2__QBE_AV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetProduct@bCMatrix2@@QBE?AV1@M@Z public: bCMatrix2 __thiscall bCMatrix2::GetProduct(float)const
+bCMatrix2 * __thiscall _GetProduct_bCMatrix2__QBE_AV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetProduct@bCMatrix2@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix2::GetProduct(bCMatrix2 &,bCMatrix2 const &)const
+void __thiscall _GetProduct_bCMatrix2__QBEXAAV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetProduct@bCMatrix2@@QBEXAAV1@M@Z public: void __thiscall bCMatrix2::GetProduct(bCMatrix2 &,float)const
+void __thiscall _GetProduct_bCMatrix2__QBEXAAV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetProductPrefix@bCMatrix2@@QBE?AV1@ABV1@@Z public: bCMatrix2 __thiscall bCMatrix2::GetProductPrefix(bCMatrix2 const &)const
+bCMatrix2 * __thiscall _GetProductPrefix_bCMatrix2__QBE_AV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetProductPrefix@bCMatrix2@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix2::GetProductPrefix(bCMatrix2 &,bCMatrix2 const &)const
+void __thiscall _GetProductPrefix_bCMatrix2__QBEXAAV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetQuotient@bCMatrix2@@QBE?AV1@M@Z public: bCMatrix2 __thiscall bCMatrix2::GetQuotient(float)const
+bCMatrix2 * __thiscall _GetQuotient_bCMatrix2__QBE_AV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetQuotient@bCMatrix2@@QBEXAAV1@M@Z public: void __thiscall bCMatrix2::GetQuotient(bCMatrix2 &,float)const
+void __thiscall _GetQuotient_bCMatrix2__QBEXAAV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetRotated@bCMatrix2@@QBE?AV1@M@Z public: bCMatrix2 __thiscall bCMatrix2::GetRotated(float)const
+bCMatrix2 * __thiscall _GetRotated_bCMatrix2__QBE_AV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetRotated@bCMatrix2@@QBEXAAV1@M@Z public: void __thiscall bCMatrix2::GetRotated(bCMatrix2 &,float)const
+void __thiscall _GetRotated_bCMatrix2__QBEXAAV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetRotatedLocal@bCMatrix2@@QBE?AV1@M@Z public: bCMatrix2 __thiscall bCMatrix2::GetRotatedLocal(float)const
+bCMatrix2 * __thiscall _GetRotatedLocal_bCMatrix2__QBE_AV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetRotatedLocal@bCMatrix2@@QBEXAAV1@M@Z public: void __thiscall bCMatrix2::GetRotatedLocal(bCMatrix2 &,float)const
+void __thiscall _GetRotatedLocal_bCMatrix2__QBEXAAV1_M_Z( bCMatrix2 const *, bCMatrix2 *, GEFloat );
+// ?GetRow@bCMatrix2@@QBEABVbCVector2@@H@Z public: bCVector2 const & __thiscall bCMatrix2::GetRow(int)const
+bCVector2 const * __thiscall _GetRow_bCMatrix2__QBEABVbCVector2__H_Z( bCMatrix2 const *, bCMatrix2_bERow );
+// ?GetRow@bCMatrix2@@QBEXHAAVbCVector2@@@Z public: void __thiscall bCMatrix2::GetRow(int,bCVector2 &)const
+void __thiscall _GetRow_bCMatrix2__QBEXHAAVbCVector2___Z( bCMatrix2 const *, bCMatrix2_bERow, bCVector2 * );
+// ?GetRow@bCMatrix2@@QBEXHQAM@Z public: void __thiscall bCMatrix2::GetRow(int,float * const)const
+void __thiscall _GetRow_bCMatrix2__QBEXHQAM_Z( bCMatrix2 const *, bCMatrix2_bERow, GEFloat [ bCMatrix2_bEColumn_Count ] );
+// ?GetSum@bCMatrix2@@QBE?AV1@ABV1@@Z public: bCMatrix2 __thiscall bCMatrix2::GetSum(bCMatrix2 const &)const
+bCMatrix2 * __thiscall _GetSum_bCMatrix2__QBE_AV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetSum@bCMatrix2@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix2::GetSum(bCMatrix2 &,bCMatrix2 const &)const
+void __thiscall _GetSum_bCMatrix2__QBEXAAV1_ABV1__Z( bCMatrix2 const *, bCMatrix2 *, bCMatrix2 const * );
+// ?GetTransposed@bCMatrix2@@QBE?AV1@XZ public: bCMatrix2 __thiscall bCMatrix2::GetTransposed(void)const
+bCMatrix2 * __thiscall _GetTransposed_bCMatrix2__QBE_AV1_XZ( bCMatrix2 const *, bCMatrix2 * );
+// ?GetTransposed@bCMatrix2@@QBEXAAV1@@Z public: void __thiscall bCMatrix2::GetTransposed(bCMatrix2 &)const
+void __thiscall _GetTransposed_bCMatrix2__QBEXAAV1__Z( bCMatrix2 const *, bCMatrix2 * );
+// ?GetXAxis@bCMatrix2@@QBEABVbCVector2@@XZ public: bCVector2 const & __thiscall bCMatrix2::GetXAxis(void)const
+bCVector2 const * __thiscall _GetXAxis_bCMatrix2__QBEABVbCVector2__XZ( bCMatrix2 const * );
+// ?GetXAxis@bCMatrix2@@QBEXAAVbCVector2@@@Z public: void __thiscall bCMatrix2::GetXAxis(bCVector2 &)const
+void __thiscall _GetXAxis_bCMatrix2__QBEXAAVbCVector2___Z( bCMatrix2 const *, bCVector2 * );
+// ?GetYAxis@bCMatrix2@@QBEABVbCVector2@@XZ public: bCVector2 const & __thiscall bCMatrix2::GetYAxis(void)const
+bCVector2 const * __thiscall _GetYAxis_bCMatrix2__QBEABVbCVector2__XZ( bCMatrix2 const * );
+// ?GetYAxis@bCMatrix2@@QBEXAAVbCVector2@@@Z public: void __thiscall bCMatrix2::GetYAxis(bCVector2 &)const
+void __thiscall _GetYAxis_bCMatrix2__QBEXAAVbCVector2___Z( bCMatrix2 const *, bCVector2 * );
+// ?Invert@bCMatrix2@@QAEXXZ public: void __thiscall bCMatrix2::Invert(void)
+void __thiscall _Invert_bCMatrix2__QAEXXZ( bCMatrix2 * );
+// ?IsEqual@bCMatrix2@@QBE_NABV1@@Z public: bool __thiscall bCMatrix2::IsEqual(bCMatrix2 const &)const
+GEBool __thiscall _IsEqual_bCMatrix2__QBE_NABV1__Z( bCMatrix2 const *, bCMatrix2 const * );
+// ?IsIdentity@bCMatrix2@@QBE_NXZ public: bool __thiscall bCMatrix2::IsIdentity(void)const
+GEBool __thiscall _IsIdentity_bCMatrix2__QBE_NXZ( bCMatrix2 const * );
+// ?ModifyXAxis@bCMatrix2@@QAEXABVbCVector2@@@Z public: void __thiscall bCMatrix2::ModifyXAxis(bCVector2 const &)
+void __thiscall _ModifyXAxis_bCMatrix2__QAEXABVbCVector2___Z( bCMatrix2 *, bCVector2 const * );
+// ?ModifyYAxis@bCMatrix2@@QAEXABVbCVector2@@@Z public: void __thiscall bCMatrix2::ModifyYAxis(bCVector2 const &)
+void __thiscall _ModifyYAxis_bCMatrix2__QAEXABVbCVector2___Z( bCMatrix2 *, bCVector2 const * );
+// ?Multiply@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::Multiply(bCMatrix2 const &)
+void __thiscall _Multiply_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?Multiply@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::Multiply(float)
+void __thiscall _Multiply_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?Negate@bCMatrix2@@QAEXXZ public: void __thiscall bCMatrix2::Negate(void)
+void __thiscall _Negate_bCMatrix2__QAEXXZ( bCMatrix2 * );
+// ?ReverseMultiply@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::ReverseMultiply(bCMatrix2 const &)
+void __thiscall _ReverseMultiply_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?Rotate@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::Rotate(float)
+void __thiscall _Rotate_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?RotateLocal@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::RotateLocal(float)
+void __thiscall _RotateLocal_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?Scale@bCMatrix2@@QAEXABVbCVector2@@@Z public: void __thiscall bCMatrix2::Scale(bCVector2 const &)
+void __thiscall _Scale_bCMatrix2__QAEXABVbCVector2___Z( bCMatrix2 *, bCVector2 const * );
+// ?Scale@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::Scale(float)
+void __thiscall _Scale_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?SetElement@bCMatrix2@@QAEXHHM@Z public: void __thiscall bCMatrix2::SetElement(int,int,float)
+void __thiscall _SetElement_bCMatrix2__QAEXHHM_Z( bCMatrix2 *, bCMatrix2_bERow, bCMatrix2_bEColumn, GEFloat );
+// ?SetElement@bCMatrix2@@QAEXHM@Z public: void __thiscall bCMatrix2::SetElement(int,float)
+void __thiscall _SetElement_bCMatrix2__QAEXHM_Z( bCMatrix2 *, bCMatrix2_bEElement, GEFloat );
+// ?SetIdentity@bCMatrix2@@QAEXXZ public: void __thiscall bCMatrix2::SetIdentity(void)
+void __thiscall _SetIdentity_bCMatrix2__QAEXXZ( bCMatrix2 * );
+// ?SetMatrix@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::SetMatrix(bCMatrix2 const &)
+void __thiscall _SetMatrix_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?SetMatrix@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::SetMatrix(float)
+void __thiscall _SetMatrix_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?SetMatrix@bCMatrix2@@QAEXQAY01$$CBM@Z public: void __thiscall bCMatrix2::SetMatrix(float const (* const)[2])
+void __thiscall _SetMatrix_bCMatrix2__QAEXQAY01__CBM_Z( bCMatrix2 *, GEFloat const [ bCMatrix2_bERow_Count ][ bCMatrix2_bEColumn_Count ] );
+// ?SetMatrix@bCMatrix2@@QAEXQBM@Z public: void __thiscall bCMatrix2::SetMatrix(float const * const)
+void __thiscall _SetMatrix_bCMatrix2__QAEXQBM_Z( bCMatrix2 *, GEFloat const [ bCMatrix2_bEElement_Count ] );
+// ?SetMatrix@bCMatrix2@@QAEXQBVbCVector2@@@Z public: void __thiscall bCMatrix2::SetMatrix(bCVector2 const * const)
+void __thiscall _SetMatrix_bCMatrix2__QAEXQBVbCVector2___Z( bCMatrix2 *, bCVector2 const [ bCMatrix2_bERow_Count ] );
+// ?SetRow@bCMatrix2@@QAEXHABVbCVector2@@@Z public: void __thiscall bCMatrix2::SetRow(int,bCVector2 const &)
+void __thiscall _SetRow_bCMatrix2__QAEXHABVbCVector2___Z( bCMatrix2 *, bCMatrix2_bERow, bCVector2 const * );
+// ?SetRow@bCMatrix2@@QAEXHQBM@Z public: void __thiscall bCMatrix2::SetRow(int,float const * const)
+void __thiscall _SetRow_bCMatrix2__QAEXHQBM_Z( bCMatrix2 *, bCMatrix2_bERow, GEFloat const [ bCMatrix2_bEColumn_Count ] );
+// ?SetToInverse@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::SetToInverse(bCMatrix2 const &)
+void __thiscall _SetToInverse_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?SetToProduct@bCMatrix2@@QAEXABV1@0@Z public: void __thiscall bCMatrix2::SetToProduct(bCMatrix2 const &,bCMatrix2 const &)
+void __thiscall _SetToProduct_bCMatrix2__QAEXABV1_0_Z( bCMatrix2 *, bCMatrix2 const *, bCMatrix2 const * );
+// ?SetToRotation@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::SetToRotation(float)
+void __thiscall _SetToRotation_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?SetToScaling@bCMatrix2@@QAEXABVbCVector2@@@Z public: void __thiscall bCMatrix2::SetToScaling(bCVector2 const &)
+void __thiscall _SetToScaling_bCMatrix2__QAEXABVbCVector2___Z( bCMatrix2 *, bCVector2 const * );
+// ?SetToScaling@bCMatrix2@@QAEXM@Z public: void __thiscall bCMatrix2::SetToScaling(float)
+void __thiscall _SetToScaling_bCMatrix2__QAEXM_Z( bCMatrix2 *, GEFloat );
+// ?Sub@bCMatrix2@@QAEXABV1@@Z public: void __thiscall bCMatrix2::Sub(bCMatrix2 const &)
+void __thiscall _Sub_bCMatrix2__QAEXABV1__Z( bCMatrix2 *, bCMatrix2 const * );
+// ?Transpose@bCMatrix2@@QAEXXZ public: void __thiscall bCMatrix2::Transpose(void)
+void __thiscall _Transpose_bCMatrix2__QAEXXZ( bCMatrix2 * );
+// ?matInverted@?5??SetToInverse@bCMatrix2@@QAEXABV2@@Z@4V2@A bCMatrix2 `public: void __thiscall bCMatrix2::SetToInverse(bCMatrix2 const &)'::`6'::matInverted
+bCMatrix2 DLLIMPORT _matInverted__5__SetToInverse_bCMatrix2__QAEXABV2__Z_4V2_A;
+// ?matProduct@?5??SetToProduct@bCMatrix2@@QAEXABV2@0@Z@4V2@A bCMatrix2 `public: void __thiscall bCMatrix2::SetToProduct(bCMatrix2 const &,bCMatrix2 const &)'::`6'::matProduct
+bCMatrix2 DLLIMPORT _matProduct__5__SetToProduct_bCMatrix2__QAEXABV2_0_Z_4V2_A;
