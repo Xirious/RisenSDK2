@@ -61,6 +61,7 @@
 #include "SharedBase/ge_vector.tih"
 #include "SharedBase/ge_vector4.tih"
 #include "SharedBase/ge_axisangle.tih"
+#include "SharedBase/ge_eulerangles.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
