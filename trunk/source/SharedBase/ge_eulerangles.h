@@ -3,6 +3,15 @@
 
 class GE_DLLIMPORT bCEulerAngles
 {
+public:
+    enum bERotation
+    {
+        bERotation_Yaw,
+        bERotation_Pitch,
+        bERotation_Roll,
+        bERotation_Count,
+        bERotation_ForceDWORD = GE_FORCE_DWORD
+    };
 private:
     GEFloat m_fYaw;
     GEFloat m_fPitch;
