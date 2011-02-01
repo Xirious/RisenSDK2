@@ -5,7 +5,7 @@ class GE_DLLIMPORT bCQuaternion
 {
 private:
     GEFloat m_fX;
-    GEFloat m_FY;
+    GEFloat m_fY;
     GEFloat m_fZ;
     GEFloat m_fW;
 public:

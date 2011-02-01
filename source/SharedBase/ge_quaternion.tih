@@ -1,0 +1,255 @@
+struct bCQuaternion
+{
+    GEFloat m_fX;
+    GEFloat m_fY;
+    GEFloat m_fZ;
+    GEFloat m_fW;
+};
+// ??0bCQuaternion@@QAE@ABV0@@Z public: __thiscall bCQuaternion::bCQuaternion(bCQuaternion const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABV0__Z( bCQuaternion *, bCQuaternion const * );
+// ??0bCQuaternion@@QAE@ABVbCAxisAngle@@@Z public: __thiscall bCQuaternion::bCQuaternion(bCAxisAngle const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABVbCAxisAngle___Z( bCQuaternion *, bCAxisAngle const * );
+// ??0bCQuaternion@@QAE@ABVbCEulerAngles@@@Z public: __thiscall bCQuaternion::bCQuaternion(bCEulerAngles const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABVbCEulerAngles___Z( bCQuaternion *, bCEulerAngles const * );
+// ??0bCQuaternion@@QAE@ABVbCMatrix3@@@Z public: __thiscall bCQuaternion::bCQuaternion(bCMatrix3 const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABVbCMatrix3___Z( bCQuaternion *, bCMatrix3 const * );
+// ??0bCQuaternion@@QAE@ABVbCMatrix@@@Z public: __thiscall bCQuaternion::bCQuaternion(bCMatrix const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABVbCMatrix___Z( bCQuaternion *, bCMatrix const * );
+// ??0bCQuaternion@@QAE@ABVbCSphericalRotation@@@Z public: __thiscall bCQuaternion::bCQuaternion(bCSphericalRotation const &)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_ABVbCSphericalRotation___Z( bCQuaternion *, bCSphericalRotation const * );
+// ??0bCQuaternion@@QAE@MMMM@Z public: __thiscall bCQuaternion::bCQuaternion(float,float,float,float)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_MMMM_Z( bCQuaternion *, GEFloat, GEFloat, GEFloat, GEFloat );
+// ??0bCQuaternion@@QAE@XZ public: __thiscall bCQuaternion::bCQuaternion(void)
+bCQuaternion * __thiscall __0bCQuaternion__QAE_XZ( bCQuaternion * );
+// ??1bCQuaternion@@QAE@XZ public: __thiscall bCQuaternion::~bCQuaternion(void)
+void __thiscall __1bCQuaternion__QAE_XZ( bCQuaternion * );
+// ??4bCQuaternion@@QAEAAV0@ABV0@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCQuaternion const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABV0__Z( bCQuaternion *, bCQuaternion const * );
+// ??4bCQuaternion@@QAEAAV0@ABVbCAxisAngle@@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCAxisAngle const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABVbCAxisAngle___Z( bCQuaternion *, bCAxisAngle const * );
+// ??4bCQuaternion@@QAEAAV0@ABVbCEulerAngles@@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCEulerAngles const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABVbCEulerAngles___Z( bCQuaternion *, bCEulerAngles const * );
+// ??4bCQuaternion@@QAEAAV0@ABVbCMatrix3@@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCMatrix3 const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABVbCMatrix3___Z( bCQuaternion *, bCMatrix3 const * );
+// ??4bCQuaternion@@QAEAAV0@ABVbCMatrix@@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCMatrix const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABVbCMatrix___Z( bCQuaternion *, bCMatrix const * );
+// ??4bCQuaternion@@QAEAAV0@ABVbCSphericalRotation@@@Z public: bCQuaternion & __thiscall bCQuaternion::operator=(bCSphericalRotation const &)
+bCQuaternion * __thiscall __4bCQuaternion__QAEAAV0_ABVbCSphericalRotation___Z( bCQuaternion *, bCSphericalRotation const * );
+// ??5bCQuaternion@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCQuaternion::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCQuaternion__QBEAAVbCOStream__AAV1__Z( bCQuaternion const *, bCOStream * );
+// ??6bCQuaternion@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCQuaternion::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCQuaternion__QAEAAVbCIStream__AAV1__Z( bCQuaternion *, bCIStream * );
+// ??8bCQuaternion@@QBE_NABV0@@Z public: bool __thiscall bCQuaternion::operator==(bCQuaternion const &)const
+GEBool __thiscall __8bCQuaternion__QBE_NABV0__Z( bCQuaternion const *, bCQuaternion const * );
+// ??9bCQuaternion@@QBE_NABV0@@Z public: bool __thiscall bCQuaternion::operator!=(bCQuaternion const &)const
+GEBool __thiscall __9bCQuaternion__QBE_NABV0__Z( bCQuaternion const *, bCQuaternion const * );
+// ??DbCQuaternion@@QBE?AV0@ABV0@@Z public: bCQuaternion __thiscall bCQuaternion::operator*(bCQuaternion const &)const
+bCQuaternion * __thiscall __DbCQuaternion__QBE_AV0_ABV0__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ??DbCQuaternion@@QBE?AV0@M@Z public: bCQuaternion __thiscall bCQuaternion::operator*(float)const
+bCQuaternion * __thiscall __DbCQuaternion__QBE_AV0_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ??GbCQuaternion@@QBE?AV0@ABV0@@Z public: bCQuaternion __thiscall bCQuaternion::operator-(bCQuaternion const &)const
+bCQuaternion * __thiscall __GbCQuaternion__QBE_AV0_ABV0__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ??GbCQuaternion@@QBE?AV0@XZ public: bCQuaternion __thiscall bCQuaternion::operator-(void)const
+bCQuaternion * __thiscall __GbCQuaternion__QBE_AV0_XZ( bCQuaternion const *, bCQuaternion * );
+// ??HbCQuaternion@@QBE?AV0@ABV0@@Z public: bCQuaternion __thiscall bCQuaternion::operator+(bCQuaternion const &)const
+bCQuaternion * __thiscall __HbCQuaternion__QBE_AV0_ABV0__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ??KbCQuaternion@@QBE?AV0@M@Z public: bCQuaternion __thiscall bCQuaternion::operator/(float)const
+bCQuaternion * __thiscall __KbCQuaternion__QBE_AV0_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ??SbCQuaternion@@QBE?AV0@XZ public: bCQuaternion __thiscall bCQuaternion::operator~(void)const
+bCQuaternion * __thiscall __SbCQuaternion__QBE_AV0_XZ( bCQuaternion const *, bCQuaternion * );
+// ??XbCQuaternion@@QAEAAV0@ABV0@@Z public: bCQuaternion & __thiscall bCQuaternion::operator*=(bCQuaternion const &)
+bCQuaternion * __thiscall __XbCQuaternion__QAEAAV0_ABV0__Z( bCQuaternion *, bCQuaternion const * );
+// ??XbCQuaternion@@QAEAAV0@M@Z public: bCQuaternion & __thiscall bCQuaternion::operator*=(float)
+bCQuaternion * __thiscall __XbCQuaternion__QAEAAV0_M_Z( bCQuaternion *, GEFloat );
+// ??YbCQuaternion@@QAEAAV0@ABV0@@Z public: bCQuaternion & __thiscall bCQuaternion::operator+=(bCQuaternion const &)
+bCQuaternion *__thiscall __YbCQuaternion__QAEAAV0_ABV0__Z( bCQuaternion *, bCQuaternion const * );
+// ??ZbCQuaternion@@QAEAAV0@ABV0@@Z public: bCQuaternion & __thiscall bCQuaternion::operator-=(bCQuaternion const &)
+bCQuaternion * __thiscall __ZbCQuaternion__QAEAAV0_ABV0__Z( bCQuaternion *, bCQuaternion const * );
+// ??_0bCQuaternion@@QAEAAV0@M@Z public: bCQuaternion & __thiscall bCQuaternion::operator/=(float)
+bCQuaternion * __thiscall ___0bCQuaternion__QAEAAV0_M_Z( bCQuaternion *, GEFloat );
+// ?AccessW@bCQuaternion@@QAEAAMXZ public: float & __thiscall bCQuaternion::AccessW(void)
+GEFloat * __thiscall _AccessW_bCQuaternion__QAEAAMXZ( bCQuaternion * );
+// ?AccessX@bCQuaternion@@QAEAAMXZ public: float & __thiscall bCQuaternion::AccessX(void)
+GEFloat * __thiscall _AccessX_bCQuaternion__QAEAAMXZ( bCQuaternion * );
+// ?AccessY@bCQuaternion@@QAEAAMXZ public: float & __thiscall bCQuaternion::AccessY(void)
+GEFloat * __thiscall _AccessY_bCQuaternion__QAEAAMXZ( bCQuaternion * );
+// ?AccessZ@bCQuaternion@@QAEAAMXZ public: float & __thiscall bCQuaternion::AccessZ(void)
+GEFloat * __thiscall _AccessZ_bCQuaternion__QAEAAMXZ( bCQuaternion * );
+// ?Add@bCQuaternion@@QAEXABV1@@Z public: void __thiscall bCQuaternion::Add(bCQuaternion const &)
+void __thiscall _Add_bCQuaternion__QAEXABV1__Z( bCQuaternion *, bCQuaternion const * );
+// ?Clear@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Clear(void)
+void __thiscall _Clear_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?Exp@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Exp(void)
+void __thiscall _Exp_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?GetAxisAngle@bCQuaternion@@QBE?AVbCAxisAngle@@XZ public: bCAxisAngle __thiscall bCQuaternion::GetAxisAngle(void)const
+bCAxisAngle * __thiscall _GetAxisAngle_bCQuaternion__QBE_AVbCAxisAngle__XZ( bCQuaternion const *, bCAxisAngle * );
+// ?GetAxisAngle@bCQuaternion@@QBEXAAVbCAxisAngle@@@Z public: void __thiscall bCQuaternion::GetAxisAngle(bCAxisAngle &)const
+void __thiscall _GetAxisAngle_bCQuaternion__QBEXAAVbCAxisAngle___Z( bCQuaternion const *, bCAxisAngle * );
+// ?GetDifference@bCQuaternion@@QBE?AV1@ABV1@@Z public: bCQuaternion __thiscall bCQuaternion::GetDifference(bCQuaternion const &)const
+bCQuaternion * __thiscall _GetDifference_bCQuaternion__QBE_AV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetDifference@bCQuaternion@@QBEXAAV1@ABV1@@Z public: void __thiscall bCQuaternion::GetDifference(bCQuaternion &,bCQuaternion const &)const
+void __thiscall _GetDifference_bCQuaternion__QBEXAAV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetDotProduct@bCQuaternion@@QBEMABV1@@Z public: float __thiscall bCQuaternion::GetDotProduct(bCQuaternion const &)const
+GEFloat __thiscall _GetDotProduct_bCQuaternion__QBEMABV1__Z( bCQuaternion const *, bCQuaternion const * );
+// ?GetEulerAngles@bCQuaternion@@QBE?AVbCEulerAngles@@XZ public: bCEulerAngles __thiscall bCQuaternion::GetEulerAngles(void)const
+bCEulerAngles * __thiscall _GetEulerAngles_bCQuaternion__QBE_AVbCEulerAngles__XZ( bCQuaternion const *, bCEulerAngles * );
+// ?GetEulerAngles@bCQuaternion@@QBEXAAVbCEulerAngles@@@Z public: void __thiscall bCQuaternion::GetEulerAngles(bCEulerAngles &)const
+void __thiscall _GetEulerAngles_bCQuaternion__QBEXAAVbCEulerAngles___Z( bCQuaternion const *, bCEulerAngles * );
+// ?GetExp@bCQuaternion@@QBE?AV1@XZ public: bCQuaternion __thiscall bCQuaternion::GetExp(void)const
+bCQuaternion * __thiscall _GetExp_bCQuaternion__QBE_AV1_XZ( bCQuaternion const *, bCQuaternion * );
+// ?GetInverted@bCQuaternion@@QBE?AV1@XZ public: bCQuaternion __thiscall bCQuaternion::GetInverted(void)const
+bCQuaternion * __thiscall _GetInverted_bCQuaternion__QBE_AV1_XZ( bCQuaternion const *, bCQuaternion * );
+// ?GetInverted@bCQuaternion@@QBEXAAV1@@Z public: void __thiscall bCQuaternion::GetInverted(bCQuaternion &)const
+void __thiscall _GetInverted_bCQuaternion__QBEXAAV1__Z( bCQuaternion const *, bCQuaternion * );
+// ?GetLerp@bCQuaternion@@QBE?AV1@ABV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetLerp(bCQuaternion const &,float)const
+bCQuaternion * __thiscall _GetLerp_bCQuaternion__QBE_AV1_ABV1_M_Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const *, GEFloat );
+// ?GetLog@bCQuaternion@@QBE?AV1@XZ public: bCQuaternion __thiscall bCQuaternion::GetLog(void)const
+bCQuaternion * __thiscall _GetLog_bCQuaternion__QBE_AV1_XZ( bCQuaternion const *, bCQuaternion * );
+// ?GetMagnitude@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetMagnitude(void)const
+GEFloat __thiscall _GetMagnitude_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetMatrix3@bCQuaternion@@QBE?AVbCMatrix3@@XZ public: bCMatrix3 __thiscall bCQuaternion::GetMatrix3(void)const
+bCMatrix3 * __thiscall _GetMatrix3_bCQuaternion__QBE_AVbCMatrix3__XZ( bCQuaternion const *, bCMatrix3 * );
+// ?GetMatrix3@bCQuaternion@@QBEXAAVbCMatrix3@@@Z public: void __thiscall bCQuaternion::GetMatrix3(bCMatrix3 &)const
+void __thiscall _GetMatrix3_bCQuaternion__QBEXAAVbCMatrix3___Z( bCQuaternion const *, bCMatrix3 * );
+// ?GetMatrix@bCQuaternion@@QBE?AVbCMatrix@@XZ public: bCMatrix __thiscall bCQuaternion::GetMatrix(void)const
+bCMatrix * __thiscall _GetMatrix_bCQuaternion__QBE_AVbCMatrix__XZ( bCQuaternion const *, bCMatrix * );
+// ?GetMatrix@bCQuaternion@@QBEXAAVbCMatrix@@@Z public: void __thiscall bCQuaternion::GetMatrix(bCMatrix &)const
+void __thiscall _GetMatrix_bCQuaternion__QBEXAAVbCMatrix___Z( bCQuaternion const *, bCMatrix * );
+// ?GetNegated@bCQuaternion@@QBE?AV1@XZ public: bCQuaternion __thiscall bCQuaternion::GetNegated(void)const
+bCQuaternion * __thiscall _GetNegated_bCQuaternion__QBE_AV1_XZ( bCQuaternion const *, bCQuaternion * );
+// ?GetNegated@bCQuaternion@@QBEXAAV1@@Z public: void __thiscall bCQuaternion::GetNegated(bCQuaternion &)const
+void __thiscall _GetNegated_bCQuaternion__QBEXAAV1__Z( bCQuaternion const *, bCQuaternion * );
+// ?GetNormalized@bCQuaternion@@QBE?AV1@XZ public: bCQuaternion __thiscall bCQuaternion::GetNormalized(void)const
+bCQuaternion * __thiscall _GetNormalized_bCQuaternion__QBE_AV1_XZ( bCQuaternion const *, bCQuaternion * );
+// ?GetNormalized@bCQuaternion@@QBEXAAV1@@Z public: void __thiscall bCQuaternion::GetNormalized(bCQuaternion &)const
+void __thiscall _GetNormalized_bCQuaternion__QBEXAAV1__Z( bCQuaternion const *, bCQuaternion * );
+// ?GetProduct@bCQuaternion@@QBE?AV1@ABV1@@Z public: bCQuaternion __thiscall bCQuaternion::GetProduct(bCQuaternion const &)const
+bCQuaternion * __thiscall _GetProduct_bCQuaternion__QBE_AV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetProduct@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetProduct(float)const
+bCQuaternion * __thiscall _GetProduct_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetProduct@bCQuaternion@@QBEXAAV1@ABV1@@Z public: void __thiscall bCQuaternion::GetProduct(bCQuaternion &,bCQuaternion const &)const
+void __thiscall _GetProduct_bCQuaternion__QBEXAAV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetProduct@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetProduct(bCQuaternion &,float)const
+void __thiscall _GetProduct_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion * , GEFloat );
+// ?GetReverseProduct@bCQuaternion@@QBE?AV1@ABV1@@Z public: bCQuaternion __thiscall bCQuaternion::GetReverseProduct(bCQuaternion const &)const
+bCQuaternion * __thiscall _GetReverseProduct_bCQuaternion__QBE_AV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetReverseProduct@bCQuaternion@@QBEXAAV1@ABV1@@Z public: void __thiscall bCQuaternion::GetReverseProduct(bCQuaternion &,bCQuaternion const &)const
+void __thiscall _GetReverseProduct_bCQuaternion__QBEXAAV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetRotatedAxisX@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedAxisX(float)const
+bCQuaternion * __thiscall _GetRotatedAxisX_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedAxisX@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedAxisX(bCQuaternion &,float)const
+void __thiscall _GetRotatedAxisX_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedAxisY@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedAxisY(float)const
+bCQuaternion * __thiscall _GetRotatedAxisY_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedAxisY@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedAxisY(bCQuaternion &,float)const
+void __thiscall _GetRotatedAxisY_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedAxisZ@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedAxisZ(float)const
+bCQuaternion * __thiscall _GetRotatedAxisZ_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedAxisZ@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedAxisZ(bCQuaternion &,float)const
+void __thiscall _GetRotatedAxisZ_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisX@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedLocalAxisX(float)const
+bCQuaternion * __thiscall _GetRotatedLocalAxisX_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisX@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedLocalAxisX(bCQuaternion &,float)const
+void __thiscall _GetRotatedLocalAxisX_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisY@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedLocalAxisY(float)const
+bCQuaternion * __thiscall _GetRotatedLocalAxisY_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisY@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedLocalAxisY(bCQuaternion &,float)const
+void __thiscall _GetRotatedLocalAxisY_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisZ@bCQuaternion@@QBE?AV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetRotatedLocalAxisZ(float)const
+bCQuaternion * __thiscall _GetRotatedLocalAxisZ_bCQuaternion__QBE_AV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetRotatedLocalAxisZ@bCQuaternion@@QBEXAAV1@M@Z public: void __thiscall bCQuaternion::GetRotatedLocalAxisZ(bCQuaternion &,float)const
+void __thiscall _GetRotatedLocalAxisZ_bCQuaternion__QBEXAAV1_M_Z( bCQuaternion const *, bCQuaternion *, GEFloat );
+// ?GetSlerp@bCQuaternion@@QBE?AV1@ABV1@M@Z public: bCQuaternion __thiscall bCQuaternion::GetSlerp(bCQuaternion const &,float)const
+bCQuaternion * __thiscall _GetSlerp_bCQuaternion__QBE_AV1_ABV1_M_Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const *, GEFloat );
+// ?GetSphericalRotation@bCQuaternion@@QBE?AVbCSphericalRotation@@XZ public: bCSphericalRotation __thiscall bCQuaternion::GetSphericalRotation(void)const
+bCSphericalRotation * __thiscall _GetSphericalRotation_bCQuaternion__QBE_AVbCSphericalRotation__XZ( bCQuaternion const *, bCSphericalRotation * );
+// ?GetSphericalRotation@bCQuaternion@@QBEXAAVbCSphericalRotation@@@Z public: void __thiscall bCQuaternion::GetSphericalRotation(bCSphericalRotation &)const
+void __thiscall _GetSphericalRotation_bCQuaternion__QBEXAAVbCSphericalRotation___Z( bCQuaternion const *, bCSphericalRotation * );
+// ?GetSquareMagnitude@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetSquareMagnitude(void)const
+GEFloat __thiscall _GetSquareMagnitude_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetSum@bCQuaternion@@QBE?AV1@ABV1@@Z public: bCQuaternion __thiscall bCQuaternion::GetSum(bCQuaternion const &)const
+bCQuaternion * __thiscall _GetSum_bCQuaternion__QBE_AV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetSum@bCQuaternion@@QBEXAAV1@ABV1@@Z public: void __thiscall bCQuaternion::GetSum(bCQuaternion &,bCQuaternion const &)const
+void __thiscall _GetSum_bCQuaternion__QBEXAAV1_ABV1__Z( bCQuaternion const *, bCQuaternion *, bCQuaternion const * );
+// ?GetTransformedVector@bCQuaternion@@QBE?AVbCVector@@ABV2@@Z public: bCVector __thiscall bCQuaternion::GetTransformedVector(bCVector const &)const
+bCVector * __thiscall _GetTransformedVector_bCQuaternion__QBE_AVbCVector__ABV2__Z( bCQuaternion const *, bCVector *, bCVector const * );
+// ?GetW@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetW(void)const
+GEFloat __thiscall _GetW_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetW@bCQuaternion@@QBEXAAM@Z public: void __thiscall bCQuaternion::GetW(float &)const
+void __thiscall _GetW_bCQuaternion__QBEXAAM_Z( bCQuaternion const *, GEFloat * );
+// ?GetX@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetX(void)const
+GEFloat __thiscall _GetX_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetX@bCQuaternion@@QBEXAAM@Z public: void __thiscall bCQuaternion::GetX(float &)const
+void __thiscall _GetX_bCQuaternion__QBEXAAM_Z( bCQuaternion const *, GEFloat * );
+// ?GetY@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetY(void)const
+GEFloat __thiscall _GetY_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetY@bCQuaternion@@QBEXAAM@Z public: void __thiscall bCQuaternion::GetY(float &)const
+void __thiscall _GetY_bCQuaternion__QBEXAAM_Z( bCQuaternion const *, GEFloat * );
+// ?GetZ@bCQuaternion@@QBEMXZ public: float __thiscall bCQuaternion::GetZ(void)const
+GEFloat __thiscall _GetZ_bCQuaternion__QBEMXZ( bCQuaternion const * );
+// ?GetZ@bCQuaternion@@QBEXAAM@Z public: void __thiscall bCQuaternion::GetZ(float &)const
+void __thiscall _GetZ_bCQuaternion__QBEXAAM_Z( bCQuaternion const *, GEFloat * );
+// ?Invert@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Invert(void)
+void __thiscall _Invert_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?IsEqual@bCQuaternion@@QBE_NABV1@@Z public: bool __thiscall bCQuaternion::IsEqual(bCQuaternion const &)const
+GEBool __thiscall _IsEqual_bCQuaternion__QBE_NABV1__Z( bCQuaternion const *, bCQuaternion const * );
+// ?IsNormalized@bCQuaternion@@QBE_NXZ public: bool __thiscall bCQuaternion::IsNormalized(void)const
+GEBool __thiscall _IsNormalized_bCQuaternion__QBE_NXZ( bCQuaternion const * );
+// ?Log@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Log(void)
+void __thiscall _Log_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?Multiply@bCQuaternion@@QAEXABV1@@Z public: void __thiscall bCQuaternion::Multiply(bCQuaternion const &)
+void __thiscall _Multiply_bCQuaternion__QAEXABV1__Z( bCQuaternion *, bCQuaternion const * );
+// ?Multiply@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::Multiply(float)
+void __thiscall _Multiply_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?Negate@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Negate(void)
+void __thiscall _Negate_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?Normalize@bCQuaternion@@QAEXXZ public: void __thiscall bCQuaternion::Normalize(void)
+void __thiscall _Normalize_bCQuaternion__QAEXXZ( bCQuaternion * );
+// ?ReverseMultiply@bCQuaternion@@QAEXABV1@@Z public: void __thiscall bCQuaternion::ReverseMultiply(bCQuaternion const &)
+void __thiscall _ReverseMultiply_bCQuaternion__QAEXABV1__Z( bCQuaternion *, bCQuaternion const * );
+// ?RotateAxis@bCQuaternion@@QAEXABVbCVector@@M@Z public: void __thiscall bCQuaternion::RotateAxis(bCVector const &,float)
+void __thiscall _RotateAxis_bCQuaternion__QAEXABVbCVector__M_Z( bCQuaternion *, bCVector const *, GEFloat );
+// ?RotateAxisX@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateAxisX(float)
+void __thiscall _RotateAxisX_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?RotateAxisY@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateAxisY(float)
+void __thiscall _RotateAxisY_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?RotateAxisZ@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateAxisZ(float)
+void __thiscall _RotateAxisZ_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?RotateLocalAxisX@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateLocalAxisX(float)
+void __thiscall _RotateLocalAxisX_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?RotateLocalAxisY@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateLocalAxisY(float)
+void __thiscall _RotateLocalAxisY_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?RotateLocalAxisZ@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::RotateLocalAxisZ(float)
+void __thiscall _RotateLocalAxisZ_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?SetLerp@bCQuaternion@@QAEXV1@ABV1@M@Z public: void __thiscall bCQuaternion::SetLerp(bCQuaternion,bCQuaternion const &,float)
+void __thiscall _SetLerp_bCQuaternion__QAEXV1_ABV1_M_Z( bCQuaternion *, bCQuaternion, bCQuaternion const *, GEFloat );
+// ?SetQuaternion@bCQuaternion@@QAEXABV1@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCQuaternion const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABV1__Z( bCQuaternion *, bCQuaternion const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCAxisAngle@@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCAxisAngle const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCAxisAngle___Z( bCQuaternion *, bCAxisAngle const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCEulerAngles@@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCEulerAngles const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCEulerAngles___Z( bCQuaternion *, bCEulerAngles const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCMatrix3 const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCMatrix3___Z( bCQuaternion *, bCMatrix3 const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCMatrix@@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCMatrix const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCMatrix___Z( bCQuaternion *, bCMatrix const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCSphericalRotation@@@Z public: void __thiscall bCQuaternion::SetQuaternion(bCSphericalRotation const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCSphericalRotation___Z( bCQuaternion *, bCSphericalRotation const * );
+// ?SetQuaternion@bCQuaternion@@QAEXABVbCVector@@0@Z public: void __thiscall bCQuaternion::SetQuaternion(bCVector const &,bCVector const &)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXABVbCVector__0_Z( bCQuaternion *, bCVector const *, bCVector const * );
+// ?SetQuaternion@bCQuaternion@@QAEXMMMM@Z public: void __thiscall bCQuaternion::SetQuaternion(float,float,float,float)
+void __thiscall _SetQuaternion_bCQuaternion__QAEXMMMM_Z( bCQuaternion *, GEFloat, GEFloat, GEFloat, GEFloat );
+// ?SetSlerp@bCQuaternion@@QAEXV1@0M@Z public: void __thiscall bCQuaternion::SetSlerp(bCQuaternion,bCQuaternion,float)
+void __thiscall _SetSlerp_bCQuaternion__QAEXV1_0M_Z( bCQuaternion *, bCQuaternion, bCQuaternion, GEFloat );
+// ?SetToProduct@bCQuaternion@@QAEXABV1@0@Z public: void __thiscall bCQuaternion::SetToProduct(bCQuaternion const &,bCQuaternion const &)
+void __thiscall _SetToProduct_bCQuaternion__QAEXABV1_0_Z( bCQuaternion *, bCQuaternion const *, bCQuaternion const * );
+// ?SetW@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::SetW(float)
+void __thiscall _SetW_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?SetX@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::SetX(float)
+void __thiscall _SetX_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?SetY@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::SetY(float)
+void __thiscall _SetY_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?SetZ@bCQuaternion@@QAEXM@Z public: void __thiscall bCQuaternion::SetZ(float)
+void __thiscall _SetZ_bCQuaternion__QAEXM_Z( bCQuaternion *, GEFloat );
+// ?Sub@bCQuaternion@@QAEXABV1@@Z public: void __thiscall bCQuaternion::Sub(bCQuaternion const &)
+void __thiscall _Sub_bCQuaternion__QAEXABV1__Z( bCQuaternion *, bCQuaternion const * );
