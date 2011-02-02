@@ -68,6 +68,7 @@
 #include "SharedBase/ge_matrix.tih"
 #include "SharedBase/ge_eigenvector.tih"
 #include "SharedBase/ge_capsule.tih"
+#include "SharedBase/ge_plane.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
