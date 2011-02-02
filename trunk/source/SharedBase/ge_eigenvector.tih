@@ -1,0 +1,91 @@
+struct bCEigenVector
+{
+    GEI32        m_i32MatrixSize;
+    GEDouble * * m_ppdVector;
+    GEDouble *   m_pdDiags;
+    GEDouble *   m_pdSubDiags;
+};
+// ??0bCEigenVector@@QAE@J@Z public: __thiscall bCEigenVector::bCEigenVector(long)
+bCEigenVector * __thiscall __0bCEigenVector__QAE_J_Z( bCEigenVector *, GEI32 );
+// ??1bCEigenVector@@QAE@XZ public: __thiscall bCEigenVector::~bCEigenVector(void)
+void __thiscall __1bCEigenVector__QAE_XZ( bCEigenVector * );
+// ??4bCEigenVector@@QAEAAV0@ABV0@@Z public: bCEigenVector & __thiscall bCEigenVector::operator=(bCEigenVector const &)
+bCEigenVector * __thiscall __4bCEigenVector__QAEAAV0_ABV0__Z( bCEigenVector *, bCEigenVector const * );
+// ?DecrSortEigenStuff2@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::DecrSortEigenStuff2(void)
+void __thiscall _DecrSortEigenStuff2_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?DecrSortEigenStuff3@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::DecrSortEigenStuff3(void)
+void __thiscall _DecrSortEigenStuff3_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?DecrSortEigenStuff4@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::DecrSortEigenStuff4(void)
+void __thiscall _DecrSortEigenStuff4_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?DecrSortEigenStuff@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::DecrSortEigenStuff(void)
+void __thiscall _DecrSortEigenStuff_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?DecrSortEigenStuffN@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::DecrSortEigenStuffN(void)
+void __thiscall _DecrSortEigenStuffN_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?DecreasingSort@bCEigenVector@@AAEXJPANPAPAN@Z private: void __thiscall bCEigenVector::DecreasingSort(long,double *,double * *)
+void __thiscall _DecreasingSort_bCEigenVector__AAEXJPANPAPAN_Z( bCEigenVector *, GEI32, GEDouble *, GEDouble * * );
+// ?EigenStuff2@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::EigenStuff2(void)
+void __thiscall _EigenStuff2_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?EigenStuff3@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::EigenStuff3(void)
+void __thiscall _EigenStuff3_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?EigenStuff4@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::EigenStuff4(void)
+void __thiscall _EigenStuff4_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?EigenStuff@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::EigenStuff(void)
+void __thiscall _EigenStuff_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?EigenStuffN@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::EigenStuffN(void)
+void __thiscall _EigenStuffN_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?Eigenvalue@bCEigenVector@@QAENJ@Z public: double __thiscall bCEigenVector::Eigenvalue(long)
+GEDouble __thiscall _Eigenvalue_bCEigenVector__QAENJ_Z( bCEigenVector *, GEI32 );
+// ?Eigenvalue@bCEigenVector@@QAEPBNXZ public: double const * __thiscall bCEigenVector::Eigenvalue(void)
+GEDouble const * __thiscall _Eigenvalue_bCEigenVector__QAEPBNXZ( bCEigenVector * );
+// ?Eigenvector@bCEigenVector@@QAENJJ@Z public: double __thiscall bCEigenVector::Eigenvector(long,long)
+GEDouble __thiscall _Eigenvector_bCEigenVector__QAENJJ_Z( bCEigenVector *, GEI32, GEI32 );
+// ?Eigenvector@bCEigenVector@@QAEPAPBNXZ public: double const * * __thiscall bCEigenVector::Eigenvector(void)
+GEDouble const * * __thiscall _Eigenvector_bCEigenVector__QAEPAPBNXZ( bCEigenVector * );
+// ?Eigenvector@bCEigenVector@@QBEXJAAVbCVector@@@Z public: void __thiscall bCEigenVector::Eigenvector(long,bCVector &)const
+void __thiscall _Eigenvector_bCEigenVector__QBEXJAAVbCVector___Z( bCEigenVector const *, GEI32, bCVector * );
+// ?IncrSortEigenStuff2@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::IncrSortEigenStuff2(void)
+void __thiscall _IncrSortEigenStuff2_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?IncrSortEigenStuff3@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::IncrSortEigenStuff3(void)
+void __thiscall _IncrSortEigenStuff3_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?IncrSortEigenStuff4@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::IncrSortEigenStuff4(void)
+void __thiscall _IncrSortEigenStuff4_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?IncrSortEigenStuff@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::IncrSortEigenStuff(void)
+void __thiscall _IncrSortEigenStuff_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?IncrSortEigenStuffN@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::IncrSortEigenStuffN(void)
+void __thiscall _IncrSortEigenStuffN_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?IncreasingSort@bCEigenVector@@AAEXJPANPAPAN@Z private: void __thiscall bCEigenVector::IncreasingSort(long,double *,double * *)
+void __thiscall _IncreasingSort_bCEigenVector__AAEXJPANPAPAN_Z( bCEigenVector *, GEI32, GEDouble *, GEDouble * * );
+// ?Matrix@bCEigenVector@@QAEAANJJ@Z public: double & __thiscall bCEigenVector::Matrix(long,long)
+GEDouble * __thiscall _Matrix_bCEigenVector__QAEAANJJ_Z( bCEigenVector *, GEI32, GEI32 );
+// ?Matrix@bCEigenVector@@QAEAAV1@PAPAN@Z public: bCEigenVector & __thiscall bCEigenVector::Matrix(double * *)
+bCEigenVector * __thiscall _Matrix_bCEigenVector__QAEAAV1_PAPAN_Z( bCEigenVector *, GEDouble * * );
+// ?Number@bCEigenVector@@CGJI@Z private: static long __stdcall bCEigenVector::Number(unsigned int)
+GEI32 __stdcall _Number_bCEigenVector__CGJI_Z( GEUInt );
+// ?QLAlgorithm@bCEigenVector@@AAEXJPAN0PAPAN@Z private: void __thiscall bCEigenVector::QLAlgorithm(long,double *,double *,double * *)
+void __thiscall _QLAlgorithm_bCEigenVector__AAEXJPAN0PAPAN_Z( bCEigenVector *, GEI32, GEDouble *, GEDouble *, GEDouble * * );
+// ?Reduce@bCEigenVector@@QAEXXZ public: void __thiscall bCEigenVector::Reduce(void)
+void __thiscall _Reduce_bCEigenVector__QAEXXZ( bCEigenVector * );
+// ?Report@bCEigenVector@@CGXI@Z private: static void __stdcall bCEigenVector::Report(unsigned int)
+void __stdcall _Report_bCEigenVector__CGXI_Z( GEUInt );
+// ?Tdiag@bCEigenVector@@QAEAANJ@Z public: double & __thiscall bCEigenVector::Tdiag(long)
+GEDouble * __thiscall _Tdiag_bCEigenVector__QAEAANJ_Z( bCEigenVector *, GEI32 );
+// ?Tridiagonal2@bCEigenVector@@AAEXPAPANPAN1@Z private: void __thiscall bCEigenVector::Tridiagonal2(double * *,double *,double *)
+void __thiscall _Tridiagonal2_bCEigenVector__AAEXPAPANPAN1_Z( bCEigenVector *, GEDouble * *, GEDouble *, GEDouble * );
+// ?Tridiagonal3@bCEigenVector@@AAEXPAPANPAN1@Z private: void __thiscall bCEigenVector::Tridiagonal3(double * *,double *,double *)
+void __thiscall _Tridiagonal3_bCEigenVector__AAEXPAPANPAN1_Z( bCEigenVector *, GEDouble * *, GEDouble *, GEDouble * );
+// ?Tridiagonal4@bCEigenVector@@AAEXPAPANPAN1@Z private: void __thiscall bCEigenVector::Tridiagonal4(double * *,double *,double *)
+void __thiscall _Tridiagonal4_bCEigenVector__AAEXPAPANPAN1_Z( bCEigenVector *, GEDouble * *, GEDouble *, GEDouble * );
+// ?TridiagonalN@bCEigenVector@@AAEXJPAPANPAN1@Z private: void __thiscall bCEigenVector::TridiagonalN(long,double * *,double *,double *)
+void __thiscall _TridiagonalN_bCEigenVector__AAEXJPAPANPAN1_Z( bCEigenVector *, GEI32, GEDouble * *, GEDouble *, GEDouble * );
+// ?Tsubdiag@bCEigenVector@@QAEAANJ@Z public: double & __thiscall bCEigenVector::Tsubdiag(long)
+GEDouble * __thiscall _Tsubdiag_bCEigenVector__QAEAANJ_Z( bCEigenVector *, GEI32 );
+// ?allocation_failed@bCEigenVector@@0IB private: static unsigned int const bCEigenVector::allocation_failed
+GEUInt const DLLIMPORT _allocation_failed_bCEigenVector__0IB;
+// ?error@bCEigenVector@@2IA public: static unsigned int bCEigenVector::error
+GEUInt DLLIMPORT _error_bCEigenVector__2IA;
+// ?invalid_size@bCEigenVector@@0IB private: static unsigned int const bCEigenVector::invalid_size
+GEUInt const DLLIMPORT _invalid_size_bCEigenVector__0IB;
+// ?message@bCEigenVector@@0PAPBDA private: static char const * * bCEigenVector::message
+GELPCChar (DLLIMPORT _message_bCEigenVector__0PAPBDA)[ 3 ];
+// ?ql_exceeded@bCEigenVector@@0IB private: static unsigned int const bCEigenVector::ql_exceeded
+GEUInt const DLLIMPORT _ql_exceeded_bCEigenVector__0IB;
