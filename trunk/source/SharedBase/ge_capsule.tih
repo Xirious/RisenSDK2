@@ -1,0 +1,59 @@
+struct bCCapsule
+{
+    GEFloat   m_fHeight;
+    GEFloat   m_fRadius;
+    bCMatrix3 m_matOrientation;
+    bCVector  m_vecCenter;
+};
+// ??0bCCapsule@@QAE@ABV0@@Z public: __thiscall bCCapsule::bCCapsule(bCCapsule const &)
+bCCapsule * __thiscall __0bCCapsule__QAE_ABV0__Z( bCCapsule *, bCCapsule const * );
+// ??0bCCapsule@@QAE@XZ public: __thiscall bCCapsule::bCCapsule(void)
+bCCapsule * __thiscall __0bCCapsule__QAE_XZ( bCCapsule * );
+// ??1bCCapsule@@QAE@XZ public: __thiscall bCCapsule::~bCCapsule(void)
+void __thiscall __1bCCapsule__QAE_XZ( bCCapsule * );
+// ??4bCCapsule@@QAEABV0@ABV0@@Z public: bCCapsule const & __thiscall bCCapsule::operator=(bCCapsule const &)
+bCCapsule const * __thiscall __4bCCapsule__QAEABV0_ABV0__Z( bCCapsule *, bCCapsule const * );
+// ??5bCCapsule@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCCapsule::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCCapsule__QBEAAVbCOStream__AAV1__Z( bCCapsule const *, bCOStream * );
+// ??6bCCapsule@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCCapsule::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCCapsule__QAEAAVbCIStream__AAV1__Z( bCCapsule *, bCIStream * );
+// ??8bCCapsule@@QBE_NABV0@@Z public: bool __thiscall bCCapsule::operator==(bCCapsule const &)const
+GEBool __thiscall __8bCCapsule__QBE_NABV0__Z( bCCapsule const *, bCCapsule const * );
+// ??9bCCapsule@@QBE_NABV0@@Z public: bool __thiscall bCCapsule::operator!=(bCCapsule const &)const
+GEBool __thiscall __9bCCapsule__QBE_NABV0__Z( bCCapsule const *, bCCapsule const * );
+// ?Create@bCCapsule@@QAE?AW4bEResult@@XZ public: bEResult __thiscall bCCapsule::Create(void)
+bEResult __thiscall _Create_bCCapsule__QAE_AW4bEResult__XZ( bCCapsule * );
+// ?Destroy@bCCapsule@@QAEXXZ public: void __thiscall bCCapsule::Destroy(void)
+void __thiscall _Destroy_bCCapsule__QAEXXZ( bCCapsule * );
+// ?GetCenter@bCCapsule@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCCapsule::GetCenter(void)
+bCVector * __thiscall _GetCenter_bCCapsule__QAEAAVbCVector__XZ( bCCapsule * );
+// ?GetCenter@bCCapsule@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCCapsule::GetCenter(void)const
+bCVector const * __thiscall _GetCenter_bCCapsule__QBEABVbCVector__XZ( bCCapsule const * );
+// ?GetHeight@bCCapsule@@QAEMXZ public: float __thiscall bCCapsule::GetHeight(void)
+GEFloat __thiscall _GetHeight_bCCapsule__QAEMXZ( bCCapsule * );
+// ?GetHeight@bCCapsule@@QBE?BMXZ public: float const __thiscall bCCapsule::GetHeight(void)const
+GEFloat const __thiscall _GetHeight_bCCapsule__QBE_BMXZ( bCCapsule const * );
+// ?GetOrientation@bCCapsule@@QAEAAVbCMatrix3@@XZ public: bCMatrix3 & __thiscall bCCapsule::GetOrientation(void)
+bCMatrix3 * __thiscall _GetOrientation_bCCapsule__QAEAAVbCMatrix3__XZ( bCCapsule * );
+// ?GetOrientation@bCCapsule@@QBEABVbCMatrix3@@XZ public: bCMatrix3 const & __thiscall bCCapsule::GetOrientation(void)const
+bCMatrix3 const * __thiscall _GetOrientation_bCCapsule__QBEABVbCMatrix3__XZ( bCCapsule const * );
+// ?GetRadius@bCCapsule@@QAEMXZ public: float __thiscall bCCapsule::GetRadius(void)
+GEFloat __thiscall _GetRadius_bCCapsule__QAEMXZ( bCCapsule * );
+// ?GetRadius@bCCapsule@@QBE?BMXZ public: float const __thiscall bCCapsule::GetRadius(void)const
+GEFloat const __thiscall _GetRadius_bCCapsule__QBE_BMXZ( bCCapsule const * );
+// ?Invalidate@bCCapsule@@IAEXXZ protected: void __thiscall bCCapsule::Invalidate(void)
+void __thiscall _Invalidate_bCCapsule__IAEXXZ( bCCapsule * );
+// ?IsEqual@bCCapsule@@QBE_NABV1@@Z public: bool __thiscall bCCapsule::IsEqual(bCCapsule const &)const
+GEBool __thiscall _IsEqual_bCCapsule__QBE_NABV1__Z( bCCapsule const *, bCCapsule const * );
+// ?SetCapsule@bCCapsule@@QAEXABV1@@Z public: void __thiscall bCCapsule::SetCapsule(bCCapsule const &)
+void __thiscall _SetCapsule_bCCapsule__QAEXABV1__Z( bCCapsule *, bCCapsule const * );
+// ?SetCapsule@bCCapsule@@QAEXMMAAVbCVector@@AAVbCMatrix3@@@Z public: void __thiscall bCCapsule::SetCapsule(float,float,bCVector &,bCMatrix3 &)
+void __thiscall _SetCapsule_bCCapsule__QAEXMMAAVbCVector__AAVbCMatrix3___Z( bCCapsule *, GEFloat, GEFloat, bCVector *, bCMatrix3 * );
+// ?SetCenter@bCCapsule@@QAEXABVbCVector@@@Z public: void __thiscall bCCapsule::SetCenter(bCVector const &)
+void __thiscall _SetCenter_bCCapsule__QAEXABVbCVector___Z( bCCapsule *, bCVector const * );
+// ?SetHeight@bCCapsule@@QAEXM@Z public: void __thiscall bCCapsule::SetHeight(float)
+void __thiscall _SetHeight_bCCapsule__QAEXM_Z( bCCapsule *, GEFloat );
+// ?SetOrientation@bCCapsule@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCCapsule::SetOrientation(bCMatrix3 const &)
+void __thiscall _SetOrientation_bCCapsule__QAEXABVbCMatrix3___Z( bCCapsule *, bCMatrix3 const * );
+// ?SetRadius@bCCapsule@@QAEXM@Z public: void __thiscall bCCapsule::SetRadius(float)
+void __thiscall _SetRadius_bCCapsule__QAEXM_Z( bCCapsule *, GEFloat );
