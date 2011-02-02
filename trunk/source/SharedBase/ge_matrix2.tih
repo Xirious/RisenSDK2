@@ -23,7 +23,7 @@ enum bCMatrix2_bEColumn : GEInt
 
 struct bCMatrix2
 {
-    bCVector2 m_vec2Rows[ bCMatrix2_bERow_Count ];
+    bCVector2 m_vecRows[ bCMatrix2_bERow_Count ];
 };
 // ??0bCMatrix2@@QAE@ABV0@@Z public: __thiscall bCMatrix2::bCMatrix2(bCMatrix2 const &)
 bCMatrix2 * __thiscall __0bCMatrix2__QAE_ABV0__Z( bCMatrix2 *, bCMatrix2 const * );
