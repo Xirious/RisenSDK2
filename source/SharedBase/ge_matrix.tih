@@ -1,0 +1,512 @@
+enum bCMatrix_bEElement : GEInt
+{
+    bCMatrix_bEElement_11,
+    bCMatrix_bEElement_12,
+    bCMatrix_bEElement_13,
+    bCMatrix_bEElement_14,
+    bCMatrix_bEElement_21,
+    bCMatrix_bEElement_22,
+    bCMatrix_bEElement_23,
+    bCMatrix_bEElement_24,
+    bCMatrix_bEElement_31,
+    bCMatrix_bEElement_32,
+    bCMatrix_bEElement_33,
+    bCMatrix_bEElement_34,
+    bCMatrix_bEElement_41,
+    bCMatrix_bEElement_42,
+    bCMatrix_bEElement_43,
+    bCMatrix_bEElement_44,
+    bCMatrix_bEElement_Count
+};
+
+enum bCMatrix_bERow : GEInt
+{
+    bCMatrix_bERow_XAxis,
+    bCMatrix_bERow_YAxis,
+    bCMatrix_bERow_ZAxis,
+    bCMatrix_bERow_Translation,
+    bCMatrix_bERow_Count
+};
+
+enum bCMatrix_bEColumn : GEInt
+{
+    bCMatrix_bEColumn_X,
+    bCMatrix_bEColumn_Y,
+    bCMatrix_bEColumn_Z,
+    bCMatrix_bEColumn_Reserved,
+    bCMatrix_bEColumn_Count
+};
+
+struct bCMatrix
+{
+    bCVector4 m_vecRows[ bCMatrix_bERow_Count ];
+};
+typedef bCMatrix bCMatrix4;
+// ??0bCMatrix@@QAE@ABV0@@Z public: __thiscall bCMatrix::bCMatrix(bCMatrix const &)
+bCMatrix * __thiscall __0bCMatrix__QAE_ABV0__Z( bCMatrix *, bCMatrix const * );
+// ??0bCMatrix@@QAE@ABVbCAxisAngle@@ABVbCVector@@@Z public: __thiscall bCMatrix::bCMatrix(bCAxisAngle const &,bCVector const &)
+bCMatrix * __thiscall __0bCMatrix__QAE_ABVbCAxisAngle__ABVbCVector___Z( bCMatrix *, bCAxisAngle const *, bCVector const * );
+// ??0bCMatrix@@QAE@ABVbCEulerAngles@@ABVbCVector@@@Z public: __thiscall bCMatrix::bCMatrix(bCEulerAngles const &,bCVector const &)
+bCMatrix * __thiscall __0bCMatrix__QAE_ABVbCEulerAngles__ABVbCVector___Z( bCMatrix *, bCEulerAngles const *, bCVector const * );
+// ??0bCMatrix@@QAE@ABVbCQuaternion@@ABVbCVector@@@Z public: __thiscall bCMatrix::bCMatrix(bCQuaternion const &,bCVector const &)
+bCMatrix * __thiscall __0bCMatrix__QAE_ABVbCQuaternion__ABVbCVector___Z( bCMatrix *, bCQuaternion const *, bCVector const * );
+// ??0bCMatrix@@QAE@M@Z public: __thiscall bCMatrix::bCMatrix(float)
+bCMatrix * __thiscall __0bCMatrix__QAE_M_Z( bCMatrix *, GEFloat );
+// ??0bCMatrix@@QAE@QAY03$$CBM@Z public: __thiscall bCMatrix::bCMatrix(float const (* const)[4])
+bCMatrix * __thiscall __0bCMatrix__QAE_QAY03__CBM_Z( bCMatrix *, GEFloat const [ bCMatrix_bERow_Count ][ bCMatrix_bEColumn_Count ] );
+// ??0bCMatrix@@QAE@QBM@Z public: __thiscall bCMatrix::bCMatrix(float const * const)
+bCMatrix * __thiscall __0bCMatrix__QAE_QBM_Z( bCMatrix *, GEFloat const [ bCMatrix_bEElement_Count ] );
+// ??0bCMatrix@@QAE@QBVbCVector4@@@Z public: __thiscall bCMatrix::bCMatrix(bCVector4 const * const)
+bCMatrix * __thiscall __0bCMatrix__QAE_QBVbCVector4___Z( bCMatrix *, bCVector4 const [ bCMatrix_bERow_Count ] );
+// ??0bCMatrix@@QAE@QBVbCVector@@@Z public: __thiscall bCMatrix::bCMatrix(bCVector const * const)
+bCMatrix * __thiscall __0bCMatrix__QAE_QBVbCVector___Z( bCMatrix *, bCVector const [ bCMatrix_bERow_Count ] );
+// ??0bCMatrix@@QAE@XZ public: __thiscall bCMatrix::bCMatrix(void)
+bCMatrix * __thiscall __0bCMatrix__QAE_XZ( bCMatrix * );
+// ??1bCMatrix@@QAE@XZ public: __thiscall bCMatrix::~bCMatrix(void)
+void __thiscall __1bCMatrix__QAE_XZ( bCMatrix * );
+// ??4bCMatrix@@QAEAAV0@ABV0@@Z public: bCMatrix & __thiscall bCMatrix::operator=(bCMatrix const &)
+bCMatrix * __thiscall __4bCMatrix__QAEAAV0_ABV0__Z( bCMatrix *, bCMatrix const * );
+// ??5bCMatrix@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCMatrix::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCMatrix__QBEAAVbCOStream__AAV1__Z( bCMatrix const *, bCOStream * );
+// ??6bCMatrix@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCMatrix::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCMatrix__QAEAAVbCIStream__AAV1__Z( bCMatrix *, bCIStream * );
+// ??8bCMatrix@@QBE_NABV0@@Z public: bool __thiscall bCMatrix::operator==(bCMatrix const &)const
+GEBool __thiscall __8bCMatrix__QBE_NABV0__Z( bCMatrix const *, bCMatrix const * );
+// ??9bCMatrix@@QBE_NABV0@@Z public: bool __thiscall bCMatrix::operator!=(bCMatrix const &)const
+GEBool __thiscall __9bCMatrix__QBE_NABV0__Z( bCMatrix const *, bCMatrix const * );
+// ??AbCMatrix@@QAEAAMH@Z public: float & __thiscall bCMatrix::operator[](int)
+GEFloat * __thiscall __AbCMatrix__QAEAAMH_Z( bCMatrix *, bCMatrix_bEElement );
+// ??AbCMatrix@@QBEMH@Z public: float __thiscall bCMatrix::operator[](int)const
+GEFloat __thiscall __AbCMatrix__QBEMH_Z( bCMatrix const *, bCMatrix_bEElement );
+// ??DbCMatrix@@QBE?AV0@ABV0@@Z public: bCMatrix __thiscall bCMatrix::operator*(bCMatrix const &)const
+bCMatrix * __thiscall __DbCMatrix__QBE_AV0_ABV0__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ??DbCMatrix@@QBE?AV0@ABVbCAxisAngle@@@Z public: bCMatrix __thiscall bCMatrix::operator*(bCAxisAngle const &)const
+bCMatrix * __thiscall __DbCMatrix__QBE_AV0_ABVbCAxisAngle___Z( bCMatrix const *, bCMatrix *, bCAxisAngle const * );
+// ??DbCMatrix@@QBE?AV0@ABVbCEulerAngles@@@Z public: bCMatrix __thiscall bCMatrix::operator*(bCEulerAngles const &)const
+bCMatrix * __thiscall __DbCMatrix__QBE_AV0_ABVbCEulerAngles___Z( bCMatrix const *, bCMatrix *, bCEulerAngles const * );
+// ??DbCMatrix@@QBE?AV0@ABVbCQuaternion@@@Z public: bCMatrix __thiscall bCMatrix::operator*(bCQuaternion const &)const
+bCMatrix * __thiscall __DbCMatrix__QBE_AV0_ABVbCQuaternion___Z( bCMatrix const *, bCMatrix *, bCQuaternion const * );
+// ??DbCMatrix@@QBE?AV0@M@Z public: bCMatrix __thiscall bCMatrix::operator*(float)const
+bCMatrix * __thiscall __DbCMatrix__QBE_AV0_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ??DbCMatrix@@QBE?AVbCVector@@ABV1@@Z public: bCVector __thiscall bCMatrix::operator*(bCVector const &)const
+bCVector * __thiscall __DbCMatrix__QBE_AVbCVector__ABV1__Z( bCMatrix const *, bCVector *, bCVector const * );
+// ??GbCMatrix@@QBE?AV0@ABV0@@Z public: bCMatrix __thiscall bCMatrix::operator-(bCMatrix const &)const
+bCMatrix * __thiscall __GbCMatrix__QBE_AV0_ABV0__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ??GbCMatrix@@QBE?AV0@XZ public: bCMatrix __thiscall bCMatrix::operator-(void)const
+bCMatrix * __thiscall __GbCMatrix__QBE_AV0_XZ( bCMatrix const * );
+// ??HbCMatrix@@QBE?AV0@ABV0@@Z public: bCMatrix __thiscall bCMatrix::operator+(bCMatrix const &)const
+bCMatrix * __thiscall __HbCMatrix__QBE_AV0_ABV0__Z( bCMatrix const *, bCMatrix const * );
+// ??KbCMatrix@@QBE?AV0@M@Z public: bCMatrix __thiscall bCMatrix::operator/(float)const
+bCMatrix * __thiscall __KbCMatrix__QBE_AV0_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ??RbCMatrix@@QAEAAMHH@Z public: float & __thiscall bCMatrix::operator()(int,int)
+GEFloat * __thiscall __RbCMatrix__QAEAAMHH_Z( bCMatrix *, bCMatrix_bERow, bCMatrix_bEColumn );
+// ??RbCMatrix@@QAEAAVbCVector@@H@Z public: bCVector & __thiscall bCMatrix::operator()(int)
+bCVector * __thiscall __RbCMatrix__QAEAAVbCVector__H_Z( bCMatrix *, bCMatrix_bERow );
+// ??RbCMatrix@@QBEABVbCVector@@H@Z public: bCVector const & __thiscall bCMatrix::operator()(int)const
+bCVector const * __thiscall __RbCMatrix__QBEABVbCVector__H_Z( bCMatrix const *, bCMatrix_bERow );
+// ??RbCMatrix@@QBEMHH@Z public: float __thiscall bCMatrix::operator()(int,int)const
+GEFloat __thiscall __RbCMatrix__QBEMHH_Z( bCMatrix const *, bCMatrix_bERow, bCMatrix_bEColumn );
+// ??SbCMatrix@@QBE?AV0@XZ public: bCMatrix __thiscall bCMatrix::operator~(void)const
+bCMatrix * __thiscall __SbCMatrix__QBE_AV0_XZ( bCMatrix const *, bCMatrix * );
+// ??XbCMatrix@@QAEAAV0@ABV0@@Z public: bCMatrix & __thiscall bCMatrix::operator*=(bCMatrix const &)
+bCMatrix * __thiscall __XbCMatrix__QAEAAV0_ABV0__Z( bCMatrix *, bCMatrix const * );
+// ??XbCMatrix@@QAEAAV0@ABVbCAxisAngle@@@Z public: bCMatrix & __thiscall bCMatrix::operator*=(bCAxisAngle const &)
+bCMatrix * __thiscall __XbCMatrix__QAEAAV0_ABVbCAxisAngle___Z( bCMatrix *, bCAxisAngle const * );
+// ??XbCMatrix@@QAEAAV0@ABVbCEulerAngles@@@Z public: bCMatrix & __thiscall bCMatrix::operator*=(bCEulerAngles const &)
+bCMatrix * __thiscall __XbCMatrix__QAEAAV0_ABVbCEulerAngles___Z( bCMatrix *, bCEulerAngles const * );
+// ??XbCMatrix@@QAEAAV0@ABVbCQuaternion@@@Z public: bCMatrix & __thiscall bCMatrix::operator*=(bCQuaternion const &)
+bCMatrix * __thiscall __XbCMatrix__QAEAAV0_ABVbCQuaternion___Z( bCMatrix *, bCQuaternion const * );
+// ??XbCMatrix@@QAEAAV0@M@Z public: bCMatrix & __thiscall bCMatrix::operator*=(float)
+bCMatrix * __thiscall __XbCMatrix__QAEAAV0_M_Z( bCMatrix *, GEFloat );
+// ??YbCMatrix@@QAEAAV0@ABV0@@Z public: bCMatrix & __thiscall bCMatrix::operator+=(bCMatrix const &)
+bCMatrix * __thiscall __YbCMatrix__QAEAAV0_ABV0__Z( bCMatrix *, bCMatrix const * );
+// ??ZbCMatrix@@QAEAAV0@ABV0@@Z public: bCMatrix & __thiscall bCMatrix::operator-=(bCMatrix const &)
+bCMatrix * __thiscall __ZbCMatrix__QAEAAV0_ABV0__Z( bCMatrix *, bCMatrix const * );
+// ??_0bCMatrix@@QAEAAV0@M@Z public: bCMatrix & __thiscall bCMatrix::operator/=(float)
+bCMatrix * __thiscall ___0bCMatrix__QAEAAV0_M_Z( bCMatrix *, GEFloat );
+// ??_B?5??SetToProduct@bCMatrix@@QAEXABV1@0@Z@55 `public: void __thiscall bCMatrix::SetToProduct(bCMatrix const &,bCMatrix const &)'::`6'::`local static guard'{6}'
+__int32 DLLIMPORT ___B_5__SetToProduct_bCMatrix__QAEXABV1_0_Z_55;
+// ?AccessElement@bCMatrix@@QAEAAMH@Z public: float & __thiscall bCMatrix::AccessElement(int)
+GEFloat * __thiscall _AccessElement_bCMatrix__QAEAAMH_Z( bCMatrix *, bCMatrix_bEElement );
+// ?AccessElement@bCMatrix@@QAEAAMHH@Z public: float & __thiscall bCMatrix::AccessElement(int,int)
+GEFloat * __thiscall _AccessElement_bCMatrix__QAEAAMHH_Z( bCMatrix *, bCMatrix_bERow, bCMatrix_bEColumn );
+// ?AccessRow4@bCMatrix@@IAEAAVbCVector4@@H@Z protected: bCVector4 & __thiscall bCMatrix::AccessRow4(int)
+bCVector4 * __thiscall _AccessRow4_bCMatrix__IAEAAVbCVector4__H_Z( bCMatrix *, bCMatrix_bERow );
+// ?AccessRow@bCMatrix@@IAEAAVbCVector@@H@Z protected: bCVector & __thiscall bCMatrix::AccessRow(int)
+bCVector * __thiscall _AccessRow_bCMatrix__IAEAAVbCVector__H_Z( bCMatrix *, bCMatrix_bERow );
+// ?AccessTranslation4@bCMatrix@@QAEAAVbCVector4@@XZ public: bCVector4 & __thiscall bCMatrix::AccessTranslation4(void)
+bCVector4 * __thiscall _AccessTranslation4_bCMatrix__QAEAAVbCVector4__XZ( bCMatrix * );
+// ?AccessTranslation@bCMatrix@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCMatrix::AccessTranslation(void)
+bCVector * __thiscall _AccessTranslation_bCMatrix__QAEAAVbCVector__XZ( bCMatrix * );
+// ?AccessXAxis4@bCMatrix@@QAEAAVbCVector4@@XZ public: bCVector4 & __thiscall bCMatrix::AccessXAxis4(void)
+bCVector4 * __thiscall _AccessXAxis4_bCMatrix__QAEAAVbCVector4__XZ( bCMatrix * );
+// ?AccessXAxis@bCMatrix@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCMatrix::AccessXAxis(void)
+bCVector * __thiscall _AccessXAxis_bCMatrix__QAEAAVbCVector__XZ( bCMatrix * );
+// ?AccessYAxis4@bCMatrix@@QAEAAVbCVector4@@XZ public: bCVector4 & __thiscall bCMatrix::AccessYAxis4(void)
+bCVector4 * __thiscall _AccessYAxis4_bCMatrix__QAEAAVbCVector4__XZ( bCMatrix * );
+// ?AccessYAxis@bCMatrix@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCMatrix::AccessYAxis(void)
+bCVector * __thiscall _AccessYAxis_bCMatrix__QAEAAVbCVector__XZ( bCMatrix * );
+// ?AccessZAxis4@bCMatrix@@QAEAAVbCVector4@@XZ public: bCVector4 & __thiscall bCMatrix::AccessZAxis4(void)
+bCVector4 * __thiscall _AccessZAxis4_bCMatrix__QAEAAVbCVector4__XZ( bCMatrix * );
+// ?AccessZAxis@bCMatrix@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCMatrix::AccessZAxis(void)
+bCVector * __thiscall _AccessZAxis_bCMatrix__QAEAAVbCVector__XZ( bCMatrix * );
+// ?Add@bCMatrix@@QAEXABV1@@Z public: void __thiscall bCMatrix::Add(bCMatrix const &)
+void __thiscall _Add_bCMatrix__QAEXABV1__Z( bCMatrix *, bCMatrix const * );
+// ?Clear@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Clear(void)
+void __thiscall _Clear_bCMatrix__QAEXXZ( bCMatrix * );
+// ?ClearRotation@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::ClearRotation(void)
+void __thiscall _ClearRotation_bCMatrix__QAEXXZ( bCMatrix * );
+// ?Divide@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::Divide(float)
+void __thiscall _Divide_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?GetColumn4@bCMatrix@@QBE?AVbCVector4@@H@Z public: bCVector4 __thiscall bCMatrix::GetColumn4(int)const
+bCVector4 * __thiscall _GetColumn4_bCMatrix__QBE_AVbCVector4__H_Z( bCMatrix const *, bCVector4 *, bCMatrix_bEColumn );
+// ?GetColumn@bCMatrix@@QBE?AVbCVector@@H@Z public: bCVector __thiscall bCMatrix::GetColumn(int)const
+bCVector * __thiscall _GetColumn_bCMatrix__QBE_AVbCVector__H_Z( bCMatrix const *, bCVector *, bCMatrix_bEColumn );
+// ?GetColumn@bCMatrix@@QBEXHAAVbCVector4@@@Z public: void __thiscall bCMatrix::GetColumn(int,bCVector4 &)const
+void __thiscall _GetColumn_bCMatrix__QBEXHAAVbCVector4___Z( bCMatrix const *, bCMatrix_bEColumn, bCVector4 * );
+// ?GetColumn@bCMatrix@@QBEXHAAVbCVector@@@Z public: void __thiscall bCMatrix::GetColumn(int,bCVector &)const
+void __thiscall _GetColumn_bCMatrix__QBEXHAAVbCVector___Z( bCMatrix const *, bCMatrix_bEColumn, bCVector * );
+// ?GetColumn@bCMatrix@@QBEXHQAM@Z public: void __thiscall bCMatrix::GetColumn(int,float * const)const
+void __thiscall _GetColumn_bCMatrix__QBEXHQAM_Z( bCMatrix const *, bCMatrix_bEColumn, GEFloat [ bCMatrix_bERow_Count ] );
+// ?GetDeterminant@bCMatrix@@QBEMXZ public: float __thiscall bCMatrix::GetDeterminant(void)const
+GEFloat __thiscall _GetDeterminant_bCMatrix__QBEMXZ( bCMatrix const * );
+// ?GetDeterminantAdjoint@bCMatrix@@QBEMHH@Z public: float __thiscall bCMatrix::GetDeterminantAdjoint(int,int)const
+GEFloat __thiscall _GetDeterminantAdjoint_bCMatrix__QBEMHH_Z( bCMatrix const *, bCMatrix_bERow, bCMatrix_bEColumn );
+// ?GetDeterminantRotation@bCMatrix@@QBEMXZ public: float __thiscall bCMatrix::GetDeterminantRotation(void)const
+GEFloat __thiscall _GetDeterminantRotation_bCMatrix__QBEMXZ( bCMatrix const * );
+// ?GetDifference@bCMatrix@@QBE?AV1@ABV1@@Z public: bCMatrix __thiscall bCMatrix::GetDifference(bCMatrix const &)const
+bCMatrix * __thiscall _GetDifference_bCMatrix__QBE_AV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetDifference@bCMatrix@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix::GetDifference(bCMatrix &,bCMatrix const &)const
+void __thiscall _GetDifference_bCMatrix__QBEXAAV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetElement@bCMatrix@@QBEMH@Z public: float __thiscall bCMatrix::GetElement(int)const
+GEFloat __thiscall _GetElement_bCMatrix__QBEMH_Z( bCMatrix const *, bCMatrix_bEElement );
+// ?GetElement@bCMatrix@@QBEMHH@Z public: float __thiscall bCMatrix::GetElement(int,int)const
+GEFloat __thiscall _GetElement_bCMatrix__QBEMHH_Z( bCMatrix const *, bCMatrix_bERow, bCMatrix_bEColumn );
+// ?GetElement@bCMatrix@@QBEXHAAM@Z public: void __thiscall bCMatrix::GetElement(int,float &)const
+void __thiscall _GetElement_bCMatrix__QBEXHAAM_Z( bCMatrix const *, bCMatrix_bEElement, GEFloat * );
+// ?GetElement@bCMatrix@@QBEXHHAAM@Z public: void __thiscall bCMatrix::GetElement(int,int,float &)const
+void __thiscall _GetElement_bCMatrix__QBEXHHAAM_Z( bCMatrix const *, bCMatrix_bERow, bCMatrix_bEColumn, GEFloat * );
+// ?GetIdentity@bCMatrix@@SGABV1@XZ public: static bCMatrix const & __stdcall bCMatrix::GetIdentity(void)
+bCMatrix const * __stdcall _GetIdentity_bCMatrix__SGABV1_XZ( void );
+// ?GetIdentity@bCMatrix@@SGXAAV1@@Z public: static void __stdcall bCMatrix::GetIdentity(bCMatrix &)
+void __stdcall _GetIdentity_bCMatrix__SGXAAV1__Z( bCMatrix * );
+// ?GetInverted@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetInverted(void)const
+bCMatrix * __thiscall _GetInverted_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetInverted@bCMatrix@@QBEXAAV1@@Z public: void __thiscall bCMatrix::GetInverted(bCMatrix &)const
+void __thiscall _GetInverted_bCMatrix__QBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetInvertedExcentric@bCMatrix@@IBE?AV1@XZ protected: bCMatrix __thiscall bCMatrix::GetInvertedExcentric(void)const
+bCMatrix * __thiscall _GetInvertedExcentric_bCMatrix__IBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetInvertedExcentric@bCMatrix@@IBEXAAV1@@Z protected: void __thiscall bCMatrix::GetInvertedExcentric(bCMatrix &)const
+void __thiscall _GetInvertedExcentric_bCMatrix__IBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetNegated@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetNegated(void)const
+bCMatrix * __thiscall _GetNegated_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetNegated@bCMatrix@@QBEXAAV1@@Z public: void __thiscall bCMatrix::GetNegated(bCMatrix &)const
+void __thiscall _GetNegated_bCMatrix__QBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetOrthogonalized@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetOrthogonalized(void)const
+bCMatrix * __thiscall _GetOrthogonalized_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetOrthogonalized@bCMatrix@@QBEXAAV1@@Z public: void __thiscall bCMatrix::GetOrthogonalized(bCMatrix &)const
+void __thiscall _GetOrthogonalized_bCMatrix__QBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetOrthonormalized@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetOrthonormalized(void)const
+bCMatrix * __thiscall _GetOrthonormalized_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetOrthonormalized@bCMatrix@@QBEXAAV1@@Z public: void __thiscall bCMatrix::GetOrthonormalized(bCMatrix &)const
+void __thiscall _GetOrthonormalized_bCMatrix__QBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetProduct@bCMatrix@@QBE?AV1@ABV1@@Z public: bCMatrix __thiscall bCMatrix::GetProduct(bCMatrix const &)const
+bCMatrix * __thiscall _GetProduct_bCMatrix__QBE_AV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetProduct@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetProduct(float)const
+bCMatrix * __thiscall _GetProduct_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetProduct@bCMatrix@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix::GetProduct(bCMatrix &,bCMatrix const &)const
+void __thiscall _GetProduct_bCMatrix__QBEXAAV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetProduct@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetProduct(bCMatrix &,float)const
+void __thiscall _GetProduct_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetProductPrefix@bCMatrix@@QBE?AV1@ABV1@@Z public: bCMatrix __thiscall bCMatrix::GetProductPrefix(bCMatrix const &)const
+bCMatrix * __thiscall _GetProductPrefix_bCMatrix__QBE_AV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetProductPrefix@bCMatrix@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix::GetProductPrefix(bCMatrix &,bCMatrix const &)const
+void __thiscall _GetProductPrefix_bCMatrix__QBEXAAV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetPureRotation@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetPureRotation(void)const
+bCMatrix * __thiscall _GetPureRotation_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetPureScaling@bCMatrix@@QBE?AVbCVector@@XZ public: bCVector __thiscall bCMatrix::GetPureScaling(void)const
+bCVector * __thiscall _GetPureScaling_bCMatrix__QBE_AVbCVector__XZ( bCMatrix const *, bCVector * );
+// ?GetQuotient@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetQuotient(float)const
+bCMatrix * __thiscall _GetQuotient_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetQuotient@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetQuotient(bCMatrix &,float)const
+void __thiscall _GetQuotient_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotated@bCMatrix@@QBE?AV1@ABVbCAxisAngle@@@Z public: bCMatrix __thiscall bCMatrix::GetRotated(bCAxisAngle const &)const
+bCMatrix * __thiscall _GetRotated_bCMatrix__QBE_AV1_ABVbCAxisAngle___Z( bCMatrix const *, bCMatrix *, bCAxisAngle const * );
+// ?GetRotated@bCMatrix@@QBE?AV1@ABVbCEulerAngles@@@Z public: bCMatrix __thiscall bCMatrix::GetRotated(bCEulerAngles const &)const
+bCMatrix * __thiscall _GetRotated_bCMatrix__QBE_AV1_ABVbCEulerAngles___Z( bCMatrix const *, bCMatrix *, bCEulerAngles const * );
+// ?GetRotated@bCMatrix@@QBE?AV1@ABVbCQuaternion@@@Z public: bCMatrix __thiscall bCMatrix::GetRotated(bCQuaternion const &)const
+bCMatrix * __thiscall _GetRotated_bCMatrix__QBE_AV1_ABVbCQuaternion___Z( bCMatrix const *, bCMatrix *, bCQuaternion const * );
+// ?GetRotated@bCMatrix@@QBEXAAV1@ABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::GetRotated(bCMatrix &,bCAxisAngle const &)const
+void __thiscall _GetRotated_bCMatrix__QBEXAAV1_ABVbCAxisAngle___Z( bCMatrix const *, bCMatrix *, bCAxisAngle const * );
+// ?GetRotated@bCMatrix@@QBEXAAV1@ABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::GetRotated(bCMatrix &,bCEulerAngles const &)const
+void __thiscall _GetRotated_bCMatrix__QBEXAAV1_ABVbCEulerAngles___Z( bCMatrix const *, bCMatrix *, bCEulerAngles const * );
+// ?GetRotated@bCMatrix@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCMatrix::GetRotated(bCMatrix &,bCQuaternion const &)const
+void __thiscall _GetRotated_bCMatrix__QBEXAAV1_ABVbCQuaternion___Z( bCMatrix const *, bCMatrix *, bCQuaternion const * );
+// ?GetRotatedByAxisX@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByAxisX(float)const
+bCMatrix * __thiscall _GetRotatedByAxisX_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByAxisX@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByAxisX(bCMatrix &,float)const
+void __thiscall _GetRotatedByAxisX_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByAxisY@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByAxisY(float)const
+bCMatrix * __thiscall _GetRotatedByAxisY_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByAxisY@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByAxisY(bCMatrix &,float)const
+void __thiscall _GetRotatedByAxisY_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByAxisZ@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByAxisZ(float)const
+bCMatrix * __thiscall _GetRotatedByAxisZ_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByAxisZ@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByAxisZ(bCMatrix &,float)const
+void __thiscall _GetRotatedByAxisZ_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisX@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByLocalAxisX(float)const
+bCMatrix * __thiscall _GetRotatedByLocalAxisX_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisX@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByLocalAxisX(bCMatrix &,float)const
+void __thiscall _GetRotatedByLocalAxisX_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisY@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByLocalAxisY(float)const
+bCMatrix * __thiscall _GetRotatedByLocalAxisY_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisY@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByLocalAxisY(bCMatrix &,float)const
+void __thiscall _GetRotatedByLocalAxisY_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisZ@bCMatrix@@QBE?AV1@M@Z public: bCMatrix __thiscall bCMatrix::GetRotatedByLocalAxisZ(float)const
+bCMatrix * __thiscall _GetRotatedByLocalAxisZ_bCMatrix__QBE_AV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedByLocalAxisZ@bCMatrix@@QBEXAAV1@M@Z public: void __thiscall bCMatrix::GetRotatedByLocalAxisZ(bCMatrix &,float)const
+void __thiscall _GetRotatedByLocalAxisZ_bCMatrix__QBEXAAV1_M_Z( bCMatrix const *, bCMatrix *, GEFloat );
+// ?GetRotatedLocal@bCMatrix@@QBE?AV1@ABVbCAxisAngle@@@Z public: bCMatrix __thiscall bCMatrix::GetRotatedLocal(bCAxisAngle const &)const
+bCMatrix * __thiscall _GetRotatedLocal_bCMatrix__QBE_AV1_ABVbCAxisAngle___Z( bCMatrix const *, bCMatrix *, bCAxisAngle const * );
+// ?GetRotatedLocal@bCMatrix@@QBE?AV1@ABVbCEulerAngles@@@Z public: bCMatrix __thiscall bCMatrix::GetRotatedLocal(bCEulerAngles const &)const
+bCMatrix * __thiscall _GetRotatedLocal_bCMatrix__QBE_AV1_ABVbCEulerAngles___Z( bCMatrix const *, bCMatrix *, bCEulerAngles const * );
+// ?GetRotatedLocal@bCMatrix@@QBE?AV1@ABVbCQuaternion@@@Z public: bCMatrix __thiscall bCMatrix::GetRotatedLocal(bCQuaternion const &)const
+bCMatrix * __thiscall _GetRotatedLocal_bCMatrix__QBE_AV1_ABVbCQuaternion___Z( bCMatrix const *, bCMatrix *, bCQuaternion const * );
+// ?GetRotatedLocal@bCMatrix@@QBEXAAV1@ABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::GetRotatedLocal(bCMatrix &,bCAxisAngle const &)const
+void __thiscall _GetRotatedLocal_bCMatrix__QBEXAAV1_ABVbCAxisAngle___Z( bCMatrix const *, bCMatrix *, bCAxisAngle const * );
+// ?GetRotatedLocal@bCMatrix@@QBEXAAV1@ABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::GetRotatedLocal(bCMatrix &,bCEulerAngles const &)const
+void __thiscall _GetRotatedLocal_bCMatrix__QBEXAAV1_ABVbCEulerAngles___Z( bCMatrix const *, bCMatrix *, bCEulerAngles const * );
+// ?GetRotatedLocal@bCMatrix@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCMatrix::GetRotatedLocal(bCMatrix &,bCQuaternion const &)const
+void __thiscall _GetRotatedLocal_bCMatrix__QBEXAAV1_ABVbCQuaternion___Z( bCMatrix const *, bCMatrix *, bCQuaternion const * );
+// ?GetRotation3@bCMatrix@@QBE?AVbCMatrix3@@XZ public: bCMatrix3 __thiscall bCMatrix::GetRotation3(void)const
+bCMatrix3 * __thiscall _GetRotation3_bCMatrix__QBE_AVbCMatrix3__XZ( bCMatrix const *, bCMatrix3 * );
+// ?GetRotation@bCMatrix@@QBE?AV1@XZ public: bCMatrix __thiscall bCMatrix::GetRotation(void)const
+bCMatrix * __thiscall _GetRotation_bCMatrix__QBE_AV1_XZ( bCMatrix const *, bCMatrix * );
+// ?GetRotation@bCMatrix@@QBEXAAV1@@Z public: void __thiscall bCMatrix::GetRotation(bCMatrix &)const
+void __thiscall _GetRotation_bCMatrix__QBEXAAV1__Z( bCMatrix const *, bCMatrix * );
+// ?GetRotation@bCMatrix@@QBEXAAVbCMatrix3@@@Z public: void __thiscall bCMatrix::GetRotation(bCMatrix3 &)const
+void __thiscall _GetRotation_bCMatrix__QBEXAAVbCMatrix3___Z( bCMatrix const *, bCMatrix3 * );
+// ?GetRow4@bCMatrix@@IBEABVbCVector4@@H@Z protected: bCVector4 const & __thiscall bCMatrix::GetRow4(int)const
+bCVector4 const * __thiscall _GetRow4_bCMatrix__IBEABVbCVector4__H_Z( bCMatrix const *, bCMatrix_bERow );
+// ?GetRow@bCMatrix@@IBEABVbCVector@@H@Z protected: bCVector const & __thiscall bCMatrix::GetRow(int)const
+bCVector const * __thiscall _GetRow_bCMatrix__IBEABVbCVector__H_Z( bCMatrix const *, bCMatrix_bERow );
+// ?GetRow@bCMatrix@@IBEXHAAVbCVector4@@@Z protected: void __thiscall bCMatrix::GetRow(int,bCVector4 &)const
+void __thiscall _GetRow_bCMatrix__IBEXHAAVbCVector4___Z( bCMatrix const *, bCMatrix_bERow, bCVector4 * );
+// ?GetRow@bCMatrix@@IBEXHAAVbCVector@@@Z protected: void __thiscall bCMatrix::GetRow(int,bCVector &)const
+void __thiscall _GetRow_bCMatrix__IBEXHAAVbCVector___Z( bCMatrix const *, bCMatrix_bERow, bCVector * );
+// ?GetRow@bCMatrix@@QBEXHQAM@Z public: void __thiscall bCMatrix::GetRow(int,float * const)const
+void __thiscall _GetRow_bCMatrix__QBEXHQAM_Z( bCMatrix const *, bCMatrix_bERow, GEFloat [ bCMatrix_bEColumn_Count ] );
+// ?GetSum@bCMatrix@@QBE?AV1@ABV1@@Z public: bCMatrix __thiscall bCMatrix::GetSum(bCMatrix const &)const
+bCMatrix * __thiscall _GetSum_bCMatrix__QBE_AV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetSum@bCMatrix@@QBEXAAV1@ABV1@@Z public: void __thiscall bCMatrix::GetSum(bCMatrix &,bCMatrix const &)const
+void __thiscall _GetSum_bCMatrix__QBEXAAV1_ABV1__Z( bCMatrix const *, bCMatrix *, bCMatrix const * );
+// ?GetTranslation4@bCMatrix@@QBEABVbCVector4@@XZ public: bCVector4 const & __thiscall bCMatrix::GetTranslation4(void)const
+bCVector4 const * __thiscall _GetTranslation4_bCMatrix__QBEABVbCVector4__XZ( bCMatrix const * );
+// ?GetTranslation@bCMatrix@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCMatrix::GetTranslation(void)const
+bCVector const * __thiscall _GetTranslation_bCMatrix__QBEABVbCVector__XZ( bCMatrix const * );
+// ?GetTranslation@bCMatrix@@QBEXAAVbCVector4@@@Z public: void __thiscall bCMatrix::GetTranslation(bCVector4 &)const
+void __thiscall _GetTranslation_bCMatrix__QBEXAAVbCVector4___Z( bCMatrix const *, bCVector4 * );
+// ?GetTranslation@bCMatrix@@QBEXAAVbCVector@@@Z public: void __thiscall bCMatrix::GetTranslation(bCVector &)const
+void __thiscall _GetTranslation_bCMatrix__QBEXAAVbCVector___Z( bCMatrix const *, bCVector * );
+// ?GetXAxis4@bCMatrix@@QBEABVbCVector4@@XZ public: bCVector4 const & __thiscall bCMatrix::GetXAxis4(void)const
+bCVector4 const * __thiscall _GetXAxis4_bCMatrix__QBEABVbCVector4__XZ( bCMatrix const * );
+// ?GetXAxis@bCMatrix@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCMatrix::GetXAxis(void)const
+bCVector const * __thiscall _GetXAxis_bCMatrix__QBEABVbCVector__XZ( bCMatrix const * );
+// ?GetXAxis@bCMatrix@@QBEXAAVbCVector4@@@Z public: void __thiscall bCMatrix::GetXAxis(bCVector4 &)const
+void __thiscall _GetXAxis_bCMatrix__QBEXAAVbCVector4___Z( bCMatrix const *, bCVector4 * );
+// ?GetXAxis@bCMatrix@@QBEXAAVbCVector@@@Z public: void __thiscall bCMatrix::GetXAxis(bCVector &)const
+void __thiscall _GetXAxis_bCMatrix__QBEXAAVbCVector___Z( bCMatrix const *, bCVector * );
+// ?GetYAxis4@bCMatrix@@QBEABVbCVector4@@XZ public: bCVector4 const & __thiscall bCMatrix::GetYAxis4(void)const
+bCVector4 const * __thiscall _GetYAxis4_bCMatrix__QBEABVbCVector4__XZ( bCMatrix const * );
+// ?GetYAxis@bCMatrix@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCMatrix::GetYAxis(void)const
+bCVector const * __thiscall _GetYAxis_bCMatrix__QBEABVbCVector__XZ( bCMatrix const * );
+// ?GetYAxis@bCMatrix@@QBEXAAVbCVector4@@@Z public: void __thiscall bCMatrix::GetYAxis(bCVector4 &)const
+void __thiscall _GetYAxis_bCMatrix__QBEXAAVbCVector4___Z( bCMatrix const *, bCVector4 * );
+// ?GetYAxis@bCMatrix@@QBEXAAVbCVector@@@Z public: void __thiscall bCMatrix::GetYAxis(bCVector &)const
+void __thiscall _GetYAxis_bCMatrix__QBEXAAVbCVector___Z( bCMatrix const *, bCVector * );
+// ?GetZAxis4@bCMatrix@@QBEABVbCVector4@@XZ public: bCVector4 const & __thiscall bCMatrix::GetZAxis4(void)const
+bCVector4 const * __thiscall _GetZAxis4_bCMatrix__QBEABVbCVector4__XZ( bCMatrix const * );
+// ?GetZAxis@bCMatrix@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCMatrix::GetZAxis(void)const
+bCVector const * __thiscall _GetZAxis_bCMatrix__QBEABVbCVector__XZ( bCMatrix const * );
+// ?GetZAxis@bCMatrix@@QBEXAAVbCVector4@@@Z public: void __thiscall bCMatrix::GetZAxis(bCVector4 &)const
+void __thiscall _GetZAxis_bCMatrix__QBEXAAVbCVector4___Z( bCMatrix const *, bCVector4 * );
+// ?GetZAxis@bCMatrix@@QBEXAAVbCVector@@@Z public: void __thiscall bCMatrix::GetZAxis(bCVector &)const
+void __thiscall _GetZAxis_bCMatrix__QBEXAAVbCVector___Z( bCMatrix const *, bCVector * );
+// ?GetZero@bCMatrix@@SGABV1@XZ public: static bCMatrix const & __stdcall bCMatrix::GetZero(void)
+bCMatrix const * __stdcall _GetZero_bCMatrix__SGABV1_XZ( void );
+// ?Invert@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Invert(void)
+void __thiscall _Invert_bCMatrix__QAEXXZ( bCMatrix * );
+// ?InvertExcentric@bCMatrix@@IAEXXZ protected: void __thiscall bCMatrix::InvertExcentric(void)
+void __thiscall _InvertExcentric_bCMatrix__IAEXXZ( bCMatrix * );
+// ?IsEqual@bCMatrix@@QBE_NABV1@@Z public: bool __thiscall bCMatrix::IsEqual(bCMatrix const &)const
+GEBool __thiscall _IsEqual_bCMatrix__QBE_NABV1__Z( bCMatrix const *, bCMatrix const * );
+// ?IsExcentric@bCMatrix@@QBE_NXZ public: bool __thiscall bCMatrix::IsExcentric(void)const
+GEBool __thiscall _IsExcentric_bCMatrix__QBE_NXZ( bCMatrix const * );
+// ?IsIdentity@bCMatrix@@QBE_NXZ public: bool __thiscall bCMatrix::IsIdentity(void)const
+GEBool __thiscall _IsIdentity_bCMatrix__QBE_NXZ( bCMatrix const * );
+// ?IsOrthogonal@bCMatrix@@QBE?B_NXZ public: bool const __thiscall bCMatrix::IsOrthogonal(void)const
+GEBool const __thiscall _IsOrthogonal_bCMatrix__QBE_B_NXZ( bCMatrix const * );
+// ?IsOrthonormal@bCMatrix@@QBE?B_NXZ public: bool const __thiscall bCMatrix::IsOrthonormal(void)const
+GEBool const __thiscall _IsOrthonormal_bCMatrix__QBE_B_NXZ( bCMatrix const * );
+// ?IsValid@bCMatrix@@QBE?B_NXZ public: bool const __thiscall bCMatrix::IsValid(void)const
+GEBool const __thiscall _IsValid_bCMatrix__QBE_B_NXZ( bCMatrix const * );
+// ?LookAt@bCMatrix@@QAEXABVbCVector@@0@Z public: void __thiscall bCMatrix::LookAt(bCVector const &,bCVector const &)
+void __thiscall _LookAt_bCMatrix__QAEXABVbCVector__0_Z( bCMatrix *, bCVector const *, bCVector const * );
+// ?LookAt@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::LookAt(bCVector const &)
+void __thiscall _LookAt_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?ModifyRotation@bCMatrix@@QAEXABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::ModifyRotation(bCAxisAngle const &)
+void __thiscall _ModifyRotation_bCMatrix__QAEXABVbCAxisAngle___Z( bCMatrix *, bCAxisAngle const * );
+// ?ModifyRotation@bCMatrix@@QAEXABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::ModifyRotation(bCEulerAngles const &)
+void __thiscall _ModifyRotation_bCMatrix__QAEXABVbCEulerAngles___Z( bCMatrix *, bCEulerAngles const * );
+// ?ModifyRotation@bCMatrix@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCMatrix::ModifyRotation(bCMatrix3 const &)
+void __thiscall _ModifyRotation_bCMatrix__QAEXABVbCMatrix3___Z( bCMatrix *, bCMatrix3 const * );
+// ?ModifyRotation@bCMatrix@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCMatrix::ModifyRotation(bCQuaternion const &)
+void __thiscall _ModifyRotation_bCMatrix__QAEXABVbCQuaternion___Z( bCMatrix *, bCQuaternion const * );
+// ?ModifyRotationAxisX@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::ModifyRotationAxisX(float)
+void __thiscall _ModifyRotationAxisX_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?ModifyRotationAxisY@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::ModifyRotationAxisY(float)
+void __thiscall _ModifyRotationAxisY_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?ModifyRotationAxisZ@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::ModifyRotationAxisZ(float)
+void __thiscall _ModifyRotationAxisZ_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?ModifyScaling@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::ModifyScaling(bCVector const &)
+void __thiscall _ModifyScaling_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?ModifyScaling@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::ModifyScaling(float)
+void __thiscall _ModifyScaling_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?ModifyTranslation@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::ModifyTranslation(bCVector const &)
+void __thiscall _ModifyTranslation_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?ModifyXAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::ModifyXAxis(bCVector4 const &)
+void __thiscall _ModifyXAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?ModifyXAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::ModifyXAxis(bCVector const &)
+void __thiscall _ModifyXAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?ModifyYAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::ModifyYAxis(bCVector4 const &)
+void __thiscall _ModifyYAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?ModifyYAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::ModifyYAxis(bCVector const &)
+void __thiscall _ModifyYAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?ModifyZAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::ModifyZAxis(bCVector4 const &)
+void __thiscall _ModifyZAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?ModifyZAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::ModifyZAxis(bCVector const &)
+void __thiscall _ModifyZAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?Multiply@bCMatrix@@QAEXABV1@@Z public: void __thiscall bCMatrix::Multiply(bCMatrix const &)
+void __thiscall _Multiply_bCMatrix__QAEXABV1__Z( bCMatrix *, bCMatrix const * );
+// ?Multiply@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::Multiply(float)
+void __thiscall _Multiply_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?Negate@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Negate(void)
+void __thiscall _Negate_bCMatrix__QAEXXZ( bCMatrix * );
+// ?Orthogonalize@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Orthogonalize(void)
+void __thiscall _Orthogonalize_bCMatrix__QAEXXZ( bCMatrix * );
+// ?Orthonormalize@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Orthonormalize(void)
+void __thiscall _Orthonormalize_bCMatrix__QAEXXZ( bCMatrix * );
+// ?PrintDebug@bCMatrix@@QAEXAAVbCString@@@Z public: void __thiscall bCMatrix::PrintDebug(bCString &)
+void __thiscall _PrintDebug_bCMatrix__QAEXAAVbCString___Z( bCMatrix *, bCString * );
+// ?ReverseMultiply@bCMatrix@@QAEXABV1@@Z public: void __thiscall bCMatrix::ReverseMultiply(bCMatrix const &)
+void __thiscall _ReverseMultiply_bCMatrix__QAEXABV1__Z( bCMatrix *, bCMatrix const * );
+// ?Rotate@bCMatrix@@QAEXABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::Rotate(bCAxisAngle const &)
+void __thiscall _Rotate_bCMatrix__QAEXABVbCAxisAngle___Z( bCMatrix *, bCAxisAngle const * );
+// ?Rotate@bCMatrix@@QAEXABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::Rotate(bCEulerAngles const &)
+void __thiscall _Rotate_bCMatrix__QAEXABVbCEulerAngles___Z( bCMatrix *, bCEulerAngles const * );
+// ?Rotate@bCMatrix@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCMatrix::Rotate(bCQuaternion const &)
+void __thiscall _Rotate_bCMatrix__QAEXABVbCQuaternion___Z( bCMatrix *, bCQuaternion const * );
+// ?RotateAxisX@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateAxisX(float)
+void __thiscall _RotateAxisX_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?RotateAxisY@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateAxisY(float)
+void __thiscall _RotateAxisY_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?RotateAxisZ@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateAxisZ(float)
+void __thiscall _RotateAxisZ_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?RotateLocal@bCMatrix@@QAEXABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::RotateLocal(bCAxisAngle const &)
+void __thiscall _RotateLocal_bCMatrix__QAEXABVbCAxisAngle___Z( bCMatrix *, bCAxisAngle const * );
+// ?RotateLocal@bCMatrix@@QAEXABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::RotateLocal(bCEulerAngles const &)
+void __thiscall _RotateLocal_bCMatrix__QAEXABVbCEulerAngles___Z( bCMatrix *, bCEulerAngles const * );
+// ?RotateLocal@bCMatrix@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCMatrix::RotateLocal(bCQuaternion const &)
+void __thiscall _RotateLocal_bCMatrix__QAEXABVbCQuaternion___Z( bCMatrix *, bCQuaternion const * );
+// ?RotateLocalAxisX@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateLocalAxisX(float)
+void __thiscall _RotateLocalAxisX_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?RotateLocalAxisY@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateLocalAxisY(float)
+void __thiscall _RotateLocalAxisY_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?RotateLocalAxisZ@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::RotateLocalAxisZ(float)
+void __thiscall _RotateLocalAxisZ_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?Scale@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::Scale(bCVector const &)
+void __thiscall _Scale_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?Scale@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::Scale(float)
+void __thiscall _Scale_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetElement@bCMatrix@@QAEXHHM@Z public: void __thiscall bCMatrix::SetElement(int,int,float)
+void __thiscall _SetElement_bCMatrix__QAEXHHM_Z( bCMatrix *, bCMatrix_bERow, bCMatrix_bEColumn, GEFloat );
+// ?SetElement@bCMatrix@@QAEXHM@Z public: void __thiscall bCMatrix::SetElement(int,float)
+void __thiscall _SetElement_bCMatrix__QAEXHM_Z( bCMatrix *, bCMatrix_bEElement, GEFloat );
+// ?SetIdentity@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::SetIdentity(void)
+void __thiscall _SetIdentity_bCMatrix__QAEXXZ( bCMatrix * );
+// ?SetIdentityRotation@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::SetIdentityRotation(void)
+void __thiscall _SetIdentityRotation_bCMatrix__QAEXXZ( bCMatrix * );
+// ?SetMatrix@bCMatrix@@QAEXABV1@@Z public: void __thiscall bCMatrix::SetMatrix(bCMatrix const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABV1__Z( bCMatrix *, bCMatrix const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCAxisAngle@@ABVbCVector@@@Z public: void __thiscall bCMatrix::SetMatrix(bCAxisAngle const &,bCVector const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCAxisAngle__ABVbCVector___Z( bCMatrix *, bCAxisAngle const *, bCVector const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCEulerAngles@@ABVbCVector@@@Z public: void __thiscall bCMatrix::SetMatrix(bCEulerAngles const &,bCVector const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCEulerAngles__ABVbCVector___Z( bCMatrix *, bCEulerAngles const *, bCVector const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCMotion@@@Z public: void __thiscall bCMatrix::SetMatrix(bCMotion const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCMotion___Z( bCMatrix *, bCMotion const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCQuaternion@@ABVbCVector@@@Z public: void __thiscall bCMatrix::SetMatrix(bCQuaternion const &,bCVector const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCQuaternion__ABVbCVector___Z( bCMatrix *, bCQuaternion const *, bCVector const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCVector@@ABVbCEulerAngles@@0@Z public: void __thiscall bCMatrix::SetMatrix(bCVector const &,bCEulerAngles const &,bCVector const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCVector__ABVbCEulerAngles__0_Z( bCMatrix *, bCVector const *, bCEulerAngles const *, bCVector const * );
+// ?SetMatrix@bCMatrix@@QAEXABVbCVector@@ABVbCQuaternion@@0@Z public: void __thiscall bCMatrix::SetMatrix(bCVector const &,bCQuaternion const &,bCVector const &)
+void __thiscall _SetMatrix_bCMatrix__QAEXABVbCVector__ABVbCQuaternion__0_Z( bCMatrix *, bCVector const *, bCQuaternion const *, bCVector const * );
+// ?SetMatrix@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::SetMatrix(float)
+void __thiscall _SetMatrix_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetMatrix@bCMatrix@@QAEXQAY03$$CBM@Z public: void __thiscall bCMatrix::SetMatrix(float const (* const)[4])
+void __thiscall _SetMatrix_bCMatrix__QAEXQAY03__CBM_Z( bCMatrix *, GEFloat const [ bCMatrix_bERow_Count ][ bCMatrix_bEColumn_Count ] );
+// ?SetMatrix@bCMatrix@@QAEXQBM@Z public: void __thiscall bCMatrix::SetMatrix(float const * const)
+void __thiscall _SetMatrix_bCMatrix__QAEXQBM_Z( bCMatrix *, GEFloat const [ bCMatrix_bEElement_Count ] );
+// ?SetMatrix@bCMatrix@@QAEXQBVbCVector4@@@Z public: void __thiscall bCMatrix::SetMatrix(bCVector4 const * const)
+void __thiscall _SetMatrix_bCMatrix__QAEXQBVbCVector4___Z( bCMatrix *, bCVector4 const [ bCMatrix_bERow_Count ] );
+// ?SetMatrix@bCMatrix@@QAEXQBVbCVector@@@Z public: void __thiscall bCMatrix::SetMatrix(bCVector const * const)
+void __thiscall _SetMatrix_bCMatrix__QAEXQBVbCVector___Z( bCMatrix *, bCVector const [ bCMatrix_bERow_Count ] );
+// ?SetRow@bCMatrix@@QAEXHABVbCVector4@@@Z public: void __thiscall bCMatrix::SetRow(int,bCVector4 const &)
+void __thiscall _SetRow_bCMatrix__QAEXHABVbCVector4___Z( bCMatrix *, bCMatrix_bERow, bCVector4 const * );
+// ?SetRow@bCMatrix@@QAEXHABVbCVector@@@Z public: void __thiscall bCMatrix::SetRow(int,bCVector const &)
+void __thiscall _SetRow_bCMatrix__QAEXHABVbCVector___Z( bCMatrix *, bCMatrix_bERow, bCVector const * );
+// ?SetRow@bCMatrix@@QAEXHQBM@Z public: void __thiscall bCMatrix::SetRow(int,float const * const)
+void __thiscall _SetRow_bCMatrix__QAEXHQBM_Z( bCMatrix *, bCMatrix_bERow, GEFloat const [ bCMatrix_bEColumn_Count ] );
+// ?SetToCrossProduct@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetToCrossProduct(bCVector const &)
+void __thiscall _SetToCrossProduct_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?SetToProduct@bCMatrix@@QAEXABV1@0@Z public: void __thiscall bCMatrix::SetToProduct(bCMatrix const &,bCMatrix const &)
+void __thiscall _SetToProduct_bCMatrix__QAEXABV1_0_Z( bCMatrix *, bCMatrix const *, bCMatrix const * );
+// ?SetToRotation@bCMatrix@@QAEXABVbCAxisAngle@@@Z public: void __thiscall bCMatrix::SetToRotation(bCAxisAngle const &)
+void __thiscall _SetToRotation_bCMatrix__QAEXABVbCAxisAngle___Z( bCMatrix *, bCAxisAngle const * );
+// ?SetToRotation@bCMatrix@@QAEXABVbCEulerAngles@@@Z public: void __thiscall bCMatrix::SetToRotation(bCEulerAngles const &)
+void __thiscall _SetToRotation_bCMatrix__QAEXABVbCEulerAngles___Z( bCMatrix *, bCEulerAngles const * );
+// ?SetToRotation@bCMatrix@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCMatrix::SetToRotation(bCQuaternion const &)
+void __thiscall _SetToRotation_bCMatrix__QAEXABVbCQuaternion___Z( bCMatrix *, bCQuaternion const * );
+// ?SetToRotationAxisX@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::SetToRotationAxisX(float)
+void __thiscall _SetToRotationAxisX_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetToRotationAxisY@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::SetToRotationAxisY(float)
+void __thiscall _SetToRotationAxisY_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetToRotationAxisZ@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::SetToRotationAxisZ(float)
+void __thiscall _SetToRotationAxisZ_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetToScaling@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetToScaling(bCVector const &)
+void __thiscall _SetToScaling_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?SetToScaling@bCMatrix@@QAEXM@Z public: void __thiscall bCMatrix::SetToScaling(float)
+void __thiscall _SetToScaling_bCMatrix__QAEXM_Z( bCMatrix *, GEFloat );
+// ?SetToTranslation@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetToTranslation(bCVector const &)
+void __thiscall _SetToTranslation_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?SetXAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::SetXAxis(bCVector4 const &)
+void __thiscall _SetXAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?SetXAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetXAxis(bCVector const &)
+void __thiscall _SetXAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?SetYAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::SetYAxis(bCVector4 const &)
+void __thiscall _SetYAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?SetYAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetYAxis(bCVector const &)
+void __thiscall _SetYAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?SetZAxis@bCMatrix@@QAEXABVbCVector4@@@Z public: void __thiscall bCMatrix::SetZAxis(bCVector4 const &)
+void __thiscall _SetZAxis_bCMatrix__QAEXABVbCVector4___Z( bCMatrix *, bCVector4 const * );
+// ?SetZAxis@bCMatrix@@QAEXABVbCVector@@@Z public: void __thiscall bCMatrix::SetZAxis(bCVector const &)
+void __thiscall _SetZAxis_bCMatrix__QAEXABVbCVector___Z( bCMatrix *, bCVector const * );
+// ?Sub@bCMatrix@@QAEXABV1@@Z public: void __thiscall bCMatrix::Sub(bCMatrix const &)
+void __thiscall _Sub_bCMatrix__QAEXABV1__Z( bCMatrix *, bCMatrix const * );
+// ?Transpose@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::Transpose(void)
+void __thiscall _Transpose_bCMatrix__QAEXXZ( bCMatrix * );
+// ?TransposeRotation@bCMatrix@@QAEXXZ public: void __thiscall bCMatrix::TransposeRotation(void)
+void __thiscall _TransposeRotation_bCMatrix__QAEXXZ( bCMatrix * );
+// ?ValidateReserved@bCMatrix@@IAEXXZ protected: void __thiscall bCMatrix::ValidateReserved(void)
+void __thiscall _ValidateReserved_bCMatrix__IAEXXZ( bCMatrix * );
+// ?matProduct@?5??SetToProduct@bCMatrix@@QAEXABV2@0@Z@4V2@A bCMatrix `public: void __thiscall bCMatrix::SetToProduct(bCMatrix const &,bCMatrix const &)'::`6'::matProduct
+bCMatrix DLLIMPORT _matProduct__5__SetToProduct_bCMatrix__QAEXABV2_0_Z_4V2_A;

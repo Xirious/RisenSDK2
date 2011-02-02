@@ -65,6 +65,8 @@
 #include "SharedBase/ge_quaternion.tih"
 #include "SharedBase/ge_matrix3.tih"
 #include "SharedBase/ge_motion.tih"
+#include "SharedBase/ge_matrix.tih"
+#include "SharedBase/ge_eigenvector.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
