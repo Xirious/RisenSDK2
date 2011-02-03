@@ -3,7 +3,6 @@
 
 class bCFrustum;    // forward
 class bCLine;       // forward
-class bCRay;        // forward
 class bCSphere;     // forward
 class bCStretch;    // forward
 class bCUnitedRay;  // forward

@@ -1,0 +1,201 @@
+struct bCFrustum;
+struct bCLine;
+struct bCSphere;
+struct bCStretch;
+struct bCUnitedRay;
+
+enum bCTriangle_bESides : __int32
+{
+    bCTriangle_bESides_Front = 0x00000001,
+    bCTriangle_bESides_Back  = 0x00000002,
+    bCTriangle_bESides_Both  = bCTriangle_bESides_Front | bCTriangle_bESides_Back
+};
+
+enum bCTriangle_bEVector : GEInt
+{
+    bCTriangle_bEVector_A,
+    bCTriangle_bEVector_B,
+    bCTriangle_bEVector_C,
+    bCTriangle_bEVector_Count
+};
+
+struct bCTriangle
+{
+    bCVector m_vecA;
+    bCVector m_vecB;
+    bCVector m_vecC;
+};
+// ??0bCTriangle@@QAE@ABV0@@Z public: __thiscall bCTriangle::bCTriangle(bCTriangle const &)
+bCTriangle * __thiscall __0bCTriangle__QAE_ABV0__Z( bCTriangle *, bCTriangle const * );
+// ??0bCTriangle@@QAE@ABVbCVector@@00@Z public: __thiscall bCTriangle::bCTriangle(bCVector const &,bCVector const &,bCVector const &)
+bCTriangle * __thiscall __0bCTriangle__QAE_ABVbCVector__00_Z( bCTriangle *, bCVector const *, bCVector const *, bCVector const * );
+// ??0bCTriangle@@QAE@QAVbCVector@@@Z public: __thiscall bCTriangle::bCTriangle(bCVector * const)
+bCTriangle * __thiscall __0bCTriangle__QAE_QAVbCVector___Z( bCTriangle *, bCVector [ bCTriangle_bEVector_Count ] );
+// ??0bCTriangle@@QAE@XZ public: __thiscall bCTriangle::bCTriangle(void)
+bCTriangle * __thiscall __0bCTriangle__QAE_XZ( bCTriangle * );
+// ??1bCTriangle@@QAE@XZ public: __thiscall bCTriangle::~bCTriangle(void)
+void __thiscall __1bCTriangle__QAE_XZ( bCTriangle * );
+// ??4bCTriangle@@QAEAAV0@ABV0@@Z public: bCTriangle & __thiscall bCTriangle::operator=(bCTriangle const &)
+bCTriangle * __thiscall __4bCTriangle__QAEAAV0_ABV0__Z( bCTriangle *, bCTriangle const * );
+// ??5bCTriangle@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCTriangle::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCTriangle__QBEAAVbCOStream__AAV1__Z( bCTriangle const *, bCOStream * );
+// ??6bCTriangle@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCTriangle::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCTriangle__QAEAAVbCIStream__AAV1__Z( bCTriangle *, bCIStream * );
+// ??AbCTriangle@@QAEAAVbCVector@@H@Z public: bCVector & __thiscall bCTriangle::operator[](int)
+bCVector * __thiscall __AbCTriangle__QAEAAVbCVector__H_Z( bCTriangle *, bCTriangle_bEVector );
+// ??AbCTriangle@@QBEABVbCVector@@H@Z public: bCVector const & __thiscall bCTriangle::operator[](int)const
+bCVector const * __thiscall __AbCTriangle__QBEABVbCVector__H_Z( bCTriangle const *, bCTriangle_bEVector );
+// ??DbCTriangle@@QBE?AV0@ABVbCMatrix3@@@Z public: bCTriangle __thiscall bCTriangle::operator*(bCMatrix3 const &)const
+bCTriangle * __thiscall __DbCTriangle__QBE_AV0_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ??DbCTriangle@@QBE?AV0@ABVbCMatrix@@@Z public: bCTriangle __thiscall bCTriangle::operator*(bCMatrix const &)const
+bCTriangle * __thiscall __DbCTriangle__QBE_AV0_ABVbCMatrix___Z( bCTriangle const *, bCTriangle *, bCMatrix const * );
+// ??KbCTriangle@@QBE?AV0@ABVbCMatrix3@@@Z public: bCTriangle __thiscall bCTriangle::operator/(bCMatrix3 const &)const
+bCTriangle * __thiscall __KbCTriangle__QBE_AV0_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ??KbCTriangle@@QBE?AV0@ABVbCMatrix@@@Z public: bCTriangle __thiscall bCTriangle::operator/(bCMatrix const &)const
+bCTriangle * __thiscall __KbCTriangle__QBE_AV0_ABVbCMatrix___Z( bCTriangle const *, bCTriangle *, bCMatrix const * );
+// ?AccessA@bCTriangle@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCTriangle::AccessA(void)
+bCVector * __thiscall _AccessA_bCTriangle__QAEAAVbCVector__XZ( bCTriangle * );
+// ?AccessB@bCTriangle@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCTriangle::AccessB(void)
+bCVector * __thiscall _AccessB_bCTriangle__QAEAAVbCVector__XZ( bCTriangle * );
+// ?AccessC@bCTriangle@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCTriangle::AccessC(void)
+bCVector * __thiscall _AccessC_bCTriangle__QAEAAVbCVector__XZ( bCTriangle * );
+// ?AccessVector@bCTriangle@@QAEAAVbCVector@@H@Z public: bCVector & __thiscall bCTriangle::AccessVector(int)
+bCVector * __thiscall _AccessVector_bCTriangle__QAEAAVbCVector__H_Z( bCTriangle *, bCTriangle_bEVector );
+// ?AccessVectors@bCTriangle@@QAEAAY02VbCVector@@XZ public: bCVector (& __thiscall bCTriangle::AccessVectors(void))[3]
+bCVector (* __thiscall _AccessVectors_bCTriangle__QAEAAY02VbCVector__XZ( bCTriangle * )) [ bCTriangle_bEVector_Count ];
+// ?CalcNormal@bCTriangle@@QBE?AVbCVector@@XZ public: bCVector __thiscall bCTriangle::CalcNormal(void)const
+bCVector * __thiscall _CalcNormal_bCTriangle__QBE_AVbCVector__XZ( bCTriangle const *, bCVector * );
+// ?CalcNormal@bCTriangle@@QBEXAAVbCVector@@@Z public: void __thiscall bCTriangle::CalcNormal(bCVector &)const
+void __thiscall _CalcNormal_bCTriangle__QBEXAAVbCVector___Z( bCTriangle const *, bCVector * );
+// ?Clear@bCTriangle@@QAEXXZ public: void __thiscall bCTriangle::Clear(void)
+void __thiscall _Clear_bCTriangle__QAEXXZ( bCTriangle * );
+// ?CopyFrom@bCTriangle@@QAEXABV1@@Z public: void __thiscall bCTriangle::CopyFrom(bCTriangle const &)
+void __thiscall _CopyFrom_bCTriangle__QAEXABV1__Z( bCTriangle *, bCTriangle const * );
+// ?CopyTo@bCTriangle@@QBEXAAV1@@Z public: void __thiscall bCTriangle::CopyTo(bCTriangle &)const
+void __thiscall _CopyTo_bCTriangle__QBEXAAV1__Z( bCTriangle const *, bCTriangle * );
+// ?Cull@bCTriangle@@QBE_NABV1@@Z public: bool __thiscall bCTriangle::Cull(bCTriangle const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABV1__Z( bCTriangle const *, bCTriangle const * );
+// ?Cull@bCTriangle@@QBE_NABVbCBox@@@Z public: bool __thiscall bCTriangle::Cull(bCBox const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCBox___Z( bCTriangle const *, bCBox const * );
+// ?Cull@bCTriangle@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCTriangle::Cull(bCFrustum const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCFrustum___Z( bCTriangle const *, bCFrustum const * );
+// ?Cull@bCTriangle@@QBE_NABVbCLine@@@Z public: bool __thiscall bCTriangle::Cull(bCLine const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCLine___Z( bCTriangle const *, bCLine const * );
+// ?Cull@bCTriangle@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCTriangle::Cull(bCPlane const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCPlane___Z( bCTriangle const *, bCPlane const * );
+// ?Cull@bCTriangle@@QBE_NABVbCRay@@@Z public: bool __thiscall bCTriangle::Cull(bCRay const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCRay___Z( bCTriangle const *, bCRay const * );
+// ?Cull@bCTriangle@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCTriangle::Cull(bCSphere const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCSphere___Z( bCTriangle const *, bCSphere const * );
+// ?Cull@bCTriangle@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCTriangle::Cull(bCStretch const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCStretch___Z( bCTriangle const *, bCStretch const * );
+// ?Cull@bCTriangle@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCTriangle::Cull(bCUnitedRay const &)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NABVbCUnitedRay___Z( bCTriangle const *, bCUnitedRay const * );
+// ?Cull@bCTriangle@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCTriangle::Cull(bCVector const * const)const
+GEBool __thiscall _Cull_bCTriangle__QBE_NQBVbCVector___Z( bCTriangle const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?GetA@bCTriangle@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCTriangle::GetA(void)const
+bCVector const * __thiscall _GetA_bCTriangle__QBEABVbCVector__XZ( bCTriangle const * );
+// ?GetA@bCTriangle@@QBEXAAVbCVector@@@Z public: void __thiscall bCTriangle::GetA(bCVector &)const
+void __thiscall _GetA_bCTriangle__QBEXAAVbCVector___Z( bCTriangle const *, bCVector * );
+// ?GetB@bCTriangle@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCTriangle::GetB(void)const
+bCVector const * __thiscall _GetB_bCTriangle__QBEABVbCVector__XZ( bCTriangle const * );
+// ?GetB@bCTriangle@@QBEXAAVbCVector@@@Z public: void __thiscall bCTriangle::GetB(bCVector &)const
+void __thiscall _GetB_bCTriangle__QBEXAAVbCVector___Z( bCTriangle const *, bCVector * );
+// ?GetC@bCTriangle@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCTriangle::GetC(void)const
+bCVector const * __thiscall _GetC_bCTriangle__QBEABVbCVector__XZ( bCTriangle const * );
+// ?GetC@bCTriangle@@QBEXAAVbCVector@@@Z public: void __thiscall bCTriangle::GetC(bCVector &)const
+void __thiscall _GetC_bCTriangle__QBEXAAVbCVector___Z( bCTriangle const *, bCVector * );
+// ?GetCenter@bCTriangle@@QAEXAAVbCVector@@@Z public: void __thiscall bCTriangle::GetCenter(bCVector &)
+void __thiscall _GetCenter_bCTriangle__QAEXAAVbCVector___Z( bCTriangle *, bCVector * );
+// ?GetIntersectionDistance@bCTriangle@@QBEMABVbCLine@@@Z public: float __thiscall bCTriangle::GetIntersectionDistance(bCLine const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCTriangle__QBEMABVbCLine___Z( bCTriangle const *, bCLine const * );
+// ?GetIntersectionDistance@bCTriangle@@QBEMABVbCRay@@@Z public: float __thiscall bCTriangle::GetIntersectionDistance(bCRay const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCTriangle__QBEMABVbCRay___Z( bCTriangle const *, bCRay const * );
+// ?GetIntersectionDistance@bCTriangle@@QBEMABVbCStretch@@@Z public: float __thiscall bCTriangle::GetIntersectionDistance(bCStretch const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCTriangle__QBEMABVbCStretch___Z( bCTriangle const *, bCStretch const * );
+// ?GetInvTransformed@bCTriangle@@QBE?AV1@ABVbCMatrix3@@@Z public: bCTriangle __thiscall bCTriangle::GetInvTransformed(bCMatrix3 const &)const
+bCTriangle * __thiscall _GetInvTransformed_bCTriangle__QBE_AV1_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ?GetInvTransformed@bCTriangle@@QBE?AV1@ABVbCMatrix@@@Z public: bCTriangle __thiscall bCTriangle::GetInvTransformed(bCMatrix const &)const
+bCTriangle * __thiscall _GetInvTransformed_bCTriangle__QBE_AV1_ABVbCMatrix___Z( bCTriangle const *, bCTriangle *, bCMatrix const * );
+// ?GetInvTransformed@bCTriangle@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCTriangle::GetInvTransformed(bCTriangle &,bCMatrix3 const &)const
+void __thiscall _GetInvTransformed_bCTriangle__QBEXAAV1_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ?GetInvTransformed@bCTriangle@@QBEXAAV1@VbCMatrix3@@@Z public: void __thiscall bCTriangle::GetInvTransformed(bCTriangle &,bCMatrix3)const
+void __thiscall _GetInvTransformed_bCTriangle__QBEXAAV1_VbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 );
+// ?GetInvTranslated@bCTriangle@@QBE?AV1@ABVbCVector@@@Z public: bCTriangle __thiscall bCTriangle::GetInvTranslated(bCVector const &)const
+bCTriangle * __thiscall _GetInvTranslated_bCTriangle__QBE_AV1_ABVbCVector___Z( bCTriangle const *, bCTriangle *, bCVector const * );
+// ?GetInvTranslated@bCTriangle@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCTriangle::GetInvTranslated(bCTriangle &,bCVector const &)const
+void __thiscall _GetInvTranslated_bCTriangle__QBEXAAV1_ABVbCVector___Z( bCTriangle const *, bCTriangle *, bCVector const * );
+// ?GetTransformed@bCTriangle@@QBE?AV1@ABVbCMatrix3@@@Z public: bCTriangle __thiscall bCTriangle::GetTransformed(bCMatrix3 const &)const
+bCTriangle * __thiscall _GetTransformed_bCTriangle__QBE_AV1_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ?GetTransformed@bCTriangle@@QBE?AV1@ABVbCMatrix@@@Z public: bCTriangle __thiscall bCTriangle::GetTransformed(bCMatrix const &)const
+bCTriangle * __thiscall _GetTransformed_bCTriangle__QBE_AV1_ABVbCMatrix___Z( bCTriangle const *, bCTriangle *, bCMatrix const * );
+// ?GetTransformed@bCTriangle@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCTriangle::GetTransformed(bCTriangle &,bCMatrix3 const &)const
+void __thiscall _GetTransformed_bCTriangle__QBEXAAV1_ABVbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 const * );
+// ?GetTransformed@bCTriangle@@QBEXAAV1@VbCMatrix3@@@Z public: void __thiscall bCTriangle::GetTransformed(bCTriangle &,bCMatrix3)const
+void __thiscall _GetTransformed_bCTriangle__QBEXAAV1_VbCMatrix3___Z( bCTriangle const *, bCTriangle *, bCMatrix3 );
+// ?GetTranslated@bCTriangle@@QBE?AV1@ABVbCVector@@@Z public: bCTriangle __thiscall bCTriangle::GetTranslated(bCVector const &)const
+bCTriangle * __thiscall _GetTranslated_bCTriangle__QBE_AV1_ABVbCVector___Z( bCTriangle const *, bCTriangle *, bCVector const * );
+// ?GetTranslated@bCTriangle@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCTriangle::GetTranslated(bCTriangle &,bCVector const &)const
+void __thiscall _GetTranslated_bCTriangle__QBEXAAV1_ABVbCVector___Z( bCTriangle const *, bCTriangle *, bCVector const * );
+// ?GetVector@bCTriangle@@QBEABVbCVector@@H@Z public: bCVector const & __thiscall bCTriangle::GetVector(int)const
+bCVector const * __thiscall _GetVector_bCTriangle__QBEABVbCVector__H_Z( bCTriangle const *, bCTriangle_bEVector );
+// ?GetVectors@bCTriangle@@QBEAAY02$$CBVbCVector@@XZ public: bCVector const (& __thiscall bCTriangle::GetVectors(void)const )[3]
+bCVector const (* __thiscall _GetVectors_bCTriangle__QBEAAY02__CBVbCVector__XZ( bCTriangle const * )) [ bCTriangle_bEVector_Count ];
+// ?Intersects@bCTriangle@@QBE_NABV1@@Z public: bool __thiscall bCTriangle::Intersects(bCTriangle const &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABV1__Z( bCTriangle const *, bCTriangle const * );
+// ?Intersects@bCTriangle@@QBE_NABVbCBox@@@Z public: bool __thiscall bCTriangle::Intersects(bCBox const &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCBox___Z( bCTriangle const *, bCBox const * );
+// ?Intersects@bCTriangle@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCTriangle::Intersects(bCFrustum const &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCFrustum___Z( bCTriangle const *, bCFrustum const * );
+// ?Intersects@bCTriangle@@QBE_NABVbCLine@@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCLine const &,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCLine__AAM_Z( bCTriangle const *, bCLine const *, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCLine@@W4bESides@1@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCLine const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCLine__W4bESides_1_AAM_Z( bCTriangle const *, bCLine const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCTriangle::Intersects(bCPlane const &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCPlane___Z( bCTriangle const *, bCPlane const * );
+// ?Intersects@bCTriangle@@QBE_NABVbCRay@@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCRay const &,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCRay__AAM_Z( bCTriangle const *, bCRay const *, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCRay@@W4bESides@1@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCRay const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCRay__W4bESides_1_AAM_Z( bCTriangle const *, bCRay const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCTriangle::Intersects(bCSphere const &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCSphere___Z( bCTriangle const *, bCSphere const * );
+// ?Intersects@bCTriangle@@QBE_NABVbCStretch@@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCStretch const &,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCStretch__AAM_Z( bCTriangle const *, bCStretch const *, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCStretch@@W4bESides@1@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCStretch const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCStretch__W4bESides_1_AAM_Z( bCTriangle const *, bCStretch const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCUnitedRay@@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCUnitedRay const &,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCUnitedRay__AAM_Z( bCTriangle const *, bCUnitedRay const *, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NABVbCUnitedRay@@W4bESides@1@AAM@Z public: bool __thiscall bCTriangle::Intersects(bCUnitedRay const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NABVbCUnitedRay__W4bESides_1_AAM_Z( bCTriangle const *, bCUnitedRay const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCTriangle@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCTriangle::Intersects(bCVector const * const)const
+GEBool __thiscall _Intersects_bCTriangle__QBE_NQBVbCVector___Z( bCTriangle const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?InvTransform@bCTriangle@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCTriangle::InvTransform(bCMatrix3 const &)
+void __thiscall _InvTransform_bCTriangle__QAEXABVbCMatrix3___Z( bCTriangle *, bCMatrix3 const * );
+// ?InvTransform@bCTriangle@@QAEXABVbCMatrix@@@Z public: void __thiscall bCTriangle::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCTriangle__QAEXABVbCMatrix___Z( bCTriangle *, bCMatrix const * );
+// ?InvTranslate@bCTriangle@@QAEXABVbCVector@@@Z public: void __thiscall bCTriangle::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCTriangle__QAEXABVbCVector___Z( bCTriangle *, bCVector const * );
+// ?IsDegenerated@bCTriangle@@QBE_NXZ public: bool __thiscall bCTriangle::IsDegenerated(void)const
+GEBool __thiscall _IsDegenerated_bCTriangle__QBE_NXZ( bCTriangle const * );
+// ?Separates@bCTriangle@@QBE_NPBVbCVector@@HABV2@@Z public: bool __thiscall bCTriangle::Separates(bCVector const *,int,bCVector const &)const
+GEBool __thiscall _Separates_bCTriangle__QBE_NPBVbCVector__HABV2__Z( bCTriangle const *, bCVector const *, GEInt, bCVector const * );
+// ?SetA@bCTriangle@@QAEXABVbCVector@@@Z public: void __thiscall bCTriangle::SetA(bCVector const &)
+void __thiscall _SetA_bCTriangle__QAEXABVbCVector___Z( bCTriangle *, bCVector const * );
+// ?SetB@bCTriangle@@QAEXABVbCVector@@@Z public: void __thiscall bCTriangle::SetB(bCVector const &)
+void __thiscall _SetB_bCTriangle__QAEXABVbCVector___Z( bCTriangle *, bCVector const * );
+// ?SetC@bCTriangle@@QAEXABVbCVector@@@Z public: void __thiscall bCTriangle::SetC(bCVector const &)
+void __thiscall _SetC_bCTriangle__QAEXABVbCVector___Z( bCTriangle *, bCVector const * );
+// ?SetTriangle@bCTriangle@@QAEXABV1@@Z public: void __thiscall bCTriangle::SetTriangle(bCTriangle const &)
+void __thiscall _SetTriangle_bCTriangle__QAEXABV1__Z( bCTriangle *, bCTriangle const * );
+// ?SetTriangle@bCTriangle@@QAEXABVbCVector@@00@Z public: void __thiscall bCTriangle::SetTriangle(bCVector const &,bCVector const &,bCVector const &)
+void __thiscall _SetTriangle_bCTriangle__QAEXABVbCVector__00_Z( bCTriangle *, bCVector const *, bCVector const *, bCVector const * );
+// ?SetTriangle@bCTriangle@@QAEXQAVbCVector@@@Z public: void __thiscall bCTriangle::SetTriangle(bCVector * const)
+void __thiscall _SetTriangle_bCTriangle__QAEXQAVbCVector___Z( bCTriangle *, bCVector [ bCTriangle_bEVector_Count ] );
+// ?Transform@bCTriangle@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCTriangle::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCTriangle__QAEXABVbCMatrix3___Z( bCTriangle *, bCMatrix3 const * );
+// ?Transform@bCTriangle@@QAEXABVbCMatrix@@@Z public: void __thiscall bCTriangle::Transform(bCMatrix const &)
+void __thiscall _Transform_bCTriangle__QAEXABVbCMatrix___Z( bCTriangle *, bCMatrix const * );
+// ?Translate@bCTriangle@@QAEXABVbCVector@@@Z public: void __thiscall bCTriangle::Translate(bCVector const &)
+void __thiscall _Translate_bCTriangle__QAEXABVbCVector___Z( bCTriangle *, bCVector const * );
+// ?m_fDummy@bCTriangle@@1MA protected: static float bCTriangle::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCTriangle__1MA;
