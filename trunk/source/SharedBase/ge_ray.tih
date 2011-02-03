@@ -1,0 +1,93 @@
+struct bCRay
+{
+    bCVector m_vecOrigin;
+    bCVector m_vecDirection;
+};
+// ??0bCRay@@QAE@ABV0@@Z public: __thiscall bCRay::bCRay(bCRay const &)
+bCRay * __thiscall __0bCRay__QAE_ABV0__Z( bCRay *, bCRay const * );
+// ??0bCRay@@QAE@ABVbCVector@@0@Z public: __thiscall bCRay::bCRay(bCVector const &,bCVector const &)
+bCRay * __thiscall __0bCRay__QAE_ABVbCVector__0_Z( bCRay *, bCVector const *, bCVector const * );
+// ??0bCRay@@QAE@PBV0@@Z public: __thiscall bCRay::bCRay(bCRay const *)
+bCRay * __thiscall __0bCRay__QAE_PBV0__Z( bCRay *, bCRay const * );
+// ??0bCRay@@QAE@XZ public: __thiscall bCRay::bCRay(void)
+bCRay * __thiscall __0bCRay__QAE_XZ( bCRay * );
+// ??1bCRay@@QAE@XZ public: __thiscall bCRay::~bCRay(void)
+void __thiscall __1bCRay__QAE_XZ( bCRay * );
+// ??4bCRay@@QAEABV0@ABV0@@Z public: bCRay const & __thiscall bCRay::operator=(bCRay const &)
+bCRay const * __thiscall __4bCRay__QAEABV0_ABV0__Z( bCRay *, bCRay const * );
+// ??5bCRay@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCRay::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCRay__QBEAAVbCOStream__AAV1__Z( bCRay const *, bCOStream * );
+// ??6bCRay@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCRay::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCRay__QAEAAVbCIStream__AAV1__Z( bCRay *, bCIStream * );
+// ??DbCRay@@QBE?AV0@ABVbCMatrix@@@Z public: bCRay __thiscall bCRay::operator*(bCMatrix const &)const
+bCRay * __thiscall __DbCRay__QBE_AV0_ABVbCMatrix___Z( bCRay const *, bCRay *, bCMatrix const * );
+// ??GbCRay@@QBE?AV0@ABVbCVector@@@Z public: bCRay __thiscall bCRay::operator-(bCVector const &)const
+bCRay * __thiscall __GbCRay__QBE_AV0_ABVbCVector___Z( bCRay const *, bCRay *, bCVector const * );
+// ??HbCRay@@QBE?AV0@ABVbCVector@@@Z public: bCRay __thiscall bCRay::operator+(bCVector const &)const
+bCRay * __thiscall __HbCRay__QBE_AV0_ABVbCVector___Z( bCRay const *, bCRay *, bCVector const * );
+// ??XbCRay@@QAEAAV0@ABVbCMatrix@@@Z public: bCRay & __thiscall bCRay::operator*=(bCMatrix const &)
+bCRay * __thiscall __XbCRay__QAEAAV0_ABVbCMatrix___Z( bCRay *, bCMatrix const * );
+// ??YbCRay@@QAEAAV0@ABVbCVector@@@Z public: bCRay & __thiscall bCRay::operator+=(bCVector const &)
+bCRay * __thiscall __YbCRay__QAEAAV0_ABVbCVector___Z( bCRay *, bCVector const * );
+// ??ZbCRay@@QAEAAV0@ABVbCVector@@@Z public: bCRay & __thiscall bCRay::operator-=(bCVector const &)
+bCRay * __thiscall __ZbCRay__QAEAAV0_ABVbCVector___Z( bCRay *, bCVector const * );
+// ?AccessDirection@bCRay@@IAEAAVbCVector@@XZ protected: bCVector & __thiscall bCRay::AccessDirection(void)
+bCVector * __thiscall _AccessDirection_bCRay__IAEAAVbCVector__XZ( bCRay * );
+// ?AccessOrigin@bCRay@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCRay::AccessOrigin(void)
+bCVector * __thiscall _AccessOrigin_bCRay__QAEAAVbCVector__XZ( bCRay * );
+// ?GetDirection@bCRay@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCRay::GetDirection(void)const
+bCVector const * __thiscall _GetDirection_bCRay__QBEABVbCVector__XZ( bCRay const * );
+// ?GetDirection@bCRay@@QBEXAAVbCVector@@@Z public: void __thiscall bCRay::GetDirection(bCVector &)const
+void __thiscall _GetDirection_bCRay__QBEXAAVbCVector___Z( bCRay const *, bCVector * );
+// ?GetIntersectionDistance@bCRay@@QBEMABVbCBox@@@Z public: float __thiscall bCRay::GetIntersectionDistance(bCBox const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCRay__QBEMABVbCBox___Z( bCRay const *, bCBox const * );
+// ?GetIntersectionDistance@bCRay@@QBEMABVbCPlane@@@Z public: float __thiscall bCRay::GetIntersectionDistance(bCPlane const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCRay__QBEMABVbCPlane___Z( bCRay const *, bCPlane const * );
+// ?GetIntersectionDistance@bCRay@@QBEMABVbCTriangle@@@Z public: float __thiscall bCRay::GetIntersectionDistance(bCTriangle const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCRay__QBEMABVbCTriangle___Z( bCRay const *, bCTriangle const * );
+// ?GetIntersectionDistance@bCRay@@QBEMQBVbCVector@@@Z public: float __thiscall bCRay::GetIntersectionDistance(bCVector const * const)const
+GEFloat __thiscall _GetIntersectionDistance_bCRay__QBEMQBVbCVector___Z( bCRay const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?GetOrigin@bCRay@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCRay::GetOrigin(void)const
+bCVector const * __thiscall _GetOrigin_bCRay__QBEABVbCVector__XZ( bCRay const * );
+// ?GetOrigin@bCRay@@QBEXAAVbCVector@@@Z public: void __thiscall bCRay::GetOrigin(bCVector &)const
+void __thiscall _GetOrigin_bCRay__QBEXAAVbCVector___Z( bCRay const *, bCVector * );
+// ?GetPoint@bCRay@@QBE?AVbCVector@@M@Z public: bCVector __thiscall bCRay::GetPoint(float)const
+bCVector * __thiscall _GetPoint_bCRay__QBE_AVbCVector__M_Z( bCRay const *, bCVector *, GEFloat );
+// ?GetPoint@bCRay@@QBEXAAVbCVector@@M@Z public: void __thiscall bCRay::GetPoint(bCVector &,float)const
+void __thiscall _GetPoint_bCRay__QBEXAAVbCVector__M_Z( bCRay const *, bCVector *, GEFloat );
+// ?Intersects@bCRay@@QBE_NABVbCBox@@AAM@Z public: bool __thiscall bCRay::Intersects(bCBox const &,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCBox__AAM_Z( bCRay const *, bCBox const *, GEFloat * );
+// ?Intersects@bCRay@@QBE_NABVbCFrustum@@AAM@Z public: bool __thiscall bCRay::Intersects(bCFrustum const &,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCFrustum__AAM_Z( bCRay const *, bCFrustum const *, GEFloat * );
+// ?Intersects@bCRay@@QBE_NABVbCPlane@@AAM@Z public: bool __thiscall bCRay::Intersects(bCPlane const &,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCPlane__AAM_Z( bCRay const *, bCPlane const *, GEFloat * );
+// ?Intersects@bCRay@@QBE_NABVbCSphere@@AAM@Z public: bool __thiscall bCRay::Intersects(bCSphere const &,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCSphere__AAM_Z( bCRay const *, bCSphere const *, GEFloat * );
+// ?Intersects@bCRay@@QBE_NABVbCTriangle@@AAM@Z public: bool __thiscall bCRay::Intersects(bCTriangle const &,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCTriangle__AAM_Z( bCRay const *, bCTriangle const *, GEFloat * );
+// ?Intersects@bCRay@@QBE_NABVbCTriangle@@W4bESides@2@AAM@Z public: bool __thiscall bCRay::Intersects(bCTriangle const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NABVbCTriangle__W4bESides_2_AAM_Z( bCRay const *, bCTriangle const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCRay@@QBE_NQBVbCVector@@AAM@Z public: bool __thiscall bCRay::Intersects(bCVector const * const,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NQBVbCVector__AAM_Z( bCRay const *, bCVector const [ bCTriangle_bEVector_Count ], GEFloat * );
+// ?Intersects@bCRay@@QBE_NQBVbCVector@@W4bESides@bCTriangle@@AAM@Z public: bool __thiscall bCRay::Intersects(bCVector const * const,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCRay__QBE_NQBVbCVector__W4bESides_bCTriangle__AAM_Z( bCRay const *, bCVector const [ bCTriangle_bEVector_Count ], bCTriangle_bESides, GEFloat * );
+// ?InvTransform@bCRay@@QAEXABVbCMatrix@@@Z public: void __thiscall bCRay::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCRay__QAEXABVbCMatrix___Z( bCRay *, bCMatrix const * );
+// ?InvTranslate@bCRay@@QAEXABVbCVector@@@Z public: void __thiscall bCRay::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCRay__QAEXABVbCVector___Z( bCRay *, bCVector const * );
+// ?SetDirection@bCRay@@QAEXABVbCVector@@@Z public: void __thiscall bCRay::SetDirection(bCVector const &)
+void __thiscall _SetDirection_bCRay__QAEXABVbCVector___Z( bCRay *, bCVector const * );
+// ?SetOrigin@bCRay@@QAEXABVbCVector@@@Z public: void __thiscall bCRay::SetOrigin(bCVector const &)
+void __thiscall _SetOrigin_bCRay__QAEXABVbCVector___Z( bCRay *, bCVector const * );
+// ?SetRay@bCRay@@QAEXABV1@@Z public: void __thiscall bCRay::SetRay(bCRay const &)
+void __thiscall _SetRay_bCRay__QAEXABV1__Z( bCRay *, bCRay const * );
+// ?SetRay@bCRay@@QAEXABVbCVector@@0@Z public: void __thiscall bCRay::SetRay(bCVector const &,bCVector const &)
+void __thiscall _SetRay_bCRay__QAEXABVbCVector__0_Z( bCRay *, bCVector const *, bCVector const * );
+// ?SetRay@bCRay@@QAEXPBV1@@Z public: void __thiscall bCRay::SetRay(bCRay const *)
+void __thiscall _SetRay_bCRay__QAEXPBV1__Z( bCRay *, bCRay const * );
+// ?Transform@bCRay@@QAEXABVbCMatrix@@@Z public: void __thiscall bCRay::Transform(bCMatrix const &)
+void __thiscall _Transform_bCRay__QAEXABVbCMatrix___Z( bCRay *, bCMatrix const * );
+// ?Translate@bCRay@@QAEXABVbCVector@@@Z public: void __thiscall bCRay::Translate(bCVector const &)
+void __thiscall _Translate_bCRay__QAEXABVbCVector___Z( bCRay *, bCVector const * );
+// ?m_fDummy@bCRay@@1MA protected: static float bCRay::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCRay__1MA;
