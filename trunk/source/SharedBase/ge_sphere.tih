@@ -1,0 +1,211 @@
+struct bCSphere
+{
+    GEFloat  m_fRadius;
+    bCVector m_vecPosition;
+};
+bTVolume( bCSphere )
+// ??0bCSphere@@QAE@ABV0@@Z public: __thiscall bCSphere::bCSphere(bCSphere const &)
+bCSphere * __thiscall __0bCSphere__QAE_ABV0__Z( bCSphere *, bCSphere const * );
+// ??0bCSphere@@QAE@ABVbCVector@@M@Z public: __thiscall bCSphere::bCSphere(bCVector const &,float)
+bCSphere * __thiscall __0bCSphere__QAE_ABVbCVector__M_Z( bCSphere *, bCVector const *, GEFloat );
+// ??0bCSphere@@QAE@XZ public: __thiscall bCSphere::bCSphere(void)
+bCSphere * __thiscall __0bCSphere__QAE_XZ( bCSphere * );
+// ??1bCSphere@@QAE@XZ public: __thiscall bCSphere::~bCSphere(void)
+void __thiscall __1bCSphere__QAE_XZ( bCSphere * );
+// ??4bCSphere@@QAEABV0@ABV0@@Z public: bCSphere const & __thiscall bCSphere::operator=(bCSphere const &)
+bCSphere const * __thiscall __4bCSphere__QAEABV0_ABV0__Z( bCSphere *, bCSphere const * );
+// ??5bCSphere@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCSphere::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCSphere__QBEAAVbCOStream__AAV1__Z( bCSphere const *, bCOStream * );
+// ??6bCSphere@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCSphere::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCSphere__QAEAAVbCIStream__AAV1__Z( bCSphere *, bCIStream * );
+// ??8bCSphere@@QBE_NABV0@@Z public: bool __thiscall bCSphere::operator==(bCSphere const &)const
+GEBool __thiscall __8bCSphere__QBE_NABV0__Z( bCSphere const *, bCSphere const * );
+// ??9bCSphere@@QBE_NABV0@@Z public: bool __thiscall bCSphere::operator!=(bCSphere const &)const
+GEBool __thiscall __9bCSphere__QBE_NABV0__Z( bCSphere const *, bCSphere const * );
+// ??DbCSphere@@QBE?AV0@ABVbCMatrix3@@@Z public: bCSphere __thiscall bCSphere::operator*(bCMatrix3 const &)const
+bCSphere * __thiscall __DbCSphere__QBE_AV0_ABVbCMatrix3___Z( bCSphere const *, bCSphere *, bCMatrix3 const * );
+// ??DbCSphere@@QBE?AV0@ABVbCMatrix@@@Z public: bCSphere __thiscall bCSphere::operator*(bCMatrix const &)const
+bCSphere * __thiscall __DbCSphere__QBE_AV0_ABVbCMatrix___Z( bCSphere const *, bCSphere *, bCMatrix const * );
+// ??DbCSphere@@QBE?AV0@M@Z public: bCSphere __thiscall bCSphere::operator*(float)const
+bCSphere * __thiscall __DbCSphere__QBE_AV0_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ??GbCSphere@@QBE?AV0@ABVbCVector@@@Z public: bCSphere __thiscall bCSphere::operator-(bCVector const &)const
+bCSphere * __thiscall __GbCSphere__QBE_AV0_ABVbCVector___Z( bCSphere const *, bCSphere *, bCVector const * );
+// ??HbCSphere@@QBE?AV0@ABVbCVector@@@Z public: bCSphere __thiscall bCSphere::operator+(bCVector const &)const
+bCSphere * __thiscall __HbCSphere__QBE_AV0_ABVbCVector___Z( bCSphere const *, bCSphere *, bCVector const * );
+// ??KbCSphere@@QBE?AV0@M@Z public: bCSphere __thiscall bCSphere::operator/(float)const
+bCSphere * __thiscall __KbCSphere__QBE_AV0_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ??XbCSphere@@QAEAAV0@ABVbCMatrix3@@@Z public: bCSphere & __thiscall bCSphere::operator*=(bCMatrix3 const &)
+bCSphere * __thiscall __XbCSphere__QAEAAV0_ABVbCMatrix3___Z( bCSphere *, bCMatrix3 const * );
+// ??XbCSphere@@QAEAAV0@ABVbCMatrix@@@Z public: bCSphere & __thiscall bCSphere::operator*=(bCMatrix const &)
+bCSphere * __thiscall __XbCSphere__QAEAAV0_ABVbCMatrix___Z( bCSphere *, bCMatrix const * );
+// ??XbCSphere@@QAEAAV0@M@Z public: bCSphere & __thiscall bCSphere::operator*=(float)
+bCSphere * __thiscall __XbCSphere__QAEAAV0_M_Z( bCSphere *, GEFloat );
+// ??YbCSphere@@QAEAAV0@ABVbCVector@@@Z public: bCSphere & __thiscall bCSphere::operator+=(bCVector const &)
+bCSphere * __thiscall __YbCSphere__QAEAAV0_ABVbCVector___Z( bCSphere *, bCVector const * );
+// ??ZbCSphere@@QAEAAV0@ABVbCVector@@@Z public: bCSphere & __thiscall bCSphere::operator-=(bCVector const &)
+ bCSphere * __thiscall __ZbCSphere__QAEAAV0_ABVbCVector___Z( bCSphere *, bCVector const * );
+// ??_0bCSphere@@QAEAAV0@M@Z public: bCSphere & __thiscall bCSphere::operator/=(float)
+bCSphere * __thiscall ___0bCSphere__QAEAAV0_M_Z( bCSphere *, GEFloat );
+// ??_4bCSphere@@QAEAAV0@ABV0@@Z public: bCSphere & __thiscall bCSphere::operator&=(bCSphere const &)
+bCSphere * __thiscall ___4bCSphere__QAEAAV0_ABV0__Z( bCSphere *, bCSphere const * );
+// ??_5bCSphere@@QAEAAV0@ABV0@@Z public: bCSphere & __thiscall bCSphere::operator|=(bCSphere const &)
+bCSphere * __thiscall ___5bCSphere__QAEAAV0_ABV0__Z( bCSphere *, bCSphere const * );
+// ??_5bCSphere@@QAEAAV0@ABVbCVector@@@Z public: bCSphere & __thiscall bCSphere::operator|=(bCVector const &)
+bCSphere * __thiscall ___5bCSphere__QAEAAV0_ABVbCVector___Z( bCSphere *, bCVector const * );
+// ?AccessPosition@bCSphere@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCSphere::AccessPosition(void)
+bCVector * __thiscall _AccessPosition_bCSphere__QAEAAVbCVector__XZ( bCSphere * );
+// ?AccessRadius@bCSphere@@QAEAAMXZ public: float & __thiscall bCSphere::AccessRadius(void)
+GEFloat * __thiscall _AccessRadius_bCSphere__QAEAAMXZ( bCSphere * );
+// ?Clear@bCSphere@@QAEXXZ public: void __thiscall bCSphere::Clear(void)
+void __thiscall _Clear_bCSphere__QAEXXZ( bCSphere * );
+// ?Contains@bCSphere@@QBE_NABV1@@Z public: bool __thiscall bCSphere::Contains(bCSphere const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABV1__Z( bCSphere const *, bCSphere const * );
+// ?Contains@bCSphere@@QBE_NABVbCBox@@@Z public: bool __thiscall bCSphere::Contains(bCBox const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCBox___Z( bCSphere const *, bCBox const * );
+// ?Contains@bCSphere@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCSphere::Contains(bCFrustum const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCFrustum___Z( bCSphere const *, bCFrustum const * );
+// ?Contains@bCSphere@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCSphere::Contains(bCStretch const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCStretch___Z( bCSphere const *, bCStretch const * );
+// ?Contains@bCSphere@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCSphere::Contains(bCTriangle const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCTriangle___Z( bCSphere const *, bCTriangle const * );
+// ?Contains@bCSphere@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCSphere::Contains(bCUnitedRay const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCUnitedRay___Z( bCSphere const *, bCUnitedRay const * );
+// ?Contains@bCSphere@@QBE_NABVbCVector@@@Z public: bool __thiscall bCSphere::Contains(bCVector const &)const
+GEBool __thiscall _Contains_bCSphere__QBE_NABVbCVector___Z( bCSphere const *, bCVector const * );
+// ?Contains@bCSphere@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCSphere::Contains(bCVector const * const)const
+GEBool __thiscall _Contains_bCSphere__QBE_NQBVbCVector___Z( bCSphere const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?Cull@bCSphere@@QBE_NABV1@@Z public: bool __thiscall bCSphere::Cull(bCSphere const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABV1__Z( bCSphere const *, bCSphere const * );
+// ?Cull@bCSphere@@QBE_NABVbCBox@@@Z public: bool __thiscall bCSphere::Cull(bCBox const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCBox___Z( bCSphere const *, bCBox const * );
+// ?Cull@bCSphere@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCSphere::Cull(bCFrustum const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCFrustum___Z( bCSphere const *, bCFrustum const * );
+// ?Cull@bCSphere@@QBE_NABVbCLine@@@Z public: bool __thiscall bCSphere::Cull(bCLine const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCLine___Z( bCSphere const *, bCLine const * );
+// ?Cull@bCSphere@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCSphere::Cull(bCPlane const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCPlane___Z( bCSphere const *, bCPlane const * );
+// ?Cull@bCSphere@@QBE_NABVbCRay@@@Z public: bool __thiscall bCSphere::Cull(bCRay const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCRay___Z( bCSphere const *, bCRay const * );
+// ?Cull@bCSphere@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCSphere::Cull(bCStretch const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCStretch___Z( bCSphere const *, bCStretch const * );
+// ?Cull@bCSphere@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCSphere::Cull(bCTriangle const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCTriangle___Z( bCSphere const *, bCTriangle const * );
+// ?Cull@bCSphere@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCSphere::Cull(bCUnitedRay const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCUnitedRay___Z( bCSphere const *, bCUnitedRay const * );
+// ?Cull@bCSphere@@QBE_NABVbCVector@@00@Z public: bool __thiscall bCSphere::Cull(bCVector const &,bCVector const &,bCVector const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCVector__00_Z( bCSphere const *, bCVector const *, bCVector const *, bCVector const * );
+// ?Cull@bCSphere@@QBE_NABVbCVector@@@Z public: bool __thiscall bCSphere::Cull(bCVector const &)const
+GEBool __thiscall _Cull_bCSphere__QBE_NABVbCVector___Z( bCSphere const *, bCVector const * );
+// ?Cull@bCSphere@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCSphere::Cull(bCVector const * const)const
+GEBool __thiscall _Cull_bCSphere__QBE_NQBVbCVector___Z( bCSphere const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?GetIntersected@bCSphere@@QBE?AV1@ABV1@@Z public: bCSphere __thiscall bCSphere::GetIntersected(bCSphere const &)const
+bCSphere * __thiscall _GetIntersected_bCSphere__QBE_AV1_ABV1__Z( bCSphere const *, bCSphere *, bCSphere const * );
+// ?GetIntersectionDistance@bCSphere@@QBEMABVbCRay@@@Z public: float __thiscall bCSphere::GetIntersectionDistance(bCRay const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCSphere__QBEMABVbCRay___Z( bCSphere const *, bCRay const * );
+// ?GetInvScaled@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetInvScaled(float)const
+bCSphere * __thiscall _GetInvScaled_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?GetInvTranslated@bCSphere@@QBE?AV1@ABVbCVector@@@Z public: bCSphere __thiscall bCSphere::GetInvTranslated(bCVector const &)const
+bCSphere * __thiscall _GetInvTranslated_bCSphere__QBE_AV1_ABVbCVector___Z( bCSphere const *, bCSphere *, bCVector const * );
+// ?GetInvTranslated@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetInvTranslated(float)const
+bCSphere * __thiscall _GetInvTranslated_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?GetMerged@bCSphere@@QBE?AV1@ABV1@@Z public: bCSphere __thiscall bCSphere::GetMerged(bCSphere const &)const
+bCSphere * __thiscall _GetMerged_bCSphere__QBE_AV1_ABV1__Z( bCSphere const *, bCSphere *, bCSphere const * );
+// ?GetMerged@bCSphere@@QBE?AV1@ABVbCVector@@@Z public: bCSphere __thiscall bCSphere::GetMerged(bCVector const &)const
+bCSphere * __thiscall _GetMerged_bCSphere__QBE_AV1_ABVbCVector___Z( bCSphere const *, bCSphere *, bCVector const * );
+// ?GetPosition@bCSphere@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCSphere::GetPosition(void)const
+bCVector const * __thiscall _GetPosition_bCSphere__QBEABVbCVector__XZ( bCSphere const * );
+// ?GetPosition@bCSphere@@QBEXAAVbCVector@@@Z public: void __thiscall bCSphere::GetPosition(bCVector &)const
+void __thiscall _GetPosition_bCSphere__QBEXAAVbCVector___Z( bCSphere const *, bCVector * );
+// ?GetRadius@bCSphere@@QBEMXZ public: float __thiscall bCSphere::GetRadius(void)const
+GEFloat __thiscall _GetRadius_bCSphere__QBEMXZ( bCSphere const * );
+// ?GetRadius@bCSphere@@QBEXAAM@Z public: void __thiscall bCSphere::GetRadius(float &)const
+void __thiscall _GetRadius_bCSphere__QBEXAAM_Z( bCSphere const *, GEFloat * );
+// ?GetScaled@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetScaled(float)const
+bCSphere * __thiscall _GetScaled_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?GetShrunk@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetShrunk(float)const
+bCSphere * __thiscall _GetShrunk_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?GetTransformed@bCSphere@@QBE?AV1@ABVbCMatrix3@@@Z public: bCSphere __thiscall bCSphere::GetTransformed(bCMatrix3 const &)const
+bCSphere * __thiscall _GetTransformed_bCSphere__QBE_AV1_ABVbCMatrix3___Z( bCSphere const *, bCSphere *, bCMatrix3 const * );
+// ?GetTransformed@bCSphere@@QBE?AV1@ABVbCMatrix@@@Z public: bCSphere __thiscall bCSphere::GetTransformed(bCMatrix const &)const
+bCSphere * __thiscall _GetTransformed_bCSphere__QBE_AV1_ABVbCMatrix___Z( bCSphere const *, bCSphere *, bCMatrix const * );
+// ?GetTranslated@bCSphere@@QBE?AV1@ABVbCVector@@@Z public: bCSphere __thiscall bCSphere::GetTranslated(bCVector const &)const
+bCSphere * __thiscall _GetTranslated_bCSphere__QBE_AV1_ABVbCVector___Z( bCSphere const *, bCSphere *, bCVector const * );
+// ?GetTranslated@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetTranslated(float)const
+bCSphere * __thiscall _GetTranslated_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?GetVolume@bCSphere@@QBEMXZ public: float __thiscall bCSphere::GetVolume(void)const
+GEFloat __thiscall _GetVolume_bCSphere__QBEMXZ( bCSphere const * );
+// ?GetWidened@bCSphere@@QBE?AV1@M@Z public: bCSphere __thiscall bCSphere::GetWidened(float)const
+bCSphere * __thiscall _GetWidened_bCSphere__QBE_AV1_M_Z( bCSphere const *, bCSphere *, GEFloat );
+// ?Intersect@bCSphere@@QAEXABV1@@Z public: void __thiscall bCSphere::Intersect(bCSphere const &)
+void __thiscall _Intersect_bCSphere__QAEXABV1__Z( bCSphere *, bCSphere const * );
+// ?Intersects@bCSphere@@QBE_NABV1@@Z public: bool __thiscall bCSphere::Intersects(bCSphere const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABV1__Z( bCSphere const *, bCSphere const * );
+// ?Intersects@bCSphere@@QBE_NABVbCBox@@@Z public: bool __thiscall bCSphere::Intersects(bCBox const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCBox___Z( bCSphere const *, bCBox const * );
+// ?Intersects@bCSphere@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCSphere::Intersects(bCFrustum const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCFrustum___Z( bCSphere const *, bCFrustum const * );
+// ?Intersects@bCSphere@@QBE_NABVbCLine@@AAM@Z public: bool __thiscall bCSphere::Intersects(bCLine const &,float &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCLine__AAM_Z( bCSphere const *, bCLine const *, GEFloat * );
+// ?Intersects@bCSphere@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCSphere::Intersects(bCPlane const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCPlane___Z( bCSphere const *, bCPlane const * );
+// ?Intersects@bCSphere@@QBE_NABVbCRay@@AAM@Z public: bool __thiscall bCSphere::Intersects(bCRay const &,float &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCRay__AAM_Z( bCSphere const *, bCRay const *, GEFloat * );
+// ?Intersects@bCSphere@@QBE_NABVbCStretch@@AAM@Z public: bool __thiscall bCSphere::Intersects(bCStretch const &,float &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCStretch__AAM_Z( bCSphere const *, bCStretch const *, GEFloat * );
+// ?Intersects@bCSphere@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCSphere::Intersects(bCTriangle const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCTriangle___Z( bCSphere const *, bCTriangle const * );
+// ?Intersects@bCSphere@@QBE_NABVbCUnitedRay@@AAM@Z public: bool __thiscall bCSphere::Intersects(bCUnitedRay const &,float &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCUnitedRay__AAM_Z( bCSphere const *, bCUnitedRay const *, GEFloat * );
+// ?Intersects@bCSphere@@QBE_NABVbCVector@@00@Z public: bool __thiscall bCSphere::Intersects(bCVector const &,bCVector const &,bCVector const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCVector__00_Z( bCSphere const *, bCVector const *, bCVector const *, bCVector const * );
+// ?Intersects@bCSphere@@QBE_NABVbCVector@@@Z public: bool __thiscall bCSphere::Intersects(bCVector const &)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NABVbCVector___Z( bCSphere const *, bCVector const * );
+// ?Intersects@bCSphere@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCSphere::Intersects(bCVector const * const)const
+GEBool __thiscall _Intersects_bCSphere__QBE_NQBVbCVector___Z( bCSphere const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?InvScale@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::InvScale(float)
+void __thiscall _InvScale_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?InvTranslate@bCSphere@@QAEXABVbCVector@@@Z public: void __thiscall bCSphere::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCSphere__QAEXABVbCVector___Z( bCSphere *, bCVector const * );
+// ?InvTranslate@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::InvTranslate(float)
+void __thiscall _InvTranslate_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?Invalidate@bCSphere@@QAEXXZ public: void __thiscall bCSphere::Invalidate(void)
+void __thiscall _Invalidate_bCSphere__QAEXXZ( bCSphere * );
+// ?IsEqual@bCSphere@@QBE_NABV1@@Z public: bool __thiscall bCSphere::IsEqual(bCSphere const &)const
+GEBool __thiscall _IsEqual_bCSphere__QBE_NABV1__Z( bCSphere const *, bCSphere const * );
+// ?IsValid@bCSphere@@QBE_NXZ public: bool __thiscall bCSphere::IsValid(void)const
+GEBool __thiscall _IsValid_bCSphere__QBE_NXZ( bCSphere const * );
+ // ?Merge@bCSphere@@QAEXABV1@@Z public: void __thiscall bCSphere::Merge(bCSphere const &)
+void __thiscall _Merge_bCSphere__QAEXABV1__Z( bCSphere *, bCSphere const * );
+// ?Merge@bCSphere@@QAEXABVbCVector@@@Z public: void __thiscall bCSphere::Merge(bCVector const &)
+void __thiscall _Merge_bCSphere__QAEXABVbCVector___Z( bCSphere *, bCVector const * );
+// ?Scale@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::Scale(float)
+void __thiscall _Scale_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?Separates@bCSphere@@QBE_NABVbCBox@@ABVbCVector@@@Z public: bool __thiscall bCSphere::Separates(bCBox const &,bCVector const &)const
+GEBool __thiscall _Separates_bCSphere__QBE_NABVbCBox__ABVbCVector___Z( bCSphere const *, bCBox const *, bCVector const * );
+// ?Separates@bCSphere@@QBE_NPBVbCVector@@HABV2@@Z public: bool __thiscall bCSphere::Separates(bCVector const *,int,bCVector const &)const
+GEBool __thiscall _Separates_bCSphere__QBE_NPBVbCVector__HABV2__Z( bCSphere const *, bCVector const *, GEInt, bCVector const * );
+// ?SetPosition@bCSphere@@QAEXABVbCVector@@@Z public: void __thiscall bCSphere::SetPosition(bCVector const &)
+void __thiscall _SetPosition_bCSphere__QAEXABVbCVector___Z( bCSphere *, bCVector const * );
+// ?SetRadius@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::SetRadius(float)
+void __thiscall _SetRadius_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?SetSphere@bCSphere@@QAEXABV1@@Z public: void __thiscall bCSphere::SetSphere(bCSphere const &)
+void __thiscall _SetSphere_bCSphere__QAEXABV1__Z( bCSphere *, bCSphere const * );
+// ?SetSphere@bCSphere@@QAEXABVbCVector@@M@Z public: void __thiscall bCSphere::SetSphere(bCVector const &,float)
+void __thiscall _SetSphere_bCSphere__QAEXABVbCVector__M_Z( bCSphere *, bCVector const *, GEFloat );
+// ?Shrink@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::Shrink(float)
+void __thiscall _Shrink_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?Transform@bCSphere@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCSphere::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCSphere__QAEXABVbCMatrix3___Z( bCSphere *, bCMatrix3 const * );
+// ?Transform@bCSphere@@QAEXABVbCMatrix@@@Z public: void __thiscall bCSphere::Transform(bCMatrix const &)
+void __thiscall _Transform_bCSphere__QAEXABVbCMatrix___Z( bCSphere *, bCMatrix const * );
+// ?Translate@bCSphere@@QAEXABVbCVector@@@Z public: void __thiscall bCSphere::Translate(bCVector const &)
+void __thiscall _Translate_bCSphere__QAEXABVbCVector___Z( bCSphere *, bCVector const * );
+// ?Translate@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::Translate(float)
+void __thiscall _Translate_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?Widen@bCSphere@@QAEXM@Z public: void __thiscall bCSphere::Widen(float)
+void __thiscall _Widen_bCSphere__QAEXM_Z( bCSphere *, GEFloat );
+// ?m_fDummy@bCSphere@@1MA protected: static float bCSphere::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCSphere__1MA;
+
+// ?GetCenter@?$bTVolume@VbCSphere@@@@UBEXAAVbCVector@@@Z public: virtual void __thiscall bTVolume<bCSphere>::GetCenter(bCVector &)const
+void __thiscall _GetCenter___bTVolume_VbCSphere____UBEXAAVbCVector___Z( bTVolume_bCSphere const *, bCVector * );

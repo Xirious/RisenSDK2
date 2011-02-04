@@ -1,0 +1,183 @@
+struct bCStretch
+{
+    bCVector m_vecStart;
+    bCVector m_vecEnd;
+};
+// ??0bCStretch@@QAE@ABV0@@Z public: __thiscall bCStretch::bCStretch(bCStretch const &)
+bCStretch * __thiscall __0bCStretch__QAE_ABV0__Z( bCStretch *, bCStretch const * );
+// ??0bCStretch@@QAE@XZ public: __thiscall bCStretch::bCStretch(void)
+bCStretch * __thiscall __0bCStretch__QAE_XZ( bCStretch * );
+// ??1bCStretch@@QAE@XZ public: __thiscall bCStretch::~bCStretch(void)
+void __thiscall __1bCStretch__QAE_XZ( bCStretch * );
+// ??4bCStretch@@QAEAAV0@ABV0@@Z public: bCStretch & __thiscall bCStretch::operator=(bCStretch const &)
+bCStretch * __thiscall __4bCStretch__QAEAAV0_ABV0__Z( bCStretch *, bCStretch const * );
+// ??5bCStretch@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCStretch::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCStretch__QBEAAVbCOStream__AAV1__Z( bCStretch const *, bCOStream * );
+// ??6bCStretch@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCStretch::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCStretch__QAEAAVbCIStream__AAV1__Z( bCStretch *, bCIStream * );
+// ??DbCStretch@@QBE?AV0@ABVbCMatrix3@@@Z public: bCStretch __thiscall bCStretch::operator*(bCMatrix3 const &)const
+bCStretch * __thiscall __DbCStretch__QBE_AV0_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ??DbCStretch@@QBE?AV0@ABVbCMatrix@@@Z public: bCStretch __thiscall bCStretch::operator*(bCMatrix const &)const
+bCStretch * __thiscall __DbCStretch__QBE_AV0_ABVbCMatrix___Z( bCStretch const *, bCStretch *, bCMatrix const * );
+// ??DbCStretch@@QBE?AV0@M@Z public: bCStretch __thiscall bCStretch::operator*(float)const
+bCStretch * __thiscall __DbCStretch__QBE_AV0_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ??GbCStretch@@QBE?AV0@ABV0@@Z public: bCStretch __thiscall bCStretch::operator-(bCStretch const &)const
+bCStretch * __thiscall __GbCStretch__QBE_AV0_ABV0__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ??GbCStretch@@QBE?AV0@ABVbCVector@@@Z public: bCStretch __thiscall bCStretch::operator-(bCVector const &)const
+bCStretch * __thiscall __GbCStretch__QBE_AV0_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ??GbCStretch@@QBE?AV0@XZ public: bCStretch __thiscall bCStretch::operator-(void)const
+bCStretch * __thiscall __GbCStretch__QBE_AV0_XZ( bCStretch const *, bCStretch * );
+// ??HbCStretch@@QBE?AV0@ABV0@@Z public: bCStretch __thiscall bCStretch::operator+(bCStretch const &)const
+bCStretch * __thiscall __HbCStretch__QBE_AV0_ABV0__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ??HbCStretch@@QBE?AV0@ABVbCVector@@@Z public: bCStretch __thiscall bCStretch::operator+(bCVector const &)const
+bCStretch * __thiscall __HbCStretch__QBE_AV0_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ??KbCStretch@@QBE?AV0@ABVbCMatrix3@@@Z public: bCStretch __thiscall bCStretch::operator/(bCMatrix3 const &)const
+bCStretch * __thiscall __KbCStretch__QBE_AV0_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ??KbCStretch@@QBE?AV0@ABVbCMatrix@@@Z public: bCStretch __thiscall bCStretch::operator/(bCMatrix const &)const
+bCStretch * __thiscall __KbCStretch__QBE_AV0_ABVbCMatrix___Z( bCStretch const *, bCStretch *, bCMatrix const * );
+// ??KbCStretch@@QBE?AV0@M@Z public: bCStretch __thiscall bCStretch::operator/(float)const
+bCStretch * __thiscall __KbCStretch__QBE_AV0_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ??XbCStretch@@QAEAAV0@M@Z public: bCStretch & __thiscall bCStretch::operator*=(float)
+bCStretch * __thiscall __XbCStretch__QAEAAV0_M_Z( bCStretch *, GEFloat );
+// ??YbCStretch@@QAEAAV0@ABV0@@Z public: bCStretch & __thiscall bCStretch::operator+=(bCStretch const &)
+bCStretch * __thiscall __YbCStretch__QAEAAV0_ABV0__Z( bCStretch *, bCStretch const * );
+// ??YbCStretch@@QAEAAV0@ABVbCVector@@@Z public: bCStretch & __thiscall bCStretch::operator+=(bCVector const &)
+bCStretch * __thiscall __YbCStretch__QAEAAV0_ABVbCVector___Z( bCStretch *, bCVector const * );
+// ??ZbCStretch@@QAEAAV0@ABV0@@Z public: bCStretch & __thiscall bCStretch::operator-=(bCStretch const &)
+bCStretch * __thiscall __ZbCStretch__QAEAAV0_ABV0__Z( bCStretch *, bCStretch const * );
+// ??ZbCStretch@@QAEAAV0@ABVbCVector@@@Z public: bCStretch & __thiscall bCStretch::operator-=(bCVector const &)
+bCStretch * __thiscall __ZbCStretch__QAEAAV0_ABVbCVector___Z( bCStretch *, bCVector const * );
+// ??_0bCStretch@@QAEAAV0@M@Z public: bCStretch & __thiscall bCStretch::operator/=(float)
+bCStretch * __thiscall ___0bCStretch__QAEAAV0_M_Z( bCStretch *, GEFloat );
+// ?AccessEnd@bCStretch@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCStretch::AccessEnd(void)
+bCVector * __thiscall _AccessEnd_bCStretch__QAEAAVbCVector__XZ( bCStretch * );
+// ?AccessStart@bCStretch@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCStretch::AccessStart(void)
+bCVector * __thiscall _AccessStart_bCStretch__QAEAAVbCVector__XZ( bCStretch * );
+// ?Add@bCStretch@@QAEXABV1@@Z public: void __thiscall bCStretch::Add(bCStretch const &)
+void __thiscall _Add_bCStretch__QAEXABV1__Z( bCStretch *, bCStretch const * );
+// ?Clear@bCStretch@@QAEXXZ public: void __thiscall bCStretch::Clear(void)
+void __thiscall _Clear_bCStretch__QAEXXZ( bCStretch * );
+// ?CopyFrom@bCStretch@@QAEXABV1@@Z public: void __thiscall bCStretch::CopyFrom(bCStretch const &)
+void __thiscall _CopyFrom_bCStretch__QAEXABV1__Z( bCStretch *, bCStretch const * );
+// ?CopyTo@bCStretch@@QBEXAAV1@@Z public: void __thiscall bCStretch::CopyTo(bCStretch &)const
+void __thiscall _CopyTo_bCStretch__QBEXAAV1__Z( bCStretch const *, bCStretch * );
+// ?GetDifference@bCStretch@@QBE?AV1@ABV1@@Z public: bCStretch __thiscall bCStretch::GetDifference(bCStretch const &)const
+bCStretch * __thiscall _GetDifference_bCStretch__QBE_AV1_ABV1__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ?GetDifference@bCStretch@@QBEXAAV1@ABV1@@Z public: void __thiscall bCStretch::GetDifference(bCStretch &,bCStretch const &)const
+void __thiscall _GetDifference_bCStretch__QBEXAAV1_ABV1__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ?GetDirection@bCStretch@@QBE?AVbCVector@@XZ public: bCVector __thiscall bCStretch::GetDirection(void)const
+bCVector * __thiscall _GetDirection_bCStretch__QBE_AVbCVector__XZ( bCStretch const *, bCVector * );
+// ?GetDirection@bCStretch@@QBEXAAVbCVector@@@Z public: void __thiscall bCStretch::GetDirection(bCVector &)const
+void __thiscall _GetDirection_bCStretch__QBEXAAVbCVector___Z( bCStretch const *, bCVector * );
+// ?GetEnd@bCStretch@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCStretch::GetEnd(void)const
+bCVector const * __thiscall _GetEnd_bCStretch__QBEABVbCVector__XZ( bCStretch const * );
+// ?GetEnd@bCStretch@@QBEXAAVbCVector@@@Z public: void __thiscall bCStretch::GetEnd(bCVector &)const
+void __thiscall _GetEnd_bCStretch__QBEXAAVbCVector___Z( bCStretch const *, bCVector * );
+// ?GetIntersectionDistance@bCStretch@@QBEMABVbCBox@@@Z public: float __thiscall bCStretch::GetIntersectionDistance(bCBox const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCStretch__QBEMABVbCBox___Z( bCStretch const *, bCBox const * );
+// ?GetIntersectionDistance@bCStretch@@QBEMABVbCPlane@@@Z public: float __thiscall bCStretch::GetIntersectionDistance(bCPlane const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCStretch__QBEMABVbCPlane___Z( bCStretch const *, bCPlane const * );
+// ?GetIntersectionDistance@bCStretch@@QBEMABVbCSphere@@@Z public: float __thiscall bCStretch::GetIntersectionDistance(bCSphere const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCStretch__QBEMABVbCSphere___Z( bCStretch const *, bCSphere const * );
+// ?GetIntersectionDistance@bCStretch@@QBEMABVbCTriangle@@@Z public: float __thiscall bCStretch::GetIntersectionDistance(bCTriangle const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCStretch__QBEMABVbCTriangle___Z( bCStretch const *, bCTriangle const * );
+// ?GetIntersectionDistance@bCStretch@@QBEMQAVbCVector@@@Z public: float __thiscall bCStretch::GetIntersectionDistance(bCVector * const)const
+GEFloat __thiscall _GetIntersectionDistance_bCStretch__QBEMQAVbCVector___Z( bCStretch const *, bCVector [ bCTriangle_bEVector_Count ] );
+// ?GetInvScaled@bCStretch@@QBE?AV1@M@Z public: bCStretch __thiscall bCStretch::GetInvScaled(float)const
+bCStretch * __thiscall _GetInvScaled_bCStretch__QBE_AV1_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ?GetInvScaled@bCStretch@@QBEXAAV1@M@Z public: void __thiscall bCStretch::GetInvScaled(bCStretch &,float)const
+void __thiscall _GetInvScaled_bCStretch__QBEXAAV1_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ?GetInvTransformed@bCStretch@@QBE?AV1@ABVbCMatrix3@@@Z public: bCStretch __thiscall bCStretch::GetInvTransformed(bCMatrix3 const &)const
+bCStretch * __thiscall _GetInvTransformed_bCStretch__QBE_AV1_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ?GetInvTransformed@bCStretch@@QBE?AV1@ABVbCMatrix@@@Z public: bCStretch __thiscall bCStretch::GetInvTransformed(bCMatrix const &)const
+bCStretch * __thiscall _GetInvTransformed_bCStretch__QBE_AV1_ABVbCMatrix___Z( bCStretch const *, bCStretch *, bCMatrix const * );
+// ?GetInvTransformed@bCStretch@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCStretch::GetInvTransformed(bCStretch &,bCMatrix3 const &)const
+void __thiscall _GetInvTransformed_bCStretch__QBEXAAV1_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ?GetInvTransformed@bCStretch@@QBEXAAV1@VbCMatrix3@@@Z public: void __thiscall bCStretch::GetInvTransformed(bCStretch &,bCMatrix3)const
+void __thiscall _GetInvTransformed_bCStretch__QBEXAAV1_VbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 );
+// ?GetInvTranslated@bCStretch@@QBE?AV1@ABVbCVector@@@Z public: bCStretch __thiscall bCStretch::GetInvTranslated(bCVector const &)const
+bCStretch * __thiscall _GetInvTranslated_bCStretch__QBE_AV1_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ?GetInvTranslated@bCStretch@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCStretch::GetInvTranslated(bCStretch &,bCVector const &)const
+void __thiscall _GetInvTranslated_bCStretch__QBEXAAV1_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ?GetInverted@bCStretch@@QBE?AV1@XZ public: bCStretch __thiscall bCStretch::GetInverted(void)const
+bCStretch * __thiscall _GetInverted_bCStretch__QBE_AV1_XZ( bCStretch const *, bCStretch * );
+// ?GetInverted@bCStretch@@QBEXAAV1@@Z public: void __thiscall bCStretch::GetInverted(bCStretch &)const
+void __thiscall _GetInverted_bCStretch__QBEXAAV1__Z( bCStretch const *, bCStretch * );
+// ?GetScaled@bCStretch@@QBE?AV1@M@Z public: bCStretch __thiscall bCStretch::GetScaled(float)const
+bCStretch * __thiscall _GetScaled_bCStretch__QBE_AV1_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ?GetScaled@bCStretch@@QBEXAAV1@M@Z public: void __thiscall bCStretch::GetScaled(bCStretch &,float)const
+void __thiscall _GetScaled_bCStretch__QBEXAAV1_M_Z( bCStretch const *, bCStretch *, GEFloat );
+// ?GetSquareDistance@bCStretch@@QBEMABV1@@Z public: float __thiscall bCStretch::GetSquareDistance(bCStretch const &)const
+GEFloat __thiscall _GetSquareDistance_bCStretch__QBEMABV1__Z( bCStretch const *, bCStretch const * );
+// ?GetSquareDistance@bCStretch@@QBEMABV1@AAM1@Z public: float __thiscall bCStretch::GetSquareDistance(bCStretch const &,float &,float &)const
+GEFloat __thiscall _GetSquareDistance_bCStretch__QBEMABV1_AAM1_Z( bCStretch const *, bCStretch const *, GEFloat *, GEFloat * );
+// ?GetSquareDistance@bCStretch@@QBEMABVbCRay@@@Z public: float __thiscall bCStretch::GetSquareDistance(bCRay const &)const
+GEFloat __thiscall _GetSquareDistance_bCStretch__QBEMABVbCRay___Z( bCStretch const *, bCRay const * );
+// ?GetSquareDistance@bCStretch@@QBEMABVbCRay@@AAM1@Z public: float __thiscall bCStretch::GetSquareDistance(bCRay const &,float &,float &)const
+GEFloat __thiscall _GetSquareDistance_bCStretch__QBEMABVbCRay__AAM1_Z( bCStretch const *, bCRay const *, GEFloat *, GEFloat * );
+// ?GetStart@bCStretch@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCStretch::GetStart(void)const
+bCVector const * __thiscall _GetStart_bCStretch__QBEABVbCVector__XZ( bCStretch const * );
+// ?GetStart@bCStretch@@QBEXAAVbCVector@@@Z public: void __thiscall bCStretch::GetStart(bCVector &)const
+void __thiscall _GetStart_bCStretch__QBEXAAVbCVector___Z( bCStretch const *, bCVector * );
+// ?GetSum@bCStretch@@QBE?AV1@ABV1@@Z public: bCStretch __thiscall bCStretch::GetSum(bCStretch const &)const
+bCStretch * __thiscall _GetSum_bCStretch__QBE_AV1_ABV1__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ?GetSum@bCStretch@@QBEXAAV1@ABV1@@Z public: void __thiscall bCStretch::GetSum(bCStretch &,bCStretch const &)const
+void __thiscall _GetSum_bCStretch__QBEXAAV1_ABV1__Z( bCStretch const *, bCStretch *, bCStretch const * );
+// ?GetTransformed@bCStretch@@QBE?AV1@ABVbCMatrix3@@@Z public: bCStretch __thiscall bCStretch::GetTransformed(bCMatrix3 const &)const
+bCStretch * __thiscall _GetTransformed_bCStretch__QBE_AV1_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ?GetTransformed@bCStretch@@QBE?AV1@ABVbCMatrix@@@Z public: bCStretch __thiscall bCStretch::GetTransformed(bCMatrix const &)const
+bCStretch * __thiscall _GetTransformed_bCStretch__QBE_AV1_ABVbCMatrix___Z( bCStretch const *, bCStretch *, bCMatrix const * );
+// ?GetTransformed@bCStretch@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCStretch::GetTransformed(bCStretch &,bCMatrix3 const &)const
+void __thiscall _GetTransformed_bCStretch__QBEXAAV1_ABVbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 const * );
+// ?GetTransformed@bCStretch@@QBEXAAV1@VbCMatrix3@@@Z public: void __thiscall bCStretch::GetTransformed(bCStretch &,bCMatrix3)const
+void __thiscall _GetTransformed_bCStretch__QBEXAAV1_VbCMatrix3___Z( bCStretch const *, bCStretch *, bCMatrix3 );
+// ?GetTranslated@bCStretch@@QBE?AV1@ABVbCVector@@@Z public: bCStretch __thiscall bCStretch::GetTranslated(bCVector const &)const
+bCStretch * __thiscall _GetTranslated_bCStretch__QBE_AV1_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ?GetTranslated@bCStretch@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCStretch::GetTranslated(bCStretch &,bCVector const &)const
+void __thiscall _GetTranslated_bCStretch__QBEXAAV1_ABVbCVector___Z( bCStretch const *, bCStretch *, bCVector const * );
+// ?Intersects@bCStretch@@QBE_NABVbCBox@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCBox const &,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCBox__AAM_Z( bCStretch const *, bCBox const *, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NABVbCFrustum@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCFrustum const &,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCFrustum__AAM_Z( bCStretch const *, bCFrustum const *, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NABVbCPlane@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCPlane const &,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCPlane__AAM_Z( bCStretch const *, bCPlane const *, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NABVbCSphere@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCSphere const &,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCSphere__AAM_Z( bCStretch const *, bCSphere const *, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NABVbCTriangle@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCTriangle const &,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCTriangle__AAM_Z( bCStretch const *, bCTriangle const *, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NABVbCTriangle@@W4bESides@2@AAM@Z public: bool __thiscall bCStretch::Intersects(bCTriangle const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NABVbCTriangle__W4bESides_2_AAM_Z( bCStretch const *, bCTriangle const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCStretch@@QBE_NQBVbCVector@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCVector const * const,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NQBVbCVector__AAM_Z( bCStretch const *, bCVector const [ bCTriangle_bEVector_Count ], GEFloat * );
+// ?Intersects@bCStretch@@QBE_NQBVbCVector@@W4bESides@bCTriangle@@AAM@Z public: bool __thiscall bCStretch::Intersects(bCVector const * const,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCStretch__QBE_NQBVbCVector__W4bESides_bCTriangle__AAM_Z( bCStretch const *, bCVector const [ bCTriangle_bEVector_Count ], bCTriangle_bESides, GEFloat * );
+// ?InvScale@bCStretch@@QAEXM@Z public: void __thiscall bCStretch::InvScale(float)
+void __thiscall _InvScale_bCStretch__QAEXM_Z( bCStretch *, GEFloat );
+// ?InvTransform@bCStretch@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCStretch::InvTransform(bCMatrix3 const &)
+void __thiscall _InvTransform_bCStretch__QAEXABVbCMatrix3___Z( bCStretch *, bCMatrix3 const * );
+// ?InvTransform@bCStretch@@QAEXABVbCMatrix@@@Z public: void __thiscall bCStretch::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCStretch__QAEXABVbCMatrix___Z( bCStretch *, bCMatrix const * );
+// ?InvTranslate@bCStretch@@QAEXABVbCVector@@@Z public: void __thiscall bCStretch::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCStretch__QAEXABVbCVector___Z( bCStretch *, bCVector const * );
+// ?Invert@bCStretch@@QAEXXZ public: void __thiscall bCStretch::Invert(void)
+void __thiscall _Invert_bCStretch__QAEXXZ( bCStretch * );
+// ?Scale@bCStretch@@QAEXM@Z public: void __thiscall bCStretch::Scale(float)
+void __thiscall _Scale_bCStretch__QAEXM_Z( bCStretch *, GEFloat );
+// ?SetEnd@bCStretch@@QAEXABVbCVector@@@Z public: void __thiscall bCStretch::SetEnd(bCVector const &)
+void __thiscall _SetEnd_bCStretch__QAEXABVbCVector___Z( bCStretch *, bCVector const * );
+// ?SetStart@bCStretch@@QAEXABVbCVector@@@Z public: void __thiscall bCStretch::SetStart(bCVector const &)
+void __thiscall _SetStart_bCStretch__QAEXABVbCVector___Z( bCStretch *, bCVector const * );
+// ?SetStretch@bCStretch@@QAEXABV1@@Z public: void __thiscall bCStretch::SetStretch(bCStretch const &)
+void __thiscall _SetStretch_bCStretch__QAEXABV1__Z( bCStretch *, bCStretch const * );
+// ?SetStretch@bCStretch@@QAEXABVbCVector@@0@Z public: void __thiscall bCStretch::SetStretch(bCVector const &,bCVector const &)
+void __thiscall _SetStretch_bCStretch__QAEXABVbCVector__0_Z( bCStretch *, bCVector const *, bCVector const * );
+// ?Sub@bCStretch@@QAEXABV1@@Z public: void __thiscall bCStretch::Sub(bCStretch const &)
+void __thiscall _Sub_bCStretch__QAEXABV1__Z( bCStretch *, bCStretch const * );
+// ?Transform@bCStretch@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCStretch::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCStretch__QAEXABVbCMatrix3___Z( bCStretch *, bCMatrix3 const * );
+// ?Transform@bCStretch@@QAEXABVbCMatrix@@@Z public: void __thiscall bCStretch::Transform(bCMatrix const &)
+void __thiscall _Transform_bCStretch__QAEXABVbCMatrix___Z( bCStretch *, bCMatrix const * );
+// ?Translate@bCStretch@@QAEXABVbCVector@@@Z public: void __thiscall bCStretch::Translate(bCVector const &)
+void __thiscall _Translate_bCStretch__QAEXABVbCVector___Z( bCStretch *, bCVector const * );
+// ?m_fDummy@bCStretch@@1MA protected: static float bCStretch::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCStretch__1MA;

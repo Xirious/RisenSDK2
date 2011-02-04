@@ -1,0 +1,236 @@
+enum bCFrustum_bEPlane : GEInt
+{
+    bCFrustum_bEPlane_FIXME_0,
+    bCFrustum_bEPlane_FIXME_1,
+    bCFrustum_bEPlane_FIXME_2,
+    bCFrustum_bEPlane_FIXME_3,
+    bCFrustum_bEPlane_FIXME_4,
+    bCFrustum_bEPlane_FIXME_5,
+    bCFrustum_bEPlane_Count
+};
+
+enum bCFrustum_bEVertex : GEInt
+{
+    bCFrustum_bEVertex_FIXME_0,
+    bCFrustum_bEVertex_FIXME_1,
+    bCFrustum_bEVertex_FIXME_2,
+    bCFrustum_bEVertex_FIXME_3,
+    bCFrustum_bEVertex_FIXME_4,
+    bCFrustum_bEVertex_FIXME_5,
+    bCFrustum_bEVertex_FIXME_6,
+    bCFrustum_bEVertex_FIXME_7,
+    bCFrustum_bEVertex_Count
+};
+
+struct bCFrustum
+{
+    bCPlane m_ClippingPlanes[ bCFrustum_bEPlane_Count ];
+};
+bTVolume( bCFrustum )
+// ??0bCFrustum@@QAE@ABV0@@Z public: __thiscall bCFrustum::bCFrustum(bCFrustum const &)
+bCFrustum * __thiscall __0bCFrustum__QAE_ABV0__Z( bCFrustum *, bCFrustum const * );
+// ??0bCFrustum@@QAE@ABVbCBox@@@Z public: __thiscall bCFrustum::bCFrustum(bCBox const &)
+bCFrustum * __thiscall __0bCFrustum__QAE_ABVbCBox___Z( bCFrustum *, bCBox const * );
+// ??0bCFrustum@@QAE@XZ public: __thiscall bCFrustum::bCFrustum(void)
+bCFrustum * __thiscall __0bCFrustum__QAE_XZ( bCFrustum * );
+// ??1bCFrustum@@QAE@XZ public: __thiscall bCFrustum::~bCFrustum(void)
+void __thiscall __1bCFrustum__QAE_XZ( bCFrustum * );
+// ??4bCFrustum@@QAEAAV0@ABV0@@Z public: bCFrustum & __thiscall bCFrustum::operator=(bCFrustum const &)
+bCFrustum * __thiscall __4bCFrustum__QAEAAV0_ABV0__Z( bCFrustum *, bCFrustum const * );
+// ??5bCFrustum@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCFrustum::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCFrustum__QBEAAVbCOStream__AAV1__Z( bCFrustum const *, bCOStream * );
+// ??6bCFrustum@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCFrustum::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCFrustum__QAEAAVbCIStream__AAV1__Z( bCFrustum *, bCIStream * );
+// ??DbCFrustum@@QBE?AV0@ABVbCMatrix3@@@Z public: bCFrustum __thiscall bCFrustum::operator*(bCMatrix3 const &)const
+bCFrustum * __thiscall __DbCFrustum__QBE_AV0_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ??DbCFrustum@@QBE?AV0@ABVbCMatrix@@@Z public: bCFrustum __thiscall bCFrustum::operator*(bCMatrix const &)const
+bCFrustum * __thiscall __DbCFrustum__QBE_AV0_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ??DbCFrustum@@QBE?AV0@M@Z public: bCFrustum __thiscall bCFrustum::operator*(float)const
+bCFrustum * __thiscall __DbCFrustum__QBE_AV0_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ??GbCFrustum@@QBE?AV0@ABVbCVector@@@Z public: bCFrustum __thiscall bCFrustum::operator-(bCVector const &)const
+bCFrustum * __thiscall __GbCFrustum__QBE_AV0_ABVbCVector___Z( bCFrustum const *, bCFrustum *, bCVector const * );
+// ??GbCFrustum@@QBE?AV0@XZ public: bCFrustum __thiscall bCFrustum::operator-(void)const
+bCFrustum * __thiscall __GbCFrustum__QBE_AV0_XZ( bCFrustum const *, bCFrustum * );
+// ??HbCFrustum@@QBE?AV0@ABVbCVector@@@Z public: bCFrustum __thiscall bCFrustum::operator+(bCVector const &)const
+bCFrustum * __thiscall __HbCFrustum__QBE_AV0_ABVbCVector___Z( bCFrustum const *, bCFrustum *, bCVector const * );
+// ??KbCFrustum@@QBE?AV0@ABVbCMatrix3@@@Z public: bCFrustum __thiscall bCFrustum::operator/(bCMatrix3 const &)const
+bCFrustum * __thiscall __KbCFrustum__QBE_AV0_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ??KbCFrustum@@QBE?AV0@ABVbCMatrix@@@Z public: bCFrustum __thiscall bCFrustum::operator/(bCMatrix const &)const
+bCFrustum * __thiscall __KbCFrustum__QBE_AV0_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ??KbCFrustum@@QBE?AV0@M@Z public: bCFrustum __thiscall bCFrustum::operator/(float)const
+bCFrustum * __thiscall __KbCFrustum__QBE_AV0_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ??XbCFrustum@@QAEAAV0@M@Z public: bCFrustum & __thiscall bCFrustum::operator*=(float)
+bCFrustum * __thiscall __XbCFrustum__QAEAAV0_M_Z( bCFrustum *, GEFloat );
+// ??YbCFrustum@@QAEAAV0@ABVbCVector@@@Z public: bCFrustum & __thiscall bCFrustum::operator+=(bCVector const &)
+bCFrustum * __thiscall __YbCFrustum__QAEAAV0_ABVbCVector___Z( bCFrustum *, bCVector const * );
+// ??ZbCFrustum@@QAEAAV0@ABVbCVector@@@Z public: bCFrustum & __thiscall bCFrustum::operator-=(bCVector const &)
+bCFrustum * __thiscall __ZbCFrustum__QAEAAV0_ABVbCVector___Z( bCFrustum *, bCVector const * );
+// ??_0bCFrustum@@QAEAAV0@M@Z public: bCFrustum & __thiscall bCFrustum::operator/=(float)
+bCFrustum * __thiscall ___0bCFrustum__QAEAAV0_M_Z( bCFrustum *, GEFloat );
+// ?AccessClippingPlane@bCFrustum@@QAEAAVbCPlane@@H@Z public: bCPlane & __thiscall bCFrustum::AccessClippingPlane(int)
+bCPlane * __thiscall _AccessClippingPlane_bCFrustum__QAEAAVbCPlane__H_Z( bCFrustum *, bCFrustum_bEPlane );
+// ?Clear@bCFrustum@@QAEXXZ public: void __thiscall bCFrustum::Clear(void)
+void __thiscall _Clear_bCFrustum__QAEXXZ( bCFrustum * );
+// ?Contains@bCFrustum@@QBE_NABV1@@Z public: bool __thiscall bCFrustum::Contains(bCFrustum const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABV1__Z( bCFrustum const *, bCFrustum const * );
+// ?Contains@bCFrustum@@QBE_NABVbCBox@@@Z public: bool __thiscall bCFrustum::Contains(bCBox const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCBox___Z( bCFrustum const *, bCBox const * );
+// ?Contains@bCFrustum@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCFrustum::Contains(bCSphere const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCSphere___Z( bCFrustum const *, bCSphere const * );
+// ?Contains@bCFrustum@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCFrustum::Contains(bCStretch const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCStretch___Z( bCFrustum const *, bCStretch const * );
+// ?Contains@bCFrustum@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCFrustum::Contains(bCTriangle const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCTriangle___Z( bCFrustum const *, bCTriangle const * );
+// ?Contains@bCFrustum@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCFrustum::Contains(bCUnitedRay const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCUnitedRay___Z( bCFrustum const *, bCUnitedRay const * );
+// ?Contains@bCFrustum@@QBE_NABVbCVector@@@Z public: bool __thiscall bCFrustum::Contains(bCVector const &)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NABVbCVector___Z( bCFrustum const *, bCVector const * );
+// ?Contains@bCFrustum@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCFrustum::Contains(bCVector const * const)const
+GEBool __thiscall _Contains_bCFrustum__QBE_NQBVbCVector___Z( bCFrustum const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?CopyFrom@bCFrustum@@QAEXABV1@@Z public: void __thiscall bCFrustum::CopyFrom(bCFrustum const &)
+void __thiscall _CopyFrom_bCFrustum__QAEXABV1__Z( bCFrustum *, bCFrustum const * );
+// ?CopyTo@bCFrustum@@QBEXAAV1@@Z public: void __thiscall bCFrustum::CopyTo(bCFrustum &)const
+void __thiscall _CopyTo_bCFrustum__QBEXAAV1__Z( bCFrustum const *, bCFrustum * );
+// ?Cull@bCFrustum@@QBE_NABV1@@Z public: bool __thiscall bCFrustum::Cull(bCFrustum const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABV1__Z( bCFrustum const *, bCFrustum const * );
+// ?Cull@bCFrustum@@QBE_NABVbCBox@@@Z public: bool __thiscall bCFrustum::Cull(bCBox const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCBox___Z( bCFrustum const *, bCBox const * );
+// ?Cull@bCFrustum@@QBE_NABVbCLine@@@Z public: bool __thiscall bCFrustum::Cull(bCLine const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCLine___Z( bCFrustum const *, bCLine const * );
+// ?Cull@bCFrustum@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCFrustum::Cull(bCPlane const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCPlane___Z( bCFrustum const *, bCPlane const * );
+// ?Cull@bCFrustum@@QBE_NABVbCRay@@@Z public: bool __thiscall bCFrustum::Cull(bCRay const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCRay___Z( bCFrustum const *, bCRay const * );
+// ?Cull@bCFrustum@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCFrustum::Cull(bCSphere const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCSphere___Z( bCFrustum const *, bCSphere const * );
+// ?Cull@bCFrustum@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCFrustum::Cull(bCStretch const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCStretch___Z( bCFrustum const *, bCStretch const * );
+// ?Cull@bCFrustum@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCFrustum::Cull(bCTriangle const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCTriangle___Z( bCFrustum const *, bCTriangle const * );
+// ?Cull@bCFrustum@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCFrustum::Cull(bCUnitedRay const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCUnitedRay___Z( bCFrustum const *, bCUnitedRay const * );
+// ?Cull@bCFrustum@@QBE_NABVbCVector@@@Z public: bool __thiscall bCFrustum::Cull(bCVector const &)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NABVbCVector___Z( bCFrustum const *, bCVector const * );
+// ?Cull@bCFrustum@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCFrustum::Cull(bCVector const * const)const
+GEBool __thiscall _Cull_bCFrustum__QBE_NQBVbCVector___Z( bCFrustum const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?GetClippingPlane@bCFrustum@@QBEABVbCPlane@@H@Z public: bCPlane const & __thiscall bCFrustum::GetClippingPlane(int)const
+bCPlane const * __thiscall _GetClippingPlane_bCFrustum__QBEABVbCPlane__H_Z( bCFrustum const *, bCFrustum_bEPlane );
+// ?GetClippingPlane@bCFrustum@@QBEXHAAVbCPlane@@@Z public: void __thiscall bCFrustum::GetClippingPlane(int,bCPlane &)const
+void __thiscall _GetClippingPlane_bCFrustum__QBEXHAAVbCPlane___Z( bCFrustum const *, bCFrustum_bEPlane, bCPlane * );
+// ?GetDistance@bCFrustum@@QBEMABVbCVector@@@Z public: float __thiscall bCFrustum::GetDistance(bCVector const &)const
+GEFloat __thiscall _GetDistance_bCFrustum__QBEMABVbCVector___Z( bCFrustum const *, bCVector const * );
+// ?GetInvRotated@bCFrustum@@QBE?AV1@ABVbCQuaternion@@@Z public: bCFrustum __thiscall bCFrustum::GetInvRotated(bCQuaternion const &)const
+bCFrustum * __thiscall _GetInvRotated_bCFrustum__QBE_AV1_ABVbCQuaternion___Z( bCFrustum const *, bCFrustum *, bCQuaternion const * );
+// ?GetInvRotated@bCFrustum@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCFrustum::GetInvRotated(bCFrustum &,bCQuaternion const &)const
+void __thiscall _GetInvRotated_bCFrustum__QBEXAAV1_ABVbCQuaternion___Z( bCFrustum const *, bCFrustum *, bCQuaternion const * );
+// ?GetInvScaled@bCFrustum@@QBE?AV1@M@Z public: bCFrustum __thiscall bCFrustum::GetInvScaled(float)const
+bCFrustum * __thiscall _GetInvScaled_bCFrustum__QBE_AV1_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ?GetInvScaled@bCFrustum@@QBEXAAV1@M@Z public: void __thiscall bCFrustum::GetInvScaled(bCFrustum &,float)const
+void __thiscall _GetInvScaled_bCFrustum__QBEXAAV1_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ?GetInvTransformed@bCFrustum@@QBE?AV1@ABVbCMatrix3@@@Z public: bCFrustum __thiscall bCFrustum::GetInvTransformed(bCMatrix3 const &)const
+bCFrustum * __thiscall _GetInvTransformed_bCFrustum__QBE_AV1_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ?GetInvTransformed@bCFrustum@@QBE?AV1@ABVbCMatrix@@@Z public: bCFrustum __thiscall bCFrustum::GetInvTransformed(bCMatrix const &)const
+bCFrustum * __thiscall _GetInvTransformed_bCFrustum__QBE_AV1_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ?GetInvTransformed@bCFrustum@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCFrustum::GetInvTransformed(bCFrustum &,bCMatrix3 const &)const
+void __thiscall _GetInvTransformed_bCFrustum__QBEXAAV1_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ?GetInvTransformed@bCFrustum@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCFrustum::GetInvTransformed(bCFrustum &,bCMatrix const &)const
+void __thiscall _GetInvTransformed_bCFrustum__QBEXAAV1_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ?GetInvTranslated@bCFrustum@@QBE?AV1@ABVbCVector@@@Z public: bCFrustum __thiscall bCFrustum::GetInvTranslated(bCVector const &)const
+bCFrustum * __thiscall _GetInvTranslated_bCFrustum__QBE_AV1_ABVbCVector___Z( bCFrustum const *, bCFrustum *, bCVector const * );
+// ?GetInvTranslated@bCFrustum@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCFrustum::GetInvTranslated(bCFrustum &,bCVector const &)const
+void __thiscall _GetInvTranslated_bCFrustum__QBEXAAV1_ABVbCVector___Z( bCFrustum const *, bCFrustum *, bCVector const * );
+// ?GetInverted@bCFrustum@@QBE?AV1@XZ public: bCFrustum __thiscall bCFrustum::GetInverted(void)const
+bCFrustum * __thiscall _GetInverted_bCFrustum__QBE_AV1_XZ( bCFrustum const *, bCFrustum * );
+// ?GetInverted@bCFrustum@@QBEXAAV1@@Z public: void __thiscall bCFrustum::GetInverted(bCFrustum &)const
+void __thiscall _GetInverted_bCFrustum__QBEXAAV1__Z( bCFrustum const *, bCFrustum * );
+// ?GetNegated@bCFrustum@@QBE?AV1@XZ public: bCFrustum __thiscall bCFrustum::GetNegated(void)const
+bCFrustum * __thiscall _GetNegated_bCFrustum__QBE_AV1_XZ( bCFrustum const *, bCFrustum * );
+// ?GetNegated@bCFrustum@@QBEXAAV1@@Z public: void __thiscall bCFrustum::GetNegated(bCFrustum &)const
+void __thiscall _GetNegated_bCFrustum__QBEXAAV1__Z( bCFrustum const *, bCFrustum * );
+// ?GetNormalized@bCFrustum@@QBE?AV1@XZ public: bCFrustum __thiscall bCFrustum::GetNormalized(void)const
+bCFrustum * __thiscall _GetNormalized_bCFrustum__QBE_AV1_XZ( bCFrustum const *, bCFrustum * );
+// ?GetRotated@bCFrustum@@QBE?AV1@ABVbCQuaternion@@@Z public: bCFrustum __thiscall bCFrustum::GetRotated(bCQuaternion const &)const
+bCFrustum * __thiscall _GetRotated_bCFrustum__QBE_AV1_ABVbCQuaternion___Z( bCFrustum const *, bCFrustum *, bCQuaternion const * );
+// ?GetRotated@bCFrustum@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCFrustum::GetRotated(bCFrustum &,bCQuaternion const &)const
+void __thiscall _GetRotated_bCFrustum__QBEXAAV1_ABVbCQuaternion___Z( bCFrustum const *, bCFrustum *, bCQuaternion const * );
+// ?GetScaled@bCFrustum@@QBE?AV1@M@Z public: bCFrustum __thiscall bCFrustum::GetScaled(float)const
+bCFrustum * __thiscall _GetScaled_bCFrustum__QBE_AV1_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ?GetScaled@bCFrustum@@QBEXAAV1@M@Z public: void __thiscall bCFrustum::GetScaled(bCFrustum &,float)const
+void __thiscall _GetScaled_bCFrustum__QBEXAAV1_M_Z( bCFrustum const *, bCFrustum *, GEFloat );
+// ?GetTransformed@bCFrustum@@QBE?AV1@ABVbCMatrix3@@@Z public: bCFrustum __thiscall bCFrustum::GetTransformed(bCMatrix3 const &)const
+bCFrustum * __thiscall _GetTransformed_bCFrustum__QBE_AV1_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ?GetTransformed@bCFrustum@@QBE?AV1@ABVbCMatrix@@@Z public: bCFrustum __thiscall bCFrustum::GetTransformed(bCMatrix const &)const
+bCFrustum * __thiscall _GetTransformed_bCFrustum__QBE_AV1_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ?GetTransformed@bCFrustum@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCFrustum::GetTransformed(bCFrustum &,bCMatrix3 const &)const
+void __thiscall _GetTransformed_bCFrustum__QBEXAAV1_ABVbCMatrix3___Z( bCFrustum const *, bCFrustum *, bCMatrix3 const * );
+// ?GetTransformed@bCFrustum@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCFrustum::GetTransformed(bCFrustum &,bCMatrix const &)const
+void __thiscall _GetTransformed_bCFrustum__QBEXAAV1_ABVbCMatrix___Z( bCFrustum const *, bCFrustum *, bCMatrix const * );
+// ?GetTranslated@bCFrustum@@QBE?AV1@ABVbCVector@@@Z public: bCFrustum __thiscall bCFrustum::GetTranslated(bCVector const &)const
+bCFrustum * __thiscall _GetTranslated_bCFrustum__QBE_AV1_ABVbCVector___Z( bCFrustum const *, bCVector const * );
+// ?GetTranslated@bCFrustum@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCFrustum::GetTranslated(bCFrustum &,bCVector const &)const
+void __thiscall _GetTranslated_bCFrustum__QBEXAAV1_ABVbCVector___Z( bCFrustum const *, bCFrustum *, bCVector const * );
+// ?GetVertex@bCFrustum@@QBE?AVbCVector@@H@Z public: bCVector __thiscall bCFrustum::GetVertex(int)const
+bCVector * __thiscall _GetVertex_bCFrustum__QBE_AVbCVector__H_Z( bCFrustum const *, bCVector *, bCFrustum_bEVertex );
+// ?GetVertex@bCFrustum@@QBEXHAAVbCVector@@@Z public: void __thiscall bCFrustum::GetVertex(int,bCVector &)const
+void __thiscall _GetVertex_bCFrustum__QBEXHAAVbCVector___Z( bCFrustum const *, bCFrustum_bEVertex, bCVector * );
+// ?Intersects@bCFrustum@@QBE_NABV1@@Z public: bool __thiscall bCFrustum::Intersects(bCFrustum const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABV1__Z( bCFrustum const *, bCFrustum const * );
+// ?Intersects@bCFrustum@@QBE_NABVbCBox@@@Z public: bool __thiscall bCFrustum::Intersects(bCBox const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCBox___Z( bCFrustum const *, bCBox const * );
+// ?Intersects@bCFrustum@@QBE_NABVbCLine@@AAM@Z public: bool __thiscall bCFrustum::Intersects(bCLine const &,float &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCLine__AAM_Z( bCFrustum const *, bCLine const *, GEFloat * );
+// ?Intersects@bCFrustum@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCFrustum::Intersects(bCPlane const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCPlane___Z( bCFrustum const *, bCPlane const * );
+// ?Intersects@bCFrustum@@QBE_NABVbCRay@@AAM@Z public: bool __thiscall bCFrustum::Intersects(bCRay const &,float &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCRay__AAM_Z( bCFrustum const *, bCRay const *, GEFloat * );
+// ?Intersects@bCFrustum@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCFrustum::Intersects(bCSphere const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCSphere___Z( bCFrustum const *, bCSphere const * );
+// ?Intersects@bCFrustum@@QBE_NABVbCStretch@@AAM@Z public: bool __thiscall bCFrustum::Intersects(bCStretch const &,float &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCStretch__AAM_Z( bCFrustum const *, bCStretch const *, GEFloat * );
+// ?Intersects@bCFrustum@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCFrustum::Intersects(bCTriangle const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCTriangle___Z( bCFrustum const *, bCTriangle const * );
+// ?Intersects@bCFrustum@@QBE_NABVbCUnitedRay@@AAM@Z public: bool __thiscall bCFrustum::Intersects(bCUnitedRay const &,float &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCUnitedRay__AAM_Z( bCFrustum const *, bCUnitedRay const *, GEFloat * );
+// ?Intersects@bCFrustum@@QBE_NABVbCVector@@@Z public: bool __thiscall bCFrustum::Intersects(bCVector const &)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NABVbCVector___Z( bCFrustum const *, bCVector const * );
+// ?Intersects@bCFrustum@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCFrustum::Intersects(bCVector const * const)const
+GEBool __thiscall _Intersects_bCFrustum__QBE_NQBVbCVector___Z( bCFrustum const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?InvRotate@bCFrustum@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCFrustum::InvRotate(bCQuaternion const &)
+void __thiscall _InvRotate_bCFrustum__QAEXABVbCQuaternion___Z( bCFrustum *, bCQuaternion const * );
+// ?InvScale@bCFrustum@@QAEXM@Z public: void __thiscall bCFrustum::InvScale(float)
+void __thiscall _InvScale_bCFrustum__QAEXM_Z( bCFrustum *, GEFloat );
+// ?InvTransform@bCFrustum@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCFrustum::InvTransform(bCMatrix3 const &)
+void __thiscall _InvTransform_bCFrustum__QAEXABVbCMatrix3___Z( bCFrustum *, bCMatrix3 const * );
+// ?InvTransform@bCFrustum@@QAEXABVbCMatrix@@@Z public: void __thiscall bCFrustum::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCFrustum__QAEXABVbCMatrix___Z( bCFrustum *, bCMatrix const * );
+// ?InvTranslate@bCFrustum@@QAEXABVbCVector@@@Z public: void __thiscall bCFrustum::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCFrustum__QAEXABVbCVector___Z( bCFrustum *, bCVector const * );
+// ?Invert@bCFrustum@@QAEXXZ public: void __thiscall bCFrustum::Invert(void)
+void __thiscall _Invert_bCFrustum__QAEXXZ( bCFrustum * );
+// ?Negate@bCFrustum@@QAEXXZ public: void __thiscall bCFrustum::Negate(void)
+void __thiscall _Negate_bCFrustum__QAEXXZ( bCFrustum * );
+// ?Normalize@bCFrustum@@QAEXXZ public: void __thiscall bCFrustum::Normalize(void)
+void __thiscall _Normalize_bCFrustum__QAEXXZ( bCFrustum * );
+// ?Rotate@bCFrustum@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCFrustum::Rotate(bCQuaternion const &)
+void __thiscall _Rotate_bCFrustum__QAEXABVbCQuaternion___Z( bCFrustum *, bCQuaternion const * );
+// ?Scale@bCFrustum@@QAEXM@Z public: void __thiscall bCFrustum::Scale(float)
+void __thiscall _Scale_bCFrustum__QAEXM_Z( bCFrustum *, GEFloat );
+// ?SetClippingPlane@bCFrustum@@QAEXHABVbCPlane@@@Z public: void __thiscall bCFrustum::SetClippingPlane(int,bCPlane const &)
+void __thiscall _SetClippingPlane_bCFrustum__QAEXHABVbCPlane___Z( bCFrustum *, bCFrustum_bEPlane, bCPlane const * );
+// ?SetFrustum@bCFrustum@@QAEXABV1@@Z public: void __thiscall bCFrustum::SetFrustum(bCFrustum const &)
+void __thiscall _SetFrustum_bCFrustum__QAEXABV1__Z( bCFrustum *, bCFrustum const * );
+// ?SetFrustum@bCFrustum@@QAEXABVbCBox@@@Z public: void __thiscall bCFrustum::SetFrustum(bCBox const &)
+void __thiscall _SetFrustum_bCFrustum__QAEXABVbCBox___Z( bCFrustum *, bCBox const * );
+// ?SetFrustum@bCFrustum@@QAEXABVbCMatrix@@@Z public: void __thiscall bCFrustum::SetFrustum(bCMatrix const &)
+void __thiscall _SetFrustum_bCFrustum__QAEXABVbCMatrix___Z( bCFrustum *, bCMatrix const * );
+// ?Transform@bCFrustum@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCFrustum::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCFrustum__QAEXABVbCMatrix3___Z( bCFrustum *, bCMatrix3 const * );
+// ?Transform@bCFrustum@@QAEXABVbCMatrix@@@Z public: void __thiscall bCFrustum::Transform(bCMatrix const &)
+void __thiscall _Transform_bCFrustum__QAEXABVbCMatrix___Z( bCFrustum *, bCMatrix const * );
+// ?Translate@bCFrustum@@QAEXABVbCVector@@@Z public: void __thiscall bCFrustum::Translate(bCVector const &)
+void __thiscall _Translate_bCFrustum__QAEXABVbCVector___Z( bCFrustum *, bCVector const * );
+// ?m_fDummy@bCFrustum@@1MA protected: static float bCFrustum::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCFrustum__1MA;
+
+// ?GetCenter@?$bTVolume@VbCFrustum@@@@UBEXAAVbCVector@@@Z public: virtual void __thiscall bTVolume<bCFrustum>::GetCenter(bCVector &)const
+void __thiscall _GetCenter___bTVolume_VbCFrustum____UBEXAAVbCVector___Z( bTVolume_bCFrustum const *, bCVector * );
