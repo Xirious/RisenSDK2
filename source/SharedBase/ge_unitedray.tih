@@ -1,0 +1,214 @@
+enum bCUnitedRay_bERayExtension : __int32
+{
+    bCUnitedRay_bERayExtension_None,
+    bCUnitedRay_bERayExtension_Forward  = 0x00000001,
+    bCUnitedRay_bERayExtension_Backward = 0x00000002,
+    bCUnitedRay_bERayExtension_Both     = bCUnitedRay_bERayExtension_Forward | bCUnitedRay_bERayExtension_Backward
+};
+
+struct bCUnitedRay
+{
+    bCUnitedRay_bERayExtension m_enuExtensionFlags;
+    bCVector                   m_vecOrigin;
+    bCVector                   m_vecDirection;
+};
+// ??0bCUnitedRay@@QAE@ABV0@@Z public: __thiscall bCUnitedRay::bCUnitedRay(bCUnitedRay const &)
+bCUnitedRay * __thiscall __0bCUnitedRay__QAE_ABV0__Z( bCUnitedRay *, bCUnitedRay const * );
+// ??0bCUnitedRay@@QAE@ABVbCLine@@@Z public: __thiscall bCUnitedRay::bCUnitedRay(bCLine const &)
+bCUnitedRay * __thiscall __0bCUnitedRay__QAE_ABVbCLine___Z( bCUnitedRay *, bCLine const * );
+// ??0bCUnitedRay@@QAE@ABVbCRay@@@Z public: __thiscall bCUnitedRay::bCUnitedRay(bCRay const &)
+bCUnitedRay * __thiscall __0bCUnitedRay__QAE_ABVbCRay___Z( bCUnitedRay *, bCRay const * );
+// ??0bCUnitedRay@@QAE@ABVbCStretch@@@Z public: __thiscall bCUnitedRay::bCUnitedRay(bCStretch const &)
+bCUnitedRay * __thiscall __0bCUnitedRay__QAE_ABVbCStretch___Z( bCUnitedRay *, bCStretch const * );
+// ??0bCUnitedRay@@QAE@XZ public: __thiscall bCUnitedRay::bCUnitedRay(void)
+bCUnitedRay * __thiscall __0bCUnitedRay__QAE_XZ( bCUnitedRay * );
+// ??1bCUnitedRay@@QAE@XZ public: __thiscall bCUnitedRay::~bCUnitedRay(void)
+void __thiscall __1bCUnitedRay__QAE_XZ( bCUnitedRay * );
+// ??4bCUnitedRay@@QAEAAV0@ABV0@@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator=(bCUnitedRay const &)
+bCUnitedRay * __thiscall __4bCUnitedRay__QAEAAV0_ABV0__Z( bCUnitedRay *, bCUnitedRay const * );
+// ??5bCUnitedRay@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCUnitedRay::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCUnitedRay__QBEAAVbCOStream__AAV1__Z( bCUnitedRay const *, bCOStream * );
+// ??6bCUnitedRay@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCUnitedRay::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCUnitedRay__QAEAAVbCIStream__AAV1__Z( bCUnitedRay *, bCIStream * );
+// ??DbCUnitedRay@@QBE?AV0@ABVbCMatrix3@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator*(bCMatrix3 const &)const
+bCUnitedRay * __thiscall __DbCUnitedRay__QBE_AV0_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ??DbCUnitedRay@@QBE?AV0@ABVbCMatrix@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator*(bCMatrix const &)const
+bCUnitedRay * __thiscall __DbCUnitedRay__QBE_AV0_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ??DbCUnitedRay@@QBE?AV0@M@Z public: bCUnitedRay __thiscall bCUnitedRay::operator*(float)const
+bCUnitedRay * __thiscall __DbCUnitedRay__QBE_AV0_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ??GbCUnitedRay@@QBE?AV0@ABV0@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator-(bCUnitedRay const &)const
+bCUnitedRay * __thiscall __GbCUnitedRay__QBE_AV0_ABV0__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ??GbCUnitedRay@@QBE?AV0@ABVbCVector@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator-(bCVector const &)const
+bCUnitedRay * __thiscall __GbCUnitedRay__QBE_AV0_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ??GbCUnitedRay@@QBE?AV0@XZ public: bCUnitedRay __thiscall bCUnitedRay::operator-(void)const
+bCUnitedRay * __thiscall __GbCUnitedRay__QBE_AV0_XZ( bCUnitedRay const *, bCUnitedRay * );
+// ??HbCUnitedRay@@QBE?AV0@ABV0@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator+(bCUnitedRay const &)const
+bCUnitedRay * __thiscall __HbCUnitedRay__QBE_AV0_ABV0__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ??HbCUnitedRay@@QBE?AV0@ABVbCVector@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator+(bCVector const &)const
+bCUnitedRay * __thiscall __HbCUnitedRay__QBE_AV0_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ??KbCUnitedRay@@QBE?AV0@ABVbCMatrix3@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator/(bCMatrix3 const &)const
+bCUnitedRay * __thiscall __KbCUnitedRay__QBE_AV0_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ??KbCUnitedRay@@QBE?AV0@ABVbCMatrix@@@Z public: bCUnitedRay __thiscall bCUnitedRay::operator/(bCMatrix const &)const
+bCUnitedRay * __thiscall __KbCUnitedRay__QBE_AV0_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ??KbCUnitedRay@@QBE?AV0@M@Z public: bCUnitedRay __thiscall bCUnitedRay::operator/(float)const
+bCUnitedRay * __thiscall __KbCUnitedRay__QBE_AV0_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ??XbCUnitedRay@@QAEAAV0@M@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator*=(float)
+bCUnitedRay * __thiscall __XbCUnitedRay__QAEAAV0_M_Z( bCUnitedRay *, GEFloat );
+// ??YbCUnitedRay@@QAEAAV0@ABV0@@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator+=(bCUnitedRay const &)
+bCUnitedRay * __thiscall __YbCUnitedRay__QAEAAV0_ABV0__Z( bCUnitedRay *, bCUnitedRay const * );
+// ??YbCUnitedRay@@QAEAAV0@ABVbCVector@@@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator+=(bCVector const &)
+bCUnitedRay * __thiscall __YbCUnitedRay__QAEAAV0_ABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ??ZbCUnitedRay@@QAEAAV0@ABV0@@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator-=(bCUnitedRay const &)
+bCUnitedRay * __thiscall __ZbCUnitedRay__QAEAAV0_ABV0__Z( bCUnitedRay *, bCUnitedRay const * );
+// ??ZbCUnitedRay@@QAEAAV0@ABVbCVector@@@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator-=(bCVector const &)
+bCUnitedRay * __thiscall __ZbCUnitedRay__QAEAAV0_ABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ??_0bCUnitedRay@@QAEAAV0@M@Z public: bCUnitedRay & __thiscall bCUnitedRay::operator/=(float)
+bCUnitedRay * __thiscall ___0bCUnitedRay__QAEAAV0_M_Z( bCUnitedRay *, GEFloat );
+// ?AccessDirection@bCUnitedRay@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCUnitedRay::AccessDirection(void)
+bCVector * __thiscall _AccessDirection_bCUnitedRay__QAEAAVbCVector__XZ( bCUnitedRay * );
+// ?AccessExtensionFlags@bCUnitedRay@@QAEAAW4bERayExtension@1@XZ public: bCUnitedRay::bERayExtension & __thiscall bCUnitedRay::AccessExtensionFlags(void)
+bCUnitedRay_bERayExtension * __thiscall _AccessExtensionFlags_bCUnitedRay__QAEAAW4bERayExtension_1_XZ( bCUnitedRay * );
+// ?AccessOrigin@bCUnitedRay@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCUnitedRay::AccessOrigin(void)
+bCVector * __thiscall _AccessOrigin_bCUnitedRay__QAEAAVbCVector__XZ( bCUnitedRay * );
+// ?Add@bCUnitedRay@@QAEXABV1@@Z public: void __thiscall bCUnitedRay::Add(bCUnitedRay const &)
+void __thiscall _Add_bCUnitedRay__QAEXABV1__Z( bCUnitedRay *, bCUnitedRay const * );
+// ?Clear@bCUnitedRay@@QAEXXZ public: void __thiscall bCUnitedRay::Clear(void)
+void __thiscall _Clear_bCUnitedRay__QAEXXZ( bCUnitedRay * );
+// ?CopyFrom@bCUnitedRay@@QAEXABV1@@Z public: void __thiscall bCUnitedRay::CopyFrom(bCUnitedRay const &)
+void __thiscall _CopyFrom_bCUnitedRay__QAEXABV1__Z( bCUnitedRay *, bCUnitedRay const * );
+// ?CopyTo@bCUnitedRay@@QBEXAAV1@@Z public: void __thiscall bCUnitedRay::CopyTo(bCUnitedRay &)const
+void __thiscall _CopyTo_bCUnitedRay__QBEXAAV1__Z( bCUnitedRay const *, bCUnitedRay * );
+// ?GetDifference@bCUnitedRay@@QBE?AV1@ABV1@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetDifference(bCUnitedRay const &)const
+bCUnitedRay * __thiscall _GetDifference_bCUnitedRay__QBE_AV1_ABV1__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ?GetDifference@bCUnitedRay@@QBEXAAV1@ABV1@@Z public: void __thiscall bCUnitedRay::GetDifference(bCUnitedRay &,bCUnitedRay const &)const
+void __thiscall _GetDifference_bCUnitedRay__QBEXAAV1_ABV1__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ?GetDirection@bCUnitedRay@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCUnitedRay::GetDirection(void)const
+bCVector const * __thiscall _GetDirection_bCUnitedRay__QBEABVbCVector__XZ( bCUnitedRay const * );
+// ?GetDirection@bCUnitedRay@@QBEXAAVbCVector@@@Z public: void __thiscall bCUnitedRay::GetDirection(bCVector &)const
+void __thiscall _GetDirection_bCUnitedRay__QBEXAAVbCVector___Z( bCUnitedRay const *, bCVector * );
+// ?GetExtensionFlags@bCUnitedRay@@QBEABW4bERayExtension@1@XZ public: bCUnitedRay::bERayExtension const & __thiscall bCUnitedRay::GetExtensionFlags(void)const
+bCUnitedRay_bERayExtension const * __thiscall _GetExtensionFlags_bCUnitedRay__QBEABW4bERayExtension_1_XZ( bCUnitedRay const * );
+// ?GetExtensionFlags@bCUnitedRay@@QBEXAAW4bERayExtension@1@@Z public: void __thiscall bCUnitedRay::GetExtensionFlags(bCUnitedRay::bERayExtension &)const
+void __thiscall _GetExtensionFlags_bCUnitedRay__QBEXAAW4bERayExtension_1__Z( bCUnitedRay const *, bCUnitedRay_bERayExtension * );
+// ?GetInvRotated@bCUnitedRay@@QBE?AV1@ABVbCQuaternion@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetInvRotated(bCQuaternion const &)const
+bCUnitedRay * __thiscall _GetInvRotated_bCUnitedRay__QBE_AV1_ABVbCQuaternion___Z( bCUnitedRay const *, bCUnitedRay *, bCQuaternion const * );
+// ?GetInvRotated@bCUnitedRay@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCUnitedRay::GetInvRotated(bCUnitedRay &,bCQuaternion const &)const
+void __thiscall _GetInvRotated_bCUnitedRay__QBEXAAV1_ABVbCQuaternion___Z( bCUnitedRay const *, bCUnitedRay *, bCQuaternion const * );
+// ?GetInvScaled@bCUnitedRay@@QBE?AV1@M@Z public: bCUnitedRay __thiscall bCUnitedRay::GetInvScaled(float)const
+bCUnitedRay * __thiscall _GetInvScaled_bCUnitedRay__QBE_AV1_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ?GetInvScaled@bCUnitedRay@@QBEXAAV1@M@Z public: void __thiscall bCUnitedRay::GetInvScaled(bCUnitedRay &,float)const
+void __thiscall _GetInvScaled_bCUnitedRay__QBEXAAV1_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ?GetInvTransformed@bCUnitedRay@@QBE?AV1@ABVbCMatrix3@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetInvTransformed(bCMatrix3 const &)const
+bCUnitedRay * __thiscall _GetInvTransformed_bCUnitedRay__QBE_AV1_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ?GetInvTransformed@bCUnitedRay@@QBE?AV1@ABVbCMatrix@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetInvTransformed(bCMatrix const &)const
+bCUnitedRay * __thiscall _GetInvTransformed_bCUnitedRay__QBE_AV1_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ?GetInvTransformed@bCUnitedRay@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCUnitedRay::GetInvTransformed(bCUnitedRay &,bCMatrix3 const &)const
+void __thiscall _GetInvTransformed_bCUnitedRay__QBEXAAV1_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ?GetInvTransformed@bCUnitedRay@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCUnitedRay::GetInvTransformed(bCUnitedRay &,bCMatrix const &)const
+void __thiscall _GetInvTransformed_bCUnitedRay__QBEXAAV1_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ?GetInvTranslated@bCUnitedRay@@QBE?AV1@ABVbCVector@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetInvTranslated(bCVector const &)const
+bCUnitedRay * __thiscall _GetInvTranslated_bCUnitedRay__QBE_AV1_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ?GetInvTranslated@bCUnitedRay@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCUnitedRay::GetInvTranslated(bCUnitedRay &,bCVector const &)const
+void __thiscall _GetInvTranslated_bCUnitedRay__QBEXAAV1_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ?GetInverted@bCUnitedRay@@QBE?AV1@XZ public: bCUnitedRay __thiscall bCUnitedRay::GetInverted(void)const
+bCUnitedRay * __thiscall _GetInverted_bCUnitedRay__QBE_AV1_XZ( bCUnitedRay const *, bCUnitedRay * );
+// ?GetInverted@bCUnitedRay@@QBEXAAV1@@Z public: void __thiscall bCUnitedRay::GetInverted(bCUnitedRay &)const
+void __thiscall _GetInverted_bCUnitedRay__QBEXAAV1__Z( bCUnitedRay const *, bCUnitedRay * );
+// ?GetNegated@bCUnitedRay@@QBE?AV1@XZ public: bCUnitedRay __thiscall bCUnitedRay::GetNegated(void)const
+bCUnitedRay * __thiscall _GetNegated_bCUnitedRay__QBE_AV1_XZ( bCUnitedRay const *, bCUnitedRay * );
+// ?GetNegated@bCUnitedRay@@QBEXAAV1@@Z public: void __thiscall bCUnitedRay::GetNegated(bCUnitedRay &)const
+void __thiscall _GetNegated_bCUnitedRay__QBEXAAV1__Z( bCUnitedRay const *, bCUnitedRay * );
+// ?GetNormalized@bCUnitedRay@@QBE?AV1@XZ public: bCUnitedRay __thiscall bCUnitedRay::GetNormalized(void)const
+bCUnitedRay * __thiscall _GetNormalized_bCUnitedRay__QBE_AV1_XZ( bCUnitedRay const *, bCUnitedRay * );
+// ?GetNormalized@bCUnitedRay@@QBEXAAV1@@Z public: void __thiscall bCUnitedRay::GetNormalized(bCUnitedRay &)const
+void __thiscall _GetNormalized_bCUnitedRay__QBEXAAV1__Z( bCUnitedRay const *, bCUnitedRay * );
+// ?GetOrigin@bCUnitedRay@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCUnitedRay::GetOrigin(void)const
+bCVector const * __thiscall _GetOrigin_bCUnitedRay__QBEABVbCVector__XZ( bCUnitedRay const * );
+// ?GetOrigin@bCUnitedRay@@QBEXAAVbCVector@@@Z public: void __thiscall bCUnitedRay::GetOrigin(bCVector &)const
+void __thiscall _GetOrigin_bCUnitedRay__QBEXAAVbCVector___Z( bCUnitedRay const *, bCVector * );
+// ?GetPoint@bCUnitedRay@@QBE?AVbCVector@@M@Z public: bCVector __thiscall bCUnitedRay::GetPoint(float)const
+bCVector * __thiscall _GetPoint_bCUnitedRay__QBE_AVbCVector__M_Z( bCUnitedRay const *, bCVector *, GEFloat );
+// ?GetPoint@bCUnitedRay@@QBEXAAVbCVector@@M@Z public: void __thiscall bCUnitedRay::GetPoint(bCVector &,float)const
+void __thiscall _GetPoint_bCUnitedRay__QBEXAAVbCVector__M_Z( bCUnitedRay const *, bCVector *, GEFloat );
+// ?GetRotated@bCUnitedRay@@QBE?AV1@ABVbCQuaternion@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetRotated(bCQuaternion const &)const
+bCUnitedRay * __thiscall _GetRotated_bCUnitedRay__QBE_AV1_ABVbCQuaternion___Z( bCUnitedRay const *, bCUnitedRay *, bCQuaternion const * );
+// ?GetRotated@bCUnitedRay@@QBEXAAV1@ABVbCQuaternion@@@Z public: void __thiscall bCUnitedRay::GetRotated(bCUnitedRay &,bCQuaternion const &)const
+void __thiscall _GetRotated_bCUnitedRay__QBEXAAV1_ABVbCQuaternion___Z( bCUnitedRay const *, bCUnitedRay *, bCQuaternion const * );
+// ?GetScaled@bCUnitedRay@@QBE?AV1@M@Z public: bCUnitedRay __thiscall bCUnitedRay::GetScaled(float)const
+bCUnitedRay * __thiscall _GetScaled_bCUnitedRay__QBE_AV1_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ?GetScaled@bCUnitedRay@@QBEXAAV1@M@Z public: void __thiscall bCUnitedRay::GetScaled(bCUnitedRay &,float)const
+void __thiscall _GetScaled_bCUnitedRay__QBEXAAV1_M_Z( bCUnitedRay const *, bCUnitedRay *, GEFloat );
+// ?GetSum@bCUnitedRay@@QBE?AV1@ABV1@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetSum(bCUnitedRay const &)const
+bCUnitedRay * __thiscall _GetSum_bCUnitedRay__QBE_AV1_ABV1__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ?GetSum@bCUnitedRay@@QBEXAAV1@ABV1@@Z public: void __thiscall bCUnitedRay::GetSum(bCUnitedRay &,bCUnitedRay const &)const
+void __thiscall _GetSum_bCUnitedRay__QBEXAAV1_ABV1__Z( bCUnitedRay const *, bCUnitedRay *, bCUnitedRay const * );
+// ?GetTransformed@bCUnitedRay@@QBE?AV1@ABVbCMatrix3@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetTransformed(bCMatrix3 const &)const
+bCUnitedRay * __thiscall _GetTransformed_bCUnitedRay__QBE_AV1_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ?GetTransformed@bCUnitedRay@@QBE?AV1@ABVbCMatrix@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetTransformed(bCMatrix const &)const
+bCUnitedRay * __thiscall _GetTransformed_bCUnitedRay__QBE_AV1_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ?GetTransformed@bCUnitedRay@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCUnitedRay::GetTransformed(bCUnitedRay &,bCMatrix3 const &)const
+void __thiscall _GetTransformed_bCUnitedRay__QBEXAAV1_ABVbCMatrix3___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix3 const * );
+// ?GetTransformed@bCUnitedRay@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCUnitedRay::GetTransformed(bCUnitedRay &,bCMatrix const &)const
+void __thiscall _GetTransformed_bCUnitedRay__QBEXAAV1_ABVbCMatrix___Z( bCUnitedRay const *, bCUnitedRay *, bCMatrix const * );
+// ?GetTranslated@bCUnitedRay@@QBE?AV1@ABVbCVector@@@Z public: bCUnitedRay __thiscall bCUnitedRay::GetTranslated(bCVector const &)const
+bCUnitedRay * __thiscall _GetTranslated_bCUnitedRay__QBE_AV1_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ?GetTranslated@bCUnitedRay@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCUnitedRay::GetTranslated(bCUnitedRay &,bCVector const &)const
+void __thiscall _GetTranslated_bCUnitedRay__QBEXAAV1_ABVbCVector___Z( bCUnitedRay const *, bCUnitedRay *, bCVector const * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCBox@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCBox const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCBox__AAM_Z( bCUnitedRay const *, bCBox const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCFrustum@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCFrustum const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCFrustum__AAM_Z( bCUnitedRay const *, bCFrustum const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCPlane@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCPlane const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCPlane__AAM_Z( bCUnitedRay const *, bCPlane const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCSphere@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCSphere const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCSphere__AAM_Z( bCUnitedRay const *, bCSphere const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCTriangle@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCTriangle const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCTriangle__AAM_Z( bCUnitedRay const *, bCTriangle const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCTriangle@@W4bESides@2@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCTriangle const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCTriangle__W4bESides_2_AAM_Z( bCUnitedRay const *, bCTriangle const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCVector@@00AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCVector const &,bCVector const &,bCVector const &,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCVector__00AAM_Z( bCUnitedRay const *, bCVector const *, bCVector const *, bCVector const *, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NABVbCVector@@00W4bESides@bCTriangle@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCVector const &,bCVector const &,bCVector const &,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NABVbCVector__00W4bESides_bCTriangle__AAM_Z( bCUnitedRay const *, bCVector const *, bCVector const *, bCVector const *, bCTriangle_bESides, GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NQBVbCVector@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCVector const * const,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NQBVbCVector__AAM_Z( bCUnitedRay const *, bCVector const [ bCTriangle_bEVector_Count ], GEFloat * );
+// ?Intersects@bCUnitedRay@@QBE_NQBVbCVector@@W4bESides@bCTriangle@@AAM@Z public: bool __thiscall bCUnitedRay::Intersects(bCVector const * const,bCTriangle::bESides,float &)const
+GEBool __thiscall _Intersects_bCUnitedRay__QBE_NQBVbCVector__W4bESides_bCTriangle__AAM_Z( bCUnitedRay const *, bCVector const [ bCTriangle_bEVector_Count ], bCTriangle_bESides, GEFloat * );
+// ?InvRotate@bCUnitedRay@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCUnitedRay::InvRotate(bCQuaternion const &)
+void __thiscall _InvRotate_bCUnitedRay__QAEXABVbCQuaternion___Z( bCUnitedRay *, bCQuaternion const * );
+// ?InvScale@bCUnitedRay@@QAEXM@Z public: void __thiscall bCUnitedRay::InvScale(float)
+void __thiscall _InvScale_bCUnitedRay__QAEXM_Z( bCUnitedRay *, GEFloat );
+// ?InvTransform@bCUnitedRay@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCUnitedRay::InvTransform(bCMatrix3 const &)
+void __thiscall _InvTransform_bCUnitedRay__QAEXABVbCMatrix3___Z( bCUnitedRay *, bCMatrix3 const * );
+// ?InvTransform@bCUnitedRay@@QAEXABVbCMatrix@@@Z public: void __thiscall bCUnitedRay::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCUnitedRay__QAEXABVbCMatrix___Z( bCUnitedRay *, bCMatrix const * );
+// ?InvTranslate@bCUnitedRay@@QAEXABVbCVector@@@Z public: void __thiscall bCUnitedRay::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCUnitedRay__QAEXABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ?Invert@bCUnitedRay@@QAEXXZ public: void __thiscall bCUnitedRay::Invert(void)
+void __thiscall _Invert_bCUnitedRay__QAEXXZ( bCUnitedRay * );
+// ?Negate@bCUnitedRay@@QAEXXZ public: void __thiscall bCUnitedRay::Negate(void)
+void __thiscall _Negate_bCUnitedRay__QAEXXZ( bCUnitedRay * );
+// ?Normalize@bCUnitedRay@@QAEXXZ public: void __thiscall bCUnitedRay::Normalize(void)
+void __thiscall _Normalize_bCUnitedRay__QAEXXZ( bCUnitedRay * );
+// ?Rotate@bCUnitedRay@@QAEXABVbCQuaternion@@@Z public: void __thiscall bCUnitedRay::Rotate(bCQuaternion const &)
+void __thiscall _Rotate_bCUnitedRay__QAEXABVbCQuaternion___Z( bCUnitedRay *, bCQuaternion const * );
+// ?Scale@bCUnitedRay@@QAEXM@Z public: void __thiscall bCUnitedRay::Scale(float)
+void __thiscall _Scale_bCUnitedRay__QAEXM_Z( bCUnitedRay *, GEFloat );
+// ?SetDirection@bCUnitedRay@@QAEXABVbCVector@@@Z public: void __thiscall bCUnitedRay::SetDirection(bCVector const &)
+void __thiscall _SetDirection_bCUnitedRay__QAEXABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ?SetExtensionFlags@bCUnitedRay@@QAEXABW4bERayExtension@1@@Z public: void __thiscall bCUnitedRay::SetExtensionFlags(bCUnitedRay::bERayExtension const &)
+void __thiscall _SetExtensionFlags_bCUnitedRay__QAEXABW4bERayExtension_1__Z( bCUnitedRay *, bCUnitedRay_bERayExtension const * );
+// ?SetOrigin@bCUnitedRay@@QAEXABVbCVector@@@Z public: void __thiscall bCUnitedRay::SetOrigin(bCVector const &)
+void __thiscall _SetOrigin_bCUnitedRay__QAEXABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ?SetUnitedRay@bCUnitedRay@@QAEXABV1@@Z public: void __thiscall bCUnitedRay::SetUnitedRay(bCUnitedRay const &)
+void __thiscall _SetUnitedRay_bCUnitedRay__QAEXABV1__Z( bCUnitedRay *, bCUnitedRay const * );
+// ?Sub@bCUnitedRay@@QAEXABV1@@Z public: void __thiscall bCUnitedRay::Sub(bCUnitedRay const &)
+void __thiscall _Sub_bCUnitedRay__QAEXABV1__Z( bCUnitedRay *, bCUnitedRay const * );
+// ?Transform@bCUnitedRay@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCUnitedRay::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCUnitedRay__QAEXABVbCMatrix3___Z( bCUnitedRay *, bCMatrix3 const * );
+// ?Transform@bCUnitedRay@@QAEXABVbCMatrix@@@Z public: void __thiscall bCUnitedRay::Transform(bCMatrix const &)
+void __thiscall _Transform_bCUnitedRay__QAEXABVbCMatrix___Z( bCUnitedRay *, bCMatrix const * );
+// ?Translate@bCUnitedRay@@QAEXABVbCVector@@@Z public: void __thiscall bCUnitedRay::Translate(bCVector const &)
+void __thiscall _Translate_bCUnitedRay__QAEXABVbCVector___Z( bCUnitedRay *, bCVector const * );
+// ?m_fDummy@bCUnitedRay@@1MA protected: static float bCUnitedRay::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCUnitedRay__1MA;
