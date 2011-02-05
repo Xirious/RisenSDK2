@@ -78,6 +78,10 @@
 #include "SharedBase/ge_box.tih"
 #include "SharedBase/ge_frustum.tih"
 #include "SharedBase/ge_sphere.tih"
+#include "SharedBase/ge_infcylinder.tih"
+#include "SharedBase/ge_infdoublecylinder.tih"
+#include "SharedBase/ge_orientedbox.tih"
+#include "SharedBase/ge_octtree.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

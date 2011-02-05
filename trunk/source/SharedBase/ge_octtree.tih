@@ -1,0 +1,56 @@
+struct bCOctTree;
+
+struct bCOctTreeEntryBase
+{
+    bCBox                m_Box;
+    bCOctTree *          m_pTree;
+    bCOctTreeEntryBase * m_pTraversed;
+};
+
+enum bCOctTree_bEOctTreeCull : __int32
+{
+    bCOctTree_bEOctTreeCull_FIXME
+};
+
+typedef bCOctTree_bEOctTreeCull (__stdcall * bCOctTree_bFCullingCallback)( bCBox const * );
+typedef void                    (__stdcall * bCOctTree_bFTouchCallback)( bCOctTreeEntryBase *, bCOctTreeEntryBase *, GEBool );
+typedef void                    (__stdcall * bCOctTree_bFTraverseCallback)( bCOctTreeEntryBase * );
+
+struct bCOctTree
+{
+    void *                      m_pRoot;
+    bCOctTree_bFTouchCallback   m_funcTouchCallback;
+    bCOctTree_bFCullingCallback m_funcCullingCallback;
+};
+// ??0bCOctTree@@QAE@ABVbCBox@@@Z public: __thiscall bCOctTree::bCOctTree(bCBox const &)
+bCOctTree * __thiscall __0bCOctTree__QAE_ABVbCBox___Z( bCOctTree *, bCBox const * );
+// ??1bCOctTree@@QAE@XZ public: __thiscall bCOctTree::~bCOctTree(void)
+void __thiscall __1bCOctTree__QAE_XZ( bCOctTree * );
+// ??4bCOctTree@@QAEAAV0@ABV0@@Z public: bCOctTree & __thiscall bCOctTree::operator=(bCOctTree const &)
+bCOctTree * __thiscall __4bCOctTree__QAEAAV0_ABV0__Z( bCOctTree *, bCOctTree const * );
+// ?AddEntry@bCOctTree@@QAEXPAVbCOctTreeEntryBase@@@Z public: void __thiscall bCOctTree::AddEntry(bCOctTreeEntryBase *)
+void __thiscall _AddEntry_bCOctTree__QAEXPAVbCOctTreeEntryBase___Z( bCOctTree *, bCOctTreeEntryBase * );
+// ?Check@bCOctTree@@QAEXXZ public: void __thiscall bCOctTree::Check(void)
+void __thiscall _Check_bCOctTree__QAEXXZ( bCOctTree * );
+// ?CleanUp@bCOctTree@@QAEXXZ public: void __thiscall bCOctTree::CleanUp(void)
+void __thiscall _CleanUp_bCOctTree__QAEXXZ( bCOctTree * );
+// ?ExpandBox@bCOctTree@@AAEXHHH@Z private: void __thiscall bCOctTree::ExpandBox(int,int,int)
+void __thiscall _ExpandBox_bCOctTree__AAEXHHH_Z( bCOctTree *, GEInt, GEInt, GEInt );
+// ?IncludeBox@bCOctTree@@QAEXABVbCBox@@@Z public: void __thiscall bCOctTree::IncludeBox(bCBox const &)
+void __thiscall _IncludeBox_bCOctTree__QAEXABVbCBox___Z( bCOctTree *, bCBox const * );
+// ?MoveEntry@bCOctTree@@QAEXPAVbCOctTreeEntryBase@@ABVbCBox@@@Z public: void __thiscall bCOctTree::MoveEntry(bCOctTreeEntryBase *,bCBox const &)
+void __thiscall _MoveEntry_bCOctTree__QAEXPAVbCOctTreeEntryBase__ABVbCBox___Z( bCOctTree *, bCOctTreeEntryBase *, bCBox const * );
+// ?RemoveEntry@bCOctTree@@QAEXPAVbCOctTreeEntryBase@@@Z public: void __thiscall bCOctTree::RemoveEntry(bCOctTreeEntryBase *)
+void __thiscall _RemoveEntry_bCOctTree__QAEXPAVbCOctTreeEntryBase___Z( bCOctTree *, bCOctTreeEntryBase * );
+// ?SetCullingCallback@bCOctTree@@QAEP6G?AW4bEOctTreeCull@1@ABVbCBox@@@ZP6G?AW421@0@Z@Z public: bCOctTree::bEOctTreeCull (__stdcall*__thiscall bCOctTree::SetCullingCallback(bCOctTree::bEOctTreeCull (__stdcall*)(bCBox const &)))(bCBox const &)
+bCOctTree_bFCullingCallback __thiscall _SetCullingCallback_bCOctTree__QAEP6G_AW4bEOctTreeCull_1_ABVbCBox___ZP6G_AW421_0_Z_Z( bCOctTree *, bCOctTree_bFCullingCallback );
+// ?SetTouchCallback@bCOctTree@@QAEP6GXPAVbCOctTreeEntryBase@@0_N@ZP6GX001@Z@Z public: void (__stdcall*__thiscall bCOctTree::SetTouchCallback(void (__stdcall*)(bCOctTreeEntryBase *,bCOctTreeEntryBase *,bool)))(bCOctTreeEntryBase *,bCOctTreeEntryBase *,bool)
+bCOctTree_bFTouchCallback __thiscall _SetTouchCallback_bCOctTree__QAEP6GXPAVbCOctTreeEntryBase__0_N_ZP6GX001_Z_Z( bCOctTree *, bCOctTree_bFTouchCallback );
+// ?Traverse@bCOctTree@@QAEXP6GXPAVbCOctTreeEntryBase@@@ZABVbCBox@@@Z public: void __thiscall bCOctTree::Traverse(void (__stdcall*)(bCOctTreeEntryBase *),bCBox const &)
+void __thiscall _Traverse_bCOctTree__QAEXP6GXPAVbCOctTreeEntryBase___ZABVbCBox___Z( bCOctTree *, bCOctTree_bFTraverseCallback, bCBox const * );
+// ?Traverse@bCOctTree@@QAEXP6GXPAVbCOctTreeEntryBase@@@ZABVbCVector@@@Z public: void __thiscall bCOctTree::Traverse(void (__stdcall*)(bCOctTreeEntryBase *),bCVector const &)
+void __thiscall _Traverse_bCOctTree__QAEXP6GXPAVbCOctTreeEntryBase___ZABVbCVector___Z( bCOctTree *, bCOctTree_bFTraverseCallback, bCVector const * );
+// ?Traverse@bCOctTree@@QAEXP6GXPAVbCOctTreeEntryBase@@@ZPBVbCPlane@@H@Z public: void __thiscall bCOctTree::Traverse(void (__stdcall*)(bCOctTreeEntryBase *),bCPlane const *,int)
+void __thiscall _Traverse_bCOctTree__QAEXP6GXPAVbCOctTreeEntryBase___ZPBVbCPlane__H_Z( bCOctTree *, bCOctTree_bFTraverseCallback, bCPlane const *, GEInt );
+// ?Traverse@bCOctTree@@QAEXP6GXPAVbCOctTreeEntryBase@@@ZPBVbCPlane@@HABV3@@Z public: void __thiscall bCOctTree::Traverse(void (__stdcall*)(bCOctTreeEntryBase *),bCPlane const *,int,bCPlane const &)
+void __thiscall _Traverse_bCOctTree__QAEXP6GXPAVbCOctTreeEntryBase___ZPBVbCPlane__HABV3__Z( bCOctTree *, bCOctTree_bFTraverseCallback, bCPlane const *, GEInt, bCPlane const * );

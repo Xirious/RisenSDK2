@@ -1,0 +1,215 @@
+struct bCInfDoubleCylinder;
+
+struct bCInfCylinder
+{
+    GEFloat  m_fRadius;
+    bCVector m_vecPosition;
+};
+// ??0bCInfCylinder@@QAE@ABV0@@Z public: __thiscall bCInfCylinder::bCInfCylinder(bCInfCylinder const &)
+bCInfCylinder * __thiscall __0bCInfCylinder__QAE_ABV0__Z( bCInfCylinder *, bCInfCylinder const * );
+// ??0bCInfCylinder@@QAE@ABVbCVector@@M@Z public: __thiscall bCInfCylinder::bCInfCylinder(bCVector const &,float)
+bCInfCylinder * __thiscall __0bCInfCylinder__QAE_ABVbCVector__M_Z( bCInfCylinder *, bCVector const *, GEFloat );
+// ??0bCInfCylinder@@QAE@XZ public: __thiscall bCInfCylinder::bCInfCylinder(void)
+bCInfCylinder * __thiscall __0bCInfCylinder__QAE_XZ( bCInfCylinder * );
+// ??1bCInfCylinder@@QAE@XZ public: __thiscall bCInfCylinder::~bCInfCylinder(void)
+void __thiscall __1bCInfCylinder__QAE_XZ( bCInfCylinder * );
+// ??4bCInfCylinder@@QAEABV0@ABV0@@Z public: bCInfCylinder const & __thiscall bCInfCylinder::operator=(bCInfCylinder const &)
+bCInfCylinder const * __thiscall __4bCInfCylinder__QAEABV0_ABV0__Z( bCInfCylinder *, bCInfCylinder const * );
+// ??5bCInfCylinder@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCInfCylinder::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCInfCylinder__QBEAAVbCOStream__AAV1__Z( bCInfCylinder const *, bCOStream * );
+// ??6bCInfCylinder@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCInfCylinder::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCInfCylinder__QAEAAVbCIStream__AAV1__Z( bCInfCylinder *, bCIStream * );
+// ??8bCInfCylinder@@QBE_NABV0@@Z public: bool __thiscall bCInfCylinder::operator==(bCInfCylinder const &)const
+GEBool __thiscall __8bCInfCylinder__QBE_NABV0__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ??9bCInfCylinder@@QBE_NABV0@@Z public: bool __thiscall bCInfCylinder::operator!=(bCInfCylinder const &)const
+GEBool __thiscall __9bCInfCylinder__QBE_NABV0__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ??DbCInfCylinder@@QBE?AV0@ABVbCMatrix3@@@Z public: bCInfCylinder __thiscall bCInfCylinder::operator*(bCMatrix3 const &)const
+bCInfCylinder * __thiscall __DbCInfCylinder__QBE_AV0_ABVbCMatrix3___Z( bCInfCylinder const *, bCInfCylinder *, bCMatrix3 const * );
+// ??DbCInfCylinder@@QBE?AV0@ABVbCMatrix@@@Z public: bCInfCylinder __thiscall bCInfCylinder::operator*(bCMatrix const &)const
+bCInfCylinder * __thiscall __DbCInfCylinder__QBE_AV0_ABVbCMatrix___Z( bCInfCylinder const *, bCInfCylinder *, bCMatrix const * );
+// ??DbCInfCylinder@@QBE?AV0@M@Z public: bCInfCylinder __thiscall bCInfCylinder::operator*(float)const
+bCInfCylinder * __thiscall __DbCInfCylinder__QBE_AV0_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ??GbCInfCylinder@@QBE?AV0@ABVbCVector@@@Z public: bCInfCylinder __thiscall bCInfCylinder::operator-(bCVector const &)const
+bCInfCylinder * __thiscall __GbCInfCylinder__QBE_AV0_ABVbCVector___Z( bCInfCylinder const *, bCInfCylinder *, bCVector const * );
+// ??HbCInfCylinder@@QBE?AV0@ABVbCVector@@@Z public: bCInfCylinder __thiscall bCInfCylinder::operator+(bCVector const &)const
+bCInfCylinder * __thiscall __HbCInfCylinder__QBE_AV0_ABVbCVector___Z( bCInfCylinder const *, bCInfCylinder *, bCVector const * );
+// ??KbCInfCylinder@@QBE?AV0@M@Z public: bCInfCylinder __thiscall bCInfCylinder::operator/(float)const
+bCInfCylinder * __thiscall __KbCInfCylinder__QBE_AV0_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ??XbCInfCylinder@@QAEAAV0@ABVbCMatrix3@@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator*=(bCMatrix3 const &)
+bCInfCylinder * __thiscall __XbCInfCylinder__QAEAAV0_ABVbCMatrix3___Z( bCInfCylinder *, bCMatrix3 const * );
+// ??XbCInfCylinder@@QAEAAV0@ABVbCMatrix@@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator*=(bCMatrix const &)
+bCInfCylinder * __thiscall __XbCInfCylinder__QAEAAV0_ABVbCMatrix___Z( bCInfCylinder *, bCMatrix const * );
+// ??XbCInfCylinder@@QAEAAV0@M@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator*=(float)
+bCInfCylinder * __thiscall __XbCInfCylinder__QAEAAV0_M_Z( bCInfCylinder *, GEFloat );
+// ??YbCInfCylinder@@QAEAAV0@ABVbCVector@@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator+=(bCVector const &)
+bCInfCylinder * __thiscall __YbCInfCylinder__QAEAAV0_ABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ??ZbCInfCylinder@@QAEAAV0@ABVbCVector@@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator-=(bCVector const &)
+bCInfCylinder * __thiscall __ZbCInfCylinder__QAEAAV0_ABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ??_0bCInfCylinder@@QAEAAV0@M@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator/=(float)
+bCInfCylinder * __thiscall ___0bCInfCylinder__QAEAAV0_M_Z( bCInfCylinder *, GEFloat );
+// ??_4bCInfCylinder@@QAEAAV0@ABV0@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator&=(bCInfCylinder const &)
+bCInfCylinder * __thiscall ___4bCInfCylinder__QAEAAV0_ABV0__Z( bCInfCylinder *, bCInfCylinder const * );
+// ??_5bCInfCylinder@@QAEAAV0@ABV0@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator|=(bCInfCylinder const &)
+bCInfCylinder * __thiscall ___5bCInfCylinder__QAEAAV0_ABV0__Z( bCInfCylinder *, bCInfCylinder const * );
+// ??_5bCInfCylinder@@QAEAAV0@ABVbCVector@@@Z public: bCInfCylinder & __thiscall bCInfCylinder::operator|=(bCVector const &)
+bCInfCylinder * __thiscall ___5bCInfCylinder__QAEAAV0_ABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ?AccessPosition@bCInfCylinder@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCInfCylinder::AccessPosition(void)
+bCVector * __thiscall _AccessPosition_bCInfCylinder__QAEAAVbCVector__XZ( bCInfCylinder * );
+// ?AccessRadius@bCInfCylinder@@QAEAAMXZ public: float & __thiscall bCInfCylinder::AccessRadius(void)
+GEFloat * __thiscall _AccessRadius_bCInfCylinder__QAEAAMXZ( bCInfCylinder * );
+// ?Contains@bCInfCylinder@@QBE_NABV1@@Z public: bool __thiscall bCInfCylinder::Contains(bCInfCylinder const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABV1__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCBox@@@Z public: bool __thiscall bCInfCylinder::Contains(bCBox const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCBox___Z( bCInfCylinder const *, bCBox const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCInfCylinder::Contains(bCFrustum const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCFrustum___Z( bCInfCylinder const *, bCFrustum const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCInfDoubleCylinder@@@Z public: bool __thiscall bCInfCylinder::Contains(bCInfDoubleCylinder const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCInfDoubleCylinder___Z( bCInfCylinder const *, bCInfDoubleCylinder const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCInfCylinder::Contains(bCStretch const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCStretch___Z( bCInfCylinder const *, bCStretch const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCInfCylinder::Contains(bCTriangle const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCTriangle___Z( bCInfCylinder const *, bCTriangle const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCInfCylinder::Contains(bCUnitedRay const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCUnitedRay___Z( bCInfCylinder const *, bCUnitedRay const * );
+// ?Contains@bCInfCylinder@@QBE_NABVbCVector@@@Z public: bool __thiscall bCInfCylinder::Contains(bCVector const &)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NABVbCVector___Z( bCInfCylinder const *, bCVector const * );
+// ?Contains@bCInfCylinder@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCInfCylinder::Contains(bCVector const * const)const
+GEBool __thiscall _Contains_bCInfCylinder__QBE_NQBVbCVector___Z( bCInfCylinder const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?Cull@bCInfCylinder@@QBE_NABV1@@Z public: bool __thiscall bCInfCylinder::Cull(bCInfCylinder const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABV1__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCBox@@@Z public: bool __thiscall bCInfCylinder::Cull(bCBox const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCBox___Z( bCInfCylinder const *, bCBox const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCInfCylinder::Cull(bCFrustum const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCFrustum___Z( bCInfCylinder const *, bCFrustum const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCInfDoubleCylinder@@@Z public: bool __thiscall bCInfCylinder::Cull(bCInfDoubleCylinder const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCInfDoubleCylinder___Z( bCInfCylinder const *, bCInfDoubleCylinder const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCLine@@@Z public: bool __thiscall bCInfCylinder::Cull(bCLine const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCLine___Z( bCInfCylinder const *, bCLine const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCInfCylinder::Cull(bCPlane const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCPlane___Z( bCInfCylinder const *, bCPlane const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCRay@@@Z public: bool __thiscall bCInfCylinder::Cull(bCRay const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCRay___Z( bCInfCylinder const *, bCRay const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCInfCylinder::Cull(bCSphere const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCSphere___Z( bCInfCylinder const *, bCSphere const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCInfCylinder::Cull(bCStretch const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCStretch___Z( bCInfCylinder const *, bCStretch const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCInfCylinder::Cull(bCTriangle const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCTriangle___Z( bCInfCylinder const *, bCTriangle const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCInfCylinder::Cull(bCUnitedRay const &)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCUnitedRay___Z( bCInfCylinder const *, bCUnitedRay const * );
+// ?Cull@bCInfCylinder@@QBE_NABVbCVector@@_N@Z public: bool __thiscall bCInfCylinder::Cull(bCVector const &,bool)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NABVbCVector___N_Z( bCInfCylinder const *, bCVector const *, GEBool );
+// ?Cull@bCInfCylinder@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCInfCylinder::Cull(bCVector const * const)const
+GEBool __thiscall _Cull_bCInfCylinder__QBE_NQBVbCVector___Z( bCInfCylinder const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?GetIntersected@bCInfCylinder@@QBE?AV1@ABV1@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetIntersected(bCInfCylinder const &)const
+bCInfCylinder * __thiscall _GetIntersected_bCInfCylinder__QBE_AV1_ABV1__Z( bCInfCylinder const *, bCInfCylinder *, bCInfCylinder const * );
+// ?GetIntersectionDistance@bCInfCylinder@@QBEMABVbCRay@@@Z public: float __thiscall bCInfCylinder::GetIntersectionDistance(bCRay const &)const
+GEFloat __thiscall _GetIntersectionDistance_bCInfCylinder__QBEMABVbCRay___Z( bCInfCylinder const *, bCRay const * );
+// ?GetInvScaled@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetInvScaled(float)const
+bCInfCylinder * __thiscall _GetInvScaled_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?GetInvTranslated@bCInfCylinder@@QBE?AV1@ABVbCVector@@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetInvTranslated(bCVector const &)const
+bCInfCylinder * __thiscall _GetInvTranslated_bCInfCylinder__QBE_AV1_ABVbCVector___Z( bCInfCylinder const *, bCInfCylinder *, bCVector const * );
+// ?GetInvTranslated@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetInvTranslated(float)const
+bCInfCylinder * __thiscall _GetInvTranslated_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?GetMerged@bCInfCylinder@@QBE?AV1@ABV1@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetMerged(bCInfCylinder const &)const
+bCInfCylinder * __thiscall _GetMerged_bCInfCylinder__QBE_AV1_ABV1__Z( bCInfCylinder const *, bCInfCylinder *, bCInfCylinder const * );
+// ?GetMerged@bCInfCylinder@@QBE?AV1@ABVbCVector@@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetMerged(bCVector const &)const
+bCInfCylinder * __thiscall _GetMerged_bCInfCylinder__QBE_AV1_ABVbCVector___Z( bCInfCylinder const *, bCInfCylinder *, bCVector const * );
+// ?GetPosition@bCInfCylinder@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCInfCylinder::GetPosition(void)const
+bCVector const * __thiscall _GetPosition_bCInfCylinder__QBEABVbCVector__XZ( bCInfCylinder const * );
+// ?GetPosition@bCInfCylinder@@QBEXAAVbCVector@@@Z public: void __thiscall bCInfCylinder::GetPosition(bCVector &)const
+void __thiscall _GetPosition_bCInfCylinder__QBEXAAVbCVector___Z( bCInfCylinder const *, bCVector * );
+// ?GetRadius@bCInfCylinder@@QBEMXZ public: float __thiscall bCInfCylinder::GetRadius(void)const
+GEFloat __thiscall _GetRadius_bCInfCylinder__QBEMXZ( bCInfCylinder const * );
+// ?GetRadius@bCInfCylinder@@QBEXAAM@Z public: void __thiscall bCInfCylinder::GetRadius(float &)const
+void __thiscall _GetRadius_bCInfCylinder__QBEXAAM_Z( bCInfCylinder const *, GEFloat * );
+// ?GetScaled@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetScaled(float)const
+bCInfCylinder * __thiscall _GetScaled_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?GetShrunk@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetShrunk(float)const
+bCInfCylinder * __thiscall _GetShrunk_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?GetTransformed@bCInfCylinder@@QBE?AV1@ABVbCMatrix3@@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetTransformed(bCMatrix3 const &)const
+bCInfCylinder * __thiscall _GetTransformed_bCInfCylinder__QBE_AV1_ABVbCMatrix3___Z( bCInfCylinder const *, bCInfCylinder *, bCMatrix3 const * );
+// ?GetTransformed@bCInfCylinder@@QBE?AV1@ABVbCMatrix@@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetTransformed(bCMatrix const &)const
+bCInfCylinder * __thiscall _GetTransformed_bCInfCylinder__QBE_AV1_ABVbCMatrix___Z( bCInfCylinder const *, bCInfCylinder *, bCMatrix const * );
+// ?GetTranslated@bCInfCylinder@@QBE?AV1@ABVbCVector@@@Z public: bCInfCylinder __thiscall bCInfCylinder::GetTranslated(bCVector const &)const
+bCInfCylinder * __thiscall _GetTranslated_bCInfCylinder__QBE_AV1_ABVbCVector___Z( bCInfCylinder const *, bCInfCylinder *, bCVector const * );
+// ?GetTranslated@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetTranslated(float)const
+bCInfCylinder * __thiscall _GetTranslated_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?GetVolume@bCInfCylinder@@QBEMXZ public: float __thiscall bCInfCylinder::GetVolume(void)const
+GEFloat __thiscall _GetVolume_bCInfCylinder__QBEMXZ( bCInfCylinder const * );
+// ?GetWidened@bCInfCylinder@@QBE?AV1@M@Z public: bCInfCylinder __thiscall bCInfCylinder::GetWidened(float)const
+bCInfCylinder * __thiscall _GetWidened_bCInfCylinder__QBE_AV1_M_Z( bCInfCylinder const *, bCInfCylinder *, GEFloat );
+// ?Intersect@bCInfCylinder@@QAEXABV1@@Z public: void __thiscall bCInfCylinder::Intersect(bCInfCylinder const &)
+void __thiscall _Intersect_bCInfCylinder__QAEXABV1__Z( bCInfCylinder *, bCInfCylinder const * );
+// ?Intersects@bCInfCylinder@@QBE_NABV1@@Z public: bool __thiscall bCInfCylinder::Intersects(bCInfCylinder const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABV1__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCBox@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCBox const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCBox___Z( bCInfCylinder const *, bCBox const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCFrustum const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCFrustum___Z( bCInfCylinder const *, bCFrustum const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCInfDoubleCylinder@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCInfDoubleCylinder const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCInfDoubleCylinder___Z( bCInfCylinder const *, bCInfDoubleCylinder const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCLine@@AAM@Z public: bool __thiscall bCInfCylinder::Intersects(bCLine const &,float &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCLine__AAM_Z( bCInfCylinder const *, bCLine const *, GEFloat * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCPlane const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCPlane___Z( bCInfCylinder const *, bCPlane const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCRay@@AAM@Z public: bool __thiscall bCInfCylinder::Intersects(bCRay const &,float &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCRay__AAM_Z( bCInfCylinder const *, bCRay const *, GEFloat * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCStretch@@AAMAAVbCVector2@@_N3@Z public: bool __thiscall bCInfCylinder::Intersects(bCStretch const &,float &,bCVector2 &,bool,bool)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCStretch__AAMAAVbCVector2___N3_Z( bCInfCylinder const *, bCStretch const *, GEFloat *, bCVector2 *, GEBool, GEBool );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCTriangle const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCTriangle___Z( bCInfCylinder const *, bCTriangle const * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCUnitedRay@@AAM@Z public: bool __thiscall bCInfCylinder::Intersects(bCUnitedRay const &,float &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCUnitedRay__AAM_Z( bCInfCylinder const *, bCUnitedRay const *, GEFloat * );
+// ?Intersects@bCInfCylinder@@QBE_NABVbCVector@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCVector const &)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NABVbCVector___Z( bCInfCylinder const *, bCVector const * );
+// ?Intersects@bCInfCylinder@@QBE_NQBVbCVector@@@Z public: bool __thiscall bCInfCylinder::Intersects(bCVector const * const)const
+GEBool __thiscall _Intersects_bCInfCylinder__QBE_NQBVbCVector___Z( bCInfCylinder const *, bCVector const [ bCTriangle_bEVector_Count ] );
+// ?InvScale@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::InvScale(float)
+void __thiscall _InvScale_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?InvTranslate@bCInfCylinder@@QAEXABVbCVector@@@Z public: void __thiscall bCInfCylinder::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCInfCylinder__QAEXABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ?InvTranslate@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::InvTranslate(float)
+void __thiscall _InvTranslate_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?Invalidate@bCInfCylinder@@QAEXXZ public: void __thiscall bCInfCylinder::Invalidate(void)
+void __thiscall _Invalidate_bCInfCylinder__QAEXXZ( bCInfCylinder * );
+// ?IsEqual@bCInfCylinder@@QBE_NABV1@@Z public: bool __thiscall bCInfCylinder::IsEqual(bCInfCylinder const &)const
+GEBool __thiscall _IsEqual_bCInfCylinder__QBE_NABV1__Z( bCInfCylinder const *, bCInfCylinder const * );
+// ?IsValid@bCInfCylinder@@QBE_NXZ public: bool __thiscall bCInfCylinder::IsValid(void)const
+GEBool __thiscall _IsValid_bCInfCylinder__QBE_NXZ( bCInfCylinder const * );
+// ?Merge@bCInfCylinder@@QAEXABV1@@Z public: void __thiscall bCInfCylinder::Merge(bCInfCylinder const &)
+void __thiscall _Merge_bCInfCylinder__QAEXABV1__Z( bCInfCylinder *, bCInfCylinder const * );
+// ?Merge@bCInfCylinder@@QAEXABVbCVector@@@Z public: void __thiscall bCInfCylinder::Merge(bCVector const &)
+void __thiscall _Merge_bCInfCylinder__QAEXABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ?Scale@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::Scale(float)
+void __thiscall _Scale_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?Separates@bCInfCylinder@@QBE_NABVbCBox@@ABVbCVector@@@Z public: bool __thiscall bCInfCylinder::Separates(bCBox const &,bCVector const &)const
+GEBool __thiscall _Separates_bCInfCylinder__QBE_NABVbCBox__ABVbCVector___Z( bCInfCylinder const *, bCBox const *, bCVector const * );
+// ?Separates@bCInfCylinder@@QBE_NPBVbCVector@@HABV2@@Z public: bool __thiscall bCInfCylinder::Separates(bCVector const *,int,bCVector const &)const
+GEBool __thiscall _Separates_bCInfCylinder__QBE_NPBVbCVector__HABV2__Z( bCInfCylinder const *, bCVector const *, GEInt, bCVector const * );
+// ?SetInfCylinder@bCInfCylinder@@QAEXABV1@@Z public: void __thiscall bCInfCylinder::SetInfCylinder(bCInfCylinder const &)
+void __thiscall _SetInfCylinder_bCInfCylinder__QAEXABV1__Z( bCInfCylinder *, bCInfCylinder const * );
+// ?SetInfCylinder@bCInfCylinder@@QAEXABVbCVector@@M@Z public: void __thiscall bCInfCylinder::SetInfCylinder(bCVector const &,float)
+void __thiscall _SetInfCylinder_bCInfCylinder__QAEXABVbCVector__M_Z( bCInfCylinder *, bCVector const *, GEFloat );
+// ?SetPosition@bCInfCylinder@@QAEXABVbCVector@@@Z public: void __thiscall bCInfCylinder::SetPosition(bCVector const &)
+void __thiscall _SetPosition_bCInfCylinder__QAEXABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ?SetRadius@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::SetRadius(float)
+void __thiscall _SetRadius_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?Shrink@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::Shrink(float)
+void __thiscall _Shrink_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?Transform@bCInfCylinder@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCInfCylinder::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCInfCylinder__QAEXABVbCMatrix3___Z( bCInfCylinder *, bCMatrix3 const * );
+// ?Transform@bCInfCylinder@@QAEXABVbCMatrix@@@Z public: void __thiscall bCInfCylinder::Transform(bCMatrix const &)
+void __thiscall _Transform_bCInfCylinder__QAEXABVbCMatrix___Z( bCInfCylinder *, bCMatrix const * );
+// ?Translate@bCInfCylinder@@QAEXABVbCVector@@@Z public: void __thiscall bCInfCylinder::Translate(bCVector const &)
+void __thiscall _Translate_bCInfCylinder__QAEXABVbCVector___Z( bCInfCylinder *, bCVector const * );
+// ?Translate@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::Translate(float)
+void __thiscall _Translate_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?Widen@bCInfCylinder@@QAEXM@Z public: void __thiscall bCInfCylinder::Widen(float)
+void __thiscall _Widen_bCInfCylinder__QAEXM_Z( bCInfCylinder *, GEFloat );
+// ?m_bDummy@bCInfCylinder@@1_NA protected: static bool bCInfCylinder::m_bDummy
+GEBool DLLIMPORT _m_bDummy_bCInfCylinder__1_NA;
+// ?m_fDummy@bCInfCylinder@@1MA protected: static float bCInfCylinder::m_fDummy
+GEFloat DLLIMPORT _m_fDummy_bCInfCylinder__1MA;
+// ?m_vecDummy@bCInfCylinder@@1VbCVector2@@A protected: static bCVector2 bCInfCylinder::m_vecDummy
+bCVector2 DLLIMPORT _m_vecDummy_bCInfCylinder__1VbCVector2__A;
