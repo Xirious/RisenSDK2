@@ -4,10 +4,8 @@
 class GE_DLLIMPORT bCInfDoubleCylinder
 {
 private:
-    GEFloat  m_fRadiusA;
-    bCVector m_vecPositionA;
-    GEFloat  m_fRadiusB;
-    bCVector m_vecPositionB;
+    bCInfCylinder m_A;
+    bCInfCylinder m_B;
 protected:
     static GEBool    m_bDummy;
     static GEFloat   m_fDummy;

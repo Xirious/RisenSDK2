@@ -117,10 +117,10 @@ struct bSRect
 void __cdecl GE_SILENTLOG_ERR( GELPCChar, ... );
 void __cdecl GE_SILENTLOG_OUT( GELPCChar, ... );
 
-// _GetVersion@4 conflicts with mssdk.til
+//NOTE: _GetVersion@4 conflicts with mssdk.til
 GEBool   __stdcall CheckFileVersion( GELPCChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
 GEBool   __stdcall GetDLLVersion( GELPCChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
-//GELPChar __stdcall GetVersion( GELPCChar );
+GELPChar __stdcall GetVersion( GELPCChar );
 GEBool   __stdcall ParseVersionString( GELPChar, GEU32 *, GEU32 *, GEU32 *, GEU32 * );
 
 GELongBool   __stdcall g_CloseMutex( GELPVoid );

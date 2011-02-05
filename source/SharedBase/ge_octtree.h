@@ -29,9 +29,9 @@ public:
     typedef void          (GE_STDCALL * bFTraverseCallback)( bCOctTreeEntryBase * );
 
 private:
-    void *             m_pRoot;  //FIXME: bCOctTreeNode *
-    bFTouchCallback    m_funcTouchCallback;
-    bFTraverseCallback m_funcCullingCallback;
+    void *            m_pRoot;  //FIXME: bCOctTreeNode *
+    bFTouchCallback   m_funcTouchCallback;
+    bFCullingCallback m_funcCullingCallback;
 private:
     void              ExpandBox( GEInt, GEInt, GEInt );
     void              AddEntry( bCOctTreeEntryBase * );

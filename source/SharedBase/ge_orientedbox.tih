@@ -1,0 +1,275 @@
+enum bCOrientedBox_bEEdge : GEInt
+{
+    bCOrientedBox_bEEdge_FIXME_0,
+    bCOrientedBox_bEEdge_FIXME_1,
+    bCOrientedBox_bEEdge_FIXME_2,
+    bCOrientedBox_bEEdge_FIXME_3,
+    bCOrientedBox_bEEdge_FIXME_4,
+    bCOrientedBox_bEEdge_FIXME_5,
+    bCOrientedBox_bEEdge_FIXME_6,
+    bCOrientedBox_bEEdge_FIXME_7,
+    bCOrientedBox_bEEdge_FIXME_8,
+    bCOrientedBox_bEEdge_FIXME_9,
+    bCOrientedBox_bEEdge_FIXME_10,
+    bCOrientedBox_bEEdge_FIXME_11,
+    bCOrientedBox_bEEdge_Count
+};
+
+enum bCOrientedBox_bEPlane : GEInt
+{
+    bCOrientedBox_bEPlane_FIXME_0,
+    bCOrientedBox_bEPlane_FIXME_1,
+    bCOrientedBox_bEPlane_FIXME_2,
+    bCOrientedBox_bEPlane_FIXME_3,
+    bCOrientedBox_bEPlane_FIXME_4,
+    bCOrientedBox_bEPlane_FIXME_5,
+    bCOrientedBox_bEPlane_Count
+};
+
+enum bCOrientedBox_bEVertex : GEInt
+{
+    bCOrientedBox_bEVertex_FIXME_0,
+    bCOrientedBox_bEVertex_FIXME_1,
+    bCOrientedBox_bEVertex_FIXME_2,
+    bCOrientedBox_bEVertex_FIXME_3,
+    bCOrientedBox_bEVertex_FIXME_4,
+    bCOrientedBox_bEVertex_FIXME_5,
+    bCOrientedBox_bEVertex_FIXME_6,
+    bCOrientedBox_bEVertex_FIXME_7,
+    bCOrientedBox_bEVertex_Count
+};
+
+struct bCOrientedBox
+{
+    bCVector  m_vecCenter;
+    bCVector  m_vecExtent;
+    bCMatrix3 m_matOrientation;
+};
+// ??0bCOrientedBox@@QAE@ABV0@@Z public: __thiscall bCOrientedBox::bCOrientedBox(bCOrientedBox const &)
+bCOrientedBox * __thiscall __0bCOrientedBox__QAE_ABV0__Z( bCOrientedBox *, bCOrientedBox const * );
+// ??0bCOrientedBox@@QAE@ABVbCBox@@ABVbCMatrix3@@@Z public: __thiscall bCOrientedBox::bCOrientedBox(bCBox const &,bCMatrix3 const &)
+bCOrientedBox * __thiscall __0bCOrientedBox__QAE_ABVbCBox__ABVbCMatrix3___Z( bCOrientedBox *, bCBox const *, bCMatrix3 const * );
+// ??0bCOrientedBox@@QAE@XZ public: __thiscall bCOrientedBox::bCOrientedBox(void)
+bCOrientedBox * __thiscall __0bCOrientedBox__QAE_XZ( bCOrientedBox * );
+// ??1bCOrientedBox@@QAE@XZ public: __thiscall bCOrientedBox::~bCOrientedBox(void)
+void __thiscall __1bCOrientedBox__QAE_XZ( bCOrientedBox * );
+// ??4bCOrientedBox@@QAEAAV0@ABV0@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator=(bCOrientedBox const &)
+bCOrientedBox * __thiscall __4bCOrientedBox__QAEAAV0_ABV0__Z( bCOrientedBox *, bCOrientedBox const * );
+// ??5bCOrientedBox@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCOrientedBox::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCOrientedBox__QBEAAVbCOStream__AAV1__Z( bCOrientedBox const *, bCOStream * );
+// ??6bCOrientedBox@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCOrientedBox::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCOrientedBox__QAEAAVbCIStream__AAV1__Z( bCOrientedBox *, bCIStream * );
+// ??8bCOrientedBox@@QBE_NABV0@@Z public: bool __thiscall bCOrientedBox::operator==(bCOrientedBox const &)const
+GEBool __thiscall __8bCOrientedBox__QBE_NABV0__Z( bCOrientedBox const *, bCOrientedBox const * );
+// ??9bCOrientedBox@@QBE_NABV0@@Z public: bool __thiscall bCOrientedBox::operator!=(bCOrientedBox const &)const
+GEBool __thiscall __9bCOrientedBox__QBE_NABV0__Z( bCOrientedBox const *, bCOrientedBox const * );
+// ??DbCOrientedBox@@QBE?AV0@ABVbCMatrix3@@@Z public: bCOrientedBox __thiscall bCOrientedBox::operator*(bCMatrix3 const &)const
+bCOrientedBox * __thiscall __DbCOrientedBox__QBE_AV0_ABVbCMatrix3___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix3 const * );
+// ??DbCOrientedBox@@QBE?AV0@ABVbCMatrix@@@Z public: bCOrientedBox __thiscall bCOrientedBox::operator*(bCMatrix const &)const
+bCOrientedBox * __thiscall __DbCOrientedBox__QBE_AV0_ABVbCMatrix___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix const * );
+// ??DbCOrientedBox@@QBE?AV0@M@Z public: bCOrientedBox __thiscall bCOrientedBox::operator*(float)const
+bCOrientedBox * __thiscall __DbCOrientedBox__QBE_AV0_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ??GbCOrientedBox@@QBE?AV0@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::operator-(bCVector const &)const
+bCOrientedBox * __thiscall __GbCOrientedBox__QBE_AV0_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ??HbCOrientedBox@@QBE?AV0@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::operator+(bCVector const &)const
+bCOrientedBox * __thiscall __HbCOrientedBox__QBE_AV0_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ??KbCOrientedBox@@QBE?AV0@M@Z public: bCOrientedBox __thiscall bCOrientedBox::operator/(float)const
+bCOrientedBox * __thiscall __KbCOrientedBox__QBE_AV0_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ??XbCOrientedBox@@QAEAAV0@ABVbCMatrix3@@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator*=(bCMatrix3 const &)
+bCOrientedBox * __thiscall __XbCOrientedBox__QAEAAV0_ABVbCMatrix3___Z( bCOrientedBox *, bCMatrix3 const * );
+// ??XbCOrientedBox@@QAEAAV0@ABVbCMatrix@@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator*=(bCMatrix const &)
+bCOrientedBox * __thiscall __XbCOrientedBox__QAEAAV0_ABVbCMatrix___Z( bCOrientedBox *, bCMatrix const * );
+// ??XbCOrientedBox@@QAEAAV0@M@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator*=(float)
+bCOrientedBox * __thiscall __XbCOrientedBox__QAEAAV0_M_Z( bCOrientedBox *, GEFloat );
+// ??YbCOrientedBox@@QAEAAV0@ABVbCVector@@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator+=(bCVector const &)
+bCOrientedBox * __thiscall __YbCOrientedBox__QAEAAV0_ABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ??ZbCOrientedBox@@QAEAAV0@ABVbCVector@@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator-=(bCVector const &)
+bCOrientedBox * __thiscall __ZbCOrientedBox__QAEAAV0_ABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ??_0bCOrientedBox@@QAEAAV0@M@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator/=(float)
+bCOrientedBox * __thiscall ___0bCOrientedBox__QAEAAV0_M_Z( bCOrientedBox *, GEFloat );
+// ??_5bCOrientedBox@@QAEAAV0@ABV0@@Z public: bCOrientedBox & __thiscall bCOrientedBox::operator|=(bCOrientedBox const &)
+bCOrientedBox * __thiscall ___5bCOrientedBox__QAEAAV0_ABV0__Z( bCOrientedBox *, bCOrientedBox const * );
+// ?AccessAxis@bCOrientedBox@@QAEAAVbCVector@@H@Z public: bCVector & __thiscall bCOrientedBox::AccessAxis(int)
+bCVector * __thiscall _AccessAxis_bCOrientedBox__QAEAAVbCVector__H_Z( bCOrientedBox *, bCMatrix3_bERow );
+// ?AccessCenter@bCOrientedBox@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCOrientedBox::AccessCenter(void)
+bCVector * __thiscall _AccessCenter_bCOrientedBox__QAEAAVbCVector__XZ( bCOrientedBox * );
+// ?AccessExtent@bCOrientedBox@@QAEAAVbCVector@@XZ public: bCVector & __thiscall bCOrientedBox::AccessExtent(void)
+bCVector * __thiscall _AccessExtent_bCOrientedBox__QAEAAVbCVector__XZ( bCOrientedBox * );
+// ?AccessOrientation@bCOrientedBox@@QAEAAVbCMatrix3@@XZ public: bCMatrix3 & __thiscall bCOrientedBox::AccessOrientation(void)
+bCMatrix3 * __thiscall _AccessOrientation_bCOrientedBox__QAEAAVbCMatrix3__XZ( bCOrientedBox * );
+// ?Contains@bCOrientedBox@@QBE_NABV1@@Z public: bool __thiscall bCOrientedBox::Contains(bCOrientedBox const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABV1__Z( bCOrientedBox const *, bCOrientedBox const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCBox@@@Z public: bool __thiscall bCOrientedBox::Contains(bCBox const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCBox___Z( bCOrientedBox const *, bCBox const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCFrustum@@@Z public: bool __thiscall bCOrientedBox::Contains(bCFrustum const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCFrustum___Z( bCOrientedBox const *, bCFrustum const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCOrientedBox::Contains(bCSphere const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCSphere___Z( bCOrientedBox const *, bCSphere const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCStretch@@@Z public: bool __thiscall bCOrientedBox::Contains(bCStretch const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCStretch___Z( bCOrientedBox const *, bCStretch const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCTriangle@@@Z public: bool __thiscall bCOrientedBox::Contains(bCTriangle const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCTriangle___Z( bCOrientedBox const *, bCTriangle const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCUnitedRay@@@Z public: bool __thiscall bCOrientedBox::Contains(bCUnitedRay const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCUnitedRay___Z( bCOrientedBox const *, bCUnitedRay const * );
+// ?Contains@bCOrientedBox@@QBE_NABVbCVector@@@Z public: bool __thiscall bCOrientedBox::Contains(bCVector const &)const
+GEBool __thiscall _Contains_bCOrientedBox__QBE_NABVbCVector___Z( bCOrientedBox const *, bCVector const * );
+// ?Create@bCOrientedBox@@QAEXABV1@@Z public: void __thiscall bCOrientedBox::Create(bCOrientedBox const &)
+void __thiscall _Create_bCOrientedBox__QAEXABV1__Z( bCOrientedBox *, bCOrientedBox const * );
+// ?Create@bCOrientedBox@@QAEXABVbCBox@@ABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::Create(bCBox const &,bCMatrix3 const &)
+void __thiscall _Create_bCOrientedBox__QAEXABVbCBox__ABVbCMatrix3___Z( bCOrientedBox *, bCBox const *, bCMatrix3 const * );
+// ?GetAxis@bCOrientedBox@@QBEABVbCVector@@H@Z public: bCVector const & __thiscall bCOrientedBox::GetAxis(int)const
+bCVector const * __thiscall _GetAxis_bCOrientedBox__QBEABVbCVector__H_Z( bCOrientedBox const *, bCMatrix3_bERow );
+// ?GetCenter@bCOrientedBox@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCOrientedBox::GetCenter(void)const
+bCVector const * __thiscall _GetCenter_bCOrientedBox__QBEABVbCVector__XZ( bCOrientedBox const * );
+// ?GetCircumAxisBox@bCOrientedBox@@QBE?AVbCBox@@XZ public: bCBox __thiscall bCOrientedBox::GetCircumAxisBox(void)const
+bCBox * __thiscall _GetCircumAxisBox_bCOrientedBox__QBE_AVbCBox__XZ( bCOrientedBox const *, bCBox * );
+// ?GetCircumAxisBox@bCOrientedBox@@QBEXAAVbCBox@@@Z public: void __thiscall bCOrientedBox::GetCircumAxisBox(bCBox &)const
+void __thiscall _GetCircumAxisBox_bCOrientedBox__QBEXAAVbCBox___Z( bCOrientedBox const *, bCBox * );
+// ?GetCircumSphere@bCOrientedBox@@QBE?AVbCSphere@@XZ public: bCSphere __thiscall bCOrientedBox::GetCircumSphere(void)const
+bCSphere * __thiscall _GetCircumSphere_bCOrientedBox__QBE_AVbCSphere__XZ( bCOrientedBox const *, bCSphere * );
+// ?GetCircumSphere@bCOrientedBox@@QBEXAAVbCSphere@@@Z public: void __thiscall bCOrientedBox::GetCircumSphere(bCSphere &)const
+void __thiscall _GetCircumSphere_bCOrientedBox__QBEXAAVbCSphere___Z( bCOrientedBox const *, bCSphere * );
+// ?GetDepth@bCOrientedBox@@QBEMXZ public: float __thiscall bCOrientedBox::GetDepth(void)const
+GEFloat __thiscall _GetDepth_bCOrientedBox__QBEMXZ( bCOrientedBox const * );
+// ?GetEdge@bCOrientedBox@@QBE?AVbCStretch@@H@Z public: bCStretch __thiscall bCOrientedBox::GetEdge(int)const
+bCStretch * __thiscall _GetEdge_bCOrientedBox__QBE_AVbCStretch__H_Z( bCOrientedBox const *, bCOrientedBox_bEEdge );
+// ?GetEdge@bCOrientedBox@@QBEXHAAVbCStretch@@@Z public: void __thiscall bCOrientedBox::GetEdge(int,bCStretch &)const
+void __thiscall _GetEdge_bCOrientedBox__QBEXHAAVbCStretch___Z( bCOrientedBox const *, bCOrientedBox_bEEdge, bCStretch * );
+// ?GetEdges@bCOrientedBox@@QBEXQAVbCStretch@@@Z public: void __thiscall bCOrientedBox::GetEdges(bCStretch * const)const
+void __thiscall _GetEdges_bCOrientedBox__QBEXQAVbCStretch___Z( bCOrientedBox const *, bCStretch [ bCOrientedBox_bEEdge_Count ] );
+// ?GetExtent@bCOrientedBox@@QBEABVbCVector@@XZ public: bCVector const & __thiscall bCOrientedBox::GetExtent(void)const
+bCVector const * __thiscall _GetExtent_bCOrientedBox__QBEABVbCVector__XZ( bCOrientedBox const * );
+// ?GetHeight@bCOrientedBox@@QBEMXZ public: float __thiscall bCOrientedBox::GetHeight(void)const
+GEFloat __thiscall _GetHeight_bCOrientedBox__QBEMXZ( bCOrientedBox const * );
+// ?GetInSphere@bCOrientedBox@@QBE?AVbCSphere@@XZ public: bCSphere __thiscall bCOrientedBox::GetInSphere(void)const
+bCSphere * __thiscall _GetInSphere_bCOrientedBox__QBE_AVbCSphere__XZ( bCOrientedBox const *, bCSphere * );
+// ?GetInSphere@bCOrientedBox@@QBEXAAVbCSphere@@@Z public: void __thiscall bCOrientedBox::GetInSphere(bCSphere &)const
+void __thiscall _GetInSphere_bCOrientedBox__QBEXAAVbCSphere___Z( bCOrientedBox const *, bCSphere * );
+// ?GetInvScaled@bCOrientedBox@@QBE?AV1@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvScaled(bCVector const &)const
+bCOrientedBox * __thiscall _GetInvScaled_bCOrientedBox__QBE_AV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetInvScaled@bCOrientedBox@@QBE?AV1@M@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvScaled(float)const
+bCOrientedBox * __thiscall _GetInvScaled_bCOrientedBox__QBE_AV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetInvScaled@bCOrientedBox@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCOrientedBox::GetInvScaled(bCOrientedBox &,bCVector const &)const
+void __thiscall _GetInvScaled_bCOrientedBox__QBEXAAV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetInvScaled@bCOrientedBox@@QBEXAAV1@M@Z public: void __thiscall bCOrientedBox::GetInvScaled(bCOrientedBox &,float)const
+void __thiscall _GetInvScaled_bCOrientedBox__QBEXAAV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetInvTransformed@bCOrientedBox@@QBE?AV1@ABVbCMatrix3@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvTransformed(bCMatrix3 const &)const
+bCOrientedBox * __thiscall _GetInvTransformed_bCOrientedBox__QBE_AV1_ABVbCMatrix3___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix3 const * );
+// ?GetInvTransformed@bCOrientedBox@@QBE?AV1@ABVbCMatrix@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvTransformed(bCMatrix const &)const
+bCOrientedBox * __thiscall _GetInvTransformed_bCOrientedBox__QBE_AV1_ABVbCMatrix___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix const * );
+// ?GetInvTransformed@bCOrientedBox@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::GetInvTransformed(bCOrientedBox &,bCMatrix3 const &)const
+void __thiscall _GetInvTransformed_bCOrientedBox__QBEXAAV1_ABVbCMatrix3___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix3 const * );
+// ?GetInvTransformed@bCOrientedBox@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCOrientedBox::GetInvTransformed(bCOrientedBox &,bCMatrix const &)const
+void __thiscall _GetInvTransformed_bCOrientedBox__QBEXAAV1_ABVbCMatrix___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix const * );
+// ?GetInvTranslated@bCOrientedBox@@QBE?AV1@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvTranslated(bCVector const &)const
+bCOrientedBox * __thiscall _GetInvTranslated_bCOrientedBox__QBE_AV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetInvTranslated@bCOrientedBox@@QBE?AV1@M@Z public: bCOrientedBox __thiscall bCOrientedBox::GetInvTranslated(float)const
+bCOrientedBox * __thiscall _GetInvTranslated_bCOrientedBox__QBE_AV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetInvTranslated@bCOrientedBox@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCOrientedBox::GetInvTranslated(bCOrientedBox &,bCVector const &)const
+void __thiscall _GetInvTranslated_bCOrientedBox__QBEXAAV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetInvTranslated@bCOrientedBox@@QBEXAAV1@M@Z public: void __thiscall bCOrientedBox::GetInvTranslated(bCOrientedBox &,float)const
+void __thiscall _GetInvTranslated_bCOrientedBox__QBEXAAV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetMagnitude@bCOrientedBox@@QBE?AVbCVector@@XZ public: bCVector __thiscall bCOrientedBox::GetMagnitude(void)const
+bCVector * __thiscall _GetMagnitude_bCOrientedBox__QBE_AVbCVector__XZ( bCOrientedBox const *, bCVector * );
+// ?GetMagnitude@bCOrientedBox@@QBEXAAVbCVector@@@Z public: void __thiscall bCOrientedBox::GetMagnitude(bCVector &)const
+void __thiscall _GetMagnitude_bCOrientedBox__QBEXAAVbCVector___Z( bCOrientedBox const *, bCVector * );
+// ?GetMerged@bCOrientedBox@@QBE?AV1@ABV1@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetMerged(bCOrientedBox const &)const
+bCOrientedBox * __thiscall _GetMerged_bCOrientedBox__QBE_AV1_ABV1__Z( bCOrientedBox const *, bCOrientedBox *, bCOrientedBox const * );
+// ?GetMerged@bCOrientedBox@@QBEXAAV1@ABV1@@Z public: void __thiscall bCOrientedBox::GetMerged(bCOrientedBox &,bCOrientedBox const &)const
+void __thiscall _GetMerged_bCOrientedBox__QBEXAAV1_ABV1__Z( bCOrientedBox const *, bCOrientedBox *, bCOrientedBox const * );
+// ?GetOrientation@bCOrientedBox@@QBEABVbCMatrix3@@XZ public: bCMatrix3 const & __thiscall bCOrientedBox::GetOrientation(void)const
+bCMatrix3 const * __thiscall _GetOrientation_bCOrientedBox__QBEABVbCMatrix3__XZ( bCOrientedBox const * );
+// ?GetPlane@bCOrientedBox@@QBE?AVbCPlane@@H@Z public: bCPlane __thiscall bCOrientedBox::GetPlane(int)const
+bCPlane * __thiscall _GetPlane_bCOrientedBox__QBE_AVbCPlane__H_Z( bCOrientedBox const *, bCPlane *, bCOrientedBox_bEPlane );
+// ?GetPlane@bCOrientedBox@@QBEXHAAVbCPlane@@@Z public: void __thiscall bCOrientedBox::GetPlane(int,bCPlane &)const
+void __thiscall _GetPlane_bCOrientedBox__QBEXHAAVbCPlane___Z( bCOrientedBox const *, bCOrientedBox_bEPlane, bCPlane * );
+// ?GetPlanes@bCOrientedBox@@QBEXQAVbCPlane@@@Z public: void __thiscall bCOrientedBox::GetPlanes(bCPlane * const)const
+void __thiscall _GetPlanes_bCOrientedBox__QBEXQAVbCPlane___Z( bCOrientedBox const *, bCPlane [ bCOrientedBox_bEPlane_Count ] );
+// ?GetProjectedExtent@bCOrientedBox@@QBEXABVbCVector@@AAM1@Z public: void __thiscall bCOrientedBox::GetProjectedExtent(bCVector const &,float &,float &)const
+void __thiscall _GetProjectedExtent_bCOrientedBox__QBEXABVbCVector__AAM1_Z( bCOrientedBox const *, bCVector const *, GEFloat *, GEFloat * );
+// ?GetScaled@bCOrientedBox@@QBE?AV1@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetScaled(bCVector const &)const
+bCOrientedBox * __thiscall _GetScaled_bCOrientedBox__QBE_AV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetScaled@bCOrientedBox@@QBE?AV1@M@Z public: bCOrientedBox __thiscall bCOrientedBox::GetScaled(float)const
+bCOrientedBox * __thiscall _GetScaled_bCOrientedBox__QBE_AV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetScaled@bCOrientedBox@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCOrientedBox::GetScaled(bCOrientedBox &,bCVector const &)const
+void __thiscall _GetScaled_bCOrientedBox__QBEXAAV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetScaled@bCOrientedBox@@QBEXAAV1@M@Z public: void __thiscall bCOrientedBox::GetScaled(bCOrientedBox &,float)const
+void __thiscall _GetScaled_bCOrientedBox__QBEXAAV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetTransformed@bCOrientedBox@@QBE?AV1@ABVbCMatrix3@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetTransformed(bCMatrix3 const &)const
+bCOrientedBox * __thiscall _GetTransformed_bCOrientedBox__QBE_AV1_ABVbCMatrix3___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix3 const * );
+// ?GetTransformed@bCOrientedBox@@QBE?AV1@ABVbCMatrix@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetTransformed(bCMatrix const &)const
+bCOrientedBox * __thiscall _GetTransformed_bCOrientedBox__QBE_AV1_ABVbCMatrix___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix const * );
+// ?GetTransformed@bCOrientedBox@@QBEXAAV1@ABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::GetTransformed(bCOrientedBox &,bCMatrix3 const &)const
+void __thiscall _GetTransformed_bCOrientedBox__QBEXAAV1_ABVbCMatrix3___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix3 const * );
+// ?GetTransformed@bCOrientedBox@@QBEXAAV1@ABVbCMatrix@@@Z public: void __thiscall bCOrientedBox::GetTransformed(bCOrientedBox &,bCMatrix const &)const
+void __thiscall _GetTransformed_bCOrientedBox__QBEXAAV1_ABVbCMatrix___Z( bCOrientedBox const *, bCOrientedBox *, bCMatrix const * );
+// ?GetTranslated@bCOrientedBox@@QBE?AV1@ABVbCVector@@@Z public: bCOrientedBox __thiscall bCOrientedBox::GetTranslated(bCVector const &)const
+bCOrientedBox * __thiscall _GetTranslated_bCOrientedBox__QBE_AV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetTranslated@bCOrientedBox@@QBE?AV1@M@Z public: bCOrientedBox __thiscall bCOrientedBox::GetTranslated(float)const
+bCOrientedBox * __thiscall _GetTranslated_bCOrientedBox__QBE_AV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetTranslated@bCOrientedBox@@QBEXAAV1@ABVbCVector@@@Z public: void __thiscall bCOrientedBox::GetTranslated(bCOrientedBox &,bCVector const &)const
+void __thiscall _GetTranslated_bCOrientedBox__QBEXAAV1_ABVbCVector___Z( bCOrientedBox const *, bCOrientedBox *, bCVector const * );
+// ?GetTranslated@bCOrientedBox@@QBEXAAV1@M@Z public: void __thiscall bCOrientedBox::GetTranslated(bCOrientedBox &,float)const
+void __thiscall _GetTranslated_bCOrientedBox__QBEXAAV1_M_Z( bCOrientedBox const *, bCOrientedBox *, GEFloat );
+// ?GetVertex@bCOrientedBox@@QBE?AVbCVector@@H@Z public: bCVector __thiscall bCOrientedBox::GetVertex(int)const
+bCVector * __thiscall _GetVertex_bCOrientedBox__QBE_AVbCVector__H_Z( bCOrientedBox const *, bCVector *, bCOrientedBox_bEVertex );
+// ?GetVertex@bCOrientedBox@@QBEXHAAVbCVector@@@Z public: void __thiscall bCOrientedBox::GetVertex(int,bCVector &)const
+void __thiscall _GetVertex_bCOrientedBox__QBEXHAAVbCVector___Z( bCOrientedBox const *, bCOrientedBox_bEVertex, bCVector * );
+// ?GetVertices@bCOrientedBox@@QBEXQAVbCVector@@@Z public: void __thiscall bCOrientedBox::GetVertices(bCVector * const)const
+void __thiscall _GetVertices_bCOrientedBox__QBEXQAVbCVector___Z( bCOrientedBox const *, bCVector [ bCOrientedBox_bEVertex_Count ] );
+// ?GetVolume@bCOrientedBox@@QBEMXZ public: float __thiscall bCOrientedBox::GetVolume(void)const
+GEFloat __thiscall _GetVolume_bCOrientedBox__QBEMXZ( bCOrientedBox const * );
+// ?GetWidth@bCOrientedBox@@QBEMXZ public: float __thiscall bCOrientedBox::GetWidth(void)const
+GEFloat __thiscall _GetWidth_bCOrientedBox__QBEMXZ( bCOrientedBox const * );
+// ?Intersects@bCOrientedBox@@QBE_NABV1@@Z public: bool __thiscall bCOrientedBox::Intersects(bCOrientedBox const &)const
+GEBool __thiscall _Intersects_bCOrientedBox__QBE_NABV1__Z( bCOrientedBox const *, bCOrientedBox const * );
+// ?Intersects@bCOrientedBox@@QBE_NABVbCBox@@@Z public: bool __thiscall bCOrientedBox::Intersects(bCBox const &)const
+GEBool __thiscall _Intersects_bCOrientedBox__QBE_NABVbCBox___Z( bCOrientedBox const *, bCBox const * );
+// ?Intersects@bCOrientedBox@@QBE_NABVbCPlane@@@Z public: bool __thiscall bCOrientedBox::Intersects(bCPlane const &)const
+GEBool __thiscall _Intersects_bCOrientedBox__QBE_NABVbCPlane___Z( bCOrientedBox const *, bCPlane const * );
+// ?Intersects@bCOrientedBox@@QBE_NABVbCSphere@@@Z public: bool __thiscall bCOrientedBox::Intersects(bCSphere const &)const
+GEBool __thiscall _Intersects_bCOrientedBox__QBE_NABVbCSphere___Z( bCOrientedBox const *, bCSphere const * );
+// ?InvScale@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::InvScale(bCVector const &)
+void __thiscall _InvScale_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?InvScale@bCOrientedBox@@QAEXM@Z public: void __thiscall bCOrientedBox::InvScale(float)
+void __thiscall _InvScale_bCOrientedBox__QAEXM_Z( bCOrientedBox *, GEFloat );
+// ?InvTransform@bCOrientedBox@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::InvTransform(bCMatrix3 const &)
+void __thiscall _InvTransform_bCOrientedBox__QAEXABVbCMatrix3___Z( bCOrientedBox *, bCMatrix3 const * );
+// ?InvTransform@bCOrientedBox@@QAEXABVbCMatrix@@@Z public: void __thiscall bCOrientedBox::InvTransform(bCMatrix const &)
+void __thiscall _InvTransform_bCOrientedBox__QAEXABVbCMatrix___Z( bCOrientedBox *, bCMatrix const * );
+// ?InvTranslate@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::InvTranslate(bCVector const &)
+void __thiscall _InvTranslate_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?InvTranslate@bCOrientedBox@@QAEXM@Z public: void __thiscall bCOrientedBox::InvTranslate(float)
+void __thiscall _InvTranslate_bCOrientedBox__QAEXM_Z( bCOrientedBox *, GEFloat );
+// ?Invalidate@bCOrientedBox@@QAEXXZ public: void __thiscall bCOrientedBox::Invalidate(void)
+void __thiscall _Invalidate_bCOrientedBox__QAEXXZ( bCOrientedBox * );
+// ?IsEqual@bCOrientedBox@@QBE_NABV1@@Z public: bool __thiscall bCOrientedBox::IsEqual(bCOrientedBox const &)const
+GEBool __thiscall _IsEqual_bCOrientedBox__QBE_NABV1__Z( bCOrientedBox const *, bCOrientedBox const * );
+// ?IsValid@bCOrientedBox@@QBE_NXZ public: bool __thiscall bCOrientedBox::IsValid(void)const
+GEBool __thiscall _IsValid_bCOrientedBox__QBE_NXZ( bCOrientedBox const * );
+// ?Merge@bCOrientedBox@@QAEXABV1@@Z public: void __thiscall bCOrientedBox::Merge(bCOrientedBox const &)
+void __thiscall _Merge_bCOrientedBox__QAEXABV1__Z( bCOrientedBox *, bCOrientedBox const * );
+// ?Scale@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::Scale(bCVector const &)
+void __thiscall _Scale_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?Scale@bCOrientedBox@@QAEXM@Z public: void __thiscall bCOrientedBox::Scale(float)
+void __thiscall _Scale_bCOrientedBox__QAEXM_Z( bCOrientedBox *, GEFloat );
+// ?SetAxis@bCOrientedBox@@QAEXHABVbCVector@@@Z public: void __thiscall bCOrientedBox::SetAxis(int,bCVector const &)
+void __thiscall _SetAxis_bCOrientedBox__QAEXHABVbCVector___Z( bCOrientedBox *, bCMatrix3_bERow, bCVector const * );
+// ?SetCenter@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::SetCenter(bCVector const &)
+void __thiscall _SetCenter_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?SetExtent@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::SetExtent(bCVector const &)
+void __thiscall _SetExtent_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?SetInnerBoxFromPoints@bCOrientedBox@@QAEXPBVbCVector@@H@Z public: void __thiscall bCOrientedBox::SetInnerBoxFromPoints(bCVector const *,int)
+void __thiscall _SetInnerBoxFromPoints_bCOrientedBox__QAEXPBVbCVector__H_Z( bCOrientedBox *, bCVector const *, GEInt );
+// ?SetOrientation@bCOrientedBox@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::SetOrientation(bCMatrix3 const &)
+void __thiscall _SetOrientation_bCOrientedBox__QAEXABVbCMatrix3___Z( bCOrientedBox *, bCMatrix3 const * );
+// ?SetOuterBoxFromPoints@bCOrientedBox@@QAEXPBVbCVector@@H@Z public: void __thiscall bCOrientedBox::SetOuterBoxFromPoints(bCVector const *,int)
+void __thiscall _SetOuterBoxFromPoints_bCOrientedBox__QAEXPBVbCVector__H_Z( bCOrientedBox *, bCVector const *, GEInt );
+// ?Transform@bCOrientedBox@@QAEXABVbCMatrix3@@@Z public: void __thiscall bCOrientedBox::Transform(bCMatrix3 const &)
+void __thiscall _Transform_bCOrientedBox__QAEXABVbCMatrix3___Z( bCOrientedBox *, bCMatrix3 const * );
+// ?Transform@bCOrientedBox@@QAEXABVbCMatrix@@@Z public: void __thiscall bCOrientedBox::Transform(bCMatrix const &)
+void __thiscall _Transform_bCOrientedBox__QAEXABVbCMatrix___Z( bCOrientedBox *, bCMatrix const * );
+// ?Translate@bCOrientedBox@@QAEXABVbCVector@@@Z public: void __thiscall bCOrientedBox::Translate(bCVector const &)
+void __thiscall _Translate_bCOrientedBox__QAEXABVbCVector___Z( bCOrientedBox *, bCVector const * );
+// ?Translate@bCOrientedBox@@QAEXM@Z public: void __thiscall bCOrientedBox::Translate(float)
+void __thiscall _Translate_bCOrientedBox__QAEXM_Z( bCOrientedBox *, GEFloat );
