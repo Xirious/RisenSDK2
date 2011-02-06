@@ -1,9 +1,6 @@
 #ifndef GS_ENTITY_H_INCLUDED
 #define GS_ENTITY_H_INCLUDED
 
-//HACK: class eCEntityProxy.
-class eCEntityProxy{};
-
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTObjArray<>' needs to have dll-interface to be used by clients of class 'Entity'
 

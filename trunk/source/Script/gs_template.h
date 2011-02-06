@@ -1,9 +1,6 @@
 #ifndef GS_TEMPLATE_H_INCLUDED
 #define GS_TEMPLATE_H_INCLUDED
 
-//HACK: class eCTemplateEntityProxy.
-class eCTemplateEntityProxy{};
-
 class Entity;  // forward
 
 class GE_DLLIMPORT Template
