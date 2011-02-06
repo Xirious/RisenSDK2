@@ -82,6 +82,8 @@
 #include "SharedBase/ge_infdoublecylinder.tih"
 #include "SharedBase/ge_orientedbox.tih"
 #include "SharedBase/ge_octtree.tih"
+#include "SharedBase/ge_flexiblevertexformat.tih"
+#include "SharedBase/ge_flexiblevertexptr.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

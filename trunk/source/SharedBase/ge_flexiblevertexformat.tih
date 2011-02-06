@@ -1,0 +1,108 @@
+struct bCFlexibleVertexFormat
+{
+    GEU32 m_u32Format;
+};
+// ??0bCFlexibleVertexFormat@@QAE@ABV0@@Z public: __thiscall bCFlexibleVertexFormat::bCFlexibleVertexFormat(bCFlexibleVertexFormat const &)
+bCFlexibleVertexFormat * __thiscall __0bCFlexibleVertexFormat__QAE_ABV0__Z( bCFlexibleVertexFormat *, bCFlexibleVertexFormat const * );
+// ??0bCFlexibleVertexFormat@@QAE@K@Z public: __thiscall bCFlexibleVertexFormat::bCFlexibleVertexFormat(unsigned long)
+bCFlexibleVertexFormat * __thiscall __0bCFlexibleVertexFormat__QAE_K_Z( bCFlexibleVertexFormat *, GEU32 );
+// ??1bCFlexibleVertexFormat@@QAE@XZ public: __thiscall bCFlexibleVertexFormat::~bCFlexibleVertexFormat(void)
+void __thiscall __1bCFlexibleVertexFormat__QAE_XZ( bCFlexibleVertexFormat * );
+// ??4bCFlexibleVertexFormat@@QAEAAV0@ABV0@@Z public: bCFlexibleVertexFormat & __thiscall bCFlexibleVertexFormat::operator=(bCFlexibleVertexFormat const &)
+bCFlexibleVertexFormat * __thiscall __4bCFlexibleVertexFormat__QAEAAV0_ABV0__Z( bCFlexibleVertexFormat *, bCFlexibleVertexFormat const * );
+// ??8bCFlexibleVertexFormat@@QBE_NABV0@@Z public: bool __thiscall bCFlexibleVertexFormat::operator==(bCFlexibleVertexFormat const &)const
+GEBool __thiscall __8bCFlexibleVertexFormat__QBE_NABV0__Z( bCFlexibleVertexFormat const *, bCFlexibleVertexFormat const * );
+// ??9bCFlexibleVertexFormat@@QBE_NABV0@@Z public: bool __thiscall bCFlexibleVertexFormat::operator!=(bCFlexibleVertexFormat const &)const
+GEBool __thiscall __9bCFlexibleVertexFormat__QBE_NABV0__Z( bCFlexibleVertexFormat const *, bCFlexibleVertexFormat const * );
+// ??BbCFlexibleVertexFormat@@QBEKXZ public: __thiscall bCFlexibleVertexFormat::operator unsigned long(void)const
+GEU32 __thiscall __BbCFlexibleVertexFormat__QBEKXZ( bCFlexibleVertexFormat const * );
+// ??_FbCFlexibleVertexFormat@@QAEXXZ public: void __thiscall bCFlexibleVertexFormat::`default constructor closure'(void)
+void __thiscall ___FbCFlexibleVertexFormat__QAEXXZ( bCFlexibleVertexFormat * );
+// ?AccessFormat@bCFlexibleVertexFormat@@QAEAAKXZ public: unsigned long & __thiscall bCFlexibleVertexFormat::AccessFormat(void)
+GEU32 * __thiscall _AccessFormat_bCFlexibleVertexFormat__QAEAAKXZ( bCFlexibleVertexFormat * );
+// ?CopyFrom@bCFlexibleVertexFormat@@QAEXABV1@@Z public: void __thiscall bCFlexibleVertexFormat::CopyFrom(bCFlexibleVertexFormat const &)
+void __thiscall _CopyFrom_bCFlexibleVertexFormat__QAEXABV1__Z( bCFlexibleVertexFormat *, bCFlexibleVertexFormat const * );
+// ?CopyTo@bCFlexibleVertexFormat@@QBEXAAV1@@Z public: void __thiscall bCFlexibleVertexFormat::CopyTo(bCFlexibleVertexFormat &)const
+void __thiscall _CopyTo_bCFlexibleVertexFormat__QBEXAAV1__Z( bCFlexibleVertexFormat const *, bCFlexibleVertexFormat * );
+// ?EnableDiffuse@bCFlexibleVertexFormat@@QAEX_N@Z public: void __thiscall bCFlexibleVertexFormat::EnableDiffuse(bool)
+void __thiscall _EnableDiffuse_bCFlexibleVertexFormat__QAEX_N_Z( bCFlexibleVertexFormat *, GEBool );
+// ?EnableNormal@bCFlexibleVertexFormat@@QAEX_N@Z public: void __thiscall bCFlexibleVertexFormat::EnableNormal(bool)
+void __thiscall _EnableNormal_bCFlexibleVertexFormat__QAEX_N_Z( bCFlexibleVertexFormat *, GEBool );
+// ?EnablePointSize@bCFlexibleVertexFormat@@QAEX_N@Z public: void __thiscall bCFlexibleVertexFormat::EnablePointSize(bool)
+void __thiscall _EnablePointSize_bCFlexibleVertexFormat__QAEX_N_Z( bCFlexibleVertexFormat *, GEBool );
+// ?EnableRHW@bCFlexibleVertexFormat@@QAEX_N@Z public: void __thiscall bCFlexibleVertexFormat::EnableRHW(bool)
+void __thiscall _EnableRHW_bCFlexibleVertexFormat__QAEX_N_Z( bCFlexibleVertexFormat *, GEBool );
+// ?EnableSpecular@bCFlexibleVertexFormat@@QAEX_N@Z public: void __thiscall bCFlexibleVertexFormat::EnableSpecular(bool)
+void __thiscall _EnableSpecular_bCFlexibleVertexFormat__QAEX_N_Z( bCFlexibleVertexFormat *, GEBool );
+// ?GetFormat@bCFlexibleVertexFormat@@QBEKXZ public: unsigned long __thiscall bCFlexibleVertexFormat::GetFormat(void)const
+GEU32 __thiscall _GetFormat_bCFlexibleVertexFormat__QBEKXZ( bCFlexibleVertexFormat const * );
+// ?GetFormat@bCFlexibleVertexFormat@@QBEXAAK@Z public: void __thiscall bCFlexibleVertexFormat::GetFormat(unsigned long &)const
+void __thiscall _GetFormat_bCFlexibleVertexFormat__QBEXAAK_Z( bCFlexibleVertexFormat const *, GEU32 * );
+// ?GetMaxTextureStages@bCFlexibleVertexFormat@@SGHXZ public: static int __stdcall bCFlexibleVertexFormat::GetMaxTextureStages(void)
+GEInt __stdcall _GetMaxTextureStages_bCFlexibleVertexFormat__SGHXZ( void );
+// ?GetOffsetDiffuse@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetDiffuse(void)const
+GEInt __thiscall _GetOffsetDiffuse_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetNormal@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetNormal(void)const
+GEInt __thiscall _GetOffsetNormal_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetPointSize@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetPointSize(void)const
+GEInt __thiscall _GetOffsetPointSize_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetRHW@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetRHW(void)const
+GEInt __thiscall _GetOffsetRHW_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetSpecular@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetSpecular(void)const
+GEInt __thiscall _GetOffsetSpecular_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetTextureCoord@bCFlexibleVertexFormat@@QBEHHH@Z public: int __thiscall bCFlexibleVertexFormat::GetOffsetTextureCoord(int,int)const
+GEInt __thiscall _GetOffsetTextureCoord_bCFlexibleVertexFormat__QBEHHH_Z( bCFlexibleVertexFormat const *, GEInt, GEInt );
+// ?GetOffsetTextureCoords@bCFlexibleVertexFormat@@QBEHH@Z public: int __thiscall bCFlexibleVertexFormat::GetOffsetTextureCoords(int)const
+GEInt __thiscall _GetOffsetTextureCoords_bCFlexibleVertexFormat__QBEHH_Z( bCFlexibleVertexFormat const *, GEInt );
+// ?GetOffsetTextureCoords@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetTextureCoords(void)const
+GEInt __thiscall _GetOffsetTextureCoords_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetWeight@bCFlexibleVertexFormat@@QBEHH@Z public: int __thiscall bCFlexibleVertexFormat::GetOffsetWeight(int)const
+GEInt __thiscall _GetOffsetWeight_bCFlexibleVertexFormat__QBEHH_Z( bCFlexibleVertexFormat const *, GEInt );
+// ?GetOffsetWeights@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetWeights(void)const
+GEInt __thiscall _GetOffsetWeights_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetX@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetX(void)const
+GEInt __thiscall _GetOffsetX_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetXYZ@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetXYZ(void)const
+GEInt __thiscall _GetOffsetXYZ_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetY@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetY(void)const
+GEInt __thiscall _GetOffsetY_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetOffsetZ@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetOffsetZ(void)const
+GEInt __thiscall _GetOffsetZ_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetTextureCoordCount@bCFlexibleVertexFormat@@QBEHH@Z public: int __thiscall bCFlexibleVertexFormat::GetTextureCoordCount(int)const
+GEInt __thiscall _GetTextureCoordCount_bCFlexibleVertexFormat__QBEHH_Z( bCFlexibleVertexFormat const *, GEInt );
+// ?GetTextureStageCount@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetTextureStageCount(void)const
+GEInt __thiscall _GetTextureStageCount_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetVertexByteCount@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetVertexByteCount(void)const
+GEInt __thiscall _GetVertexByteCount_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?GetWeightCount@bCFlexibleVertexFormat@@QBEHXZ public: int __thiscall bCFlexibleVertexFormat::GetWeightCount(void)const
+GEInt __thiscall _GetWeightCount_bCFlexibleVertexFormat__QBEHXZ( bCFlexibleVertexFormat const * );
+// ?HasDiffuse@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasDiffuse(void)const
+GEBool __thiscall _HasDiffuse_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?HasNormal@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasNormal(void)const
+GEBool __thiscall _HasNormal_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?HasPointSize@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasPointSize(void)const
+GEBool __thiscall _HasPointSize_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?HasRHW@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasRHW(void)const
+GEBool __thiscall _HasRHW_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?HasSpecular@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasSpecular(void)const
+GEBool __thiscall _HasSpecular_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?HasWeight@bCFlexibleVertexFormat@@QBE_NH@Z public: bool __thiscall bCFlexibleVertexFormat::HasWeight(int)const
+GEBool __thiscall _HasWeight_bCFlexibleVertexFormat__QBE_NH_Z( bCFlexibleVertexFormat const *, GEInt );
+// ?HasXYZ@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::HasXYZ(void)const
+GEBool __thiscall _HasXYZ_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?IsTransformedAndLit@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::IsTransformedAndLit(void)const
+GEBool __thiscall _IsTransformedAndLit_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?IsValid@bCFlexibleVertexFormat@@QBE_NXZ public: bool __thiscall bCFlexibleVertexFormat::IsValid(void)const
+GEBool __thiscall _IsValid_bCFlexibleVertexFormat__QBE_NXZ( bCFlexibleVertexFormat const * );
+// ?MatchesMask@bCFlexibleVertexFormat@@QBE_NK@Z public: bool __thiscall bCFlexibleVertexFormat::MatchesMask(unsigned long)const
+GEBool __thiscall _MatchesMask_bCFlexibleVertexFormat__QBE_NK_Z( bCFlexibleVertexFormat const *, GEU32 );
+// ?ModifyStyle@bCFlexibleVertexFormat@@QAEXKK@Z public: void __thiscall bCFlexibleVertexFormat::ModifyStyle(unsigned long,unsigned long)
+void __thiscall _ModifyStyle_bCFlexibleVertexFormat__QAEXKK_Z( bCFlexibleVertexFormat *, GEU32, GEU32 );
+// ?SetFormat@bCFlexibleVertexFormat@@QAEXK@Z public: void __thiscall bCFlexibleVertexFormat::SetFormat(unsigned long)
+void __thiscall _SetFormat_bCFlexibleVertexFormat__QAEXK_Z( bCFlexibleVertexFormat *, GEU32 );
+// ?SetTextureCoordCount@bCFlexibleVertexFormat@@QAEXHH@Z public: void __thiscall bCFlexibleVertexFormat::SetTextureCoordCount(int,int)
+void __thiscall _SetTextureCoordCount_bCFlexibleVertexFormat__QAEXHH_Z( bCFlexibleVertexFormat *, GEInt, GEInt );
+// ?SetTextureStageCount@bCFlexibleVertexFormat@@QAEXH@Z public: void __thiscall bCFlexibleVertexFormat::SetTextureStageCount(int)
+void __thiscall _SetTextureStageCount_bCFlexibleVertexFormat__QAEXH_Z( bCFlexibleVertexFormat *, GEInt );
+// ?SetWeightCount@bCFlexibleVertexFormat@@QAEXH@Z public: void __thiscall bCFlexibleVertexFormat::SetWeightCount(int)
+void __thiscall _SetWeightCount_bCFlexibleVertexFormat__QAEXH_Z( bCFlexibleVertexFormat *, GEInt );
