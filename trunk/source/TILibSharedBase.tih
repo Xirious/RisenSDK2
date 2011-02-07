@@ -84,6 +84,8 @@
 #include "SharedBase/ge_octtree.tih"
 #include "SharedBase/ge_flexiblevertexformat.tih"
 #include "SharedBase/ge_flexiblevertexptr.tih"
+#include "SharedBase/ge_mersennetwister.tih"
+#include "SharedBase/ge_random.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

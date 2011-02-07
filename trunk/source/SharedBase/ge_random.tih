@@ -1,0 +1,36 @@
+struct bCRandom
+{
+    GEInt m_iSeed;
+          GE_PADDING( 4 )
+    GEI64 m_i64State;
+};
+// ??0bCRandom@@IAE@ABV0@@Z protected: __thiscall bCRandom::bCRandom(bCRandom const &)
+bCRandom * __thiscall __0bCRandom__IAE_ABV0__Z( bCRandom *, bCRandom const * );
+// ??0bCRandom@@IAE@XZ protected: __thiscall bCRandom::bCRandom(void)
+bCRandom * __thiscall __0bCRandom__IAE_XZ( bCRandom * );
+// ??1bCRandom@@QAE@XZ public: __thiscall bCRandom::~bCRandom(void)
+void __thiscall __1bCRandom__QAE_XZ( bCRandom * );
+// ??4bCRandom@@IAEAAV0@ABV0@@Z protected: bCRandom & __thiscall bCRandom::operator=(bCRandom const &)
+bCRandom * __thiscall __4bCRandom__IAEAAV0_ABV0__Z( bCRandom *, bCRandom const * );
+// ?DRand48@bCRandom@@QBENNN@Z public: double __thiscall bCRandom::DRand48(double,double)const
+GEDouble __thiscall _DRand48_bCRandom__QBENNN_Z( bCRandom const *, GEDouble, GEDouble );
+// ?DRand48@bCRandom@@QBENXZ public: double __thiscall bCRandom::DRand48(void)const
+GEDouble __thiscall _DRand48_bCRandom__QBENXZ( bCRandom const * );
+// ?FRand48@bCRandom@@QBEMMM@Z public: float __thiscall bCRandom::FRand48(float,float)const
+GEFloat __thiscall _FRand48_bCRandom__QBEMMM_Z( bCRandom const *, GEFloat, GEFloat );
+// ?FRand48@bCRandom@@QBEMXZ public: float __thiscall bCRandom::FRand48(void)const
+GEFloat __thiscall _FRand48_bCRandom__QBEMXZ( bCRandom const * );
+// ?GetRandom@bCRandom@@SGABV1@XZ public: static bCRandom const & __stdcall bCRandom::GetRandom(void)
+bCRandom const * __stdcall _GetRandom_bCRandom__SGABV1_XZ( void );
+// ?GetValue@bCRandom@@QBEHHH@Z public: int __thiscall bCRandom::GetValue(int,int)const
+GEInt __thiscall _GetValue_bCRandom__QBEHHH_Z( bCRandom const *, GEInt, GEInt );
+// ?GetValue@bCRandom@@QBEHXZ public: int __thiscall bCRandom::GetValue(void)const
+GEInt __thiscall _GetValue_bCRandom__QBEHXZ( bCRandom const * );
+// ?GetValue@bCRandom@@QBEMMM@Z public: float __thiscall bCRandom::GetValue(float,float)const
+GEFloat __thiscall _GetValue_bCRandom__QBEMMM_Z( bCRandom const *, GEFloat, GEFloat );
+// ?Invalidate@bCRandom@@IAEXXZ protected: void __thiscall bCRandom::Invalidate(void)
+void __thiscall _Invalidate_bCRandom__IAEXXZ( bCRandom * );
+// ?SetSeed@bCRandom@@QBEXH@Z public: void __thiscall bCRandom::SetSeed(int)const
+void __thiscall _SetSeed_bCRandom__QBEXH_Z( bCRandom const *, GEInt );
+// ?SetTimedSeed@bCRandom@@QBEXXZ public: void __thiscall bCRandom::SetTimedSeed(void)const
+void __thiscall _SetTimedSeed_bCRandom__QBEXXZ( bCRandom const * );
