@@ -10,7 +10,7 @@ public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
 public: virtual GEFloat GetNoise( GEFloat ) const;
 public: virtual        ~bCEbertNoise( void );
 private:
-    //FIXME: bCEbertNoise private members.
+    GEFloat m_arrNoise[ 64 + 1][ 64 + 1 ][ 64 + 1 ];
 protected:
     void   CopyFrom( bCEbertNoise const & );
     void   CopyTo( bCEbertNoise & ) const;
