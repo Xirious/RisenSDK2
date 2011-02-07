@@ -1,0 +1,33 @@
+struct bCRange4
+{
+    bCVector4 m_vecMin;
+    bCVector4 m_vecMax;
+};
+// ??0bCRange4@@QAE@ABV0@@Z public: __thiscall bCRange4::bCRange4(bCRange4 const &)
+bCRange4 * __thiscall __0bCRange4__QAE_ABV0__Z( bCRange4 *, bCRange4 const * );
+// ??0bCRange4@@QAE@XZ public: __thiscall bCRange4::bCRange4(void)
+bCRange4 * __thiscall __0bCRange4__QAE_XZ( bCRange4 * );
+// ??1bCRange4@@QAE@XZ public: __thiscall bCRange4::~bCRange4(void)
+void __thiscall __1bCRange4__QAE_XZ( bCRange4 * );
+// ??4bCRange4@@QAEAAV0@ABV0@@Z public: bCRange4 & __thiscall bCRange4::operator=(bCRange4 const &)
+bCRange4 * __thiscall __4bCRange4__QAEAAV0_ABV0__Z( bCRange4 *, bCRange4 const * );
+// ??5bCRange4@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCRange4::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCRange4__QBEAAVbCOStream__AAV1__Z( bCRange4 const *, bCOStream * );
+// ??6bCRange4@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCRange4::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCRange4__QAEAAVbCIStream__AAV1__Z( bCRange4 *, bCIStream * );
+// ?GetCenter@bCRange4@@QBE?AVbCVector4@@XZ public: bCVector4 __thiscall bCRange4::GetCenter(void)const
+bCVector4 * __thiscall _GetCenter_bCRange4__QBE_AVbCVector4__XZ( bCRange4 const *, bCVector4 * );
+// ?GetCenter@bCRange4@@QBEXAAVbCVector4@@@Z public: void __thiscall bCRange4::GetCenter(bCVector4 &)const
+void __thiscall _GetCenter_bCRange4__QBEXAAVbCVector4___Z( bCRange4 const *, bCVector4 * );
+// ?GetMagnitude@bCRange4@@QBE?AVbCVector4@@XZ public: bCVector4 __thiscall bCRange4::GetMagnitude(void)const
+bCVector4 * __thiscall _GetMagnitude_bCRange4__QBE_AVbCVector4__XZ( bCRange4 const *, bCVector4 * );
+// ?GetMagnitude@bCRange4@@QBEXAAVbCVector4@@@Z public: void __thiscall bCRange4::GetMagnitude(bCVector4 &)const
+void __thiscall _GetMagnitude_bCRange4__QBEXAAVbCVector4___Z( bCRange4 const *, bCVector4 * );
+// ?GetRandom@bCRange4@@QBE?AVbCVector4@@XZ public: bCVector4 __thiscall bCRange4::GetRandom(void)const
+bCVector4 * __thiscall _GetRandom_bCRange4__QBE_AVbCVector4__XZ( bCRange4 const *, bCVector4 * );
+// ?GetRandom@bCRange4@@QBEXAAVbCVector4@@@Z public: void __thiscall bCRange4::GetRandom(bCVector4 &)const
+void __thiscall _GetRandom_bCRange4__QBEXAAVbCVector4___Z( bCRange4 const *, bCVector4 * );
+// ?SetAverageAndVariance@bCRange4@@QAEXABVbCVector4@@0@Z public: void __thiscall bCRange4::SetAverageAndVariance(bCVector4 const &,bCVector4 const &)
+void __thiscall _SetAverageAndVariance_bCRange4__QAEXABVbCVector4__0_Z( bCRange4 *, bCVector4 const *, bCVector4 const * );
+// ?SetMinMax@bCRange4@@QAEXABVbCVector4@@0@Z public: void __thiscall bCRange4::SetMinMax(bCVector4 const &,bCVector4 const &)
+void __thiscall _SetMinMax_bCRange4__QAEXABVbCVector4__0_Z( bCRange4 *, bCVector4 const *, bCVector4 const * );
