@@ -1,0 +1,50 @@
+struct bCMersenneTwister
+{
+    GEU32 m_pu32State[ 624 ];
+};
+// ??0bCMersenneTwister@@AAE@ABV0@@Z private: __thiscall bCMersenneTwister::bCMersenneTwister(bCMersenneTwister const &)
+bCMersenneTwister * __thiscall __0bCMersenneTwister__AAE_ABV0__Z( bCMersenneTwister *, bCMersenneTwister const * );
+// ??0bCMersenneTwister@@AAE@XZ private: __thiscall bCMersenneTwister::bCMersenneTwister(void)
+bCMersenneTwister * __thiscall __0bCMersenneTwister__AAE_XZ( bCMersenneTwister * );
+// ??1bCMersenneTwister@@QAE@XZ public: __thiscall bCMersenneTwister::~bCMersenneTwister(void)
+void __thiscall __1bCMersenneTwister__QAE_XZ( bCMersenneTwister * );
+// ??4bCMersenneTwister@@AAEAAV0@ABV0@@Z private: bCMersenneTwister & __thiscall bCMersenneTwister::operator=(bCMersenneTwister const &)
+bCMersenneTwister * __thiscall __4bCMersenneTwister__AAEAAV0_ABV0__Z( bCMersenneTwister *, bCMersenneTwister const * );
+// ?GetInstance@bCMersenneTwister@@SGAAV1@XZ public: static bCMersenneTwister & __stdcall bCMersenneTwister::GetInstance(void)
+bCMersenneTwister * __stdcall _GetInstance_bCMersenneTwister__SGAAV1_XZ( void );
+// ?InitSeed@bCMersenneTwister@@AAEXXZ private: void __thiscall bCMersenneTwister::InitSeed(void)
+void __thiscall _InitSeed_bCMersenneTwister__AAEXXZ( bCMersenneTwister * );
+// ?Rand@bCMersenneTwister@@QAEHH@Z public: int __thiscall bCMersenneTwister::Rand(int)
+GEInt __thiscall _Rand_bCMersenneTwister__QAEHH_Z( bCMersenneTwister *, GEInt );
+// ?Rand@bCMersenneTwister@@QAEHHH@Z public: int __thiscall bCMersenneTwister::Rand(int,int)
+GEInt __thiscall _Rand_bCMersenneTwister__QAEHHH_Z( bCMersenneTwister *, GEInt, GEInt );
+// ?Rand@bCMersenneTwister@@QAEKK@Z public: unsigned long __thiscall bCMersenneTwister::Rand(unsigned long)
+GEU32 __thiscall _Rand_bCMersenneTwister__QAEKK_Z( bCMersenneTwister *, GEU32 );
+// ?Rand@bCMersenneTwister@@QAEKKK@Z public: unsigned long __thiscall bCMersenneTwister::Rand(unsigned long,unsigned long)
+GEU32 __thiscall _Rand_bCMersenneTwister__QAEKKK_Z( bCMersenneTwister *, GEU32, GEU32 );
+// ?Rand@bCMersenneTwister@@QAEMM@Z public: float __thiscall bCMersenneTwister::Rand(float)
+GEFloat __thiscall _Rand_bCMersenneTwister__QAEMM_Z( bCMersenneTwister *, GEFloat );
+// ?Rand@bCMersenneTwister@@QAEMMM@Z public: float __thiscall bCMersenneTwister::Rand(float,float)
+GEFloat __thiscall _Rand_bCMersenneTwister__QAEMMM_Z( bCMersenneTwister *, GEFloat, GEFloat );
+// ?RandCount@bCMersenneTwister@@QAEHH@Z public: int __thiscall bCMersenneTwister::RandCount(int)
+GEInt __thiscall _RandCount_bCMersenneTwister__QAEHH_Z( bCMersenneTwister *, GEInt );
+// ?RandCount@bCMersenneTwister@@QAEHHH@Z public: int __thiscall bCMersenneTwister::RandCount(int,int)
+GEInt __thiscall _RandCount_bCMersenneTwister__QAEHHH_Z( bCMersenneTwister *, GEInt, GEInt );
+// ?RandCount@bCMersenneTwister@@QAEKK@Z public: unsigned long __thiscall bCMersenneTwister::RandCount(unsigned long)
+GEU32 __thiscall _RandCount_bCMersenneTwister__QAEKK_Z( bCMersenneTwister *, GEU32 );
+// ?RandCount@bCMersenneTwister@@QAEKKK@Z public: unsigned long __thiscall bCMersenneTwister::RandCount(unsigned long,unsigned long)
+GEU32 __thiscall _RandCount_bCMersenneTwister__QAEKKK_Z( bCMersenneTwister *, GEU32, GEU32 );
+// ?RandCount@bCMersenneTwister@@QAEMM@Z public: float __thiscall bCMersenneTwister::RandCount(float)
+GEFloat __thiscall _RandCount_bCMersenneTwister__QAEMM_Z( bCMersenneTwister *, GEFloat );
+// ?RandCount@bCMersenneTwister@@QAEMMM@Z public: float __thiscall bCMersenneTwister::RandCount(float,float)
+GEFloat __thiscall _RandCount_bCMersenneTwister__QAEMMM_Z( bCMersenneTwister *, GEFloat, GEFloat );
+// ?RandF2@bCMersenneTwister@@QAEMXZ public: float __thiscall bCMersenneTwister::RandF2(void)
+GEFloat __thiscall _RandF2_bCMersenneTwister__QAEMXZ( bCMersenneTwister * );
+// ?RandF3@bCMersenneTwister@@QAEMXZ public: float __thiscall bCMersenneTwister::RandF3(void)
+GEFloat __thiscall _RandF3_bCMersenneTwister__QAEMXZ( bCMersenneTwister * );
+// ?RandF@bCMersenneTwister@@QAEMXZ public: float __thiscall bCMersenneTwister::RandF(void)
+GEFloat __thiscall _RandF_bCMersenneTwister__QAEMXZ( bCMersenneTwister * );
+// ?RandU31@bCMersenneTwister@@QAEKXZ public: unsigned long __thiscall bCMersenneTwister::RandU31(void)
+GEU32 __thiscall _RandU31_bCMersenneTwister__QAEKXZ( bCMersenneTwister * );
+// ?RandU32@bCMersenneTwister@@QAEKXZ public: unsigned long __thiscall bCMersenneTwister::RandU32(void)
+GEU32 __thiscall _RandU32_bCMersenneTwister__QAEKXZ( bCMersenneTwister * );
