@@ -86,6 +86,10 @@
 #include "SharedBase/ge_flexiblevertexptr.tih"
 #include "SharedBase/ge_mersennetwister.tih"
 #include "SharedBase/ge_random.tih"
+#include "SharedBase/ge_range1.tih"
+#include "SharedBase/ge_range2.tih"
+#include "SharedBase/ge_range3.tih"
+#include "SharedBase/ge_range4.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

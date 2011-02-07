@@ -1,0 +1,37 @@
+struct bCRange2
+{
+    bCVector2 m_vecMin;
+    bCVector2 m_vecMax;
+};
+// ??0bCRange2@@QAE@ABV0@@Z public: __thiscall bCRange2::bCRange2(bCRange2 const &)
+bCRange2 * __thiscall __0bCRange2__QAE_ABV0__Z( bCRange2 *, bCRange2 const * );
+// ??0bCRange2@@QAE@XZ public: __thiscall bCRange2::bCRange2(void)
+bCRange2 * __thiscall __0bCRange2__QAE_XZ( bCRange2 * );
+// ??1bCRange2@@QAE@XZ public: __thiscall bCRange2::~bCRange2(void)
+void __thiscall __1bCRange2__QAE_XZ( bCRange2 * );
+// ??4bCRange2@@QAEAAV0@ABV0@@Z public: bCRange2 & __thiscall bCRange2::operator=(bCRange2 const &)
+bCRange2 * __thiscall __4bCRange2__QAEAAV0_ABV0__Z( bCRange2 *, bCRange2 const * );
+// ??5bCRange2@@QBEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCRange2::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCRange2__QBEAAVbCOStream__AAV1__Z( bCRange2 const *, bCOStream * );
+// ??6bCRange2@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCRange2::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCRange2__QAEAAVbCIStream__AAV1__Z( bCRange2 *, bCIStream * );
+// ??8bCRange2@@QBE_NABV0@@Z public: bool __thiscall bCRange2::operator==(bCRange2 const &)const
+GEBool __thiscall __8bCRange2__QBE_NABV0__Z( bCRange2 const *, bCRange2 const * );
+// ??9bCRange2@@QBE_NABV0@@Z public: bool __thiscall bCRange2::operator!=(bCRange2 const &)const
+GEBool __thiscall __9bCRange2__QBE_NABV0__Z( bCRange2 const *, bCRange2 const * );
+// ?GetCenter@bCRange2@@QBE?AVbCVector2@@XZ public: bCVector2 __thiscall bCRange2::GetCenter(void)const
+bCVector2 * __thiscall _GetCenter_bCRange2__QBE_AVbCVector2__XZ( bCRange2 const *, bCVector2 * );
+// ?GetCenter@bCRange2@@QBEXAAVbCVector2@@@Z public: void __thiscall bCRange2::GetCenter(bCVector2 &)const
+void __thiscall _GetCenter_bCRange2__QBEXAAVbCVector2___Z( bCRange2 const *, bCVector2 * );
+// ?GetMagnitude@bCRange2@@QBE?AVbCVector2@@XZ public: bCVector2 __thiscall bCRange2::GetMagnitude(void)const
+bCVector2 * __thiscall _GetMagnitude_bCRange2__QBE_AVbCVector2__XZ( bCRange2 const *, bCVector2 * );
+// ?GetMagnitude@bCRange2@@QBEXAAVbCVector2@@@Z public: void __thiscall bCRange2::GetMagnitude(bCVector2 &)const
+void __thiscall _GetMagnitude_bCRange2__QBEXAAVbCVector2___Z( bCRange2 const *, bCVector2 * );
+// ?GetRandom@bCRange2@@QBE?AVbCVector2@@XZ public: bCVector2 __thiscall bCRange2::GetRandom(void)const
+bCVector2 * __thiscall _GetRandom_bCRange2__QBE_AVbCVector2__XZ( bCRange2 const *, bCVector2 * );
+// ?GetRandom@bCRange2@@QBEXAAVbCVector2@@@Z public: void __thiscall bCRange2::GetRandom(bCVector2 &)const
+void __thiscall _GetRandom_bCRange2__QBEXAAVbCVector2___Z( bCRange2 const *, bCVector2 * );
+// ?SetAverageAndVariance@bCRange2@@QAEXABVbCVector2@@0@Z public: void __thiscall bCRange2::SetAverageAndVariance(bCVector2 const &,bCVector2 const &)
+void __thiscall _SetAverageAndVariance_bCRange2__QAEXABVbCVector2__0_Z( bCRange2 *, bCVector2 const *, bCVector2 const * );
+// ?SetMinMax@bCRange2@@QAEXABVbCVector2@@0@Z public: void __thiscall bCRange2::SetMinMax(bCVector2 const &,bCVector2 const &)
+void __thiscall _SetMinMax_bCRange2__QAEXABVbCVector2__0_Z( bCRange2 *, bCVector2 const *, bCVector2 const * );
