@@ -1,8 +1,8 @@
 struct bCIStream;
 struct bCIStream_vftable
 {
-    GEU32 (__thiscall * ReadString)( bCIStream *, bCString & );
-    GEU32 (__thiscall * ReadBuffer)( bCIStream *, GELPVoid, GEU32 );
+    GEU32 (__thiscall * ReadString)( bCIStream *, bCString & );       // Read
+    GEU32 (__thiscall * ReadBuffer)( bCIStream *, GELPVoid, GEU32 );  // Read
     void  (__thiscall * __vecDelDtor)( bCIStream *, unsigned int );
 };
 struct bCIStream_data

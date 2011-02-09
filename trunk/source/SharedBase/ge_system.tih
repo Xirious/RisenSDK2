@@ -161,7 +161,7 @@ GEFloat __stdcall g_cosf( GEFloat );
 GEFloat __stdcall g_fabsf( GEFloat );
 GEFloat __stdcall g_fcopysign( GEFloat, GEFloat );
 GEFloat __stdcall g_floorf( GEFloat );
-GEFloat __stdcall g_pow( GEFloat, GEFloat );
+GEFloat __stdcall g_pow( GEFloat, GEInt );
 GEFloat __stdcall g_sinf( GEFloat );
 GEFloat __stdcall g_sqrtf( GEFloat );
 

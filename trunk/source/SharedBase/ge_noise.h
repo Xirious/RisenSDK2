@@ -3,10 +3,9 @@
 
 enum bENoiseAmplitude
 {
-    //FIXME: bENoiseAmplitude constants.
-    bENoiseAmplitude_0,
-    bENoiseAmplitude_1,
-    bENoiseAmplitude_ForceDWORD = GE_FORCE_DWORD
+    bEAmplitude_UsePersistence,
+    bEAmplitude_InverseFrequency,
+    bEAmplitude_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum bENoiseTurbulence
