@@ -1,8 +1,8 @@
 struct bCOStream;
 struct bCOStream_vftable
 {
-    GEU32 (__thiscall * WriteString)( bCOStream *, bCString const * );
-    GEU32 (__thiscall * WriteBuffer)( bCOStream *, GELPCVoid, GEU32 );
+    GEU32 (__thiscall * WriteString)( bCOStream *, bCString const * );  // Write
+    GEU32 (__thiscall * WriteBuffer)( bCOStream *, GELPCVoid, GEU32 );  // Write
     void  (__thiscall * __vecDelDtor)( bCOStream *, unsigned int );
 };
 struct bCOStream

@@ -7,7 +7,11 @@ class GE_DLLIMPORT bCPeacheyNoise :
 public:
     enum bEAlgorithm
     {
-        //FIXME: bCPeacheyNoise::bEAlgorithm constants.
+        bEAlgorithm_Gradient,
+        bEAlgorithm_GradientValue,
+        bEAlgorithm_SparseConvolution,
+        bEAlgorithm_LatticeConvolution,
+        bEAlgorithm_Value,
         bEAlgorithm_ForceDWORD = GE_FORCE_DWORD
     };
 public: virtual void    SetSeed( GEInt );
@@ -16,7 +20,11 @@ public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
 public: virtual GEFloat GetNoise( GEFloat ) const;
 public: virtual        ~bCPeacheyNoise( void );
 private:
-    //FIXME: bCPeacheyNoise private members.
+    GEFloat     m_pfGradientTable[ 256 ][ 3 ];
+    GEFloat     m_pfImpulseTable[ 256 ][ 4 ];
+    GEFloat     m_pfValueTable[ 256 ];
+    GEFloat     m_pfFilterTable[ 100 * 4 + 1 ];
+    bEAlgorithm m_enumAlgorithm;
 protected:
     static GEU8 * ms_pu8Permutations;
 protected:

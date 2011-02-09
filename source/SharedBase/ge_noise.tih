@@ -1,7 +1,7 @@
 enum bENoiseAmplitude : __int32
 {
-    bENoiseAmplitude_FIXME_0,
-    bENoiseAmplitude_FIXME_1
+    bEAmplitude_UsePersistence,
+    bEAmplitude_InverseFrequency
 };
 
 enum bENoiseTurbulence : __int32
@@ -14,9 +14,9 @@ struct bCNoise;
 struct bCNoise_vftable
 {
     void    (__thiscall * SetSeed)( bCNoise *, GEInt );
-    GEFloat (__thiscall * GetNoise3)( bCNoise const *, GEFloat, GEFloat, GEFloat );
-    GEFloat (__thiscall * GetNoise2)( bCNoise const *, GEFloat, GEFloat );
-    GEFloat (__thiscall * GetNoise1)( bCNoise const *, GEFloat );
+    GEFloat (__thiscall * GetNoise)( bCNoise const *, GEFloat, GEFloat, GEFloat );
+    GEFloat (__thiscall * GetNoise2)( bCNoise const *, GEFloat, GEFloat );  // GetNoise
+    GEFloat (__thiscall * GetNoise1)( bCNoise const *, GEFloat );           // GetNoise
     void    (__thiscall * __vecDelDtor)( bCNoise *, unsigned int );
 };
 struct bCNoise

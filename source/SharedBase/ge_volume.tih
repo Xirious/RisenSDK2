@@ -1,20 +1,20 @@
 struct bCVolume;
 struct bCVolume_vftable
 {
-    bCVector * (__thiscall * GetCenter_)( bCVolume const *, bCVector * );
+    bCVector * (__thiscall * GetCenter_)( bCVolume const *, bCVector * );                                       // GetCenter
     void       (__thiscall * GetCenter)( bCVolume const *, bCVector * );
     bCVolume * (__thiscall * Clone)( bCVolume const * );
     void       (__thiscall * Transform)( bCVolume *, bCMatrix const * );
     void       (__thiscall * Translate)( bCVolume *, bCVector const * );
-    GEBool     (__thiscall * IntersectsPlane)( bCVolume const *, bCPlane const * );
-    GEBool     (__thiscall * IntersectsUnitedRayDistance)( bCVolume const *, bCUnitedRay const *, GEFloat * );
-    GEBool     (__thiscall * IntersectsUnitedRay)( bCVolume const *, bCUnitedRay const * );
-    GEBool     (__thiscall * IntersectsTriangle)( bCVolume const *, bCTriangle const * );
-    GEBool     (__thiscall * IntersectsBox)( bCVolume const *, bCBox const * );
-    GEBool     (__thiscall * IntersectsFrustum)( bCVolume const *, bCFrustum const * );
-    GEBool     (__thiscall * IntersectsSphere)( bCVolume const *, bCSphere const * );
-    GEBool     (__thiscall * IntersectsVector)( bCVolume const *, bCVector const * );
-    GEBool     (__thiscall * IntersectsVolume)( bCVolume const *, bCVolume const * );
+    GEBool     (__thiscall * IntersectsPlane)( bCVolume const *, bCPlane const * );                             // Intersects
+    GEBool     (__thiscall * IntersectsUnitedRayDistance)( bCVolume const *, bCUnitedRay const *, GEFloat * );  // Intersects
+    GEBool     (__thiscall * IntersectsUnitedRay)( bCVolume const *, bCUnitedRay const * );                     // Intersects
+    GEBool     (__thiscall * IntersectsTriangle)( bCVolume const *, bCTriangle const * );                       // Intersects
+    GEBool     (__thiscall * IntersectsBox)( bCVolume const *, bCBox const * );                                 // Intersects
+    GEBool     (__thiscall * IntersectsFrustum)( bCVolume const *, bCFrustum const * );                         // Intersects
+    GEBool     (__thiscall * IntersectsSphere)( bCVolume const *, bCSphere const * );                           // Intersects
+    GEBool     (__thiscall * IntersectsVector)( bCVolume const *, bCVector const * );                           // Intersects
+    GEBool     (__thiscall * IntersectsVolume)( bCVolume const *, bCVolume const * );                           // Intersects
     void       (__thiscall * __vecDelDtor)( bCVolume *, unsigned int );
 };
 struct bCVolume
