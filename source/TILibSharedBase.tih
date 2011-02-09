@@ -93,6 +93,7 @@
 #include "SharedBase/ge_noise.tih"
 #include "SharedBase/ge_ebertnoise.tih"
 #include "SharedBase/ge_peacheynoise.tih"
+#include "SharedBase/ge_perlinnoise.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

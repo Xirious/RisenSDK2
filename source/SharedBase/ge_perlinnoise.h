@@ -7,7 +7,8 @@ class GE_DLLIMPORT bCPerlinNoise :
 public:
     enum bEAlgorithm
     {
-        //FIXME: bCPerlinNoise::bEAlgorithm constants.
+        bEAlgorithm_Default,
+        bEAlgorithm_Improved,
         bEAlgorithm_ForceDWORD = GE_FORCE_DWORD
     };
 public: virtual void    SetSeed( GEInt );
@@ -16,7 +17,11 @@ public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
 public: virtual GEFloat GetNoise( GEFloat ) const;
 public: virtual        ~bCPerlinNoise( void );
 private:
-    //FIXME: bCPerlinNoise private members.
+    bEAlgorithm m_enumAlgorithm;
+    GEFloat     m_pfTable[ 256 + 256 + 2 ];
+    GEFloat     m_pfGrad3[ 256 + 256 + 2 ][ 3 ];
+    GEFloat     m_pfGrad2[ 256 + 256 + 2 ][ 2 ];
+    GEFloat     m_pfGrad1[ 256 + 256 + 2 ];
 protected:
     static GEInt * ms_piPermutations;
 protected:
