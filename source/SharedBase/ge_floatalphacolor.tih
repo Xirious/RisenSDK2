@@ -1,0 +1,134 @@
+struct bCFloatAlphaColor
+{
+    bCColorBase_vftable const * __vfptr;
+    bCFloatColor_data           bCFloatColor;
+    GEFloat                     m_fAlpha;
+};
+// ??0bCFloatAlphaColor@@QAE@ABV0@@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCFloatAlphaColor const &)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABV0__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??0bCFloatAlphaColor@@QAE@ABVbCByteAlphaColor@@@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCByteAlphaColor const &)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABVbCByteAlphaColor___Z( bCFloatAlphaColor *, bCByteAlphaColor const * );
+// ??0bCFloatAlphaColor@@QAE@ABVbCByteColor@@M@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCByteColor const &,float)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABVbCByteColor__M_Z( bCFloatAlphaColor *, bCByteColor const *, GEFloat );
+// ??0bCFloatAlphaColor@@QAE@ABVbCFloatColor@@M@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCFloatColor const &,float)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABVbCFloatColor__M_Z( bCFloatAlphaColor *, bCFloatColor const *, GEFloat );
+// ??0bCFloatAlphaColor@@QAE@ABVbCFloatColorHSV@@M@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCFloatColorHSV const &,float)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABVbCFloatColorHSV__M_Z( bCFloatAlphaColor *, bCFloatColorHSV const *, GEFloat );
+// ??0bCFloatAlphaColor@@QAE@ABVbCVector4@@@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCVector4 const &)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_ABVbCVector4___Z( bCFloatAlphaColor *, bCVector4 const * );
+// ??0bCFloatAlphaColor@@QAE@MMMM@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(float,float,float,float)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_MMMM_Z( bCFloatAlphaColor *, GEFloat, GEFloat, GEFloat, GEFloat );
+// ??0bCFloatAlphaColor@@QAE@W4bEColor@bCColorBase@@@Z public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(bCColorBase::bEColor)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_W4bEColor_bCColorBase___Z( bCFloatAlphaColor *, bCColorBase_bEColor );
+// ??0bCFloatAlphaColor@@QAE@XZ public: __thiscall bCFloatAlphaColor::bCFloatAlphaColor(void)
+bCFloatAlphaColor * __thiscall __0bCFloatAlphaColor__QAE_XZ( bCFloatAlphaColor * );
+// ??1bCFloatAlphaColor@@QAE@XZ public: __thiscall bCFloatAlphaColor::~bCFloatAlphaColor(void)
+void __thiscall __1bCFloatAlphaColor__QAE_XZ( bCFloatAlphaColor * );
+// ??4bCFloatAlphaColor@@QAEAAV0@ABV0@@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator=(bCFloatAlphaColor const &)
+bCFloatAlphaColor * __thiscall __4bCFloatAlphaColor__QAEAAV0_ABV0__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??5bCFloatAlphaColor@@UBEAAVbCOStream@@AAV1@@Z public: virtual bCOStream & __thiscall bCFloatAlphaColor::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCFloatAlphaColor__UBEAAVbCOStream__AAV1__Z( bCFloatAlphaColor const *, bCOStream * );
+// ??6bCFloatAlphaColor@@UAEAAVbCIStream@@AAV1@@Z public: virtual bCIStream & __thiscall bCFloatAlphaColor::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCFloatAlphaColor__UAEAAVbCIStream__AAV1__Z( bCFloatAlphaColor *, bCIStream * );
+// ??8bCFloatAlphaColor@@QBE_NABV0@@Z public: bool __thiscall bCFloatAlphaColor::operator==(bCFloatAlphaColor const &)const
+GEBool __thiscall __8bCFloatAlphaColor__QBE_NABV0__Z( bCFloatAlphaColor const *, bCFloatAlphaColor const * );
+// ??9bCFloatAlphaColor@@QBE_NABV0@@Z public: bool __thiscall bCFloatAlphaColor::operator!=(bCFloatAlphaColor const &)const
+GEBool __thiscall __9bCFloatAlphaColor__QBE_NABV0__Z( bCFloatAlphaColor const *, bCFloatAlphaColor const * );
+// ??DbCFloatAlphaColor@@QBE?AV0@ABV0@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator*(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall __DbCFloatAlphaColor__QBE_AV0_ABV0__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??DbCFloatAlphaColor@@QBE?AV0@M@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator*(float)const
+bCFloatAlphaColor * __thiscall __DbCFloatAlphaColor__QBE_AV0_M_Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, GEFloat );
+// ??GbCFloatAlphaColor@@QBE?AV0@ABV0@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator-(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall __GbCFloatAlphaColor__QBE_AV0_ABV0__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??GbCFloatAlphaColor@@QBE?AV0@XZ public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator-(void)const
+bCFloatAlphaColor * __thiscall __GbCFloatAlphaColor__QBE_AV0_XZ( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ??HbCFloatAlphaColor@@QBE?AV0@ABV0@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator+(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall __HbCFloatAlphaColor__QBE_AV0_ABV0__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??KbCFloatAlphaColor@@QBE?AV0@M@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator/(float)const
+bCFloatAlphaColor * __thiscall __KbCFloatAlphaColor__QBE_AV0_M_Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, GEFloat );
+// ??SbCFloatAlphaColor@@QBE?AV0@XZ public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::operator~(void)const
+bCFloatAlphaColor * __thiscall __SbCFloatAlphaColor__QBE_AV0_XZ( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ??XbCFloatAlphaColor@@QAEAAV0@ABV0@@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator*=(bCFloatAlphaColor const &)
+bCFloatAlphaColor * __thiscall __XbCFloatAlphaColor__QAEAAV0_ABV0__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??XbCFloatAlphaColor@@QAEAAV0@M@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator*=(float)
+bCFloatAlphaColor * __thiscall __XbCFloatAlphaColor__QAEAAV0_M_Z( bCFloatAlphaColor *, GEFloat );
+// ??YbCFloatAlphaColor@@QAEAAV0@ABV0@@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator+=(bCFloatAlphaColor const &)
+bCFloatAlphaColor * __thiscall __YbCFloatAlphaColor__QAEAAV0_ABV0__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??ZbCFloatAlphaColor@@QAEAAV0@ABV0@@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator-=(bCFloatAlphaColor const &)
+bCFloatAlphaColor * __thiscall __ZbCFloatAlphaColor__QAEAAV0_ABV0__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ??_0bCFloatAlphaColor@@QAEAAV0@M@Z public: bCFloatAlphaColor & __thiscall bCFloatAlphaColor::operator/=(float)
+bCFloatAlphaColor * __thiscall ___0bCFloatAlphaColor__QAEAAV0_M_Z( bCFloatAlphaColor *, GEFloat );
+// ??_7bCFloatAlphaColor@@6B@ const bCFloatAlphaColor::`vftable'
+bCColorBase_vftable const DLLIMPORT ___7bCFloatAlphaColor__6B_;
+// ?AccessAlpha@bCFloatAlphaColor@@QAEAAMXZ public: float & __thiscall bCFloatAlphaColor::AccessAlpha(void)
+GEFloat * __thiscall _AccessAlpha_bCFloatAlphaColor__QAEAAMXZ( bCFloatAlphaColor * );
+// ?Add@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::Add(bCFloatAlphaColor const &)
+void __thiscall _Add_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?AddClamped@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::AddClamped(bCFloatAlphaColor const &)
+void __thiscall _AddClamped_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?Clamp@bCFloatAlphaColor@@QAEXXZ public: void __thiscall bCFloatAlphaColor::Clamp(void)
+void __thiscall _Clamp_bCFloatAlphaColor__QAEXXZ( bCFloatAlphaColor * );
+// ?Clear@bCFloatAlphaColor@@UAEXXZ public: virtual void __thiscall bCFloatAlphaColor::Clear(void)
+void __thiscall _Clear_bCFloatAlphaColor__UAEXXZ( bCFloatAlphaColor * );
+// ?GetAlpha@bCFloatAlphaColor@@QBEMXZ public: float __thiscall bCFloatAlphaColor::GetAlpha(void)const
+GEFloat __thiscall _GetAlpha_bCFloatAlphaColor__QBEMXZ( bCFloatAlphaColor const * );
+// ?GetAlpha@bCFloatAlphaColor@@QBEXAAM@Z public: void __thiscall bCFloatAlphaColor::GetAlpha(float &)const
+void __thiscall _GetAlpha_bCFloatAlphaColor__QBEXAAM_Z( bCFloatAlphaColor const *, GEFloat * );
+// ?GetClamped@bCFloatAlphaColor@@QBE?AV1@XZ public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetClamped(void)const
+bCFloatAlphaColor * __thiscall _GetClamped_bCFloatAlphaColor__QBE_AV1_XZ( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetClamped@bCFloatAlphaColor@@QBEXAAV1@@Z public: void __thiscall bCFloatAlphaColor::GetClamped(bCFloatAlphaColor &)const
+void __thiscall _GetClamped_bCFloatAlphaColor__QBEXAAV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetDifference@bCFloatAlphaColor@@QBE?AV1@ABV1@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetDifference(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall _GetDifference_bCFloatAlphaColor__QBE_AV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?GetDifference@bCFloatAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCFloatAlphaColor::GetDifference(bCFloatAlphaColor &,bCFloatAlphaColor const &)const
+void __thiscall _GetDifference_bCFloatAlphaColor__QBEXAAV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?GetInverted@bCFloatAlphaColor@@QBE?AV1@XZ public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetInverted(void)const
+bCFloatAlphaColor * __thiscall _GetInverted_bCFloatAlphaColor__QBE_AV1_XZ( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetInverted@bCFloatAlphaColor@@QBEXAAV1@@Z public: void __thiscall bCFloatAlphaColor::GetInverted(bCFloatAlphaColor &)const
+void __thiscall _GetInverted_bCFloatAlphaColor__QBEXAAV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetNormalized@bCFloatAlphaColor@@QBE?AV1@XZ public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetNormalized(void)const
+bCFloatAlphaColor * __thiscall _GetNormalized_bCFloatAlphaColor__QBE_AV1_XZ( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetNormalized@bCFloatAlphaColor@@QBEXAAV1@@Z public: void __thiscall bCFloatAlphaColor::GetNormalized(bCFloatAlphaColor &)const
+void __thiscall _GetNormalized_bCFloatAlphaColor__QBEXAAV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor * );
+// ?GetProduct@bCFloatAlphaColor@@QBE?AV1@ABV1@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetProduct(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall _GetProduct_bCFloatAlphaColor__QBE_AV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?GetProduct@bCFloatAlphaColor@@QBE?AV1@M@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetProduct(float)const
+bCFloatAlphaColor * __thiscall _GetProduct_bCFloatAlphaColor__QBE_AV1_M_Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, GEFloat );
+// ?GetProduct@bCFloatAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCFloatAlphaColor::GetProduct(bCFloatAlphaColor &,bCFloatAlphaColor const &)const
+void __thiscall _GetProduct_bCFloatAlphaColor__QBEXAAV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?GetProduct@bCFloatAlphaColor@@QBEXAAV1@M@Z public: void __thiscall bCFloatAlphaColor::GetProduct(bCFloatAlphaColor &,float)const
+void __thiscall _GetProduct_bCFloatAlphaColor__QBEXAAV1_M_Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, GEFloat );
+// ?GetSum@bCFloatAlphaColor@@QBE?AV1@ABV1@@Z public: bCFloatAlphaColor __thiscall bCFloatAlphaColor::GetSum(bCFloatAlphaColor const &)const
+bCFloatAlphaColor * __thiscall _GetSum_bCFloatAlphaColor__QBE_AV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?GetSum@bCFloatAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCFloatAlphaColor::GetSum(bCFloatAlphaColor &,bCFloatAlphaColor const &)const
+void __thiscall _GetSum_bCFloatAlphaColor__QBEXAAV1_ABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?Invert@bCFloatAlphaColor@@QAEXXZ public: void __thiscall bCFloatAlphaColor::Invert(void)
+void __thiscall _Invert_bCFloatAlphaColor__QAEXXZ( bCFloatAlphaColor * );
+// ?IsEqual@bCFloatAlphaColor@@QBE_NABV1@@Z public: bool __thiscall bCFloatAlphaColor::IsEqual(bCFloatAlphaColor const &)const
+GEBool __thiscall _IsEqual_bCFloatAlphaColor__QBE_NABV1__Z( bCFloatAlphaColor const *, bCFloatAlphaColor const * );
+// ?Multiply@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::Multiply(bCFloatAlphaColor const &)
+void __thiscall _Multiply_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?Multiply@bCFloatAlphaColor@@QAEXM@Z public: void __thiscall bCFloatAlphaColor::Multiply(float)
+void __thiscall _Multiply_bCFloatAlphaColor__QAEXM_Z( bCFloatAlphaColor *, GEFloat );
+// ?Normalize@bCFloatAlphaColor@@QAEXXZ public: void __thiscall bCFloatAlphaColor::Normalize(void)
+void __thiscall _Normalize_bCFloatAlphaColor__QAEXXZ( bCFloatAlphaColor * );
+// ?SetAlpha@bCFloatAlphaColor@@QAEXM@Z public: void __thiscall bCFloatAlphaColor::SetAlpha(float)
+void __thiscall _SetAlpha_bCFloatAlphaColor__QAEXM_Z( bCFloatAlphaColor *, GEFloat );
+// ?SetColor@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCFloatAlphaColor const &)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?SetColor@bCFloatAlphaColor@@QAEXABVbCByteAlphaColor@@@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCByteAlphaColor const &)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABVbCByteAlphaColor___Z( bCFloatAlphaColor *, bCByteAlphaColor const * );
+// ?SetColor@bCFloatAlphaColor@@QAEXABVbCByteColor@@M@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCByteColor const &,float)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABVbCByteColor__M_Z( bCFloatAlphaColor *, bCByteColor const *, GEFloat );
+// ?SetColor@bCFloatAlphaColor@@QAEXABVbCFloatColor@@M@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCFloatColor const &,float)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABVbCFloatColor__M_Z( bCFloatAlphaColor *, bCFloatColor const *, GEFloat );
+// ?SetColor@bCFloatAlphaColor@@QAEXABVbCFloatColorHSV@@M@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCFloatColorHSV const &,float)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABVbCFloatColorHSV__M_Z( bCFloatAlphaColor *, bCFloatColorHSV const *, GEFloat );
+// ?SetColor@bCFloatAlphaColor@@QAEXABVbCVector4@@@Z public: void __thiscall bCFloatAlphaColor::SetColor(bCVector4 const &)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXABVbCVector4___Z( bCFloatAlphaColor *, bCVector4 const * );
+// ?SetColor@bCFloatAlphaColor@@QAEXMMMM@Z public: void __thiscall bCFloatAlphaColor::SetColor(float,float,float,float)
+void __thiscall _SetColor_bCFloatAlphaColor__QAEXMMMM_Z( bCFloatAlphaColor *, GEFloat, GEFloat, GEFloat, GEFloat );
+// ?Sub@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::Sub(bCFloatAlphaColor const &)
+void __thiscall _Sub_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
+// ?SubClamped@bCFloatAlphaColor@@QAEXABV1@@Z public: void __thiscall bCFloatAlphaColor::SubClamped(bCFloatAlphaColor const &)
+void __thiscall _SubClamped_bCFloatAlphaColor__QAEXABV1__Z( bCFloatAlphaColor *, bCFloatAlphaColor const * );
