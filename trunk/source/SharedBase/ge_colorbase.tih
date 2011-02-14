@@ -1,0 +1,93 @@
+struct bCByteAlphaColor;
+struct bCByteColor;
+struct bCFloatAlphaColor;
+struct bCFloatColor;
+struct bCFloatColorHSV;
+
+enum bEPixelFormat : __int32
+{
+    bEPixelFormat_RGB_555 = 1,
+    bEPixelFormat_RGB_565,
+    bEPixelFormat_RGBA_4444,
+    bEPixelFormat_ARGB_1555,
+    bEPixelFormat_RGBA_8888,
+    bEPixelFormat_ARGB_8888,
+    bEPixelFormat_RGB_888
+};
+
+enum bCColorBase_bEColor : __int32
+{
+    bCColorBase_bEColor_Black,
+    bCColorBase_bEColor_White,
+    bCColorBase_bEColor_Silver,
+    bCColorBase_bEColor_3,
+    bCColorBase_bEColor_4,
+    bCColorBase_bEColor_5,
+    bCColorBase_bEColor_LightGrey,
+    bCColorBase_bEColor_7,
+    bCColorBase_bEColor_8,
+    bCColorBase_bEColor_Red,
+    bCColorBase_bEColor_10,
+    bCColorBase_bEColor_11,
+    bCColorBase_bEColor_12,
+    bCColorBase_bEColor_Lime,
+    bCColorBase_bEColor_14,
+    bCColorBase_bEColor_15,
+    bCColorBase_bEColor_16,
+    bCColorBase_bEColor_Blue,
+    bCColorBase_bEColor_18,
+    bCColorBase_bEColor_19,
+    bCColorBase_bEColor_20,
+    bCColorBase_bEColor_Cyan,
+    bCColorBase_bEColor_22,
+    bCColorBase_bEColor_23,
+    bCColorBase_bEColor_24,
+    bCColorBase_bEColor_Yellow,
+    bCColorBase_bEColor_26,
+    bCColorBase_bEColor_27,
+    bCColorBase_bEColor_28,
+    bCColorBase_bEColor_Magenta,
+    bCColorBase_bEColor_30,
+    bCColorBase_bEColor_31,
+    bCColorBase_bEColor_32,
+    bCColorBase_bEColor_33,
+    bCColorBase_bEColor_34,
+    bCColorBase_bEColor_35,
+    bCColorBase_bEColor_36,
+    bCColorBase_bEColor_37,
+    bCColorBase_bEColor_SkyBlue,
+    bCColorBase_bEColor_SteelBlue,
+    bCColorBase_bEColor_Aquamarine,
+    bCColorBase_bEColor_Gold,
+    bCColorBase_bEColor_Orchid,
+    bCColorBase_bEColor_43,
+    bCColorBase_bEColor_44,
+    bCColorBase_bEColor_45,
+    bCColorBase_bEColor_46,
+    bCColorBase_bEColor_47,
+    bCColorBase_bEColor_48,
+    bCColorBase_bEColor_49,
+    bCColorBase_bEColor_Khaki
+};
+
+struct bCColorBase;
+struct bCColorBase_vftable
+{
+    void        (__thiscall * Clear)( bCColorBase * );
+    bCIStream * (__thiscall * StreamInsert)( bCColorBase *, bCIStream * );         // operator <<
+    bCOStream * (__thiscall * StreamExtract)( bCColorBase const *, bCOStream * );  // operator >>
+};
+struct bCColorBase
+{
+    bCColorBase_vftable const * __vfptr;
+};
+// ??0bCColorBase@@IAE@XZ protected: __thiscall bCColorBase::bCColorBase(void)
+bCColorBase * __thiscall __0bCColorBase__IAE_XZ( bCColorBase * );
+// ??0bCColorBase@@QAE@ABV0@@Z public: __thiscall bCColorBase::bCColorBase(bCColorBase const &)
+bCColorBase * __thiscall __0bCColorBase__QAE_ABV0__Z( bCColorBase *, bCColorBase const * );
+// ??1bCColorBase@@IAE@XZ protected: __thiscall bCColorBase::~bCColorBase(void)
+void __thiscall __1bCColorBase__IAE_XZ( bCColorBase * );
+// ??4bCColorBase@@QAEAAV0@ABV0@@Z public: bCColorBase & __thiscall bCColorBase::operator=(bCColorBase const &)
+bCColorBase * __thiscall __4bCColorBase__QAEAAV0_ABV0__Z( bCColorBase *, bCColorBase const * );
+// ??_7bCColorBase@@6B@ const bCColorBase::`vftable'
+bCColorBase_vftable const DLLIMPORT ___7bCColorBase__6B_;

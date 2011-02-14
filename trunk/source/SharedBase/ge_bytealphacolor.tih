@@ -1,0 +1,163 @@
+struct bCByteAlphaColor
+{
+    bCColorBase_vftable const * __vfptr;
+    bCByteColor_data            bCByteColor;
+    GEU8                        m_u8Alpha;
+                                GE_PADDING( 3 )
+};
+// ??0bCByteAlphaColor@@QAE@ABV0@@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCByteAlphaColor const &)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_ABV0__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??0bCByteAlphaColor@@QAE@ABVbCByteColor@@E@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCByteColor const &,unsigned char)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_ABVbCByteColor__E_Z( bCByteAlphaColor *, bCByteColor const *, GEU8 );
+// ??0bCByteAlphaColor@@QAE@ABVbCFloatAlphaColor@@@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCFloatAlphaColor const &)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_ABVbCFloatAlphaColor___Z( bCByteAlphaColor *, bCFloatAlphaColor const * );
+// ??0bCByteAlphaColor@@QAE@ABVbCFloatColor@@E@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCFloatColor const &,unsigned char)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_ABVbCFloatColor__E_Z( bCByteAlphaColor *, bCFloatColor const *, GEU8 );
+// ??0bCByteAlphaColor@@QAE@ABVbCFloatColorHSV@@E@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCFloatColorHSV const &,unsigned char)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_ABVbCFloatColorHSV__E_Z( bCByteAlphaColor *, bCFloatColorHSV const *, GEU8 );
+// ??0bCByteAlphaColor@@QAE@EEEE@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(unsigned char,unsigned char,unsigned char,unsigned char)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_EEEE_Z( bCByteAlphaColor *, GEU8, GEU8, GEU8, GEU8 );
+// ??0bCByteAlphaColor@@QAE@W4bEColor@bCColorBase@@@Z public: __thiscall bCByteAlphaColor::bCByteAlphaColor(bCColorBase::bEColor)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_W4bEColor_bCColorBase___Z( bCByteAlphaColor *, bCColorBase_bEColor );
+// ??0bCByteAlphaColor@@QAE@XZ public: __thiscall bCByteAlphaColor::bCByteAlphaColor(void)
+bCByteAlphaColor * __thiscall __0bCByteAlphaColor__QAE_XZ( bCByteAlphaColor * );
+// ??1bCByteAlphaColor@@QAE@XZ public: __thiscall bCByteAlphaColor::~bCByteAlphaColor(void)
+void __thiscall __1bCByteAlphaColor__QAE_XZ( bCByteAlphaColor * );
+// ??4bCByteAlphaColor@@QAEAAV0@ABV0@@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator=(bCByteAlphaColor const &)
+bCByteAlphaColor * __thiscall __4bCByteAlphaColor__QAEAAV0_ABV0__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??5bCByteAlphaColor@@UBEAAVbCOStream@@AAV1@@Z public: virtual bCOStream & __thiscall bCByteAlphaColor::operator>>(bCOStream &)const
+bCOStream * __thiscall __5bCByteAlphaColor__UBEAAVbCOStream__AAV1__Z( bCByteAlphaColor const *, bCOStream * );
+// ??6bCByteAlphaColor@@UAEAAVbCIStream@@AAV1@@Z public: virtual bCIStream & __thiscall bCByteAlphaColor::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCByteAlphaColor__UAEAAVbCIStream__AAV1__Z( bCByteAlphaColor *, bCIStream * );
+// ??8bCByteAlphaColor@@QBE_NABV0@@Z public: bool __thiscall bCByteAlphaColor::operator==(bCByteAlphaColor const &)const
+GEBool __thiscall __8bCByteAlphaColor__QBE_NABV0__Z( bCByteAlphaColor const *, bCByteAlphaColor const * );
+// ??9bCByteAlphaColor@@QBE_NABV0@@Z public: bool __thiscall bCByteAlphaColor::operator!=(bCByteAlphaColor const &)const
+GEBool __thiscall __9bCByteAlphaColor__QBE_NABV0__Z( bCByteAlphaColor const *, bCByteAlphaColor const * );
+// ??DbCByteAlphaColor@@QBE?AV0@ABV0@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator*(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall __DbCByteAlphaColor__QBE_AV0_ABV0__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??DbCByteAlphaColor@@QBE?AV0@E@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator*(unsigned char)const
+bCByteAlphaColor * __thiscall __DbCByteAlphaColor__QBE_AV0_E_Z( bCByteAlphaColor const *, bCByteAlphaColor *, GEU8 );
+// ??GbCByteAlphaColor@@QBE?AV0@ABV0@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator-(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall __GbCByteAlphaColor__QBE_AV0_ABV0__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??GbCByteAlphaColor@@QBE?AV0@XZ public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator-(void)const
+bCByteAlphaColor * __thiscall __GbCByteAlphaColor__QBE_AV0_XZ( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ??HbCByteAlphaColor@@QBE?AV0@ABV0@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator+(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall __HbCByteAlphaColor__QBE_AV0_ABV0__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??KbCByteAlphaColor@@QBE?AV0@E@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator/(unsigned char)const
+bCByteAlphaColor * __thiscall __KbCByteAlphaColor__QBE_AV0_E_Z( bCByteAlphaColor const *, bCByteAlphaColor *, GEU8 );
+// ??SbCByteAlphaColor@@QBE?AV0@XZ public: bCByteAlphaColor __thiscall bCByteAlphaColor::operator~(void)const
+bCByteAlphaColor * __thiscall __SbCByteAlphaColor__QBE_AV0_XZ( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ??XbCByteAlphaColor@@QAEAAV0@ABV0@@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator*=(bCByteAlphaColor const &)
+bCByteAlphaColor * __thiscall __XbCByteAlphaColor__QAEAAV0_ABV0__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??XbCByteAlphaColor@@QAEAAV0@E@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator*=(unsigned char)
+bCByteAlphaColor * __thiscall __XbCByteAlphaColor__QAEAAV0_E_Z( bCByteAlphaColor *, GEU8 );
+// ??YbCByteAlphaColor@@QAEAAV0@ABV0@@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator+=(bCByteAlphaColor const &)
+bCByteAlphaColor * __thiscall __YbCByteAlphaColor__QAEAAV0_ABV0__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??ZbCByteAlphaColor@@QAEAAV0@ABV0@@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator-=(bCByteAlphaColor const &)
+bCByteAlphaColor * __thiscall __ZbCByteAlphaColor__QAEAAV0_ABV0__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ??_0bCByteAlphaColor@@QAEAAV0@E@Z public: bCByteAlphaColor & __thiscall bCByteAlphaColor::operator/=(unsigned char)
+bCByteAlphaColor * __thiscall ___0bCByteAlphaColor__QAEAAV0_E_Z( bCByteAlphaColor *, GEU8 );
+// ??_7bCByteAlphaColor@@6B@ const bCByteAlphaColor::`vftable'
+bCColorBase_vftable const DLLIMPORT ___7bCByteAlphaColor__6B_;
+// ?AccessAlpha@bCByteAlphaColor@@QAEAAEXZ public: unsigned char & __thiscall bCByteAlphaColor::AccessAlpha(void)
+GEU8 * __thiscall _AccessAlpha_bCByteAlphaColor__QAEAAEXZ( bCByteAlphaColor * );
+// ?Add@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::Add(bCByteAlphaColor const &)
+void __thiscall _Add_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?AddClamped@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::AddClamped(bCByteAlphaColor const &)
+void __thiscall _AddClamped_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?Clamp@bCByteAlphaColor@@QAEXXZ public: void __thiscall bCByteAlphaColor::Clamp(void)
+void __thiscall _Clamp_bCByteAlphaColor__QAEXXZ( bCByteAlphaColor * );
+// ?Clear@bCByteAlphaColor@@UAEXXZ public: virtual void __thiscall bCByteAlphaColor::Clear(void)
+void __thiscall _Clear_bCByteAlphaColor__UAEXXZ( bCByteAlphaColor * );
+// ?GetAlpha@bCByteAlphaColor@@QBEEXZ public: unsigned char __thiscall bCByteAlphaColor::GetAlpha(void)const
+GEU8 __thiscall _GetAlpha_bCByteAlphaColor__QBEEXZ( bCByteAlphaColor const * );
+// ?GetAlpha@bCByteAlphaColor@@QBEXAAE@Z public: void __thiscall bCByteAlphaColor::GetAlpha(unsigned char &)const
+void __thiscall _GetAlpha_bCByteAlphaColor__QBEXAAE_Z( bCByteAlphaColor const *, GEU8 * );
+// ?GetClamped@bCByteAlphaColor@@QBE?AV1@XZ public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetClamped(void)const
+bCByteAlphaColor * __thiscall _GetClamped_bCByteAlphaColor__QBE_AV1_XZ( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ?GetClamped@bCByteAlphaColor@@QBEXAAV1@@Z public: void __thiscall bCByteAlphaColor::GetClamped(bCByteAlphaColor &)const
+void __thiscall _GetClamped_bCByteAlphaColor__QBEXAAV1__Z( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ?GetColor_ARGB_1555@bCByteAlphaColor@@QBEGXZ public: unsigned short __thiscall bCByteAlphaColor::GetColor_ARGB_1555(void)const
+GEU16 __thiscall _GetColor_ARGB_1555_bCByteAlphaColor__QBEGXZ( bCByteAlphaColor const * );
+// ?GetColor_ARGB_1555@bCByteAlphaColor@@QBEXAAG@Z public: void __thiscall bCByteAlphaColor::GetColor_ARGB_1555(unsigned short &)const
+void __thiscall _GetColor_ARGB_1555_bCByteAlphaColor__QBEXAAG_Z( bCByteAlphaColor const *, GEU16 * );
+// ?GetColor_ARGB_8888@bCByteAlphaColor@@QBEKXZ public: unsigned long __thiscall bCByteAlphaColor::GetColor_ARGB_8888(void)const
+GEU32 __thiscall _GetColor_ARGB_8888_bCByteAlphaColor__QBEKXZ( bCByteAlphaColor const * );
+// ?GetColor_ARGB_8888@bCByteAlphaColor@@QBEXAAK@Z public: void __thiscall bCByteAlphaColor::GetColor_ARGB_8888(unsigned long &)const
+void __thiscall _GetColor_ARGB_8888_bCByteAlphaColor__QBEXAAK_Z( bCByteAlphaColor const *, GEU32 * );
+// ?GetColor_RGBA_4444@bCByteAlphaColor@@QBEGXZ public: unsigned short __thiscall bCByteAlphaColor::GetColor_RGBA_4444(void)const
+GEU16 __thiscall _GetColor_RGBA_4444_bCByteAlphaColor__QBEGXZ( bCByteAlphaColor const * );
+// ?GetColor_RGBA_4444@bCByteAlphaColor@@QBEXAAG@Z public: void __thiscall bCByteAlphaColor::GetColor_RGBA_4444(unsigned short &)const
+void __thiscall _GetColor_RGBA_4444_bCByteAlphaColor__QBEXAAG_Z( bCByteAlphaColor const *, GEU16 * );
+// ?GetColor_RGBA_8888@bCByteAlphaColor@@QBEKXZ public: unsigned long __thiscall bCByteAlphaColor::GetColor_RGBA_8888(void)const
+GEU32 __thiscall _GetColor_RGBA_8888_bCByteAlphaColor__QBEKXZ( bCByteAlphaColor const * );
+// ?GetColor_RGBA_8888@bCByteAlphaColor@@QBEXAAK@Z public: void __thiscall bCByteAlphaColor::GetColor_RGBA_8888(unsigned long &)const
+void __thiscall _GetColor_RGBA_8888_bCByteAlphaColor__QBEXAAK_Z( bCByteAlphaColor const *, GEU32 * );
+// ?GetColor_RGB_888@bCByteAlphaColor@@QBE?AVbCByteColor@@XZ public: bCByteColor __thiscall bCByteAlphaColor::GetColor_RGB_888(void)const
+bCByteColor * __thiscall _GetColor_RGB_888_bCByteAlphaColor__QBE_AVbCByteColor__XZ( bCByteAlphaColor const *, bCByteColor * );
+// ?GetColor_RGB_888@bCByteAlphaColor@@QBEXAAVbCByteColor@@@Z public: void __thiscall bCByteAlphaColor::GetColor_RGB_888(bCByteColor &)const
+void __thiscall _GetColor_RGB_888_bCByteAlphaColor__QBEXAAVbCByteColor___Z( bCByteAlphaColor const *, bCByteColor * );
+// ?GetDifference@bCByteAlphaColor@@QBE?AV1@ABV1@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetDifference(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall _GetDifference_bCByteAlphaColor__QBE_AV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?GetDifference@bCByteAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCByteAlphaColor::GetDifference(bCByteAlphaColor &,bCByteAlphaColor const &)const
+void __thiscall _GetDifference_bCByteAlphaColor__QBEXAAV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?GetInverted@bCByteAlphaColor@@QBE?AV1@XZ public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetInverted(void)const
+bCByteAlphaColor * __thiscall _GetInverted_bCByteAlphaColor__QBE_AV1_XZ( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ?GetInverted@bCByteAlphaColor@@QBEXAAV1@@Z public: void __thiscall bCByteAlphaColor::GetInverted(bCByteAlphaColor &)const
+void __thiscall _GetInverted_bCByteAlphaColor__QBEXAAV1__Z( bCByteAlphaColor const *, bCByteAlphaColor * );
+// ?GetProduct@bCByteAlphaColor@@QBE?AV1@ABV1@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetProduct(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall _GetProduct_bCByteAlphaColor__QBE_AV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?GetProduct@bCByteAlphaColor@@QBE?AV1@E@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetProduct(unsigned char)const
+bCByteAlphaColor * __thiscall _GetProduct_bCByteAlphaColor__QBE_AV1_E_Z( bCByteAlphaColor const *, bCByteAlphaColor *, GEU8 );
+// ?GetProduct@bCByteAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCByteAlphaColor::GetProduct(bCByteAlphaColor &,bCByteAlphaColor const &)const
+void __thiscall _GetProduct_bCByteAlphaColor__QBEXAAV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?GetProduct@bCByteAlphaColor@@QBEXAAV1@E@Z public: void __thiscall bCByteAlphaColor::GetProduct(bCByteAlphaColor &,unsigned char)const
+void __thiscall _GetProduct_bCByteAlphaColor__QBEXAAV1_E_Z( bCByteAlphaColor const *, bCByteAlphaColor *, GEU8 );
+// ?GetSum@bCByteAlphaColor@@QBE?AV1@ABV1@@Z public: bCByteAlphaColor __thiscall bCByteAlphaColor::GetSum(bCByteAlphaColor const &)const
+bCByteAlphaColor * __thiscall _GetSum_bCByteAlphaColor__QBE_AV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?GetSum@bCByteAlphaColor@@QBEXAAV1@ABV1@@Z public: void __thiscall bCByteAlphaColor::GetSum(bCByteAlphaColor &,bCByteAlphaColor const &)const
+void __thiscall _GetSum_bCByteAlphaColor__QBEXAAV1_ABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?Invert@bCByteAlphaColor@@QAEXXZ public: void __thiscall bCByteAlphaColor::Invert(void)
+void __thiscall _Invert_bCByteAlphaColor__QAEXXZ( bCByteAlphaColor * );
+// ?IsEqual@bCByteAlphaColor@@QBE_NABV1@@Z public: bool __thiscall bCByteAlphaColor::IsEqual(bCByteAlphaColor const &)const
+GEBool __thiscall _IsEqual_bCByteAlphaColor__QBE_NABV1__Z( bCByteAlphaColor const *, bCByteAlphaColor const * );
+// ?Multiply@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::Multiply(bCByteAlphaColor const &)
+void __thiscall _Multiply_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?Multiply@bCByteAlphaColor@@QAEXE@Z public: void __thiscall bCByteAlphaColor::Multiply(unsigned char)
+void __thiscall _Multiply_bCByteAlphaColor__QAEXE_Z( bCByteAlphaColor *, GEU8 );
+// ?ReadPixel@bCByteAlphaColor@@QAEXW4bEPixelFormat@@PBX@Z public: void __thiscall bCByteAlphaColor::ReadPixel(bEPixelFormat,void const *)
+void __thiscall _ReadPixel_bCByteAlphaColor__QAEXW4bEPixelFormat__PBX_Z( bCByteAlphaColor *, bEPixelFormat, GELPCVoid );
+// ?SetAlpha@bCByteAlphaColor@@QAEXE@Z public: void __thiscall bCByteAlphaColor::SetAlpha(unsigned char)
+void __thiscall _SetAlpha_bCByteAlphaColor__QAEXE_Z( bCByteAlphaColor *, GEU8 );
+// ?SetColor@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::SetColor(bCByteAlphaColor const &)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?SetColor@bCByteAlphaColor@@QAEXABVbCByteColor@@E@Z public: void __thiscall bCByteAlphaColor::SetColor(bCByteColor const &,unsigned char)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXABVbCByteColor__E_Z( bCByteAlphaColor *, bCByteColor const *, GEU8 );
+// ?SetColor@bCByteAlphaColor@@QAEXABVbCFloatAlphaColor@@@Z public: void __thiscall bCByteAlphaColor::SetColor(bCFloatAlphaColor const &)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXABVbCFloatAlphaColor___Z( bCByteAlphaColor *, bCFloatAlphaColor const * );
+// ?SetColor@bCByteAlphaColor@@QAEXABVbCFloatColor@@E@Z public: void __thiscall bCByteAlphaColor::SetColor(bCFloatColor const &,unsigned char)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXABVbCFloatColor__E_Z( bCByteAlphaColor *, bCFloatColor const *, GEU8 );
+// ?SetColor@bCByteAlphaColor@@QAEXABVbCFloatColorHSV@@E@Z public: void __thiscall bCByteAlphaColor::SetColor(bCFloatColorHSV const &,unsigned char)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXABVbCFloatColorHSV__E_Z( bCByteAlphaColor *, bCFloatColorHSV const *, GEU8 );
+// ?SetColor@bCByteAlphaColor@@QAEXEEEE@Z public: void __thiscall bCByteAlphaColor::SetColor(unsigned char,unsigned char,unsigned char,unsigned char)
+void __thiscall _SetColor_bCByteAlphaColor__QAEXEEEE_Z( bCByteAlphaColor *, GEU8, GEU8, GEU8, GEU8 );
+// ?SetColor_ARGB_1555@bCByteAlphaColor@@QAEXG@Z public: void __thiscall bCByteAlphaColor::SetColor_ARGB_1555(unsigned short)
+void __thiscall _SetColor_ARGB_1555_bCByteAlphaColor__QAEXG_Z( bCByteAlphaColor *, GEU16 );
+// ?SetColor_ARGB_8888@bCByteAlphaColor@@QAEXK@Z public: void __thiscall bCByteAlphaColor::SetColor_ARGB_8888(unsigned long)
+void __thiscall _SetColor_ARGB_8888_bCByteAlphaColor__QAEXK_Z( bCByteAlphaColor *, GEU32 );
+// ?SetColor_RGBA_4444@bCByteAlphaColor@@QAEXG@Z public: void __thiscall bCByteAlphaColor::SetColor_RGBA_4444(unsigned short)
+void __thiscall _SetColor_RGBA_4444_bCByteAlphaColor__QAEXG_Z( bCByteAlphaColor *, GEU16 );
+// ?SetColor_RGBA_8888@bCByteAlphaColor@@QAEXK@Z public: void __thiscall bCByteAlphaColor::SetColor_RGBA_8888(unsigned long)
+void __thiscall _SetColor_RGBA_8888_bCByteAlphaColor__QAEXK_Z( bCByteAlphaColor *, GEU32 );
+// ?SetColor_RGB_555@bCByteAlphaColor@@QAEXG@Z public: void __thiscall bCByteAlphaColor::SetColor_RGB_555(unsigned short)
+void __thiscall _SetColor_RGB_555_bCByteAlphaColor__QAEXG_Z( bCByteAlphaColor *, GEU16 );
+// ?SetColor_RGB_565@bCByteAlphaColor@@QAEXG@Z public: void __thiscall bCByteAlphaColor::SetColor_RGB_565(unsigned short)
+void __thiscall _SetColor_RGB_565_bCByteAlphaColor__QAEXG_Z( bCByteAlphaColor *, GEU16 );
+// ?SetColor_RGB_888@bCByteAlphaColor@@QAEXABVbCByteColor@@@Z public: void __thiscall bCByteAlphaColor::SetColor_RGB_888(bCByteColor const &)
+void __thiscall _SetColor_RGB_888_bCByteAlphaColor__QAEXABVbCByteColor___Z( bCByteAlphaColor *, bCByteColor const * );
+// ?Sub@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::Sub(bCByteAlphaColor const &)
+void __thiscall _Sub_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?SubClamped@bCByteAlphaColor@@QAEXABV1@@Z public: void __thiscall bCByteAlphaColor::SubClamped(bCByteAlphaColor const &)
+void __thiscall _SubClamped_bCByteAlphaColor__QAEXABV1__Z( bCByteAlphaColor *, bCByteAlphaColor const * );
+// ?WritePixel@bCByteAlphaColor@@QAEXW4bEPixelFormat@@PAX@Z public: void __thiscall bCByteAlphaColor::WritePixel(bEPixelFormat,void *)
+void __thiscall _WritePixel_bCByteAlphaColor__QAEXW4bEPixelFormat__PAX_Z( bCByteAlphaColor *, bEPixelFormat, GELPVoid );
