@@ -20,7 +20,7 @@ public:    virtual bEDoNotOverwriteMethod     Write( bCOStream & );             
 protected: virtual GEBool                     OnDeserialize( bCXMLParserNode * );                                           // [0000].001C
 protected: virtual GEBool                     OnSerialize( bCXMLParserNode * );                                             // [0000].0020
 protected: virtual GEBool                     OnRead( bCIStream & );                                                        // [0000].0024
-protected: virtual GEBool                     OnWrite(bCOStream &);                                                         // [0000].0028
+protected: virtual GEBool                     OnWrite( bCOStream & );                                                       // [0000].0028
 public:    virtual bEResult                   Create( void );                                                               // [0000].002C
 protected: virtual void                       Destroy( void );                                                              // [0000].0030
 public:    virtual bEDoNotOverwriteMethod     CopyFrom( bCObjectBase const &, GEBool );                                     // [0000].0034
