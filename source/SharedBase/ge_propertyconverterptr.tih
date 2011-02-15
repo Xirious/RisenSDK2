@@ -1,0 +1,38 @@
+struct bCPropertyConverter;
+
+struct bCPropertyConverterPtr
+{
+    bCPropertyConverter * m_pInstance;
+};
+// ??0bCPropertyConverterPtr@@QAE@ABV0@@Z public: __thiscall bCPropertyConverterPtr::bCPropertyConverterPtr(bCPropertyConverterPtr const &)
+bCPropertyConverterPtr * __thiscall __0bCPropertyConverterPtr__QAE_ABV0__Z( bCPropertyConverterPtr *, bCPropertyConverterPtr const * );
+// ??0bCPropertyConverterPtr@@QAE@XZ public: __thiscall bCPropertyConverterPtr::bCPropertyConverterPtr(void)
+bCPropertyConverterPtr * __thiscall __0bCPropertyConverterPtr__QAE_XZ( bCPropertyConverterPtr * );
+// ??1bCPropertyConverterPtr@@QAE@XZ public: __thiscall bCPropertyConverterPtr::~bCPropertyConverterPtr(void)
+void __thiscall __1bCPropertyConverterPtr__QAE_XZ( bCPropertyConverterPtr * );
+// ??4bCPropertyConverterPtr@@QAEABV0@ABV0@@Z public: bCPropertyConverterPtr const & __thiscall bCPropertyConverterPtr::operator=(bCPropertyConverterPtr const &)
+bCPropertyConverterPtr const * __thiscall __4bCPropertyConverterPtr__QAEABV0_ABV0__Z( bCPropertyConverterPtr *, bCPropertyConverterPtr const * );
+// ??4bCPropertyConverterPtr@@QAEABV0@PBVbCPropertyConverter@@@Z public: bCPropertyConverterPtr const & __thiscall bCPropertyConverterPtr::operator=(bCPropertyConverter const *)
+bCPropertyConverterPtr const * __thiscall __4bCPropertyConverterPtr__QAEABV0_PBVbCPropertyConverter___Z( bCPropertyConverterPtr *, bCPropertyConverter const * );
+// ??BbCPropertyConverterPtr@@QAEPAVbCPropertyConverter@@XZ public: __thiscall bCPropertyConverterPtr::operator bCPropertyConverter *(void)
+bCPropertyConverter * __thiscall __BbCPropertyConverterPtr__QAEPAVbCPropertyConverter__XZ( bCPropertyConverterPtr * );
+// ??BbCPropertyConverterPtr@@QBEPBVbCPropertyConverter@@XZ public: __thiscall bCPropertyConverterPtr::operator bCPropertyConverter const *(void)const
+bCPropertyConverter const * __thiscall __BbCPropertyConverterPtr__QBEPBVbCPropertyConverter__XZ( bCPropertyConverterPtr const * );
+// ??CbCPropertyConverterPtr@@QAEPAVbCPropertyConverter@@XZ public: bCPropertyConverter * __thiscall bCPropertyConverterPtr::operator->(void)
+bCPropertyConverter * __thiscall __CbCPropertyConverterPtr__QAEPAVbCPropertyConverter__XZ( bCPropertyConverterPtr * );
+// ??CbCPropertyConverterPtr@@QBEPBVbCPropertyConverter@@XZ public: bCPropertyConverter const * __thiscall bCPropertyConverterPtr::operator->(void)const
+bCPropertyConverter const * __thiscall __CbCPropertyConverterPtr__QBEPBVbCPropertyConverter__XZ( bCPropertyConverterPtr const * );
+// ?CopyFrom@bCPropertyConverterPtr@@IAEXABV1@@Z protected: void __thiscall bCPropertyConverterPtr::CopyFrom(bCPropertyConverterPtr const &)
+void __thiscall _CopyFrom_bCPropertyConverterPtr__IAEXABV1__Z( bCPropertyConverterPtr *, bCPropertyConverterPtr const * );
+// ?Create@bCPropertyConverterPtr@@IAEXXZ protected: void __thiscall bCPropertyConverterPtr::Create(void)
+void __thiscall _Create_bCPropertyConverterPtr__IAEXXZ( bCPropertyConverterPtr * );
+// ?Destroy@bCPropertyConverterPtr@@IAEXXZ protected: void __thiscall bCPropertyConverterPtr::Destroy(void)
+void __thiscall _Destroy_bCPropertyConverterPtr__IAEXXZ( bCPropertyConverterPtr * );
+// ?GetInstance@bCPropertyConverterPtr@@QBEPAVbCPropertyConverter@@XZ public: bCPropertyConverter * __thiscall bCPropertyConverterPtr::GetInstance(void)const
+bCPropertyConverter * __thiscall _GetInstance_bCPropertyConverterPtr__QBEPAVbCPropertyConverter__XZ( bCPropertyConverterPtr const * );
+// ?Invalidate@bCPropertyConverterPtr@@IAEXXZ protected: void __thiscall bCPropertyConverterPtr::Invalidate(void)
+void __thiscall _Invalidate_bCPropertyConverterPtr__IAEXXZ( bCPropertyConverterPtr * );
+// ?IsValid@bCPropertyConverterPtr@@QBE_NXZ public: bool __thiscall bCPropertyConverterPtr::IsValid(void)const
+GEBool __thiscall _IsValid_bCPropertyConverterPtr__QBE_NXZ( bCPropertyConverterPtr const * );
+// ?SetInstance@bCPropertyConverterPtr@@QAEXPAVbCPropertyConverter@@@Z public: void __thiscall bCPropertyConverterPtr::SetInstance(bCPropertyConverter *)
+void __thiscall _SetInstance_bCPropertyConverterPtr__QAEXPAVbCPropertyConverter___Z( bCPropertyConverterPtr *, bCPropertyConverter * );
