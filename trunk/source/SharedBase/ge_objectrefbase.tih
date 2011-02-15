@@ -1,0 +1,49 @@
+struct bCObjectRefBase_data
+{
+    GEU32 m_u31ReferenceCount_bIsValid;
+};
+struct bCObjectRefBase
+{
+    bCObjectBase_vftable const * __vfptr;
+    bCObjectRefBase_data         data;
+};
+// ??0bCObjectRefBase@@QAE@ABV0@@Z public: __thiscall bCObjectRefBase::bCObjectRefBase(bCObjectRefBase const &)
+bCObjectRefBase * __thiscall __0bCObjectRefBase__QAE_ABV0__Z( bCObjectRefBase *, bCObjectRefBase const * );
+// ??0bCObjectRefBase@@QAE@XZ public: __thiscall bCObjectRefBase::bCObjectRefBase(void)
+bCObjectRefBase * __thiscall __0bCObjectRefBase__QAE_XZ( bCObjectRefBase * );
+// ??1bCObjectRefBase@@MAE@XZ protected: virtual __thiscall bCObjectRefBase::~bCObjectRefBase(void)
+void __thiscall __1bCObjectRefBase__MAE_XZ( bCObjectRefBase * );
+// ??4bCObjectRefBase@@QAEAAV0@ABV0@@Z public: bCObjectRefBase & __thiscall bCObjectRefBase::operator=(bCObjectRefBase const &)
+bCObjectRefBase * __thiscall __4bCObjectRefBase__QAEAAV0_ABV0__Z( bCObjectRefBase *, bCObjectRefBase const * );
+// ??_7bCObjectRefBase@@6B@ const bCObjectRefBase::`vftable'
+bCObjectBase_vftable const DLLIMPORT ___7bCObjectRefBase__6B_;
+// ?AddReference@bCObjectRefBase@@UAEKXZ public: virtual unsigned long __thiscall bCObjectRefBase::AddReference(void)
+GEU32 __thiscall _AddReference_bCObjectRefBase__UAEKXZ( bCObjectRefBase * );
+// ?Create@bCObjectRefBase@@UAE?AW4bEResult@@XZ public: virtual bEResult __thiscall bCObjectRefBase::Create(void)
+bEResult __thiscall _Create_bCObjectRefBase__UAE_AW4bEResult__XZ( bCObjectRefBase * );
+// ?CreateObject@bCObjectRefBase@@SGPAVbCObjectBase@@XZ public: static bCObjectBase * __stdcall bCObjectRefBase::CreateObject(void)
+bCObjectBase * __stdcall _CreateObject_bCObjectRefBase__SGPAVbCObjectBase__XZ( void );
+// ?Destroy@bCObjectRefBase@@UAEXXZ public: virtual void __thiscall bCObjectRefBase::Destroy(void)
+void __thiscall _Destroy_bCObjectRefBase__UAEXXZ( bCObjectRefBase * );
+// ?GetObjectType@bCObjectRefBase@@UBEPAVbCPropertyObjectTypeBase@@XZ public: virtual bCPropertyObjectTypeBase * __thiscall bCObjectRefBase::GetObjectType(void)const
+bCPropertyObjectTypeBase * __thiscall _GetObjectType_bCObjectRefBase__UBEPAVbCPropertyObjectTypeBase__XZ( bCObjectRefBase const * );
+// ?GetReferenceCount@bCObjectRefBase@@QBEKXZ public: unsigned long __thiscall bCObjectRefBase::GetReferenceCount(void)const
+GEU32 __thiscall _GetReferenceCount_bCObjectRefBase__QBEKXZ( bCObjectRefBase const * );
+// ?GetThisType@bCObjectRefBase@@SGAAVbCPropertyObjectTypeBase@@XZ public: static bCPropertyObjectTypeBase & __stdcall bCObjectRefBase::GetThisType(void)
+bCPropertyObjectTypeBase * __stdcall _GetThisType_bCObjectRefBase__SGAAVbCPropertyObjectTypeBase__XZ( void );
+// ?GetVersion@bCObjectRefBase@@UBEGXZ public: virtual unsigned short __thiscall bCObjectRefBase::GetVersion(void)const
+GEU16 __thiscall _GetVersion_bCObjectRefBase__UBEGXZ( bCObjectRefBase const * );
+// ?Invalidate@bCObjectRefBase@@IAEXXZ protected: void __thiscall bCObjectRefBase::Invalidate(void)
+void __thiscall _Invalidate_bCObjectRefBase__IAEXXZ( bCObjectRefBase * );
+// ?IsValid@bCObjectRefBase@@UBE_NXZ public: virtual bool __thiscall bCObjectRefBase::IsValid(void)const
+GEBool __thiscall _IsValid_bCObjectRefBase__UBE_NXZ( bCObjectRefBase const * );
+// ?OnRead@bCObjectRefBase@@UAE_NAAVbCIStream@@@Z public: virtual bool __thiscall bCObjectRefBase::OnRead(bCIStream &)
+GEBool __thiscall _OnRead_bCObjectRefBase__UAE_NAAVbCIStream___Z( bCObjectRefBase *, bCIStream * );
+// ?OnWrite@bCObjectRefBase@@UAE_NAAVbCOStream@@@Z public: virtual bool __thiscall bCObjectRefBase::OnWrite(bCOStream &)
+GEBool __thiscall _OnWrite_bCObjectRefBase__UAE_NAAVbCOStream___Z( bCObjectRefBase *, bCOStream * );
+// ?ReleaseReference@bCObjectRefBase@@UAEKXZ public: virtual unsigned long __thiscall bCObjectRefBase::ReleaseReference(void)
+GEU32 __thiscall _ReleaseReference_bCObjectRefBase__UAEKXZ( bCObjectRefBase * );
+// ?StaticConstructor@bCObjectRefBase@@SGXAAVbCPropertyObjectTypeBase@@@Z public: static void __stdcall bCObjectRefBase::StaticConstructor(bCPropertyObjectTypeBase &)
+void __stdcall _StaticConstructor_bCObjectRefBase__SGXAAVbCPropertyObjectTypeBase___Z( bCPropertyObjectTypeBase * );
+// ?thisType@bCObjectRefBase@@0VbCPropertyObjectTypeBase@@A private: static bCPropertyObjectTypeBase bCObjectRefBase::thisType
+bCPropertyObjectTypeBase DLLIMPORT _thisType_bCObjectRefBase__0VbCPropertyObjectTypeBase__A;

@@ -1,0 +1,148 @@
+typedef bEResult bEDoNotOverwriteMethod;
+
+struct bCObjectBase;
+struct bCObjectBase_vftable
+{
+    bCPropertyObjectTypeBase * (__thiscall * GetObjectType)( bCObjectBase const * );
+    GEU16                      (__thiscall * GetVersion)( bCObjectBase const * );
+    GEBool                     (__thiscall * IsValid)( bCObjectBase const * );
+    GEBool                     (__thiscall * Deserialize)( bCObjectBase *, bCXMLParserNode * );
+    GEBool                     (__thiscall * Serialize)( bCObjectBase *, bCXMLParserNode * );
+    bEDoNotOverwriteMethod     (__thiscall * Read)( bCObjectBase *, bCIStream * );
+    bEDoNotOverwriteMethod     (__thiscall * Write)( bCObjectBase *, bCOStream * );
+    GEBool                     (__thiscall * OnDeserialize)( bCObjectBase *, bCXMLParserNode * );
+    GEBool                     (__thiscall * OnSerialize)( bCObjectBase *, bCXMLParserNode * );
+    GEBool                     (__thiscall * OnRead)( bCObjectBase *, bCIStream * );
+    GEBool                     (__thiscall * OnWrite)( bCObjectBase *, bCOStream * );
+    bEResult                   (__thiscall * Create)( bCObjectBase * );
+    void                       (__thiscall * Destroy)( bCObjectBase * );
+    bEDoNotOverwriteMethod     (__thiscall * CopyFrom)( bCObjectBase *, bCObjectBase const *, GEBool );
+    GEBool                     (__thiscall * OnCopyFrom)( bCObjectBase *, bCObjectBase const * );
+    GEBool                     (__thiscall * OnCopyPatchableOnly)( bCObjectBase *, bCObjectBase const * );
+    GEU32                      (__thiscall * AddReference)( bCObjectBase * );
+    GEU32                      (__thiscall * ReleaseReference)( bCObjectBase * );
+    GEU32                      (__thiscall * GetReferenceCount)( bCObjectBase * );
+    bEResult                   (__thiscall * BindPOType)( bCObjectBase * );
+    bEResult                   (__thiscall * PostInitializeProperties)( bCObjectBase * );
+    GEBool                     (__thiscall * HandleDeprecatedProperty)( bCObjectBase *, bCString const *, bCString const *, bCIStream * );
+    GEBool                     (__thiscall * NotifyPropertyValueChangedEnterEx)( bCObjectBase *, GELPCChar, GEBool );
+    GEBool                     (__thiscall * NotifyPropertyValueChangedExitEx)( bCObjectBase *, GELPCChar, GEBool );
+    GEBool                     (__thiscall * OnNotifyPropertyValueChangedEnterEx)( bCObjectBase *, GELPCChar, GEBool );
+    GEBool                     (__thiscall * OnNotifyPropertyValueChangedExitEx)( bCObjectBase *, GELPCChar, GEBool );
+    GEInt                      (__thiscall * GetNativePropertyCount)( bCObjectBase const * );
+    bCPropertyConverterPtr *   (__thiscall * GetNativePropertyAt)( bCObjectBase const *, bCPropertyConverterPtr *, GEInt );
+    void                       (__thiscall * __vecDelDtor)( bCObjectBase *, unsigned int );
+};
+struct bCObjectBase
+{
+    bCObjectBase_vftable const * __vfptr;
+};
+// ??0bCObjectBase@@QAE@ABV0@@Z public: __thiscall bCObjectBase::bCObjectBase(bCObjectBase const &)
+bCObjectBase * __thiscall __0bCObjectBase__QAE_ABV0__Z( bCObjectBase *, bCObjectBase const * );
+// ??0bCObjectBase@@QAE@XZ public: __thiscall bCObjectBase::bCObjectBase(void)
+bCObjectBase * __thiscall __0bCObjectBase__QAE_XZ( bCObjectBase * );
+// ??0bCObjectBase@@QAE@_N@Z public: __thiscall bCObjectBase::bCObjectBase(bool)
+bCObjectBase * __thiscall __0bCObjectBase__QAE__N_Z( bCObjectBase *, GEBool );
+// ??1bCObjectBase@@UAE@XZ public: virtual __thiscall bCObjectBase::~bCObjectBase(void)
+void __thiscall __1bCObjectBase__UAE_XZ( bCObjectBase * );
+// ??4bCObjectBase@@QAEABV0@ABV0@@Z public: bCObjectBase const & __thiscall bCObjectBase::operator=(bCObjectBase const &)
+bCObjectBase const * __thiscall __4bCObjectBase__QAEABV0_ABV0__Z( bCObjectBase *, bCObjectBase const * );
+// ??5bCObjectBase@@QAEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCObjectBase::operator>>(bCOStream &)
+bCOStream * __thiscall __5bCObjectBase__QAEAAVbCOStream__AAV1__Z( bCObjectBase *, bCOStream * );
+// ??6bCObjectBase@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCObjectBase::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCObjectBase__QAEAAVbCIStream__AAV1__Z( bCObjectBase *, bCIStream * );
+// ??_7bCObjectBase@@6B@ const bCObjectBase::`vftable'
+bCObjectBase_vftable const DLLIMPORT ___7bCObjectBase__6B_;
+// ?AddReference@bCObjectBase@@UAEKXZ public: virtual unsigned long __thiscall bCObjectBase::AddReference(void)
+GEU32 __thiscall _AddReference_bCObjectBase__UAEKXZ( bCObjectBase * );
+// ?BindPOType@bCObjectBase@@UAE?AW4bEResult@@XZ public: virtual bEResult __thiscall bCObjectBase::BindPOType(void)
+bEResult __thiscall _BindPOType_bCObjectBase__UAE_AW4bEResult__XZ( bCObjectBase * );
+// ?Clone@bCObjectBase@@QAEPAV1@XZ public: bCObjectBase * __thiscall bCObjectBase::Clone(void)
+bCObjectBase * __thiscall _Clone_bCObjectBase__QAEPAV1_XZ( bCObjectBase * );
+// ?CopyFrom@bCObjectBase@@UAE?AW4bEDoNotOverwriteMethod@@ABV1@_N@Z public: virtual bEDoNotOverwriteMethod __thiscall bCObjectBase::CopyFrom(bCObjectBase const &,bool)
+bEDoNotOverwriteMethod __thiscall _CopyFrom_bCObjectBase__UAE_AW4bEDoNotOverwriteMethod__ABV1__N_Z( bCObjectBase *, bCObjectBase const *, GEBool );
+// ?CopyTo@bCObjectBase@@QBE?AW4bEDoNotOverwriteMethod@@AAV1@@Z public: bEDoNotOverwriteMethod __thiscall bCObjectBase::CopyTo(bCObjectBase &)const
+bEDoNotOverwriteMethod __thiscall _CopyTo_bCObjectBase__QBE_AW4bEDoNotOverwriteMethod__AAV1__Z( bCObjectBase const *, bCObjectBase * );
+// ?Create@bCObjectBase@@UAE?AW4bEResult@@XZ public: virtual bEResult __thiscall bCObjectBase::Create(void)
+bEResult __thiscall _Create_bCObjectBase__UAE_AW4bEResult__XZ( bCObjectBase * );
+// ?CreateObject@bCObjectBase@@SGPAV1@XZ public: static bCObjectBase * __stdcall bCObjectBase::CreateObject(void)
+bCObjectBase * __stdcall _CreateObject_bCObjectBase__SGPAV1_XZ( void );
+// ?Deserialize@bCObjectBase@@UAE_NPAVbCXMLParserNode@@@Z public: virtual bool __thiscall bCObjectBase::Deserialize(bCXMLParserNode *)
+GEBool __thiscall _Deserialize_bCObjectBase__UAE_NPAVbCXMLParserNode___Z( bCObjectBase *, bCXMLParserNode * );
+// ?Destroy@bCObjectBase@@MAEXXZ protected: virtual void __thiscall bCObjectBase::Destroy(void)
+void __thiscall _Destroy_bCObjectBase__MAEXXZ( bCObjectBase * );
+// ?GetBaseClassName@bCObjectBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCObjectBase::GetBaseClassName(void)const
+bCString const * __thiscall _GetBaseClassName_bCObjectBase__QBEABVbCString__XZ( bCObjectBase const * );
+// ?GetClassDescription@bCObjectBase@@QBE?AVbCString@@XZ public: bCString __thiscall bCObjectBase::GetClassDescription(void)const
+bCString * __thiscall _GetClassDescription_bCObjectBase__QBE_AVbCString__XZ( bCObjectBase const *, bCString * );
+// ?GetClassName@bCObjectBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCObjectBase::GetClassName(void)const
+bCString const * __thiscall _GetClassName_bCObjectBase__QBEABVbCString__XZ( bCObjectBase const * );
+// ?GetNativePropertyAt@bCObjectBase@@UBE?AVbCPropertyConverterPtr@@H@Z public: virtual bCPropertyConverterPtr __thiscall bCObjectBase::GetNativePropertyAt(int)const
+bCPropertyConverterPtr * __thiscall _GetNativePropertyAt_bCObjectBase__UBE_AVbCPropertyConverterPtr__H_Z( bCObjectBase const *, bCPropertyConverterPtr *, GEInt );
+// ?GetNativePropertyCount@bCObjectBase@@UBEHXZ public: virtual int __thiscall bCObjectBase::GetNativePropertyCount(void)const
+GEInt __thiscall _GetNativePropertyCount_bCObjectBase__UBEHXZ( bCObjectBase const * );
+// ?GetObjectType@bCObjectBase@@UBEPAVbCPropertyObjectTypeBase@@XZ public: virtual bCPropertyObjectTypeBase * __thiscall bCObjectBase::GetObjectType(void)const
+bCPropertyObjectTypeBase * __thiscall _GetObjectType_bCObjectBase__UBEPAVbCPropertyObjectTypeBase__XZ( bCObjectBase const * );
+// ?GetPropertyObject@bCObjectBase@@QAEPAV1@XZ public: bCObjectBase * __thiscall bCObjectBase::GetPropertyObject(void)
+bCObjectBase * __thiscall _GetPropertyObject_bCObjectBase__QAEPAV1_XZ( bCObjectBase * );
+// ?GetPropertyObject@bCObjectBase@@QBEPBV1@XZ public: bCObjectBase const * __thiscall bCObjectBase::GetPropertyObject(void)const
+bCObjectBase const * __thiscall _GetPropertyObject_bCObjectBase__QBEPBV1_XZ( bCObjectBase const * );
+// ?GetReferenceCount@bCObjectBase@@UAEKXZ public: virtual unsigned long __thiscall bCObjectBase::GetReferenceCount(void)
+GEU32 __thiscall _GetReferenceCount_bCObjectBase__UAEKXZ( bCObjectBase * );
+// ?GetThisType@bCObjectBase@@SGAAVbCPropertyObjectTypeBase@@XZ public: static bCPropertyObjectTypeBase & __stdcall bCObjectBase::GetThisType(void)
+bCPropertyObjectTypeBase * __stdcall _GetThisType_bCObjectBase__SGAAVbCPropertyObjectTypeBase__XZ( void );
+// ?GetVersion@bCObjectBase@@UBEGXZ public: virtual unsigned short __thiscall bCObjectBase::GetVersion(void)const
+GEU16 __thiscall _GetVersion_bCObjectBase__UBEGXZ( bCObjectBase const * );
+// ?HandleDeprecatedProperty@bCObjectBase@@UAE_NABVbCString@@0AAVbCIStream@@@Z public: virtual bool __thiscall bCObjectBase::HandleDeprecatedProperty(bCString const &,bCString const &,bCIStream &)
+GEBool __thiscall _HandleDeprecatedProperty_bCObjectBase__UAE_NABVbCString__0AAVbCIStream___Z( bCObjectBase *, bCString const *, bCString const *, bCIStream * );
+// ?Invalidate@bCObjectBase@@IAEXXZ protected: void __thiscall bCObjectBase::Invalidate(void)
+void __thiscall _Invalidate_bCObjectBase__IAEXXZ( bCObjectBase * );
+// ?IsDerivedFrom@bCObjectBase@@QBE_NPBVbCPropertyObjectTypeBase@@@Z public: bool __thiscall bCObjectBase::IsDerivedFrom(bCPropertyObjectTypeBase const *)const
+GEBool __thiscall _IsDerivedFrom_bCObjectBase__QBE_NPBVbCPropertyObjectTypeBase___Z( bCObjectBase const *, bCPropertyObjectTypeBase const * );
+// ?IsKindOf@bCObjectBase@@QBE_NPBVbCPropertyObjectTypeBase@@@Z public: bool __thiscall bCObjectBase::IsKindOf(bCPropertyObjectTypeBase const *)const
+GEBool __thiscall _IsKindOf_bCObjectBase__QBE_NPBVbCPropertyObjectTypeBase___Z( bCObjectBase const *, bCPropertyObjectTypeBase const * );
+// ?IsObjectTypeValid@bCObjectBase@@QBE_NXZ public: bool __thiscall bCObjectBase::IsObjectTypeValid(void)const
+GEBool __thiscall _IsObjectTypeValid_bCObjectBase__QBE_NXZ( bCObjectBase const * );
+// ?IsValid@bCObjectBase@@UBE_NXZ public: virtual bool __thiscall bCObjectBase::IsValid(void)const
+GEBool __thiscall _IsValid_bCObjectBase__UBE_NXZ( bCObjectBase const * );
+// ?NotifyPropertyValueChangedEnterEx@bCObjectBase@@UAE_NPBD_N@Z public: virtual bool __thiscall bCObjectBase::NotifyPropertyValueChangedEnterEx(char const *,bool)
+GEBool __thiscall _NotifyPropertyValueChangedEnterEx_bCObjectBase__UAE_NPBD_N_Z( bCObjectBase *, GELPCChar, GEBool );
+// ?NotifyPropertyValueChangedExitEx@bCObjectBase@@UAE_NPBD_N@Z public: virtual bool __thiscall bCObjectBase::NotifyPropertyValueChangedExitEx(char const *,bool)
+GEBool __thiscall _NotifyPropertyValueChangedExitEx_bCObjectBase__UAE_NPBD_N_Z( bCObjectBase *, GELPCChar, GEBool );
+// ?OnCopyFrom@bCObjectBase@@MAE_NABV1@@Z protected: virtual bool __thiscall bCObjectBase::OnCopyFrom(bCObjectBase const &)
+GEBool __thiscall _OnCopyFrom_bCObjectBase__MAE_NABV1__Z( bCObjectBase *, bCObjectBase const * );
+// ?OnCopyPatchableOnly@bCObjectBase@@MAE_NABV1@@Z protected: virtual bool __thiscall bCObjectBase::OnCopyPatchableOnly(bCObjectBase const &)
+GEBool __thiscall _OnCopyPatchableOnly_bCObjectBase__MAE_NABV1__Z( bCObjectBase *, bCObjectBase const * );
+// ?OnDeserialize@bCObjectBase@@MAE_NPAVbCXMLParserNode@@@Z protected: virtual bool __thiscall bCObjectBase::OnDeserialize(bCXMLParserNode *)
+GEBool __thiscall _OnDeserialize_bCObjectBase__MAE_NPAVbCXMLParserNode___Z( bCObjectBase *, bCXMLParserNode * );
+// ?OnNotifyPropertyValueChangedEnterEx@bCObjectBase@@MAE_NPBD_N@Z protected: virtual bool __thiscall bCObjectBase::OnNotifyPropertyValueChangedEnterEx(char const *,bool)
+GEBool __thiscall _OnNotifyPropertyValueChangedEnterEx_bCObjectBase__MAE_NPBD_N_Z( bCObjectBase *, GELPCChar, GEBool );
+// ?OnNotifyPropertyValueChangedExitEx@bCObjectBase@@MAE_NPBD_N@Z protected: virtual bool __thiscall bCObjectBase::OnNotifyPropertyValueChangedExitEx(char const *,bool)
+GEBool __thiscall _OnNotifyPropertyValueChangedExitEx_bCObjectBase__MAE_NPBD_N_Z( bCObjectBase *, GELPCChar, GEBool );
+// ?OnRead@bCObjectBase@@MAE_NAAVbCIStream@@@Z protected: virtual bool __thiscall bCObjectBase::OnRead(bCIStream &)
+GEBool __thiscall _OnRead_bCObjectBase__MAE_NAAVbCIStream___Z( bCObjectBase *, bCIStream * );
+// ?OnSerialize@bCObjectBase@@MAE_NPAVbCXMLParserNode@@@Z protected: virtual bool __thiscall bCObjectBase::OnSerialize(bCXMLParserNode *)
+GEBool __thiscall _OnSerialize_bCObjectBase__MAE_NPAVbCXMLParserNode___Z( bCObjectBase *, bCXMLParserNode * );
+// ?OnWrite@bCObjectBase@@MAE_NAAVbCOStream@@@Z protected: virtual bool __thiscall bCObjectBase::OnWrite(bCOStream &)
+GEBool __thiscall _OnWrite_bCObjectBase__MAE_NAAVbCOStream___Z( bCObjectBase *, bCOStream * );
+// ?PostInitializeProperties@bCObjectBase@@UAE?AW4bEResult@@XZ public: virtual bEResult __thiscall bCObjectBase::PostInitializeProperties(void)
+bEResult __thiscall _PostInitializeProperties_bCObjectBase__UAE_AW4bEResult__XZ( bCObjectBase * );
+// ?Read@bCObjectBase@@UAE?AW4bEDoNotOverwriteMethod@@AAVbCIStream@@@Z public: virtual bEDoNotOverwriteMethod __thiscall bCObjectBase::Read(bCIStream &)
+bEDoNotOverwriteMethod __thiscall _Read_bCObjectBase__UAE_AW4bEDoNotOverwriteMethod__AAVbCIStream___Z( bCObjectBase *, bCIStream * );
+// ?ReadData@bCObjectBase@@AAEGAAVbCIStream@@@Z private: unsigned short __thiscall bCObjectBase::ReadData(bCIStream &)
+GEU16 __thiscall _ReadData_bCObjectBase__AAEGAAVbCIStream___Z( bCObjectBase *, bCIStream * );
+// ?ReleaseReference@bCObjectBase@@UAEKXZ public: virtual unsigned long __thiscall bCObjectBase::ReleaseReference(void)
+GEU32 __thiscall _ReleaseReference_bCObjectBase__UAEKXZ( bCObjectBase * );
+// ?Serialize@bCObjectBase@@UAE_NPAVbCXMLParserNode@@@Z public: virtual bool __thiscall bCObjectBase::Serialize(bCXMLParserNode *)
+GEBool __thiscall _Serialize_bCObjectBase__UAE_NPAVbCXMLParserNode___Z( bCObjectBase *, bCXMLParserNode * );
+// ?Write@bCObjectBase@@UAE?AW4bEDoNotOverwriteMethod@@AAVbCOStream@@@Z public: virtual bEDoNotOverwriteMethod __thiscall bCObjectBase::Write(bCOStream &)
+bEDoNotOverwriteMethod __thiscall _Write_bCObjectBase__UAE_AW4bEDoNotOverwriteMethod__AAVbCOStream___Z( bCObjectBase *, bCOStream * );
+// ?WriteData@bCObjectBase@@AAEXAAVbCOStream@@@Z private: void __thiscall bCObjectBase::WriteData(bCOStream &)
+void __thiscall _WriteData_bCObjectBase__AAEXAAVbCOStream___Z( bCObjectBase *, bCOStream * );
+// ?thisType@bCObjectBase@@0VbCPropertyObjectTypeBase@@A private: static bCPropertyObjectTypeBase bCObjectBase::thisType
+bCPropertyObjectTypeBase DLLIMPORT _thisType_bCObjectBase__0VbCPropertyObjectTypeBase__A;
+
+// ??5@YGAAVbCIStream@@AAV0@AAVbCObjectBase@@@Z bCIStream & __stdcall operator>>(bCIStream &,bCObjectBase &)
+bCIStream * __stdcall __5_YGAAVbCIStream__AAV0_AAVbCObjectBase___Z( bCIStream *, bCObjectBase * );
+// ??6@YGAAVbCOStream@@AAV0@AAVbCObjectBase@@@Z bCOStream & __stdcall operator<<(bCOStream &,bCObjectBase &)
+bCOStream * __stdcall __6_YGAAVbCOStream__AAV0_AAVbCObjectBase___Z( bCOStream *, bCObjectBase * );
