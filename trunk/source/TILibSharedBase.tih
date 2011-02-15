@@ -104,6 +104,8 @@
 #include "SharedBase/ge_xmlparser.tih"
 #include "SharedBase/ge_classnamebase.tih"
 #include "SharedBase/ge_classname.tih"
+#include "SharedBase/ge_propertyconverterptr.tih"
+#include "SharedBase/ge_propertyconverter.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
