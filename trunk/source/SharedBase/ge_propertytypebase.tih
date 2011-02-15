@@ -1,0 +1,114 @@
+struct bCPropertyObjectTypeBase;
+
+struct bSEnumValue
+{
+    bCString m_strValue;
+    GEU32    m_u32Value;
+};
+
+enum bEPropertyType : __int32
+{
+    bEPropertyType_Member = 1,
+    bEPropertyType_Func
+};
+
+struct bCPropertyTypeBase;
+struct bCPropertyTypeBase_vftable
+{
+    GEU32                            (__thiscall * GetDataSize)( bCPropertyTypeBase const * );
+    bCString const *                 (__thiscall * GetClassName)( bCPropertyTypeBase const * );
+    bCString const *                 (__thiscall * GetValueTypeName)( bCPropertyTypeBase const * );
+    bCPropertyObjectTypeBase const * (__thiscall * GetClassType)( bCPropertyTypeBase const * );
+    void                             (__thiscall * InitializeProperty)( bCPropertyTypeBase *, bCObjectBase * );
+    GEBool                           (__thiscall * IsEnum)( bCPropertyTypeBase const * );
+    GEInt                            (__thiscall * GetEnumCount)( bCPropertyTypeBase const * );
+    bSEnumValue const *              (__thiscall * GetEnumValue)( bCPropertyTypeBase const *, GEInt );
+    bCPropertyConverterPtr *         (__thiscall * GetNativeProperty)( bCPropertyTypeBase *, bCPropertyConverterPtr *, bCObjectBase const * );
+    GEBool                           (__thiscall * ConvertStringToValue)( bCPropertyTypeBase *, bCObjectBase *, bCString const * );
+    GEBool                           (__thiscall * ConvertValueToString)( bCPropertyTypeBase *, bCObjectBase const *, bCString * );
+    GEBool                           (__thiscall * PropertyCopy)( bCPropertyTypeBase *, bCObjectBase *, bCObjectBase const * );
+    void                             (__thiscall * PropertyWrite)( bCPropertyTypeBase *, bCOStream *, bCObjectBase const * );
+    void                             (__thiscall * PropertyRead)( bCPropertyTypeBase *, bCIStream *, bCObjectBase * );
+    GEU16                            (__thiscall * Read)( bCPropertyTypeBase *, bCIStream * );
+    void                             (__thiscall * Write)( bCPropertyTypeBase *, bCOStream * );
+    GEBool                           (__thiscall * Deserialize)( bCPropertyTypeBase *, bCObjectBase *, bCXMLParserNode const * );
+    GEBool                           (__thiscall * Serialize)( bCPropertyTypeBase *, bCObjectBase const *, bCXMLParserNode * );
+    void                             (__thiscall * Destroy)( bCPropertyTypeBase * );
+    void                             (__thiscall * Create)( bCPropertyTypeBase * );
+    bCPropertyTypeBase *             (__thiscall * DoClone)( bCPropertyTypeBase const * );
+    void                             (__thiscall * CopyFrom)( bCPropertyTypeBase *, bCPropertyTypeBase const * );
+    void                             (__thiscall * __vecDelDtor)( bCPropertyTypeBase *, unsigned int );
+};
+struct bCPropertyTypeBase_data
+{
+    bCString       m_strPropertyName;
+    bCString       m_strPropertyDescription;
+    bCString       m_strPropertyCategory;
+    bEPropertyType m_enuPropertyType;
+    GEU8           m_u8Attributes;
+                   GE_PADDING( 3 )
+};
+struct bCPropertyTypeBase
+{
+    bCPropertyTypeBase_vftable const * __vfptr;
+    bCPropertyTypeBase_data            data;
+};
+bTPtrArray( bCPropertyTypeBase )
+// ??0bCPropertyTypeBase@@AAE@ABV0@@Z private: __thiscall bCPropertyTypeBase::bCPropertyTypeBase(bCPropertyTypeBase const &)
+bCPropertyTypeBase * __thiscall __0bCPropertyTypeBase__AAE_ABV0__Z( bCPropertyTypeBase *, bCPropertyTypeBase const * );
+// ??0bCPropertyTypeBase@@AAE@XZ private: __thiscall bCPropertyTypeBase::bCPropertyTypeBase(void)
+bCPropertyTypeBase * __thiscall __0bCPropertyTypeBase__AAE_XZ( bCPropertyTypeBase * );
+// ??0bCPropertyTypeBase@@IAE@ABVbCString@@00W4bEPropertyType@@H@Z protected: __thiscall bCPropertyTypeBase::bCPropertyTypeBase(bCString const &,bCString const &,bCString const &,bEPropertyType,int)
+bCPropertyTypeBase * __thiscall __0bCPropertyTypeBase__IAE_ABVbCString__00W4bEPropertyType__H_Z( bCPropertyTypeBase *, bCString const *, bCString const *, bCString const *, bEPropertyType, GEInt );
+// ??0bCPropertyTypeBase@@IAE@ABVbCString@@0W4bEPropertyType@@H@Z protected: __thiscall bCPropertyTypeBase::bCPropertyTypeBase(bCString const &,bCString const &,bEPropertyType,int)
+bCPropertyTypeBase * __thiscall __0bCPropertyTypeBase__IAE_ABVbCString__0W4bEPropertyType__H_Z( bCPropertyTypeBase *, bCString const *, bCString const *, bEPropertyType, GEInt );
+// ??0bCPropertyTypeBase@@IAE@ABVbCString@@W4bEPropertyType@@@Z protected: __thiscall bCPropertyTypeBase::bCPropertyTypeBase(bCString const &,bEPropertyType)
+bCPropertyTypeBase * __thiscall __0bCPropertyTypeBase__IAE_ABVbCString__W4bEPropertyType___Z( bCPropertyTypeBase *, bCString const *, bEPropertyType );
+// ??1bCPropertyTypeBase@@UAE@XZ public: virtual __thiscall bCPropertyTypeBase::~bCPropertyTypeBase(void)
+void __thiscall __1bCPropertyTypeBase__UAE_XZ( bCPropertyTypeBase * );
+// ??4bCPropertyTypeBase@@IAEABV0@ABV0@@Z protected: bCPropertyTypeBase const & __thiscall bCPropertyTypeBase::operator=(bCPropertyTypeBase const &)
+bCPropertyTypeBase const * __thiscall __4bCPropertyTypeBase__IAEABV0_ABV0__Z( bCPropertyTypeBase *, bCPropertyTypeBase const * );
+// ??5bCPropertyTypeBase@@QAEAAVbCOStream@@AAV1@@Z public: bCOStream & __thiscall bCPropertyTypeBase::operator>>(bCOStream &)
+bCOStream * __thiscall __5bCPropertyTypeBase__QAEAAVbCOStream__AAV1__Z( bCPropertyTypeBase *, bCOStream * );
+// ??6bCPropertyTypeBase@@QAEAAVbCIStream@@AAV1@@Z public: bCIStream & __thiscall bCPropertyTypeBase::operator<<(bCIStream &)
+bCIStream * __thiscall __6bCPropertyTypeBase__QAEAAVbCIStream__AAV1__Z( bCPropertyTypeBase *, bCIStream * );
+// ??_7bCPropertyTypeBase@@6B@ const bCPropertyTypeBase::`vftable'
+bCPropertyTypeBase_vftable const DLLIMPORT ___7bCPropertyTypeBase__6B_;
+// ?Clone@bCPropertyTypeBase@@IBEPAV1@XZ protected: bCPropertyTypeBase * __thiscall bCPropertyTypeBase::Clone(void)const
+bCPropertyTypeBase * __thiscall _Clone_bCPropertyTypeBase__IBEPAV1_XZ( bCPropertyTypeBase const * );
+// ?CopyFrom@bCPropertyTypeBase@@MAEXABV1@@Z protected: virtual void __thiscall bCPropertyTypeBase::CopyFrom(bCPropertyTypeBase const &)
+void __thiscall _CopyFrom_bCPropertyTypeBase__MAEXABV1__Z( bCPropertyTypeBase *, bCPropertyTypeBase const * );
+// ?CopyTo@bCPropertyTypeBase@@IBEXAAV1@@Z protected: void __thiscall bCPropertyTypeBase::CopyTo(bCPropertyTypeBase &)const
+void __thiscall _CopyTo_bCPropertyTypeBase__IBEXAAV1__Z( bCPropertyTypeBase const *, bCPropertyTypeBase * );
+// ?Create@bCPropertyTypeBase@@MAEXXZ protected: virtual void __thiscall bCPropertyTypeBase::Create(void)
+void __thiscall _Create_bCPropertyTypeBase__MAEXXZ( bCPropertyTypeBase * );
+// ?Destroy@bCPropertyTypeBase@@MAEXXZ protected: virtual void __thiscall bCPropertyTypeBase::Destroy(void)
+void __thiscall _Destroy_bCPropertyTypeBase__MAEXXZ( bCPropertyTypeBase * );
+// ?DoClone@bCPropertyTypeBase@@MBEPAV1@XZ protected: virtual bCPropertyTypeBase * __thiscall bCPropertyTypeBase::DoClone(void)const
+bCPropertyTypeBase * __thiscall _DoClone_bCPropertyTypeBase__MBEPAV1_XZ( bCPropertyTypeBase const * );
+// ?GetAttributes@bCPropertyTypeBase@@QBEEXZ public: unsigned char __thiscall bCPropertyTypeBase::GetAttributes(void)const
+GEU8 __thiscall _GetAttributes_bCPropertyTypeBase__QBEEXZ( bCPropertyTypeBase const * );
+// ?GetID@bCPropertyTypeBase@@QBEABVbCPropertyID@@XZ public: bCPropertyID const & __thiscall bCPropertyTypeBase::GetID(void)const
+bCPropertyID const * __thiscall _GetID_bCPropertyTypeBase__QBEABVbCPropertyID__XZ( bCPropertyTypeBase const * );
+// ?GetPropertyCategory@bCPropertyTypeBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCPropertyTypeBase::GetPropertyCategory(void)const
+bCString const * __thiscall _GetPropertyCategory_bCPropertyTypeBase__QBEABVbCString__XZ( bCPropertyTypeBase const * );
+// ?GetPropertyDescription@bCPropertyTypeBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCPropertyTypeBase::GetPropertyDescription(void)const
+bCString const * __thiscall _GetPropertyDescription_bCPropertyTypeBase__QBEABVbCString__XZ( bCPropertyTypeBase const * );
+// ?GetPropertyName@bCPropertyTypeBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCPropertyTypeBase::GetPropertyName(void)const
+bCString const * __thiscall _GetPropertyName_bCPropertyTypeBase__QBEABVbCString__XZ( bCPropertyTypeBase const * );
+// ?GetPropertyType@bCPropertyTypeBase@@QBE?AW4bEPropertyType@@XZ public: bEPropertyType __thiscall bCPropertyTypeBase::GetPropertyType(void)const
+bEPropertyType __thiscall _GetPropertyType_bCPropertyTypeBase__QBE_AW4bEPropertyType__XZ( bCPropertyTypeBase const * );
+// ?Invalidate@bCPropertyTypeBase@@IAEXXZ protected: void __thiscall bCPropertyTypeBase::Invalidate(void)
+void __thiscall _Invalidate_bCPropertyTypeBase__IAEXXZ( bCPropertyTypeBase * );
+// ?IsNonPatchable@bCPropertyTypeBase@@QBE_NXZ public: bool __thiscall bCPropertyTypeBase::IsNonPatchable(void)const
+GEBool __thiscall _IsNonPatchable_bCPropertyTypeBase__QBE_NXZ( bCPropertyTypeBase const * );
+// ?IsPatchable@bCPropertyTypeBase@@QBE_NXZ public: bool __thiscall bCPropertyTypeBase::IsPatchable(void)const
+GEBool __thiscall _IsPatchable_bCPropertyTypeBase__QBE_NXZ( bCPropertyTypeBase const * );
+// ?IsReadOnly@bCPropertyTypeBase@@QBE_NXZ public: bool __thiscall bCPropertyTypeBase::IsReadOnly(void)const
+GEBool __thiscall _IsReadOnly_bCPropertyTypeBase__QBE_NXZ( bCPropertyTypeBase const * );
+// ?PropertyReadSkip@bCPropertyTypeBase@@SGXAAVbCIStream@@PAVbCObjectBase@@ABVbCString@@2@Z public: static void __stdcall bCPropertyTypeBase::PropertyReadSkip(bCIStream &,bCObjectBase *,bCString const &,bCString const &)
+void __stdcall _PropertyReadSkip_bCPropertyTypeBase__SGXAAVbCIStream__PAVbCObjectBase__ABVbCString__2_Z( bCIStream *, bCObjectBase *, bCString const *, bCString const * );
+// ?Read@bCPropertyTypeBase@@UAEGAAVbCIStream@@@Z public: virtual unsigned short __thiscall bCPropertyTypeBase::Read(bCIStream &)
+GEU16 __thiscall _Read_bCPropertyTypeBase__UAEGAAVbCIStream___Z( bCPropertyTypeBase *, bCIStream * );
+// ?Write@bCPropertyTypeBase@@UAEXAAVbCOStream@@@Z public: virtual void __thiscall bCPropertyTypeBase::Write(bCOStream &)
+void __thiscall _Write_bCPropertyTypeBase__UAEXAAVbCOStream___Z( bCPropertyTypeBase *, bCOStream * );

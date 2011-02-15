@@ -106,6 +106,8 @@
 #include "SharedBase/ge_classname.tih"
 #include "SharedBase/ge_propertyconverterptr.tih"
 #include "SharedBase/ge_propertyconverter.tih"
+#include "SharedBase/ge_propertytypebase.tih"
+#include "SharedBase/ge_propertyobjecttypebase.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

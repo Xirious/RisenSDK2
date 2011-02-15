@@ -1,0 +1,102 @@
+typedef bCObjectBase * (__stdcall * bCPropertyObjectTypeBase_bFCreateNewObject)( void );
+typedef void           (__stdcall * bCPropertyObjectTypeBase_bFRegisterTypeCallback)( bCPropertyObjectTypeBase * );
+
+struct bCPropertyObjectTypeBase
+{
+    bTPtrArray_bCPropertyTypeBase                   m_arrPropertyTypes;
+    bCPropertyObjectTypeBase *                      m_pBase;
+    bCPropertyObjectTypeBase *                      m_pNext;
+    bCPropertyObjectTypeBase *                      m_pDerived;
+    bCPropertyObjectTypeBase *                      m_pMapNext;
+    bCPropertyObjectTypeBase *                      m_pListNext;
+    bCPropertyObjectTypeBase_bFCreateNewObject      m_funcCreateNewObject;
+    bCPropertyObjectTypeBase_bFRegisterTypeCallback m_funcRegisterTypeCallback;
+    bCString                                        m_strClassName;
+    GELPCChar                                       m_pcLabel;
+    GELPCChar                                       m_pcDescription;
+    GEU32                                           m_u32Flags;
+};
+// ??0bCPropertyObjectTypeBase@@QAE@PBD00PAV0@P6GPAVbCObjectBase@@XZP6GXAAV0@@ZK@Z public: __thiscall bCPropertyObjectTypeBase::bCPropertyObjectTypeBase(char const *,char const *,char const *,bCPropertyObjectTypeBase *,bCObjectBase * (__stdcall*)(void),void (__stdcall*)(bCPropertyObjectTypeBase &),unsigned long)
+__thiscall __0bCPropertyObjectTypeBase__QAE_PBD00PAV0_P6GPAVbCObjectBase__XZP6GXAAV0__ZK_Z( bCPropertyObjectTypeBase *, GELPCChar, GELPCChar, GELPCChar, bCPropertyObjectTypeBase *, bCPropertyObjectTypeBase_bFCreateNewObject, bCPropertyObjectTypeBase_bFRegisterTypeCallback, GEU32 );
+// ??1bCPropertyObjectTypeBase@@QAE@XZ public: __thiscall bCPropertyObjectTypeBase::~bCPropertyObjectTypeBase(void)
+void __thiscall __1bCPropertyObjectTypeBase__QAE_XZ( bCPropertyObjectTypeBase * );
+// ?BeginIterator@bCPropertyObjectTypeBase@@QBE?AVbCConstIterator@?$bTArrayBase@PAVbCPropertyTypeBase@@@@XZ public: bTArrayBase<bCPropertyTypeBase *>::bCConstIterator __thiscall bCPropertyObjectTypeBase::BeginIterator(void)const
+bTPtrArray_bCPropertyTypeBase_bCConstIterator * __thiscall _BeginIterator_bCPropertyObjectTypeBase__QBE_AVbCConstIterator___bTArrayBase_PAVbCPropertyTypeBase____XZ( bCPropertyObjectTypeBase const *, bTPtrArray_bCPropertyTypeBase_bCConstIterator * );
+// ?CreateNewObject@bCPropertyObjectTypeBase@@QAEPAVbCObjectBase@@XZ public: bCObjectBase * __thiscall bCPropertyObjectTypeBase::CreateNewObject(void)
+bCObjectBase * __thiscall _CreateNewObject_bCPropertyObjectTypeBase__QAEPAVbCObjectBase__XZ( bCPropertyObjectTypeBase * );
+// ?EndIterator@bCPropertyObjectTypeBase@@QBE?AVbCConstIterator@?$bTArrayBase@PAVbCPropertyTypeBase@@@@XZ public: bTArrayBase<bCPropertyTypeBase *>::bCConstIterator __thiscall bCPropertyObjectTypeBase::EndIterator(void)const
+bTPtrArray_bCPropertyTypeBase_bCConstIterator * __thiscall _EndIterator_bCPropertyObjectTypeBase__QBE_AVbCConstIterator___bTArrayBase_PAVbCPropertyTypeBase____XZ( bCPropertyObjectTypeBase const *, bTPtrArray_bCPropertyTypeBase_bCConstIterator * );
+// ?FindPropertyTemplate@bCPropertyObjectTypeBase@@QBEPBVbCPropertyTypeBase@@ABVbCString@@@Z public: bCPropertyTypeBase const * __thiscall bCPropertyObjectTypeBase::FindPropertyTemplate(bCString const &)const
+bCPropertyTypeBase const * __thiscall _FindPropertyTemplate_bCPropertyObjectTypeBase__QBEPBVbCPropertyTypeBase__ABVbCString___Z( bCPropertyObjectTypeBase const *, bCString const * );
+// ?FromName@bCPropertyObjectTypeBase@@SGPAV1@PBD@Z public: static bCPropertyObjectTypeBase * __stdcall bCPropertyObjectTypeBase::FromName(char const *)
+bCPropertyObjectTypeBase * __stdcall _FromName_bCPropertyObjectTypeBase__SGPAV1_PBD_Z( GELPCChar );
+// ?GetBase@bCPropertyObjectTypeBase@@QBEPAV1@XZ public: bCPropertyObjectTypeBase * __thiscall bCPropertyObjectTypeBase::GetBase(void)const
+bCPropertyObjectTypeBase * __thiscall _GetBase_bCPropertyObjectTypeBase__QBEPAV1_XZ( bCPropertyObjectTypeBase const * );
+// ?GetBaseClassName@bCPropertyObjectTypeBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCPropertyObjectTypeBase::GetBaseClassName(void)const
+bCString const * __thiscall _GetBaseClassName_bCPropertyObjectTypeBase__QBEABVbCString__XZ( bCPropertyObjectTypeBase const * );
+// ?GetClassName@bCPropertyObjectTypeBase@@QBEABVbCString@@XZ public: bCString const & __thiscall bCPropertyObjectTypeBase::GetClassName(void)const
+bCString const * __thiscall _GetClassName_bCPropertyObjectTypeBase__QBEABVbCString__XZ( bCPropertyObjectTypeBase const * );
+// ?GetDerived@bCPropertyObjectTypeBase@@QBEPAV1@XZ public: bCPropertyObjectTypeBase * __thiscall bCPropertyObjectTypeBase::GetDerived(void)const
+bCPropertyObjectTypeBase * __thiscall _GetDerived_bCPropertyObjectTypeBase__QBEPAV1_XZ( bCPropertyObjectTypeBase const * );
+// ?GetDescription@bCPropertyObjectTypeBase@@QBEPBDXZ public: char const * __thiscall bCPropertyObjectTypeBase::GetDescription(void)const
+GELPCChar __thiscall _GetDescription_bCPropertyObjectTypeBase__QBEPBDXZ( bCPropertyObjectTypeBase const * );
+// ?GetFlags@bCPropertyObjectTypeBase@@QBEKXZ public: unsigned long __thiscall bCPropertyObjectTypeBase::GetFlags(void)const
+GEU32 __thiscall _GetFlags_bCPropertyObjectTypeBase__QBEKXZ( bCPropertyObjectTypeBase const * );
+// ?GetLabel@bCPropertyObjectTypeBase@@QBEPBDXZ public: char const * __thiscall bCPropertyObjectTypeBase::GetLabel(void)const
+GELPCChar __thiscall _GetLabel_bCPropertyObjectTypeBase__QBEPBDXZ( bCPropertyObjectTypeBase const * );
+// ?GetListHead@bCPropertyObjectTypeBase@@SGPAV1@XZ public: static bCPropertyObjectTypeBase * __stdcall bCPropertyObjectTypeBase::GetListHead(void)
+bCPropertyObjectTypeBase * __stdcall _GetListHead_bCPropertyObjectTypeBase__SGPAV1_XZ( void );
+// ?GetListNext@bCPropertyObjectTypeBase@@QBEPAV1@XZ public: bCPropertyObjectTypeBase * __thiscall bCPropertyObjectTypeBase::GetListNext(void)const
+bCPropertyObjectTypeBase * __thiscall _GetListNext_bCPropertyObjectTypeBase__QBEPAV1_XZ( bCPropertyObjectTypeBase const * );
+// ?GetName@bCPropertyObjectTypeBase@@QBEPBDXZ public: char const * __thiscall bCPropertyObjectTypeBase::GetName(void)const
+GELPCChar __thiscall _GetName_bCPropertyObjectTypeBase__QBEPBDXZ( bCPropertyObjectTypeBase const * );
+// ?GetNext@bCPropertyObjectTypeBase@@QBEPAV1@XZ public: bCPropertyObjectTypeBase * __thiscall bCPropertyObjectTypeBase::GetNext(void)const
+bCPropertyObjectTypeBase * __thiscall _GetNext_bCPropertyObjectTypeBase__QBEPAV1_XZ( bCPropertyObjectTypeBase const * );
+// ?GetPropertyTemplateIndex@bCPropertyObjectTypeBase@@ABEHABVbCPropertyTypeBase@@@Z private: int __thiscall bCPropertyObjectTypeBase::GetPropertyTemplateIndex(bCPropertyTypeBase const &)const
+GEInt __thiscall _GetPropertyTemplateIndex_bCPropertyObjectTypeBase__ABEHABVbCPropertyTypeBase___Z( bCPropertyObjectTypeBase const *, bCPropertyTypeBase const * );
+// ?GetPropertyType@bCPropertyObjectTypeBase@@QBEABVbCPropertyTypeBase@@H@Z public: bCPropertyTypeBase const & __thiscall bCPropertyObjectTypeBase::GetPropertyType(int)const
+bCPropertyTypeBase const * __thiscall _GetPropertyType_bCPropertyObjectTypeBase__QBEABVbCPropertyTypeBase__H_Z( bCPropertyObjectTypeBase const *, GEInt );
+// ?GetPropertyTypeCount@bCPropertyObjectTypeBase@@QBEHXZ public: int __thiscall bCPropertyObjectTypeBase::GetPropertyTypeCount(void)const
+GEInt __thiscall _GetPropertyTypeCount_bCPropertyObjectTypeBase__QBEHXZ( bCPropertyObjectTypeBase const * );
+// ?GetTypeHash@bCPropertyObjectTypeBase@@QBEIXZ public: unsigned int __thiscall bCPropertyObjectTypeBase::GetTypeHash(void)const
+GEUInt __thiscall _GetTypeHash_bCPropertyObjectTypeBase__QBEIXZ( bCPropertyObjectTypeBase const * );
+// ?GetTypeHash@bCPropertyObjectTypeBase@@SGIPBD@Z public: static unsigned int __stdcall bCPropertyObjectTypeBase::GetTypeHash(char const *)
+GEUInt __stdcall _GetTypeHash_bCPropertyObjectTypeBase__SGIPBD_Z( GELPCChar );
+// ?HasFlag@bCPropertyObjectTypeBase@@QBE_NK@Z public: bool __thiscall bCPropertyObjectTypeBase::HasFlag(unsigned long)const
+GEBool __thiscall _HasFlag_bCPropertyObjectTypeBase__QBE_NK_Z( bCPropertyObjectTypeBase const *, GEU32 );
+// ?InitTypeMap@bCPropertyObjectTypeBase@@AAEXXZ private: void __thiscall bCPropertyObjectTypeBase::InitTypeMap(void)
+void __thiscall _InitTypeMap_bCPropertyObjectTypeBase__AAEXXZ( bCPropertyObjectTypeBase * );
+// ?IsDerivedFrom@bCPropertyObjectTypeBase@@QBE_NPBV1@@Z public: bool __thiscall bCPropertyObjectTypeBase::IsDerivedFrom(bCPropertyObjectTypeBase const *)const
+GEBool __thiscall _IsDerivedFrom_bCPropertyObjectTypeBase__QBE_NPBV1__Z( bCPropertyObjectTypeBase const *, bCPropertyObjectTypeBase const * );
+// ?IsKindOf@bCPropertyObjectTypeBase@@QBE_NPBV1@@Z public: bool __thiscall bCPropertyObjectTypeBase::IsKindOf(bCPropertyObjectTypeBase const *)const
+GEBool __thiscall _IsKindOf_bCPropertyObjectTypeBase__QBE_NPBV1__Z( bCPropertyObjectTypeBase const *, bCPropertyObjectTypeBase const * );
+// ?IsPropertyTypeValid@bCPropertyObjectTypeBase@@QBE_NH@Z public: bool __thiscall bCPropertyObjectTypeBase::IsPropertyTypeValid(int)const
+GEBool __thiscall _IsPropertyTypeValid_bCPropertyObjectTypeBase__QBE_NH_Z( bCPropertyObjectTypeBase const *, GEInt );
+// ?QueryNewObject@bCPropertyObjectTypeBase@@SGPAVbCObjectBase@@PBD@Z public: static bCObjectBase * __stdcall bCPropertyObjectTypeBase::QueryNewObject(char const *)
+bCObjectBase * __stdcall _QueryNewObject_bCPropertyObjectTypeBase__SGPAVbCObjectBase__PBD_Z( GELPCChar );
+// ?ReadNewObject@bCPropertyObjectTypeBase@@QAEPAVbCObjectBase@@AAVbCIStream@@@Z public: bCObjectBase * __thiscall bCPropertyObjectTypeBase::ReadNewObject(bCIStream &)
+bCObjectBase * __thiscall _ReadNewObject_bCPropertyObjectTypeBase__QAEPAVbCObjectBase__AAVbCIStream___Z( bCPropertyObjectTypeBase *, bCIStream * );
+// ?ReadObject@bCPropertyObjectTypeBase@@SGPAVbCObjectBase@@AAVbCIStream@@@Z public: static bCObjectBase * __stdcall bCPropertyObjectTypeBase::ReadObject(bCIStream &)
+bCObjectBase * __stdcall _ReadObject_bCPropertyObjectTypeBase__SGPAVbCObjectBase__AAVbCIStream___Z( bCIStream * );
+// ?ReadObject@bCPropertyObjectTypeBase@@SG_NAAVbCIStream@@AAVbCObjectBase@@@Z public: static bool __stdcall bCPropertyObjectTypeBase::ReadObject(bCIStream &,bCObjectBase &)
+GEBool __stdcall _ReadObject_bCPropertyObjectTypeBase__SG_NAAVbCIStream__AAVbCObjectBase___Z( bCIStream *, bCObjectBase * );
+// ?ReadSkip@bCPropertyObjectTypeBase@@SGGAAVbCIStream@@@Z public: static unsigned short __stdcall bCPropertyObjectTypeBase::ReadSkip(bCIStream &)
+GEU16 __stdcall _ReadSkip_bCPropertyObjectTypeBase__SGGAAVbCIStream___Z( bCIStream * );
+// ?ReadSkipObject@bCPropertyObjectTypeBase@@SGGAAVbCIStream@@@Z public: static unsigned short __stdcall bCPropertyObjectTypeBase::ReadSkipObject(bCIStream &)
+GEU16 __stdcall _ReadSkipObject_bCPropertyObjectTypeBase__SGGAAVbCIStream___Z( bCIStream * );
+// ?RegisterPropertyTemplate@bCPropertyObjectTypeBase@@QAE_NPBVbCPropertyTypeBase@@@Z public: bool __thiscall bCPropertyObjectTypeBase::RegisterPropertyTemplate(bCPropertyTypeBase const *)
+GEBool __thiscall _RegisterPropertyTemplate_bCPropertyObjectTypeBase__QAE_NPBVbCPropertyTypeBase___Z( bCPropertyObjectTypeBase *, bCPropertyTypeBase const * );
+// ?RegisterType@bCPropertyObjectTypeBase@@AAEXXZ private: void __thiscall bCPropertyObjectTypeBase::RegisterType(void)
+void __thiscall _RegisterType_bCPropertyObjectTypeBase__AAEXXZ( bCPropertyObjectTypeBase * );
+// ?UnregisterPropertyTemplate@bCPropertyObjectTypeBase@@QAE_NPBVbCPropertyTypeBase@@@Z public: bool __thiscall bCPropertyObjectTypeBase::UnregisterPropertyTemplate(bCPropertyTypeBase const *)
+GEBool __thiscall _UnregisterPropertyTemplate_bCPropertyObjectTypeBase__QAE_NPBVbCPropertyTypeBase___Z( bCPropertyObjectTypeBase *, bCPropertyTypeBase const * );
+// ?WriteObject@bCPropertyObjectTypeBase@@SGXAAVbCOStream@@PAVbCObjectBase@@@Z public: static void __stdcall bCPropertyObjectTypeBase::WriteObject(bCOStream &,bCObjectBase *)
+void __stdcall _WriteObject_bCPropertyObjectTypeBase__SGXAAVbCOStream__PAVbCObjectBase___Z( bCOStream *, bCObjectBase * );
+// ?_ReadObject@bCPropertyObjectTypeBase@@CG_NAAVbCIStream@@AAVbCObjectBase@@@Z private: static bool __stdcall bCPropertyObjectTypeBase::_ReadObject(bCIStream &,bCObjectBase &)
+GEBool __stdcall __ReadObject_bCPropertyObjectTypeBase__CG_NAAVbCIStream__AAVbCObjectBase___Z( bCIStream *, bCObjectBase * );
+// ?ms_pList@bCPropertyObjectTypeBase@@0PAV1@A private: static bCPropertyObjectTypeBase * bCPropertyObjectTypeBase::ms_pList
+bCPropertyObjectTypeBase * DLLIMPORT _ms_pList_bCPropertyObjectTypeBase__0PAV1_A;
+// ?ms_pMap@bCPropertyObjectTypeBase@@0PAPAV1@A private: static bCPropertyObjectTypeBase * * bCPropertyObjectTypeBase::ms_pMap
+bCPropertyObjectTypeBase * * DLLIMPORT _ms_pMap_bCPropertyObjectTypeBase__0PAPAV1_A;
+// ?ms_pRoot@bCPropertyObjectTypeBase@@0PAV1@A private: static bCPropertyObjectTypeBase * bCPropertyObjectTypeBase::ms_pRoot
+bCPropertyObjectTypeBase * DLLIMPORT _ms_pRoot_bCPropertyObjectTypeBase__0PAV1_A;

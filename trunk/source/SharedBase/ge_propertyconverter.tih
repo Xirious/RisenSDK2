@@ -27,7 +27,7 @@ struct bCPropertyConverter_vftable
     GEBool                   (__thiscall * AddElement)( bCPropertyConverter *, bCPropertyConverterPtr );
     GEBool                   (__thiscall * Contains)( bCPropertyConverter *, bCPropertyConverterPtr );
     bCObjectBase *           (__thiscall * GetPropertyClass)( bCPropertyConverter * );
-    void                     (__thiscall * __delDtor)( bCPropertyConverter *, unsigned int );
+    void                     (__thiscall * __vecDelDtor)( bCPropertyConverter *, unsigned int );
 };
 struct bCPropertyConverter_data
 {
