@@ -11,6 +11,7 @@ struct bCString
 {
     GELPChar m_pcText;
 };
+bTArrayMap( bCString, bCString )
 bTObjArray( bCString )
 // ??0bCString@@QAE@ABV0@@Z public: __thiscall bCString::bCString(bCString const &)
 bCString * __thiscall __0bCString__QAE_ABV0__Z( bCString *, bCString const * );
