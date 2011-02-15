@@ -1,0 +1,21 @@
+enum bCXMLParser_EEncoding : __int32
+{
+    bCXMLParser_EEncoding_Default = 1
+};
+
+struct bCXMLParser
+{
+    void * m_pParser;
+};
+// ??0bCXMLParser@@QAE@XZ public: __thiscall bCXMLParser::bCXMLParser(void)
+bCXMLParser * __thiscall __0bCXMLParser__QAE_XZ( bCXMLParser * );
+// ??1bCXMLParser@@QAE@XZ public: __thiscall bCXMLParser::~bCXMLParser(void)
+void __thiscall __1bCXMLParser__QAE_XZ( bCXMLParser * );
+// ??4bCXMLParser@@QAEAAV0@ABV0@@Z public: bCXMLParser & __thiscall bCXMLParser::operator=(bCXMLParser const &)
+bCXMLParser * __thiscall __4bCXMLParser__QAEAAV0_ABV0__Z( bCXMLParser *, bCXMLParser const * );
+// ?Create@bCXMLParser@@QAE_NW4EEncoding@1@@Z public: bool __thiscall bCXMLParser::Create(bCXMLParser::EEncoding)
+GEBool __thiscall _Create_bCXMLParser__QAE_NW4EEncoding_1__Z( bCXMLParser *, bCXMLParser_EEncoding );
+// ?Destroy@bCXMLParser@@QAEXXZ public: void __thiscall bCXMLParser::Destroy(void)
+void __thiscall _Destroy_bCXMLParser__QAEXXZ( bCXMLParser * );
+// ?Parse@bCXMLParser@@QAEPAVbCXMLParserNode@@ABVbCString@@@Z public: bCXMLParserNode * __thiscall bCXMLParser::Parse(bCString const &)
+bCXMLParserNode * __thiscall _Parse_bCXMLParser__QAEPAVbCXMLParserNode__ABVbCString___Z( bCXMLParser *, bCString const * );

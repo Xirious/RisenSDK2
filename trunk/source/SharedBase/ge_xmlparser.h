@@ -6,7 +6,7 @@ class GE_DLLIMPORT bCXMLParser
 public:
     enum EEncoding
     {
-        //FIXME: bCXMLParser::EEncoding constants.
+        EEncoding_Default    = 1,
         EEncoding_ForceDWORD = GE_FORCE_DWORD
     };
 private:
