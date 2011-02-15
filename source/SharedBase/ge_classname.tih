@@ -1,0 +1,2 @@
+#define bTClassName( T ) \
+typedef bCClassNameBase bTClassName_##T
