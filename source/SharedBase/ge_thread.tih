@@ -13,7 +13,7 @@ enum bCThread_bEThreadPriority : __int32
 
 struct bCThread_bSThreadContext
 {
-    GELPVoid m_pParameter;
+    GELPVoid m_pThis;
     GELPVoid m_pData;
 };
 // ??0bSThreadContext@bCThread@@QAE@XZ public: __thiscall bCThread::bSThreadContext::bSThreadContext(void)
