@@ -6,7 +6,8 @@ class GE_DLLIMPORT bCThreadObjectRefBase :
     public bCThreadEx
 {
 public: virtual ~bCThreadObjectRefBase( void );
-
+protected:
+    bCCriticalSection m_CriticalSection;
 public:
     bCCriticalSection & GetCriticalSection( void );
     void                ReleaseOwnership( void );
