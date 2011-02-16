@@ -114,6 +114,9 @@
 #include "SharedBase/ge_thread.tih"
 #include "SharedBase/ge_threadex.tih"
 #include "SharedBase/ge_threadobjectrefbase.tih"
+#include "SharedBase/ge_accessorcreator.tih"
+#include "SharedBase/ge_accessorpropertyobject.tih"
+#include "SharedBase/ge_accessorproperty.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

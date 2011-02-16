@@ -28,11 +28,11 @@ enum bEPropertyTypeDetail
     bEPropertyTypeDetail_ForceDWORD = GE_FORCE_DWORD
 };
 
-class GE_DLLIMPORT bCAccessorProperty
+class GE_DLLIMPORT bCAccessorProperty :
+    public bCAccessorPropertyObject
 {
-private:
-    bCAccessorPropertyObject m_Object;
-    GEInt                    m_iIndex;
+protected:
+    GEInt m_iIndex;
 protected:
     static bCString ms_strEmptyName;
 protected:
