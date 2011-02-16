@@ -1,0 +1,34 @@
+struct bCThreadEx;
+struct bCThreadEx_vftable
+{
+    bCThread_vftable bCThread;
+    void (__thiscall * Execute)( bCThreadEx * );
+};
+struct bCThreadEx
+{
+    bCThreadEx_vftable const * __vfptr;
+    bCThread_data              bCThread;
+    bCCriticalSection          m_CriticalSection;
+    GEBool                     m_bStarted;
+                               GE_PADDING( 3 )
+};
+// ??0bCThreadEx@@QAE@XZ public: __thiscall bCThreadEx::bCThreadEx(void)
+bCThreadEx * __thiscall __0bCThreadEx__QAE_XZ( bCThreadEx * );
+// ??1bCThreadEx@@UAE@XZ public: virtual __thiscall bCThreadEx::~bCThreadEx(void)
+void __thiscall __1bCThreadEx__UAE_XZ( bCThreadEx * );
+// ??_7bCThreadEx@@6B@ const bCThreadEx::`vftable'
+bCThreadEx_vftable const DLLIMPORT ___7bCThreadEx__6B_;
+// ?EnableThreads@bCThreadEx@@SGX_N@Z public: static void __stdcall bCThreadEx::EnableThreads(bool)
+void __stdcall _EnableThreads_bCThreadEx__SGX_N_Z( GEBool );
+// ?EndThread@bCThreadEx@@QAE_NXZ public: bool __thiscall bCThreadEx::EndThread(void)
+GEBool __thiscall _EndThread_bCThreadEx__QAE_NXZ( bCThreadEx * );
+// ?SleepThread@bCThreadEx@@QAEXK@Z public: void __thiscall bCThreadEx::SleepThread(unsigned long)
+void __thiscall _SleepThread_bCThreadEx__QAEXK_Z( bCThreadEx *, GEU32 );
+// ?StartThread@bCThreadEx@@QAE_NXZ public: bool __thiscall bCThreadEx::StartThread(void)
+GEBool __thiscall _StartThread_bCThreadEx__QAE_NXZ( bCThreadEx * );
+// ?ThreadFunc@bCThreadEx@@KGKPAX@Z protected: static unsigned long __stdcall bCThreadEx::ThreadFunc(void *)
+GEU32 __stdcall _ThreadFunc_bCThreadEx__KGKPAX_Z( GELPVoid );
+// ?WaitIfThreadFinished@bCThreadEx@@QAEXXZ public: void __thiscall bCThreadEx::WaitIfThreadFinished(void)
+void __thiscall _WaitIfThreadFinished_bCThreadEx__QAEXXZ( bCThreadEx * );
+// ?ms_bEnableThreads@bCThreadEx@@1_NA protected: static bool bCThreadEx::ms_bEnableThreads
+GEBool DLLIMPORT _ms_bEnableThreads_bCThreadEx__1_NA;

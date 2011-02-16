@@ -111,6 +111,9 @@
 #include "SharedBase/ge_objectbase.tih"
 #include "SharedBase/ge_objectrefbase.tih"
 #include "SharedBase/ge_event.tih"
+#include "SharedBase/ge_thread.tih"
+#include "SharedBase/ge_threadex.tih"
+#include "SharedBase/ge_threadobjectrefbase.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
