@@ -24,8 +24,8 @@ struct bCPropertyTypeBase_vftable
     GEInt                            (__thiscall * GetEnumCount)( bCPropertyTypeBase const * );
     bSEnumValue const *              (__thiscall * GetEnumValue)( bCPropertyTypeBase const *, GEInt );
     bCPropertyConverterPtr *         (__thiscall * GetNativeProperty)( bCPropertyTypeBase *, bCPropertyConverterPtr *, bCObjectBase const * );
-    GEBool                           (__thiscall * ConvertStringToValue)( bCPropertyTypeBase *, bCObjectBase *, bCString const * );
-    GEBool                           (__thiscall * ConvertValueToString)( bCPropertyTypeBase *, bCObjectBase const *, bCString * );
+    GEBool                           (__thiscall * ConvertStringToValue)( bCPropertyTypeBase const *, bCObjectBase *, bCString const * );
+    GEBool                           (__thiscall * ConvertValueToString)( bCPropertyTypeBase const *, bCObjectBase const *, bCString * );
     GEBool                           (__thiscall * PropertyCopy)( bCPropertyTypeBase *, bCObjectBase *, bCObjectBase const * );
     void                             (__thiscall * PropertyWrite)( bCPropertyTypeBase *, bCOStream *, bCObjectBase const * );
     void                             (__thiscall * PropertyRead)( bCPropertyTypeBase *, bCIStream *, bCObjectBase * );
