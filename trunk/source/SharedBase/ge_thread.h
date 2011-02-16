@@ -19,7 +19,7 @@ public:
     };
     struct GE_DLLIMPORT bSThreadContext
     {
-        GELPVoid m_pParameter;
+        GELPVoid m_pThis;
         GELPVoid m_pData;
     public:
         bSThreadContext & operator = ( bSThreadContext const & );
