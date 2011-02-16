@@ -12,9 +12,9 @@ protected: virtual         ~bCEvent( void );
 public:    virtual GEBool   IsDeleteable( void );
 public:
     bCString m_strName;
-    GEBool   m_bUnused;
+    GEBool   m_bReserved;
              GE_PADDING( 3 )
-    GEU32    m_u32Data;
+    GEU32    m_u32Reserved;
 protected:
     void Invalidate( void );
 public:

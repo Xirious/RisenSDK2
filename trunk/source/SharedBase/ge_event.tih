@@ -1,0 +1,37 @@
+struct bCEvent;
+struct bCEvent_vftable
+{
+    bCObjectBase_vftable bCObjectBase;
+    GEBool (__thiscall * IsDeleteable)( bCEvent * );
+};
+struct bCEvent
+{
+    bCEvent_vftable const * __vfptr;
+    bCObjectRefBase_data    bCObjectRefBase;
+    bCString                m_strName;
+    GEBool                  m_bReserved;
+                            GE_PADDING( 3 )
+    GEU32                   m_u32Reserved;
+};
+// ??0bCEvent@@QAE@ABV0@@Z public: __thiscall bCEvent::bCEvent(bCEvent const &)
+bCEvent * __thiscall __0bCEvent__QAE_ABV0__Z( bCEvent *, bCEvent const * );
+// ??0bCEvent@@QAE@XZ public: __thiscall bCEvent::bCEvent(void)
+bCEvent * __thiscall __0bCEvent__QAE_XZ( bCEvent * );
+// ??1bCEvent@@MAE@XZ protected: virtual __thiscall bCEvent::~bCEvent(void)
+void __thiscall __1bCEvent__MAE_XZ( bCEvent * );
+// ??4bCEvent@@QAEAAV0@ABV0@@Z public: bCEvent & __thiscall bCEvent::operator=(bCEvent const &)
+bCEvent * __thiscall __4bCEvent__QAEAAV0_ABV0__Z( bCEvent *, bCEvent const * );
+// ??_7bCEvent@@6B@ const bCEvent::`vftable'
+bCEvent_vftable const DLLIMPORT ___7bCEvent__6B_;
+// ?Create@bCEvent@@UAE?AW4bEResult@@XZ public: virtual bEResult __thiscall bCEvent::Create(void)
+bEResult __thiscall _Create_bCEvent__UAE_AW4bEResult__XZ( bCEvent * );
+// ?Destroy@bCEvent@@UAEXXZ public: virtual void __thiscall bCEvent::Destroy(void)
+void __thiscall _Destroy_bCEvent__UAEXXZ( bCEvent * );
+// ?Invalidate@bCEvent@@IAEXXZ protected: void __thiscall bCEvent::Invalidate(void)
+void __thiscall _Invalidate_bCEvent__IAEXXZ( bCEvent * );
+// ?IsDeleteable@bCEvent@@UAE_NXZ public: virtual bool __thiscall bCEvent::IsDeleteable(void)
+GEBool __thiscall _IsDeleteable_bCEvent__UAE_NXZ( bCEvent * );
+// ?OnRead@bCEvent@@UAE_NAAVbCIStream@@@Z public: virtual bool __thiscall bCEvent::OnRead(bCIStream &)
+GEBool __thiscall _OnRead_bCEvent__UAE_NAAVbCIStream___Z( bCEvent *, bCIStream * );
+// ?OnWrite@bCEvent@@UAE_NAAVbCOStream@@@Z public: virtual bool __thiscall bCEvent::OnWrite(bCOStream &)
+GEBool __thiscall _OnWrite_bCEvent__UAE_NAAVbCOStream___Z( bCEvent *, bCOStream * );
