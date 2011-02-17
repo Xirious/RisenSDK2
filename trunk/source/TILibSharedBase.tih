@@ -121,6 +121,7 @@
 #include "SharedBase/ge_zoneraster.tih"
 
 #include "SharedBase/ge_obsoleteclass.tih"
+#include "SharedBase/ge_propertycontainer.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 
