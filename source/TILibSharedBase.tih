@@ -120,6 +120,8 @@
 #include "SharedBase/ge_accessorproperty.tih"
 #include "SharedBase/ge_zoneraster.tih"
 
+#include "SharedBase/ge_obsoleteclass.tih"
+
 GEFloat DLLIMPORT g_fFOV;
 
 #endif
