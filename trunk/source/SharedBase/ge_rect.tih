@@ -19,6 +19,7 @@ struct bCRect
     bCPoint m_TopLeft;
     bCPoint m_BottomRight;
 };
+bTValArray( bCRect )
 // ??0bCRect@@QAE@ABUtagRECT@@@Z public: __thiscall bCRect::bCRect(tagRECT const &)
 bCRect * __thiscall __0bCRect__QAE_ABUtagRECT___Z( bCRect *, bSRect const * );
 // ??0bCRect@@QAE@ABV0@@Z public: __thiscall bCRect::bCRect(bCRect const &)

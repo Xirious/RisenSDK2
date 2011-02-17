@@ -1,0 +1,21 @@
+struct bCZoneRaster_bCZoneRect
+{
+    bCRect  m_Rect;
+    bCPoint m_Points[ 2 ];
+};
+bTValArray( bCZoneRaster_bCZoneRect )
+
+struct bCZoneRaster
+{
+    bCRect                             m_Rect;
+    bTValArray_bCRect                  m_Rects[ 2 ];
+    bTValArray_bCZoneRaster_bCZoneRect m_ZoneRects;
+};
+// ??0bCZoneRaster@@QAE@ABV0@@Z public: __thiscall bCZoneRaster::bCZoneRaster(bCZoneRaster const &)
+bCZoneRaster * __thiscall __0bCZoneRaster__QAE_ABV0__Z( bCZoneRaster *, bCZoneRaster const * );
+// ??0bCZoneRaster@@QAE@ABV?$bTValArray@VbCVector@@@@@Z public: __thiscall bCZoneRaster::bCZoneRaster(bTValArray<bCVector> const &)
+bCZoneRaster * __thiscall __0bCZoneRaster__QAE_ABV__bTValArray_VbCVector_____Z( bCZoneRaster *, bTValArray_bCVector const * );
+// ??1bCZoneRaster@@QAE@XZ public: __thiscall bCZoneRaster::~bCZoneRaster(void)
+void __thiscall __1bCZoneRaster__QAE_XZ( bCZoneRaster * );
+// ??4bCZoneRaster@@QAEAAV0@ABV0@@Z public: bCZoneRaster & __thiscall bCZoneRaster::operator=(bCZoneRaster const &)
+bCZoneRaster * __thiscall __4bCZoneRaster__QAEAAV0_ABV0__Z( bCZoneRaster *, bCZoneRaster const * );
