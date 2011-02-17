@@ -13,7 +13,7 @@ public:
     static bTObjArray< Entity > ms_arrNPCs;
     static GEU32                ms_u32LastFrame;
 protected:
-    static GEInt GE_CDECL   SortEntites( GELPCVoid, GELPCVoid );
+    static GEInt GE_CCALL   SortEntites( GELPCVoid, GELPCVoid );
     static void  GE_STDCALL UpdateEntityLists( void );
 protected:
     GEBool     CopyFrom( Entity const & );
