@@ -1,0 +1,11 @@
+struct IFFUnknown;  // {69F9C657-E25E-458F-B995-294B2D9A5529}
+struct IFFUnknown_vftable
+{
+    FFU32 (__thiscall * AddRef)( IFFUnknown * );
+    FFU32 (__thiscall * Release)( IFFUnknown * );
+    FFU32 (__thiscall * QueryInterface)( IFFUnknown *, FFGUID const *, FFLPVoid * );
+};
+struct IFFUnknown
+{
+    IFFUnknown_vftable const * __vfptr;
+};

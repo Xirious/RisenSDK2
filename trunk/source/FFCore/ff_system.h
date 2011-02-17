@@ -5,7 +5,7 @@ typedef CRITICAL_SECTION SFFCriticalSection;
 typedef OVERLAPPED       SFFOverlapped;
 
 typedef FFU32 (FF_STDCALL * FFFThreadStartRoutine)( FFLPVoid a_pParameter );
-typedef void (FF_STDCALL * FFFOverlappedCompletionRoutine)( FFU32 a_u32dwErrorCode, FFU32 a_u32dwNumberOfBytesTransfered, SFFOverlapped * a_pOverlapped );
+typedef void (FF_STDCALL * FFFOverlappedCompletionRoutine)( FFU32 a_u32ErrorCode, FFU32 a_u32NumberOfBytesTransfered, SFFOverlapped * a_pOverlapped );
 
 FF_DLLIMPORT FFU64    FF_STDCALL g_FFCalcTimeDiffMilliseconds( SFFFileTime const & a_FileTime1, SFFFileTime const & a_FileTime2 );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFCloseFile( FFLPVoid a_hFile );
@@ -85,13 +85,13 @@ FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetCurrentDirectory( FFLPCChar a_pcPathName
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetEndOfFile( FFLPVoid a_hFile );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetEvent( FFLPVoid a_hEvent, FFBool a_bSignaled );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetFileAttributes( FFLPCChar a_pcFileName, FFU32 a_u32FileAttributes );
-FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetFilePointer( FFLPVoid hFile, FFI64 a_i64DistanceToMove, FFI64 * a_i64NewFilePointer, EFFFileSeek a_enuMoveMethod);
+FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetFilePointer( FFLPVoid hFile, FFI64 a_i64DistanceToMove, FFI64 * a_i64NewFilePointer, EFFFileSeek a_enuMoveMethod );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetFileTime( FFLPVoid a_hFile, SFFFileTime const * a_pCreationTime, SFFFileTime const * a_pLastAccessTime, SFFFileTime const * a_pLastWriteTime );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFSetThreadPriority( FFLPVoid a_hThread, FFInt a_iPriority );
 FF_DLLIMPORT void     FF_STDCALL g_FFSplitPath( FFLPCChar a_pcPath, FFLPChar a_pcDrive, FFLPChar a_pcDir, FFLPChar a_pcFName, FFLPChar a_pcExt );
 FF_DLLIMPORT FFU32    FF_STDCALL g_FFSuspendThread( FFLPVoid a_hThread );
 FF_DLLIMPORT void     FF_STDCALL g_FFTrace( FFLPCChar a_pcOutputString );
-FF_DLLIMPORT void     FF_CDECL   g_FFTraceF( FFLPCChar a_pcFormat, ... );
+FF_DLLIMPORT void     FF_CCALL   g_FFTraceF( FFLPCChar a_pcFormat, ... );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFUnmapViewOfFile( FFLPCVoid a_pBaseAddress );
 FF_DLLIMPORT FFU32    FF_STDCALL g_FFWaitForSingleObject( FFLPVoid a_hHandle, FFU32 a_u32Milliseconds );
 FF_DLLIMPORT FFBool   FF_STDCALL g_FFWriteFile( FFLPVoid a_hFile, FFLPCVoid a_pBuffer, FFU32 a_u32NumberOfBytesToWrite, FFU32 * a_pu32NumberOfBytesWritten );

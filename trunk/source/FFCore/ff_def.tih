@@ -1,0 +1,3 @@
+#define FF_PADDING( X ) __int8 __alignment[ X ];
+#define FF_PADDING1( X ) __int8 __alignment1[ X ];
+#define FF_PADDING2( X ) __int8 __alignment2[ X ];

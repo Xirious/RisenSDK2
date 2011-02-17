@@ -1,0 +1,40 @@
+typedef GEI8             FFI8;
+typedef GEU8             FFU8;
+typedef GEI16            FFI16;
+typedef GEU16            FFU16;
+typedef GEI32            FFI32;
+typedef GEU32            FFU32;
+typedef GEInt            FFInt;
+typedef GEUInt           FFUInt;
+typedef GEI64            FFI64;
+typedef GEU64            FFU64;
+typedef GEFloat          FFFloat;
+typedef GEDouble         FFDouble;
+typedef GELPVoid         FFLPVoid;
+typedef GELPCVoid        FFLPCVoid;
+typedef GEChar           FFChar;
+typedef GELPChar         FFLPChar;
+typedef GELPCChar        FFLPCChar;
+typedef GEByte           FFByte;
+typedef GELPByte         FFLPByte;
+typedef GELPCByte        FFLPCByte;
+typedef GEUnicodeChar    FFUnicodeChar;
+typedef GELPUnicodeChar  FFLPUnicodeChar;
+typedef GELPCUnicodeChar FFLPCUnicodeChar;
+
+enum FFBool : GEBool
+{
+    FFFalse = GEFalse,
+    FFTrue  = GETrue
+};
+
+FFChar const  DLLIMPORT g_cUnixDirTerminator;
+FFChar const  DLLIMPORT g_cVolumeNamePrefix;
+FFChar const  DLLIMPORT g_cVolumeTerminator;
+FFChar const  DLLIMPORT g_cWindowsDirTerminator;
+FFChar const (DLLIMPORT g_pcDirTerminators)[ 2 ];
+FFChar const (DLLIMPORT g_pcIllegalNameCharacters)[ 9 ];
+FFChar const (DLLIMPORT g_pcIllegalNameFilterCharacters)[ 7 ];
+FFChar const (DLLIMPORT g_pcIllegalVolumeCharacters)[ 8 ];
+FFChar const (DLLIMPORT g_pszParent)[ 2 + 1 ];
+FFChar const (DLLIMPORT g_pszSelf)[ 1 + 1 ];
