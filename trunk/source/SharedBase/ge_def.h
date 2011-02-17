@@ -8,7 +8,7 @@
 #define GE_FORCE_DWORD 0x7FFFFFFFL
 #define GE_SERIALIZE_VERSION( VERSION ) enum { bEPropertyPersistence_Version = VERSION }
 
-#define GE_CDECL __cdecl
+#define GE_CCALL __cdecl
 #define GE_STDCALL __stdcall
 #define GE_FASTCALL __fastcall
 

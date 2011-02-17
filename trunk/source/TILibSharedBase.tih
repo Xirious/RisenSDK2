@@ -22,6 +22,7 @@
 #include "SharedBase/ge_valarray.tih"
 #include "SharedBase/ge_ptrarray.tih"
 #include "SharedBase/ge_autoptrarray.tih"
+#include "SharedBase/ge_arraysortbase.tih"
 #include "SharedBase/ge_valmap.tih"
 #include "SharedBase/ge_objmap.tih"
 #include "SharedBase/ge_queuebase.tih"

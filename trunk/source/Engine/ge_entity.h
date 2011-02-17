@@ -119,7 +119,7 @@ private:
     bCDateTime                             m_DataChangedTimeStamp;      // 0028
     // sizeof(eCEntity)                                                 // 0030
 protected:
-    static GEInt GE_CDECL ComparePropertySets( GELPCVoid, GELPCVoid );
+    static GEInt GE_CCALL ComparePropertySets( GELPCVoid, GELPCVoid );
 protected:
     void Invalidate( void );
     void KillIntern( void );

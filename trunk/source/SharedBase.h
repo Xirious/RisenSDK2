@@ -26,6 +26,7 @@
 #include "SharedBase/ge_valarray.h"
 #include "SharedBase/ge_ptrarray.h"
 #include "SharedBase/ge_autoptrarray.h"
+#include "SharedBase/ge_arraysortbase.h"
 #include "SharedBase/ge_mapbase.h"
 #include "SharedBase/ge_valmap.h"
 #include "SharedBase/ge_objmap.h"

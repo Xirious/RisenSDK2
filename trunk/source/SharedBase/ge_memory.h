@@ -26,11 +26,11 @@ inline void GE_FREE( GELPVoid a_pBlock )
 
 #ifndef __PLACEMENT_NEW_INLINE
 #define __PLACEMENT_NEW_INLINE
-inline void * GE_CDECL operator new( size_t, void * _p )
+inline void * GE_CCALL operator new( size_t, void * _p )
 {
     return _p;
 }
-inline void GE_CDECL operator delete( void *, void * )
+inline void GE_CCALL operator delete( void *, void * )
 {
     return;
 }
