@@ -1,0 +1,14 @@
+#ifndef TILIB_FFCORE
+#define TILIB_FFCORE
+
+#include "FFCore/ff_def.tih"
+#include "FFCore/ff_enum.tih"
+#include "FFCore/ff_types.tih"
+#include "FFCore/ff_struct.tih"
+#include "FFCore/ff_system.tih"
+#include "FFCore/ff_unknown.tih"
+#include "FFCore/ff_criticalsection.tih"
+#include "FFCore/ff_iocompletionport.tih"
+#include "FFCore/ff_thread.tih"
+
+#endif

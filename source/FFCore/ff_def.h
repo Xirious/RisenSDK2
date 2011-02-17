@@ -7,7 +7,7 @@
 
 #define FF_FORCE_DWORD 0x7FFFFFFFL
 
-#define FF_CDECL __cdecl
+#define FF_CCALL __cdecl
 #define FF_STDCALL __stdcall
 
 #define FF_C_LINKAGE extern "C"

@@ -1,0 +1,64 @@
+struct CFFThread;
+struct CFFThread_vftable
+{
+    FFBool (__thiscall * InitInstance)( CFFThread * );
+    FFInt  (__thiscall * ExitInstance)( CFFThread * );
+    FFInt  (__thiscall * Run)( CFFThread * );
+    void   (__thiscall * OnInit)( CFFThread * );
+    void   (__thiscall * OnRun)( CFFThread * );
+    void   (__thiscall * OnExit)( CFFThread * );
+    void   (__thiscall * OnDelete)( CFFThread * );
+    void   (__thiscall * __vecDelDtor)( CFFThread *, unsigned int );
+};
+struct CFFThread_data
+{
+    FFLPVoid                  m_hThread;
+    FFU32                     m_u32ThreadId;
+    FFBool                    m_bAutoDelete;
+                              FF_PADDING( 3 )
+};
+struct CFFThread
+{
+    CFFThread_vftable const * __vfptr;
+    CFFThread_data            data;
+};
+// ??0CFFThread@@QAE@ABV0@@Z public: __thiscall CFFThread::CFFThread(CFFThread const &)
+CFFThread * __thiscall __0CFFThread__QAE_ABV0__Z( CFFThread *, CFFThread const * );
+// ??0CFFThread@@QAE@XZ public: __thiscall CFFThread::CFFThread(void)
+CFFThread * __thiscall __0CFFThread__QAE_XZ( CFFThread * );
+// ??1CFFThread@@UAE@XZ public: virtual __thiscall CFFThread::~CFFThread(void)
+void __thiscall __1CFFThread__UAE_XZ( CFFThread * );
+// ??4CFFThread@@QAEAAV0@ABV0@@Z public: CFFThread & __thiscall CFFThread::operator=(CFFThread const &)
+CFFThread * __thiscall __4CFFThread__QAEAAV0_ABV0__Z( CFFThread *, CFFThread const * );
+// ??_7CFFThread@@6B@ const CFFThread::`vftable'
+CFFThread_vftable const DLLIMPORT ___7CFFThread__6B_;
+// ?CreateThread@CFFThread@@QAE_N_NK@Z public: bool __thiscall CFFThread::CreateThread(bool,unsigned long)
+FFBool __thiscall _CreateThread_CFFThread__QAE_N_NK_Z( CFFThread *, FFBool, FFU32 );
+// ?Delete@CFFThread@@IAEXXZ protected: void __thiscall CFFThread::Delete(void)
+void __thiscall _Delete_CFFThread__IAEXXZ( CFFThread * );
+// ?ExitInstance@CFFThread@@UAEHXZ public: virtual int __thiscall CFFThread::ExitInstance(void)
+FFInt __thiscall _ExitInstance_CFFThread__UAEHXZ( CFFThread * );
+// ?GetThreadPriority@CFFThread@@QBEHXZ public: int __thiscall CFFThread::GetThreadPriority(void)const
+FFInt __thiscall _GetThreadPriority_CFFThread__QBEHXZ( CFFThread const * );
+// ?InitInstance@CFFThread@@UAE_NXZ public: virtual bool __thiscall CFFThread::InitInstance(void)
+FFBool __thiscall _InitInstance_CFFThread__UAE_NXZ( CFFThread * );
+// ?IsThreadActive@CFFThread@@QBE_NXZ public: bool __thiscall CFFThread::IsThreadActive(void)const
+FFBool __thiscall _IsThreadActive_CFFThread__QBE_NXZ( CFFThread const * );
+// ?OnDelete@CFFThread@@MAEXXZ protected: virtual void __thiscall CFFThread::OnDelete(void)
+void __thiscall _OnDelete_CFFThread__MAEXXZ( CFFThread * );
+// ?OnExit@CFFThread@@MAEXXZ protected: virtual void __thiscall CFFThread::OnExit(void)
+void __thiscall _OnExit_CFFThread__MAEXXZ( CFFThread * );
+// ?OnInit@CFFThread@@MAEXXZ protected: virtual void __thiscall CFFThread::OnInit(void)
+void __thiscall _OnInit_CFFThread__MAEXXZ( CFFThread * );
+// ?OnRun@CFFThread@@MAEXXZ protected: virtual void __thiscall CFFThread::OnRun(void)
+void __thiscall _OnRun_CFFThread__MAEXXZ( CFFThread * );
+// ?ResumeThread@CFFThread@@QAEKXZ public: unsigned long __thiscall CFFThread::ResumeThread(void)
+FFU32 __thiscall _ResumeThread_CFFThread__QAEKXZ( CFFThread * );
+// ?Run@CFFThread@@UAEHXZ public: virtual int __thiscall CFFThread::Run(void)
+FFInt __thiscall _Run_CFFThread__UAEHXZ( CFFThread * );
+// ?SetAutoDelete@CFFThread@@QAEX_N@Z public: void __thiscall CFFThread::SetAutoDelete(bool)
+void __thiscall _SetAutoDelete_CFFThread__QAEX_N_Z( CFFThread *, FFBool );
+// ?SetThreadPriority@CFFThread@@QAE_NH@Z public: bool __thiscall CFFThread::SetThreadPriority(int)
+FFBool __thiscall _SetThreadPriority_CFFThread__QAE_NH_Z( CFFThread *, FFInt );
+// ?SuspendThread@CFFThread@@QAEKXZ public: unsigned long __thiscall CFFThread::SuspendThread(void)
+FFU32 __thiscall _SuspendThread_CFFThread__QAEKXZ( CFFThread * );

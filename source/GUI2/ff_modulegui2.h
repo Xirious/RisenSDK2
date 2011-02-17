@@ -37,6 +37,6 @@ private: virtual void __FIXME_0074( void ) = 0; // [0000].0074
 private: virtual void __FIXME_0078( void ) = 0; // [0000].0078
 };
 
-FF_DLLIMPORT IFFModuleGui2 * FF_CDECL FFGui2_QueryModule( void );
+FF_DLLIMPORT IFFModuleGui2 * FF_CCALL FFGui2_QueryModule( void );
 
 #endif

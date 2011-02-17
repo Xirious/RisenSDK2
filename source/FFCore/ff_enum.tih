@@ -1,0 +1,38 @@
+enum EFFFileAccess : __int32
+{
+    EFFFileAccess_Read       = 0x00000001,
+    EFFFileAccess_Write      = 0x00000002,
+    EFFFileAccess_ReadWrite  = 0x00000003
+};
+
+enum EFFFileCreate : __int32
+{
+    EFFFileCreate_CreateAlways     = 0x00000001,
+    EFFFileCreate_CreateNew        = 0x00000002,
+    EFFFileCreate_OpenAlways       = 0x00000003,
+    EFFFileCreate_OpenExisting     = 0x00000004,
+    EFFFileCreate_TruncateExisting = 0x00000005
+};
+
+enum EFFFileMapProtection : __int32
+{
+    EFFFileMapProtection_ReadOnly   = 0x00000002,
+    EFFFileMapProtection_ReadWrite  = 0x00000004
+};
+
+enum EFFFileSeek : __int32
+{
+    EFFFileSeek_Begin      = 0x00000000,
+    EFFFileSeek_Current    = 0x00000001,
+    EFFFileSeek_End        = 0x00000002
+};
+
+enum EFFSpecialFolder : __int32
+{
+    EFFSpecialFolder_User         = 0x00000000,
+    EFFSpecialFolder_MyDocuments  = 0x00000001,
+    EFFSpecialFolder_AppData      = 0x00000002,
+    EFFSpecialFolder_LocalAppData = 0x00000003,
+    EFFSpecialFolder_SavedGames   = 0x00000004,
+    EFFSpecialFolder_System       = 0x00000005
+};

@@ -1,0 +1,18 @@
+struct CFFCriticalSection
+{
+    SFFCriticalSection m_CriticalSection;
+};
+// ??0CFFCriticalSection@@QAE@XZ public: __thiscall CFFCriticalSection::CFFCriticalSection(void)
+CFFCriticalSection * __thiscall __0CFFCriticalSection__QAE_XZ( CFFCriticalSection * );
+// ??1CFFCriticalSection@@QAE@XZ public: __thiscall CFFCriticalSection::~CFFCriticalSection(void)
+void __thiscall __1CFFCriticalSection__QAE_XZ( CFFCriticalSection * );
+// ??4CFFCriticalSection@@QAEAAV0@ABV0@@Z public: CFFCriticalSection & __thiscall CFFCriticalSection::operator=(CFFCriticalSection const &)
+CFFCriticalSection * __thiscall __4CFFCriticalSection__QAEAAV0_ABV0__Z( CFFCriticalSection *, CFFCriticalSection const * );
+// ?Create@CFFCriticalSection@@AAEXXZ private: void __thiscall CFFCriticalSection::Create(void)
+void __thiscall _Create_CFFCriticalSection__AAEXXZ( CFFCriticalSection * );
+// ?Destroy@CFFCriticalSection@@AAEXXZ private: void __thiscall CFFCriticalSection::Destroy(void)
+void __thiscall _Destroy_CFFCriticalSection__AAEXXZ( CFFCriticalSection * );
+// ?Lock@CFFCriticalSection@@QAE_NXZ public: bool __thiscall CFFCriticalSection::Lock(void)
+FFBool __thiscall _Lock_CFFCriticalSection__QAE_NXZ( CFFCriticalSection * );
+// ?Unlock@CFFCriticalSection@@QAE_NXZ public: bool __thiscall CFFCriticalSection::Unlock(void)
+FFBool __thiscall _Unlock_CFFCriticalSection__QAE_NXZ( CFFCriticalSection * );
