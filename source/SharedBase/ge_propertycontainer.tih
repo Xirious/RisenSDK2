@@ -1,0 +1,18 @@
+struct bCPropertyContainer;
+struct bCPropertyContainer_vftable
+{
+    void     (__thiscall * Invalidate)( bCPropertyContainer * );
+    bEResult (__thiscall * Read)( bCPropertyContainer *, bCIStream * );
+    bEResult (__thiscall * Write)( bCPropertyContainer const *, bCOStream * );
+};
+struct bCPropertyContainer
+{
+    bCPropertyContainer_vftable const * __vfptr;
+};
+
+#define bTPropertyContainer( T )                 \
+struct bTPropertyContainer_##T                   \
+{                                                \
+    bCPropertyContainer_vftable const * __vfptr; \
+    T                                   m_Value; \
+};
