@@ -118,6 +118,7 @@
 #include "SharedBase/ge_accessorcreator.tih"
 #include "SharedBase/ge_accessorpropertyobject.tih"
 #include "SharedBase/ge_accessorproperty.tih"
+#include "SharedBase/ge_zoneraster.tih"
 
 GEFloat DLLIMPORT g_fFOV;
 

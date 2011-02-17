@@ -24,6 +24,7 @@ struct bCVector
     GEFloat m_fY;
     GEFloat m_fZ;
 };
+bTValArray( bCVector )
 typedef bCVector bCVector3;
 // ??0bCVector@@QAE@ABV0@@Z public: __thiscall bCVector::bCVector(bCVector const &)
 bCVector * __thiscall __0bCVector__QAE_ABV0__Z( bCVector *, bCVector const * );
