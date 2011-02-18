@@ -9,3 +9,23 @@ struct IFFUnknown
 {
     IFFUnknown_vftable const * __vfptr;
 };
+
+struct CFFUnknown;
+struct CFFUnknown_vftable
+{
+    void (__thiscall * OnFinalRelease)( CFFUnknown * );
+    void (__thiscall * __vecDelDtor)( CFFUnknown *, unsigned int );
+};
+struct CFFUnknown_vbtable
+{
+    signed int CFFUnknown;
+    signed int IFFUnknown;
+};
+struct CFFUnknown
+{
+    CFFUnknown_vftable const * __vfptr;
+    CFFUnknown_vbtable const * __vbptr;
+    FFU32                      m_u32RefCount;
+    signed int                 __vtordisp_IFFUnknown;
+    IFFUnknown                 IFFUnknown;
+};
