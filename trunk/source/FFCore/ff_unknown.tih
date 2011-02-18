@@ -21,11 +21,15 @@ struct CFFUnknown_vbtable
     signed int CFFUnknown;
     signed int IFFUnknown;
 };
+struct CFFUnknown_data
+{
+    FFU32      m_u32RefCount;
+    signed int __vtordisp;
+    IFFUnknown IFFUnknown;
+};
 struct CFFUnknown
 {
     CFFUnknown_vftable const * __vfptr;
     CFFUnknown_vbtable const * __vbptr;
-    FFU32                      m_u32RefCount;
-    signed int                 __vtordisp_IFFUnknown;
-    IFFUnknown                 IFFUnknown;
+    CFFUnknown_data            data;
 };
