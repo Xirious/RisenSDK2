@@ -19,9 +19,8 @@ struct IFFFileMapping2
 
 struct CFFFileMapping_vbtable
 {
-    signed int CFFFileMapping;
-    signed int IFFUnknown;
-    signed int IFFFileMapping2;
+    CFFUnknown_vbtable CFFUnknown;
+    signed int         IFFFileMapping2;
 };
 struct CFFFileMapping
 {
