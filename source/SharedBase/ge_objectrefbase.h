@@ -38,9 +38,8 @@ public:    virtual                           ~bCObjectRefBase( void );          
 private:
     static bCPropertyObjectTypeBase thisType;
 private:
-    GEU32 m_u32ReferenceCount: 31;  // 0004
+    GEU32 m_u32ReferenceCount: 31;
     GEU32 m_bIsValid         :  1;
-    // sizeof(bCObjectRefBase)      // 0008
 protected:
     void Invalidate( void );
 public:
@@ -55,5 +54,6 @@ public:
     bCObjectRefBase( bCObjectRefBase const & );
     bCObjectRefBase( void );
 };
+GE_ASSERT_SIZEOF( bCObjectRefBase, 0x0008 )
 
 #endif
