@@ -70,6 +70,9 @@ class eCPortalRoom_PS{};
 
 #include "Engine/ge_guiresource2.h"
 
+#include "Engine/ge_statistic.h"
+#include "Engine/ge_enginecomponentbase.h"
+
 #pragma warning( pop )
 
 #endif

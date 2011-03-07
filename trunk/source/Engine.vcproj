@@ -165,6 +165,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_enginecomponentbase.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_entity.h"
 			>
 		</File>
@@ -214,6 +218,10 @@
 		</File>
 		<File
 			RelativePath=".\Engine\ge_processor.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_statistic.h"
 			>
 		</File>
 		<File
