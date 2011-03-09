@@ -1,8 +1,7 @@
 #ifndef GE_STATISTIC_H_INCLUDED
 #define GE_STATISTIC_H_INCLUDED
 
-class eCGuiWindow2{};     //FIXME: class eCGuiWindow2.
-class eCStatisticView{};  //FIXME: class eCStatisticView.
+class eCStatisticView;  // forward
 
 class GE_DLLIMPORT eCStatistic
 {

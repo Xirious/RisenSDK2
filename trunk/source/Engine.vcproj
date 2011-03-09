@@ -221,7 +221,15 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_scriptadminbase.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_statistic.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_statisticview.h"
 			>
 		</File>
 		<File

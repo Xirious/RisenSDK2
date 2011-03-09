@@ -70,8 +70,11 @@ class eCPortalRoom_PS{};
 
 #include "Engine/ge_guiresource2.h"
 
+class eCGuiWindow2{};
 #include "Engine/ge_statistic.h"
+#include "Engine/ge_statisticview.h"
 #include "Engine/ge_enginecomponentbase.h"
+#include "Engine/ge_scriptadminbase.h"
 
 #pragma warning( pop )
 
