@@ -164,6 +164,13 @@ enum gEOutputType
     gEOutputType_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEQuestActor
+{
+    gEQuestActor_Client,
+    gEQuestActor_Target,
+    gEQuestActor_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gESecurityLevel
 {
     //FIXME: gESecurityLevel constants.
@@ -179,6 +186,20 @@ enum gEWalkMode
     gEWalkMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-//#include "Game/ge_Xxx.h"
+class eCAudioChannel{};
+class eCSoundResource2{};
+
+typedef eSScriptBase gSScript;
+#include "Game/ge_scriptproxyaicallback.h"
+typedef eSScriptBase gSScriptAICallback;
+#include "Game/ge_scriptproxyaifunction.h"
+typedef eSScriptBase gSScriptAIFunction;
+#include "Game/ge_scriptproxyaistate.h"
+typedef eSScriptBase gSScriptAIState;
+
+struct gSArgsForScriptBase{};
+class gCScriptRoutine_PS{};
+#include "Game/ge_scriptprocessingunit.h"
+#include "Game/ge_scriptadmin.h"
 
 #endif

@@ -132,6 +132,26 @@
 			RelativePath=".\Game.h"
 			>
 		</File>
+		<File
+			RelativePath=".\Game\ge_scriptadmin.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_scriptprocessingunit.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_scriptproxyaicallback.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_scriptproxyaifunction.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_scriptproxyaistate.h"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>

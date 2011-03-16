@@ -225,6 +225,18 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_scriptfunctionmap.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_scriptproxy.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_scriptproxyscript.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_statistic.h"
 			>
 		</File>

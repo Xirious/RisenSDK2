@@ -30,6 +30,7 @@
 #include "SharedBase/ge_mapbase.h"
 #include "SharedBase/ge_valmap.h"
 #include "SharedBase/ge_objmap.h"
+#include "SharedBase/ge_objstack.h"
 #include "SharedBase/ge_queuebase.h"
 #include "SharedBase/ge_valqueue.h"
 #include "SharedBase/ge_gcmemgeneration.h"
