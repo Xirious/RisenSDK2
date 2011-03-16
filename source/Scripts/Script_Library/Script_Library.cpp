@@ -353,20 +353,20 @@ GEInt GE_STDCALL CON_library( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfE
 //
 
 extern "C" __declspec( dllexport )  // "_ScriptInit@0"
-gSScriptFunctions * GE_STDCALL ScriptInit( void )
+SScriptFunctions * GE_STDCALL ScriptInit( void )
 {
 #pragma warning( push )
 #pragma warning( disable : 4640 )  // construction of local static object is not thread-safe
 
-    static gSScriptFunctions s_ScriptFunctions;
+    static SScriptFunctions s_ScriptFunctions;
 
 #pragma warning( pop )
 
     s_ScriptFunctions.m_arrScriptAIStates.Clear();
-    s_ScriptFunctions.m_arrScriptAIFunction.Clear();
+    s_ScriptFunctions.m_arrScriptAIFunctions.Clear();
     s_ScriptFunctions.m_arrScriptAICallbacks.Clear();
     s_ScriptFunctions.m_arrScripts.Clear();
-    s_ScriptFunctions.m_arrScripts.Add( gSScript( "CON_library", __FILE__, CON_library ) );
+    s_ScriptFunctions.m_arrScripts.Add( SScript( "CON_library", __FILE__, CON_library ) );
 
     return &s_ScriptFunctions;
 }

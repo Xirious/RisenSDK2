@@ -13,8 +13,7 @@ protected: virtual bEResult   CopyFrom( eCEntityProxy const & );  // [0000].000C
 public:    virtual bEResult   Read( bCIStream & );                // [0000].0010
 public:    virtual bEResult   Write( bCOStream & ) const;         // [0000].0014
 private:
-    eSEntityID * m_pEntityID;  // 0004
-    // sizeof(eCEntityProxy)      0008
+    eSEntityID * m_pEntityID;
 protected:
     GEBool   Compare( eCEntityProxy const & ) const;
     bEResult Create( void );
@@ -53,6 +52,7 @@ public:
     friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCEntityProxy & );
     friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCEntityProxy const & );
 };
+GE_ASSERT_SIZEOF( eCEntityProxy, 0x0008 )
 
 #pragma warning( pop )
 

@@ -231,6 +231,14 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="stack"
+				>
+				<File
+					RelativePath=".\SharedBase\ge_objstack.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="kernel"
