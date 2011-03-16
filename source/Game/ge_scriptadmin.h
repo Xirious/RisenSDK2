@@ -1,12 +1,6 @@
 #ifndef GE_SCRIPTADMIN_H_INCLUDED
 #define GE_SCRIPTADMIN_H_INCLUDED
 
-struct gSScriptDLL
-{
-    int __FIXME[ 14 ];
-};
-GE_ASSERT_SIZEOF( gSScriptDLL, 0x0038 )
-
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'gCScriptAdmin::CProcessor' needs to have dll-interface to be used by clients of class 'gCScriptAdmin'
 
@@ -80,7 +74,7 @@ protected: using       eCEngineComponentBase::WriteSaveGame;                    
 protected: virtual GEInt                      CallScript( gSScript *, eCEntity *, eCEntity *, GEInt );          // [0000].00D0
 protected: virtual gSScript *                 RegisterScript( bCString const & );                               // [0000].00D4
 protected: virtual GEBool                     UnRegisterScript( gSScript * );                                   // [0000].00D8
-public:    virtual GEU32 const __thiscall     GetProfileLastTicksFirst( void ) const;                           // [0000].00DC
+public:    virtual GEU32 const                GetProfileLastTicksFirst( void ) const;                           // [0000].00DC
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:
