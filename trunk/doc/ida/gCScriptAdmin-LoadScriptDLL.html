@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>/Risen/bin/Game.dll</title>
+</head>
+<body bgcolor="white">
+<span style="white-space: pre; font-family: FixedSys; color: blue; background: white">
+
+<span style="color:gray">GEBool __thiscall gCScriptAdmin::LoadScriptDLL( gCScriptAdmin * this, bCString const * a_strFileName )
+</span><span style="color:navy">{
+  </span><span style="color:gray">GEBool                         result</span><span style="color:navy">;
+  </span><span style="color:gray">eCArchiveManager *             pArchiveManager</span><span style="color:navy">;
+  </span><span style="color:gray">eCArchiveFile                  ArchiveFile</span><span style="color:navy">;
+  </span><span style="color:gray">bCString                       strFilePath</span><span style="color:navy">;
+  </span><span style="color:gray">bCString *                     pstrFilePath</span><span style="color:navy">;
+  </span><span style="color:gray">GELPCChar                      pcFilePath</span><span style="color:navy">;
+  </span><span style="color:gray">GELPVoid                       hModule</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptDLL *                  pScriptDLL</span><span style="color:navy">;
+  </span><span style="color:gray">bCString                       strFileName</span><span style="color:navy">;
+  </span><span style="color:gray">bCString *                     pstrFileName</span><span style="color:navy">;
+  </span><span style="color:gray">gFScriptInit                   funcScriptInit</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptInit const *           pScriptInit</span><span style="color:navy">;
+  </span><span style="color:gray">GEInt                          iScript</span><span style="color:navy">;
+  </span><span style="color:gray">eCScriptFunctionMap *          pScriptFunctionMap</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptAIState *              pScriptAIState</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptInitScriptAIState *    pScriptInitScriptAIState</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptAIFunction *           pScriptAIFunction</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptInitScriptAIFunction * pScriptInitScriptAIFunction</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptAICallback *           pScriptAICallback</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptInitScriptAICallback * pScriptInitScriptAICallback</span><span style="color:navy">;
+  </span><span style="color:gray">gSScript *                     pScript</span><span style="color:navy">;
+  </span><span style="color:gray">gSScriptInitScript *           pScriptInitScript</span><span style="color:navy">;
+  </span><span style="color:gray">bCString                       strMessage</span><span style="color:navy">;
+  </span><span style="color:gray">bCString *                     pstrMessage</span><span style="color:navy">;
+  </span><span style="color:gray">GELPCChar                      pcMessage</span><span style="color:navy">;
+  </span><span style="color:gray">GEBool                         bYes</span><span style="color:navy">;
+
+  </span><span style="color:#8080ff">result </span><span style="color:navy">= </span>gCScriptAdmin::IsScriptDLLLoaded<span style="color:navy">( </span><span style="color:#8080ff">this</span><span style="color:navy">, </span><span style="color:#8080ff">a_strFileName</span><span style="color:navy"> );
+  if( </span><span style="color:#8080ff">result </span><span style="color:navy">!= </span><span style="color:#8080ff">GETrue </span><span style="color:navy">)
+  {
+    </span><span style="color:#8080ff">pArchiveManager </span><span style="color:navy">= </span><span style="color:#ff00ff">eCArchiveManager::GetInstance</span><span style="color:navy">();
+    </span><span style="color:#ff00ff">eCArchiveManager::GetFile</span><span style="color:navy">( </span><span style="color:#8080ff">pArchiveManager</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, </span><span style="color:#8080ff">a_strFileName</span><span style="color:navy"> );
+    </span><span style="color:#8080ff">pstrFilePath </span><span style="color:navy">= </span><span style="color:#ff00ff">eCArchiveFile::GetPhysicalFilePath</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strFilePath</span><span style="color:navy"> );
+    </span><span style="color:#8080ff">pcFilePath </span><span style="color:navy">= </span><span style="color:#ff00ff">bCString::operator GELPCChar</span><span style="color:navy">( </span><span style="color:#8080ff">pstrFilePath</span><span style="color:navy"> );
+    </span><span style="color:#8080ff">hModule </span><span style="color:navy">= </span><span style="color:#ff00ff">g_LoadModule</span><span style="color:navy">( </span><span style="color:#8080ff">pcFilePath</span><span style="color:navy"> );
+    </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFilePath</span><span style="color:navy"> );
+    if( </span><span style="color:#8080ff">hModule </span><span style="color:navy">)
+    {
+      </span><span style="color:#8080ff">pScriptDLL </span><span style="color:navy">= </span><span style="color:#ff00ff">new</span><span style="color:navy">( 0x38u, 0, 0, 0, -1 );
+      if( !</span><span style="color:#8080ff">pScriptDLL
+        </span><span style="color:navy">|| (</span>gSScriptDLL::gSScriptDLL<span style="color:navy">( </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy"> ), </span><span style="color:#8080ff">pScriptDLL </span><span style="color:navy">== 0)
+        || (</span><span style="color:#8080ff">pstrFileName </span><span style="color:navy">= </span><span style="color:#ff00ff">eCArchiveFile::GetFileName</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ),</span><span style="color:#8080ff">
+            </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_strFileName, </span><span style="color:#8080ff">pstrFileName</span><span style="color:navy"> ),</span><span style="color:#8080ff">
+            </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ),</span><span style="color:#8080ff">
+            pScriptDLL</span><span style="color:navy">-&gt;m_hModule = </span><span style="color:#8080ff">hModule</span><span style="color:navy">,
+            (</span><span style="color:#8080ff">funcScriptInit </span><span style="color:navy">= </span><span style="color:#ff00ff">g_GetProcAddress</span><span style="color:navy">( </span><span style="color:#8080ff">hModule</span><span style="color:navy">, &quot;</span><span style="color:green">_ScriptInit@0&quot;</span><span style="color:navy"> )) == 0)
+        || (</span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">= </span><span style="color:#8080ff">funcScriptInit</span><span style="color:navy">(), </span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">== 0)
+      {
+        </span><span style="color:#ff00ff">eCArchiveFile::~eCArchiveFile</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy"> );
+        return 0;
+      </span><span style="background:navy"></span><span style="color:navy">}
+      for( </span><span style="color:#8080ff">iScript </span><span style="color:navy">= 0; </span><span style="color:#8080ff">iScript </span><span style="color:navy">&lt; </span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAIStates.m_u32Count; ++</span><span style="color:#8080ff">iScript </span><span style="color:navy"> )
+      {
+        </span><span style="color:#8080ff">pScriptInitScriptAIState </span><span style="color:navy">= &amp;</span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAIStates.m_pArray[ </span><span style="color:#8080ff">iScript</span><span style="color:navy"> ];
+        </span><span style="color:#8080ff">pScriptFunctionMap </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::GetInstance</span><span style="color:navy">();
+        </span><span style="color:#8080ff">pScriptAIState </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::RegisterScriptAIState</span><span style="color:navy">( </span><span style="color:#8080ff">pScriptFunctionMap</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">pScriptInitScriptAIState</span><span style="color:navy">-&gt;m_strName );
+        if( </span><span style="color:#8080ff">pScriptAIState</span><span style="color:navy">-&gt;m_funcFunction == 0 )
+        {
+          </span><span style="color:#8080ff">pScriptAIState</span><span style="color:navy">-&gt;m_pScriptDLL = </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">;
+          </span><span style="color:#8080ff">pScriptAIState</span><span style="color:navy">-&gt;m_funcFunction = </span><span style="color:#8080ff">pScriptInitScriptAIState</span><span style="color:navy">-&gt;m_funcScriptAIState;
+          </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptAIState</span><span style="color:navy">-&gt;m_strSource, &amp;</span><span style="color:#8080ff">pScriptInitScriptAIState</span><span style="color:navy">-&gt;m_strSource );
+          </span>bTPtrArray< gSScriptAIState * >::Add<span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_arrScriptAIStates, &amp;</span><span style="color:#8080ff">pScriptAIState</span><span style="color:navy"> );
+        </span><span style="background:navy"></span><span style="color:navy">}
+      </span><span style="background:navy"></span><span style="color:navy">}
+      for( </span><span style="color:#8080ff">iScript </span><span style="color:navy">= 0; </span><span style="color:#8080ff">iScript </span><span style="color:navy">&lt; </span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAIFunctions.m_u32Count; ++</span><span style="color:#8080ff">iScript </span><span style="color:navy"> )
+      {
+        </span><span style="color:#8080ff">pScriptInitScriptAIFunction </span><span style="color:navy">= &amp;</span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAIFunctions.m_pArray[ </span><span style="color:#8080ff">iScript</span><span style="color:navy"> ];
+        </span><span style="color:#8080ff">pScriptFunctionMap </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::GetInstance</span><span style="color:navy">();
+        </span><span style="color:#8080ff">pScriptAIFunction </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::RegisterScriptAIFunction</span><span style="color:navy">( </span><span style="color:#8080ff">pScriptFunctionMap</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">pScriptInitScriptAIFunction</span><span style="color:navy">-&gt;m_strName );
+        if( </span><span style="color:#8080ff">pScriptAIFunction</span><span style="color:navy">-&gt;m_funcFunction == 0 )
+        {
+          </span><span style="color:#8080ff">pScriptAIFunction</span><span style="color:navy">-&gt;m_pScriptDLL = </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">;
+          </span><span style="color:#8080ff">pScriptAIFunction</span><span style="color:navy">-&gt;m_funcFunction = </span><span style="color:#8080ff">pScriptInitScriptAIFunction</span><span style="color:navy">-&gt;m_funcScriptAIFunction;
+          </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptAIFunction</span><span style="color:navy">-&gt;m_strSource, &amp;</span><span style="color:#8080ff">pScriptInitScriptAIFunction</span><span style="color:navy">-&gt;m_strSource );
+          </span>bTPtrArray< gSScriptAIFunction * >::Add<span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_arrScriptAIFunctions, &amp;</span><span style="color:#8080ff">pScriptAIFunction</span><span style="color:navy"> );
+        </span><span style="background:navy"></span><span style="color:navy">}
+      </span><span style="background:navy"></span><span style="color:navy">}
+      for( </span><span style="color:#8080ff">iScript </span><span style="color:navy">= 0; </span><span style="color:#8080ff">iScript </span><span style="color:navy">&lt; </span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAICallbacks.m_u32Count; ++</span><span style="color:#8080ff">iScript </span><span style="color:navy"> )
+      {
+        </span><span style="color:#8080ff">pScriptInitScriptAICallback </span><span style="color:navy">= &amp;</span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScriptAICallbacks.m_pArray[ </span><span style="color:#8080ff">iScript</span><span style="color:navy"> ];
+        </span><span style="color:#8080ff">pScriptFunctionMap </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::GetInstance</span><span style="color:navy">();
+        </span><span style="color:#8080ff">pScriptAICallback </span><span style="color:navy">= </span><span style="color:#ff00ff">eCScriptFunctionMap::RegisterScriptAICallback</span><span style="color:navy">( </span><span style="color:#8080ff">pScriptFunctionMap</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">pScriptInitScriptAICallback</span><span style="color:navy">-&gt;m_strName );
+        if( </span><span style="color:#8080ff">pScriptAICallback</span><span style="color:navy">-&gt;m_funcFunction == 0 )
+        {
+          </span><span style="color:#8080ff">pScriptAICallback</span><span style="color:navy">-&gt;m_pScriptDLL = </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">;
+          </span><span style="color:#8080ff">pScriptAICallback</span><span style="color:navy">-&gt;m_funcFunction = </span><span style="color:#8080ff">pScriptInitScriptAICallback</span><span style="color:navy">-&gt;m_funcScriptAICallback;
+          </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptAICallback</span><span style="color:navy">-&gt;m_strSource, &amp;</span><span style="color:#8080ff">pScriptInitScriptAICallback</span><span style="color:navy">-&gt;m_strSource );
+          </span>bTPtrArray< gSScriptAICallback * >::Add<span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_arrScriptAICallbacks, &amp;</span><span style="color:#8080ff">pScriptAICallback</span><span style="color:navy"> );
+        </span><span style="background:navy"></span><span style="color:navy">}
+      </span><span style="background:navy"></span><span style="color:navy">}
+      for( </span><span style="color:#8080ff">iScript </span><span style="color:navy">= 0; </span><span style="color:#8080ff">iScript </span><span style="color:navy">&lt; </span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScripts.m_u32Count; ++</span><span style="color:#8080ff">iScript </span><span style="color:navy"> )
+      {
+        </span><span style="color:#8080ff">pScriptInitScript </span><span style="color:navy">= &amp;</span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScripts.m_pArray[ </span><span style="color:#8080ff">iScript</span><span style="color:navy"> ];
+        </span><span style="color:#8080ff">pScript </span><span style="color:navy">= </span><span style="color:#8080ff">this</span><span style="color:navy">-&gt;__vfptr-&gt;RegisterScript( </span><span style="color:#8080ff">this</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">pScriptInit</span><span style="color:navy">-&gt;m_arrScripts.m_pArray[ </span><span style="color:#8080ff">iScript</span><span style="color:navy"> ].m_strName );
+        if( </span><span style="color:#8080ff">pScript</span><span style="color:navy">-&gt;m_funcFunction == 0 )
+        {
+          </span><span style="color:#8080ff">pScript</span><span style="color:navy">-&gt;m_pScriptDLL = </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">;
+          </span><span style="color:#8080ff">pScript</span><span style="color:navy">-&gt;m_funcFunction = </span><span style="color:#8080ff">pScriptInitScript</span><span style="color:navy">-&gt;m_funcScript;
+          </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScript</span><span style="color:navy">-&gt;m_strSource, &amp;</span><span style="color:#8080ff">pScriptInitScript</span><span style="color:navy">-&gt;m_strSource );
+          </span>bTPtrArray< gSScript * >::Add<span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_arrScripts, &amp;</span><span style="color:#8080ff">pScript</span><span style="color:navy"> );
+        </span><span style="background:navy"></span><span style="color:navy">}
+      </span><span style="background:navy"></span><span style="color:navy">}
+      </span>bTPtrArray< gSScriptDLL * >::Add<span style="color:navy">( &amp;</span><span style="color:#8080ff">this</span><span style="color:navy">-&gt;m_arrScriptDLLs, &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy"> );
+    </span><span style="background:navy"></span><span style="color:navy">}
+    else
+    {
+      </span><span style="color:#8080ff">pstrFilePath </span><span style="color:navy">= </span><span style="color:#ff00ff">eCArchiveFile::GetPhysicalFilePath</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strFilePath</span><span style="color:navy"> );
+      </span><span style="color:#8080ff">pstrMessage </span><span style="color:navy">= </span><span style="color:#ff00ff">bCString::GetFormattedString</span><span style="color:navy">(
+                     &amp;</span><span style="color:#8080ff">strMessage</span><span style="color:navy">,
+                     &quot;</span><span style="color:green">Could not load script module: %s.\nEnter debugger?&quot;</span><span style="color:navy">,
+                     </span><span style="color:#8080ff">pstrFilePath</span><span style="color:navy">-&gt;m_pcText );
+      </span><span style="color:#8080ff">pcMessage </span><span style="color:navy">= </span><span style="color:#ff00ff">bCString::operator GELPCChar</span><span style="color:navy">( </span><span style="color:#8080ff">pstrMessage</span><span style="color:navy"> );
+      </span><span style="color:#8080ff">bYes </span><span style="color:navy">= </span><span style="color:#ff00ff">g_MessageBox</span><span style="color:navy">( 0, </span><span style="color:#8080ff">pcMessage</span><span style="color:navy">, &quot;</span><span style="color:green">gCScriptAdmin::LoadScriptDLL&quot;</span><span style="color:navy">, </span><span style="color:green">MB_ICONINFORMATION | MB_YESNO</span><span style="color:navy"> ) == IDYES;
+      </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> );
+      </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFilePath</span><span style="color:navy"> );
+      if( </span><span style="color:#8080ff">bYes </span><span style="color:navy">)
+        </span><span style="color:#ff00ff">DebugBreak</span><span style="color:navy">();
+    </span><span style="background:navy"></span><span style="color:navy">}
+    </span><span style="color:#ff00ff">eCArchiveFile::_eCArchiveFile</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy"> );
+    </span><span style="color:#8080ff">result </span><span style="color:navy">= </span><span style="color:#8080ff">GETrue</span><span style="color:navy">;
+  </span><span style="background:#8080ff"></span><span style="color:navy">}
+  return </span><span style="color:#8080ff">result</span><span style="color:navy">;
+</span><span style="background:#8080ff"></span><span style="color:navy">}
+</span></body></html>

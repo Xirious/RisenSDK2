@@ -1,7 +1,4 @@
-#include "Script_Library.h"
-
-#pragma warning( push )
-#pragma warning( disable : 4710 )  // function not inlined
+#include "Script.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -9,7 +6,6 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-__declspec( dllexport )  //NOTE: Export is not required but helps analyzing crash dumps...
 GEInt GE_STDCALL CON_library( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity, GELPVoid a_pOtherEntity, GEInt a_iArgs )
 {
     UNREFERENCED_PARAMETER( a_pSPU );
@@ -353,22 +349,22 @@ GEInt GE_STDCALL CON_library( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfE
 //
 
 extern "C" __declspec( dllexport )  // "_ScriptInit@0"
-SScriptFunctions * GE_STDCALL ScriptInit( void )
+gSScriptInit const * GE_STDCALL ScriptInit( void )
 {
 #pragma warning( push )
 #pragma warning( disable : 4640 )  // construction of local static object is not thread-safe
 
-    static SScriptFunctions s_ScriptFunctions;
+    static gSScriptInit s_ScriptInit;
 
 #pragma warning( pop )
 
-    s_ScriptFunctions.m_arrScriptAIStates.Clear();
-    s_ScriptFunctions.m_arrScriptAIFunctions.Clear();
-    s_ScriptFunctions.m_arrScriptAICallbacks.Clear();
-    s_ScriptFunctions.m_arrScripts.Clear();
-    s_ScriptFunctions.m_arrScripts.Add( SScript( "CON_library", __FILE__, CON_library ) );
+    s_ScriptInit.m_arrScriptAIStates.Clear();
+    s_ScriptInit.m_arrScriptAIFunctions.Clear();
+    s_ScriptInit.m_arrScriptAICallbacks.Clear();
+    s_ScriptInit.m_arrScripts.Clear();
+    s_ScriptInit.m_arrScripts.Add( gSScriptInitScript( "CON_library", __FILE__, CON_library ) );
 
-    return &s_ScriptFunctions;
+    return &s_ScriptInit;
 }
 
 //
@@ -388,6 +384,3 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD dwReason, LPVOID lpReserved )
 	}
 	return TRUE;
 }
-
-#pragma warning( pop )
-

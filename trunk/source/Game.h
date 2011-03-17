@@ -200,6 +200,7 @@ typedef eSScriptBase gSScriptAIState;
 struct gSArgsForScriptBase{};
 class gCScriptRoutine_PS{};
 #include "Game/ge_scriptprocessingunit.h"
+#include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
 
 #endif
