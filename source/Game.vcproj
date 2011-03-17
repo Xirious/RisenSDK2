@@ -137,6 +137,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_scriptinit.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_scriptinit.inl"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_scriptprocessingunit.h"
 			>
 		</File>

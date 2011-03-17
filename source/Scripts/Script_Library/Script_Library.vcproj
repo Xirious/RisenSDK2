@@ -170,10 +170,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script_Library.h"
-			>
-		</File>
-		<File
 			RelativePath=".\Script_Library.rc"
 			>
 		</File>
