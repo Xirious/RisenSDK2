@@ -39,13 +39,13 @@
     if( </span><span style="color:#8080ff">hModule </span><span style="color:navy">)
     {
       </span><span style="color:#8080ff">pScriptDLL </span><span style="color:navy">= </span><span style="color:#ff00ff">new</span><span style="color:navy">( 0x38u, 0, 0, 0, -1 );
-      if( !</span><span style="color:#8080ff">pScriptDLL
-        </span><span style="color:navy">|| (</span>gSScriptDLL::gSScriptDLL<span style="color:navy">( </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy"> ), </span><span style="color:#8080ff">pScriptDLL </span><span style="color:navy">== 0)
-        || (</span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_strFileName, </span><span style="color:#ff00ff">eCArchiveFile::GetFileName</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ) ),</span><span style="color:#8080ff">
-            </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ),</span><span style="color:#8080ff">
-            pScriptDLL</span><span style="color:navy">-&gt;m_hModule = </span><span style="color:#8080ff">hModule</span><span style="color:navy">,
-            (</span><span style="color:#8080ff">funcScriptInit </span><span style="color:navy">= </span><span style="color:#ff00ff">g_GetProcAddress</span><span style="color:navy">( </span><span style="color:#8080ff">hModule</span><span style="color:navy">, &quot;</span><span style="color:green">_ScriptInit@0&quot;</span><span style="color:navy"> )) == 0)
-        || (</span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">= </span><span style="color:#8080ff">funcScriptInit</span><span style="color:navy">(), </span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">== 0)
+      if( !</span><span style="color:#8080ff">pScriptDLL </span><span style="color:navy">||
+        ( </span>gSScriptDLL::gSScriptDLL<span style="color:navy">( </span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy"> ),
+          </span><span style="color:#ff00ff">bCString::operator =</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">pScriptDLL</span><span style="color:navy">-&gt;m_strFileName, </span><span style="color:#ff00ff">eCArchiveFile::GetFileName</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ) ),</span><span style="color:#8080ff">
+          </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strFileName</span><span style="color:navy"> ),</span><span style="color:#8080ff">
+          pScriptDLL</span><span style="color:navy">-&gt;m_hModule = </span><span style="color:#8080ff">hModule</span><span style="color:navy">,
+        (</span><span style="color:#8080ff">funcScriptInit </span><span style="color:navy">= </span><span style="color:#ff00ff">g_GetProcAddress</span><span style="color:navy">( </span><span style="color:#8080ff">hModule</span><span style="color:navy">, &quot;</span><span style="color:green">_ScriptInit@0&quot;</span><span style="color:navy"> )) == 0 ) ||
+        (</span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">= </span><span style="color:#8080ff">funcScriptInit</span><span style="color:navy">(), </span><span style="color:#8080ff">pScriptInit </span><span style="color:navy">== 0) )
       {
         </span><span style="color:#ff00ff">eCArchiveFile::~eCArchiveFile</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy"> );
         return </span><span style="color:#8080ff">GEFalse</span><span style="color:navy">;
@@ -105,11 +105,10 @@
     </span><span style="background:navy"></span><span style="color:navy">}
     else
     {
-      </span><span style="color:#8080ff">bYes </span><span style="color:navy">= </span><span style="color:#ff00ff">g_MessageBox</span><span style="color:navy">( 0,
-        </span><span style="color:#ff00ff">bCString::operator GELPCChar</span><span style="color:navy">(
-          </span><span style="color:#ff00ff">bCString::GetFormattedString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strMessage</span><span style="color:navy">,
-            &quot;</span><span style="color:green">Could not load script module: %s.\nEnter debugger?&quot;</span><span style="color:navy">,
-            </span><span style="color:#ff00ff">eCArchiveFile::GetPhysicalFilePath</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strPhysicalFilePath</span><span style="color:navy"> )-&gt;m_pcText ) ),
+      </span><span style="color:#8080ff">bYes </span><span style="color:navy">= </span><span style="color:#ff00ff">g_MessageBox</span><span style="color:navy">( 0, </span><span style="color:#ff00ff">bCString::operator GELPCChar</span><span style="color:navy">(
+        </span><span style="color:#ff00ff">bCString::GetFormattedString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strMessage</span><span style="color:navy">,
+          &quot;</span><span style="color:green">Could not load script module: %s.\nEnter debugger?&quot;</span><span style="color:navy">,
+          </span><span style="color:#ff00ff">eCArchiveFile::GetPhysicalFilePath</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">ArchiveFile</span><span style="color:navy">, &amp;</span><span style="color:#8080ff">strPhysicalFilePath</span><span style="color:navy"> )-&gt;m_pcText ) ),
         &quot;</span><span style="color:green">gCScriptAdmin::LoadScriptDLL&quot;</span><span style="color:navy">,
         </span><span style="color:green">MB_ICONINFORMATION </span><span style="color:navy">| </span><span style="color:green">MB_YESNO</span><span style="color:navy"> ) == IDYES;
       </span><span style="color:#ff00ff">bCString::~bCString</span><span style="color:navy">( &amp;</span><span style="color:#8080ff">strMessage</span><span style="color:navy"> );
