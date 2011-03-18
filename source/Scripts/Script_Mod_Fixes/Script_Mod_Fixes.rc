@@ -1,7 +1,7 @@
 LANGUAGE 0x0000, 0x0000
 
 1 VERSIONINFO
-FILEVERSION    1, 0, 0, 0
+FILEVERSION    1, 1, 0, 0
 PRODUCTVERSION 1, 0, 95642, 0
 FILEOS         0x00000004
 FILETYPE       0x00000002
@@ -12,7 +12,7 @@ BEGIN
     BEGIN
       VALUE "CompanyName",     "Nico Bendlin"
       VALUE "FileDescription", "Risen Script Modification - Fixes"
-      VALUE "FileVersion",     "1.0"
+      VALUE "FileVersion",     "1.1"
       VALUE "LegalCopyright",  "© 2011 Nico Bendlin <nicode@gmx.net>"
       VALUE "InternalName",    "Script_Mod_Fixes"
       VALUE "ProductName",     "Risen"
