@@ -1,5 +1,8 @@
 #include "Script.h"
 
+#pragma warning( push )
+#pragma warning( disable : 4710 )  // function not inlined
+
 ////////////////////////////////////////////////////////////////////////////////
 //
 //  Script functions
@@ -384,3 +387,5 @@ BOOL APIENTRY DllMain( HMODULE hModule, DWORD dwReason, LPVOID lpReserved )
 	}
 	return TRUE;
 }
+
+#pragma warning( pop )

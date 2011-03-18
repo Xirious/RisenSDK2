@@ -12,6 +12,7 @@ struct gSScriptInitScriptBase
 	bCString          m_strSource;
     gSScriptInitScriptBase( GELPCChar a_pcName, GELPCChar a_pcSource );
     gSScriptInitScriptBase( void );
+   ~gSScriptInitScriptBase( void );
 };
 
 struct gSScriptInitScriptAIState :
@@ -29,8 +30,6 @@ struct gSScriptInitScriptAIFunction :
     gSScriptInitScriptAIFunction( GELPCChar a_pcName, GELPCChar a_pcSource, gFScriptAIFunction a_funcScriptAIFunction );
     gSScriptInitScriptAIFunction( void );
 };
-
-
 
 struct gSScriptInitScriptAICallback :
     gSScriptInitScriptBase
@@ -55,11 +54,9 @@ struct gSScriptInit
     bTObjArray< gSScriptInitScriptAIFunction > m_arrScriptAIFunctions;
     bTObjArray< gSScriptInitScriptAICallback > m_arrScriptAICallbacks;
     bTObjArray< gSScriptInitScript >           m_arrScripts;
+   ~gSScriptInit( void );
 };
 
 typedef gSScriptInit const * (GE_STDCALL * gFScriptInit)( void );
-
-
-#include "ge_scriptinit.inl"
 
 #endif
