@@ -2,9 +2,10 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8,00"
-	Name="Game"
-	ProjectGUID="{3388FF8A-25A4-4378-A870-824C174F3982}"
-	RootNamespace="Game"
+	Name="Script_Mod_Fixes"
+	ProjectGUID="{CC836B9A-E25E-4b12-A7C9-435C0287A035}"
+	RootNamespace="Script_Mod_Fixes"
+	Keyword="Win32Proj"
 	>
 	<Platforms>
 		<Platform
@@ -15,9 +16,76 @@
 	</ToolFiles>
 	<Configurations>
 		<Configuration
+			Name="Debug|Win32"
+			ConfigurationType="2"
+			InheritedPropertySheets="..\..\RisenScripts.vsprops"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalOptions="/Wall"
+				Optimization="0"
+				MinimalRebuild="true"
+				RuntimeLibrary="1"
+				EnableFunctionLevelLinking="true"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				GenerateDebugInformation="true"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCWebDeploymentTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
 			Name="Release|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLib.vsprops"
+			ConfigurationType="2"
+			InheritedPropertySheets="..\..\RisenScripts.vsprops"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -38,6 +106,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/Wall"
+				PreprocessorDefinitions="NDEBUG"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -49,10 +118,14 @@
 				Name="VCPreLinkEventTool"
 			/>
 			<Tool
-				Name="VCLibrarianTool"
+				Name="VCLinkerTool"
+				SetChecksum="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
 			/>
 			<Tool
 				Name="VCXDCMakeTool"
@@ -64,57 +137,10 @@
 				Name="VCFxCopTool"
 			/>
 			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
-		<Configuration
-			Name="Debug|Win32"
-			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLib.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
+				Name="VCAppVerifierTool"
 			/>
 			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
-				RuntimeLibrary="1"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
+				Name="VCWebDeploymentTool"
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
@@ -124,36 +150,32 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="Script"
+			>
+			<Filter
+				Name="Story"
+				>
+				<Filter
+					Name="Quest"
+					>
+					<File
+						RelativePath=".\Script\Story\Quest\Chapter1.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Script\Story\Quest\Chapter1.h"
+						>
+					</File>
+				</Filter>
+			</Filter>
+		</Filter>
 		<File
-			RelativePath=".\Game.h"
+			RelativePath=".\Script_Mod_Fixes.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\Game\ge_scriptadmin.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptinit.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptinit.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptprocessingunit.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaicallback.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaifunction.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaistate.h"
+			RelativePath=".\Script_Mod_Fixes.rc"
 			>
 		</File>
 	</Files>

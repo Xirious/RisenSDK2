@@ -1,26 +1,13 @@
 #ifndef GE_SCRIPTADMINBASE_H_INCLUDED
 #define GE_SCRIPTADMINBASE_H_INCLUDED
 
-struct eSScriptBase;
-
-struct gSScriptDLL
-{
-    GELPVoid                     m_hModule;
-    bCString                     m_strFileName;
-    bTPtrArray< eSScriptBase * > m_arrScriptsAIStates;
-    bTPtrArray< eSScriptBase * > m_arrScriptsAIFunctions;
-    bTPtrArray< eSScriptBase * > m_arrScriptsAICallbacks;
-    bTPtrArray< eSScriptBase * > m_arrScripts;
-};
-GE_ASSERT_SIZEOF( gSScriptDLL, 0x0038 )
-
 struct eSScriptBase
 {
     GEU32                                    m_u32RegisterCounter;
     bTStringObjMap< eSScriptBase >::bSNode * m_pFunctionMapNode;
     bCString                                 m_strSource;
-    gSScriptDLL *                            m_pScriptDLL;
-    void *                                   m_funcFunction;
+    void *                                   m_pScriptDLL;    // gSScriptDLL *
+    void *                                   m_funcFunction;  // gFScriptXxx
 };
 GE_ASSERT_SIZEOF( eSScriptBase, 0x0014 )
 

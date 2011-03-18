@@ -1,6 +1,17 @@
 #ifndef GE_SCRIPTADMIN_H_INCLUDED
 #define GE_SCRIPTADMIN_H_INCLUDED
 
+struct gSScriptDLL
+{
+    GELPVoid                           m_hModule;
+    bCString                           m_strFileName;
+    bTPtrArray< gSScriptAIState * >    m_arrScriptsAIStates;
+    bTPtrArray< gSScriptAIFunction * > m_arrScriptsAIFunctions;
+    bTPtrArray< gSScriptAICallback * > m_arrScriptsAICallbacks;
+    bTPtrArray< gSScript * >           m_arrScripts;
+};
+GE_ASSERT_SIZEOF( gSScriptDLL, 0x0038 )
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'gCScriptAdmin::CProcessor' needs to have dll-interface to be used by clients of class 'gCScriptAdmin'
 

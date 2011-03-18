@@ -17,10 +17,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="..\..\..\bin\scripts"
-			IntermediateDirectory="..\..\..\build\$(ConfigurationName)\$(ProjectName)"
 			ConfigurationType="2"
-			CharacterSet="2"
+			InheritedPropertySheets="..\..\RisenScripts.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -41,12 +39,10 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/Wall"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\"
 				MinimalRebuild="true"
 				RuntimeLibrary="1"
-				WarningLevel="4"
+				EnableFunctionLevelLinking="true"
 				DebugInformationFormat="4"
-				CallingConvention="2"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -59,10 +55,6 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				IgnoreImportLibrary="true"
-				AdditionalDependencies=""
-				LinkIncremental="2"
-				GenerateManifest="false"
 				GenerateDebugInformation="true"
 			/>
 			<Tool
@@ -92,10 +84,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\..\bin\scripts"
-			IntermediateDirectory="..\..\..\build\$(ConfigurationName)\$(ProjectName)"
 			ConfigurationType="2"
-			CharacterSet="2"
+			InheritedPropertySheets="..\..\RisenScripts.vsprops"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -116,10 +106,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/Wall"
-				AdditionalIncludeDirectories="..\..\"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
-				WarningLevel="4"
-				CallingConvention="2"
+				PreprocessorDefinitions="NDEBUG"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -132,9 +119,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				IgnoreImportLibrary="true"
-				AdditionalDependencies="kernel32.lib $(NoInherit)"
-				GenerateManifest="false"
+				SetChecksum="true"
 			/>
 			<Tool
 				Name="VCALinkTool"

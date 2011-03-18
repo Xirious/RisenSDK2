@@ -1,9 +1,15 @@
+#include "../Game.h"
+
 gSScriptInitScriptBase::gSScriptInitScriptBase( GELPCChar a_pcName, GELPCChar a_pcSource ) :
     m_strName( a_pcName ), m_strSource( a_pcSource )
 {
 }
 
 gSScriptInitScriptBase::gSScriptInitScriptBase( void )
+{
+}
+
+gSScriptInitScriptBase::~gSScriptInitScriptBase( void )
 {
 }
 
@@ -42,3 +48,8 @@ gSScriptInitScript::gSScriptInitScript( GELPCChar a_pcName, GELPCChar a_pcSource
 gSScriptInitScript::gSScriptInitScript( void )
 {
 }
+
+gSScriptInit::~gSScriptInit( void )
+{
+}
+
