@@ -137,6 +137,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_world.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script.cpp"
 			>
 		</File>

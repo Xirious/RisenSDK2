@@ -12,5 +12,6 @@ enum EDifficulty
 #include "Script/gs_template.h"
 #include "Script/gs_entity.h"
 #include "Script/gs_questmanager.h"
+#include "Script/gs_world.h"
 
 #endif
