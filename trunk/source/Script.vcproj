@@ -125,6 +125,14 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\Script\gs_effect.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_effectsystem.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_entity.h"
 			>
 		</File>
