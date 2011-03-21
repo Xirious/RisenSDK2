@@ -8,5 +8,6 @@ public:
     bCVector     m_vecTranslation;
     bCQuaternion m_qatRotation;
 };
+GE_ASSERT_SIZEOF( bCMotion, 0x001C )
 
 #endif

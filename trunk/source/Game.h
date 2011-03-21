@@ -189,6 +189,24 @@ enum gEWalkMode
 class eCAudioChannel{};
 class eCSoundResource2{};
 
+#include "Game/ge_effectcommand.h"
+#include "Game/ge_effectcommandearthquake.h"
+#include "Game/ge_effectcommandmodifyentity.h"
+#include "Game/ge_effectcommandplaysound.h"
+#include "Game/ge_effectcommandplayvoice.h"
+#include "Game/ge_effectcommandrunscript.h"
+#include "Game/ge_effectcommandsaysvm.h"
+#include "Game/ge_effectcommandstartimageeffect.h"
+#include "Game/ge_effectcommandtriggerentity.h"
+#include "Game/ge_effectcommandentity.h"
+#include "Game/ge_effectcommandkillentity.h"
+#include "Game/ge_effectcommandkillentityrange.h"
+#include "Game/ge_effectcommandspawnentity.h"
+#include "Game/ge_effectcommandspawnentitylist.h"
+#include "Game/ge_effectcommandspawnentityswitch.h"
+#include "Game/ge_effectcommandsequence2.h"
+#include "Game/ge_effect.h"
+
 typedef eSScriptBase gSScript;
 #include "Game/ge_scriptproxyaicallback.h"
 typedef eSScriptBase gSScriptAICallback;
