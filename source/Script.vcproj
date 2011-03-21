@@ -141,6 +141,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_psskills.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_questmanager.h"
 			>
 		</File>

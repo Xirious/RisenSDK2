@@ -6,8 +6,8 @@
 
 class GE_DLLIMPORT Entity
 {
-private:
-    eCEntity * m_pInstance;  // 0000
+protected:
+    eCEntity * m_pEngineEntity;
 public:
     static bTObjArray< Entity > ms_arrEntities;
     static bTObjArray< Entity > ms_arrNPCs;
