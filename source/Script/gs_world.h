@@ -1,5 +1,5 @@
-#ifndef GS_WORLD
-#define GS_WORLD
+#ifndef GS_WORLD_H_INCLUDED
+#define GS_WORLD_H_INCLUDED
 
 class GE_DLLIMPORT World
 {
