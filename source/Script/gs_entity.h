@@ -250,4 +250,6 @@ public:
 
 #pragma warning( pop )
 
+GE_C_LINKAGE GE_DLLIMPORT Entity None;
+
 #endif
