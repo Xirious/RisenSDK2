@@ -4,9 +4,7 @@
 class GE_DLLIMPORT eCTemplateEntityProxy
 {
 private:
-    eSEntityID * m_pEntityID;     // 0000
-    // sizeof(eCTemplateEntityProxy) 0004
-
+    eSEntityID * m_pEntityID;
 protected:
     GEBool   Compare( eCTemplateEntityProxy const & ) const;
     bEResult CopyFrom( eCTemplateEntityProxy const & );
@@ -44,5 +42,6 @@ public:
     friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCTemplateEntityProxy & );
     friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCTemplateEntityProxy const & );
 };
+GE_ASSERT_SIZEOF( eCTemplateEntityProxy, 0x0004 )
 
 #endif

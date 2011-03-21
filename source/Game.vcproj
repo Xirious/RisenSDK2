@@ -129,6 +129,74 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_effect.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommand.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandearthquake.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandkillentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandkillentityrange.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandmodifyentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandplaysound.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandplayvoice.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandrunscript.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandsaysvm.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandsequence2.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandspawnentity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandspawnentitylist.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandspawnentityswitch.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandstartimageeffect.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_effectcommandtriggerentity.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_scriptadmin.h"
 			>
 		</File>

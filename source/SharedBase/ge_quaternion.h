@@ -136,5 +136,6 @@ public:
              bCQuaternion( void );
             ~bCQuaternion( void );
 };
+GE_ASSERT_SIZEOF( bCQuaternion, 0x0010 )
 
 #endif
