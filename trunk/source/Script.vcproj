@@ -129,6 +129,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_focus.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_questmanager.h"
 			>
 		</File>
