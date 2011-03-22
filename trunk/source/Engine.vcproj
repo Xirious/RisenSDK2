@@ -205,6 +205,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_locstring.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_messagehandler.h"
 			>
 		</File>
