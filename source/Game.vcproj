@@ -197,6 +197,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_npc_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_scriptadmin.h"
 			>
 		</File>

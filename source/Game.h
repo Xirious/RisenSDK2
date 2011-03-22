@@ -39,6 +39,24 @@ enum gEAniState
     gEAniState_ForceDWORD    = GE_FORCE_DWORD
 };
 
+enum gEAttitude
+{
+    gEAttitude_None       = 0x00000000,
+    gEAttitude_Friendly   = 0x00000001,
+    gEAttitude_Neutral    = 0x00000002,
+    gEAttitude_Angry      = 0x00000003,
+    gEAttitude_Hostile    = 0x00000004,
+    gEAttitude_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum gEBraveryOverride
+{
+    gEBraveryOverride_None       = 0x00000000,
+    gEBraveryOverride_Brave      = 0x00000001,
+    gEBraveryOverride_Coward     = 0x00000002,
+    gEBraveryOverride_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gECharMovementMode
 {
     //FIXME: gECharMovementMode constants.
@@ -64,6 +82,35 @@ enum gECombatPose
     gECombatPose_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEComment
+{
+    gEComment_None              = 0x00000000,
+    gEComment_DefeatInquisition = 0x00000001,
+    gEComment_Theft             = 0x00000002,
+    gEComment_Livestock         = 0x00000003,
+    gEComment_Defeat            = 0x00000004,
+    gEComment_Count             = 0x00000005,
+    gEComment_ForceDWORD        = GE_FORCE_DWORD
+};
+
+enum gECrime
+{
+    gECrime_None            = 0x00000000,
+    gECrime_MurderLivestock = 0x00000001,
+    gECrime_Theft           = 0x00000002,
+    gECrime_Murder          = 0x00000003,
+    gECrime_Count           = 0x00000004,
+    gECrime_ForceDWORD      = GE_FORCE_DWORD
+};
+
+enum gEDamageCalculationType
+{
+    gEDamageCalculationType_Normal     = 0x00000000,
+    gEDamageCalculationType_Monster    = 0x00000001,
+    gEDamageCalculationType_Immortal   = 0x00000002,
+    gEDamageCalculationType_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEDamageType
 {
     gEDamageType_None       = 0x00000000,
@@ -83,6 +130,33 @@ enum gEDirection
     gEDirection_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEFight
+{
+    gEFight_None       = 0x00000000,
+    gEFight_Lost       = 0x00000001,
+    gEFight_Won        = 0x00000002,
+    gEFight_Cancel     = 0x00000003,
+    gEFight_Running    = 0x00000004,
+    gEFight_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum gEGuardStatus
+{
+    gEGuardStatus_Active          = 0x00000000,
+    gEGuardStatus_FirstWarnGiven  = 0x00000001,
+    gEGuardStatus_SecondWarnGiven = 0x00000002,
+    gEGuardStatus_Inactive        = 0x00000003,
+    gEGuardStatus_Behind          = 0x00000004,
+    gEGuardStatus_ForceDWORD      = GE_FORCE_DWORD
+};
+
+enum gEGender
+{
+    gEGender_Male       = 0x00000000,
+    gEGender_Female     = 0x00000001,
+    gEGender_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEGuild
 {
     gEGuild_None       = 0x00000000,
@@ -95,7 +169,6 @@ enum gEGuild
     gEGuild_Pir        = 0x00000007,
     gEGuild_Count      = 0x00000008,
     gEGuild_ForceDWORD = GE_FORCE_DWORD
-
 };
 
 enum gEItemHoldType
@@ -184,6 +257,50 @@ enum gEQuestActor
     gEQuestActor_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEReason
+{
+    gEReason_None            = 0x00000000,
+    gEReason_SVM_Ambient     = 0x00000001,
+    gEReason_SVM_Combat      = 0x00000002,
+    gEReason_SVM_Party       = 0x00000003,
+    gEReason_PlayerTalk      = 0x00000004,
+    gEReason_ImportantInfo   = 0x00000005,
+    gEReason_PlayerSneaking  = 0x00000006,
+    gEReason_PlayerWeapon    = 0x00000007,
+    gEReason_PlayerRoom      = 0x00000008,
+    gEReason_PlayerUseBed    = 0x00000009,
+    gEReason_Eat             = 0x0000000A,
+    gEReason_Ransack         = 0x0000000B,
+    gEReason_Fighter         = 0x0000000C,
+    gEReason_Attacker        = 0x0000000D,
+    gEReason_Nuisance        = 0x0000000E,
+    gEReason_Joke            = 0x0000000F,
+    gEReason_Frost           = 0x00000010,
+    gEReason_Damage          = 0x00000011,
+    gEReason_DamageLivestock = 0x00000012,
+    gEReason_MurderLivestock = 0x00000013,
+    gEReason_Theft           = 0x00000014,
+    gEReason_Illusion        = 0x00000015,
+    gEReason_GateGuard       = 0x00000016,
+    gEReason_Defeat          = 0x00000017,
+    gEReason_Inspect         = 0x00000018,
+    gEReason_Finish          = 0x00000019,
+    gEReason_Raider          = 0x0000001A,
+    gEReason_Enemy           = 0x0000001B,
+    gEReason_Murder          = 0x0000001C,
+    gEReason_Duel            = 0x0000001D,
+    gEReason_Arena           = 0x0000001E,
+    gEReason_Kill            = 0x0000001F,
+    gEReason_Count           = 0x00000020,
+    gEReason_ForceDWORD      = GE_FORCE_DWORD
+};
+
+enum gESecurityLevel
+{
+    //FIXME: gESecurityLevel constants.
+    gESecurityLevel_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gESkill
 {
     gESkill_None            = 0xFFFFFFFF,
@@ -226,8 +343,15 @@ enum gESkill
 
 enum gESkillCategroy
 {
-    //FIXME: gESkillCategroy constants.
-    gESkillCategroy_ForceDWORD = GE_FORCE_DWORD
+    //NOTE: I did not use the typo for the constants.
+    gESkillCategory_Atrib      = 0x00000000,
+    gESkillCategory_Stat1      = 0x00000001,  // LV/XP/LP
+    gESkillCategory_Stat2      = 0x00000002,  // HP/MP/STR/DEX/INT
+    gESkillCategory_Prot       = 0x00000003,
+    gESkillCategory_Combat     = 0x00000004,
+    gESkillCategory_Magic      = 0x00000005,
+    gESkillCategory_Misc       = 0x00000006,
+    gESkillCategory_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gESkillModifier
@@ -239,10 +363,37 @@ enum gESkillModifier
     gESkillModifier_ForceDWORD      = GE_FORCE_DWORD
 };
 
-enum gESecurityLevel
+enum gESpecies
 {
-    //FIXME: gESecurityLevel constants.
-    gESecurityLevel_ForceDWORD = GE_FORCE_DWORD
+    gESpecies_None          = 0x00000000,
+    gESpecies_Human         = 0x00000001,
+    gESpecies_Lizard        = 0x00000002,
+    gESpecies_Brontok       = 0x00000003,
+    gESpecies_Wolf_Tame     = 0x00000004,
+    gESpecies_Lurker        = 0x00000005,
+    gESpecies_Ashbeast      = 0x00000006,
+    gESpecies_Nautilus      = 0x00000007,
+    gESpecies_Dragonfly     = 0x00000008,
+    gESpecies_Mantis        = 0x00000009,
+    gESpecies_Scorpion      = 0x0000000A,
+    gESpecies_Skeleton      = 0x0000000B,
+    gESpecies_Swampmummy    = 0x0000000C,
+    gESpecies_Rotworm       = 0x0000000D,
+    gESpecies_Skeleton_Tame = 0x0000000E,
+    gESpecies_Gnome         = 0x0000000F,
+    gESpecies_Boar          = 0x00000010,
+    gESpecies_Wolf          = 0x00000011,
+    gESpecies_Stingrat      = 0x00000012,
+    gESpecies_Vulture       = 0x00000013,
+    gESpecies_Thundertail   = 0x00000014,
+    gESpecies_Ogre          = 0x00000015,
+    gESpecies_Ogre_Tame     = 0x00000016,
+    gESpecies_Cow           = 0x00000017,
+    gESpecies_Pig           = 0x00000018,
+    gESpecies_Chicken       = 0x00000019,
+    gESpecies_Ghost         = 0x0000001A,
+    gESpecies_Count         = 0x0000001B,
+    gESpecies_ForceDWORD    = GE_FORCE_DWORD
 };
 
 enum gEWalkMode
@@ -256,6 +407,8 @@ enum gEWalkMode
 
 class eCAudioChannel{};
 class eCSoundResource2{};
+
+#include "Game/ge_npc_ps.h"
 
 #include "Game/ge_effectcommand.h"
 #include "Game/ge_effectcommandearthquake.h"
