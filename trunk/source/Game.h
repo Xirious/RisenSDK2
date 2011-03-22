@@ -171,6 +171,46 @@ enum gEGuild
     gEGuild_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEHudMode
+{
+    //FIXME: gEHudMode constants.
+    gEHudMode_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum gEHudPage
+{
+    gEHudPage_None             = 0x00000000,
+    gEHudPage_Game             = 0x00000001,
+    gEHudPage_Inventory        = 0x00000002,
+    gEHudPage_Character        = 0x00000003,
+    gEHudPage_Log              = 0x00000004,
+    gEHudPage_Map              = 0x00000005,
+    gEHudPage_CraftSelect      = 0x00000006,
+    gEHudPage_ItemSelect       = 0x00000007,
+    gEHudPage_Loot             = 0x00000008,
+    gEHudPage_Pickpocket       = 0x00000009,
+    gEHudPage_Trade            = 0x0000000A,
+    gEHudPage_Dialog           = 0x0000000B,
+    gEHudPage_Talk             = 0x0000000C,
+    gEHudPage_Menu_Main        = 0x0000000D,
+    gEHudPage_Menu_Game        = 0x0000000E,
+    gEHudPage_Menu_Load        = 0x0000000F,
+    gEHudPage_Menu_Save        = 0x00000010,
+    gEHudPage_Menu_Achievement = 0x00000011,
+    gEHudPage_Menu_Options     = 0x00000012,
+    gEHudPage_Menu_Video       = 0x00000013,
+    gEHudPage_Menu_Audio       = 0x00000014,
+    gEHudPage_Menu_Input       = 0x00000015,
+    gEHudPage_Menu_Settings    = 0x00000016,
+    gEHudPage_Menu_System      = 0x00000017,
+    gEHudPage_Menu_Credits     = 0x00000018,
+    gEHudPage_Menu_Cheats      = 0x00000019,
+    gEHudPage_Menu_Back        = 0x0000001A,
+    gEHudPage_Outro            = 0x0000001B,
+    gEHudPage_Loading          = 0x0000001C,
+    gEHudPage_ForceDWORD       = GE_FORCE_DWORD
+};
+
 enum gEItemHoldType
 {
     gEItemHoldType_None          = 0x00000000,
@@ -244,6 +284,12 @@ enum gEItemUseType
     gEItemUseType_ForceDWORD    = GE_FORCE_DWORD
 };
 
+enum gELockCombi
+{
+    //FIXME: gELockCombi constants.
+    gELockCombi_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gELogMessageType
 {
     gELogMessageType_Grey       = 0x00000000,
@@ -258,6 +304,17 @@ enum gEOutputType
 {
     //FIXME: gEOutputType constants.
     gEOutputType_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum gEPageMode
+{
+    gEPageMode_None       = 0x00000000,
+    gEPageMode_Panorama   = 0x00000001,
+    gEPageMode_Dialog     = 0x00000003,
+    gEPageMode_UserMin    = 0x00000004,
+    gEPageMode_UserSlots  = 0x00000006,
+    gEPageMode_UserMax    = 0x00000007,
+    gEPageMode_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gEQuestActor
