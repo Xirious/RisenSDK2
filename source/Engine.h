@@ -20,6 +20,8 @@
 
 #include "Engine/EngineEnum.h"
 
+#include "Engine/ge_locstring.h"
+
 #include "Engine/ge_virtualfilesystem.h"
 
 #include "Engine/ge_archivefile.h"
