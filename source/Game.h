@@ -244,6 +244,16 @@ enum gEItemUseType
     gEItemUseType_ForceDWORD    = GE_FORCE_DWORD
 };
 
+enum gELogMessageType
+{
+    gELogMessageType_Grey       = 0x00000000,
+    gELogMessageType_Red        = 0x00000001,
+    gELogMessageType_Gold       = 0x00000002,
+    gELogMessageType_Lime       = 0x00000003,
+    gELogMessageType_Count      = 0x00000004,
+    gELogMessageType_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEOutputType
 {
     //FIXME: gEOutputType constants.
