@@ -1,5 +1,5 @@
-#ifndef TILIB_SHAREDBASE
-#define TILIB_SHAREDBASE
+#ifndef TILIB_RISENSHAREDBASE
+#define TILIB_RISENSHAREDBASE
 
 #include "SharedBase/ge_def.tih"
 #include "SharedBase/ge_types.tih"

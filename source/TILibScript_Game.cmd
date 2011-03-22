@@ -1,0 +1,1 @@
+@call "%~dp0TILib.cmd" Script_Game
