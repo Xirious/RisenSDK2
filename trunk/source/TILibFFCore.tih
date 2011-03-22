@@ -1,5 +1,5 @@
-#ifndef TILIB_FFCORE
-#define TILIB_FFCORE
+#ifndef TILIB_RISENFFCORE
+#define TILIB_RISENFFCORE
 
 #include "FFCore/ff_def.tih"
 #include "FFCore/ff_enum.tih"
