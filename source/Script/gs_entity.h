@@ -246,10 +246,18 @@ public:
     Entity( eCEntity const * );
     Entity( void );
    ~Entity( void );
+public:
+    template< typename T >
+    T & PropertySet( void );
+    template< typename T >
+    T const & PropertySet( void ) const;
 };
+GE_ASSERT_SIZEOF( Entity, 0x0004 )
 
 #pragma warning( pop )
 
 GE_C_LINKAGE GE_DLLIMPORT Entity None;
+
+#include "gs_entity.inl"
 
 #endif
