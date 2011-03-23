@@ -6,7 +6,7 @@ class Entity;  // forward
 class GE_DLLIMPORT Template
 {
 private:
-    eCTemplateEntityProxy m_Proxy;  // 0000
+    eCTemplateEntityProxy m_Proxy;
 private:
     void Create( GELPCChar );
 public:

@@ -137,10 +137,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_entity.inl"
-			>
-		</File>
-		<File
 			RelativePath=".\Script\gs_focus.h"
 			>
 		</File>
@@ -158,6 +154,10 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_psskills.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_psskills.inl"
 			>
 		</File>
 		<File

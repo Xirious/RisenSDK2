@@ -1,6 +1,14 @@
 #ifndef GS_ENTITY_H_INCLUDED
 #define GS_ENTITY_H_INCLUDED
 
+enum EDifficulty
+{
+    EDifficulty_Easy       = 0x00000000,
+    EDifficulty_Normal     = 0x00000001,
+    EDifficulty_Hard       = 0x00000002,
+    EDifficulty_ForceDWORD = GE_FORCE_DWORD
+};
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTObjArray<>' needs to have dll-interface to be used by clients of class 'Entity'
 
@@ -247,17 +255,12 @@ public:
     Entity( void );
    ~Entity( void );
 public:
-    template< typename T >
-    T & PropertySet( void );
-    template< typename T >
-    T const & PropertySet( void ) const;
+    template< typename PSXxx > PSXxx &       PropertySet( void );
+    template< typename PSXxx > PSXxx const & PropertySet( void ) const;
 };
-GE_ASSERT_SIZEOF( Entity, 0x0004 )
 
 #pragma warning( pop )
 
 GE_C_LINKAGE GE_DLLIMPORT Entity None;
-
-#include "gs_entity.inl"
 
 #endif
