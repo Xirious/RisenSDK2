@@ -1,9 +1,10 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-class PSSkills :
-    protected Entity
+class PSSkills
 {
+protected:
+    eCEntity * m_pEntity;
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
@@ -100,6 +101,11 @@ protected:
 //FIXME: PSSkills assignment operator shouldn’t be used (only one byte is copied).
 //public: PSSkills & operator = ( PSSkills const & );
 };
-GE_ASSERT_SIZEOF( PSSkills, 0x0004 )
+
+template<> PSSkills &       Entity::PropertySet( void );
+template<> PSSkills const & Entity::PropertySet( void ) const;
+GE_ASSERT_SIZEOF( PSSkills, sizeof(Entity) )
+
+#include "gs_psskills.inl"
 
 #endif

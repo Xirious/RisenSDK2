@@ -56,7 +56,6 @@ public:
     World( void );
    ~World( void );
 };
-GE_ASSERT_SIZEOF( World, 0x0004 )
 
 GE_C_LINKAGE GE_DLLIMPORT World world;
 
