@@ -197,6 +197,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_modifyskill.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_npc_ps.h"
 			>
 		</File>
@@ -226,6 +230,18 @@
 		</File>
 		<File
 			RelativePath=".\Game\ge_scriptproxyaistate.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_skills_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_skillvalue.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_skillvaluebase.h"
 			>
 		</File>
 	</Files>
