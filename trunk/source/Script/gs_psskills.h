@@ -1,10 +1,9 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-class PSSkills
+class PSSkills :
+    protected Entity
 {
-protected:
-    eCEntity * m_pEngineEntity;
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
@@ -100,10 +99,9 @@ protected:
                   operator gCSkills_PS const * ( void ) const;
     gCSkills_PS * operator ->                  ( void );
 /**/
-/** ///FIXME: PSSkills assignment operator seems to be buggy (only one byte is copied).
-public:
-    PSSkills & operator = ( PSSkills const & );
-/**/
+//FIXME: PSSkills assignment operator shouldn’t be used (only one byte is copied).
+//public: PSSkills & operator = ( PSSkills const & );
 };
+GE_ASSERT_SIZEOF( PSSkills, 0x0004 )
 
 #endif

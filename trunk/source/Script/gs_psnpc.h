@@ -2,17 +2,17 @@
 #define GS_PSNPC_H_INCLUDED
 
 #define PSNpcProperty( N, T )                               \
-class Property##N                                           \
+class Property##N :                                         \
+    protected Entity                                        \
 {                                                           \
-protected:                                                  \
-    eCEntity * m_pEngineEntity;                             \
 public:                                                     \
                   operator T const ( void ) const;          \
     Property##N & operator =       ( T const & );           \
     Property##N & operator =       ( Property##N const & ); \
 }
 
-class GE_DLLIMPORT PSNpc
+class GE_DLLIMPORT PSNpc :
+    protected Entity
 {
 public:
     PSNpcProperty( AnimationBearing,       bCString );
@@ -41,8 +41,6 @@ public:
     PSNpcProperty( Reason,                 gEReason );
     PSNpcProperty( Species,                gESpecies );
     PSNpcProperty( Voice,                  bCString );
-protected:
-    eCEntity * m_pEngineEntity;
 public:
     GEBool            BeginStatusEffect( gSNPCStatusEffect & );
     void              ClearMnemonic( void );
@@ -76,11 +74,18 @@ protected:
                operator gCNPC_PS *       ( void );
                operator gCNPC_PS const * ( void ) const;
     gCNPC_PS * operator ->               ( void );
-//FIXME: PSNpc assignment operator seems to be buggy (only one byte is copied).
-//public:
-//  PSNpc & operator = ( PSNpc const & );
+//FIXME: PSNpc assignment operator shouldn’t be used (only one byte is copied).
+//public: PSNpc & operator = ( PSNpc const & );
+public:
+    template< typename T >
+    T & Property( void );
+    template< typename T >
+    T const & Property( void ) const;
 };
+GE_ASSERT_SIZEOF( PSNpc, 0x0004 )
 
 #undef PSNpcProperty
+
+#include "gs_psnpc.inl"
 
 #endif
