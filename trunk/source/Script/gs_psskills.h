@@ -91,14 +91,12 @@ public:
     void            SetSneak( GEInt, gESkillModifier );
     void            SetStrength( GEInt, gESkillModifier );
     void            SetTrophy( GEInt, gESkillModifier );
-/** ///FIXME: class gCSkills_PS.
 public:
     gCSkills_PS const * operator -> ( void ) const;
 protected:
                   operator gCSkills_PS *       ( void );
                   operator gCSkills_PS const * ( void ) const;
     gCSkills_PS * operator ->                  ( void );
-/**/
 //FIXME: PSSkills assignment operator shouldn’t be used (only one byte is copied).
 //public: PSSkills & operator = ( PSSkills const & );
 };

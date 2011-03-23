@@ -405,6 +405,7 @@ enum gESkill
     gESkill_Misc_Alchemy    = 0x0000001F,
     gESkill_Misc_Scribe     = 0x00000020,
     gESkill_Misc_Trophy     = 0x00000021,
+    gESkill_Count           = 0x00000022,
     gESkill_ForceDWORD      = GE_FORCE_DWORD
 };
 
@@ -476,6 +477,10 @@ class eCAudioChannel{};
 class eCSoundResource2{};
 
 #include "Game/ge_npc_ps.h"
+#include "Game/ge_skillvaluebase.h"
+#include "Game/ge_skillvalue.h"
+#include "Game/ge_modifyskill.h"
+#include "Game/ge_skills_ps.h"
 
 #include "Game/ge_effectcommand.h"
 #include "Game/ge_effectcommandearthquake.h"
