@@ -125,6 +125,10 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\Script\gs_achievement.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_effect.h"
 			>
 		</File>
@@ -145,19 +149,19 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_psnpc.h"
-			>
-		</File>
-		<File
 			RelativePath=".\Script\gs_psnpc.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_psskills.h"
+			RelativePath=".\Script\gs_psnpc.h"
 			>
 		</File>
 		<File
 			RelativePath=".\Script\gs_psskills.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_psskills.h"
 			>
 		</File>
 		<File
