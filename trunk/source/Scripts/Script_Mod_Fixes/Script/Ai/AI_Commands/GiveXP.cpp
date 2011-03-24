@@ -17,7 +17,6 @@ GEInt GE_STDCALL GiveXP( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity
     else
         Other.AttachTo( a_pSPU->GetOtherEntity() );
 
-    //NOTE: Entity::GetEntity( "PC_Hero" ) to gain experience while being transformed.
     Entity Player = Entity::GetPlayer();  
     GEInt iAmount = a_iIntParameter;
     GEBool bLevel = (iAmount == -1);
@@ -48,15 +47,28 @@ GEInt GE_STDCALL GiveXP( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity
             bCUnicodeString( iAmount ),
             gELogMessageType_Gold, GEFalse, 0 );
 
+        GEInt iExperience = iAmount;
         do
-		{
-			GEInt iExperience = Player.PropertySet< PSSkills >().GetExperience();
-			Player.PropertySet< PSSkills >().SetExperience( iAmount, gESkillModifier_AddValue );
-			iAmount -= (Player.PropertySet< PSSkills >().GetExperience() - iExperience);
-		}
-		while( iAmount > 0 );
+        {
+            GEInt iOldExperience = Player.PropertySet< PSSkills >().GetExperience();
+            Player.PropertySet< PSSkills >().SetExperience( iExperience, gESkillModifier_AddValue );
+            iExperience -= (Player.PropertySet< PSSkills >().GetExperience() - iOldExperience);
+        }
+        while( iExperience > 0 );
 
-		return 1;
-	}
+        Entity OriginalPlayer = Entity::GetOriginalPlayer();
+        if( (OriginalPlayer != None) && (OriginalPlayer != Player) )
+        {
+            do
+            {
+                GEInt iOldExperience = OriginalPlayer.PropertySet< PSSkills >().GetExperience();
+                OriginalPlayer.PropertySet< PSSkills >().SetExperience( iAmount, gESkillModifier_AddValue );
+                iAmount -= (OriginalPlayer.PropertySet< PSSkills >().GetExperience() - iOldExperience);
+            }
+            while( iAmount > 0 );
+        }
+
+        return 1;
+    }
     return 0;
 }

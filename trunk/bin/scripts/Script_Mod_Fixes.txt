@@ -6,4 +6,5 @@ and closes the quest "Caspar_TrickBronco" instead of the
 
 "GiveXP" is overidden to avoid loosing experience points
 (and possibly level) while reaching the next level step.
+The original player (e.g. transformed) also receives XP.
 
