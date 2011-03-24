@@ -1,4 +1,9 @@
 This is a Script Modification example from the RisenSDK.
+
 It overrides the orignal "OnQuestSuccess_CloseQuestWine"
 and closes the quest "Caspar_TrickBronco" instead of the
 "Bronco_ArenaFight" (like the original script function).
+
+"GiveXP" is overidden to avoid loosing experience points
+(and possibly level) while reaching the next level step.
+
