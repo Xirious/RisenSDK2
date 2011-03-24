@@ -374,18 +374,17 @@ gSScriptInit const * GE_STDCALL ScriptInit( void )
 // Entry Point
 //
 
-BOOL APIENTRY DllMain( HMODULE hModule, DWORD dwReason, LPVOID lpReserved )
+BOOL APIENTRY DllMain( HMODULE hModule, DWORD dwReason, LPVOID )
 {
-    UNREFERENCED_PARAMETER( lpReserved );
     switch( dwReason )
-	{
-	case DLL_PROCESS_ATTACH:
+    {
+    case DLL_PROCESS_ATTACH:
         ::DisableThreadLibraryCalls( hModule );
         break;
-	case DLL_PROCESS_DETACH:
-		break;
-	}
-	return TRUE;
+    case DLL_PROCESS_DETACH:
+        break;
+    }
+    return TRUE;
 }
 
 #pragma warning( pop )

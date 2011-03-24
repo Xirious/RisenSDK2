@@ -107,6 +107,8 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/Wall"
 				PreprocessorDefinitions="NDEBUG"
+				ExceptionHandling="0"
+				BufferSecurityCheck="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
