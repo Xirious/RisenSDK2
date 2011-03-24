@@ -1,4 +1,4 @@
-#include "Script/Story/Quest/Chapter1.h"
+#include "Script_Mod_Fixes.h"
 
 void AddScriptPatch( gSScriptInit & a_ScriptInit, GELPCChar a_pcOriginalFileName, GELPCChar a_pcName, GELPCChar a_pcSource, gFScript a_funcScript )
 {
@@ -37,7 +37,8 @@ extern "C" __declspec( dllexport ) gSScriptInit const * GE_STDCALL ScriptInit( v
     s_ScriptInit.m_arrScriptAICallbacks.Clear();
     s_ScriptInit.m_arrScripts.Clear();
 
-    AddScriptPatch( s_ScriptInit, "Script_Game.dll", "OnQuestSuccess_CloseQuestWine", "Script/Story/Quest/Chapter1.cpp", OnQuestSuccess_CloseQuestWine );
+    AddScriptPatch( s_ScriptInit, "Script_Game.dll", "GiveXP", "Script/Ai/AI_Commands/GiveXP.cpp", GiveXP );
+    AddScriptPatch( s_ScriptInit, "Script_Game.dll", "OnQuestSuccess_CloseQuestWine", "Script/Story/Quest/Chapter1.cpp",  OnQuestSuccess_CloseQuestWine );
     
     return &s_ScriptInit;
 }

@@ -107,6 +107,8 @@
 				Name="VCCLCompilerTool"
 				AdditionalOptions="/Wall"
 				PreprocessorDefinitions="NDEBUG"
+				ExceptionHandling="0"
+				BufferSecurityCheck="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -169,9 +171,29 @@
 					</File>
 				</Filter>
 			</Filter>
+			<Filter
+				Name="Ai"
+				>
+				<Filter
+					Name="AI_Commands"
+					>
+					<File
+						RelativePath=".\Script\Ai\AI_Commands\GiveXP.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Script\Ai\AI_Commands\GiveXP.h"
+						>
+					</File>
+				</Filter>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath=".\Script_Mod_Fixes.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Script_Mod_Fixes.h"
 			>
 		</File>
 		<File

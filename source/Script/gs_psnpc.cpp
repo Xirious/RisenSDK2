@@ -1,3 +1,5 @@
+#include "../Script.h"
+
 template<> PSNpc &       Entity::PropertySet( void )       { return *reinterpret_cast< PSNpc *       >( this ); }
 template<> PSNpc const & Entity::PropertySet( void ) const { return *reinterpret_cast< PSNpc const * >( this ); }
 

@@ -106,6 +106,4 @@ template<> PSSkills &       Entity::PropertySet( void );
 template<> PSSkills const & Entity::PropertySet( void ) const;
 GE_ASSERT_SIZEOF( PSSkills, sizeof(Entity) )
 
-#include "gs_psskills.inl"
-
 #endif
