@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="8,00"
 	Name="Script_Mod_Fixes"
-	ProjectGUID="{CC836B9A-E25E-4b12-A7C9-435C0287A035}"
+	ProjectGUID="{CC836B9A-E25E-4B12-A7C9-435C0287A035}"
 	RootNamespace="Script_Mod_Fixes"
 	Keyword="Win32Proj"
 	>
@@ -169,6 +169,14 @@
 						RelativePath=".\Script\Story\Quest\Chapter1.h"
 						>
 					</File>
+					<File
+						RelativePath=".\Script\Story\Quest\OnQuestChange.cpp"
+						>
+					</File>
+					<File
+						RelativePath=".\Script\Story\Quest\OnQuestChange.h"
+						>
+					</File>
 				</Filter>
 			</Filter>
 			<Filter
@@ -198,6 +206,10 @@
 		</File>
 		<File
 			RelativePath=".\Script_Mod_Fixes.rc"
+			>
+		</File>
+		<File
+			RelativePath="..\..\..\bin\scripts\Script_Mod_Fixes.txt"
 			>
 		</File>
 	</Files>

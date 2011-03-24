@@ -23,19 +23,19 @@ GEInt GE_STDCALL OnQuestChange( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GE
             {
                 Entity Player = Entity::GetPlayer();
                 Entity OriginalPlayer = Entity::GetOriginalPlayer();
-                GEBool bPlayerIsTransformed = ((OriginalPlayer != None) && (OriginalPlayer != Player));
+                GEBool bPlayerIsTransformed = OriginalPlayer.PropertySet< PSNpc >().IsValid();
                 GEBool bRetroQuestMessageSystemActivated = pQuestManager->GetRetroQuestMessageSystemActivated();
 
                 //NOTE: ModifySkillsSuccess has not been used in the original quests.
                 if( bRetroQuestMessageSystemActivated || bPlayerIsTransformed )
                 {
                     PSSkills const & PlayerSkills = bPlayerIsTransformed ? OriginalPlayer.PropertySet< PSSkills >() : Player.PropertySet< PSSkills >();
-                    gCSkills_PS const * pPlayerEngineSkills = PlayerSkills.operator ->();
+                    gCSkills_PS * pPlayerEngineSkills = const_cast< gCSkills_PS * >( PlayerSkills.operator ->() );
                     if( pPlayerEngineSkills )
                     {
                         bTObjArray< gCModifySkill > const & arrModifySkills = pQuest->GetModifySkillsSuccess();
                         for( bTObjArray< gCModifySkill >::bCConstIterator pModifySkill = arrModifySkills.Begin(); pModifySkill != arrModifySkills.End(); ++pModifySkill )
-                            const_cast< gCSkills_PS * >( pPlayerEngineSkills )->ModifySkillValue( *pModifySkill, GETrue );
+                            pPlayerEngineSkills->ModifySkillValue( *pModifySkill, GETrue );
                     }
                 }
                 if( bRetroQuestMessageSystemActivated )

@@ -1,7 +1,10 @@
 #include "../../../Script_Mod_Fixes.h"
 
-eCScriptProxyScript IsPlayerPartyOrGuide( "IsPlayerPartyOrGuide" );
-eCScriptProxyScript IsSmall( "IsSmall" );
+namespace CallScript
+{
+    eCScriptProxyScript IsPlayerPartyOrGuide( "IsPlayerPartyOrGuide" );
+    eCScriptProxyScript IsSmall( "IsSmall" );
+}
 
 GEInt GE_STDCALL GiveXP( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity, GELPVoid a_pOtherEntity, GEInt a_iIntParameter )
 {
@@ -17,19 +20,16 @@ GEInt GE_STDCALL GiveXP( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity
     else
         Other.AttachTo( a_pSPU->GetOtherEntity() );
 
-    Entity Player = Entity::GetPlayer();  
     GEInt iAmount = a_iIntParameter;
     GEBool bLevel = (iAmount == -1);
 
-    if( IsPlayerPartyOrGuide( Other, 0, 0 ) && ((IsPlayerPartyOrGuide( Self, 0, 0 ) != 1) || (bLevel != GETrue)) )
+    if( CallScript::IsPlayerPartyOrGuide( Other, 0, 0 ) &&
+        (!bLevel || !CallScript::IsPlayerPartyOrGuide( Self, 0, 0 )) )
 	{
-        if( (Self.PropertySet< PSNpc >().IsValid() == GETrue) && (bLevel == GETrue) )
+        if( bLevel && Self.PropertySet< PSNpc >().IsValid() )
         {
-            GEInt iLevel = Self.PropertySet< PSSkills >().GetLevel();
-            if( iLevel < 1 )
-                iLevel = 1;
-            iAmount = iLevel * 10;
-            if( IsSmall( Self, 0, 0 ) == 1 )
+            iAmount = Self.PropertySet< PSSkills >().GetLevel() * 10;
+            if( CallScript::IsSmall( Self, 0, 0 ) )
             {
                 if( iAmount < 10 )
                     iAmount = 10;
@@ -47,26 +47,17 @@ GEInt GE_STDCALL GiveXP( gCScriptProcessingUnit * a_pSPU, GELPVoid a_pSelfEntity
             bCUnicodeString( iAmount ),
             gELogMessageType_Gold, GEFalse, 0 );
 
-        GEInt iExperience = iAmount;
+        Entity Player = Entity::GetPlayer();  
+        Entity OriginalPlayer = Entity::GetOriginalPlayer();
+        PSSkills & PlayerSkills = OriginalPlayer.PropertySet< PSNpc >().IsValid() ?
+            OriginalPlayer.PropertySet< PSSkills >() : Player.PropertySet< PSSkills >();
         do
         {
-            GEInt iOldExperience = Player.PropertySet< PSSkills >().GetExperience();
-            Player.PropertySet< PSSkills >().SetExperience( iExperience, gESkillModifier_AddValue );
-            iExperience -= (Player.PropertySet< PSSkills >().GetExperience() - iOldExperience);
+            GEInt iExperience = PlayerSkills.GetExperience();
+            PlayerSkills.SetExperience( iAmount, gESkillModifier_AddValue );
+            iAmount -= (PlayerSkills.GetExperience() - iExperience);
         }
-        while( iExperience > 0 );
-
-        Entity OriginalPlayer = Entity::GetOriginalPlayer();
-        if( (OriginalPlayer != None) && (OriginalPlayer != Player) )
-        {
-            do
-            {
-                GEInt iOldExperience = OriginalPlayer.PropertySet< PSSkills >().GetExperience();
-                OriginalPlayer.PropertySet< PSSkills >().SetExperience( iAmount, gESkillModifier_AddValue );
-                iAmount -= (OriginalPlayer.PropertySet< PSSkills >().GetExperience() - iOldExperience);
-            }
-            while( iAmount > 0 );
-        }
+        while( iAmount > 0 );
 
         return 1;
     }

@@ -1,10 +1,21 @@
-This is a Script Modification example from the RisenSDK.
+This is a Script Modification example from the RisenSDK
+that is intended to replace/override some of the script
+functions in the /bin/scripts/Script_Game.dll to change
+the behaviour and/or fix bugs in the Engine/Game logic.
 
-It overrides the orignal "OnQuestSuccess_CloseQuestWine"
-and closes the quest "Caspar_TrickBronco" instead of the
-"Bronco_ArenaFight" (like the original script function).
+The following modifications are included:
 
-"GiveXP" is overidden to avoid loosing experience points
-(and possibly level) while reaching the next level step.
-The original player (e.g. transformed) also receives XP.
+* "OnQuestSuccess_CloseQuestWine" is closing the quest
+  "Caspar_TrickBronco" instead of "Bronco_ArenaFight".
+
+* "GiveXP" no longer cuts experience points/level
+  on level-up and always uses the genuine player.
+  The creature no longer gains XP/level while the
+  player is transformed into a Nautilus or Beast.
+
+* "OnQuestChange" is used to fix the missing calls to
+  GiveXP and ModifySkillValue on quest success if the
+  "RetroQuestMessageSystem" is enabled in the Config.
+  And the <ModifySkillsSuccess> array of the quest is
+  applied to the genuine player if he is transformed.
 
