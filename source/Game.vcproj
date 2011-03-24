@@ -205,6 +205,22 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_quest.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_questactor.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_questlocstring.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_questmanager.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_scriptadmin.h"
 			>
 		</File>

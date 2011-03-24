@@ -43,6 +43,9 @@ public:
     eCLocString( eCLocString const & );
     eCLocString( void );
    ~eCLocString( void );
+public:
+    friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCLocString & );
+    friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCLocString const & );
 };
 GE_ASSERT_SIZEOF( eCLocString, 0x000C )
 
