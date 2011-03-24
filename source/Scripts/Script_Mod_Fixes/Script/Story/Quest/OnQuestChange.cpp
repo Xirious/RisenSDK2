@@ -29,14 +29,11 @@ GEInt GE_STDCALL OnQuestChange( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GE
                 //NOTE: ModifySkillsSuccess has not been used in the original quests.
                 if( bRetroQuestMessageSystemActivated || bPlayerIsTransformed )
                 {
-                    PSSkills const & PlayerSkills = bPlayerIsTransformed ? OriginalPlayer.PropertySet< PSSkills >() : Player.PropertySet< PSSkills >();
+                    PSSkills const & PlayerSkills = bPlayerIsTransformed ?
+                        OriginalPlayer.PropertySet< PSSkills >() : Player.PropertySet< PSSkills >();
                     gCSkills_PS * pPlayerEngineSkills = const_cast< gCSkills_PS * >( PlayerSkills.operator ->() );
                     if( pPlayerEngineSkills )
-                    {
-                        bTObjArray< gCModifySkill > const & arrModifySkills = pQuest->GetModifySkillsSuccess();
-                        for( bTObjArray< gCModifySkill >::bCConstIterator pModifySkill = arrModifySkills.Begin(); pModifySkill != arrModifySkills.End(); ++pModifySkill )
-                            pPlayerEngineSkills->ModifySkillValue( *pModifySkill, GETrue );
-                    }
+                        pPlayerEngineSkills->ModifySkillValues( pQuest->GetModifySkillsSuccess(), !pQuest->GetSilent() );
                 }
                 if( bRetroQuestMessageSystemActivated )
                 {
