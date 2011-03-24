@@ -149,7 +149,7 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_psnpc.inl"
+			RelativePath=".\Script\gs_psnpc.cpp"
 			>
 		</File>
 		<File
@@ -157,7 +157,7 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_psskills.inl"
+			RelativePath=".\Script\gs_psskills.cpp"
 			>
 		</File>
 		<File
@@ -170,10 +170,6 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_world.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script.cpp"
 			>
 		</File>
 		<File

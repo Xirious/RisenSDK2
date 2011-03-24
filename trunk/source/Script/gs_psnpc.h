@@ -360,6 +360,4 @@ template<> PSNpc::PropertyVoice &       PSNpc::Property( void );
 template<> PSNpc::PropertyVoice const & PSNpc::Property( void ) const;
 GE_ASSERT_SIZEOF( PSNpc::PropertyVoice, sizeof(PSNpc) )
 
-#include "gs_psnpc.inl"
-
 #endif
