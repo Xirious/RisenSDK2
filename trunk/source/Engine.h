@@ -57,6 +57,7 @@ class eCPortalRoom_PS{};
 
 #include "Engine/ge_node.h"
 #include "Engine/ge_entityproxy.h"
+#include "Engine/ge_entitystringproxy.h"
 #include "Engine/ge_templateentityproxy.h"
 #include "Engine/ge_entitypropertyset.h"
 #include "Engine/ge_entity.h"

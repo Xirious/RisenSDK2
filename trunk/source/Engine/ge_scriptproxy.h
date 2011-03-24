@@ -40,6 +40,9 @@ public:
     eCScriptProxy( eCScriptProxy const & );
     eCScriptProxy( void );
    ~eCScriptProxy( void );
+public:
+    friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCScriptProxy & );
+    friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCScriptProxy const & );
 };
 GE_ASSERT_SIZEOF( eCScriptProxy, 0x0008 )
 

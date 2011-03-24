@@ -181,6 +181,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_entitystringproxy.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_frustumelementitem.h"
 			>
 		</File>

@@ -211,6 +211,15 @@ enum gEHudPage
     gEHudPage_ForceDWORD       = GE_FORCE_DWORD
 };
 
+enum gEInfoLocation
+{
+    gEInfoLocation_Main       = 0x00000000,
+    gEInfoLocation_Harbor     = 0x00000001,
+    gEInfoLocation_Monastery  = 0x00000002,
+    gEInfoLocation_Don        = 0x00000003,
+    gEInfoLocation_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEItemHoldType
 {
     gEItemHoldType_None          = 0x00000000,
@@ -315,13 +324,6 @@ enum gEPageMode
     gEPageMode_UserSlots  = 0x00000006,
     gEPageMode_UserMax    = 0x00000007,
     gEPageMode_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEQuestActor
-{
-    gEQuestActor_Client,
-    gEQuestActor_Target,
-    gEQuestActor_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gEReason
@@ -513,5 +515,15 @@ class gCScriptRoutine_PS{};
 #include "Game/ge_scriptprocessingunit.h"
 #include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
+
+class eCGuiBitmapProxy2{};
+class gCInfoSystem{};
+class gCInventory_PS{};
+class gCInventoryStack{};
+
+#include "Game/ge_questactor.h"
+#include "Game/ge_questlocstring.h"
+#include "Game/ge_quest.h"
+#include "Game/ge_questmanager.h"
 
 #endif
