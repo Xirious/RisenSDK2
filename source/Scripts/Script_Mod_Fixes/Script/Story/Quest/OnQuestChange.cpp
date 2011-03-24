@@ -19,7 +19,7 @@ GEInt GE_STDCALL OnQuestChange( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GE
         if( pQuestManager )
         {
             gCQuest const * pQuest = pQuestManager->GetQuest( QuestChange.m_strName );
-            if( pQuest )
+            if( pQuest && !pQuest->GetSilent() )
             {
                 Entity Player = Entity::GetPlayer();
                 Entity OriginalPlayer = Entity::GetOriginalPlayer();
@@ -33,7 +33,7 @@ GEInt GE_STDCALL OnQuestChange( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GE
                         OriginalPlayer.PropertySet< PSSkills >() : Player.PropertySet< PSSkills >();
                     gCSkills_PS * pPlayerEngineSkills = const_cast< gCSkills_PS * >( PlayerSkills.operator ->() );
                     if( pPlayerEngineSkills )
-                        pPlayerEngineSkills->ModifySkillValues( pQuest->GetModifySkillsSuccess(), !pQuest->GetSilent() );
+                        pPlayerEngineSkills->ModifySkillValues( pQuest->GetModifySkillsSuccess(), GETrue );
                 }
                 if( bRetroQuestMessageSystemActivated )
                 {
