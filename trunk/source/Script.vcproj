@@ -157,6 +157,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_psroutine.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_psroutine.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_psskills.cpp"
 			>
 		</File>
