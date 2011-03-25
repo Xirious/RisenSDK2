@@ -18,7 +18,7 @@ GE_ASSERT_SIZEOF( gSScriptDLL, 0x0038 )
 class GE_DLLIMPORT gCScriptAdmin :
     public eCScriptAdminBase
 {
-private:
+protected:
     class CProcessor :
         public eCProcessible
     {

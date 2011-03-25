@@ -4,7 +4,7 @@
 class GE_DLLIMPORT eCDynamicEntity :
     public eCGeometryEntity
 {
-private:
+protected:
     class CProcessor :
         public eCProcessible
     {
