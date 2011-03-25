@@ -2,6 +2,7 @@
 #define GE_SCRIPTPROCESSINGUNIT_H_INCLUDED
 
 class gCScriptAdmin;
+class gCScriptRoutine_PS;
 
 struct gScriptRunTimeSingleState
 {
@@ -151,7 +152,7 @@ protected:
 public:
     gCScriptProcessingUnit( void );
 };
-GE_ASSERT_SIZEOF( gCScriptProcessingUnit, 0x0130)
+GE_ASSERT_SIZEOF( gCScriptProcessingUnit, 0x0130 )
 
 #pragma warning( pop )
 

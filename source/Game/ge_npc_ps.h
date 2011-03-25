@@ -36,7 +36,7 @@ GE_ASSERT_SIZEOF( gSNPCStatusEffect, 0x003C )
 class GE_DLLIMPORT gCNPC_PS :
     public eCEntityPropertySet
 {
-private:
+protected:
     class CProcessor :
         public eCProcessible
     {

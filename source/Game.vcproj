@@ -249,6 +249,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_scriptroutine_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_skills_ps.h"
 			>
 		</File>

@@ -511,8 +511,8 @@ typedef eSScriptBase gSScriptAIFunction;
 typedef eSScriptBase gSScriptAIState;
 
 struct gSArgsForScriptBase{};
-class gCScriptRoutine_PS{};
 #include "Game/ge_scriptprocessingunit.h"
+#include "Game/ge_scriptroutine_ps.h"
 #include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
 
