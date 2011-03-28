@@ -1,8 +1,6 @@
 #ifndef GE_RUNTIMEINFO_H_INCLUDED
 #define GE_RUNTIMEINFO_H_INCLUDED
 
-class gCQuestManager;
-
 class GE_DLLIMPORT gCRuntimeInfo
 {
 public: virtual ~gCRuntimeInfo( void );

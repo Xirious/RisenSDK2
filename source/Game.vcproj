@@ -228,6 +228,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Game\ge_infolocstring.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_npcinfolocstring.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_runtimeinfo.h"
 				>
 			</File>
@@ -236,6 +244,34 @@
 				>
 				<File
 					RelativePath=".\Game\ge_infocommand.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandaddinfosystemendscript.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandaddlogtext.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandaddnpcinfo.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandaddquestactor.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandattack.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandback.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandboostattribs.h"
 					>
 				</File>
 			</Filter>

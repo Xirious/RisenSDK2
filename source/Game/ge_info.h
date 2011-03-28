@@ -134,15 +134,6 @@ enum gEInfoGesture
     gEInfoGesture_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gEInfoLocation
-{
-    gEInfoLocation_Main       = 0x00000000,
-    gEInfoLocation_Harbor     = 0x00000001,
-    gEInfoLocation_Monastery  = 0x00000002,
-    gEInfoLocation_Don        = 0x00000003,
-    gEInfoLocation_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEInfoNPCStatus
 {
     gEInfoNPCStatus_Alive             = 0x00000000,
@@ -152,6 +143,14 @@ enum gEInfoNPCStatus
     gEInfoNPCStatus_TalkedToPlayer    = 0x00000004,
     gEInfoNPCStatus_NotTalkedToPlayer = 0x00000005,
     gEInfoNPCStatus_ForceDWORD        = GE_FORCE_DWORD
+};
+
+enum gEInfoNPCType
+{
+    gEInfoNPCType_Vendor     = 0x00000000,
+    gEInfoNPCType_Teacher    = 0x00000001,
+    gEInfoNPCType_VIP        = 0x00000002,
+    gEInfoNPCType_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gEInfoType
