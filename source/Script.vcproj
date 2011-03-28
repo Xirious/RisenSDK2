@@ -245,6 +245,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_propertymacros.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_questmanager.h"
 			>
 		</File>

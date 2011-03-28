@@ -14,6 +14,8 @@ enum EDifficulty
 
 class GE_DLLIMPORT Entity
 {
+public:
+    GS_DECLARE_PROPERTYSET_TEMPLATE( Entity )
 protected:
     eCEntity * m_pEngineEntity;
 public:
@@ -254,9 +256,6 @@ public:
     Entity( eCEntity const * );
     Entity( void );
    ~Entity( void );
-public:
-    template< typename PSXxx > PSXxx &       PropertySet( void );
-    template< typename PSXxx > PSXxx const & PropertySet( void ) const;
 };
 
 #pragma warning( pop )

@@ -1,10 +1,7 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-class PSSkills
-{
-protected:
-    eCEntity * m_pEntity;
+GS_DECLARE_PROPERTYSET( PSSkills )
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
@@ -102,8 +99,6 @@ protected:
 //public: PSSkills & operator = ( PSSkills const & );
 };
 
-template<> PSSkills &       Entity::PropertySet( void );
-template<> PSSkills const & Entity::PropertySet( void ) const;
-GE_ASSERT_SIZEOF( PSSkills, sizeof(Entity) )
+GS_DECLARE_PROPERTYSET_ACCESSOR( PSSkills )
 
 #endif
