@@ -124,6 +124,102 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="InfoSystem"
+			>
+			<File
+				RelativePath=".\Script\gs_infcomattack.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomheal.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcominfowait.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcompickpocket.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomrunaiscript.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsay.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsayconfirm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsayholdingposition.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsaykeepitup.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsaysound.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsaysvm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsetsectorstatus.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomsleep.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomthink.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infcomuse.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_infosystem.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="PropertySets"
+			>
+			<File
+				RelativePath=".\Script\gs_psnpc.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psnpc.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psroutine.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psroutine.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psskills.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psskills.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Script\gs_achievement.h"
 			>
@@ -146,30 +242,6 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_gui2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psnpc.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psnpc.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psroutine.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psroutine.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psskills.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_psskills.h"
 			>
 		</File>
 		<File
