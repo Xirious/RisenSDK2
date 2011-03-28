@@ -211,15 +211,6 @@ enum gEHudPage
     gEHudPage_ForceDWORD       = GE_FORCE_DWORD
 };
 
-enum gEInfoLocation
-{
-    gEInfoLocation_Main       = 0x00000000,
-    gEInfoLocation_Harbor     = 0x00000001,
-    gEInfoLocation_Monastery  = 0x00000002,
-    gEInfoLocation_Don        = 0x00000003,
-    gEInfoLocation_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEItemHoldType
 {
     gEItemHoldType_None          = 0x00000000,
@@ -466,6 +457,14 @@ enum gESpecies
     gESpecies_ForceDWORD    = GE_FORCE_DWORD
 };
 
+enum gEStackType
+{
+    gEStackType_Normal     = 0x00000000,
+    gEStackType_Trade      = 0x00000001,
+    gEStackType_Hidden     = 0x00000002,
+    gEStackType_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEWalkMode
 {
     gEWalkMode_Sneak      = 0x00000000,
@@ -516,10 +515,18 @@ struct gSArgsForScriptBase{};
 #include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
 
-class eCGuiBitmapProxy2{};
-class gCInfoSystem{};
+class eCGuiBitmapProxy2
+{
+    void * m_pBitmap;  // eCDeferredGuiBitmap2 *
+};
 class gCInventory_PS{};
 class gCInventoryStack{};
+
+#include "Game/ge_info.h"
+#include "Game/ge_runtimeinfo.h"
+#include "Game/ge_infocommand.h"
+#include "Game/ge_infocondition.h"
+class gCInfoSystem{};
 
 #include "Game/ge_questactor.h"
 #include "Game/ge_questlocstring.h"

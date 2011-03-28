@@ -1,8 +1,6 @@
 #ifndef GE_QUEST_H_INCLUDED
 #define GE_QUEST_H_INCLUDED
 
-class gCQuestManager;
-
 enum gEQuestStatus
 {
     gEQuestStatus_Open       = 0x00000000,
