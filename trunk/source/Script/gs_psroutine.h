@@ -75,4 +75,6 @@ GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, RoutineChanged )
 GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, StatePosition )
 GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, TaskPosition )
 
+#include "gs_psroutine.inl"
+
 #endif

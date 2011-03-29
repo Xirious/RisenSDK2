@@ -19,8 +19,10 @@ protected:                              \
 
 #define GS_DECLARE_PROPERTYSET_ACCESSOR( CLASS ) \
 template<>                                       \
+inline                                           \
 CLASS & Entity::PropertySet( void );             \
 template<>                                       \
+inline                                           \
 CLASS const & Entity::PropertySet( void ) const; \
 
 #define GS_DEFINE_PROPERTYSET_ACCESSOR( CLASS )        \
@@ -57,8 +59,10 @@ CLASS const & Entity::PropertySet( void ) const        \
 
 #define GS_DECLARE_PROPERTY_ACCESSOR( CLASS, NAME )             \
 template<>                                                      \
+inline                                                          \
 CLASS::Property##NAME & CLASS::Property( void );                \
 template<>                                                      \
+inline                                                          \
 CLASS::Property##NAME const & CLASS::Property( void ) const;    \
 
 #define GS_DEFINE_PROPERTY_ACCESSOR( CLASS, NAME )                     \

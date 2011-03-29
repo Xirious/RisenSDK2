@@ -95,4 +95,6 @@ GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Reason )
 GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Species )
 GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Voice )
 
+#include "gs_psnpc.inl"
+
 #endif

@@ -196,15 +196,11 @@
 			Name="PropertySets"
 			>
 			<File
-				RelativePath=".\Script\gs_psnpc.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
 			<File
-				RelativePath=".\Script\gs_psroutine.cpp"
+				RelativePath=".\Script\gs_psnpc.inl"
 				>
 			</File>
 			<File
@@ -212,11 +208,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Script\gs_psskills.cpp"
+				RelativePath=".\Script\gs_psroutine.inl"
 				>
 			</File>
 			<File
 				RelativePath=".\Script\gs_psskills.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psskills.inl"
 				>
 			</File>
 		</Filter>
