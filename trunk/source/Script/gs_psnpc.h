@@ -1,9 +1,9 @@
 #ifndef GS_PSNPC_H_INCLUDED
 #define GS_PSNPC_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSNpc )
+class GE_DLLIMPORT PSNpc
+{
 public:
-    GS_DECLARE_PROPERTY_TEMPLATE( PSNpc )
     GS_DECLARE_PROPERTY( AnimationBearing,       bCString )
     GS_DECLARE_PROPERTY( AttitudeLock,           gEAttitude )
     GS_DECLARE_PROPERTY( BraveryOverride,        gEBraveryOverride )
@@ -30,6 +30,8 @@ public:
     GS_DECLARE_PROPERTY( Reason,                 gEReason )
     GS_DECLARE_PROPERTY( Species,                gESpecies )
     GS_DECLARE_PROPERTY( Voice,                  bCString )
+protected:
+    eCEntity * m_pEntity;
 public:
     GEBool            BeginStatusEffect( gSNPCStatusEffect & );
     void              ClearMnemonic( void );
@@ -65,6 +67,11 @@ protected:
     gCNPC_PS * operator ->               ( void );
 //FIXME: PSNpc assignment operator shouldn’t be used (only one byte is copied).
 //public: PSNpc & operator = ( PSNpc const & );
+public:
+    template< typename PropertyXxx >
+    PropertyXxx &       Property( void );
+    template< typename PropertyXxx >
+    PropertyXxx const & Property( void ) const;
 };
 
 GS_DECLARE_PROPERTYSET_ACCESSOR( PSNpc )

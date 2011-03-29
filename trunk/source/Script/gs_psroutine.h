@@ -1,9 +1,9 @@
 #ifndef GS_PSROUTINE_H_INCLUDED
 #define GS_PSROUTINE_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSRoutine )
+class GE_DLLIMPORT PSRoutine
+{
 public:
-    GS_DECLARE_PROPERTY_TEMPLATE( PSRoutine )
     GS_DECLARE_PROPERTY( AIDelay,            GEI32 )
     GS_DECLARE_PROPERTY( AIMode,             gEAIMode )
     GS_DECLARE_PROPERTY( ActionString,       bCString )
@@ -18,6 +18,8 @@ public:
     GS_DECLARE_PROPERTY( RoutineChanged,     GEBool )
     GS_DECLARE_PROPERTY( StatePosition,      GEI32 )
     GS_DECLARE_PROPERTY( TaskPosition,       GEI32 )
+protected:
+    eCEntity * m_pEntity;
 public:
     void       ContinueRoutine( void );
     void       FullStop( void );
@@ -56,6 +58,11 @@ public:
     gCScriptRoutine_PS const * operator -> ( void ) const;
 //FIXME: PSRoutine assignment operator shouldn’t be used (only one byte is copied).
 //public: PSRoutine & operator = ( PSRoutine const & );
+public:
+    template< typename PropertyXxx >
+    PropertyXxx &       Property( void );
+    template< typename PropertyXxx >
+    PropertyXxx const & Property( void ) const;
 };
 
 GS_DECLARE_PROPERTYSET_ACCESSOR( PSRoutine )
