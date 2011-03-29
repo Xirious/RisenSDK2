@@ -101,4 +101,6 @@ protected:
 
 GS_DECLARE_PROPERTYSET_ACCESSOR( PSSkills )
 
+#include "gs_psskills.inl"
+
 #endif
