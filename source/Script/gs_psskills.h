@@ -1,7 +1,10 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSSkills )
+class GE_DLLIMPORT PSSkills
+{
+protected:
+    eCEntity * m_pEntity;
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
