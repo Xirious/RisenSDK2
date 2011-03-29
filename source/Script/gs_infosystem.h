@@ -20,7 +20,8 @@ protected:
     static InfComThink              s_InfComThink;
     static InfComUse                s_InfComUse;
 protected:
-    static gCInfoCommand *            GE_STDCALL GetCurrentCommand(  void  );
+    static gCInfoCommand * GE_STDCALL GetCurrentCommand(  void  );
+public:
     static GEBool                     GE_STDCALL EndInfoSystem( GEBool );
     static GEBool                     GE_STDCALL ExistsGameVariable( bCString const & );
     static InfComAttack &             GE_STDCALL GetCurrentCommandAttack( void );
