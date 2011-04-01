@@ -3,6 +3,14 @@
 
 class gCEffect;
 
+enum gEEffectLink
+{
+    gEEffectLink_Independent  = 0x00000000,
+    gEEffectLink_TargetEntity = 0x00000001,
+    gEEffectLink_TargetBone   = 0x00000002,
+    gEEffectLink_ForceDWORD   = GE_FORCE_DWORD
+};
+
 struct gSEffectCommandInstance
 {
     gCEffect * m_pEffect;

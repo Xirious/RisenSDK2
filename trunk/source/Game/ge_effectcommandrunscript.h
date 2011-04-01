@@ -1,6 +1,20 @@
 #ifndef GE_EFFECTCOMMANDRUNSCRIPT_H_INCLUDED
 #define GE_EFFECTCOMMANDRUNSCRIPT_H_INCLUDED
 
+enum gEEffectScriptOtherType
+{
+    gEEffectScriptOtherType_Entity         = 0x00000000,
+    gEEffectScriptOtherType_TemplateEntity = 0x00000001,
+    gEEffectScriptOtherType_ForceDWORD     = GE_FORCE_DWORD
+};
+
+enum gEEffectScriptParamType
+{
+    gEEffectScriptParamType_UseParam             = 0x00000000,
+    gEEffectScriptParamType_UseEffectCommandTime = 0x00000001,
+    gEEffectScriptParamType_ForceDWORD           = GE_FORCE_DWORD
+};
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<>' needs to have dll-interface to be used by clients of class 'gCEffectCommandRunScript'
 

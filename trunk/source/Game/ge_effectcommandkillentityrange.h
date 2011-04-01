@@ -1,6 +1,13 @@
 #ifndef GE_EFFECTCOMMANDKILLENTITYRANGE_H_INCLUDED
 #define GE_EFFECTCOMMANDKILLENTITYRANGE_H_INCLUDED
 
+enum gEEffectKillRange
+{
+    gEEffectKillRange_All        = 0x00000000,
+    gEEffectKillRange_Range      = 0x00000001,
+    gEEffectKillRange_ForceDWORD = GE_FORCE_DWORD
+};
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<>' needs to have dll-interface to be used by clients of class 'gCEffectCommandKillEntityRange'
 

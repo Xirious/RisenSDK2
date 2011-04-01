@@ -40,35 +40,6 @@ enum eEDecayState
     eEDecayState_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gEEffectLink
-{
-    gEEffectLink_Independent  = 0x00000000,
-    gEEffectLink_TargetEntity = 0x00000001,
-    gEEffectLink_TargetBone   = 0x00000002,
-    gEEffectLink_ForceDWORD   = GE_FORCE_DWORD
-};
-
-enum gEEffectKillRange
-{
-    gEEffectKillRange_All        = 0x00000000,
-    gEEffectKillRange_Range      = 0x00000001,
-    gEEffectKillRange_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEEffectScriptOtherType
-{
-    gEEffectScriptOtherType_Entity         = 0x00000000,
-    gEEffectScriptOtherType_TemplateEntity = 0x00000001,
-    gEEffectScriptOtherType_ForceDWORD     = GE_FORCE_DWORD
-};
-
-enum gEEffectScriptParamType
-{
-    gEEffectScriptParamType_UseParam             = 0x00000000,
-    gEEffectScriptParamType_UseEffectCommandTime = 0x00000001,
-    gEEffectScriptParamType_ForceDWORD           = GE_FORCE_DWORD
-};
-
 enum eEPropertySetType
 {
     eEPropertySetType_Unknown                = 0x00000000,
