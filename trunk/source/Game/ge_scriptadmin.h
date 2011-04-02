@@ -5,9 +5,9 @@ struct gSScriptDLL
 {
     GELPVoid                           m_hModule;
     bCString                           m_strFileName;
-    bTPtrArray< gSScriptAIState * >    m_arrScriptsAIStates;
-    bTPtrArray< gSScriptAIFunction * > m_arrScriptsAIFunctions;
-    bTPtrArray< gSScriptAICallback * > m_arrScriptsAICallbacks;
+    bTPtrArray< gSScriptAIState * >    m_arrScriptAIStates;
+    bTPtrArray< gSScriptAIFunction * > m_arrScriptAIFunctions;
+    bTPtrArray< gSScriptAICallback * > m_arrScriptAICallbacks;
     bTPtrArray< gSScript * >           m_arrScripts;
 };
 GE_ASSERT_SIZEOF( gSScriptDLL, 0x0038 )
