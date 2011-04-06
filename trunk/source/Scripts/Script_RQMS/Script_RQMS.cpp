@@ -1,4 +1,4 @@
-#include "Script_Mod_Fixes.h"
+#include "Script_RQMS.h"
 
 void AddScriptPatch( gSScriptInit & a_ScriptInit, GELPCChar a_pcOriginalFileName, GELPCChar a_pcName, GELPCChar a_pcSource, gFScript a_funcScript )
 {
@@ -13,7 +13,7 @@ void AddScriptPatch( gSScriptInit & a_ScriptInit, GELPCChar a_pcOriginalFileName
               "The script \"%s\" is already overridden by the \"%s\"!\n"
               "Do you want to apply the patch anyway?",
               a_pcName, pScriptDLL->m_strFileName ),
-              "Script Modification - Fixes", MB_ICONEXCLAMATION | MB_YESNO ) == IDYES )
+              "Script RQMS - Fixes", MB_ICONEXCLAMATION | MB_YESNO ) == IDYES )
         {
             pScript->m_funcFunction = 0;
             if( pScriptDLL && pScriptDLL->m_arrScripts.RemoveAt( pScriptDLL->m_arrScripts.IndexOf( pScript ) ) )
@@ -38,11 +38,7 @@ extern "C" __declspec( dllexport ) gSScriptInit const * GE_STDCALL ScriptInit( v
     s_ScriptInit.m_arrScripts.Clear();
 
     AddScriptPatch( s_ScriptInit, "Script_Game.dll",
-        "GiveXP", "Script/Ai/AI_Commands/GiveXP.cpp", GiveXP );
-    AddScriptPatch( s_ScriptInit, "Script_Game.dll",
         "OnQuestChange", "Script/Story/Quest/OnQuestChange.cpp", OnQuestChange );
-    AddScriptPatch( s_ScriptInit, "Script_Game.dll",
-        "OnQuestSuccess_CloseQuestWine", "Script/Story/Quest/Chapter1.cpp", OnQuestSuccess_CloseQuestWine );
 
     return &s_ScriptInit;
 }
