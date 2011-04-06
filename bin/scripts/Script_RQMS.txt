@@ -1,0 +1,6 @@
+This is a Script Modification example of the Risen SDK.
+The "OnQuestChange" is used to fix the missing calls to
+GiveXP and ModifySkillValue on quest success if the un-
+supported "RetroQuestMessageSystem" is activated in the
+Config. And the ModifySkillsSuccess array of the quests
+is applied to the original player if he is transformed.

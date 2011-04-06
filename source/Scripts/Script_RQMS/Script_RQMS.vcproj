@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8,00"
-	Name="Script_Mod_Fixes"
+	Name="Script_RQMS"
 	ProjectGUID="{CC836B9A-E25E-4B12-A7C9-435C0287A035}"
-	RootNamespace="Script_Mod_Fixes"
+	RootNamespace="Script_RQMS"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -162,14 +162,6 @@
 					Name="Quest"
 					>
 					<File
-						RelativePath=".\Script\Story\Quest\Chapter1.cpp"
-						>
-					</File>
-					<File
-						RelativePath=".\Script\Story\Quest\Chapter1.h"
-						>
-					</File>
-					<File
 						RelativePath=".\Script\Story\Quest\OnQuestChange.cpp"
 						>
 					</File>
@@ -179,37 +171,21 @@
 					</File>
 				</Filter>
 			</Filter>
-			<Filter
-				Name="Ai"
-				>
-				<Filter
-					Name="AI_Commands"
-					>
-					<File
-						RelativePath=".\Script\Ai\AI_Commands\GiveXP.cpp"
-						>
-					</File>
-					<File
-						RelativePath=".\Script\Ai\AI_Commands\GiveXP.h"
-						>
-					</File>
-				</Filter>
-			</Filter>
 		</Filter>
 		<File
-			RelativePath=".\Script_Mod_Fixes.cpp"
+			RelativePath=".\Script_RQMS.cpp"
 			>
 		</File>
 		<File
-			RelativePath=".\Script_Mod_Fixes.h"
+			RelativePath=".\Script_RQMS.h"
 			>
 		</File>
 		<File
-			RelativePath=".\Script_Mod_Fixes.rc"
+			RelativePath=".\Script_RQMS.rc"
 			>
 		</File>
 		<File
-			RelativePath="..\..\..\bin\scripts\Script_Mod_Fixes.txt"
+			RelativePath="..\..\..\bin\scripts\Script_RQMS.txt"
 			>
 		</File>
 	</Files>
