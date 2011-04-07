@@ -274,6 +274,42 @@
 					RelativePath=".\Game\ge_infocommandboostattribs.h"
 					>
 				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandcleargameevent.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandclosequest.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandcreateitem.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommanddescription.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommanddestroyitem.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommanddoloot.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommanddotrade.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandend.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandendgame.h"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="conditions"
