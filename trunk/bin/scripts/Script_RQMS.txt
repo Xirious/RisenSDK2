@@ -1,3 +1,8 @@
+Place the Script_RQMS.dll into the <Risen>\bin\scripts\
+folder - where the original Script_Game.dll is located.
+
+Delete the Script_RQMS.dll to disable the modification.
+
 This is a Script Modification example of the Risen SDK.
 The "OnQuestChange" is used to fix the missing calls to
 GiveXP and ModifySkillValue on quest success if the un-
