@@ -310,6 +310,70 @@
 					RelativePath=".\Game\ge_infocommandendgame.h"
 					>
 				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandfullstop.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandgive.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandgivexp.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandheal.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandinfowait.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandkillnpc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandmoveto.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandpickpocket.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandplaymusic.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandremovenpc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandremovenpcinfo.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandremovequestactor.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandrunaiscript.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandruninfo.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandrunquest.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandrunscript.h"
+					>
+				</File>
 			</Filter>
 			<Filter
 				Name="conditions"
