@@ -548,7 +548,6 @@ class gCInventoryStack{};
 #include "Game/ge_infocommanddotrade.h"
 #include "Game/ge_infocommandend.h"
 #include "Game/ge_infocommandendgame.h"
-/** /
 #include "Game/ge_infocommandfullstop.h"
 #include "Game/ge_infocommandgive.h"
 #include "Game/ge_infocommandgivexp.h"
@@ -565,6 +564,7 @@ class gCInventoryStack{};
 #include "Game/ge_infocommandruninfo.h"
 #include "Game/ge_infocommandrunquest.h"
 #include "Game/ge_infocommandrunscript.h"
+/** /
 #include "Game/ge_infocommandsay.h"
 #include "Game/ge_infocommandsayconfirm.h"
 #include "Game/ge_infocommandsayholdingposition.h"
