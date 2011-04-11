@@ -78,6 +78,7 @@ class eCGuiWindow2{};
 #include "Engine/ge_statisticview.h"
 
 #include "Engine/ge_enginecomponentbase.h"
+#include "Engine/ge_moduleadmin.h"
 
 #include "Engine/ge_scriptadminbase.h"
 #include "Engine/ge_scriptfunctionmap.h"
