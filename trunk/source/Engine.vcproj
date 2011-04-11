@@ -217,6 +217,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_moduleadmin.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_node.h"
 			>
 		</File>
