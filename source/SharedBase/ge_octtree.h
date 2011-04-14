@@ -1,7 +1,7 @@
 #ifndef GE_OCTTREE_H_INCLUDED
 #define GE_OCTTREE_H_INCLUDED
 
-class bCOctTree;  // forward
+class bCOctTree;
 
 //FIXME: bCOctTreeEntryBase declarations/definitions.
 //FIXME: Is bCOctTree used at all and is there a bTOctTreeEntry template?

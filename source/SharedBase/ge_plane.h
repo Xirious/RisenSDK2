@@ -1,9 +1,6 @@
 #ifndef GE_PLANE_H_INCLUDED
 #define GE_PLANE_H_INCLUDED
 
-class bCBox;  // forward
-class bCRay;  // forward
-
 class GE_DLLIMPORT bCPlane
 {
 private:

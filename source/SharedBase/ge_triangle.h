@@ -1,12 +1,6 @@
 #ifndef GE_TRIANGLE_H_INCLUDED
 #define GE_TRIANGLE_H_INCLUDED
 
-class bCFrustum;    // forward
-class bCLine;       // forward
-class bCSphere;     // forward
-class bCStretch;    // forward
-class bCUnitedRay;  // forward
-
 class GE_DLLIMPORT bCTriangle
 {
 public:

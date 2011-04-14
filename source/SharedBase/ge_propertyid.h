@@ -1,8 +1,6 @@
 #ifndef GE_PROPERTYID_H_INCLUDED
 #define GE_PROPERTYID_H_INCLUDED
 
-class bCMd5;  // forward
-
 class GE_DLLIMPORT bCPropertyID
 {
 public:

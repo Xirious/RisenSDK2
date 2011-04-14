@@ -1,9 +1,6 @@
 #ifndef GE_AXISANGLE_H_INCLUDED
 #define GE_AXISANGLE_H_INCLUDED
 
-class bCEulerAngles;  // forward
-class bCQuaternion;   // forward
-
 class GE_DLLIMPORT bCAxisAngle
 {
 private:

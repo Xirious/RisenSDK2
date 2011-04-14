@@ -1,8 +1,6 @@
 #ifndef GE_PROPERTYCONVERTERPTR_H_INCLUDED
 #define GE_PROPERTYCONVERTERPTR_H_INCLUDED
 
-class bCPropertyConverter;  // forward
-
 class GE_DLLIMPORT bCPropertyConverterPtr
 {
 private:
