@@ -249,6 +249,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_splash.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_statistic.h"
 			>
 		</File>
