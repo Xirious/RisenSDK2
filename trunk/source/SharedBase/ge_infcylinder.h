@@ -1,8 +1,6 @@
 #ifndef GE_INFCYLINDER_H_INCLUDED
 #define GE_INFCYLINDER_H_INCLUDED
 
-class bCInfDoubleCylinder;  // forward
-
 class GE_DLLIMPORT bCInfCylinder
 {
 private:

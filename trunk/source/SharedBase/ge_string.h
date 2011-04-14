@@ -1,8 +1,6 @@
 #ifndef GE_STRING_H_INCLUDED
 #define GE_STRING_H_INCLUDED
 
-class bCUnicodeString;  // forward
-
 class GE_DLLIMPORT bCString
 {
 protected:

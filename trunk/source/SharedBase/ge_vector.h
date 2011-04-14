@@ -3,9 +3,6 @@
 
 #include "../../extern/physx281/SDKs/Foundation/include/NxVec3.h"
 
-class bCMatrix;   // forward
-class bCMatrix3;  // forward
-
 #pragma warning( push )
 #pragma warning( disable : 4201 )  // nonstandard extension used : nameless struct/union
 

@@ -1,12 +1,6 @@
 #ifndef GE_COLORBASE_H_INCLUDED
 #define GE_COLORBASE_H_INCLUDED
 
-class bCByteAlphaColor;   // forward
-class bCByteColor;        // forward
-class bCFloatAlphaColor;  // forward
-class bCFloatColor;       // forward
-class bCFloatColorHSV;    // forward
-
 enum bEPixelFormat
 {
     bEPixelFormat_RGB_555 = 1,

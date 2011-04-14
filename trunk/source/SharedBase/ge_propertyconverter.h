@@ -1,8 +1,6 @@
 #ifndef GE_PROPERTYCONVERTER_H_INCLUDED
 #define GE_PROPERTYCONVERTER_H_INCLUDED
 
-class bCObjectBase;  // forward
-
 //TODO: bCPropertyConverter - How to create array elements?
 //TODO: bCPropertyConverter - How to delete array elements?
 

@@ -1,8 +1,6 @@
 #ifndef GE_VECTOR2_H_INCLUDED
 #define GE_VECTOR2_H_INCLUDED
 
-class bCMatrix2;  // forward
-
 #pragma warning( push )
 #pragma warning( disable : 4201 )  // nonstandard extension used : nameless struct/union
 

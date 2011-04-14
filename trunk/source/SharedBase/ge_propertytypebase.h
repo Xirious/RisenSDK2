@@ -1,8 +1,6 @@
 #ifndef GE_PROPERTYTYPEBASE_H_INCLUDED
 #define GE_PROPERTYTYPEBASE_H_INCLUDED
 
-class bCPropertyObjectTypeBase;  // forward
-
 //FIXME: UDT name bSEnumValue guessed.
 struct bSEnumValue
 {
