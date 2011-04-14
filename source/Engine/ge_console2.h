@@ -13,13 +13,13 @@ protected:
     void Initialize( void );
 public:
     GEBool Create( void );
+    void   Destroy( void );
+    void   Hide( void );
     GEBool IsValid( void ) const;
     GEBool IsVisible( void ) const;
     GEBool Load( bCString const & );
     GEBool OnHandleMessage( GEUInt, GEUInt, GEI32 );
     GEBool SetUserFrame( bCString const & );
-    void   Destroy( void );
-    void   Hide( void );
     void   Show( void );
     void   ShowPropertyEditor( eCEntityProxy const &, GEBool );
     void   Update( void );

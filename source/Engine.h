@@ -30,8 +30,10 @@
 #include "Engine/ge_docobject.h"
 #include "Engine/ge_docarchive.h"
 
-//FIXME: eCVideoPlayer class.
-class eCVideoPlayer{};  // sizeof 0030
+class eCVideoPlayer{
+protected:
+    char __FIXME[ 0x0030 ];
+};
 #include "Engine/ge_gfxshared.h"
 #include "Engine/ge_apitexture.h"
 #include "Engine/ge_gfxobject.h"
@@ -44,16 +46,25 @@ class eCVideoPlayer{};  // sizeof 0030
 //HACK: Get Entity classes it compiling...
 struct eSGizmoPickInfo{};
 struct eSRayIntersectionDesc{};
-class eCCameraBase{};
-class eCCollisionDesc{};
-class eCContactIterator{};
-class eCContextBase{};
-class eCFrustumDatabase{};
-class eCIlluminated_PS{};
-class eCLightSet{};
-class eCRenderContext{};
-class eCPhysicObject{};
-class eCPortalRoom_PS{};
+class GE_DLLIMPORT eCCollisionDesc{};
+class GE_DLLIMPORT eCContactIterator{};
+class GE_DLLIMPORT eCContextBase{};
+class GE_DLLIMPORT eCGfxCamera{};
+class GE_DLLIMPORT eCFrustumDatabase{
+public:
+    struct eSRenderTargetDesc{};
+protected:
+    char __FIXME[ 0x0B1C ];
+};
+class GE_DLLIMPORT eCIlluminated_PS{};
+class GE_DLLIMPORT eCLightSet{};
+class GE_DLLIMPORT eCRenderContext{};
+class GE_DLLIMPORT eCShadowMapBase{};
+class GE_DLLIMPORT eCPhysicObject{};
+class GE_DLLIMPORT eCPortalRoom_PS{};
+class eCEntity;
+class eCGeometryEntity;
+#include "Engine/ge_camerabase.h"
 
 #include "Engine/ge_node.h"
 #include "Engine/ge_entityproxy.h"
@@ -73,8 +84,8 @@ class eCPortalRoom_PS{};
 
 #include "Engine/ge_guiresource2.h"
 
-class eCGuiWindow2{};
-class eCGuiFrame2{};
+class GE_DLLIMPORT eCGuiWindow2{};
+class GE_DLLIMPORT eCGuiFrame2{};
 #include "Engine/ge_statistic.h"
 #include "Engine/ge_statisticview.h"
 
