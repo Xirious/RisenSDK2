@@ -4,9 +4,9 @@
 enum eECamUpdate
 {
     eECamUpdate_None       = 0,
-    eECamUpdate_View       = 0x00000001,
+    eECamUpdate_Viewport   = 0x00000001,
     eECamUpdate_Projection = 0x00000002,
-    eECamUpdate_All        = eECamUpdate_View | eECamUpdate_Projection,
+    eECamUpdate_All        = eECamUpdate_Viewport | eECamUpdate_Projection,
     eECamUpdate_ForceDWORD = GE_FORCE_DWORD
 };
 
@@ -15,7 +15,6 @@ class GE_DLLIMPORT eCCameraBase :
 {
 public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
 public: virtual GEU16                      GetVersion( void ) const;
-public: using             bCObjectRefBase::IsValid;
 public: virtual GEBool                     IsValid( void ) const;
 public: virtual GEBool                     OnRead( bCIStream & );
 public: virtual GEBool                     OnWrite( bCOStream & );
