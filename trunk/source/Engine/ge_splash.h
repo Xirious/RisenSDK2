@@ -12,19 +12,19 @@ protected:
     HGDIOBJ  m_hBitmap;
     bCString m_strClassName;
 private:
-    GEBool MakeTransparent( void );
-    HWND   RegAndCreateWindow( void );
     void   FreeResources( void );
     void   Invalidate( void );
+    GEBool MakeTransparent( void );
     void   OnPaint( HWND );
+    HWND   RegAndCreateWindow( void );
 public:
-    GEBool           SetTransparentColor( GEU32 );
-    GEI32 GE_STDCALL WindowProc( HWND, GEUInt, GEUInt, GEI32 );
     GEInt            Close( void );
     GEInt            DoLoop( void );
     GEU32            SetBitmap( HBITMAP );
     GEU32            SetBitmap( bCString const & );
+    GEBool           SetTransparentColor( GEU32 );
     void             Show( void );
+    GEI32 GE_STDCALL WindowProc( HWND, GEUInt, GEUInt, GEI32 );
 public:
     eCSplash & operator = ( eCSplash const & );
 public:
