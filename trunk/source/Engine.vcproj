@@ -149,6 +149,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_console2.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_docarchive.cpp"
 			>
 		</File>

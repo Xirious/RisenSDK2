@@ -74,6 +74,7 @@ class eCPortalRoom_PS{};
 #include "Engine/ge_guiresource2.h"
 
 class eCGuiWindow2{};
+class eCGuiFrame2{};
 #include "Engine/ge_statistic.h"
 #include "Engine/ge_statisticview.h"
 
@@ -86,6 +87,10 @@ class eCGuiWindow2{};
 #include "Engine/ge_scriptproxyscript.h"
 
 #include "Engine/ge_splash.h"
+class eCConsoleEdit2{};
+class eCConsoleListCtrl2{};
+class eCPropertyEditFrame2{};
+#include "Engine/ge_console2.h"
 
 #pragma warning( pop )
 
