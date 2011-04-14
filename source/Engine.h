@@ -85,6 +85,8 @@ class eCGuiWindow2{};
 #include "Engine/ge_scriptproxy.h"
 #include "Engine/ge_scriptproxyscript.h"
 
+#include "Engine/ge_splash.h"
+
 #pragma warning( pop )
 
 #endif
