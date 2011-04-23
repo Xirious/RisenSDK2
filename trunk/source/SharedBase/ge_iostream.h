@@ -24,5 +24,6 @@ public:
     bCIOStream( bCIOStream const & );
     bCIOStream( void );
 };
+GE_ASSERT_SIZEOF( bCIOStream, 0x000C )
 
 #endif

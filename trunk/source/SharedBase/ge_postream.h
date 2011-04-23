@@ -43,5 +43,6 @@ public:
     bCPOStream( bCPOStream const & );
     bCPOStream( void );
 };
+GE_ASSERT_SIZEOF( bCPOStream, 0x0028 )
 
 #endif

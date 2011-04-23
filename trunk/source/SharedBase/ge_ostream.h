@@ -71,5 +71,6 @@ public:
     friend GE_DLLIMPORT bCOStream & GE_STDCALL operator >> ( bCDateTime const &, bCOStream & );
     friend GE_DLLIMPORT bCOStream & GE_STDCALL operator >> ( bCVariant const &, bCOStream & );
 };
+GE_ASSERT_SIZEOF( bCOStream, 0x0004 )
 
 #endif

@@ -78,5 +78,6 @@ public:
     friend GE_DLLIMPORT bCIStream & GE_STDCALL operator << ( bCDateTime &, bCIStream & );
     friend GE_DLLIMPORT bCIStream & GE_STDCALL operator << ( bCVariant &, bCIStream & );
 };
+GE_ASSERT_SIZEOF( bCIStream, 0x0008 )
 
 #endif
