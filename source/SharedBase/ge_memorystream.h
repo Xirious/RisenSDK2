@@ -39,6 +39,7 @@ public:
     bCMemoryStream( bCMemoryStream const & );
     bCMemoryStream( void );
 };
+GE_ASSERT_SIZEOF( bCMemoryStream, 0x0020 )
 
 #pragma warning( pop )
 

@@ -28,5 +28,6 @@ public:
     bCNullStream( bCNullStream const & );
     bCNullStream( void );
 };
+GE_ASSERT_SIZEOF( bCNullStream, 0x0018 )
 
 #endif
