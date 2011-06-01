@@ -14,14 +14,14 @@ GE_ASSERT_SIZEOF( gSEffectCommandSpawnEntityListItem, 0x0008 )
 class GE_DLLIMPORT gCEffectCommandSpawnEntityList :
     public gCEffectCommandEntity
 {
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCEffectCommandSpawnEntityList( void );
 public: virtual GEInt                      GetCommandPriority( void ) const;
 public: virtual bCString                   GetCommandString( void ) const;
 public: virtual void                       GetDependencies( bTObjArray< bCString > &, bTObjArray< bCString > &, bTObjArray< eCTemplateEntityProxy > & );
 public: virtual void                       OnStart( gSEffectCommandInstance & ) const;
 public: virtual GEBool                     Prefetch( void );
+public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: virtual void                       Destroy( void );
+public: virtual                           ~gCEffectCommandSpawnEntityList( void );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

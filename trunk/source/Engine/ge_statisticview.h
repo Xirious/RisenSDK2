@@ -3,10 +3,10 @@
 
 class GE_DLLIMPORT eCStatisticView
 {
-public: virtual void SetStatistic( eCStatistic * );  // [0000].0000
-public: virtual void Create( eCGuiWindow2 * ) = 0;   // [0000].0004
-public: virtual void Update( void )           = 0;   // [0000].0008
-public: virtual     ~eCStatisticView( void );        // [0000].000C
+public: virtual void SetStatistic( eCStatistic * );  
+public: virtual void Create( eCGuiWindow2 * ) = 0;   
+public: virtual void Update( void )           = 0;   
+public: virtual     ~eCStatisticView( void );        
 protected:
     eCStatistic * m_pStatistic;
 protected:

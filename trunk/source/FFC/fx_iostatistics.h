@@ -3,7 +3,7 @@
 
 class FF_DLLIMPORT CFXIOStatistics
 {
-public: virtual ~CFXIOStatistics( void );  // [0000].0000
+public: virtual ~CFXIOStatistics( void );  
 protected:
     // sizeof(CFXIOStatistics) 0004
 public:

@@ -9,7 +9,7 @@
 class FF_DLLIMPORT CFXTableMap :
     public IFXTableController
 {
-protected: virtual FFBool PreTableModify( CFXTable const * );  // [0000].0000
+protected: virtual FFBool PreTableModify( CFXTable const * );  
 protected:
     bTPtrArray< CFXTableMapItem * >    m_arrItems;        // 0004
     bTValMap< bCUnicodeString, FFInt > m_mapPrefixPaths;  // 0010

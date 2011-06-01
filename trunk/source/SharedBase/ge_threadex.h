@@ -4,8 +4,8 @@
 class GE_DLLIMPORT bCThreadEx :
     public bCThread
 {
-public:  virtual     ~bCThreadEx( void );
 private: virtual void Execute( void ) = 0;  //FIXME: bCThreadEx::Execute prototype.
+public:  virtual     ~bCThreadEx( void );
 protected:
     bCCriticalSection m_CriticalSection;
     GEBool            m_bStarted;

@@ -4,12 +4,12 @@
 class GE_DLLIMPORT bCEvent :
     public bCObjectRefBase
 {
+public:    virtual GEBool   IsDeleteable( void );
 public:    virtual GEBool   OnRead( bCIStream & );
 public:    virtual GEBool   OnWrite( bCOStream & );
 public:    virtual bEResult Create( void );
 public:    virtual void     Destroy( void );
 protected: virtual         ~bCEvent( void );
-public:    virtual GEBool   IsDeleteable( void );
 public:
     bCString m_strName;
     GEBool   m_bReserved;

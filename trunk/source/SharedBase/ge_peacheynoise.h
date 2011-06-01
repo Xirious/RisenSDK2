@@ -15,9 +15,9 @@ public:
         bEAlgorithm_ForceDWORD = GE_FORCE_DWORD
     };
 public: virtual void    SetSeed( GEInt );
-public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const;
-public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
 public: virtual GEFloat GetNoise( GEFloat ) const;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const;
 public: virtual        ~bCPeacheyNoise( void );
 private:
     GEFloat     m_pfGradientTable[ 256 ][ 3 ];

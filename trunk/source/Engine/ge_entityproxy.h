@@ -6,12 +6,12 @@
 
 class GE_DLLIMPORT eCEntityProxy
 {
-public:    virtual bCString   GetAddress( void ) const;           // [0000].0000
-protected: virtual eCEntity * ResolveEntity( void );              // [0000].0004
-protected: virtual void       Destroy( void );                    // [0000].0008
-protected: virtual bEResult   CopyFrom( eCEntityProxy const & );  // [0000].000C
-public:    virtual bEResult   Read( bCIStream & );                // [0000].0010
-public:    virtual bEResult   Write( bCOStream & ) const;         // [0000].0014
+public:    virtual bCString   GetAddress( void ) const;           
+protected: virtual eCEntity * ResolveEntity( void );              
+protected: virtual void       Destroy( void );                    
+protected: virtual bEResult   CopyFrom( eCEntityProxy const & );  
+public:    virtual bEResult   Read( bCIStream & );                
+public:    virtual bEResult   Write( bCOStream & ) const;         
 private:
     eSEntityID * m_pEntityID;
 protected:

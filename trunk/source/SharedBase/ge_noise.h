@@ -18,9 +18,9 @@ enum bENoiseTurbulence
 class GE_DLLIMPORT bCNoise
 {
 public: virtual void    SetSeed( GEInt ) = 0;
-public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const = 0;
-public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const = 0;
 public: virtual GEFloat GetNoise( GEFloat ) const = 0;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const = 0;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const = 0;
 public: virtual        ~bCNoise( void );
 protected:
     void CopyFrom( bCNoise const & );

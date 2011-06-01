@@ -3,8 +3,8 @@
 
 class GE_DLLIMPORT bCIStream
 {
-public: virtual GEU32 Read( bCString & );
 public: virtual GEU32 Read( GELPVoid, GEU32 );
+public: virtual GEU32 Read( bCString & );
 public: virtual      ~bCIStream( void );
 private:
     GEU16 m_u16StreamVersion;

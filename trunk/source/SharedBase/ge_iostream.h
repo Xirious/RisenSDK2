@@ -13,11 +13,9 @@ class GE_DLLIMPORT bCIOStream :
     public bCIStream,
     public bCOStream
 {
-public: using bCIStream::Read;
 public: virtual         ~bCIOStream( void );
 public: virtual GEI64    GetPosition( void ) const = 0;
 public: virtual GEBool   Seek( GEI64, bEStreamSeekMode ) = 0;
-public: using bCOStream::Write;
 public:
     bCIOStream & operator = ( bCIOStream const & );
 public:

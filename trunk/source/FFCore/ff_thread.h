@@ -3,14 +3,14 @@
 
 class FF_DLLIMPORT CFFThread
 {
-/* [0000].0000 */ public:    virtual FFBool InitInstance( void );
-/* [0000].0004 */ public:    virtual FFInt  ExitInstance( void );
-/* [0000].0008 */ public:    virtual FFInt  Run( void );
-/* [0000].000C */ protected: virtual void   OnInit( void );
-/* [0000].0010 */ protected: virtual void   OnRun( void );
-/* [0000].0014 */ protected: virtual void   OnExit( void );
-/* [0000].0018 */ protected: virtual void   OnDelete( void );
-/* [0000].001C */ public:    virtual       ~CFFThread( void );
+    public:    virtual FFBool InitInstance( void );
+    public:    virtual FFInt  ExitInstance( void );
+    public:    virtual FFInt  Run( void );
+    protected: virtual void   OnInit( void );
+    protected: virtual void   OnRun( void );
+    protected: virtual void   OnExit( void );
+    protected: virtual void   OnDelete( void );
+    public:    virtual       ~CFFThread( void );
 private:
     /* 0004 */ FFLPVoid m_hThread;
     /* 0008 */ FFU32    m_u32ThreadId;

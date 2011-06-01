@@ -4,12 +4,12 @@
 class GE_DLLIMPORT eCModuleAdmin :
     public bCObjectRefBase
 {
+public: virtual bEResult ResetResources( GEBool );
+public: virtual bEResult RestoreResources( GEBool );
 public: virtual GEU16    GetVersion( void ) const;
 public: virtual bEResult Create( void );
 public: virtual void     Destroy( void );
 public: virtual         ~eCModuleAdmin( void );
-public: virtual bEResult ResetResources( GEBool );
-public: virtual bEResult RestoreResources( GEBool );
 protected:
     bTPtrArray< eCEngineComponentBase * >       m_arrModules;
     bTValMap< eCEngineComponentBase *, bCGuid > m_mapModules;

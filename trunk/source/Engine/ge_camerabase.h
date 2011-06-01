@@ -13,6 +13,11 @@ enum eECamUpdate
 class GE_DLLIMPORT eCCameraBase :
     public bCObjectRefBase
 {
+public: virtual bEResult                   Init( HWND, GEFloat, GEFloat, GEFloat );
+public: virtual bEResult                   Init( bCRect const &, GEFloat, GEFloat, GEFloat );
+public: virtual bEResult                   Create( GEBool );
+public: virtual void                       UpdateViewport( GEBool );
+public: virtual void                       UpdateProjection( GEBool );
 public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
 public: virtual GEU16                      GetVersion( void ) const;
 public: virtual GEBool                     IsValid( void ) const;
@@ -25,11 +30,6 @@ public: virtual GEU32                      AddReference( void );
 public: virtual GEU32                      ReleaseReference( void );
 public: virtual bEResult                   PostInitializeProperties( void );
 public: virtual                           ~eCCameraBase( void );
-public: virtual bEResult                   Init( bCRect const &, GEFloat, GEFloat, GEFloat );
-public: virtual bEResult                   Init( HWND, GEFloat, GEFloat, GEFloat );
-public: virtual bEResult                   Create( GEBool );
-public: virtual void                       UpdateViewport( GEBool );
-public: virtual void                       UpdateProjection( GEBool );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

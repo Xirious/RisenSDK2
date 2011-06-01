@@ -6,9 +6,9 @@
 
 class bCPropertyContainer
 {
-public: virtual void     Invalidate( void );          // [0000].0000
-public: virtual bEResult Read( bCIStream & );         // [0000].0004
-public: virtual bEResult Write( bCOStream & ) const;  // [0000].0008
+public: virtual void     Invalidate( void );          
+public: virtual bEResult Read( bCIStream & );         
+public: virtual bEResult Write( bCOStream & ) const;  
 private:
     bCPropertyContainer const & operator = ( bCPropertyContainer const & );  // not defined
 private:
@@ -22,9 +22,9 @@ template< typename T >
 class bTPropertyContainer :
     public bCPropertyContainer
 {
-public: virtual void     Invalidate( void );          // [0000].0000
-public: virtual bEResult Read( bCIStream & );         // [0000].0004
-public: virtual bEResult Write( bCOStream & ) const;  // [0000].0008
+public: virtual void     Invalidate( void );          
+public: virtual bEResult Read( bCIStream & );         
+public: virtual bEResult Write( bCOStream & ) const;  
 private:
     static T ms_DefaultValue;
 private:
