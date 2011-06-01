@@ -12,14 +12,13 @@ public:
         bEArchiveFileAccessMode_ReadWrite,
         bEArchiveFileAccessMode_ForceDWORD = GE_FORCE_DWORD
     };
-/* [0000].0000 */ public: virtual GEU32  Read( bCString & );
-/* [0000].0004 */ public: virtual GEU32  Read( GELPVoid, GEU32 );
-/* [0000].0008 */ public: virtual       ~eCArchiveFile( void );
-/* [0000].000C */ public: virtual GEI64  GetPosition( void ) const;
-/* [0000].0010 */ public: virtual GEBool Seek( GEI64, bEStreamSeekMode );
-/* [0008].0000 */ public: virtual GEU32  Write( bCString const & );
-/* [0008].0004 */ public: virtual GEU32  Write( GELPCVoid, GEU32 );
-// [0008].0008 // public: virtual       ~eCArchiveFile( void );
+    public: virtual GEU32  Read( GELPVoid, GEU32 );
+    public: virtual GEU32  Read( bCString & );
+    public: virtual       ~eCArchiveFile( void );
+    public: virtual GEI64  GetPosition( void ) const;
+    public: virtual GEBool Seek( GEI64, bEStreamSeekMode );
+    public: virtual GEU32  Write( GELPCVoid, GEU32 );
+    public: virtual GEU32  Write( bCString const & );
 private:
     // 0000 // eCArchiveFile::`vftable'{for `bCIStream'}
     // 0004 // bCIStream members

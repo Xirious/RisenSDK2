@@ -7,8 +7,8 @@
 class GE_DLLIMPORT eCScriptProxyScript :
     public eCScriptProxy
 {
-protected: virtual eSScriptBase * QueryScript( bCString const & );  // [0000].0000
-protected: virtual void           ReleaseScript( eSScriptBase * );  // [0000].0004
+protected: virtual eSScriptBase * QueryScript( bCString const & );  
+protected: virtual void           ReleaseScript( eSScriptBase * );  
 protected:
     GEInt CallScript( eCEntity *, eCEntity *, GEInt ) const;
 public:

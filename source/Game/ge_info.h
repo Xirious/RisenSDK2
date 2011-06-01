@@ -175,6 +175,8 @@ struct SDialogDescription
 class GE_DLLIMPORT gCInfo :
     public eCDocObject
 {
+public: virtual bEResult                   ReadRuntimeData( bCIStream & );
+public: virtual bEResult                   WriteRuntimeData( bCOStream & );
 public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
 public: virtual GEU16                      GetVersion( void ) const;
 public: virtual GEBool                     OnDeserialize( bCXMLParserNode * );
@@ -190,8 +192,6 @@ public: virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;
 public: virtual                           ~gCInfo( void );
 public: virtual bCString                   GetRawExt( void ) const;
 public: virtual bCString                   GetRawPath( void ) const;
-public: virtual bEResult                   ReadRuntimeData( bCIStream & );
-public: virtual bEResult                   WriteRuntimeData( bCOStream & );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

@@ -7,8 +7,8 @@
 class GE_DLLIMPORT gCScriptProxyAIFunction :
     public eCScriptProxy
 {
-protected: virtual eSScriptBase * QueryScript( bCString const & );  // [0000].0000
-protected: virtual void           ReleaseScript( eSScriptBase * );  // [0000].0004
+protected: virtual eSScriptBase * QueryScript( bCString const & );  
+protected: virtual void           ReleaseScript( eSScriptBase * );  
 public:
     gCScriptProxyAIFunction & operator = ( gCScriptProxyAIFunction const & );
 public:

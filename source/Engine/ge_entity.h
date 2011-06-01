@@ -45,73 +45,45 @@ public:
         eEInsertType_Manual     = 0x00000006,
         eEInsertType_ForceDWORD = GE_FORCE_DWORD
     };
-public:    using                    eCNode::GetObjectType;                                                                            // [0000].0000
-public:    virtual GEU16                    GetVersion( void ) const;                                                                 // [0000].0004
-public:    using                    eCNode::IsValid;                                                                                  // [0000].0008
-public:    using              bCObjectBase::Deserialize;                                                                              // [0000].000C
-public:    using              bCObjectBase::Serialize;                                                                                // [0000].0010
-public:    using              bCObjectBase::Read;                                                                                     // [0000].0014
-public:    using              bCObjectBase::Write;                                                                                    // [0000].0018
-public:    using              bCObjectBase::OnDeserialize;                                                                            // [0000].001C
-public:    using              bCObjectBase::OnSerialize;                                                                              // [0000].0020
-public:    virtual GEBool                   OnRead( bCIStream & );                                                                    // [0000].0024
-public:    virtual GEBool                   OnWrite( bCOStream & );                                                                   // [0000].0028
-public:    virtual bEResult                 Create( void );                                                                           // [0000].002C
-public:    virtual void                     Destroy( void );                                                                          // [0000].0030
-public:    using              bCObjectBase::CopyFrom;                                                                                 // [0000].0034
-public:    virtual GEBool                   OnCopyFrom( bCObjectBase const & );                                                       // [0000].0038
-public:    using              bCObjectBase::OnCopyPatchableOnly;                                                                      // [0000].003C
-public:    using           bCObjectRefBase::AddReference;                                                                             // [0000].0040
-public:    using                    eCNode::ReleaseReference;                                                                         // [0000].0044
-public:    using              bCObjectBase::GetReferenceCount;                                                                        // [0000].0048
-public:    using              bCObjectBase::BindPOType;                                                                               // [0000].004C
-public:    using              bCObjectBase::PostInitializeProperties;                                                                 // [0000].0050
-public:    using              bCObjectBase::HandleDeprecatedProperty;                                                                 // [0000].0054
-public:    using              bCObjectBase::NotifyPropertyValueChangedEnterEx;                                                        // [0000].0058
-public:    using              bCObjectBase::NotifyPropertyValueChangedExitEx;                                                         // [0000].005C
-public:    using              bCObjectBase::OnNotifyPropertyValueChangedEnterEx;                                                      // [0000].0060
-public:    using              bCObjectBase::OnNotifyPropertyValueChangedExitEx;                                                       // [0000].0064
-public:    virtual GEInt                    GetNativePropertyCount( void ) const;                                                     // [0000].0068
-public:    virtual bCPropertyConverterPtr   GetNativePropertyAt( GEInt ) const;                                                       // [0000].006C
-protected: virtual                         ~eCEntity( void );                                                                         // [0000].0070
-public:    virtual eCEntity *               QueryEntity( void );                                                                      // [0000].0074
-public:    using                    eCNode::QueryGeometryEntity;                                                                      // [0000].0078
-public:    using                    eCNode::QueryDynamicEntity;                                                                       // [0000].007C
-public:    using                    eCNode::QueryTemplateEntity;                                                                      // [0000].0080
-public:    using                    eCNode::GetEntityID;                                                                              // [0000].0084
-public:    using                    eCNode::OnReadContent;                                                                            // [0000].0088
-protected: virtual void                     OnParentChanged( eCNode * );                                                              // [0000].008C
-protected: virtual void                     OnAttachChild( eCNode * );                                                                // [0000].0090
-protected: virtual void                     OnDetachChild( eCNode * );                                                                // [0000].0094
-public:    using                    eCNode::UpdateParentBoundaries;                                                                   // [0000].0098
-public:    using                    eCNode::UpdateChildDependencies;                                                                  // [0000].009C
-public:    using                    eCNode::DoClone;                                                                                  // [0000].00A0
-public:    virtual bCPropertyID const &     GetID( void ) const;                                                                      // [0000].00A4
-public:    virtual void                     Enable( GEBool );                                                                         // [0000].00A8
-public:    virtual void                     EnablePicking( GEBool, GEBool );                                                          // [0000].00AC
-public:    virtual GEBool                   IsDummy( void ) const;                                                                    // [0000].00B0
-public:    virtual void                     SetCreator( eCTemplateEntity * );                                                         // [0000].00B4
-public:    virtual eCTemplateEntity const * GetCreator( void ) const;                                                                 // [0000].00B8
-public:    virtual bCString const &         GetName( void ) const;                                                                    // [0000].00BC
-public:    virtual GEBool                   AddPropertySet( eCEntityPropertySet * );                                                  // [0000].00C0
-public:    virtual GEBool                   SetPropertySets( bTRefPtrArray< eCEntityPropertySet * > const & );                        // [0000].00C4
-public:    virtual GEBool                   RemovePropertySet( bCString const & );                                                    // [0000].00C8
-public:    virtual eCEntityPropertySet *    GetPropertySet( eEPropertySetType );                                                      // [0000].00CC
-public:    virtual void                     Decay( void );                                                                            // [0000].00D0
-public:    virtual GEBool                   IsAutoKillEnabled( void ) const;                                                          // [0000].00D4
-protected: virtual void                     CopyEntityPrivateData( eCEntity const &, GEBool );                                        // [0000].00D8
-protected: virtual GEBool                   OnPatchWithTemplate( eCTemplateEntity const &, GEBool, GEBool );                          // [0000].00DC
-protected: virtual void                     OnUpdateBoundary( void );                                                                 // [0000].00E0
-public:    virtual void                     Prefetch( bCVector const &, GEBool );                                                     // [0000].00E4
-public:    virtual void                     OnCacheIn( void );                                                                        // [0000].00E8
-public:    virtual void                     OnCacheOut( void );                                                                       // [0000].00EC
-protected: virtual void                     EnterProcessingRange( void );                                                             // [0000].00F0
-protected: virtual void                     ExitProcessingRange( void );                                                              // [0000].00F4
-public:    virtual void                     CacheOut( void );                                                                         // [0000].00F8
-public:    virtual void                     RenderGizmo( eCCameraBase *, GEInt );                                                     // [0000].00FC
-public:    virtual void                     RenderAlphaGizmo( eCCameraBase *, GEInt );                                                // [0000].0100
-public:    virtual GEBool                   PickGizmo( eSRayIntersectionDesc &, eSGizmoPickInfo *, GEInt );                           // [0000].0104
-public:    virtual GEBool                   OnMoveGizmo( eSGizmoPickInfo const *, eCCameraBase *, bCPoint const &, GEFloat, GEInt );  // [0000].0108
+public:    virtual bCPropertyID const &     GetID( void ) const;                                                                      
+public:    virtual void                     Enable( GEBool );                                                                         
+public:    virtual void                     EnablePicking( GEBool, GEBool );                                                          
+public:    virtual GEBool                   IsDummy( void ) const;                                                                    
+public:    virtual void                     SetCreator( eCTemplateEntity * );                                                         
+public:    virtual eCTemplateEntity const * GetCreator( void ) const;                                                                 
+public:    virtual bCString const &         GetName( void ) const;                                                                    
+public:    virtual GEBool                   AddPropertySet( eCEntityPropertySet * );                                                  
+public:    virtual GEBool                   SetPropertySets( bTRefPtrArray< eCEntityPropertySet * > const & );                        
+public:    virtual GEBool                   RemovePropertySet( bCString const & );                                                    
+public:    virtual eCEntityPropertySet *    GetPropertySet( eEPropertySetType );                                                      
+public:    virtual void                     Decay( void );                                                                            
+public:    virtual GEBool                   IsAutoKillEnabled( void ) const;                                                          
+protected: virtual void                     CopyEntityPrivateData( eCEntity const &, GEBool );                                        
+protected: virtual GEBool                   OnPatchWithTemplate( eCTemplateEntity const &, GEBool, GEBool );                          
+protected: virtual void                     OnUpdateBoundary( void );                                                                 
+public:    virtual void                     Prefetch( bCVector const &, GEBool );                                                     
+public:    virtual void                     OnCacheIn( void );                                                                        
+public:    virtual void                     OnCacheOut( void );                                                                       
+protected: virtual void                     EnterProcessingRange( void );                                                             
+protected: virtual void                     ExitProcessingRange( void );                                                              
+public:    virtual void                     CacheOut( void );                                                                         
+public:    virtual void                     RenderGizmo( eCCameraBase *, GEInt );                                                     
+public:    virtual void                     RenderAlphaGizmo( eCCameraBase *, GEInt );                                                
+public:    virtual GEBool                   PickGizmo( eSRayIntersectionDesc &, eSGizmoPickInfo *, GEInt );                           
+public:    virtual GEBool                   OnMoveGizmo( eSGizmoPickInfo const *, eCCameraBase *, bCPoint const &, GEFloat, GEInt );  
+public:    virtual GEU16                    GetVersion( void ) const;                                                                 
+public:    virtual GEBool                   OnRead( bCIStream & );                                                                    
+public:    virtual GEBool                   OnWrite( bCOStream & );                                                                   
+public:    virtual bEResult                 Create( void );                                                                           
+public:    virtual void                     Destroy( void );                                                                          
+public:    virtual GEBool                   OnCopyFrom( bCObjectBase const & );                                                       
+public:    virtual GEInt                    GetNativePropertyCount( void ) const;                                                     
+public:    virtual bCPropertyConverterPtr   GetNativePropertyAt( GEInt ) const;                                                       
+protected: virtual                         ~eCEntity( void );                                                                         
+public:    virtual eCEntity *               QueryEntity( void );                                                                      
+protected: virtual void                     OnParentChanged( eCNode * );                                                              
+protected: virtual void                     OnAttachChild( eCNode * );                                                                
+protected: virtual void                     OnDetachChild( eCNode * );                                                                
 private:
     eSEntityFlags                          m_EntityFlags;               // 0014
     GEU8 (*                                m_pPSIndexMap) [ 0x80 ];     // 0018 // eSPSIndexMap *

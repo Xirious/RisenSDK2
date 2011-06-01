@@ -3,7 +3,7 @@
 
 class FF_DLLIMPORT CFXPhysicalFileMapping
 {
-public: virtual ~CFXPhysicalFileMapping( void );  // [0000].0000
+public: virtual ~CFXPhysicalFileMapping( void );  
 protected:
     FFLPVoid m_hInterface;  // 0004
 public:

@@ -27,7 +27,7 @@ public:
         //FIXME: gCScriptProcessingUnit::gEAIInstruction constants.
         gEAIInstruction_ForceDWORD = GE_FORCE_DWORD
     };
-public: virtual ~gCScriptProcessingUnit( void );  // [0000].0000
+public: virtual ~gCScriptProcessingUnit( void );  
 protected:
     static GEU32 s_u32CalledStateCallbacks;
     static GEU32 s_u32CalledTaskCallbacks;

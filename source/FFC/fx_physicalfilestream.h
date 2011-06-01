@@ -4,11 +4,11 @@
 class FF_DLLIMPORT CFXPhysicalFileStream :
     public CFXIOStream
 {
-public: virtual FFU32  Read( FFLPVoid, FFU32 ) const;      // [0000].0000
-public: virtual FFU32  Write( FFLPCVoid, FFU32 );          // [0000].0004
-public: virtual FFBool GetPosition( FFI64 & ) const;       // [0000].0008
-public: virtual FFBool SetPosition( FFI64, EFFFileSeek );  // [0000].000C
-public: virtual       ~CFXPhysicalFileStream( void );      // [0000].0010
+public: virtual       ~CFXPhysicalFileStream( void );      
+public: virtual FFU32  Read( FFLPVoid, FFU32 ) const;      
+public: virtual FFU32  Write( FFLPCVoid, FFU32 );          
+public: virtual FFBool GetPosition( FFI64 & ) const;       
+public: virtual FFBool SetPosition( FFI64, EFFFileSeek );  
 protected:
     FFLPVoid m_hHandle;  // 0004
 public:

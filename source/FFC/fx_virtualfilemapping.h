@@ -3,7 +3,7 @@
 
 class FF_DLLIMPORT CFXVirtualFileMapping
 {
-public: virtual ~CFXVirtualFileMapping( void );  // [0000].0000
+public: virtual ~CFXVirtualFileMapping( void );  
 protected:
     IFFFileMapping2 * m_pInterface;  // 0004
 public:

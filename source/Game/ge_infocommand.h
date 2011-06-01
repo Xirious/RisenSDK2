@@ -15,9 +15,6 @@ public:
         //FIXME: gCInfoCommand::ETableLanguageColumn constants.
         ETableLanguageColumn_ForceDWORD = GE_FORCE_DWORD
     };
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCInfoCommand( void );
 public: virtual bCString                   GetCommandName( void ) const;
 public: virtual gEInfoCommand              GetCommandType( void ) const;
 public: virtual gEInfoCommand              GetCommandTypeForScript( void ) const;
@@ -35,6 +32,9 @@ public: virtual void                       OnAttachedToInfo( gCInfo const & );
 public: virtual bCString                   ToString( void ) const;
 public: virtual void                       FromString( bCString const & );
 public: virtual gCInfoCommand *            Clone( void ) const;
+public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: virtual void                       Destroy( void );
+public: virtual                           ~gCInfoCommand( void );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

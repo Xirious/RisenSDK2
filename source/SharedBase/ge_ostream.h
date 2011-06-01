@@ -3,8 +3,8 @@
 
 class GE_DLLIMPORT bCOStream
 {
-public: virtual GEU32 Write( bCString const & );
 public: virtual GEU32 Write( GELPCVoid, GEU32 );
+public: virtual GEU32 Write( bCString const & );
 public: virtual      ~bCOStream( void );
 public:
     GEU32 Write( GEI8 );

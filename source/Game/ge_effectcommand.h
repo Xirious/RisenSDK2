@@ -23,9 +23,6 @@ GE_ASSERT_SIZEOF( gSEffectCommandInstance, 0x0010 )
 class GE_DLLIMPORT gCEffectCommand :
     public bCObjectRefBase
 {
-public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public:    virtual void                       Destroy( void );
-public:    virtual                           ~gCEffectCommand( void );
 public:    virtual GEInt                      GetCommandPriority( void ) const;
 public:    virtual bCString                   GetCommandString( void ) const;
 public:    virtual void                       GetDependencies( bTObjArray< bCString > &, bTObjArray< bCString > &, bTObjArray< eCTemplateEntityProxy > & );
@@ -33,6 +30,9 @@ protected: virtual void                       OnStart( gSEffectCommandInstance &
 protected: virtual void                       OnStop( gSEffectCommandInstance & ) const;
 protected: virtual GEBool                     OnProcess( gSEffectCommandInstance & ) const;
 public:    virtual GEBool                     Prefetch( void );
+public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public:    virtual void                       Destroy( void );
+public:    virtual                           ~gCEffectCommand( void );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

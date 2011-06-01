@@ -5,9 +5,9 @@ class GE_DLLIMPORT bCEbertNoise :
     public bCNoise
 {
 public: virtual void    SetSeed( GEInt );
-public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const;
-public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
 public: virtual GEFloat GetNoise( GEFloat ) const;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat ) const;
+public: virtual GEFloat GetNoise( GEFloat, GEFloat, GEFloat ) const;
 public: virtual        ~bCEbertNoise( void );
 private:
     GEFloat m_arrNoise[ 64 + 1][ 64 + 1 ][ 64 + 1 ];

@@ -20,29 +20,29 @@ enum bEPropertyType
 
 class GE_DLLIMPORT bCPropertyTypeBase
 {
-public:    virtual GEU32                            GetDataSize( void ) const                                      = 0;  // [0000].0000
-public:    virtual bCString const &                 GetClassName( void ) const                                     = 0;  // [0000].0004
-public:    virtual bCString const &                 GetValueTypeName( void ) const                                 = 0;  // [0000].0008
-public:    virtual bCPropertyObjectTypeBase const & GetClassType( void ) const                                     = 0;  // [0000].000C
-public:    virtual void                             InitializeProperty( bCObjectBase * )                           = 0;  // [0000].0010
-public:    virtual GEBool                           IsEnum( void ) const                                           = 0;  // [0000].0014
-public:    virtual GEInt                            GetEnumCount( void ) const                                     = 0;  // [0000].0018
-public:    virtual bSEnumValue const &              GetEnumValue( GEInt ) const                                    = 0;  // [0000].001C
-public:    virtual bCPropertyConverterPtr           GetNativeProperty( bCObjectBase const * )                      = 0;  // [0000].0020
-public:    virtual GEBool                           ConvertStringToValue( bCObjectBase *, bCString const & ) const = 0;  // [0000].0024
-public:    virtual GEBool                           ConvertValueToString( bCObjectBase const *, bCString & ) const = 0;  // [0000].0028
-public:    virtual GEBool                           PropertyCopy( bCObjectBase *, bCObjectBase const * )           = 0;  // [0000].002C
-public:    virtual void                             PropertyWrite( bCOStream &, bCObjectBase const * )             = 0;  // [0000].0030
-public:    virtual void                             PropertyRead( bCIStream &, bCObjectBase * )                    = 0;  // [0000].0034
-public:    virtual GEU16                            Read( bCIStream & );                                                 // [0000].0038
-public:    virtual void                             Write( bCOStream & );                                                // [0000].003C
-public:    virtual GEBool                           Deserialize( bCObjectBase *, bCXMLParserNode const * )         = 0;  // [0000].0040
-public:    virtual GEBool                           Serialize( bCObjectBase const *, bCXMLParserNode * )           = 0;  // [0000].0044
-protected: virtual void                             Destroy( void );                                                     // [0000].0048
-protected: virtual void                             Create( void );                                                      // [0000].004C
-protected: virtual bCPropertyTypeBase *             DoClone( void ) const;                                               // [0000].0050
-protected: virtual void                             CopyFrom( bCPropertyTypeBase const & );                              // [0000].0054
-public:    virtual                                 ~bCPropertyTypeBase( void );                                          // [0000].0058
+public:    virtual GEU32                            GetDataSize( void ) const                                      = 0;  
+public:    virtual bCString const &                 GetClassName( void ) const                                     = 0;  
+public:    virtual bCString const &                 GetValueTypeName( void ) const                                 = 0;  
+public:    virtual bCPropertyObjectTypeBase const & GetClassType( void ) const                                     = 0;  
+public:    virtual void                             InitializeProperty( bCObjectBase * )                           = 0;  
+public:    virtual GEBool                           IsEnum( void ) const                                           = 0;  
+public:    virtual GEInt                            GetEnumCount( void ) const                                     = 0;  
+public:    virtual bSEnumValue const &              GetEnumValue( GEInt ) const                                    = 0;  
+public:    virtual bCPropertyConverterPtr           GetNativeProperty( bCObjectBase const * )                      = 0;  
+public:    virtual GEBool                           ConvertStringToValue( bCObjectBase *, bCString const & ) const = 0;  
+public:    virtual GEBool                           ConvertValueToString( bCObjectBase const *, bCString & ) const = 0;  
+public:    virtual GEBool                           PropertyCopy( bCObjectBase *, bCObjectBase const * )           = 0;  
+public:    virtual void                             PropertyWrite( bCOStream &, bCObjectBase const * )             = 0;  
+public:    virtual void                             PropertyRead( bCIStream &, bCObjectBase * )                    = 0;  
+public:    virtual GEU16                            Read( bCIStream & );                                                 
+public:    virtual void                             Write( bCOStream & );                                                
+public:    virtual GEBool                           Deserialize( bCObjectBase *, bCXMLParserNode const * )         = 0;  
+public:    virtual GEBool                           Serialize( bCObjectBase const *, bCXMLParserNode * )           = 0;  
+protected: virtual void                             Destroy( void );                                                     
+protected: virtual void                             Create( void );                                                      
+protected: virtual bCPropertyTypeBase *             DoClone( void ) const;                                               
+protected: virtual void                             CopyFrom( bCPropertyTypeBase const & );                              
+public:    virtual                                 ~bCPropertyTypeBase( void );                                          
 private:
     bCString       m_strPropertyName;         // 0004
     bCString       m_strPropertyDescription;  // 0008

@@ -10,35 +10,35 @@ enum bEDoNotOverwriteMethod
 
 class GE_DLLIMPORT bCObjectBase
 {
-public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;                                                  // [0000].0000
-public:    virtual GEU16                      GetVersion( void ) const;                                                     // [0000].0004
-public:    virtual GEBool                     IsValid( void ) const;                                                        // [0000].0008
-public:    virtual GEBool                     Deserialize( bCXMLParserNode * );                                             // [0000].000C
-public:    virtual GEBool                     Serialize( bCXMLParserNode * );                                               // [0000].0010
-public:    virtual bEDoNotOverwriteMethod     Read( bCIStream & );                                                          // [0000].0014
-public:    virtual bEDoNotOverwriteMethod     Write( bCOStream & );                                                         // [0000].0018
-protected: virtual GEBool                     OnDeserialize( bCXMLParserNode * );                                           // [0000].001C
-protected: virtual GEBool                     OnSerialize( bCXMLParserNode * );                                             // [0000].0020
-protected: virtual GEBool                     OnRead( bCIStream & );                                                        // [0000].0024
-protected: virtual GEBool                     OnWrite( bCOStream & );                                                       // [0000].0028
-public:    virtual bEResult                   Create( void );                                                               // [0000].002C
-protected: virtual void                       Destroy( void );                                                              // [0000].0030
-public:    virtual bEDoNotOverwriteMethod     CopyFrom( bCObjectBase const &, GEBool );                                     // [0000].0034
-protected: virtual GEBool                     OnCopyFrom( bCObjectBase const & );                                           // [0000].0038
-protected: virtual GEBool                     OnCopyPatchableOnly( bCObjectBase const & );                                  // [0000].003C
-public:    virtual GEU32                      AddReference( void );                                                         // [0000].0040
-public:    virtual GEU32                      ReleaseReference( void );                                                     // [0000].0044
-public:    virtual GEU32                      GetReferenceCount( void );                                                    // [0000].0048
-public:    virtual bEResult                   BindPOType( void );                                                           // [0000].004C
-public:    virtual bEResult                   PostInitializeProperties( void );                                             // [0000].0050
-public:    virtual GEBool                     HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );  // [0000].0054
-public:    virtual GEBool                     NotifyPropertyValueChangedEnterEx( GELPCChar, GEBool );                       // [0000].0058
-public:    virtual GEBool                     NotifyPropertyValueChangedExitEx( GELPCChar, GEBool );                        // [0000].005C
-protected: virtual GEBool                     OnNotifyPropertyValueChangedEnterEx( GELPCChar, GEBool );                     // [0000].0060
-protected: virtual GEBool                     OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );                      // [0000].0064
-public:    virtual GEInt                      GetNativePropertyCount( void ) const;                                         // [0000].0068
-public:    virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;                                           // [0000].006C
-public:    virtual                           ~bCObjectBase( void );                                                         // [0000].0070
+public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;                                                  
+public:    virtual GEU16                      GetVersion( void ) const;                                                     
+public:    virtual GEBool                     IsValid( void ) const;                                                        
+public:    virtual GEBool                     Deserialize( bCXMLParserNode * );                                             
+public:    virtual GEBool                     Serialize( bCXMLParserNode * );                                               
+public:    virtual bEDoNotOverwriteMethod     Read( bCIStream & );                                                          
+public:    virtual bEDoNotOverwriteMethod     Write( bCOStream & );                                                         
+protected: virtual GEBool                     OnDeserialize( bCXMLParserNode * );                                           
+protected: virtual GEBool                     OnSerialize( bCXMLParserNode * );                                             
+protected: virtual GEBool                     OnRead( bCIStream & );                                                        
+protected: virtual GEBool                     OnWrite( bCOStream & );                                                       
+public:    virtual bEResult                   Create( void );                                                               
+protected: virtual void                       Destroy( void );                                                              
+public:    virtual bEDoNotOverwriteMethod     CopyFrom( bCObjectBase const &, GEBool );                                     
+protected: virtual GEBool                     OnCopyFrom( bCObjectBase const & );                                           
+protected: virtual GEBool                     OnCopyPatchableOnly( bCObjectBase const & );                                  
+public:    virtual GEU32                      AddReference( void );                                                         
+public:    virtual GEU32                      ReleaseReference( void );                                                     
+public:    virtual GEU32                      GetReferenceCount( void );                                                    
+public:    virtual bEResult                   BindPOType( void );                                                           
+public:    virtual bEResult                   PostInitializeProperties( void );                                             
+public:    virtual GEBool                     HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );  
+public:    virtual GEBool                     NotifyPropertyValueChangedEnterEx( GELPCChar, GEBool );                       
+public:    virtual GEBool                     NotifyPropertyValueChangedExitEx( GELPCChar, GEBool );                        
+protected: virtual GEBool                     OnNotifyPropertyValueChangedEnterEx( GELPCChar, GEBool );                     
+protected: virtual GEBool                     OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );                      
+public:    virtual GEInt                      GetNativePropertyCount( void ) const;                                         
+public:    virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;                                           
+public:    virtual                           ~bCObjectBase( void );                                                         
 private:
     static bCPropertyObjectTypeBase thisType;
 private:

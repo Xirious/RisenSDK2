@@ -1,0 +1,38 @@
+When building up the vtables for a class, the compiler passes (top-down) through
+it's virtual function declarations and appends them consecutively if they're
+not already part of inherited vtables. Upon processing the declaration - this
+may be a using or an override declaration - of a function that has overloadings,
+then all these overloadings are attached (if necessary) to the vtable at the
+current position in reverse order. Of course the overloadings are not processed
+again if the compiler comes to their declaration.
+
+Example:
+--------
+
+class A
+{
+    public: virtual int foo( void );
+    public: virtual int foo( char );
+    public: virtual int bar( void );
+};
+
+class B : public A
+{
+    public: virtual int baz( void );
+    public: using    A::bar;
+    public: virtual int foo( int );
+    public: virtual int bar( int );
+    public: virtual int bar( bool );
+    public: virtual int foo( bool );
+};
+
++---------------------------------+
+| public: virtual int foo( char ) |  ||
+| public: virtual int foo( void ) |  || [A's vtable]
+| public: virtual int bar( void ) |  ||
+| public: virtual int baz( void ) |  |
+| public: virtual int bar( bool ) |  |  [B's vtable]
+| public: virtual int bar( int )  |  |  
+| public: virtual int foo( bool ) |  |
+| public: virtual int foo( int )  |  |
++---------------------------------+

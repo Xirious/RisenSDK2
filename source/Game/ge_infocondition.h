@@ -4,14 +4,14 @@
 class GE_DLLIMPORT gCInfoCondition :
     public bCObjectRefBase
 {
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCInfoCondition( void );
 public: virtual bCString                   GetConditionName( void ) const;
 public: virtual GEBool                     IsSatisfied( gCInfo const & );
 public: using             bCObjectRefBase::IsValid;
 public: virtual GEBool                     IsValid( bCString &, gCInfo const & ) const;
 public: virtual gCInfoCondition *          Clone( void ) const;
+public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: virtual void                       Destroy( void );
+public: virtual                           ~gCInfoCondition( void );
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:

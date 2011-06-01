@@ -24,14 +24,14 @@ public:
                      GE_PADDING( 3 )
         // sizeof(eCWindow::eSCreate)      0028
     };
-protected: virtual bEResult Create( void );               // 002C
-protected: virtual void     Destroy( void );              // 0030
-public:    virtual         ~eCWindow( void );             // 0070
-protected: virtual GEInt    OnActivate( GEUInt, GEI32 );  // 00A8
-protected: virtual GEInt    OnDestroy( GEUInt, GEI32 );   // 00C4
-protected: virtual GEInt    OnQuit( GEUInt, GEI32 );      // 0110
-protected: virtual GEInt    OnPaint( GEUInt, GEI32 );     // 0150
-public:    virtual GEBool   Create( eSCreate const & );   // 0278
+public:    virtual GEBool   Create( eSCreate const & );
+protected: virtual bEResult Create( void );
+protected: virtual void     Destroy( void );
+public:    virtual         ~eCWindow( void );
+protected: virtual GEInt    OnActivate( GEUInt, GEI32 );
+protected: virtual GEInt    OnDestroy( GEUInt, GEI32 );
+protected: virtual GEInt    OnQuit( GEUInt, GEI32 );
+protected: virtual GEInt    OnPaint( GEUInt, GEI32 );
 protected:
     static GEInt ms_iDesktopHeight;
     static GEInt ms_iDesktopWidth;

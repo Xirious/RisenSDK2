@@ -3,7 +3,7 @@
 
 class IFXTableController
 {
-protected: virtual FFBool PreTableModify( CFXTable const * ) = 0;  // [0000].0000
+protected: virtual FFBool PreTableModify( CFXTable const * ) = 0;  
 };
 GE_ASSERT_SIZEOF( IFXTableController, 0x0004 )
 
@@ -45,7 +45,7 @@ public:
         SFFFileTime m_RawTimeStamp;  // 0000
     };
     GE_ASSERT_SIZEOF( SWrite, 0x0008 )
-public: virtual ~CFXTable( void );  // [0000].0000
+public: virtual ~CFXTable( void );  
 protected:
     bTValMap< bCUnicodeString, FFInt > m_mapRows;          // 0004
     bTValMap< bCUnicodeString, FFInt > m_mapColumns;       // 0014

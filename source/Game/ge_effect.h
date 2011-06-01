@@ -29,9 +29,9 @@ protected:
     void StopAllCommands( void );
 public:
     void                                    EnablePermanent( GEBool );
-	gCEffectCommandSequence2 *              GetCommandSequence( void );
+    gCEffectCommandSequence2 *              GetCommandSequence( void );
     gCEffectCommandSequence2 const *        GetCommandSequence( void ) const;
-	eCEntity *                              GetOwner( void ) const;
+    eCEntity *                              GetOwner( void ) const;
     bTObjArray< eCEntityProxy > &           GetSpawnedEntities( void );
     bTObjArray< eCEntityProxy > const &     GetSpawnedEntities( void ) const;
     bTObjMap< GEInt, eCEntityProxy> &       GetSpawnedEntityMap( void );
