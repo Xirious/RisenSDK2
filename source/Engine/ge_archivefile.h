@@ -12,11 +12,13 @@ public:
         bEArchiveFileAccessMode_ReadWrite,
         bEArchiveFileAccessMode_ForceDWORD = GE_FORCE_DWORD
     };
+    using      bCIOStream::Read;
     public: virtual GEU32  Read( GELPVoid, GEU32 );
     public: virtual GEU32  Read( bCString & );
     public: virtual       ~eCArchiveFile( void );
     public: virtual GEI64  GetPosition( void ) const;
     public: virtual GEBool Seek( GEI64, bEStreamSeekMode );
+    using      bCIOStream::Write;
     public: virtual GEU32  Write( GELPCVoid, GEU32 );
     public: virtual GEU32  Write( bCString const & );
 private:

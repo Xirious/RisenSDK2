@@ -153,6 +153,18 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_collisionshape.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_collisionshape_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_collisionshapebase_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_console2.h"
 			>
 		</File>
@@ -233,7 +245,27 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_portal.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_portalbsp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_portalcell_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_portalroom_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_processible.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_processibleelement.h"
 			>
 		</File>
 		<File
