@@ -4,9 +4,11 @@
 class GE_DLLIMPORT bCPOStream :
     public bCMemoryStream
 {
+using        bCIOStream::Read;
 public: virtual GEU32    Read( GELPVoid, GEU32 );
 public: virtual GEU32    Read( bCString & );
 public: virtual      ~bCPOStream( void );
+using        bCIOStream::Write;
 public: virtual GEU32    Write( GELPCVoid, GEU32 );
 public: virtual GEU32    Write( bCString const & );
 private:

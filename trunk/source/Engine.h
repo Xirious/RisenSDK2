@@ -27,6 +27,8 @@
 #include "Engine/ge_archivefile.h"
 #include "Engine/ge_archivemanager.h"
 
+#include "Engine/ge_processibleelement.h"
+
 #include "Engine/ge_docobject.h"
 #include "Engine/ge_docarchive.h"
 
@@ -41,9 +43,18 @@ protected:
 
 #include "Engine/ge_animshared.h"
 
+/*
+
 //HACK: bTRefPtrArray is like bTPtrArray but uses Add/ReleaseReference of the elements.
 #define bTRefPtrArray bTPtrArray
 //HACK: Get Entity classes it compiling...
+
+*/
+template< typename T >
+class bTRefPtrArray : public bTPtrArray< T >
+{
+};
+
 struct eSGizmoPickInfo{};
 struct eSRayIntersectionDesc{};
 class GE_DLLIMPORT eCCollisionDesc{};
@@ -61,7 +72,7 @@ class GE_DLLIMPORT eCLightSet{};
 class GE_DLLIMPORT eCRenderContext{};
 class GE_DLLIMPORT eCShadowMapBase{};
 class GE_DLLIMPORT eCPhysicObject{};
-class GE_DLLIMPORT eCPortalRoom_PS{};
+class GE_DLLIMPORT eCPortalRoom_PS;
 class eCEntity;
 class eCGeometryEntity;
 #include "Engine/ge_camerabase.h"
@@ -78,6 +89,17 @@ class eCGeometryEntity;
 #include "Engine/ge_processible.h"
 #include "Engine/ge_processor.h"
 #include "Engine/ge_dynamicentity.h"
+
+class GE_DLLIMPORT eCSpeedTreeResource2{};
+
+#include "Engine/ge_collisionshape.h"
+#include "Engine/ge_collisionshapebase_ps.h"
+#include "Engine/ge_collisionshape_ps.h"
+
+#include "Engine/ge_portalbsp.h"
+#include "Engine/ge_portal.h"
+#include "Engine/ge_portalcell_ps.h"
+#include "Engine/ge_portalroom_ps.h"
 
 #include "Engine/ge_messagehandler.h"
 #include "Engine/ge_window.h"

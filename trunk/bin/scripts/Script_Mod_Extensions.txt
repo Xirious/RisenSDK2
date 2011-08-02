@@ -1,0 +1,42 @@
+This script module introduces several new console commands (each having 
+multiple sub-commands) which provide access to the Genome Engine's 
+classes and functions.
+
+Using the parameter auto-completion which has been extended for the new 
+commands, a lot of typing effort can be saved. It includes switching 
+between the clipboard text, previously used parameters and recent results.
+
+This is particularly useful when dealing with commands that take GUIDs
+as parameters (these can be retrieved and recorded via GetEntityGuid).
+
+Usage:
+
+  <Command> help
+    (Display help for command and list sub-commands)
+
+  <Command> <Sub-command> help
+    (Display help for sub-command)
+
+  <Command> <Sub-command> <Parameters>
+    (Execute sub-command)
+
+Commands:
+
+  ColShape      (Access to a dynamic entity's collision property set)
+  DynEntity     (Management of the current world's dynamic entities)
+  Tools         (General utilities)
+  World         (Management of worlds, sectors and layers)
+
+Installation:
+
+  Put Script_Mod_Extensions.dll in your Risen\bin\scripts folder.
+
+General information about Risen's console:
+
+  http://www.worldofrisen.de/english/article_273.htm
+
+Support:
+
+  baltram-lielb@web.de
+
+Thanks to NicoDE!
