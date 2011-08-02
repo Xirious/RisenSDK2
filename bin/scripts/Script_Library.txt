@@ -41,3 +41,8 @@ Requirements:
   The output directory should exists. The command creates it - but
   you might have to restart Risen to get it mounted by the engine.
 
+Updates:
+
+  The current version can be downloaded from the SVN repository at:
+  http://svn.nicode.net/risensdk/trunk/bin/scripts/
+
