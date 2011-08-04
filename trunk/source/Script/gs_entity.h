@@ -263,6 +263,7 @@ public:
 
 #pragma warning( pop )
 
-GE_C_LINKAGE GE_DLLIMPORT Entity None;
+//NOTE: None isn’t const, but it shouldn’t be modified.
+GE_C_LINKAGE GE_DLLIMPORT Entity const None;
 
 #endif
