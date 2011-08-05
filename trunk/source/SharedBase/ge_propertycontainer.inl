@@ -91,9 +91,21 @@ GEBool bTPropertyContainer< T >::operator == ( bTPropertyContainer< T > const & 
 }
 
 template< typename T >
+GEBool bTPropertyContainer< T >::operator == ( T const & a_Value ) const
+{
+    return a_Value == this->m_Value;
+}
+
+template< typename T >
 GEBool bTPropertyContainer< T >::operator != ( bTPropertyContainer< T > const & a_Other ) const
 {
     return !(this->operator == ( a_Other ));
+}
+
+template< typename T >
+GEBool bTPropertyContainer< T >::operator != ( T const & a_Value ) const
+{
+    return !(this->operator == ( a_Value ));
 }
 
 template< typename T >

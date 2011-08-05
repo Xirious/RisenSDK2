@@ -28,8 +28,7 @@ public: virtual bEResult Write( bCOStream & ) const;
 private:
     static T ms_DefaultValue;
 private:
-    T m_Value;                         // 0004
-    // sizeof(bTPropertyContainer<T>)  // 0004 + sizeof(T)
+    T m_Value;
 protected:
     GE_SERIALIZE_VERSION( 201 );
 protected:
@@ -47,7 +46,9 @@ public:
                                operator T const & ( void ) const;
                                operator GEU32     ( void ) const;
     GEBool                     operator ==        ( bTPropertyContainer< T > const & a_Other ) const;
+    GEBool                     operator ==        ( T const & a_Value ) const;
     GEBool                     operator !=        ( bTPropertyContainer< T > const & a_Other ) const;
+    GEBool                     operator !=        ( T const & a_Value ) const;
     bTPropertyContainer< T > & operator =         ( bTPropertyContainer< T > const & a_Source );
 public:
     bTPropertyContainer( T const & a_Value );
