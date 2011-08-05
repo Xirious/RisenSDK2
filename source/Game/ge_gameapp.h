@@ -1,9 +1,6 @@
 #ifndef GE_GAMEAPP_H_INCLUDED
 #define GE_GAMEAPP_H_INCLUDED
 
-//FIXME: gCGameApp dependencies.
-class gCWorkspace{};
-
 class GE_DLLIMPORT gCGameApp :
     public eCApplication
 {
@@ -43,10 +40,11 @@ protected:
     bEResult BuildUserOptions( GEU32 );
     void     Invalidate( void );
 public:
-    gCWorkspace &    GetAccessToWorkspace( void );
-    bCString const & GetBackupFolder( void ) const;
-    GEBool const     GetScriptAutoLoading( void ) const;
-    bCString const & GetScriptFolder( void ) const;
+    using eCApplication::Create;
+    gCWorkspace &        GetAccessToWorkspace( void );
+    bCString const &     GetBackupFolder( void ) const;
+    GEBool const         GetScriptAutoLoading( void ) const;
+    bCString const &     GetScriptFolder( void ) const;
 public:
     gCGameApp & operator = ( gCGameApp const & );
 public:
