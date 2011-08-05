@@ -1,6 +1,29 @@
 #ifndef GE_OBJECTREFBASE_H_INCLUDED
 #define GE_OBJECTREFBASE_H_INCLUDED
 
+#define GE_ADDREF( OBJECT )     \
+{                               \
+    if( 0 != OBJECT )           \
+    {                           \
+        OBJECT->AddReference(); \
+    }                           \
+}
+#define GE_RELEASE( OBJECT )        \
+{                                   \
+    if( 0 != OBJECT )               \
+    {                               \
+        OBJECT->ReleaseReference(); \
+        OBJECT = 0;                 \
+    }                               \
+}
+#define GE_RELEASE_REF( OBJECT )    \
+{                                   \
+    if( 0 != OBJECT )               \
+    {                               \
+        OBJECT->ReleaseReference(); \
+    }                               \
+}
+
 //NOTE: 'const' attribute missing in bCObjectBase::GetReferenceCount.
 
 class GE_DLLIMPORT bCObjectRefBase :
