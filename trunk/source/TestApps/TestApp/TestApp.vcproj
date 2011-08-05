@@ -164,7 +164,19 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\ge_prototypeapp.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\ge_prototypeapp.h"
+			>
+		</File>
+		<File
 			RelativePath=".\TestApp.cpp"
+			>
+		</File>
+		<File
+			RelativePath=".\TestApp.h"
 			>
 		</File>
 	</Files>
