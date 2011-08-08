@@ -54,4 +54,9 @@ public:
 };
 GE_ASSERT_SIZEOF( eCModuleAdmin, 0x0028 )
 
+template< typename T >
+T * g_GetModule( void );
+
+#include "ge_moduleadmin.inl"
+
 #endif
