@@ -41,10 +41,10 @@ public:    virtual GEInt                      GetNativePropertyCount( void ) con
 public:    virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;
 protected: virtual                           ~eCCollisionShape( void );
 protected:
-    bTPropertyContainer< eECollisionShapeType > m_ShapeAABBAdaptMode;    // 0008
+    bTPropertyContainer< eECollisionShapeType > m_ShapeType;             // 0008
     bTPropertyContainer< eEShapeGroup >         m_Group;                 // 0010
     bTPropertyContainer< eEShapeMaterial >      m_Material;              // 0018
-    bTPropertyContainer< eEShapeAABBAdapt >     m_ShapeType;             // 0020
+    bTPropertyContainer< eEShapeAABBAdapt >     m_ShapeAABBAdaptMode;     // 0020
     GEBool                                      m_bIgnoredByTraceRay;    // 0028
     GEBool                                      m_bEnableCCD;            // 0029
     GEBool                                      m_bOverrideEntityAABB;   // 002A

@@ -63,8 +63,8 @@ typename bTValMap< K, T >::bCIterator bTValMap< K, T >::Begin( void )
         return this->End();
     bSNode * _p;
     GEInt    _h;
-    for( _p = 0, _h = 0 ; !p && (_h < this->m_arrNodes.GetCount()); _h++ )
-        _p = this->m_arrNodes[ _i ];
+    for( _p = 0, _h = 0 ; !_p && (_h < this->m_arrNodes.GetCount()); _h++ )
+        _p = this->m_arrNodes[ _h ];
     return bCIterator( &this->m_arrNodes, _h, _p );
 }
 

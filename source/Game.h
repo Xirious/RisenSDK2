@@ -4,6 +4,12 @@
 #include "Engine.h"
 #include "Music.h"
 
+enum gEActionKey
+{
+    //FIXME: gEActionKey constants.
+    gEActionKey_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEAniState
 {
     gEAniState_Dummy0        = 0x00000000,
@@ -72,6 +78,29 @@ enum gECombatMode
     gECombatMode_Magic      = 0x00000004,
     gECombatMode_Cast       = 0x00000005,
     gECombatMode_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum gECombatMove
+{
+    gECombatMove_None               = 0x00000000,
+    gECombatMove_ParadeStumble      = 0x0000000E,
+    gECombatMove_ParadeStumbleHeavy = 0x0000000F,
+    gECombatMove_AttackStumble      = 0x0000000B,
+    gECombatMove_AttackStumbleLeft  = 0x0000000C,
+    gECombatMove_AttackStumbleRight = 0x0000000D,
+    gECombatMove_ForceDWORD         = GE_FORCE_DWORD
+};
+
+enum gECombatParadeType
+{
+    gECombatParadeType_None       = 0x00000000,
+    gECombatParadeType_Fist       = 0x00000001,
+    gECombatParadeType_Weapon     = 0x00000002,
+    gECombatParadeType_Magic      = 0x00000004,
+    gECombatParadeType_Ranged     = 0x00000008,
+    gECombatParadeType_Monster    = 0x00000010,
+    gECombatParadeType_Shield     = 0x0000001B,
+    gECombatParadeType_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gECombatPose
@@ -483,6 +512,10 @@ class eCSoundResource2{};
 #include "Game/ge_modifyskill.h"
 #include "Game/ge_skills_ps.h"
 
+#include "Game/ge_flightpathbase.h"
+#include "Game/ge_flightpathballistic.h"
+#include "Game/ge_flightpathseeking.h"
+
 #include "Game/ge_effectcommand.h"
 #include "Game/ge_effectcommandearthquake.h"
 #include "Game/ge_effectcommandmodifyentity.h"
@@ -613,5 +646,20 @@ class gCInventoryStack{};
 #include "Game/ge_infoconditionteachenabled.h"
 /**/
 class gCInfoSystem{};
+
+struct gSActionKeyInfo
+{
+    char __FIXME_0000[ 0x0014 ];
+    //FIXME: gSActionKeyInfo members.
+};
+
+struct gSAction
+{
+    char __FIXME_0000[ 0x0010 ];
+    //FIXME: gSAction members.
+};
+
+struct gSDebugAction;
+
 
 #endif

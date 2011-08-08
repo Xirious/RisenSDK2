@@ -196,6 +196,14 @@
 			Name="PropertySets"
 			>
 			<File
+				RelativePath=".\Script\gs_pscombatsystem.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_pscombatsystem.inl"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
@@ -242,6 +250,10 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_gui2.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_input.h"
 			>
 		</File>
 		<File

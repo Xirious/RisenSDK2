@@ -389,6 +389,18 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_flightpathballistic.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_flightpathbase.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_flightpathseeking.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_modifyskill.h"
 			>
 		</File>
