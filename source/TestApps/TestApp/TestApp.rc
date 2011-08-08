@@ -1,4 +1,4 @@
-#include <winres.h>
+#include <winresrc.h>
 
 //  LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
 //  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
