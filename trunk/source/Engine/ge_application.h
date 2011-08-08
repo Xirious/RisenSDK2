@@ -17,7 +17,6 @@ public:
 public:    using          eCWindow::Create;
 protected: virtual bEResult         Create( void );
 public:    virtual void             Destroy( void );
-public:    using      bCObjectBase::CopyFrom;
 public:    virtual                 ~eCApplication( void );
 public:    using  eCMessageHandler::HandleMessage;
 protected: virtual GEInt            HandleMessage( HWND, GEUInt, GEUInt,GEI32 );
@@ -61,6 +60,7 @@ public:    virtual void             OnWorldDeactivate( void );
 public:    virtual void             SendEngineMessage( eSEngineMessage & );
 protected: virtual bEResult         CreateWorkspace( void );
 protected: virtual void             DestroyWorkspace( void );
+public:    using      bCObjectBase::CopyFrom;
 protected: virtual void             CopyFrom( eCApplication const & );
 protected: virtual GEBool           OnHandleMessage( GEUInt, GEUInt, GEI32, GEI32 * );
 public:    virtual GEBool           LoadConfiguration( void );
