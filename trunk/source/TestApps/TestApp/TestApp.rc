@@ -1,0 +1,62 @@
+#include <winres.h>
+
+//  LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+//  LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+//  LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+//  LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+//  LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+//  LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+//  "__GDF_THUMBNAIL" "DATA" "gdf_thumbnail.png"
+
+//  LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+//  "__GDF_XML" "DATA" "gdf_xml.xml"
+//  LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+//  "__GDF_XML" "DATA" "gdf_xml_german.xml"
+//  LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+//  "__GDF_XML" "DATA" "gdf_xml_english.xml"
+//  LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+//  "__GDF_XML" "DATA" "gdf_xml_spanish.xml"
+//  LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+//  "__GDF_XML" "DATA" "gdf_xml_french.xml"
+//  LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+//  "__GDF_XML" "DATA" "gdf_xml_italian.xml"
+
+//  LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+//  101 ICON "../../../bin/gameicon.ico"
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+101 ICON "../../../bin/gameicon.ico"
+//  LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+//  101 ICON "../../../bin/gameicon.ico"
+//  LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+//  101 ICON "../../../bin/gameicon.ico"
+//  LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+//  101 ICON "../../../bin/gameicon.ico"
+//  LANGUAGE LANG_ITALIAN, SUBLANG_ITALIAN
+//  101 ICON "../../../bin/gameicon.ico"
+
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+1 VERSIONINFO
+  FILEVERSION    1,0,0,0
+  PRODUCTVERSION 1,0,0,0
+  FILEOS         VOS__WINDOWS32
+  FILETYPE       VFT_APP
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "040704b0"
+    BEGIN
+      VALUE "CompanyName",     "RisenSDK"
+      VALUE "FileDescription", "Test Application"
+      VALUE "FileVersion",     "1.0.0.0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0407 0x04B0
+  END
+END

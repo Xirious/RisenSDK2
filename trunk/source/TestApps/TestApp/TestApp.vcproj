@@ -42,7 +42,10 @@
 				Name="VCCLCompilerTool"
 				AdditionalIncludeDirectories="..\..\"
 				PreprocessorDefinitions="WIN32;NDEBUG"
+				ExceptionHandling="0"
+				BufferSecurityCheck="false"
 				WarningLevel="4"
+				DebugInformationFormat="3"
 				CallingConvention="2"
 			/>
 			<Tool
@@ -56,8 +59,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalOptions="/STACK:0x00800000"
 				AdditionalDependencies="user32.lib comctl32.lib"
+				GenerateDebugInformation="true"
 				SubSystem="2"
+				SetChecksum="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -112,6 +118,7 @@
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\"
 				MinimalRebuild="true"
+				ExceptionHandling="0"
 				RuntimeLibrary="1"
 				WarningLevel="4"
 				DebugInformationFormat="4"
@@ -128,6 +135,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
+				AdditionalOptions="/STACK:0x00800000"
 				AdditionalDependencies="user32.lib comctl32.lib"
 				LinkIncremental="2"
 				GenerateDebugInformation="true"
@@ -177,6 +185,10 @@
 		</File>
 		<File
 			RelativePath=".\TestApp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\TestApp.rc"
 			>
 		</File>
 	</Files>

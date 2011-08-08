@@ -1,4 +1,4 @@
-#include "TestApp.h"
+#include "ge_prototypeapp.h"
 
 aCProtoTypeApp const & aCProtoTypeApp::operator = ( aCProtoTypeApp const & a_Source )
 {
@@ -56,11 +56,6 @@ GEBool aCProtoTypeApp::LoadProjectFile( bCString const & a_strProject, bCString 
     return GETrue;
 }
 
-void aCProtoTypeApp::OnWorldActivate( void )
-{
-    gCGameApp::OnWorldActivate();
-}
-
 GEBool aCProtoTypeApp::IsCompilerRunning( void ) const
 {
     return this->m_bIsCompilerRunning;
@@ -74,26 +69,6 @@ void aCProtoTypeApp::Invalidate( void )
     this->m_Reserved3 = 0;
     this->m_Reserved4 = 0;
     this->m_bIsCompilerRunning = GEFalse;
-}
-
-bEResult aCProtoTypeApp::Create( void )
-{
-    return gCGameApp::Create();
-}
-
-void aCProtoTypeApp::OnProcess( void )
-{
-    gCGameApp::OnProcess();
-}
-
-void aCProtoTypeApp::OnEngineReadyForBenchmark( void )
-{
-    gCGameApp::OnEngineReadyForBenchmark();
-}
-
-void aCProtoTypeApp::OnEngineCreated( void )
-{
-    gCGameApp::OnEngineCreated();
 }
 
 void aCProtoTypeApp::OnDestroyWorkspace( void )
@@ -129,9 +104,9 @@ void aCProtoTypeApp::Destroy( void )
     this->Invalidate();
 }
 
-bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strFIXME1, bCString const & a_strFIXME2 )
+bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine )
 {
-    if( bEResult_Ok == gCGameApp::Create( a_hInstance, a_strFIXME1, a_strFIXME2 ) )
+    if( bEResult_Ok == gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine ) )
     {
         //FIXME: eCConfigAdmin::GetInstance().GetValue( eSDebugOptions::GetInstance()->ObserveMemory );
         this->m_strObserveMemory = "Audio";
