@@ -35,6 +35,7 @@ public:
     bTPtrArray< bSNode * > const & GetNodes( void ) const;
     void                           InitHashTable( GEU32 _n );
     GEBool                         IsEmpty( void ) const;
+    GEBool                         IsValidKey( K const & _k ) const;
     void                           SetAt( K const & _k, T const & _e );
     GEBool                         RemoveAt( K const & _k );
 public:

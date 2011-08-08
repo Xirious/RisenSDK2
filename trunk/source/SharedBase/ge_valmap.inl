@@ -2,7 +2,7 @@ template< typename K, typename T >
 typename bTValMap< K, T >::bSNode * bTValMap< K, T >::AccessNode( K const & _k, GEU32 & _h )
 {
     _h = ::g_GetHashValue< K >( _k ) % this->m_arrNodes.GetCount();
-    if( _h < this->m_arrNodes.GetCount() )
+    if( _h < static_cast< GEU32 >( this->m_arrNodes.GetCount() ) )
         for( bSNode * _p = this->m_arrNodes[ _h ]; _p; _p = _p->m_pNext )
             if ( _k == _p->m_Key )
                 return _p;
@@ -13,7 +13,7 @@ template< typename K, typename T >
 typename bTValMap< K, T >::bSNode const * bTValMap< K, T >::GetNode( K const & _k, GEU32 & _h ) const
 {
     _h = ::g_GetHashValue< K >( _k ) % this->m_arrNodes.GetCount();
-    if( _h < this->m_arrNodes.GetCount() )
+    if( _h < static_cast< GEU32 >( this->m_arrNodes.GetCount() ) )
         for( bSNode * _p = this->m_arrNodes[ _h ]; _p; _p = _p->m_pNext )
             if ( _k == _p->m_Key )
                 return _p;
@@ -164,6 +164,13 @@ template< typename K, typename T >
 GEBool bTValMap< K, T >::IsEmpty( void ) const
 {
     return 0 == this->m_u32Count;
+}
+
+template< typename K, typename T >
+GEBool bTValMap< K, T >::IsValidKey( K const & _k ) const
+{
+    GEU32 _h;
+    return !!this->GetNode( _k, _h );
 }
 
 template< typename K, typename T >
