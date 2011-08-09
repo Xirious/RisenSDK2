@@ -14,7 +14,7 @@ enum gEStatusEffect
 struct gSNPCStatusEffect
 {
     GEBool              m_bActive;
-                        GE_PADDING( 3 );
+                        GE_PADDING( 3 )
     gEStatusEffect      m_enumStatusEffect;
     bCString            m_strName;
     eCScriptProxyScript m_StartScript;

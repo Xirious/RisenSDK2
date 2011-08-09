@@ -96,11 +96,13 @@ LONG WINAPI aFUnhandledExceptionFilter( struct _EXCEPTION_POINTERS * )
     return EXCEPTION_EXECUTE_HANDLER;
 };
 
-#pragma warning( push )
-#pragma warning( disable : 4509 )  // nonstandard extension used: uses SEH and has destructor
-
+#pragma warning( push, 3 )
 #include <commctrl.h>
 #pragma comment( linker, "/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='x86' publicKeyToken='6595b64144ccf1df'\"" )
+#pragma warning( pop )
+
+#pragma warning( push )
+#pragma warning( disable : 4509 )  // nonstandard extension used: uses SEH and has destructor
 
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, int )
 {

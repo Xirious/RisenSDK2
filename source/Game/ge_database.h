@@ -5,6 +5,7 @@ class GE_DLLIMPORT gCDatabase :
     public bCObjectRefBase
 {
 public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: using             bCObjectRefBase::Create;
 public: virtual void                       Destroy( void );
 public: virtual                           ~gCDatabase( void );
 public: virtual bCString                   GetFileDir( void ) const;

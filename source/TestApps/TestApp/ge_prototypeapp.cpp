@@ -56,19 +56,8 @@ GEBool aCProtoTypeApp::LoadProjectFile( bCString const & a_strProject, bCString 
     return GETrue;
 }
 
-GEBool aCProtoTypeApp::IsCompilerRunning( void ) const
-{
-    return this->m_bIsCompilerRunning;
-}
-
 void aCProtoTypeApp::Invalidate( void )
 {
-    this->m_Reserved0 = 0;
-    this->m_Reserved1 = 0;
-    this->m_Reserved2.Clear();
-    this->m_Reserved3 = 0;
-    this->m_Reserved4 = 0;
-    this->m_bIsCompilerRunning = GEFalse;
 }
 
 void aCProtoTypeApp::OnDestroyWorkspace( void )
@@ -97,8 +86,6 @@ aCProtoTypeApp::~aCProtoTypeApp( void )
 
 void aCProtoTypeApp::Destroy( void )
 {
-    GE_RELEASE( this->m_Reserved3 );
-    GE_DELETE< bCObjectBase >( this->m_Reserved4 );
     this->DestroyWorkspace();
     gCGameApp::Destroy();
     this->Invalidate();
@@ -106,11 +93,6 @@ void aCProtoTypeApp::Destroy( void )
 
 bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine )
 {
-    if( bEResult_Ok == gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine ) )
-    {
-        //FIXME: eCConfigAdmin::GetInstance().GetValue( eSDebugOptions::GetInstance()->ObserveMemory );
-        this->m_strObserveMemory = "Audio";
-    }
-    return bEResult_Ok;
+    return gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine );
 }
 

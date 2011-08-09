@@ -64,7 +64,7 @@ public:
     void                           DoLoadLocalConfiguration( void );
     void                           DoSaveLocalConfiguration( void ) const;
     GEBool                         EnableSectorFolder( bCString const &, GEBool );
-    void                           EnumEntities( GEBool (GE_STDCALL *)(eCEntity *, GELPVoid), GELPVoid, GEU32 ) const;
+    void                           EnumEntities( GEFEnumEntitiesCallback, GELPVoid, GEU32 ) const;
     bCString const &               GetActiveSector( void ) const;
     eCEntity *                     GetFirstEntity( eCTemplateEntity const * ) const;
     eCEntity *                     GetNextEntity( eCEntity * ) const;

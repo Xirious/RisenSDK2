@@ -8,7 +8,7 @@ struct gSSkillInfo
     GEI32           m_i32BaseValue;
     gESkillCategroy m_enumCategory;
     GEU8            m_u8CategoryIndex;
-                    GE_PADDING( 3 );
+                    GE_PADDING( 3 )
     bCString        m_strTag;
     eCLocString     m_locName;
     eCLocString     m_locShortName;

@@ -3,6 +3,8 @@
 
 #include "Game.h"
 
-//#include "Importer/ge_Xxx.h"
+#include "Importer/ge_scenecompiler.h"
+#include "Importer/ge_resourcecompiler.h"
+#include "Importer/ge_democompiler.h"
 
 #endif
