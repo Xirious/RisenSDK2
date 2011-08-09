@@ -125,6 +125,13 @@ class eCConsoleListCtrl2{};
 class eCPropertyEditFrame2{};
 #include "Engine/ge_console2.h"
 
+#include "Engine/ge_configadmin.h"
+#include "Engine/ge_debugoptions.h"
+
+#include "Engine/ge_configfile.h"
+#include "Engine/ge_application.h"
+class GE_DLLIMPORT eCEntityDynamicContext{};
+
 #pragma warning( pop )
 
 #endif

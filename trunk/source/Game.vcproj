@@ -389,6 +389,14 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_database.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_dynamiclayer.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_flightpathballistic.h"
 			>
 		</File>
@@ -401,11 +409,23 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_gameapp.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_layerbase.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_modifyskill.h"
 			>
 		</File>
 		<File
 			RelativePath=".\Game\ge_npc_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_project.h"
 			>
 		</File>
 		<File
@@ -441,6 +461,22 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_sector.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_session.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_sessioncheats.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_sessioninfo.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_skills_ps.h"
 			>
 		</File>
@@ -450,6 +486,14 @@
 		</File>
 		<File
 			RelativePath=".\Game\ge_skillvaluebase.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_workspace.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_world.h"
 			>
 		</File>
 	</Files>

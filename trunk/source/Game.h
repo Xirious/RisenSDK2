@@ -661,5 +661,21 @@ struct gSAction
 
 struct gSDebugAction;
 
+#include "Game/ge_sessioncheats.h"
+#include "Game/ge_sessioninfo.h"
+#include "Game/ge_session.h"
+class gCSector;
+#include "Game/ge_layerbase.h"
+#include "Game/ge_dynamiclayer.h"
+//FIXME: gSSaveGameConflict
+class gCWorld;
+#include "Game/ge_sector.h"
+class gCProject;
+#include "Game/ge_world.h"
+class gCWorkspace;
+#include "Game/ge_project.h"
+#include "Game/ge_database.h"
+#include "Game/ge_workspace.h"
+#include "Game/ge_gameapp.h"
 
 #endif

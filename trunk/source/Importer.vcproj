@@ -125,6 +125,18 @@
 	</References>
 	<Files>
 		<File
+			RelativePath=".\Importer\ge_democompiler.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Importer\ge_resourcecompiler.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Importer\ge_scenecompiler.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Importer.cpp"
 			>
 		</File>

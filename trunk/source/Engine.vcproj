@@ -141,6 +141,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_application.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_archivefile.h"
 			>
 		</File>
@@ -165,7 +169,19 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_configadmin.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_configfile.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_console2.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_debugoptions.h"
 			>
 		</File>
 		<File
@@ -238,6 +254,10 @@
 		</File>
 		<File
 			RelativePath=".\Engine\ge_moduleadmin.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_moduleadmin.inl"
 			>
 		</File>
 		<File

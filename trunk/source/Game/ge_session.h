@@ -3,8 +3,19 @@
 
 enum gESession_State
 {
-    //FIXME: gESession_State constants.
-    gESession_State_ForceDWORD = GE_FORCE_DWORD
+    gESession_State_None          = 0x00000000,
+    gESession_State_Movement      = 0x00000001,
+    gESession_State_Fight         = 0x00000002,
+    gESession_State_Ride_Movement = 0x00000003,
+    gESession_State_Ride_Fight    = 0x00000004,
+    gESession_State_ItemUse       = 0x00000005,
+    gESession_State_Inventory     = 0x00000006,
+    gESession_State_Dialog        = 0x00000007,
+    gESession_State_Trade         = 0x00000008,
+    gESession_State_InteractObj   = 0x00000009,
+    gESession_State_Journal       = 0x0000000A,
+    gESession_State_Editor        = 0x0000000B,
+    gESession_State_ForceDWORD    = GE_FORCE_DWORD
 };
 
 enum gESession_StartMode
@@ -41,6 +52,7 @@ public:    virtual void                       Process( void );
 public:    virtual eCStatistic *              CreateStatistics( void ) const;
 protected: virtual bEResult                   ReadSaveGame( bCIStream & );
 protected: virtual bEResult                   WriteSaveGame( bCOStream & );
+public:    using                bCObjectBase::CopyFrom;
 public:    virtual void                       CopyFrom( gCSession const & );
 private:
     static bCPropertyObjectTypeBase thisType;

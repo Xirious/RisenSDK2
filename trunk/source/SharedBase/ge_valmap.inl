@@ -3,7 +3,7 @@ typename bTValMap< K, T >::bSNode * bTValMap< K, T >::AccessNode( K const & _k, 
 {
     _h = ::g_GetHashValue< K >( _k ) % this->m_arrNodes.GetCount();
     if( _h < static_cast< GEU32 >( this->m_arrNodes.GetCount() ) )
-        for( bSNode * _p = this->m_arrNodes[ _h ]; _p; _p = _p->m_pNext )
+        for( bSNode * _p = this->m_arrNodes[ static_cast< GEInt >( _h ) ]; _p; _p = _p->m_pNext )
             if ( _k == _p->m_Key )
                 return _p;
     return 0;
@@ -14,7 +14,7 @@ typename bTValMap< K, T >::bSNode const * bTValMap< K, T >::GetNode( K const & _
 {
     _h = ::g_GetHashValue< K >( _k ) % this->m_arrNodes.GetCount();
     if( _h < static_cast< GEU32 >( this->m_arrNodes.GetCount() ) )
-        for( bSNode * _p = this->m_arrNodes[ _h ]; _p; _p = _p->m_pNext )
+        for( bSNode * _p = this->m_arrNodes[ static_cast< GEInt >( _h ) ]; _p; _p = _p->m_pNext )
             if ( _k == _p->m_Key )
                 return _p;
     return 0;
@@ -144,7 +144,7 @@ GEBool bTValMap< K, T >::GetAt( K const & _k, T & _e ) const
 template< typename K, typename T >
 GEInt bTValMap< K, T >::GetCount( void ) const
 {
-    return this->m_u32Count;
+    return static_cast< GEInt >( this->m_u32Count );
 }
 
 template< typename K, typename T >

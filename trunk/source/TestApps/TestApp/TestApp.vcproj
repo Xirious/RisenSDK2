@@ -40,6 +40,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalOptions="/Wall"
 				AdditionalIncludeDirectories="..\..\"
 				PreprocessorDefinitions="WIN32;NDEBUG"
 				ExceptionHandling="0"
@@ -115,6 +116,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalOptions="/Wall"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\"
 				MinimalRebuild="true"

@@ -1,3 +1,6 @@
+#pragma warning( push )
+#pragma warning( disable : 4640 )  // construction of local static object is not thread-safe
+
 template< typename T >
 T * g_GetModule( void )
 {
@@ -8,3 +11,5 @@ T * g_GetModule( void )
 	}
     return 0;
 }
+
+#pragma warning( pop )
