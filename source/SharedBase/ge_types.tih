@@ -4,7 +4,7 @@ typedef signed __int16           GEI16;
 typedef unsigned __int16         GEU16;
 typedef signed __int32           GEI32;
 typedef unsigned __int32         GEU32;
-typedef int                      GEInt;
+typedef signed int               GEInt;
 typedef unsigned int             GEUInt;
 typedef signed __int64           GEI64;
 typedef unsigned __int64         GEU64;

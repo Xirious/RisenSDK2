@@ -6,13 +6,13 @@
 
 typedef signed char           FFI8;
 typedef unsigned char         FFU8;
-typedef signed short          FFI16;
+typedef short                 FFI16;
 typedef unsigned short        FFU16;
-typedef signed long           FFI32;
+typedef long                  FFI32;
 typedef unsigned long         FFU32;
 typedef int                   FFInt;
 typedef unsigned int          FFUInt;
-typedef signed __int64        FFI64;
+typedef __int64               FFI64;
 typedef unsigned __int64      FFU64;
 typedef bool                  FFBool;
 typedef float                 FFFloat;
