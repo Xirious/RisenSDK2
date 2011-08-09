@@ -18,13 +18,13 @@ enum bEResult
 
 typedef signed char           GEI8;
 typedef unsigned char         GEU8;
-typedef signed short          GEI16;
+typedef short                 GEI16;
 typedef unsigned short        GEU16;
-typedef signed long           GEI32;
+typedef long                  GEI32;
 typedef unsigned long         GEU32;
 typedef int                   GEInt;
 typedef unsigned int          GEUInt;
-typedef signed __int64        GEI64;
+typedef __int64               GEI64;
 typedef unsigned __int64      GEU64;
 typedef bool                  GEBool;
 typedef float                 GEFloat;
