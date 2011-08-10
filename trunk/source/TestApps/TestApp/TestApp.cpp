@@ -58,17 +58,15 @@ static int __stdcall ProtoTypeMain( HINSTANCE a_hInstance, bCString const & a_st
         if( GEFalse == bSkipMain )
         {
             bCString strProject( "Projects" );
-            bCString strWorld( "G3_Startup" );
+            bCString strWorld( "World" );
             if( GETrue == a_CommandLine.GetOptions().IsValidKey( "projectfile" ) )
             {
                 strProject = a_CommandLine.GetOptions().GetAt( "projectfile" );
             }
-            /** /// Not present in the Risen - don’t ask me why.
             if( GETrue == a_CommandLine.GetOptions().IsValidKey( "worldfile" ) )
             {
                 strWorld = a_CommandLine.GetOptions().GetAt( "worldfile" );
             }
-            /**/
             ProtoTypeApp.LoadProjectFile( strProject, strWorld );
             
             gCSession::GetInstance().GotoStartPosition();
@@ -77,9 +75,20 @@ static int __stdcall ProtoTypeMain( HINSTANCE a_hInstance, bCString const & a_st
 
             ProtoTypeApp.ConfineCursor();
 
-            ProtoTypeApp.PlayIntros();
-            
+            if( GEFalse == a_CommandLine.GetOptions().IsValidKey( "nointro" ) )
+            {
+                ProtoTypeApp.PlayIntros();
+            }
+
             g_GetModule< gCSession >()->StartGame();
+
+            if( GETrue == a_CommandLine.GetOptions().IsValidKey( "devmode" ) )
+            {
+                gCSession * pSession = g_GetModule< gCSession >();
+                pSession->SetTestMode( GETrue );
+                // Allows OnDebugToggleFreeFlyCam usage:
+                pSession->SetAdvancedTestMode( GETrue );
+            }
 
             ProtoTypeApp.Run();
         }
