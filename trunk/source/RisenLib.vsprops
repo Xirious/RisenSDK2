@@ -2,15 +2,16 @@
 <VisualStudioPropertySheet
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="Risen SDK Library"
+	Name="Risen SDK Library - All"
 	OutputDirectory="..\build\$(ConfigurationName)"
 	IntermediateDirectory="..\build\$(ConfigurationName)\$(ProjectName)"
 	CharacterSet="2"
 	>
 	<Tool
 		Name="VCCLCompilerTool"
-		WarningLevel="4"
+		AdditionalOptions="/Wall"
 		CallingConvention="2"
+		WarningLevel="4"
 	/>
 	<Tool
 		Name="VCLibrarianTool"

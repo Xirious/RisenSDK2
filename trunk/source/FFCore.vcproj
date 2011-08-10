@@ -17,7 +17,7 @@
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLib.vsprops"
+			InheritedPropertySheets=".\RisenLibRelease.vsprops"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -37,7 +37,6 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -70,7 +69,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLib.vsprops"
+			InheritedPropertySheets=".\RisenLibDebug.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -89,8 +88,6 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
-				RuntimeLibrary="1"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
