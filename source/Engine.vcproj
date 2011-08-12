@@ -242,6 +242,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_inputadmin.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_locstring.h"
 			>
 		</File>

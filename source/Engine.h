@@ -132,6 +132,8 @@ class eCPropertyEditFrame2{};
 #include "Engine/ge_application.h"
 class GE_DLLIMPORT eCEntityDynamicContext{};
 
+#include "Engine/ge_inputadmin.h"
+
 #pragma warning( pop )
 
 #endif

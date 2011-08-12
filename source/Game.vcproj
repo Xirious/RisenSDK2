@@ -381,6 +381,14 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="input"
+			>
+			<File
+				RelativePath=".\Game\ge_actionadmin.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
