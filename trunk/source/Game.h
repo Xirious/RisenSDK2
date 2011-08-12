@@ -4,12 +4,6 @@
 #include "Engine.h"
 #include "Music.h"
 
-enum gEActionKey
-{
-    //FIXME: gEActionKey constants.
-    gEActionKey_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEAniState
 {
     gEAniState_Dummy0        = 0x00000000,
@@ -647,19 +641,9 @@ class gCInventoryStack{};
 /**/
 class gCInfoSystem{};
 
-struct gSActionKeyInfo
-{
-    char __FIXME_0000[ 0x0014 ];
-    //FIXME: gSActionKeyInfo members.
-};
-
-struct gSAction
-{
-    char __FIXME_0000[ 0x0010 ];
-    //FIXME: gSAction members.
-};
-
-struct gSDebugAction;
+class gCCharacterControl{};
+class gCCharacterSensor{};
+#include "Game/ge_actionadmin.h"
 
 #include "Game/ge_sessioncheats.h"
 #include "Game/ge_sessioninfo.h"
