@@ -15,7 +15,7 @@ public:
     GE_ASSERT_SIZEOF( eSPortalRect, 0x003C )
 protected:
     //FIXME: eSBSPPolygon name.
-    struct 
+    struct eSBSPPolygon
     {
         bCPlane  m_plPlane;
         bCVector m_arrPoints[ 9 ];
