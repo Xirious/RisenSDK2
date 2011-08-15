@@ -2,7 +2,7 @@
 <VisualStudioPropertySheet
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="Risen Script DLL"
+	Name="Risen Script DLL - All"
 	OutputDirectory="..\..\..\bin\scripts"
 	IntermediateDirectory="..\..\..\build\$(ConfigurationName)\$(ProjectName)"
 	CharacterSet="2"
@@ -10,13 +10,15 @@
 	<Tool
 		Name="VCCLCompilerTool"
 		AdditionalIncludeDirectories="..\..\"
+		AdditionalOptions="/Wall"
 		CallingConvention="2"
-		StringPooling="true"
+		DisableSpecificWarnings="4505;4514;4711"
 		WarningLevel="4"
 	/>
 	<Tool
 		Name="VCLinkerTool"
 		AdditionalDependencies="kernel32.lib"
+		GenerateDebugInformation="true"
 		GenerateManifest="false"
 		IgnoreImportLibrary="true"
 	/>

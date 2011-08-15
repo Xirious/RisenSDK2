@@ -18,7 +18,7 @@
 		<Configuration
 			Name="Debug|Win32"
 			ConfigurationType="2"
-			InheritedPropertySheets="..\..\RisenScripts.vsprops"
+			InheritedPropertySheets="..\..\RisenScriptsDebug.vsprops"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -37,12 +37,6 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
-				Optimization="0"
-				MinimalRebuild="true"
-				RuntimeLibrary="1"
-				EnableFunctionLevelLinking="true"
-				DebugInformationFormat="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -55,7 +49,6 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				GenerateDebugInformation="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -84,9 +77,8 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="..\..\..\bin\scripts"
 			ConfigurationType="2"
-			InheritedPropertySheets="..\..\RisenScripts.vsprops"
+			InheritedPropertySheets="..\..\RisenScriptsRelease.vsprops"
 			WholeProgramOptimization="1"
 			>
 			<Tool
@@ -106,9 +98,6 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
-				PreprocessorDefinitions="NDEBUG"
-				RuntimeLibrary="0"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -121,9 +110,6 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				UseLibraryDependencyInputs="false"
-				AdditionalLibraryDirectories=""
-				SetChecksum="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
