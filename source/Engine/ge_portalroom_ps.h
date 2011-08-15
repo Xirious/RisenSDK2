@@ -1,6 +1,9 @@
 #ifndef GE_PORTALROOM_PS_H_INCLUDED
 #define GE_PORTALROOM_PS_H_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTValArray<T>' needs to have dll-interface to be used by clients of class 'eCPortalRoom_PS'
+
 class GE_DLLIMPORT eCPortalRoom_PS :
     public eCPortalCell_PS
 {
@@ -21,12 +24,12 @@ protected: virtual void                       OnUpdatedWorldMatrix( bCMatrix con
 public:    virtual GEBool                     Intersects( bCFrustum & ) const;
 public:    virtual void                       AddPortalTo( bCFrustum const &, eCPortalCell_PS * );
 protected:
-    bCString                         m_strReverbPreset;  // 001C
-    bCString                         m_strMeshFileName;  // 0020
-    bCBox                            m_boxBoundary;      // 0024
-    eCPortalBSP *                    m_pPortalBSP;       // 003C
+    bCString                         m_strReverbPreset;
+    bCString                         m_strMeshFileName;
+    bCBox                            m_boxBoundary;
+    eCPortalBSP *                    m_pPortalBSP;
     eCPortalRoom_PS *                __FIXME_0040;
-    bTValArray< eCGeometryEntity * > m_arrEntities;      // 0044
+    bTValArray< eCGeometryEntity * > m_arrEntities;
 public:
     static bCObjectBase *             CreateObject( void );
     static bCPropertyObjectTypeBase & GetThisType( void );
@@ -52,5 +55,7 @@ public:
     eCPortalRoom_PS( eCPortalRoom_PS const & );
 };
 GE_ASSERT_SIZEOF( eCPortalRoom_PS, 0x0050 )
+
+#pragma warning( pop )
 
 #endif

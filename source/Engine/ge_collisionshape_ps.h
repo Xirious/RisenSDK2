@@ -9,6 +9,9 @@ enum eEPhysicRangeType
     eEPhysicRangeType_ForceDWORD = GE_FORCE_DWORD
 };
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'eCCollisionShape_PS'
+
 class GE_DLLIMPORT eCCollisionShape_PS :
     public eCCollisionShapeBase_PS
 {
@@ -79,21 +82,21 @@ protected: virtual void                                       OnCacheIn( void );
 protected: virtual void                                       OnCacheOut( void );
 protected: virtual void                                       OnPrefetch( bCVector const & );
 protected:
-    bTPropertyContainer< eECollisionGroup >  m_Group;               // 0010
-    bTPropertyContainer< eEPhysicRangeType > m_Range;               // 0018
-    GEBool                                   m_bDisableCollision;   // 0020
-    GEBool                                   m_bDisableResponse;    // 0021
-    GEBool                                   m_bIgnoredByTraceRay;  // 0022
-    GEBool                                   m_bIsUnique;           // 0023
-    GEBool                                   m_bIsClimbable;        // 0024
-    GEBool                                   m_bHitByProjectile;    // 0025 
-                                             GE_PADDING( 2 ) 
-    bTRefPtrArray< eCCollisionShape * >      m_arrShapes;           // 0028
-    bTRefPtrArray< eCCollisionShape * >      m_arrTouchingShapes;   // 0034
-    GEBool                                   __FIXME_0040;          // 0040 // IsRootRemoved? HasTouchingShapes?
+    bTPropertyContainer< eECollisionGroup >  m_Group;
+    bTPropertyContainer< eEPhysicRangeType > m_Range;
+    GEBool                                   m_bDisableCollision;
+    GEBool                                   m_bDisableResponse;
+    GEBool                                   m_bIgnoredByTraceRay;
+    GEBool                                   m_bIsUnique;
+    GEBool                                   m_bIsClimbable;
+    GEBool                                   m_bHitByProjectile;
+                                             GE_PADDING( 2 )
+    bTRefPtrArray< eCCollisionShape * >      m_arrShapes;
+    bTRefPtrArray< eCCollisionShape * >      m_arrTouchingShapes;
+    GEBool                                   __FIXME_0040;  // IsRootRemoved? HasTouchingShapes?
                                              GE_PADDING1( 3 )
-    eEPropertySetType                        m_enuTouchType;        // 0044
-    bCString                                 m_strTouchingBone;     // 0048
+    eEPropertySetType                        m_enuTouchType;
+    bCString                                 m_strTouchingBone;
 protected:
     void    GetGizmoData( eCCollisionShape *, GELPVoid );
     GEFloat GetGizmoScaling( eCCameraBase * ) const;
@@ -157,5 +160,7 @@ public:
     eCCollisionShape_PS( void );
 };
 GE_ASSERT_SIZEOF( eCCollisionShape_PS, 0x004C )
+
+#pragma warning( pop )
 
 #endif

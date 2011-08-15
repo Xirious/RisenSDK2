@@ -1,6 +1,9 @@
 #ifndef GE_DYNAMICENTITY_H_INCLUDED
 #define GE_DYNAMICENTITY_H_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'eCDynamicEntity::CProcessor' needs to have dll-interface to be used by clients of class 'eCDynamicEntity'
+
 class GE_DLLIMPORT eCDynamicEntity :
     public eCGeometryEntity
 {
@@ -13,7 +16,7 @@ protected:
     public: virtual void  OnProcess( void );                 
     public: virtual      ~CProcessor( void );                
     protected:
-        eCDynamicEntity * m_pEntity;       // 000C
+        eCDynamicEntity * m_pEntity;
     };
     GE_ASSERT_SIZEOF( CProcessor, 0x0010 )
 public:    virtual void                     SetID( bCPropertyID const & );                                          
@@ -66,15 +69,15 @@ public:    virtual bCBox const &            GetLocalNodeBoundary( void ) const;
 public:    virtual bCBox const &            GetWorldNodeBoundary( void ) const;                                     
 public:    virtual bCSphere const &         GetWorldNodeSphere( void ) const;                                       
 protected:
-    CProcessor    m_Processor;                   // 00D0
-    bCMatrix      m_matLocalMatrix;              // 00E0
-    bCBox         m_boxWorldNodeBoundary;        // 0120
-    bCSphere      m_sphWorldNodeSphere;          // 0138
-    bCBox         m_boxLocalNodeBoundary;        // 0148
-    void *        m_pNameInfo;                   // 0160 // eCEntityNameInfo *
-    eSEntityID *  m_pEntityID;                   // 0164
-    eCEntityProxy m_Creator;                     // 0168
-    GEU16         m_bIsNativeSaveGameEntity: 1;  // 0170
+    CProcessor    m_Processor;
+    bCMatrix      m_matLocalMatrix;
+    bCBox         m_boxWorldNodeBoundary;
+    bCSphere      m_sphWorldNodeSphere;
+    bCBox         m_boxLocalNodeBoundary;
+    void *        m_pNameInfo;  // eCEntityNameInfo *
+    eSEntityID *  m_pEntityID;
+    eCEntityProxy m_Creator;
+    GEU16         m_bIsNativeSaveGameEntity: 1;
     GEU16         __FIXME_0170_0002        : 1;
     GEU16         __FIXME_0170_0004        : 1;
     GEU16         m_u16VisualizedTransAxes : 4;
@@ -101,5 +104,7 @@ protected:
     eCDynamicEntity( void );
 };
 GE_ASSERT_SIZEOF( eCDynamicEntity, 0x0178 )
+
+#pragma warning( pop )
 
 #endif

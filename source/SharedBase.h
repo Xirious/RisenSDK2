@@ -1,10 +1,6 @@
 #ifndef SHAREDBASE_H_INCLUDED
 #define SHAREDBASE_H_INCLUDED
 
-#pragma warning( push )
-#pragma warning( disable : 4514 )  // unreferenced inline function has been removed
-#pragma warning( disable : 4711 )  // function selected for automatic inline expansion
-
 #include "SharedBase/ge_def.h"
 #include "SharedBase/ge_types.h"
 #include "SharedBase/ge_system.h"
@@ -153,7 +149,5 @@ class bCPropertyObjectTypeBase;
 #include "SharedBase/ge_propertycontainer.h"
 
 GE_C_LINKAGE GE_DLLIMPORT GEFloat g_fFOV;
-
-#pragma warning( pop )
 
 #endif

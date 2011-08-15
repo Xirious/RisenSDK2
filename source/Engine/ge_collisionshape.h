@@ -26,6 +26,9 @@ enum eEShapeAABBAdapt
     eEShapeAABBAdapt_ForceDWORD = GE_FORCE_DWORD
 };
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'eCCollisionShape'
+
 class GE_DLLIMPORT eCCollisionShape :
     public bCObjectRefBase
 {
@@ -41,35 +44,40 @@ public:    virtual GEInt                      GetNativePropertyCount( void ) con
 public:    virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;
 protected: virtual                           ~eCCollisionShape( void );
 protected:
-    bTPropertyContainer< eECollisionShapeType > m_ShapeType;             // 0008
-    bTPropertyContainer< eEShapeGroup >         m_Group;                 // 0010
-    bTPropertyContainer< eEShapeMaterial >      m_Material;              // 0018
-    bTPropertyContainer< eEShapeAABBAdapt >     m_ShapeAABBAdaptMode;     // 0020
-    GEBool                                      m_bIgnoredByTraceRay;    // 0028
-    GEBool                                      m_bEnableCCD;            // 0029
-    GEBool                                      m_bOverrideEntityAABB;   // 002A
-    GEBool                                      m_bDisableCollision;     // 002B
-    GEBool                                      m_bDisableResponse;      // 002C
-    GEBool                                      m_bTriggersOnTouch;      // 002D
-    GEBool                                      m_bTriggersOnUntouch;    // 002E
-    GEBool                                      m_bTriggersOnIntersect;  // 002F
-    GEFloat                                     m_fSkinWidth;            // 0030
-    GEBool                                      m_bIsLazyGenerated;      // 0034
+    bTPropertyContainer< eECollisionShapeType > m_ShapeType;
+    bTPropertyContainer< eEShapeGroup >         m_Group;
+    bTPropertyContainer< eEShapeMaterial >      m_Material;
+    bTPropertyContainer< eEShapeAABBAdapt >     m_ShapeAABBAdaptMode;
+    GEBool                                      m_bIgnoredByTraceRay;
+    GEBool                                      m_bEnableCCD;
+    GEBool                                      m_bOverrideEntityAABB;
+    GEBool                                      m_bDisableCollision;
+    GEBool                                      m_bDisableResponse;
+    GEBool                                      m_bTriggersOnTouch;
+    GEBool                                      m_bTriggersOnUntouch;
+    GEBool                                      m_bTriggersOnIntersect;
+    GEFloat                                     m_fSkinWidth;
+    GEBool                                      m_bIsLazyGenerated;
                                                 GE_PADDING( 1 )
-    GEU16                                       m_u16FileVersion;        // 0036
-    GEBool                                      m_bAdaptToAABB;          // 0038
+    GEU16                                       m_u16FileVersion;
+    GEBool                                      m_bAdaptToAABB;
                                                 GE_PADDING1( 3 )
-    GEFloat                                     m_fAdaptScale;           // 003C
-    GEBool                                      m_bIsCachedIn;           // 0040
+    GEFloat                                     m_fAdaptScale;
+    GEBool                                      m_bIsCachedIn;
                                                 GE_PADDING2( 1 )
-    GEU16                                       m_u16ResourceIndex;      // 0042
-    bCBox                                       m_boxOuterAABBLocal;     // 0044
-    NxShape *                                   m_pProprietaryShape;     // 005C
-    NxCCDSkeleton *                             m_pCCDSkeleton;          // 0060
-    bCVector                                    m_vecLastPosition;       // 0064
-    eCCollisionShape_PS *                       m_pSourceShapePS;        // 0070
-    GELPVoid                                    m_pShape;                // 0074
-    // m_pShape can be of type bCString *, bCOrientedBox *, bCSphere *, bCCapsule * or bCVector *.
+    GEU16                                       m_u16ResourceIndex;
+    bCBox                                       m_boxOuterAABBLocal;
+    NxShape *                                   m_pProprietaryShape;
+    NxCCDSkeleton *                             m_pCCDSkeleton;
+    bCVector                                    m_vecLastPosition;
+    eCCollisionShape_PS *                       m_pSourceShapePS;
+    // m_pShape can be of type:
+    //  bCString *
+    //  bCOrientedBox *
+    //  bCSphere *
+    //  bCCapsule *
+    //  bCVector *
+    GELPVoid                                    m_pShape;
 protected:
     void CalcShapeAABBLocal( void );
     void Invalidate( void );
@@ -198,5 +206,7 @@ public:
     eCCollisionShape( void );
 };
 GE_ASSERT_SIZEOF( eCCollisionShape, 0x0078 )
-    
+
+#pragma warning( pop )
+
 #endif

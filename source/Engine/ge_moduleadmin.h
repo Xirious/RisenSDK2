@@ -1,6 +1,10 @@
 #ifndef GE_MODULEADMIN_H_INCLUDED
 #define GE_MODULEADMIN_H_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTPtrArray<T>' needs to have dll-interface to be used by clients of class 'eCModuleAdmin'
+                                   // class 'bTValMap<K,T>' needs to have dll-interface to be used by clients of class 'eCModuleAdmin'
+
 class GE_DLLIMPORT eCModuleAdmin :
     public bCObjectRefBase
 {
@@ -53,6 +57,8 @@ public:
     eCModuleAdmin( void );
 };
 GE_ASSERT_SIZEOF( eCModuleAdmin, 0x0028 )
+
+#pragma warning( pop )
 
 template< typename T >
 T * g_GetModule( void );

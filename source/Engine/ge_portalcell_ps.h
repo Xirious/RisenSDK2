@@ -1,6 +1,9 @@
 #ifndef GE_PORTALCELL_PS_H_INCLUDED
 #define GE_PORTALCELL_PS_H_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTObjArray<T>' needs to have dll-interface to be used by clients of class 'eCPortalCell_PS'
+
 class GE_DLLIMPORT eCPortalCell_PS :
     public eCEntityPropertySet
 {
@@ -16,7 +19,7 @@ protected: virtual void                       Destroy( void );
 public:    virtual                           ~eCPortalCell_PS( void );
 public:    virtual void                       OnRenderDebug( void );
 protected:
-    bTObjArray< eCPortal > m_arrPortals;  // 0010
+    bTObjArray< eCPortal > m_arrPortals;
 protected:
     void Invalidate( void );
 public:
@@ -34,5 +37,7 @@ public:
     eCPortalCell_PS( void );
 };
 GE_ASSERT_SIZEOF( eCPortalCell_PS, 0x001C )
+
+#pragma warning( pop )
 
 #endif
