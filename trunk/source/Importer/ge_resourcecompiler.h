@@ -7,7 +7,14 @@ class GE_DLLIMPORT iCResourceCompiler :
 public:
     enum eEResourceCompilerType
     {
-        //FIXME: iCResourceCompiler::eEResourceCompilerType constants.
+        eEResourceCompilerType_Image,
+        eEResourceCompilerType_Sound,
+        eEResourceCompilerType_Animation,
+        eEResourceCompilerType_Meshes_Materials,
+        eEResourceCompilerType_Meshes,
+        eEResourceCompilerType_Materials,
+        eEResourceCompilerType_LipSync,
+        eEResourceCompilerType_Library,
         eEResourceCompilerType_ForceDWORD = GE_FORCE_DWORD
     };
 public:    virtual GEU16    GetVersion( void ) const;

@@ -126,11 +126,23 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Importer\ge_importeradmin.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Importer\ge_meshimporter.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Importer\ge_resourcecompiler.h"
 			>
 		</File>
 		<File
 			RelativePath=".\Importer\ge_scenecompiler.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Importer\ge_texturebaker.h"
 			>
 		</File>
 		<File
