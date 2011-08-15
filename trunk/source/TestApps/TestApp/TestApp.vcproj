@@ -48,6 +48,7 @@
 				WarningLevel="4"
 				DebugInformationFormat="3"
 				CallingConvention="2"
+				DisableSpecificWarnings="4505;4514;4711"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -119,12 +120,12 @@
 				AdditionalOptions="/Wall"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\"
-				MinimalRebuild="true"
 				ExceptionHandling="0"
 				RuntimeLibrary="1"
 				WarningLevel="4"
 				DebugInformationFormat="4"
 				CallingConvention="2"
+				DisableSpecificWarnings="4505;4514;4711"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
