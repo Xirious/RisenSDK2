@@ -85,11 +85,10 @@ protected: virtual void                     OnParentChanged( eCNode * );
 protected: virtual void                     OnAttachChild( eCNode * );                                                                
 protected: virtual void                     OnDetachChild( eCNode * );                                                                
 private:
-    eSEntityFlags                          m_EntityFlags;               // 0014
-    GEU8 (*                                m_pPSIndexMap) [ 0x80 ];     // 0018 // eSPSIndexMap *
-    bTRefPtrArray< eCEntityPropertySet * > m_arrPropertySet;            // 001C
-    bCDateTime                             m_DataChangedTimeStamp;      // 0028
-    // sizeof(eCEntity)                                                 // 0030
+    eSEntityFlags                          m_EntityFlags;
+    GEU8 (*                                m_pPSIndexMap) [ 0x80 ];  // eSPSIndexMap *
+    bTRefPtrArray< eCEntityPropertySet * > m_arrPropertySet;
+    bCDateTime                             m_DataChangedTimeStamp;
 protected:
     static GEInt GE_CCALL ComparePropertySets( GELPCVoid, GELPCVoid );
 protected:
@@ -146,5 +145,8 @@ protected:
     eCEntity( eCEntity const & );
     eCEntity( void );
 };
+GE_ASSERT_SIZEOF( eCEntity, 0x0030 )
+
+#pragma warning( pop )
 
 #endif

@@ -1,8 +1,6 @@
 #ifndef GE_NULLSTREAM_H_INCLUDED
 #define GE_NULLSTREAM_H_INCLUDED
 
-#pragma warning( push )
-
 class GE_DLLIMPORT bCNullStream :
     public bCIOStream
 {

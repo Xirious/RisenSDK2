@@ -1,6 +1,9 @@
 #ifndef GE_SCRIPTFUNCTIONMAP_H_INCLUDED
 #define GE_SCRIPTFUNCTIONMAP_H_INCLUDED
 
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTStringObjMap<T>' needs to have dll-interface to be used by clients of class 'eCScriptFunctionMap'
+
 class GE_DLLIMPORT eCScriptFunctionMap
 {
 protected:
@@ -32,5 +35,7 @@ public:
    ~eCScriptFunctionMap( void );
 };
 GE_ASSERT_SIZEOF( eCScriptFunctionMap, 0x0040 )
+
+#pragma warning( pop )
 
 #endif
