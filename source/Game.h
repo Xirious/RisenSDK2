@@ -473,7 +473,7 @@ class gCCombatStyle;
 class gCCombatSpecies;
 class gCCombatSystem_PS;
 #include "Game/ge_combatmove.h"
-// gCCombatMoveAim
+#include "Game/ge_combatmoveaim.h"
 // gCCombatMoveComboSwitch
 // gCCombatMoveFinishing
 // gCCombatMoveMelee

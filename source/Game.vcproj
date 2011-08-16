@@ -413,6 +413,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Game\ge_combatmoveaim.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_combatobject.h"
 				>
 			</File>
