@@ -4,7 +4,7 @@
 class GE_DLLIMPORT World
 {
 protected:
-    void * __FIXME;
+    void * m_Reserved;
 public:
     void            AutoSave( bCString const & );
     void            CacheEntities( void );

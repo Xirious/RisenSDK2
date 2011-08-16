@@ -13,10 +13,9 @@ public:    virtual void                       PostLoad( void );
 public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;          
 public:    virtual                           ~eCDocObject( void );                  
 private:
-    bCString m_strFileTitleA;  // 0008
-    // sizeof(eCDocObject)        000C
-private:
     static bCPropertyObjectTypeBase thisType;
+protected:
+    bCString m_strFileTitleA;
 public:
     static bCObjectBase *             GE_STDCALL CreateObject( void );
     static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
@@ -37,5 +36,6 @@ public:
     eCDocObject( eCDocObject const & );
     eCDocObject( void );
 };
+GE_ASSERT_SIZEOF( eCDocObject, 0x000C )
 
 #endif

@@ -1,8 +1,6 @@
 #ifndef GS_TEMPLATE_H_INCLUDED
 #define GS_TEMPLATE_H_INCLUDED
 
-class Entity;  // forward
-
 class GE_DLLIMPORT Template
 {
 private:

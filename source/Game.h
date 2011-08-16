@@ -63,48 +63,6 @@ enum gECharMovementMode
     gECharMovementMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gECombatMode
-{
-    gECombatMode_None       = 0x00000000,
-    gECombatMode_Carry      = 0x00000001,
-    gECombatMode_Melee      = 0x00000002,
-    gECombatMode_Ranged     = 0x00000003,
-    gECombatMode_Magic      = 0x00000004,
-    gECombatMode_Cast       = 0x00000005,
-    gECombatMode_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gECombatMove
-{
-    gECombatMove_None               = 0x00000000,
-    gECombatMove_ParadeStumble      = 0x0000000E,
-    gECombatMove_ParadeStumbleHeavy = 0x0000000F,
-    gECombatMove_AttackStumble      = 0x0000000B,
-    gECombatMove_AttackStumbleLeft  = 0x0000000C,
-    gECombatMove_AttackStumbleRight = 0x0000000D,
-    gECombatMove_ForceDWORD         = GE_FORCE_DWORD
-};
-
-enum gECombatParadeType
-{
-    gECombatParadeType_None       = 0x00000000,
-    gECombatParadeType_Fist       = 0x00000001,
-    gECombatParadeType_Weapon     = 0x00000002,
-    gECombatParadeType_Magic      = 0x00000004,
-    gECombatParadeType_Ranged     = 0x00000008,
-    gECombatParadeType_Monster    = 0x00000010,
-    gECombatParadeType_Shield     = 0x0000001B,
-    gECombatParadeType_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gECombatPose
-{
-    gECombatPose_P0         = 0x00000000,
-    gECombatPose_P1         = 0x00000001,
-    gECombatPose_P2         = 0x00000002,
-    gECombatPose_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEComment
 {
     gEComment_None              = 0x00000000,
@@ -506,6 +464,38 @@ class eCSoundResource2{};
 #include "Game/ge_modifyskill.h"
 #include "Game/ge_skills_ps.h"
 
+class gCCharacterControl{};
+class gCCharacterSensor{};
+#include "Game/ge_actionadmin.h"
+
+#include "Game/ge_combatobject.h"
+class gCCombatStyle;
+class gCCombatSpecies;
+class gCCombatSystem_PS;
+#include "Game/ge_combatmove.h"
+// gCCombatMoveAim
+// gCCombatMoveComboSwitch
+// gCCombatMoveFinishing
+// gCCombatMoveMelee
+// gCCombatMoveOverlayStumble
+// gCCombatMoveParade
+// gCCombatMoveReload
+// gCCombatMoveScriptState
+// gCCombatMoveShoot
+// gCCombatMoveStumble
+#include "Game/ge_combatai.h"
+#include "Game/ge_combataimelee.h"
+#include "Game/ge_combatairanged.h"
+#include "Game/ge_combatweaponconfig.h"
+#include "Game/ge_combatstyleanipose.h"
+#include "Game/ge_combatstyleweaponconfig.h"
+#include "Game/ge_combatstyle.h"
+#include "Game/ge_combatstylemelee.h"
+#include "Game/ge_combatstyleranged.h"
+#include "Game/ge_combatspecies.h"
+#include "Game/ge_combatsystem_ps.h"
+#include "Game/ge_combatadmin.h"
+
 #include "Game/ge_flightpathbase.h"
 #include "Game/ge_flightpathballistic.h"
 #include "Game/ge_flightpathseeking.h"
@@ -640,10 +630,6 @@ class gCInventoryStack{};
 #include "Game/ge_infoconditionteachenabled.h"
 /**/
 class gCInfoSystem{};
-
-class gCCharacterControl{};
-class gCCharacterSensor{};
-#include "Game/ge_actionadmin.h"
 
 #include "Game/ge_sessioncheats.h"
 #include "Game/ge_sessioninfo.h"

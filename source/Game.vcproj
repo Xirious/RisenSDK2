@@ -389,6 +389,66 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="combat"
+			>
+			<File
+				RelativePath=".\Game\ge_combatadmin.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatai.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combataimelee.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatairanged.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatmove.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatobject.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatspecies.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatstyle.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatstyleanipose.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatstylemelee.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatstyleranged.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatstyleweaponconfig.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatsystem_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_combatweaponconfig.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>

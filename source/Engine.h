@@ -30,6 +30,7 @@
 #include "Engine/ge_processibleelement.h"
 
 #include "Engine/ge_docobject.h"
+#include "Engine/ge_docobjectmap.h"
 #include "Engine/ge_docarchive.h"
 
 class eCVideoPlayer{
