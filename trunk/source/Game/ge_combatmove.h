@@ -78,8 +78,13 @@ struct gSCombatMoveInstance
 
 struct gSComboData
 {
-    //FIXME: gSComboData members.
+public: virtual ~gSComboData( void );
+public: 
+    gSCombatMoveInstance * m_pInstance;
+    GEFloat                m_fBegin;
+    GEFloat                m_fEnd;
 };
+GE_ASSERT_SIZEOF( gSComboData, 0x0010 )
 
 struct gSFAIMoveDesc
 {
