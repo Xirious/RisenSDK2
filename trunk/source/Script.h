@@ -5,6 +5,7 @@
 
 #include "Script/gs_propertymacros.h"
 
+class Entity;
 #include "Script/gs_template.h"
 #include "Script/gs_entity.h"
 #include "Script/gs_achievement.h"

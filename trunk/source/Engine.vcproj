@@ -194,6 +194,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_docobjectmap.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_dynamicentity.h"
 			>
 		</File>

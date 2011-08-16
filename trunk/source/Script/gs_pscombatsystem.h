@@ -1,19 +1,11 @@
 #ifndef GS_PSCOMBATSYSTEM_H_INCLUDED
 #define GS_PSCOMBATSYSTEM_H_INCLUDED
 
-class gCCombatSystem_PS;  // forward
-
-enum ECombatFightAIMode
-{
-    //FIXME: ECombatFightAIMode constants. Same as for gECombatFightAIMode?
-    ECombatFightAIMode_ForceDWORD = GE_FORCE_DWORD
-};
-
 class GE_DLLIMPORT PSCombatSystem
 {
 public:
     GS_DECLARE_PROPERTY( ActiveFightAI,  bCString )
-    GS_DECLARE_PROPERTY( FightAIMode,    ECombatFightAIMode )
+    GS_DECLARE_PROPERTY( FightAIMode,    gECombatFightAIMode )
     GS_DECLARE_PROPERTY( PassiveFightAI, bCString )
 protected:
     eCEntity * m_pEntity;

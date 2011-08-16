@@ -19,7 +19,6 @@ public:
     void     SetFocusEntity( Entity );
     void     SetFocusMode( bCString );
     void     SetOffsetPose( bCMatrix const & );
-
 public:
     Focus & operator = ( Focus const & );
 public:
