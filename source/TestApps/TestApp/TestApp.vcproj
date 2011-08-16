@@ -63,7 +63,9 @@
 				Name="VCLinkerTool"
 				AdditionalOptions="/STACK:0x00800000"
 				AdditionalDependencies="user32.lib comctl32.lib"
+				EnableCOMDATFolding="2"
 				GenerateDebugInformation="true"
+				OptimizeReferences="2"
 				SubSystem="2"
 				SetChecksum="true"
 			/>
