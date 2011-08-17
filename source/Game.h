@@ -468,6 +468,14 @@ class gCCharacterControl{};
 class gCCharacterSensor{};
 #include "Game/ge_actionadmin.h"
 
+typedef eSScriptBase gSScript;
+#include "Game/ge_scriptproxyaicallback.h"
+typedef eSScriptBase gSScriptAICallback;
+#include "Game/ge_scriptproxyaifunction.h"
+typedef eSScriptBase gSScriptAIFunction;
+#include "Game/ge_scriptproxyaistate.h"
+typedef eSScriptBase gSScriptAIState;
+
 #include "Game/ge_combatobject.h"
 class gCCombatAI;
 class gCCombatStyle;
@@ -481,7 +489,7 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatmoveoverlaystumble.h"
 #include "Game/ge_combatmoveparade.h"
 #include "Game/ge_combatmovereload.h"
-// gCCombatMoveScriptState
+#include "Game/ge_combatmovescriptstate.h"
 // gCCombatMoveShoot
 // gCCombatMoveStumble
 #include "Game/ge_combatai.h"
@@ -518,14 +526,6 @@ class gCCombatSystem_PS;
 #include "Game/ge_effectcommandspawnentityswitch.h"
 #include "Game/ge_effectcommandsequence2.h"
 #include "Game/ge_effect.h"
-
-typedef eSScriptBase gSScript;
-#include "Game/ge_scriptproxyaicallback.h"
-typedef eSScriptBase gSScriptAICallback;
-#include "Game/ge_scriptproxyaifunction.h"
-typedef eSScriptBase gSScriptAIFunction;
-#include "Game/ge_scriptproxyaistate.h"
-typedef eSScriptBase gSScriptAIState;
 
 struct gSArgsForScriptBase{};
 #include "Game/ge_scriptprocessingunit.h"
