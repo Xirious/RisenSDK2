@@ -71,10 +71,17 @@ enum gECombatParadeType
     gECombatParadeType_ForceDWORD = GE_FORCE_DWORD
 };
 
+class gCCombatMove;
+
 struct gSCombatMoveInstance
 {
-    //FIXME: gSCombatMoveInstance members.
+    gCCombatMove *      m_pMove;
+    gCCombatSystem_PS * m_pSystem;
+    gCCombatStyle *     m_pStyle;
+    GEFloat             __FIXME;
+    // ...more members in derived structs
 };
+GE_ASSERT_SIZEOF( gSCombatMoveInstance, 0x0010 )
 
 struct gSComboData
 {
