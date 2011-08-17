@@ -475,7 +475,7 @@ class gCCombatSpecies;
 class gCCombatSystem_PS;
 #include "Game/ge_combatmove.h"
 #include "Game/ge_combatmoveaim.h"
-// gCCombatMoveComboSwitch
+#include "Game/ge_combatmovecomboswitch.h"
 // gCCombatMoveFinishing
 // gCCombatMoveMelee
 // gCCombatMoveOverlayStumble
