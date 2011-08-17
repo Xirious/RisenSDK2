@@ -55,6 +55,13 @@ enum gECombatMove
     gECombatMove_ForceDWORD          = GE_FORCE_DWORD
 };
 
+enum gECombatMoveSide
+{
+    gECombatMoveSide_Left       = 0x00000000,
+    gECombatMoveSide_Right      = 0x00000001,
+    gECombatMoveSide_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gECombatParadeType
 {
     gECombatParadeType_None       = 0x00000000,

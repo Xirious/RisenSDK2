@@ -33,13 +33,6 @@ enum gECombatHitDirection
     gECombatHitDirection_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gECombatMoveSide
-{
-    gECombatMoveSide_Left       = 0x00000000,
-    gECombatMoveSide_Right      = 0x00000001,
-    gECombatMoveSide_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gECombatPhaseType
 {
     gECombatPhaseType_None          = 0x00000000,
@@ -86,13 +79,13 @@ class GE_DLLIMPORT gCCombatMoveMelee :
 public:
     enum gEHitTargetResult
     {
-        //FIXME: gSCombatMoveInstanceMelee::gEHitTargetResult constants.
+        //FIXME: gCCombatMoveMelee::gEHitTargetResult constants.
         gEHitTargetResult_ForceDWORD = GE_FORCE_DWORD
     };
     struct gSCombatMoveInstanceMelee :
         public gSCombatMoveInstance
     {
-        //FIXME: gSCombatMoveInstanceMelee::gSCombatMoveInstanceMelee members.
+        //FIXME: gCCombatMoveMelee::gSCombatMoveInstanceMelee members.
         char __FIXME[ 0x0098 - sizeof(gSCombatMoveInstance) ];
     };
     GE_ASSERT_SIZEOF( gSCombatMoveInstanceMelee, 0x0098 )
