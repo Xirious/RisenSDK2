@@ -4,11 +4,17 @@
 class gCCombatMoveSwitch :
     public bCObjectBase
 {
-public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public:    virtual                           ~gCCombatMoveSwitch( void );
+public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: virtual                           ~gCCombatMoveSwitch( void );
 public:
     GEFloat  m_fTime;
     bCString m_strMove;
+//NOTE: The class is not exported. Use the property system to create objects.
+private:
+    gCCombatMoveSwitch & operator = ( gCCombatMoveSwitch const & );  // not defined
+private:
+    gCCombatMoveSwitch( gCCombatMoveSwitch const & );                // not defined
+    gCCombatMoveSwitch( void );                                      // not defined
 };
 GE_ASSERT_SIZEOF( gCCombatMoveSwitch, 0x000C )
 
