@@ -8,9 +8,9 @@ struct gSCombatMoveInstanceAimData
     void *  m_pInventory;
     void *  m_pAnimation;
     void *  m_pActor;
-    void *  m_pInventoryItem;
-    void *  m_pInventoryItemAnimation;
-    void *  m_pInventoryItemActor;
+    void *  m_pItem;
+    void *  m_pItemAnimation;
+    void *  m_pItemActor;
     GEFloat m_fValue;
     GEFloat m_fScale;
 };
