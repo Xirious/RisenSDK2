@@ -476,6 +476,8 @@ typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
 typedef eSScriptBase gSScriptAIState;
 
+class eCAnimation_PS{};
+
 #include "Game/ge_combatobject.h"
 class gCCombatAI;
 class gCCombatStyle;
@@ -490,7 +492,7 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatmoveparade.h"
 #include "Game/ge_combatmovereload.h"
 #include "Game/ge_combatmovescriptstate.h"
-// gCCombatMoveShoot
+#include "Game/ge_combatmoveshoot.h"
 // gCCombatMoveStumble
 #include "Game/ge_combatai.h"
 #include "Game/ge_combataimelee.h"
