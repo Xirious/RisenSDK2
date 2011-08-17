@@ -90,13 +90,17 @@ public:
     gSCombatMoveInstance * m_pInstance;
     GEFloat                m_fBegin;
     GEFloat                m_fEnd;
+    // ...more members in derived structs
 };
 GE_ASSERT_SIZEOF( gSComboData, 0x0010 )
 
 struct gSFAIMoveDesc
 {
-    //FIXME: gSFAIMoveDesc members.
+    gCCombatAI * m_pCombatAI;
+    int          m_enumFIXME;
+    GEFloat      m_fWeight;
 };
+GE_ASSERT_SIZEOF( gSFAIMoveDesc, 0x000C )
 
 class GE_DLLIMPORT gCCombatMove :
     public gCCombatObject
