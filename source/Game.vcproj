@@ -425,6 +425,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Game\ge_combatmovemelee.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_combatobject.h"
 				>
 			</File>
