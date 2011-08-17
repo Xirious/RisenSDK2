@@ -480,7 +480,7 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatmovemelee.h"
 #include "Game/ge_combatmoveoverlaystumble.h"
 #include "Game/ge_combatmoveparade.h"
-// gCCombatMoveReload
+#include "Game/ge_combatmovereload.h"
 // gCCombatMoveScriptState
 // gCCombatMoveShoot
 // gCCombatMoveStumble
