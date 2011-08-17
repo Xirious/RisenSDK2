@@ -493,7 +493,7 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatmovereload.h"
 #include "Game/ge_combatmovescriptstate.h"
 #include "Game/ge_combatmoveshoot.h"
-// gCCombatMoveStumble
+#include "Game/ge_combatmovestumble.h"
 #include "Game/ge_combatai.h"
 #include "Game/ge_combataimelee.h"
 #include "Game/ge_combatairanged.h"
