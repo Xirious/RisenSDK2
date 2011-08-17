@@ -469,6 +469,7 @@ class gCCharacterSensor{};
 #include "Game/ge_actionadmin.h"
 
 #include "Game/ge_combatobject.h"
+class gCCombatAI;
 class gCCombatStyle;
 class gCCombatSpecies;
 class gCCombatSystem_PS;
