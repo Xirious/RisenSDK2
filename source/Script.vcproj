@@ -197,15 +197,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Script\gs_pscombatsystem.inl"
-				>
-			</File>
-			<File
 				RelativePath=".\Script\gs_psnpc.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psnpc.inl"
 				>
 			</File>
 			<File
@@ -213,15 +205,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\Script\gs_psroutine.inl"
-				>
-			</File>
-			<File
 				RelativePath=".\Script\gs_psskills.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psskills.inl"
 				>
 			</File>
 		</Filter>
@@ -239,6 +223,10 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_entity.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_entity.inl"
 			>
 		</File>
 		<File

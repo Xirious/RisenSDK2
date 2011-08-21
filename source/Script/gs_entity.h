@@ -255,15 +255,21 @@ public:
     Entity( void );
    ~Entity( void );
 public:
-    template< typename PSXxx >
-    PSXxx & PropertySet( void );
-    template< typename PSXxx >
-    PSXxx const & PropertySet( void ) const;
+    template< typename T >
+    inline T & Property( void );
+    template< typename T >
+    inline T const & Property( void ) const;
+    template< typename T >
+    inline T & PropertySet( void );
+    template< typename T >
+    inline T const & PropertySet( void ) const;
 };
 
 #pragma warning( pop )
 
 //NOTE: None isn’t const, but it shouldn’t be modified.
 GE_C_LINKAGE GE_DLLIMPORT Entity const None;
+
+#include "gs_entity.inl"
 
 #endif

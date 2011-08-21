@@ -1,10 +1,7 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-class GE_DLLIMPORT PSSkills
-{
-protected:
-    eCEntity * m_pEntity;
+GS_DECLARE_PROPERTYSET( PSSkills )
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
@@ -101,9 +98,5 @@ protected:
 //FIXME: PSSkills assignment operator shouldn’t be used (only one byte is copied).
 //public: PSSkills & operator = ( PSSkills const & );
 };
-
-GS_DECLARE_PROPERTYSET_ACCESSOR( PSSkills )
-
-#include "gs_psskills.inl"
 
 #endif

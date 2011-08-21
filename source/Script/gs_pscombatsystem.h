@@ -1,14 +1,12 @@
 #ifndef GS_PSCOMBATSYSTEM_H_INCLUDED
 #define GS_PSCOMBATSYSTEM_H_INCLUDED
 
-class GE_DLLIMPORT PSCombatSystem
-{
+GS_DECLARE_PROPERTYSET( PSCombatSystem )
 public:
+    using Entity::Property;
     GS_DECLARE_PROPERTY( ActiveFightAI,  bCString )
     GS_DECLARE_PROPERTY( FightAIMode,    gECombatFightAIMode )
     GS_DECLARE_PROPERTY( PassiveFightAI, bCString )
-protected:
-    eCEntity * m_pEntity;
 public:
     GEBool       CanCounterCurrentTarget( gECombatMove ) const;
     GEBool       DelegateActiveStatus( void );
@@ -65,19 +63,6 @@ protected:
     gCCombatSystem_PS * operator ->                        ( void );
 //FIXME: PSCombatSystem assignment operator shouldn't be used (only one byte is copied).
 //public: PSCombatSystem & operator = ( PSCombatSystem const & );
-public:
-    template< typename PropertyXxx >
-    PropertyXxx &       Property( void );
-    template< typename PropertyXxx >
-    PropertyXxx const & Property( void ) const;
 };
-
-GS_DECLARE_PROPERTYSET_ACCESSOR( PSCombatSystem )
-
-GS_DECLARE_PROPERTY_ACCESSOR( PSCombatSystem, ActiveFightAI )
-GS_DECLARE_PROPERTY_ACCESSOR( PSCombatSystem, FightAIMode )
-GS_DECLARE_PROPERTY_ACCESSOR( PSCombatSystem, PassiveFightAI )
-
-#include "gs_pscombatsystem.inl"
 
 #endif
