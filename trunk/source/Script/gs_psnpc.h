@@ -1,9 +1,9 @@
 #ifndef GS_PSNPC_H_INCLUDED
 #define GS_PSNPC_H_INCLUDED
 
-class GE_DLLIMPORT PSNpc
-{
+GS_DECLARE_PROPERTYSET( PSNpc )
 public:
+    using Entity::Property;
     GS_DECLARE_PROPERTY( AnimationBearing,       bCString )
     GS_DECLARE_PROPERTY( AttitudeLock,           gEAttitude )
     GS_DECLARE_PROPERTY( BraveryOverride,        gEBraveryOverride )
@@ -30,8 +30,6 @@ public:
     GS_DECLARE_PROPERTY( Reason,                 gEReason )
     GS_DECLARE_PROPERTY( Species,                gESpecies )
     GS_DECLARE_PROPERTY( Voice,                  bCString )
-protected:
-    eCEntity * m_pEntity;
 public:
     GEBool            BeginStatusEffect( gSNPCStatusEffect & );
     void              ClearMnemonic( void );
@@ -67,41 +65,6 @@ protected:
     gCNPC_PS * operator ->               ( void );
 //FIXME: PSNpc assignment operator shouldn’t be used (only one byte is copied).
 //public: PSNpc & operator = ( PSNpc const & );
-public:
-    template< typename PropertyXxx >
-    PropertyXxx &       Property( void );
-    template< typename PropertyXxx >
-    PropertyXxx const & Property( void ) const;
 };
-
-GS_DECLARE_PROPERTYSET_ACCESSOR( PSNpc )
-
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, AttitudeLock )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, BraveryOverride )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, DamageCalculationType )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, DefeatedByPlayer )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Discovered )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, EffectMaterial )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, EffectSpecies )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Gender )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Group )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, GuardStatus )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Guild )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastCommentTimestamp )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastDistToGuardPoint )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastDistToTarget )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastFightAgainstPlayer )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastFightTimestamp )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastPlayerAR )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastPlayerComment )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastPlayerCrime )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, LastReason )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, PlayerWeaponTimestamp )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Ransacked )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Reason )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Species )
-GS_DECLARE_PROPERTY_ACCESSOR( PSNpc, Voice )
-
-#include "gs_psnpc.inl"
 
 #endif

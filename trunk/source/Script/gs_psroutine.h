@@ -1,9 +1,9 @@
 #ifndef GS_PSROUTINE_H_INCLUDED
 #define GS_PSROUTINE_H_INCLUDED
 
-class GE_DLLIMPORT PSRoutine
-{
+GS_DECLARE_PROPERTYSET( PSRoutine )
 public:
+    using Entity::Property;
     GS_DECLARE_PROPERTY( AIDelay,            GEI32 )
     GS_DECLARE_PROPERTY( AIMode,             gEAIMode )
     GS_DECLARE_PROPERTY( ActionString,       bCString )
@@ -18,8 +18,6 @@ public:
     GS_DECLARE_PROPERTY( RoutineChanged,     GEBool )
     GS_DECLARE_PROPERTY( StatePosition,      GEI32 )
     GS_DECLARE_PROPERTY( TaskPosition,       GEI32 )
-protected:
-    eCEntity * m_pEntity;
 public:
     void       ContinueRoutine( void );
     void       FullStop( void );
@@ -58,31 +56,7 @@ public:
     gCScriptRoutine_PS const * operator -> ( void ) const;
 //FIXME: PSRoutine assignment operator shouldn’t be used (only one byte is copied).
 //public: PSRoutine & operator = ( PSRoutine const & );
-public:
-    template< typename PropertyXxx >
-    PropertyXxx &       Property( void );
-    template< typename PropertyXxx >
-    PropertyXxx const & Property( void ) const;
 };
-
-GS_DECLARE_PROPERTYSET_ACCESSOR( PSRoutine )
-
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, AIDelay )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, AIMode )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, ActionString )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, AmbientAction )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, CommandTime )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, EndAttackTimestamp )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, HitDirection )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, LastAIMode )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, LockAIInterrupt )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, LockAIResult )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, Routine )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, RoutineChanged )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, StatePosition )
-GS_DECLARE_PROPERTY_ACCESSOR( PSRoutine, TaskPosition )
-
-#include "gs_psroutine.inl"
 
 //NOTE: The strings are not const, but they shouldn’t be modified.
 GE_C_LINKAGE GE_DLLIMPORT bCString const g_strAction_Aim;
