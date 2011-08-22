@@ -55,12 +55,12 @@ public:
     GEBool       StartStumble( gECombatMove, Entity ) const;
     GEBool       StopCurrentCombo( void ) const;
     GEBool       StopCurrentMove( void );
-public:
-    gCCombatSystem_PS const * operator -> ( void ) const;
 protected:
                         operator gCCombatSystem_PS *       ( void );
                         operator gCCombatSystem_PS const * ( void ) const;
     gCCombatSystem_PS * operator ->                        ( void );
+public:
+    gCCombatSystem_PS const * operator -> ( void ) const;
 };
 
 #endif

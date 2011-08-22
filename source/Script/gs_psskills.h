@@ -89,12 +89,12 @@ public:
     void            SetSneak( GEInt, gESkillModifier );
     void            SetStrength( GEInt, gESkillModifier );
     void            SetTrophy( GEInt, gESkillModifier );
-public:
-    gCSkills_PS const * operator -> ( void ) const;
 protected:
                   operator gCSkills_PS *       ( void );
                   operator gCSkills_PS const * ( void ) const;
     gCSkills_PS * operator ->                  ( void );
+public:
+    gCSkills_PS const * operator -> ( void ) const;
 };
 
 #endif
