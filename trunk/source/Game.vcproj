@@ -502,6 +502,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_arena_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_database.h"
 			>
 		</File>
