@@ -61,8 +61,6 @@ protected:
                         operator gCCombatSystem_PS *       ( void );
                         operator gCCombatSystem_PS const * ( void ) const;
     gCCombatSystem_PS * operator ->                        ( void );
-//FIXME: PSCombatSystem assignment operator shouldn't be used (only one byte is copied).
-//public: PSCombatSystem & operator = ( PSCombatSystem const & );
 };
 
 #endif

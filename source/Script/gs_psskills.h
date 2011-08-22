@@ -95,8 +95,6 @@ protected:
                   operator gCSkills_PS *       ( void );
                   operator gCSkills_PS const * ( void ) const;
     gCSkills_PS * operator ->                  ( void );
-//FIXME: PSSkills assignment operator shouldn’t be used (only one byte is copied).
-//public: PSSkills & operator = ( PSSkills const & );
 };
 
 #endif

@@ -12,7 +12,13 @@ protected:                                                           \
 public:                                                              \
                      operator TYPE const ( void ) const;             \
     Property##NAME & operator =          ( TYPE const & );           \
-    Property##NAME & operator =          ( Property##NAME const & ); \
+private:                                                             \
+    /* operator is exported but the implementation does nothing */   \
+    Property##NAME & operator = ( Property##NAME const & );          \
+private:                                                             \
+    Property##NAME( Property##NAME const & );                        \
+    Property##NAME( void );                                          \
+   ~Property##NAME( void );                                          \
 };
 
 #define GS_DECLARE_PROPERTYSET( CLASS )                     \
@@ -22,6 +28,13 @@ class GE_DLLIMPORT CLASS :                                  \
 protected:                                                  \
     typedef CLASS _tPropertySet;                            \
     friend CLASS & Entity::PropertySet( void );             \
-    friend CLASS const & Entity::PropertySet( void ) const;
+    friend CLASS const & Entity::PropertySet( void ) const; \
+private:                                                    \
+    /* operator is exported but copies only one byte */     \
+    CLASS & operator = ( CLASS const & );                   \
+private:                                                    \
+    CLASS( CLASS const & );                                 \
+    CLASS( void );                                          \
+   ~CLASS( void );
 
 #endif
