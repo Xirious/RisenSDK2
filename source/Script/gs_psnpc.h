@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSNpc )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( AnimationBearing,       bCString )
     GS_DECLARE_PROPERTY( AttitudeLock,           gEAttitude )
     GS_DECLARE_PROPERTY( BraveryOverride,        gEBraveryOverride )

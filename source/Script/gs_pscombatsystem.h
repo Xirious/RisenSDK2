@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSCombatSystem )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( ActiveFightAI,  bCString )
     GS_DECLARE_PROPERTY( FightAIMode,    gECombatFightAIMode )
     GS_DECLARE_PROPERTY( PassiveFightAI, bCString )

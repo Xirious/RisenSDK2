@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSArena )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( Status, gEArenaStatus )
 public:
     GEBool IsValid( void ) const;

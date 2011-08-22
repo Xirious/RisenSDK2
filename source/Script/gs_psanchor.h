@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSAnchor )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( AnchorType,  gEAnchorType )
     GS_DECLARE_PROPERTY( PatrolIndex, GEU32 )
 public:

@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSRoutine )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( AIDelay,            GEI32 )
     GS_DECLARE_PROPERTY( AIMode,             gEAIMode )
     GS_DECLARE_PROPERTY( ActionString,       bCString )
