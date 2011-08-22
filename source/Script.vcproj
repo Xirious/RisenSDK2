@@ -282,6 +282,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_scriptactiontimer.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_template.h"
 			>
 		</File>
