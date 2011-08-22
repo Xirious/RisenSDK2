@@ -135,4 +135,7 @@ class eCAnimation_PS;
 #include "Engine/ge_actorattachment.h"
 #include "Engine/ge_animation_ps.h"
 
+class eCPrimitiveWeatherZoneBox{};
+#include "Engine/ge_area_stringproperty_ps.h"
+
 #endif

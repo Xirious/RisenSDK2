@@ -205,6 +205,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psarea.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_pscombatsystem.h"
 				>
 			</File>
