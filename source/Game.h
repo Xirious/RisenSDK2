@@ -405,6 +405,12 @@ enum gESkillModifier
     gESkillModifier_ForceDWORD      = GE_FORCE_DWORD
 };
 
+enum gESlot
+{
+    //FIXME: gESlot constants.
+    gESlot_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gESpecies
 {
     gESpecies_None          = 0x00000000,
@@ -455,19 +461,6 @@ enum gEWalkMode
     gEWalkMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-class eCAudioChannel{};
-class eCSoundResource2{};
-
-#include "Game/ge_npc_ps.h"
-#include "Game/ge_skillvaluebase.h"
-#include "Game/ge_skillvalue.h"
-#include "Game/ge_modifyskill.h"
-#include "Game/ge_skills_ps.h"
-
-class gCCharacterControl{};
-class gCCharacterSensor{};
-#include "Game/ge_actionadmin.h"
-
 typedef eSScriptBase gSScript;
 #include "Game/ge_scriptproxyaicallback.h"
 typedef eSScriptBase gSScriptAICallback;
@@ -476,7 +469,19 @@ typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
 typedef eSScriptBase gSScriptAIState;
 
-class eCAnimation_PS{};
+class eCAudioChannel{};
+class eCSoundResource2{};
+
+#include "Game/ge_npc_ps.h"
+
+#include "Game/ge_skillvaluebase.h"
+#include "Game/ge_skillvalue.h"
+#include "Game/ge_modifyskill.h"
+#include "Game/ge_skills_ps.h"
+
+class gCCharacterControl{};
+class gCCharacterSensor{};
+#include "Game/ge_actionadmin.h"
 
 #include "Game/ge_combatobject.h"
 class gCCombatAI;

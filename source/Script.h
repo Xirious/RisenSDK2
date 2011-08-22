@@ -9,6 +9,7 @@ class Entity;
 #include "Script/gs_template.h"
 #include "Script/gs_entity.h"
 #include "Script/gs_achievement.h"
+#include "Script/gs_psanimation.h"
 #include "Script/gs_pscombatsystem.h"
 #include "Script/gs_psnpc.h"
 #include "Script/gs_psroutine.h"

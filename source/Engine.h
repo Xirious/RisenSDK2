@@ -3,20 +3,11 @@
 
 #include "FFC.h"
 
-/** /
-#ifdef _OPENMP
-#ifdef _OPENMP_NOFORCE_MANIFEST
-#pragma comment( linker, "/manifestdependency:\"type='win32' name='Microsoft.VC80.OpenMP' version='8.0.50727.762' processorArchitecture='x86' publicKeyToken='1fc8b3b9a1e18e3b'\"" )
-#else
-#error Please verify that the OpenMP version matches Risen’s Engine.dll
-#endif
-#else
-#pragma comment( linker, "/manifestdependency:\"type='win32' name='Microsoft.VC80.OpenMP' version='8.0.50727.762' processorArchitecture='x86' publicKeyToken='1fc8b3b9a1e18e3b'\"" )
-#endif
-/**/
-
-#pragma warning( push )
-#pragma warning( disable : 4505 )  // unreferenced local function has been removed
+namespace EMotionFX
+{
+    class ActorInstance{};
+}
+class NxActor{};
 
 #include "Engine/EngineEnum.h"
 
@@ -135,6 +126,13 @@ class GE_DLLIMPORT eCEntityDynamicContext{};
 
 #include "Engine/ge_inputadmin.h"
 
-#pragma warning( pop )
+class GE_DLLIMPORT eCBodyPart_PS{};
+class GE_DLLIMPORT eCMotionActorResource2{};
+class GE_DLLIMPORT eCMotionResource2{};
+
+#include "Engine/ge_actorwrapper.h"
+class eCAnimation_PS;
+#include "Engine/ge_actorattachment.h"
+#include "Engine/ge_animation_ps.h"
 
 #endif

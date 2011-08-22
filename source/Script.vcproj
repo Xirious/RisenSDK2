@@ -193,6 +193,10 @@
 			Name="PropertySets"
 			>
 			<File
+				RelativePath=".\Script\gs_psanimation.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_pscombatsystem.h"
 				>
 			</File>
