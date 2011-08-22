@@ -57,12 +57,12 @@ public:
     void              SetStatusEffectName( gEStatusEffect, bCString );
     void              SetStatusEffectTime( gEStatusEffect, GEU32 );
     void              SetStatusEffectUserData( gEStatusEffect, GEU32 );
-public:
-    gCNPC_PS const * operator -> ( void ) const;
 protected:
                operator gCNPC_PS *       ( void );
                operator gCNPC_PS const * ( void ) const;
     gCNPC_PS * operator ->               ( void );
+public:
+    gCNPC_PS const * operator -> ( void ) const;
 };
 
 #endif

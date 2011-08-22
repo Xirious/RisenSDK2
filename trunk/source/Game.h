@@ -469,6 +469,9 @@ typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
 typedef eSScriptBase gSScriptAIState;
 
+class gCInteraction_PS{};
+#include "Game/ge_anchor_ps.h"
+
 class eCAudioChannel{};
 class eCSoundResource2{};
 

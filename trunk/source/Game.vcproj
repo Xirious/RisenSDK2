@@ -494,6 +494,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_anchor_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_database.h"
 			>
 		</File>
