@@ -494,6 +494,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_aizone_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_anchor_ps.h"
 			>
 		</File>
