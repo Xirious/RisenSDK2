@@ -286,6 +286,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_tutorial.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_world.h"
 			>
 		</File>
