@@ -213,6 +213,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psbook.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_pscombatsystem.h"
 				>
 			</File>

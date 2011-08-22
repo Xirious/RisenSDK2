@@ -473,6 +473,7 @@ typedef eSScriptBase gSScriptAIState;
 class gCInteraction_PS{};
 #include "Game/ge_anchor_ps.h"
 #include "Game/ge_arena_ps.h"
+#include "Game/ge_book_ps.h"
 
 class eCAudioChannel{};
 class eCSoundResource2{};
