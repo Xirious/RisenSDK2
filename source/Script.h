@@ -41,6 +41,7 @@ class Entity;
 #include "Script/gs_psroutine.h"
 #include "Script/gs_psskills.h"
 #include "Script/gs_questmanager.h"
+#include "Script/gs_tutorial.h"
 #include "Script/gs_world.h"
 
 #endif
