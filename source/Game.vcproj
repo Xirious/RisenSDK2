@@ -506,6 +506,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_book_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_database.h"
 			>
 		</File>
