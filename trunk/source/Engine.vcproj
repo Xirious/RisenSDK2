@@ -130,6 +130,18 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_actorattachment.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_actorwrapper.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Engine\ge_animation_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_animshared.h"
 			>
 		</File>
