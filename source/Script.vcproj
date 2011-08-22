@@ -193,6 +193,14 @@
 			Name="PropertySets"
 			>
 			<File
+				RelativePath=".\Script\gs_propertymacros.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_propertymacros.inl"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psaizone.h"
 				>
 			</File>
@@ -266,11 +274,7 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Script\gs_propertymacros.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_propertymacros.inl"
+			RelativePath=".\Script\gs_music.h"
 			>
 		</File>
 		<File
