@@ -472,6 +472,7 @@ typedef eSScriptBase gSScriptAIState;
 #include "Game/ge_aizone_ps.h"
 class gCInteraction_PS{};
 #include "Game/ge_anchor_ps.h"
+#include "Game/ge_arena_ps.h"
 
 class eCAudioChannel{};
 class eCSoundResource2{};
