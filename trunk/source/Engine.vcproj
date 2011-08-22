@@ -162,6 +162,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_area_stringproperty_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_camerabase.h"
 			>
 		</File>
