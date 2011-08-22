@@ -469,6 +469,7 @@ typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
 typedef eSScriptBase gSScriptAIState;
 
+#include "Game/ge_aizone_ps.h"
 class gCInteraction_PS{};
 #include "Game/ge_anchor_ps.h"
 
