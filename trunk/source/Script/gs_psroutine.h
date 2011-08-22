@@ -54,8 +54,6 @@ protected:
     gCScriptRoutine_PS * operator ->                         ( void );
 public:
     gCScriptRoutine_PS const * operator -> ( void ) const;
-//FIXME: PSRoutine assignment operator shouldn’t be used (only one byte is copied).
-//public: PSRoutine & operator = ( PSRoutine const & );
 };
 
 //NOTE: The strings are not const, but they shouldn’t be modified.

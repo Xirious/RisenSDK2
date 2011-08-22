@@ -63,8 +63,6 @@ protected:
                operator gCNPC_PS *       ( void );
                operator gCNPC_PS const * ( void ) const;
     gCNPC_PS * operator ->               ( void );
-//FIXME: PSNpc assignment operator shouldn’t be used (only one byte is copied).
-//public: PSNpc & operator = ( PSNpc const & );
 };
 
 #endif
