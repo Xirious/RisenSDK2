@@ -89,6 +89,9 @@ class eCStatisticView;
 #include "Engine/ge_statistic.h"
 #include "Engine/ge_statisticview.h"
 
+#include "Engine/ge_enginecomponentbase.h"
+#include "Engine/ge_moduleadmin.h"
+
 class GE_DLLIMPORT eCResourceInputStream2{};
 class GE_DLLIMPORT eCResourceOutputStream2{};
 
@@ -104,6 +107,7 @@ class GE_DLLIMPORT eCSpeedTreeResource2{};
 class eCResourceCache2;
 #include "Engine/ge_resource2.h"
 #include "Engine/ge_resourcecache2.h"
+#include "Engine/ge_resourcemodule2.h"
 
 #include "Engine/ge_collisionshape.h"
 #include "Engine/ge_collisionshapebase_ps.h"
@@ -118,9 +122,6 @@ class eCResourceCache2;
 #include "Engine/ge_window.h"
 
 #include "Engine/ge_guiresource2.h"
-
-#include "Engine/ge_enginecomponentbase.h"
-#include "Engine/ge_moduleadmin.h"
 
 #include "Engine/ge_scriptadminbase.h"
 #include "Engine/ge_scriptfunctionmap.h"

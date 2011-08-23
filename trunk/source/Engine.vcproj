@@ -132,6 +132,10 @@
 				RelativePath=".\Engine\ge_resourcecache2.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Engine\ge_resourcemodule2.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\Engine.h"
