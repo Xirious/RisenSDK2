@@ -1,8 +1,6 @@
 #ifndef GE_STATISTIC_H_INCLUDED
 #define GE_STATISTIC_H_INCLUDED
 
-class eCStatisticView;  // forward
-
 class GE_DLLIMPORT eCStatistic
 {
 public: virtual eCStatisticView * CreateView( eCGuiWindow2 * ) = 0;

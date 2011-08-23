@@ -121,6 +121,18 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="resource"
+			>
+			<File
+				RelativePath=".\Engine\ge_resource2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_resourcecache2.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>
