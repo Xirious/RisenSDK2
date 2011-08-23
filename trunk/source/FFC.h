@@ -13,6 +13,8 @@
 #include "FFC/fx_physicalfilefind.h"
 #include "FFC/fx_physicalfilesystem.h"
 
+class GE_DLLIMPORT CFXVirtualFile{};
+
 #include "FFC/fx_virtualfilemapping.h"
 
 #include "FFC/fx_tableitem.h"

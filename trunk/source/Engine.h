@@ -82,7 +82,28 @@ class eCGeometryEntity;
 #include "Engine/ge_processor.h"
 #include "Engine/ge_dynamicentity.h"
 
+class GE_DLLIMPORT eCGuiWindow2{};
+class GE_DLLIMPORT eCGuiFrame2{};
+
+class eCStatisticView;
+#include "Engine/ge_statistic.h"
+#include "Engine/ge_statisticview.h"
+
+class GE_DLLIMPORT eCResourceInputStream2{};
+class GE_DLLIMPORT eCResourceOutputStream2{};
+
+class GE_DLLIMPORT eCCollisionMeshResource2{};
+class GE_DLLIMPORT eCImageResource2{};
+class GE_DLLIMPORT eCMaterialResource2{};
+class GE_DLLIMPORT eCMeshResource2{};
+class GE_DLLIMPORT eCMotionActorResource2{};
+class GE_DLLIMPORT eCMotionResource2{};
+class GE_DLLIMPORT eCSoundResource2{};
 class GE_DLLIMPORT eCSpeedTreeResource2{};
+
+class eCResourceCache2;
+#include "Engine/ge_resource2.h"
+#include "Engine/ge_resourcecache2.h"
 
 #include "Engine/ge_collisionshape.h"
 #include "Engine/ge_collisionshapebase_ps.h"
@@ -97,11 +118,6 @@ class GE_DLLIMPORT eCSpeedTreeResource2{};
 #include "Engine/ge_window.h"
 
 #include "Engine/ge_guiresource2.h"
-
-class GE_DLLIMPORT eCGuiWindow2{};
-class GE_DLLIMPORT eCGuiFrame2{};
-#include "Engine/ge_statistic.h"
-#include "Engine/ge_statisticview.h"
 
 #include "Engine/ge_enginecomponentbase.h"
 #include "Engine/ge_moduleadmin.h"
@@ -127,8 +143,6 @@ class GE_DLLIMPORT eCEntityDynamicContext{};
 #include "Engine/ge_inputadmin.h"
 
 class GE_DLLIMPORT eCBodyPart_PS{};
-class GE_DLLIMPORT eCMotionActorResource2{};
-class GE_DLLIMPORT eCMotionResource2{};
 
 #include "Engine/ge_actorwrapper.h"
 class eCAnimation_PS;

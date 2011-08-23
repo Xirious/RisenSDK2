@@ -476,7 +476,6 @@ class gCInteraction_PS{};
 #include "Game/ge_book_ps.h"
 
 class eCAudioChannel{};
-class eCSoundResource2{};
 
 #include "Game/ge_npc_ps.h"
 
