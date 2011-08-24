@@ -3,7 +3,6 @@
 
 GS_DECLARE_PROPERTYSET( PSAIZone )
 public:
-    using Entity::Property;
     GS_DECLARE_PROPERTY( Group,             bCString )
     GS_DECLARE_PROPERTY( Guild,             gEGuild )
     GS_DECLARE_PROPERTY( SecurityLevelFunc, eCScriptProxyScript )
