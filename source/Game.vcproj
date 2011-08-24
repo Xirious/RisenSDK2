@@ -588,6 +588,10 @@
 				RelativePath=".\Game\ge_inventorystack.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Game\ge_item_ps.h"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\Game.h"
