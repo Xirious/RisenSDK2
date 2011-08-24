@@ -46,7 +46,7 @@ class Entity;
 #include "Script/gs_psdialog.h"
 #include "Script/gs_psdoor.h"
 #include "Script/gs_pseffect.h"
-// PSInteraction, gCInteraction_PS
+#include "Script/gs_psinteraction.h"
 // PSInventory, gCInventory_PS
 // PSItem, gCItem_PS
 // PSLetter, gCLetter_PS
