@@ -10,8 +10,11 @@ enum eERawInputAxis
     eERawInputAxis_GamePad_2,
     eERawInputAxis_GamePad_3,
     eERawInputAxis_GamePad_4,
+    eERawInputAxis_Count,
     eERawInputAxis_ForceDWORD = GE_FORCE_DWORD
 };
+
+GE_DLLIMPORT_DATA GELPCChar const g_ppszRawInputAxisNames[ eERawInputAxis_Count ];
 
 enum eEScanCode
 {
