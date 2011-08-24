@@ -44,6 +44,23 @@ enum gEHudPage
     gEHudPage_ForceDWORD       = GE_FORCE_DWORD
 };
 
+enum gEItemCategory
+{
+    gEItemCategory_None       = 0x00000000,
+    gEItemCategory_Weapon     = 0x00000001,
+    gEItemCategory_Armor      = 0x00000002,
+    gEItemCategory_Consumable = 0x00000003,
+    gEItemCategory_Empty_D    = 0x00000004,
+    gEItemCategory_Magic      = 0x00000005,
+    gEItemCategory_Misc       = 0x00000006,
+    gEItemCategory_Written    = 0x00000007,
+    gEItemCategory_Empty_B    = 0x00000008,
+    gEItemCategory_Empty_E    = 0x00000009,
+    gEItemCategory_Empty_F    = 0x0000000A,
+    gEItemCategory_Count      = 0x0000000B,
+    gEItemCategory_ForceDWORD = GE_FORCE_DWORD
+};
+
 enum gEItemHoldType
 {
     gEItemHoldType_None,
@@ -148,20 +165,6 @@ enum gEPageMode
     gEPageMode_UserSlots  = 0x00000006,
     gEPageMode_UserMax    = 0x00000007,
     gEPageMode_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gESlot
-{
-    //FIXME: gESlot constants.
-    gESlot_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEStackType
-{
-    gEStackType_Normal     = 0x00000000,
-    gEStackType_Trade      = 0x00000001,
-    gEStackType_Hidden     = 0x00000002,
-    gEStackType_ForceDWORD = GE_FORCE_DWORD
 };
 
 enum gEWalkMode
@@ -276,8 +279,11 @@ class eCGuiBitmapProxy2
 {
     void * m_pBitmap;  // eCDeferredGuiBitmap2 *
 };
-class gCInventory_PS{};
-class gCInventoryStack{};
+
+#include "Game/ge_inventoryslot.h"
+#include "Game/ge_inventorystack.h"
+#include "Game/ge_inventorylistener.h"
+#include "Game/ge_inventory_ps.h"
 
 #include "Game/ge_questactor.h"
 #include "Game/ge_questlocstring.h"
