@@ -44,102 +44,6 @@ enum gEHudPage
     gEHudPage_ForceDWORD       = GE_FORCE_DWORD
 };
 
-enum gEItemCategory
-{
-    gEItemCategory_None       = 0x00000000,
-    gEItemCategory_Weapon     = 0x00000001,
-    gEItemCategory_Armor      = 0x00000002,
-    gEItemCategory_Consumable = 0x00000003,
-    gEItemCategory_Empty_D    = 0x00000004,
-    gEItemCategory_Magic      = 0x00000005,
-    gEItemCategory_Misc       = 0x00000006,
-    gEItemCategory_Written    = 0x00000007,
-    gEItemCategory_Empty_B    = 0x00000008,
-    gEItemCategory_Empty_E    = 0x00000009,
-    gEItemCategory_Empty_F    = 0x0000000A,
-    gEItemCategory_Count      = 0x0000000B,
-    gEItemCategory_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEItemHoldType
-{
-    gEItemHoldType_None,
-    gEItemHoldType_1H,
-    gEItemHoldType_2H,
-    gEItemHoldType_BS,
-    gEItemHoldType_Arrow,
-    gEItemHoldType_Bow,
-    gEItemHoldType_CrossBow,
-    gEItemHoldType_Bolt,
-    gEItemHoldType_Fist,
-    gEItemHoldType_Shield,
-    gEItemHoldType_Armor,
-    gEItemHoldType_Helmet,
-    gEItemHoldType_Staff,
-    gEItemHoldType_Amulet,
-    gEItemHoldType_Ring,
-    gEItemHoldType_Rune,
-    gEItemHoldType_Torch,
-    gEItemHoldType_CarryFront,
-    gEItemHoldType_Axe,
-    gEItemHoldType_Apple,
-    gEItemHoldType_Bread,
-    gEItemHoldType_Jar,
-    gEItemHoldType_Joint,
-    gEItemHoldType_Meat,
-    gEItemHoldType_Potion,
-    gEItemHoldType_Saringda,
-    gEItemHoldType_Saw,
-    gEItemHoldType_Scoop,
-    gEItemHoldType_Stew,
-    gEItemHoldType_Cast,
-    gEItemHoldType_Magic,
-    gEItemHoldType_FocusCast,
-    gEItemHoldType_MagicMissile,
-    gEItemHoldType_MagicFireball,
-    gEItemHoldType_MagicIcelance,
-    gEItemHoldType_Flute,
-    gEItemHoldType_Count,
-    gEItemHoldType_ForceDWORD = GE_FORCE_DWORD
-};
-
-GE_DLLIMPORT_DATA GELPCChar const g_ppszItemHoldTypes[ gEItemHoldType_Count ];
-
-enum gEItemUseType
-{
-    gEItemUseType_None,
-    gEItemUseType_1H,
-    gEItemUseType_2H,
-    gEItemUseType_BS,
-    gEItemUseType_Arrow,
-    gEItemUseType_Bow,
-    gEItemUseType_CrossBow,
-    gEItemUseType_Bolt,
-    gEItemUseType_Fist,
-    gEItemUseType_Shield,
-    gEItemUseType_Armor,
-    gEItemUseType_Helmet,
-    gEItemUseType_Staff,
-    gEItemUseType_Amulet,
-    gEItemUseType_Ring,
-    gEItemUseType_Rune,
-    gEItemUseType_Torch,
-    gEItemUseType_CarryFront,
-    gEItemUseType_Axe,
-    gEItemUseType_Cast,
-    gEItemUseType_FocusCast,
-    gEItemUseType_MagicMissile,
-    gEItemUseType_MagicFireball,
-    gEItemUseType_MagicIcelance,
-    gEItemUseType_MagicAmmo,
-    gEItemUseType_MagicFrost,
-    gEItemUseType_Head,
-    gEItemUseType_Count,
-    gEItemUseType_ForceDWORD = GE_FORCE_DWORD
-};
-
-GE_DLLIMPORT_DATA GELPCChar const g_ppszItemUseTypes[ gEItemUseType_Count ];
-
 enum gELockCombi
 {
     //FIXME: gELockCombi constants.
@@ -246,6 +150,19 @@ class gCScriptRoutine_PS;
 #include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
 
+class eCGuiBitmapProxy2
+{
+    void * m_pBitmap;  // eCDeferredGuiBitmap2 *
+};
+
+enum gESlot;
+class gCInventory_PS;
+#include "Game/ge_item_ps.h"
+#include "Game/ge_inventoryslot.h"
+#include "Game/ge_inventorystack.h"
+#include "Game/ge_inventorylistener.h"
+#include "Game/ge_inventory_ps.h"
+
 #include "Game/ge_combatobject.h"
 class gCCombatAI;
 class gCCombatStyle;
@@ -274,16 +191,6 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatspecies.h"
 #include "Game/ge_combatsystem_ps.h"
 #include "Game/ge_combatadmin.h"
-
-class eCGuiBitmapProxy2
-{
-    void * m_pBitmap;  // eCDeferredGuiBitmap2 *
-};
-
-#include "Game/ge_inventoryslot.h"
-#include "Game/ge_inventorystack.h"
-#include "Game/ge_inventorylistener.h"
-#include "Game/ge_inventory_ps.h"
 
 #include "Game/ge_questactor.h"
 #include "Game/ge_questlocstring.h"
