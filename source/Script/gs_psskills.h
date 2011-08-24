@@ -1,7 +1,7 @@
 #ifndef GS_PSSKILLS_H_INCLUDED
 #define GS_PSSKILLS_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSSkills )
+GS_DECLARE_PROPERTYSET( PSSkills, gCSkills_PS )
 public:
     GEInt           GetAcrobat( void ) const;;
     GEInt           GetAlchemy( void ) const;
@@ -89,12 +89,6 @@ public:
     void            SetSneak( GEInt, gESkillModifier );
     void            SetStrength( GEInt, gESkillModifier );
     void            SetTrophy( GEInt, gESkillModifier );
-protected:
-                  operator gCSkills_PS *       ( void );
-                  operator gCSkills_PS const * ( void ) const;
-    gCSkills_PS * operator ->                  ( void );
-public:
-    gCSkills_PS const * operator -> ( void ) const;
 };
 
 #endif

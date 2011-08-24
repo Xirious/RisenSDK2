@@ -1,7 +1,7 @@
 #ifndef GS_PSNPC_H_INCLUDED
 #define GS_PSNPC_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSNpc )
+GS_DECLARE_PROPERTYSET( PSNpc, gCNPC_PS )
 public:
     GS_DECLARE_PROPERTY( AnimationBearing,       bCString )
     GS_DECLARE_PROPERTY( AttitudeLock,           gEAttitude )
@@ -56,12 +56,6 @@ public:
     void              SetStatusEffectName( gEStatusEffect, bCString );
     void              SetStatusEffectTime( gEStatusEffect, GEU32 );
     void              SetStatusEffectUserData( gEStatusEffect, GEU32 );
-protected:
-               operator gCNPC_PS *       ( void );
-               operator gCNPC_PS const * ( void ) const;
-    gCNPC_PS * operator ->               ( void );
-public:
-    gCNPC_PS const * operator -> ( void ) const;
 };
 
 #endif

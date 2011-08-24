@@ -1,6 +1,18 @@
 #ifndef GE_SKILLS_PS_H_INCLUDED
 #define GE_SKILLS_PS_H_INCLUDED
 
+enum gESkillCategroy
+{
+    gESkillCategory_Atrib      = 0x00000000,
+    gESkillCategory_Stat1      = 0x00000001,  // LV/XP/LP
+    gESkillCategory_Stat2      = 0x00000002,  // HP/MP/STR/DEX/INT
+    gESkillCategory_Prot       = 0x00000003,
+    gESkillCategory_Combat     = 0x00000004,
+    gESkillCategory_Magic      = 0x00000005,
+    gESkillCategory_Misc       = 0x00000006,
+    gESkillCategory_ForceDWORD = GE_FORCE_DWORD
+};
+
 struct gSSkillInfo
 {
     GEI32           m_i32MinValue;

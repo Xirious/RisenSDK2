@@ -13,7 +13,6 @@ class Entity;
 #include "Script/gs_effectsystem.h"
 #include "Script/gs_focus.h"
 #include "Script/gs_gui2.h"
-#include "Script/gs_input.h"
 #include "Script/gs_infcomattack.h"
 #include "Script/gs_infcomheal.h"
 #include "Script/gs_infcominfowait.h"
@@ -30,6 +29,7 @@ class Entity;
 #include "Script/gs_infcomthink.h"
 #include "Script/gs_infcomuse.h"
 #include "Script/gs_infosystem.h"
+#include "Script/gs_input.h"
 #include "Script/gs_music.h"
 #include "Script/gs_psaizone.h"
 #include "Script/gs_psanchor.h"
@@ -37,12 +37,37 @@ class Entity;
 #include "Script/gs_psarea.h"
 #include "Script/gs_psarena.h"
 #include "Script/gs_psbook.h"
+#include "Script/gs_pscastinfo.h"
+#include "Script/gs_pscharactermovement.h"
+#include "Script/gs_psclock.h"
+#include "Script/gs_pscollisionshape.h"
 #include "Script/gs_pscombatsystem.h"
+#include "Script/gs_psdamage.h"
+#include "Script/gs_psdialog.h"
+// PSDoor, gCDoor_PS
+// PSEffect, gCEffect_PS
+// PSInteraction, gCInteraction_PS
+// PSInventory, gCInventory_PS
+// PSItem, gCItem_PS
+// PSLetter, gCLetter_PS
+// PSLock, gCLock_PS
+// PSMap, gCMap_PS
+// PSMover, eCMover_PS
+// PSNavigation, gCNavigation_PS
 #include "Script/gs_psnpc.h"
+// PSParticle, eCParticle_PS
+// PSParty, gCParty_PS
+// PSProjectile, gCProjectile2_PS
+// PSRecipe, gCRecipe_PS
+// PSRigidBody, eCRigidBody_PS
 #include "Script/gs_psroutine.h"
 #include "Script/gs_psskills.h"
+// PSStateGraph, gCStateGraph_PS
+// PSStrip, eCStrip_PS
 #include "Script/gs_questmanager.h"
 #include "Script/gs_scriptactiontimer.h"
+// ScriptCommentManager
+// ScriptDestinationCollector
 #include "Script/gs_tutorial.h"
 #include "Script/gs_world.h"
 

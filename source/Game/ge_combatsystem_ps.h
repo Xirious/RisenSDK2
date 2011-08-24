@@ -23,7 +23,7 @@ protected:
     public: virtual void  OnProcess( void );                 
     public: virtual      ~CProcessor( void );                
     protected:
-        gCCombatSystem_PS * m_pCombatSystem_PS;
+        gCCombatSystem_PS * m_pCombatSystemPS;
     };
     GE_ASSERT_SIZEOF( CProcessor, 0x0010 )
 public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;

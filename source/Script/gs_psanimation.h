@@ -1,7 +1,7 @@
 #ifndef GS_PSANIMATION_H_INCLUDED
 #define GS_PSANIMATION_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSAnimation )
+GS_DECLARE_PROPERTYSET( PSAnimation, eCAnimation_PS )
 private:
     eCBodyPart_PS * GetBodyPart( gESlot );
     GEBool          PlayBodyPartAni( eCBodyPart_PS *, bCString const &, GEBool );
@@ -43,12 +43,6 @@ public:
     GEBool   StopBodyAni( GEBool );
     GEBool   StopFacialAni( GEBool );
     void     UseAmbientVariationExclusionForNextAnimation( void );
-protected:
-                     operator eCAnimation_PS *       ( void );
-                     operator eCAnimation_PS const * ( void ) const;
-    eCAnimation_PS * operator ->                     ( void );
-public:
-    eCAnimation_PS const * operator -> ( void ) const;
 };
 
 #endif

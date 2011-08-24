@@ -122,7 +122,7 @@
 	</References>
 	<Files>
 		<Filter
-			Name="InfoSystem"
+			Name="info"
 			>
 			<File
 				RelativePath=".\Script\gs_infcomattack.h"
@@ -190,7 +190,7 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="PropertySets"
+			Name="propertyset"
 			>
 			<File
 				RelativePath=".\Script\gs_propertymacros.h"
@@ -225,7 +225,31 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_pscastinfo.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_pscharactermovement.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psclock.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_pscollisionshape.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_pscombatsystem.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psdamage.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psdialog.h"
 				>
 			</File>
 			<File
@@ -241,16 +265,20 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="effect"
+			>
+			<File
+				RelativePath=".\Script\gs_effect.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_effectsystem.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Script\gs_achievement.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_effect.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_effectsystem.h"
 			>
 		</File>
 		<File

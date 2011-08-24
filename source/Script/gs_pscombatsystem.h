@@ -1,7 +1,7 @@
 #ifndef GS_PSCOMBATSYSTEM_H_INCLUDED
 #define GS_PSCOMBATSYSTEM_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSCombatSystem )
+GS_DECLARE_PROPERTYSET( PSCombatSystem, gCCombatSystem_PS )
 public:
     GS_DECLARE_PROPERTY( ActiveFightAI,  bCString )
     GS_DECLARE_PROPERTY( FightAIMode,    gECombatFightAIMode )
@@ -54,12 +54,6 @@ public:
     GEBool       StartStumble( gECombatMove, Entity ) const;
     GEBool       StopCurrentCombo( void ) const;
     GEBool       StopCurrentMove( void );
-protected:
-                        operator gCCombatSystem_PS *       ( void );
-                        operator gCCombatSystem_PS const * ( void ) const;
-    gCCombatSystem_PS * operator ->                        ( void );
-public:
-    gCCombatSystem_PS const * operator -> ( void ) const;
 };
 
 #endif

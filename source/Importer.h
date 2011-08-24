@@ -12,7 +12,6 @@ class iCStrippifier{};
 #include "Importer/ge_meshimporter.h"
 #include "Importer/ge_resourcecompiler.h"
 #include "Importer/ge_scenecompiler.h"
-class eCMeshResource2{};
 #include "Importer/ge_texturebaker.h"
 
 #endif
