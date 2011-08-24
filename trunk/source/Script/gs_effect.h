@@ -21,6 +21,6 @@ private:
 // functions.
 // However, the name suggest that FX’s
 // original type could be EffectSystem.
-GE_C_LINKAGE GE_DLLIMPORT Effect FX;
+GE_DLLIMPORT_EXTC Effect FX;
 
 #endif

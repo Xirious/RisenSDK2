@@ -10,7 +10,7 @@ enum gEActionAxis
     gEActionAxis_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszActionAxisNames[ gEActionAxis_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_ppszActionAxisNames[ gEActionAxis_Count ];
 
 enum gEActionKey
 {

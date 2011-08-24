@@ -6,6 +6,6 @@ class bCObsoleteClass :
 {
 };
 
-GE_C_LINKAGE GE_DLLIMPORT bCString g_strObsoletClassName;
+GE_DLLIMPORT_EXTC bCString g_strObsoletClassName;
 
 #endif

@@ -21,6 +21,6 @@ public:
    ~ScriptActionTimer( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT ScriptActionTimer ActionTimer;
+GE_DLLIMPORT_EXTC ScriptActionTimer ActionTimer;
 
 #endif

@@ -27,6 +27,6 @@ public:
    ~Input( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT Input input;
+GE_DLLIMPORT_EXTC Input input;
 
 #endif

@@ -44,6 +44,6 @@ public:
    ~Achievement( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT Achievement achievement;
+GE_DLLIMPORT_EXTC Achievement achievement;
 
 #endif

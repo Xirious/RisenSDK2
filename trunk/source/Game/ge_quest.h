@@ -27,7 +27,7 @@ enum gEQuestStatus
     gEQuestStatus_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_strQuestStatus[ gEQuestStatus_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_strQuestStatus[ gEQuestStatus_Count ];
 
 enum gEQuestType
 {
@@ -49,7 +49,7 @@ enum gEQuestType
     gEQuestType_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_strQuestType[ gEQuestType_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_strQuestType[ gEQuestType_Count ];
 
 class GE_DLLIMPORT gCQuest :
     public eCDocObject

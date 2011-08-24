@@ -86,7 +86,7 @@ enum gEItemHoldType
     gEItemHoldType_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszItemHoldTypes[ gEItemHoldType_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_ppszItemHoldTypes[ gEItemHoldType_Count ];
 
 enum gEItemUseType
 {
@@ -121,7 +121,7 @@ enum gEItemUseType
     gEItemUseType_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszItemUseTypes[ gEItemUseType_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_ppszItemUseTypes[ gEItemUseType_Count ];
 
 enum gELockCombi
 {
