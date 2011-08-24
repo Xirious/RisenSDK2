@@ -489,6 +489,62 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="script"
+			>
+			<File
+				RelativePath=".\Game\ge_scriptadmin.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptinit.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptinit.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptprocessingunit.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptproxyaicallback.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptproxyaifunction.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptproxyaistate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptroutine_ps.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="skill"
+			>
+			<File
+				RelativePath=".\Game\ge_skillrange.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_skills_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_skillvalue.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_skillvaluebase.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
@@ -510,7 +566,27 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_castinfo_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_charactermovement_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_clock_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_damage_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_database.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_dialog_ps.h"
 			>
 		</File>
 		<File
@@ -550,38 +626,6 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Game\ge_scriptadmin.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptinit.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptinit.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptprocessingunit.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaicallback.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaifunction.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptproxyaistate.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_scriptroutine_ps.h"
-			>
-		</File>
-		<File
 			RelativePath=".\Game\ge_sector.h"
 			>
 		</File>
@@ -595,18 +639,6 @@
 		</File>
 		<File
 			RelativePath=".\Game\ge_sessioninfo.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_skills_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_skillvalue.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_skillvaluebase.h"
 			>
 		</File>
 		<File

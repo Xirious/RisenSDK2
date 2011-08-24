@@ -19,13 +19,15 @@ class Property##NAME :                                                       \
 {                                                                            \
 protected:                                                                   \
     typedef Property##NAME _tProperty;                                       \
+    friend Property##NAME & Entity::Property( void );                        \
+    friend Property##NAME const & Entity::Property( void ) const;            \
     friend Property##NAME & EntityPropertySet::Property( void );             \
     friend Property##NAME const & EntityPropertySet::Property( void ) const; \
 public:                                                                      \
                      operator TYPE const ( void ) const;                     \
     Property##NAME & operator =          ( TYPE const & );                   \
 private:                                                                     \
-    /* operator is exported but the implementation does nothing */           \
+    /* exported operator is public but the implementation does nothing */    \
     Property##NAME & operator = ( Property##NAME const & );                  \
 private:                                                                     \
     Property##NAME( Property##NAME const & );                                \
@@ -50,21 +52,27 @@ private:
    ~EntityPropertySet( void );
 };
 
-#define GS_DECLARE_PROPERTYSET( CLASS )                     \
-class GE_DLLIMPORT CLASS :                                  \
-    public EntityPropertySet                                \
-{                                                           \
-protected:                                                  \
-    typedef CLASS _tPropertySet;                            \
-    friend CLASS & Entity::PropertySet( void );             \
-    friend CLASS const & Entity::PropertySet( void ) const; \
-private:                                                    \
-    /* operator is exported but only one byte is copied */  \
-    CLASS & operator = ( CLASS const & );                   \
-private:                                                    \
-    CLASS( CLASS const & );                                 \
-    CLASS( void );                                          \
-   ~CLASS( void );
+#define GS_DECLARE_PROPERTYSET( CLASS, ENGINE_CLASS )            \
+class GE_DLLIMPORT CLASS :                                       \
+    public EntityPropertySet                                     \
+{                                                                \
+protected:                                                       \
+    typedef CLASS _tPropertySet;                                 \
+    friend CLASS & Entity::PropertySet( void );                  \
+    friend CLASS const & Entity::PropertySet( void ) const;      \
+private:                                                         \
+    /* exported operator is public but only 1 byte is copied */  \
+    CLASS & operator = ( CLASS const & );                        \
+protected:                                                       \
+                   operator ENGINE_CLASS *       ( void );       \
+                   operator ENGINE_CLASS const * ( void ) const; \
+    ENGINE_CLASS * operator ->                   ( void );       \
+public:                                                          \
+    ENGINE_CLASS const * operator -> ( void ) const;             \
+private:                                                         \
+    CLASS( CLASS const & );                                      \
+    CLASS( void );                                               \
+   ~CLASS( void );                                               \
 
 #include "gs_propertymacros.inl"
 

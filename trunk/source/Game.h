@@ -4,154 +4,6 @@
 #include "Engine.h"
 #include "Music.h"
 
-enum gEAniState
-{
-    gEAniState_Dummy0        = 0x00000000,
-    gEAniState_Dummy1        = 0x00000001,
-    gEAniState_Stand         = 0x00000002,
-    gEAniState_Sneak         = 0x00000003,
-    gEAniState_Attack        = 0x00000004,
-    gEAniState_Parade        = 0x00000005,
-    gEAniState_Kneel         = 0x00000006,
-    gEAniState_SitGround     = 0x00000007,
-    gEAniState_SitStool      = 0x00000008,
-    gEAniState_SitBench      = 0x00000009,
-    gEAniState_SitThrone     = 0x0000000A,
-    gEAniState_SleepBed      = 0x0000000B,
-    gEAniState_SleepGround   = 0x0000000C,
-    gEAniState_SitBathtub    = 0x0000000D,
-    gEAniState_Down          = 0x0000000E,
-    gEAniState_DownBack      = 0x0000000F,
-    gEAniState_Dead          = 0x00000010,
-    gEAniState_DeadBack      = 0x00000011,
-    gEAniState_Finished      = 0x00000012,
-    gEAniState_FinishedBack  = 0x00000013,
-    gEAniState_TalkStand     = 0x00000014,
-    gEAniState_TalkSitGround = 0x00000015,
-    gEAniState_TalkSitStool  = 0x00000016,
-    gEAniState_TalkSitBench  = 0x00000017,
-    gEAniState_TalkSitThrone = 0x00000018,
-    gEAniState_Wade          = 0x00000019,
-    gEAniState_Swim          = 0x0000001A,
-    gEAniState_Dive          = 0x0000001B,
-    gEAniState_Stumble       = 0x0000001C,
-    gEAniState_Levitate      = 0x0000001D,
-    gEAniState_ForceDWORD    = GE_FORCE_DWORD
-};
-
-enum gEAttitude
-{
-    gEAttitude_None       = 0x00000000,
-    gEAttitude_Friendly   = 0x00000001,
-    gEAttitude_Neutral    = 0x00000002,
-    gEAttitude_Angry      = 0x00000003,
-    gEAttitude_Hostile    = 0x00000004,
-    gEAttitude_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEBraveryOverride
-{
-    gEBraveryOverride_None       = 0x00000000,
-    gEBraveryOverride_Brave      = 0x00000001,
-    gEBraveryOverride_Coward     = 0x00000002,
-    gEBraveryOverride_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gECharMovementMode
-{
-    //FIXME: gECharMovementMode constants.
-    gECharMovementMode_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEComment
-{
-    gEComment_None              = 0x00000000,
-    gEComment_DefeatInquisition = 0x00000001,
-    gEComment_Theft             = 0x00000002,
-    gEComment_Livestock         = 0x00000003,
-    gEComment_Defeat            = 0x00000004,
-    gEComment_Count             = 0x00000005,
-    gEComment_ForceDWORD        = GE_FORCE_DWORD
-};
-
-enum gECrime
-{
-    gECrime_None            = 0x00000000,
-    gECrime_MurderLivestock = 0x00000001,
-    gECrime_Theft           = 0x00000002,
-    gECrime_Murder          = 0x00000003,
-    gECrime_Count           = 0x00000004,
-    gECrime_ForceDWORD      = GE_FORCE_DWORD
-};
-
-enum gEDamageCalculationType
-{
-    gEDamageCalculationType_Normal     = 0x00000000,
-    gEDamageCalculationType_Monster    = 0x00000001,
-    gEDamageCalculationType_Immortal   = 0x00000002,
-    gEDamageCalculationType_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEDamageType
-{
-    gEDamageType_None       = 0x00000000,
-    gEDamageType_Edge       = 0x00000001,
-    gEDamageType_Blunt      = 0x00000002,
-    gEDamageType_Point      = 0x00000003,
-    gEDamageType_Fire       = 0x00000004,
-    gEDamageType_Ice        = 0x00000005,
-    gEDamageType_Magic      = 0x00000006,
-    gEDamageType_Physics    = 0x00000007,
-    gEDamageType_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEDirection
-{
-    //FIXME: gEDirection constants.
-    gEDirection_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEFight
-{
-    gEFight_None       = 0x00000000,
-    gEFight_Lost       = 0x00000001,
-    gEFight_Won        = 0x00000002,
-    gEFight_Cancel     = 0x00000003,
-    gEFight_Running    = 0x00000004,
-    gEFight_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEGuardStatus
-{
-    gEGuardStatus_Active          = 0x00000000,
-    gEGuardStatus_FirstWarnGiven  = 0x00000001,
-    gEGuardStatus_SecondWarnGiven = 0x00000002,
-    gEGuardStatus_Inactive        = 0x00000003,
-    gEGuardStatus_Behind          = 0x00000004,
-    gEGuardStatus_ForceDWORD      = GE_FORCE_DWORD
-};
-
-enum gEGender
-{
-    gEGender_Male       = 0x00000000,
-    gEGender_Female     = 0x00000001,
-    gEGender_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gEGuild
-{
-    gEGuild_None       = 0x00000000,
-    gEGuild_Don        = 0x00000001,
-    gEGuild_Dig        = 0x00000002,
-    gEGuild_Grd        = 0x00000003,
-    gEGuild_Cit        = 0x00000004,
-    gEGuild_Inq        = 0x00000005,
-    gEGuild_Mag        = 0x00000006,
-    gEGuild_Pir        = 0x00000007,
-    gEGuild_Count      = 0x00000008,
-    gEGuild_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEHudMode
 {
     //FIXME: gEHudMode constants.
@@ -281,12 +133,6 @@ enum gELogMessageType
     gELogMessageType_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gEOutputType
-{
-    //FIXME: gEOutputType constants.
-    gEOutputType_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEPageMode
 {
     gEPageMode_None       = 0x00000000,
@@ -298,150 +144,10 @@ enum gEPageMode
     gEPageMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-enum gEReason
-{
-    gEReason_None            = 0x00000000,
-    gEReason_SVM_Ambient     = 0x00000001,
-    gEReason_SVM_Combat      = 0x00000002,
-    gEReason_SVM_Party       = 0x00000003,
-    gEReason_PlayerTalk      = 0x00000004,
-    gEReason_ImportantInfo   = 0x00000005,
-    gEReason_PlayerSneaking  = 0x00000006,
-    gEReason_PlayerWeapon    = 0x00000007,
-    gEReason_PlayerRoom      = 0x00000008,
-    gEReason_PlayerUseBed    = 0x00000009,
-    gEReason_Eat             = 0x0000000A,
-    gEReason_Ransack         = 0x0000000B,
-    gEReason_Fighter         = 0x0000000C,
-    gEReason_Attacker        = 0x0000000D,
-    gEReason_Nuisance        = 0x0000000E,
-    gEReason_Joke            = 0x0000000F,
-    gEReason_Frost           = 0x00000010,
-    gEReason_Damage          = 0x00000011,
-    gEReason_DamageLivestock = 0x00000012,
-    gEReason_MurderLivestock = 0x00000013,
-    gEReason_Theft           = 0x00000014,
-    gEReason_Illusion        = 0x00000015,
-    gEReason_GateGuard       = 0x00000016,
-    gEReason_Defeat          = 0x00000017,
-    gEReason_Inspect         = 0x00000018,
-    gEReason_Finish          = 0x00000019,
-    gEReason_Raider          = 0x0000001A,
-    gEReason_Enemy           = 0x0000001B,
-    gEReason_Murder          = 0x0000001C,
-    gEReason_Duel            = 0x0000001D,
-    gEReason_Arena           = 0x0000001E,
-    gEReason_Kill            = 0x0000001F,
-    gEReason_Count           = 0x00000020,
-    gEReason_ForceDWORD      = GE_FORCE_DWORD
-};
-
-enum gESecurityLevel
-{
-    //FIXME: gESecurityLevel constants.
-    gESecurityLevel_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gESkill
-{
-    gESkill_None            = 0xFFFFFFFF,
-    gESkill_Atrib_HP        = 0x00000000,
-    gESkill_Atrib_MP        = 0x00000001,
-    gESkill_Stat_LV         = 0x00000002,
-    gESkill_Stat_XP         = 0x00000003,
-    gESkill_Stat_LP         = 0x00000004,
-    gESkill_Stat_HP         = 0x00000005,
-    gESkill_Stat_MP         = 0x00000006,
-    gESkill_Stat_STR        = 0x00000007,
-    gESkill_Stat_DEX        = 0x00000008,
-    gESkill_Stat_INT        = 0x00000009,
-    gESkill_Prot_Edge       = 0x0000000A,
-    gESkill_Prot_Blunt      = 0x0000000B,
-    gESkill_Prot_Point      = 0x0000000C,
-    gESkill_Prot_Fire       = 0x0000000D,
-    gESkill_Prot_Ice        = 0x0000000E,
-    gESkill_Prot_Magic      = 0x0000000F,
-    gESkill_Combat_Sword    = 0x00000010,
-    gESkill_Combat_Axe      = 0x00000011,
-    gESkill_Combat_Staff    = 0x00000012,
-    gESkill_Combat_Bow      = 0x00000013,
-    gESkill_Combat_CrossBow = 0x00000014,
-    gESkill_Magic_Circle    = 0x00000015,
-    gESkill_Magic_Fireball  = 0x00000016,
-    gESkill_Magic_Frost     = 0x00000017,
-    gESkill_Magic_Missile   = 0x00000018,
-    gESkill_Misc_Smith      = 0x00000019,
-    gESkill_Misc_Mining     = 0x0000001A,
-    gESkill_Misc_Lockpick   = 0x0000001B,
-    gESkill_Misc_Pickpocket = 0x0000001C,
-    gESkill_Misc_Sneak      = 0x0000001D,
-    gESkill_Misc_Acrobat    = 0x0000001E,
-    gESkill_Misc_Alchemy    = 0x0000001F,
-    gESkill_Misc_Scribe     = 0x00000020,
-    gESkill_Misc_Trophy     = 0x00000021,
-    gESkill_Count           = 0x00000022,
-    gESkill_ForceDWORD      = GE_FORCE_DWORD
-};
-
-enum gESkillCategroy
-{
-    //NOTE: I did not use the typo for the constants.
-    gESkillCategory_Atrib      = 0x00000000,
-    gESkillCategory_Stat1      = 0x00000001,  // LV/XP/LP
-    gESkillCategory_Stat2      = 0x00000002,  // HP/MP/STR/DEX/INT
-    gESkillCategory_Prot       = 0x00000003,
-    gESkillCategory_Combat     = 0x00000004,
-    gESkillCategory_Magic      = 0x00000005,
-    gESkillCategory_Misc       = 0x00000006,
-    gESkillCategory_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gESkillModifier
-{
-    gESkillModifier_AddValue        = 0x00000000,
-    gESkillModifier_SetToMax        = 0x00000001,
-    gESkillModifier_SetToValue      = 0x00000002,
-    gESkillModifier_AddPercentOfMax = 0x00000003,
-    gESkillModifier_ForceDWORD      = GE_FORCE_DWORD
-};
-
 enum gESlot
 {
     //FIXME: gESlot constants.
     gESlot_ForceDWORD = GE_FORCE_DWORD
-};
-
-enum gESpecies
-{
-    gESpecies_None          = 0x00000000,
-    gESpecies_Human         = 0x00000001,
-    gESpecies_Lizard        = 0x00000002,
-    gESpecies_Brontok       = 0x00000003,
-    gESpecies_Wolf_Tame     = 0x00000004,
-    gESpecies_Lurker        = 0x00000005,
-    gESpecies_Ashbeast      = 0x00000006,
-    gESpecies_Nautilus      = 0x00000007,
-    gESpecies_Dragonfly     = 0x00000008,
-    gESpecies_Mantis        = 0x00000009,
-    gESpecies_Scorpion      = 0x0000000A,
-    gESpecies_Skeleton      = 0x0000000B,
-    gESpecies_Swampmummy    = 0x0000000C,
-    gESpecies_Rotworm       = 0x0000000D,
-    gESpecies_Skeleton_Tame = 0x0000000E,
-    gESpecies_Gnome         = 0x0000000F,
-    gESpecies_Boar          = 0x00000010,
-    gESpecies_Wolf          = 0x00000011,
-    gESpecies_Stingrat      = 0x00000012,
-    gESpecies_Vulture       = 0x00000013,
-    gESpecies_Thundertail   = 0x00000014,
-    gESpecies_Ogre          = 0x00000015,
-    gESpecies_Ogre_Tame     = 0x00000016,
-    gESpecies_Cow           = 0x00000017,
-    gESpecies_Pig           = 0x00000018,
-    gESpecies_Chicken       = 0x00000019,
-    gESpecies_Ghost         = 0x0000001A,
-    gESpecies_Count         = 0x0000001B,
-    gESpecies_ForceDWORD    = GE_FORCE_DWORD
 };
 
 enum gEStackType
@@ -469,24 +175,60 @@ typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
 typedef eSScriptBase gSScriptAIState;
 
+#include "Game/ge_skillvaluebase.h"
+#include "Game/ge_skillrange.h"
+#include "Game/ge_skillvalue.h"
+#include "Game/ge_modifyskill.h"
+#include "Game/ge_skills_ps.h"
+
+#include "Game/ge_npc_ps.h"
 #include "Game/ge_aizone_ps.h"
 class gCInteraction_PS{};
 #include "Game/ge_anchor_ps.h"
 #include "Game/ge_arena_ps.h"
 #include "Game/ge_book_ps.h"
+#include "Game/ge_castinfo_ps.h"
+#include "Game/ge_clock_ps.h"
+#include "Game/ge_damage_ps.h"
+#include "Game/ge_dialog_ps.h"
 
 class eCAudioChannel{};
-
-#include "Game/ge_npc_ps.h"
-
-#include "Game/ge_skillvaluebase.h"
-#include "Game/ge_skillvalue.h"
-#include "Game/ge_modifyskill.h"
-#include "Game/ge_skills_ps.h"
 
 class gCCharacterControl{};
 class gCCharacterSensor{};
 #include "Game/ge_actionadmin.h"
+
+#include "Game/ge_charactermovement_ps.h"
+
+#include "Game/ge_flightpathbase.h"
+#include "Game/ge_flightpathballistic.h"
+#include "Game/ge_flightpathseeking.h"
+
+#include "Game/ge_effectcommand.h"
+#include "Game/ge_effectcommandearthquake.h"
+#include "Game/ge_effectcommandmodifyentity.h"
+#include "Game/ge_effectcommandplaysound.h"
+#include "Game/ge_effectcommandplayvoice.h"
+#include "Game/ge_effectcommandrunscript.h"
+#include "Game/ge_effectcommandsaysvm.h"
+#include "Game/ge_effectcommandstartimageeffect.h"
+#include "Game/ge_effectcommandtriggerentity.h"
+#include "Game/ge_effectcommandentity.h"
+#include "Game/ge_effectcommandkillentity.h"
+#include "Game/ge_effectcommandkillentityrange.h"
+#include "Game/ge_effectcommandspawnentity.h"
+#include "Game/ge_effectcommandspawnentitylist.h"
+#include "Game/ge_effectcommandspawnentityswitch.h"
+#include "Game/ge_effectcommandsequence2.h"
+#include "Game/ge_effect.h"
+
+struct gSArgsForScriptBase{};
+class gCScriptAdmin;
+class gCScriptRoutine_PS;
+#include "Game/ge_scriptprocessingunit.h"
+#include "Game/ge_scriptroutine_ps.h"
+#include "Game/ge_scriptinit.h"
+#include "Game/ge_scriptadmin.h"
 
 #include "Game/ge_combatobject.h"
 class gCCombatAI;
@@ -516,34 +258,6 @@ class gCCombatSystem_PS;
 #include "Game/ge_combatspecies.h"
 #include "Game/ge_combatsystem_ps.h"
 #include "Game/ge_combatadmin.h"
-
-#include "Game/ge_flightpathbase.h"
-#include "Game/ge_flightpathballistic.h"
-#include "Game/ge_flightpathseeking.h"
-
-#include "Game/ge_effectcommand.h"
-#include "Game/ge_effectcommandearthquake.h"
-#include "Game/ge_effectcommandmodifyentity.h"
-#include "Game/ge_effectcommandplaysound.h"
-#include "Game/ge_effectcommandplayvoice.h"
-#include "Game/ge_effectcommandrunscript.h"
-#include "Game/ge_effectcommandsaysvm.h"
-#include "Game/ge_effectcommandstartimageeffect.h"
-#include "Game/ge_effectcommandtriggerentity.h"
-#include "Game/ge_effectcommandentity.h"
-#include "Game/ge_effectcommandkillentity.h"
-#include "Game/ge_effectcommandkillentityrange.h"
-#include "Game/ge_effectcommandspawnentity.h"
-#include "Game/ge_effectcommandspawnentitylist.h"
-#include "Game/ge_effectcommandspawnentityswitch.h"
-#include "Game/ge_effectcommandsequence2.h"
-#include "Game/ge_effect.h"
-
-struct gSArgsForScriptBase{};
-#include "Game/ge_scriptprocessingunit.h"
-#include "Game/ge_scriptroutine_ps.h"
-#include "Game/ge_scriptinit.h"
-#include "Game/ge_scriptadmin.h"
 
 class eCGuiBitmapProxy2
 {

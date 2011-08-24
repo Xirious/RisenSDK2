@@ -12,9 +12,10 @@ enum EDifficulty
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTObjArray<>' needs to have dll-interface to be used by clients of class 'Entity'
 
-class GE_DLLIMPORT Entity :
-    public EntityPropertySet  // direct Property< PSXxx::PropertyYyy > access
+class GE_DLLIMPORT Entity
 {
+protected:
+    eCEntity * m_pEngineEntity;
 public:
     static bTObjArray< Entity > ms_arrEntities;
     static bTObjArray< Entity > ms_arrNPCs;
@@ -254,6 +255,10 @@ public:
     Entity( void );
    ~Entity( void );
 public:
+    template< typename T >
+    inline T & Property( void );
+    template< typename T >
+    inline T const & Property( void ) const;
     template< typename T >
     inline T & PropertySet( void );
     template< typename T >

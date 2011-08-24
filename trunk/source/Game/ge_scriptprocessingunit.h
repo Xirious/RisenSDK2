@@ -1,8 +1,11 @@
 #ifndef GE_SCRIPTPROCESSINGUNIT_H_INCLUDED
 #define GE_SCRIPTPROCESSINGUNIT_H_INCLUDED
 
-class gCScriptAdmin;
-class gCScriptRoutine_PS;
+enum gEOutputType
+{
+    //FIXME: gEOutputType constants.
+    gEOutputType_ForceDWORD = GE_FORCE_DWORD
+};
 
 struct gScriptRunTimeSingleState
 {

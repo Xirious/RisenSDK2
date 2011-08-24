@@ -1,6 +1,12 @@
 #ifndef GE_AIZONE_PS_H_INCLUDED
 #define GE_AIZONE_PS_H_INCLUDED
 
+enum gESecurityLevel
+{
+    //FIXME: gESecurityLevel constants.
+    gESecurityLevel_ForceDWORD = GE_FORCE_DWORD
+};
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'gCAIZone_PS'
 

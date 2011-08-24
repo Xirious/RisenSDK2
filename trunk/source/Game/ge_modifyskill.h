@@ -1,6 +1,15 @@
 #ifndef GE_MODIFYSKILL_H_INLCUDED
 #define GE_MODIFYSKILL_H_INCLUDED
 
+enum gESkillModifier
+{
+    gESkillModifier_AddValue        = 0x00000000,
+    gESkillModifier_SetToMax        = 0x00000001,
+    gESkillModifier_SetToValue      = 0x00000002,
+    gESkillModifier_AddPercentOfMax = 0x00000003,
+    gESkillModifier_ForceDWORD      = GE_FORCE_DWORD
+};
+
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<>' needs to have dll-interface to be used by clients of class 'gCModifySkill'
 

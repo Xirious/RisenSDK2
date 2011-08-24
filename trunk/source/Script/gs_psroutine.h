@@ -1,7 +1,7 @@
 #ifndef GS_PSROUTINE_H_INCLUDED
 #define GS_PSROUTINE_H_INCLUDED
 
-GS_DECLARE_PROPERTYSET( PSRoutine )
+GS_DECLARE_PROPERTYSET( PSRoutine, gCScriptRoutine_PS )
 public:
     GS_DECLARE_PROPERTY( AIDelay,            GEI32 )
     GS_DECLARE_PROPERTY( AIMode,             gEAIMode )
@@ -47,12 +47,6 @@ public:
     void       StopAIPlayAnimation( void );
     void       StopAIWait( void );
     void       StopOutput( void );
-protected:
-                         operator gCScriptRoutine_PS *       ( void );
-                         operator gCScriptRoutine_PS const * ( void ) const;
-    gCScriptRoutine_PS * operator ->                         ( void );
-public:
-    gCScriptRoutine_PS const * operator -> ( void ) const;
 };
 
 //NOTE: The strings are not const, but they shouldn’t be modified.

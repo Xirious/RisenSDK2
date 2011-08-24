@@ -28,6 +28,41 @@ enum gEAmbientAction
     gEAmbientAction_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gEAniState
+{
+    gEAniState_Dummy0        = 0x00000000,
+    gEAniState_Dummy1        = 0x00000001,
+    gEAniState_Stand         = 0x00000002,
+    gEAniState_Sneak         = 0x00000003,
+    gEAniState_Attack        = 0x00000004,
+    gEAniState_Parade        = 0x00000005,
+    gEAniState_Kneel         = 0x00000006,
+    gEAniState_SitGround     = 0x00000007,
+    gEAniState_SitStool      = 0x00000008,
+    gEAniState_SitBench      = 0x00000009,
+    gEAniState_SitThrone     = 0x0000000A,
+    gEAniState_SleepBed      = 0x0000000B,
+    gEAniState_SleepGround   = 0x0000000C,
+    gEAniState_SitBathtub    = 0x0000000D,
+    gEAniState_Down          = 0x0000000E,
+    gEAniState_DownBack      = 0x0000000F,
+    gEAniState_Dead          = 0x00000010,
+    gEAniState_DeadBack      = 0x00000011,
+    gEAniState_Finished      = 0x00000012,
+    gEAniState_FinishedBack  = 0x00000013,
+    gEAniState_TalkStand     = 0x00000014,
+    gEAniState_TalkSitGround = 0x00000015,
+    gEAniState_TalkSitStool  = 0x00000016,
+    gEAniState_TalkSitBench  = 0x00000017,
+    gEAniState_TalkSitThrone = 0x00000018,
+    gEAniState_Wade          = 0x00000019,
+    gEAniState_Swim          = 0x0000001A,
+    gEAniState_Dive          = 0x0000001B,
+    gEAniState_Stumble       = 0x0000001C,
+    gEAniState_Levitate      = 0x0000001D,
+    gEAniState_ForceDWORD    = GE_FORCE_DWORD
+};
+
 enum gEHitDirection
 {
     gEHitDirection_Left       = 0x00000000,
