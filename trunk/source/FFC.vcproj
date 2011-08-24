@@ -160,7 +160,15 @@
 				Name="virtual"
 				>
 				<File
+					RelativePath=".\FFC\fx_virtualfile.h"
+					>
+				</File>
+				<File
 					RelativePath=".\FFC\fx_virtualfilemapping.h"
+					>
+				</File>
+				<File
+					RelativePath=".\FFC\fx_virtualfilestream.h"
 					>
 				</File>
 			</Filter>

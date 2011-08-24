@@ -13,22 +13,22 @@ struct SFFFileTime
 
 struct SFFFileData
 {
-    SFFFileTime m_CreationTime;      // 0000
-    SFFFileTime m_LastAccessTime;    // 0008
-    SFFFileTime m_ModificationTime;  // 0010
-    FFU32       m_u32FileSizeHigh;   // 0018
-    FFU32       m_u32FileSizeLow;    // 001C
-    FFU32       m_u32Reserved0;      // 0020
-    FFU32       m_u32Reserved1;      // 0024
-    FFU32       m_u32Attributes;     // 0028
+    SFFFileTime m_CreationTime;
+    SFFFileTime m_LastAccessTime;
+    SFFFileTime m_ModificationTime;
+    FFU32       m_u32FileSizeHigh;
+    FFU32       m_u32FileSizeLow;
+    FFU32       m_u32Reserved0;
+    FFU32       m_u32Reserved1;
+    FFU32       m_u32Attributes;
 };
 GE_ASSERT_SIZEOF( SFFFileData, 0x002C )
 
 struct SFFFileFind
 {
-    SFFFileData m_FileData;     // 0000
-    bCString    m_strFileName;  // 002C
-    bCString    m_strFilePath;  // 0030
+    SFFFileData m_FileData;
+    bCString    m_strFileName;
+    bCString    m_strFilePath;
 };
 GE_ASSERT_SIZEOF( SFFFileFind, 0x0034 )
 
