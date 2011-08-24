@@ -29,15 +29,15 @@ typedef wchar_t               FFUnicodeChar;
 typedef wchar_t *             FFLPUnicodeChar;
 typedef wchar_t const *       FFLPCUnicodeChar;
 
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_cUnixDirTerminator;
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_cVolumeNamePrefix;
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_cVolumeTerminator;
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_cWindowsDirTerminator;
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_pcDirTerminators[ 2 ];
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_pcIllegalNameCharacters[ 9 ];
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_pcIllegalNameFilterCharacters[ 7 ];
-FF_C_LINKAGE FF_DLLIMPORT FFChar const g_pcIllegalVolumeCharacters[ 8 ];
-FF_C_LINKAGE FF_DLLIMPORT FFLPCChar    g_pszParent;
-FF_C_LINKAGE FF_DLLIMPORT FFLPCChar    g_pszSelf;
+FF_DLLIMPORT_EXTC FFChar const g_cUnixDirTerminator;
+FF_DLLIMPORT_EXTC FFChar const g_cVolumeNamePrefix;
+FF_DLLIMPORT_EXTC FFChar const g_cVolumeTerminator;
+FF_DLLIMPORT_EXTC FFChar const g_cWindowsDirTerminator;
+FF_DLLIMPORT_EXTC FFChar const g_pcDirTerminators[ 2 ];
+FF_DLLIMPORT_EXTC FFChar const g_pcIllegalNameCharacters[ 9 ];
+FF_DLLIMPORT_EXTC FFChar const g_pcIllegalNameFilterCharacters[ 7 ];
+FF_DLLIMPORT_EXTC FFChar const g_pcIllegalVolumeCharacters[ 8 ];
+FF_DLLIMPORT_EXTC FFLPCChar    g_pszParent;
+FF_DLLIMPORT_EXTC FFLPCChar    g_pszSelf;
 
 #endif

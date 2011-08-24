@@ -94,6 +94,6 @@ public:
    ~GUI2( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT GUI2 gui2;
+GE_DLLIMPORT_EXTC GUI2 gui2;
 
 #endif

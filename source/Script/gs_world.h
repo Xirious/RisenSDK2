@@ -57,6 +57,6 @@ public:
    ~World( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT World world;
+GE_DLLIMPORT_EXTC World world;
 
 #endif

@@ -65,6 +65,6 @@ public:
    ~InfoSystem( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT InfoSystem IS;
+GE_DLLIMPORT_EXTC InfoSystem IS;
 
 #endif

@@ -27,6 +27,6 @@ public:
    ~Focus( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT Focus focus;
+GE_DLLIMPORT_EXTC Focus focus;
 
 #endif

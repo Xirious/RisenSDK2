@@ -25,7 +25,7 @@ enum gEEffectQuality
     gEEffectQuality_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszEffectQualities[ gEEffectQuality_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_ppszEffectQualities[ gEEffectQuality_Count ];
 
 enum gEEffectStopMode
 {

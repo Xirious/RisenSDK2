@@ -18,6 +18,6 @@ public:
    ~Music( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT Music music;
+GE_DLLIMPORT_EXTC Music music;
 
 #endif

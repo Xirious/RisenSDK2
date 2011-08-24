@@ -159,6 +159,6 @@ public:
     friend GE_DLLIMPORT GEBool   GE_STDCALL operator >= ( GELPCChar, bCString const & );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT bCString g_strDefault;
+GE_DLLIMPORT_EXTC bCString g_strDefault;
 
 #endif

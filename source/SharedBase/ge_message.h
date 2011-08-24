@@ -1,8 +1,8 @@
 #ifndef GE_MESSAGE_H_INCLUDED
 #define GE_MESSAGE_H_INCLUDED
 
-GE_C_LINKAGE GE_DLLIMPORT GEChar g_carrMsgBuffer[ 2048 ];
-GE_C_LINKAGE GE_DLLIMPORT GEInt const g_iDefaultMessagePriority;
+GE_DLLIMPORT_EXTC GEChar g_carrMsgBuffer[ 2048 ];
+GE_DLLIMPORT_EXTC GEInt const g_iDefaultMessagePriority;
 
 #ifdef _DEBUG
 #define GE_MESSAGE_OK( MESSAGE ) bCMessageAdmin::GetInstance().OnMessage( bEMessageType_OK, MESSAGE, 0, __FILE__, __LINE__, g_iDefaultMessagePriority )

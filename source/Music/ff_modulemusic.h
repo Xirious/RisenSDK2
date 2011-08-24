@@ -37,8 +37,8 @@ private: virtual void __FIXME_0074( void ) = 0;
 private: virtual void __FIXME_0078( void ) = 0; 
 };
 
-FF_C_LINKAGE FF_DLLIMPORT FFBool           FF_STDCALL FFMusic_Lock( void );
-FF_C_LINKAGE FF_DLLIMPORT IFFModuleMusic * FF_STDCALL FFMusic_QueryModule( void );
-FF_C_LINKAGE FF_DLLIMPORT FFBool           FF_STDCALL FFMusic_Unlock( void );
+FF_DLLIMPORT_EXTC FFBool           FF_STDCALL FFMusic_Lock( void );
+FF_DLLIMPORT_EXTC IFFModuleMusic * FF_STDCALL FFMusic_QueryModule( void );
+FF_DLLIMPORT_EXTC FFBool           FF_STDCALL FFMusic_Unlock( void );
 
 #endif

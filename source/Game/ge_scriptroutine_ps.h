@@ -28,7 +28,7 @@ enum gEAmbientAction
     gEAmbientAction_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT bCString const g_pstrAmbientActionString[ gEAmbientAction_Count ];
+GE_DLLIMPORT_DATA bCString const g_pstrAmbientActionString[ gEAmbientAction_Count ];
 
 enum gEAniState
 {
@@ -66,7 +66,7 @@ enum gEAniState
     gEAniState_ForceDWORD    = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT bCString const g_pstrAniStateString[ gEAniState_Count ];
+GE_DLLIMPORT_DATA bCString const g_pstrAniStateString[ gEAniState_Count ];
 
 enum gEHitDirection
 {

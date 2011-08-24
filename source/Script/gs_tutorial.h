@@ -25,6 +25,6 @@ public:
    ~Tutorial( void );
 };
 
-GE_C_LINKAGE GE_DLLIMPORT Tutorial tutorial;
+GE_DLLIMPORT_EXTC Tutorial tutorial;
 
 #endif

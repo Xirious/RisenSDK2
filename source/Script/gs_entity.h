@@ -268,7 +268,7 @@ public:
 #pragma warning( pop )
 
 //NOTE: None isn’t const, but it shouldn’t be modified.
-GE_C_LINKAGE GE_DLLIMPORT Entity const None;
+GE_DLLIMPORT_EXTC Entity const None;
 
 #include "gs_entity.inl"
 

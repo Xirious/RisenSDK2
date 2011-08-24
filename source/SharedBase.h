@@ -148,6 +148,6 @@ class bCPropertyObjectTypeBase;
 #include "SharedBase/ge_obsoleteclass.h"
 #include "SharedBase/ge_propertycontainer.h"
 
-GE_C_LINKAGE GE_DLLIMPORT GEFloat g_fFOV;
+GE_DLLIMPORT_EXTC GEFloat g_fFOV;
 
 #endif

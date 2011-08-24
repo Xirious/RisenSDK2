@@ -15,7 +15,7 @@ enum gEDamageType
     gEDamageType_ForceDWORD = GE_FORCE_DWORD
 };
 
-GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszDamageTypes[ gEDamageType_Count ];
+GE_DLLIMPORT_DATA GELPCChar const g_ppszDamageTypes[ gEDamageType_Count ];
 
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'gCDamage_PS'
