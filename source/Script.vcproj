@@ -257,6 +257,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_pseffect.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>

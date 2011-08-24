@@ -3,11 +3,14 @@
 
 enum gECombatPose
 {
-    gECombatPose_P0         = 0x00000000,
-    gECombatPose_P1         = 0x00000001,
-    gECombatPose_P2         = 0x00000002,
+    gECombatPose_P0,
+    gECombatPose_P1,
+    gECombatPose_P2,
+    gECombatPose_Count,
     gECombatPose_ForceDWORD = GE_FORCE_DWORD
 };
+
+GE_CPP_LINKAGE GE_DLLIMPORT bCString const g_pstrPoseString[ gECombatPose_Count ];
 
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'gCCombatStyleAniPose'

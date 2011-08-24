@@ -122,14 +122,18 @@
 	</References>
 	<Files>
 		<Filter
-			Name="effects"
+			Name="effect"
 			>
 			<File
 				RelativePath=".\Game\ge_effect.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Game\ge_effect_ps.h"
+				>
+			</File>
 			<Filter
-				Name="commands"
+				Name="command"
 				>
 				<File
 					RelativePath=".\Game\ge_effectcommand.h"
@@ -198,7 +202,7 @@
 			</Filter>
 		</Filter>
 		<Filter
-			Name="quests"
+			Name="quest"
 			>
 			<File
 				RelativePath=".\Game\ge_quest.h"

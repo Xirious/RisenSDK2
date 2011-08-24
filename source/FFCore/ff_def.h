@@ -11,6 +11,7 @@
 #define FF_STDCALL __stdcall
 
 #define FF_C_LINKAGE extern "C"
+#define FF_CPP_LINKAGE extern "C++"
 #define FF_DLLIMPORT __declspec( dllimport )
 
 #define FF_DECLARE_INTERFACE( iff, iid ) class __declspec( uuid( iid ) ) __declspec( novtable ) iff

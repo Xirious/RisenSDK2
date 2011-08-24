@@ -3,10 +3,13 @@
 
 enum gEQuestActor
 {
-    gEQuestActor_Client     = 0x00000000,
-    gEQuestActor_Target     = 0x00000001,
+    gEQuestActor_Client,
+    gEQuestActor_Target,
+    gEQuestActor_Count,
     gEQuestActor_ForceDWORD = GE_FORCE_DWORD
 };
+
+GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_strQuestActor[ gEQuestActor_Count ];
 
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<>' needs to have dll-interface to be used by clients of class 'gCQuestActor'

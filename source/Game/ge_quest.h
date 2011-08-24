@@ -15,33 +15,41 @@ enum gEInfoLocation
 
 enum gEQuestStatus
 {
-    gEQuestStatus_Open       = 0x00000000,
-    gEQuestStatus_Running    = 0x00000001,
-    gEQuestStatus_Success    = 0x00000002,
-    gEQuestStatus_Failed     = 0x00000003,
-    gEQuestStatus_Obsolete   = 0x00000004,
-    gEQuestStatus_Cancelled  = 0x00000005,
-    gEQuestStatus_Lost       = 0x00000006,
-    gEQuestStatus_Won        = 0x00000007,
+    gEQuestStatus_Open,
+    gEQuestStatus_Running,
+    gEQuestStatus_Success,
+    gEQuestStatus_Failed,
+    gEQuestStatus_Obsolete,
+    gEQuestStatus_Cancelled,
+    gEQuestStatus_Lost,
+    gEQuestStatus_Won,
+    gEQuestStatus_Count,
     gEQuestStatus_ForceDWORD = GE_FORCE_DWORD
 };
 
+GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_strQuestStatus[ gEQuestStatus_Count ];
+
 enum gEQuestType
 {
-    gEQuestType_HasItems   = 0x00000000,
-    gEQuestType_Report     = 0x00000001,
-    gEQuestType_Kill       = 0x00000002,
-    gEQuestType_Defeat     = 0x00000003,
-    gEQuestType_DriveAway  = 0x00000004,
-    gEQuestType_Arena      = 0x00000005,
-    gEQuestType_BringNpc   = 0x00000006,
-    gEQuestType_FollowNpc  = 0x00000007,
-    gEQuestType_EnterArea  = 0x00000008,
-    gEQuestType_Plunder    = 0x0000000B,
-    gEQuestType_Sparring   = 0x0000000C,
-    gEQuestType_Duel       = 0x0000000D,
+    gEQuestType_HasItems,
+    gEQuestType_Report,
+    gEQuestType_Kill,
+    gEQuestType_Defeat,
+    gEQuestType_DriveAway,
+    gEQuestType_Arena,
+    gEQuestType_BringNpc,
+    gEQuestType_FollowNpc,
+    gEQuestType_EnterArea,
+    gEQuestType_Reserved1,
+    gEQuestType_Reserved2,
+    gEQuestType_Plunder,
+    gEQuestType_Sparring,
+    gEQuestType_Duel,
+    gEQuestType_Count,
     gEQuestType_ForceDWORD = GE_FORCE_DWORD
 };
+
+GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_strQuestType[ gEQuestType_Count ];
 
 class GE_DLLIMPORT gCQuest :
     public eCDocObject

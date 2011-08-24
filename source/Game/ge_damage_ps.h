@@ -3,16 +3,19 @@
 
 enum gEDamageType
 {
-    gEDamageType_None       = 0x00000000,
-    gEDamageType_Edge       = 0x00000001,
-    gEDamageType_Blunt      = 0x00000002,
-    gEDamageType_Point      = 0x00000003,
-    gEDamageType_Fire       = 0x00000004,
-    gEDamageType_Ice        = 0x00000005,
-    gEDamageType_Magic      = 0x00000006,
-    gEDamageType_Physics    = 0x00000007,
+    gEDamageType_None,
+    gEDamageType_Edge,
+    gEDamageType_Blunt,
+    gEDamageType_Point,
+    gEDamageType_Fire,
+    gEDamageType_Ice,
+    gEDamageType_Magic,
+    gEDamageType_Physics,
+    gEDamageType_Count,
     gEDamageType_ForceDWORD = GE_FORCE_DWORD
 };
+
+GE_CPP_LINKAGE GE_DLLIMPORT GELPCChar const g_ppszDamageTypes[ gEDamageType_Count ];
 
 #pragma warning( push )
 #pragma warning( disable : 4251 )  // class 'bTPropertyContainer<T>' needs to have dll-interface to be used by clients of class 'gCDamage_PS'
