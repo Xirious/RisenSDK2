@@ -253,6 +253,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psdoor.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
