@@ -261,6 +261,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psinteraction.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>

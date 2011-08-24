@@ -187,9 +187,14 @@ typedef eSScriptBase gSScriptAIState;
 #include "Game/ge_modifyskill.h"
 #include "Game/ge_skills_ps.h"
 
+class gCInteraction_PS;
+#include "Game/ge_interaction.h"
+#include "Game/ge_interactionslot.h"
+#include "Game/ge_interaction_ps.h"
+#include "Game/ge_interactionadmin.h"
+
 #include "Game/ge_npc_ps.h"
 #include "Game/ge_aizone_ps.h"
-class gCInteraction_PS{};
 #include "Game/ge_anchor_ps.h"
 #include "Game/ge_arena_ps.h"
 #include "Game/ge_book_ps.h"

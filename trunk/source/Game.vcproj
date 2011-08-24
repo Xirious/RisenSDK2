@@ -549,6 +549,26 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="interaction"
+			>
+			<File
+				RelativePath=".\Game\ge_interaction.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_interaction_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_interactionadmin.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_interactionslot.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
