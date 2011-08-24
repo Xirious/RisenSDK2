@@ -31,6 +31,7 @@ class Entity;
 #include "Script/gs_infcomuse.h"
 #include "Script/gs_infosystem.h"
 #include "Script/gs_music.h"
+#include "Script/gs_psaizone.h"
 #include "Script/gs_psanchor.h"
 #include "Script/gs_psanimation.h"
 #include "Script/gs_psarea.h"
