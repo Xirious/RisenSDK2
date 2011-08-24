@@ -34,16 +34,20 @@ enum eEResourceState
 
 enum eEResourceType
 {
-    eEResourceType_Image         = 0x00000000,
-    eEResourceType_Material      = 0x00000001,
-    eEResourceType_Mesh          = 0x00000002,
-    eEResourceType_Motion        = 0x00000003,
-    eEResourceType_MotionActor   = 0x00000004,
-    eEResourceType_Sound         = 0x00000005,
-    eEResourceType_SpeedTree     = 0x00000006,
-    eEResourceType_CollisionMesh = 0x00000007,
+    eEResourceType_Image,
+    eEResourceType_Material,
+    eEResourceType_Mesh,
+    eEResourceType_Motion,
+    eEResourceType_MotionActor,
+    eEResourceType_Sound,
+    eEResourceType_SpeedTree,
+    eEResourceType_CollisionMesh,
+    eEResourceType_Count,
     eEResourceType_ForceDWORD    = GE_FORCE_DWORD
 };
+
+//NOTE: g_ppszResourceTypes isn’t const, but it shouldn’t be modified.
+GE_DLLIMPORT_EXTC GELPCChar const g_ppszResourceTypes[ eEResourceType_Count ];
 
 struct eSResourceFileHeader
 {
