@@ -13,6 +13,7 @@
 #define GE_FASTCALL __fastcall
 
 #define GE_C_LINKAGE extern "C"
+#define GE_CPP_LINKAGE extern "C++"
 #define GE_DLLIMPORT __declspec( dllimport )
 
 #define GE_PASTE_TOKENS( A, B ) GE_PASTE_TOKENS_( A, B )

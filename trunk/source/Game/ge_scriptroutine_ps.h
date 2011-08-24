@@ -19,49 +19,54 @@ enum gEAIMode
     gEAIMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-// gCScriptRoutine_PS.AmbientAction
 enum gEAmbientAction
 {
-    gEAmbientAction_Ambient    = 0x00000000,
-    gEAmbientAction_Listen     = 0x00000001,
-    gEAmbientAction_EMPTY      = 0x00000002,
+    gEAmbientAction_Ambient,
+    gEAmbientAction_Listen,
+    gEAmbientAction_EMPTY,
+    gEAmbientAction_Count,
     gEAmbientAction_ForceDWORD = GE_FORCE_DWORD
 };
 
+GE_CPP_LINKAGE GE_DLLIMPORT bCString const g_pstrAmbientActionString[ gEAmbientAction_Count ];
+
 enum gEAniState
 {
-    gEAniState_Dummy0        = 0x00000000,
-    gEAniState_Dummy1        = 0x00000001,
-    gEAniState_Stand         = 0x00000002,
-    gEAniState_Sneak         = 0x00000003,
-    gEAniState_Attack        = 0x00000004,
-    gEAniState_Parade        = 0x00000005,
-    gEAniState_Kneel         = 0x00000006,
-    gEAniState_SitGround     = 0x00000007,
-    gEAniState_SitStool      = 0x00000008,
-    gEAniState_SitBench      = 0x00000009,
-    gEAniState_SitThrone     = 0x0000000A,
-    gEAniState_SleepBed      = 0x0000000B,
-    gEAniState_SleepGround   = 0x0000000C,
-    gEAniState_SitBathtub    = 0x0000000D,
-    gEAniState_Down          = 0x0000000E,
-    gEAniState_DownBack      = 0x0000000F,
-    gEAniState_Dead          = 0x00000010,
-    gEAniState_DeadBack      = 0x00000011,
-    gEAniState_Finished      = 0x00000012,
-    gEAniState_FinishedBack  = 0x00000013,
-    gEAniState_TalkStand     = 0x00000014,
-    gEAniState_TalkSitGround = 0x00000015,
-    gEAniState_TalkSitStool  = 0x00000016,
-    gEAniState_TalkSitBench  = 0x00000017,
-    gEAniState_TalkSitThrone = 0x00000018,
-    gEAniState_Wade          = 0x00000019,
-    gEAniState_Swim          = 0x0000001A,
-    gEAniState_Dive          = 0x0000001B,
-    gEAniState_Stumble       = 0x0000001C,
-    gEAniState_Levitate      = 0x0000001D,
+    gEAniState_Dummy0,
+    gEAniState_Dummy1,
+    gEAniState_Stand,
+    gEAniState_Sneak,
+    gEAniState_Attack,
+    gEAniState_Parade,
+    gEAniState_Kneel,
+    gEAniState_SitGround,
+    gEAniState_SitStool,
+    gEAniState_SitBench,
+    gEAniState_SitThrone,
+    gEAniState_SleepBed,
+    gEAniState_SleepGround,
+    gEAniState_SitBathtub,
+    gEAniState_Down,
+    gEAniState_DownBack,
+    gEAniState_Dead,
+    gEAniState_DeadBack,
+    gEAniState_Finished,
+    gEAniState_FinishedBack,
+    gEAniState_TalkStand,
+    gEAniState_TalkSitGround,
+    gEAniState_TalkSitStool,
+    gEAniState_TalkSitBench,
+    gEAniState_TalkSitThrone,
+    gEAniState_Wade,
+    gEAniState_Swim,
+    gEAniState_Dive,
+    gEAniState_Stumble,
+    gEAniState_Levitate,
+    gEAniState_Count,
     gEAniState_ForceDWORD    = GE_FORCE_DWORD
 };
+
+GE_CPP_LINKAGE GE_DLLIMPORT bCString const g_pstrAniStateString[ gEAniState_Count ];
 
 enum gEHitDirection
 {
