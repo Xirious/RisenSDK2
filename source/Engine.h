@@ -92,9 +92,8 @@ class eCStatisticView;
 #include "Engine/ge_enginecomponentbase.h"
 #include "Engine/ge_moduleadmin.h"
 
-class GE_DLLIMPORT eCResourceInputStream2{};
-class GE_DLLIMPORT eCResourceOutputStream2{};
-
+#include "Engine/ge_resourceinputstream2.h"
+#include "Engine/ge_resourceoutputstream2.h"
 class GE_DLLIMPORT eCCollisionMeshResource2{};
 class GE_DLLIMPORT eCImageResource2{};
 class GE_DLLIMPORT eCMaterialResource2{};
@@ -103,7 +102,6 @@ class GE_DLLIMPORT eCMotionActorResource2{};
 class GE_DLLIMPORT eCMotionResource2{};
 class GE_DLLIMPORT eCSoundResource2{};
 class GE_DLLIMPORT eCSpeedTreeResource2{};
-
 class eCResourceCache2;
 #include "Engine/ge_resource2.h"
 #include "Engine/ge_resourcecache2.h"

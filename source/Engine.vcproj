@@ -133,7 +133,15 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Engine\ge_resourceinputstream2.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Engine\ge_resourcemodule2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_resourceoutputstream2.h"
 				>
 			</File>
 		</Filter>
