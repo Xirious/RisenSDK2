@@ -265,6 +265,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psinventory.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>

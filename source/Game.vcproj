@@ -569,6 +569,26 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="inventory"
+			>
+			<File
+				RelativePath=".\Game\ge_inventory_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_inventorylistener.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_inventoryslot.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_inventorystack.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
