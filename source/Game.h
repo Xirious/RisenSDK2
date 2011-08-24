@@ -191,6 +191,7 @@ class gCInteraction_PS{};
 #include "Game/ge_clock_ps.h"
 #include "Game/ge_damage_ps.h"
 #include "Game/ge_dialog_ps.h"
+#include "Game/ge_door_ps.h"
 
 class eCAudioChannel{};
 
