@@ -1,6 +1,30 @@
 #ifndef GE_SCRIPTADMIN_H_INCLUDED
 #define GE_SCRIPTADMIN_H_INCLUDED
 
+struct gSScript :
+    eSScriptBase
+{
+    GEInt operator () ( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GEInt );
+};
+
+struct gSScriptAICallback :
+    eSScriptBase
+{
+    GEBool operator () ( gCScriptProcessingUnit * );
+};
+
+struct gSScriptAIFunction :
+    eSScriptBase
+{
+    GEBool operator () ( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
+};
+
+struct gSScriptAIState :
+    eSScriptBase
+{
+    GEBool operator () ( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
+};
+
 struct gSScriptDLL
 {
     GELPVoid                           m_hModule;
@@ -30,9 +54,6 @@ protected:
         gCScriptAdmin * m_pScriptAdmin;
     };
     GE_ASSERT_SIZEOF( CProcessor, 0x0010 )
-protected: virtual gSScript *                 RegisterScript( bCString const & );                               
-protected: virtual GEBool                     UnRegisterScript( gSScript * );                                   
-public:    virtual GEU32 const                GetProfileLastTicksFirst( void ) const;                           
 public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;                                      
 public:    virtual GEBool                     IsValid( void ) const;                                            
 public:    virtual bEResult                   Create( void );                                                   
@@ -43,6 +64,9 @@ public:    virtual bEResult                   PostInitialize( void );
 public:    virtual bEResult                   Shutdown( void );                                                 
 public:    virtual void                       Process( void );                                                  
 protected: virtual GEInt                      CallScript( gSScript *, eCEntity *, eCEntity *, GEInt );          
+protected: virtual gSScript *                 RegisterScript( bCString const & );                               
+protected: virtual GEBool                     UnRegisterScript( gSScript * );                                   
+public:    virtual GEU32 const                GetProfileLastTicksFirst( void ) const;                           
 private:
     static bCPropertyObjectTypeBase thisType;
 protected:
