@@ -497,6 +497,10 @@
 			Name="script"
 			>
 			<File
+				RelativePath=".\Game\ge_scriptadmin.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_scriptadmin.h"
 				>
 			</File>

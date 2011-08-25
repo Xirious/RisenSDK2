@@ -1,34 +1,26 @@
 #ifndef GE_SCRIPTINIT_H_INCLUDED
 #define GE_SCRIPTINIT_H_INCLUDED
 
-typedef GEBool (GE_STDCALL * gFScriptAIState)( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
-typedef GEBool (GE_STDCALL * gFScriptAIFunction)( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
-typedef GEBool (GE_STDCALL * gFScriptAICallback)( gCScriptProcessingUnit * );
 typedef GEInt  (GE_STDCALL * gFScript)( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GEInt );
+typedef GEBool (GE_STDCALL * gFScriptAICallback)( gCScriptProcessingUnit * );
+typedef GEBool (GE_STDCALL * gFScriptAIFunction)( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
+typedef GEBool (GE_STDCALL * gFScriptAIState)( bTObjStack< gScriptRunTimeSingleState > &, gCScriptProcessingUnit * );
 
 struct gSScriptInitScriptBase
 {
-	bCString          m_strName;
-	bCString          m_strSource;
+	bCString m_strName;
+	bCString m_strSource;
     gSScriptInitScriptBase( GELPCChar a_pcName, GELPCChar a_pcSource );
     gSScriptInitScriptBase( void );
    ~gSScriptInitScriptBase( void );
 };
 
-struct gSScriptInitScriptAIState :
+struct gSScriptInitScript :
     gSScriptInitScriptBase
 {
-	gFScriptAIState m_funcScriptAIState;
-    gSScriptInitScriptAIState( GELPCChar a_pcName, GELPCChar a_pcSource, gFScriptAIState a_funcScriptAIState );
-    gSScriptInitScriptAIState( void );
-};
-
-struct gSScriptInitScriptAIFunction :
-    gSScriptInitScriptBase
-{
-	gFScriptAIFunction m_funcScriptAIFunction;
-    gSScriptInitScriptAIFunction( GELPCChar a_pcName, GELPCChar a_pcSource, gFScriptAIFunction a_funcScriptAIFunction );
-    gSScriptInitScriptAIFunction( void );
+	gFScript m_funcScript;
+    gSScriptInitScript( GELPCChar a_pcName, GELPCChar a_pcSource, gFScript a_funcScript );
+    gSScriptInitScript( void );
 };
 
 struct gSScriptInitScriptAICallback :
@@ -39,14 +31,23 @@ struct gSScriptInitScriptAICallback :
     gSScriptInitScriptAICallback( void );
 };
 
-
-struct gSScriptInitScript :
+struct gSScriptInitScriptAIFunction :
     gSScriptInitScriptBase
 {
-	gFScript m_funcScript;
-    gSScriptInitScript( GELPCChar a_pcName, GELPCChar a_pcSource, gFScript a_funcScript );
-    gSScriptInitScript( void );
+	gFScriptAIFunction m_funcScriptAIFunction;
+    gSScriptInitScriptAIFunction( GELPCChar a_pcName, GELPCChar a_pcSource, gFScriptAIFunction a_funcScriptAIFunction );
+    gSScriptInitScriptAIFunction( void );
 };
+
+struct gSScriptInitScriptAIState :
+    gSScriptInitScriptBase
+{
+	gFScriptAIState m_funcScriptAIState;
+    gSScriptInitScriptAIState( GELPCChar a_pcName, GELPCChar a_pcSource, gFScriptAIState a_funcScriptAIState );
+    gSScriptInitScriptAIState( void );
+};
+
+
 
 struct gSScriptInit
 {

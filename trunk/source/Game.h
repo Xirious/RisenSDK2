@@ -80,13 +80,9 @@ enum gEWalkMode
     gEWalkMode_ForceDWORD = GE_FORCE_DWORD
 };
 
-typedef eSScriptBase gSScript;
 #include "Game/ge_scriptproxyaicallback.h"
-typedef eSScriptBase gSScriptAICallback;
 #include "Game/ge_scriptproxyaifunction.h"
-typedef eSScriptBase gSScriptAIFunction;
 #include "Game/ge_scriptproxyaistate.h"
-typedef eSScriptBase gSScriptAIState;
 
 #include "Game/ge_skillvaluebase.h"
 #include "Game/ge_skillrange.h"
