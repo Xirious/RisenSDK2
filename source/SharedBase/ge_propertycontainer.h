@@ -1,63 +1,44 @@
 #ifndef GE_PROPERTYCONTAINER_H_INCLUDED
 #define GE_PROPERTYCONTAINER_H_INCLUDED
 
-#pragma warning( push )
-#pragma warning( disable : 4265 )  // class has virtual functions, but destructor is not virtual
-
 class bCPropertyContainer
 {
-public: virtual void     Invalidate( void );          
-public: virtual bEResult Read( bCIStream & );         
-public: virtual bEResult Write( bCOStream & ) const;  
-private:
-    bCPropertyContainer const & operator = ( bCPropertyContainer const & );  // not defined
-private:
-    bCPropertyContainer( bCPropertyContainer const & );  // not defined
-public:
-    bCPropertyContainer( void );
-   ~bCPropertyContainer( void );
+public: virtual void     Invalidate( void ) = 0;
+public: virtual bEResult Read( bCIStream & ) = 0;
+public: virtual bEResult Write( bCOStream & ) const = 0;
 };
 
+//NOTE: Invalidate is virtual but the template is not exported.
+// Therefore we do not have access to the Default Value defined
+// elsewhere in the Genome libraries or the Game application...
+// That is the reason why no default constructor is defined and
+// our definition of Invalidate sets the Value to -1 (it should
+// be an invalid value for most of the enumerations). The other
+// virtual methods (Read and Write) emulate the Genome methods.
 template< typename T >
 class bTPropertyContainer :
     public bCPropertyContainer
 {
-public: virtual void     Invalidate( void );          
-public: virtual bEResult Read( bCIStream & );         
-public: virtual bEResult Write( bCOStream & ) const;  
-private:
-    static T ms_DefaultValue;
-private:
-    T m_Value;
+public: virtual void     Invalidate( void );
+public: virtual bEResult Read( bCIStream & );
+public: virtual bEResult Write( bCOStream & ) const;
 protected:
-    GE_SERIALIZE_VERSION( 201 );
-protected:
-    static GEU16 GetVersion( void );
+    GE_DECLARE_PROPERTY( T, m_Value, Value )
 public:
-    static T const &        GetDefaultValue( void );
-    static bCString const & GetTypeName( void );
-    static void             SetDefaultValue( T const & a_DefaultValue );
-public:
-    T &              AccessValue( void );
-    T const &        GetValue( void ) const;
-    void             SetValue( T const & a_Value );
+    bTPropertyContainer( T const & );
+    bTPropertyContainer( bTPropertyContainer< T > const & );
 public:
                                operator T &       ( void );
                                operator T const & ( void ) const;
-                               operator GEU32     ( void ) const;
-    GEBool                     operator ==        ( bTPropertyContainer< T > const & a_Other ) const;
-    GEBool                     operator ==        ( T const & a_Value ) const;
-    GEBool                     operator !=        ( bTPropertyContainer< T > const & a_Other ) const;
-    GEBool                     operator !=        ( T const & a_Value ) const;
-    bTPropertyContainer< T > & operator =         ( bTPropertyContainer< T > const & a_Source );
-public:
-    bTPropertyContainer( T const & a_Value );
-    bTPropertyContainer( bTPropertyContainer< T > const & a_Source );
-    bTPropertyContainer( void );
-   ~bTPropertyContainer( void );
+    GEBool                     operator ==        ( bTPropertyContainer< T > const & ) const;
+    GEBool                     operator ==        ( T const & ) const;
+    GEBool                     operator !=        ( bTPropertyContainer< T > const & ) const;
+    GEBool                     operator !=        ( T const & ) const;
+private:
+    bTPropertyContainer( void );  // not defined
+private:
+    bTPropertyContainer< T > & operator = ( bTPropertyContainer< T > const & );  // not defined
 };
-
-#pragma warning( pop )
 
 #include "ge_propertycontainer.inl"
 
