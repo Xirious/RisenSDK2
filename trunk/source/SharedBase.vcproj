@@ -505,10 +505,6 @@
 				>
 			</File>
 			<File
-				RelativePath=".\SharedBase\ge_propertycontainer.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\SharedBase\ge_propertycontainer.h"
 				>
 			</File>
@@ -526,6 +522,10 @@
 			</File>
 			<File
 				RelativePath=".\SharedBase\ge_propertyid.h"
+				>
+			</File>
+			<File
+				RelativePath=".\SharedBase\ge_propertymacros.h"
 				>
 			</File>
 			<File

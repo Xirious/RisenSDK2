@@ -6,7 +6,6 @@
 #define GE_PADDING2( X ) char __padding2[ X ];
 
 #define GE_FORCE_DWORD 0x7FFFFFFFL
-#define GE_SERIALIZE_VERSION( VERSION ) enum { bEPropertyPersistence_Version = VERSION }
 
 #define GE_CCALL __cdecl
 #define GE_STDCALL __stdcall

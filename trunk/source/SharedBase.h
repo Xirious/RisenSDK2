@@ -135,6 +135,7 @@ class bCPropertyObjectTypeBase;
 #include "SharedBase/ge_propertytypebase.h"
 #include "SharedBase/ge_propertyobjecttypebase.h"
 #include "SharedBase/ge_objectbase.h"
+#include "SharedBase/ge_propertymacros.h"
 #include "SharedBase/ge_objectrefbase.h"
 #include "SharedBase/ge_event.h"
 #include "SharedBase/ge_thread.h"
