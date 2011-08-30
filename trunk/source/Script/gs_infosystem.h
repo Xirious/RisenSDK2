@@ -3,24 +3,6 @@
 
 class GE_DLLIMPORT InfoSystem
 {
-protected:
-    static InfComAttack             s_InfComAttack;
-    static InfComHeal               s_InfComHeal;
-    static InfComInfoWait           s_InfComInfoWait;
-    static InfComPickPocket         s_InfComPickPocket;
-    static InfComRunAIScript        s_InfComRunAIScript;
-    static InfComSay                s_InfComSay;
-    static InfComSayConfirm         s_InfComSayConfirm;
-    static InfComSayHoldingPosition s_InfComSayHoldingPosition;
-    static InfComSayKeepItUp        s_InfComSayKeepItUp;
-    static InfComSaySVM             s_InfComSaySVM;
-    static InfComSaySound           s_InfComSaySound;
-    static InfComSetSectorStatus    s_InfComSetSectorStatus;
-    static InfComSleep              s_InfComSleep;
-    static InfComThink              s_InfComThink;
-    static InfComUse                s_InfComUse;
-protected:
-    static gCInfoCommand * GE_STDCALL GetCurrentCommand(  void  );
 public:
     static GEBool                     GE_STDCALL EndInfoSystem( GEBool );
     static GEBool                     GE_STDCALL ExistsGameVariable( bCString const & );
@@ -58,11 +40,29 @@ public:
     static GEBool                     GE_STDCALL SetGameVariable( bCString const &, GEInt );
     static GEBool                     GE_STDCALL StartComment( Entity const &, Entity const & );
     static GEBool                     GE_STDCALL StartInfoSystem( Entity const &, Entity const & );
-public:
-    InfoSystem & operator = ( InfoSystem const & );
-public:
-    InfoSystem( void );
-   ~InfoSystem( void );
+protected:
+    static InfComAttack             s_InfComAttack;
+    static InfComHeal               s_InfComHeal;
+    static InfComInfoWait           s_InfComInfoWait;
+    static InfComPickPocket         s_InfComPickPocket;
+    static InfComRunAIScript        s_InfComRunAIScript;
+    static InfComSay                s_InfComSay;
+    static InfComSayConfirm         s_InfComSayConfirm;
+    static InfComSayHoldingPosition s_InfComSayHoldingPosition;
+    static InfComSayKeepItUp        s_InfComSayKeepItUp;
+    static InfComSaySVM             s_InfComSaySVM;
+    static InfComSaySound           s_InfComSaySound;
+    static InfComSetSectorStatus    s_InfComSetSectorStatus;
+    static InfComSleep              s_InfComSleep;
+    static InfComThink              s_InfComThink;
+    static InfComUse                s_InfComUse;
+protected:
+    static gCInfoCommand * GE_STDCALL GetCurrentCommand(  void  );
+private:
+    InfoSystem( void );  // hide constructor
+   ~InfoSystem( void );  // hide destructor
+private:
+    InfoSystem & operator = ( InfoSystem const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC InfoSystem IS;

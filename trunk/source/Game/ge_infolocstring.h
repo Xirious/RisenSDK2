@@ -10,14 +10,14 @@ class GE_DLLIMPORT gCInfoLocString :
 public: virtual bCString GetPrefix( void ) const;
 public: virtual bCString ComposeID( bCString const & ) const;
 public:
-    bCUnicodeString GetStageDirection( void ) const;
-    void            SetStageDirection( bCUnicodeString const & );
+    gCInfoLocString( void );
+    gCInfoLocString( gCInfoLocString const & );
+   ~gCInfoLocString( void );
 public:
     gCInfoLocString & operator = ( gCInfoLocString const & );
 public:
-    gCInfoLocString( gCInfoLocString const & );
-    gCInfoLocString( void );
-   ~gCInfoLocString( void );
+    bCUnicodeString GetStageDirection( void ) const;
+    void            SetStageDirection( bCUnicodeString const & );
 };
 GE_ASSERT_SIZEOF( gCInfoLocString, 0x000C )
 

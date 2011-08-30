@@ -11,11 +11,11 @@ public:
     void    StartOverlay( bCString );
     void    Stop( void );
     void    StopOverlay( void );
-public:
-    Music & operator = ( Music const & );
-public:
-    Music( void );
-   ~Music( void );
+private:
+    Music( void );  // hide constructor
+   ~Music( void );  // hide destructor
+private:
+    Music & operator = ( Music const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC Music music;

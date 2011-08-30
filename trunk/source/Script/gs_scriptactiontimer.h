@@ -14,11 +14,11 @@ public:
     GEInt  DelayTravel( void );
     GEBool GetTestMode( void ) const;
     void   SetTestMode( GEBool );
-public:
-    ScriptActionTimer & operator = ( ScriptActionTimer const & );
-public:
-    ScriptActionTimer( void );
-   ~ScriptActionTimer( void );
+private:
+    ScriptActionTimer( void );  // hide constructor
+   ~ScriptActionTimer( void );  // hide destructor
+private:
+    ScriptActionTimer & operator = ( ScriptActionTimer const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC ScriptActionTimer ActionTimer;

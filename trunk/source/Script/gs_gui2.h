@@ -87,11 +87,11 @@ public:
     GEBool     StartTalk( Entity, bCString );
     void       StopTalk( void );
     void       ToggleEntityDebug( void );
-public:
-    GUI2 & operator = ( GUI2 const & );
-public:
-    GUI2( void );
-   ~GUI2( void );
+private:
+    GUI2( void );  // hide constructor
+   ~GUI2( void );  // hide destructor
+private:
+    GUI2 & operator = ( GUI2 const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC GUI2 gui2;

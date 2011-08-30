@@ -20,11 +20,11 @@ public:
     void                    SetActionKeyScript( eCScriptProxyScript const & );
     void                    SetMovementConstraints( GEFloat );
     GEBool                  WasKeyPressedThisFrame( gEActionKey ) const;
-public:
-    Input & operator = ( Input const & );
-public:
-    Input( void );
-   ~Input( void );
+private:
+    Input( void );  // hide constructor
+   ~Input( void );  // hide destructor
+private:
+    Input & operator = ( Input const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC Input input;

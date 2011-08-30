@@ -19,12 +19,12 @@ public:
     void     SetFocusEntity( Entity );
     void     SetFocusMode( bCString );
     void     SetOffsetPose( bCMatrix const & );
-public:
-    Focus & operator = ( Focus const & );
-public:
-    Focus( Focus const & );
-    Focus( void );
-   ~Focus( void );
+private:
+    Focus( void );           // hide constructor
+    Focus( Focus const & );  // hide copy constructor
+   ~Focus( void );           // hide destructor
+private:
+    Focus & operator = ( Focus const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC Focus focus;

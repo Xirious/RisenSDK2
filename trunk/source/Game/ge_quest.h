@@ -1,18 +1,6 @@
 #ifndef GE_QUEST_H_INCLUDED
 #define GE_QUEST_H_INCLUDED
 
-class gCInfoSystem;
-class gCQuestManager;
-
-enum gEInfoLocation
-{
-    gEInfoLocation_Main       = 0x00000000,
-    gEInfoLocation_Harbor     = 0x00000001,
-    gEInfoLocation_Monastery  = 0x00000002,
-    gEInfoLocation_Don        = 0x00000003,
-    gEInfoLocation_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gEQuestStatus
 {
     gEQuestStatus_Open,

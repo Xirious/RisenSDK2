@@ -18,11 +18,11 @@ public:
     void            StopCurrentEvent( GEBool );
     void            StopEvent( bCString, GEBool );
     GEBool          WriteConfigUser( void ) const;
-public:
-    Tutorial & operator = ( Tutorial const & );
-public:
-    Tutorial( void );
-   ~Tutorial( void );
+private:
+    Tutorial( void );  // hide constructor
+   ~Tutorial( void );  // hide destructor
+private:
+    Tutorial & operator = ( Tutorial const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC Tutorial tutorial;

@@ -2,10 +2,6 @@
 #define GS_PSANIMATION_H_INCLUDED
 
 GS_DECLARE_PROPERTYSET( PSAnimation, eCAnimation_PS )
-private:
-    eCBodyPart_PS * GetBodyPart( gESlot );
-    GEBool          PlayBodyPartAni( eCBodyPart_PS *, bCString const &, GEBool );
-    GEBool          StopBodyPartAni( eCBodyPart_PS *, GEBool );
 public:
     GEBool   AddAttachment( bCString, Entity );
     void     AddForceAtPos( bCVector, bCVector );
@@ -43,6 +39,10 @@ public:
     GEBool   StopBodyAni( GEBool );
     GEBool   StopFacialAni( GEBool );
     void     UseAmbientVariationExclusionForNextAnimation( void );
+private:
+    eCBodyPart_PS * GetBodyPart( gESlot );
+    GEBool          PlayBodyPartAni( eCBodyPart_PS *, bCString const &, GEBool );
+    GEBool          StopBodyPartAni( eCBodyPart_PS *, GEBool );
 };
 
 #endif
