@@ -13,6 +13,7 @@ class Entity;
 #include "Script/gs_effectsystem.h"
 #include "Script/gs_focus.h"
 #include "Script/gs_gui2.h"
+#include "Script/gs_infcom.h"
 #include "Script/gs_infcomattack.h"
 #include "Script/gs_infcomheal.h"
 #include "Script/gs_infcominfowait.h"

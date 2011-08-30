@@ -14,6 +14,13 @@ public:
     static GEBool GE_STDCALL StartImageEffect( bCString const &, GEFloat, GEFloat, GEFloat );
     static GEBool GE_STDCALL StopEffect( Effect const &, GEBool );
     static GEBool GE_STDCALL StopImageEffect( void );
+private:
+    EffectSystem( void );                  // not defined
+    EffectSystem( EffectSystem const & );  // not defined
+private:
+    EffectSystem & operator = ( EffectSystem const & );  // not defined
 };
+
+GE_DLLIMPORT_EXTC EffectSystem FX;
 
 #endif

@@ -190,13 +190,19 @@ class gCCombatSystem_PS;
 
 #include "Game/ge_questactor.h"
 #include "Game/ge_questlocstring.h"
+enum gEInfoLocation;
+class gCInfoSystem;
+class gCQuestManager;
 #include "Game/ge_quest.h"
 #include "Game/ge_questmanager.h"
 
+class gCInfo;
+class gCInfoCommand;
+#include "Game/ge_runtimeinfo.h"
+class gCInfoCondition;
 #include "Game/ge_info.h"
 #include "Game/ge_infolocstring.h"
 #include "Game/ge_npcinfolocstring.h"
-#include "Game/ge_runtimeinfo.h"
 #include "Game/ge_infocommand.h"
 #include "Game/ge_infocommandaddinfosystemendscript.h"
 #include "Game/ge_infocommandaddlogtext.h"
@@ -230,7 +236,6 @@ class gCCombatSystem_PS;
 #include "Game/ge_infocommandruninfo.h"
 #include "Game/ge_infocommandrunquest.h"
 #include "Game/ge_infocommandrunscript.h"
-/** /
 #include "Game/ge_infocommandsay.h"
 #include "Game/ge_infocommandsayconfirm.h"
 #include "Game/ge_infocommandsayholdingposition.h"
@@ -263,9 +268,7 @@ class gCCombatSystem_PS;
 #include "Game/ge_infocommandtrigger.h"
 #include "Game/ge_infocommanduse.h"
 #include "Game/ge_infocommandwear.h"
-/**/
 #include "Game/ge_infocondition.h"
-/** /
 #include "Game/ge_infoconditioncanteachskill.h"
 #include "Game/ge_infoconditionitemamount.h"
 #include "Game/ge_infoconditionnpcstatus.h"
@@ -277,8 +280,8 @@ class gCCombatSystem_PS;
 #include "Game/ge_infoconditionscript.h"
 #include "Game/ge_infoconditionskillvalue.h"
 #include "Game/ge_infoconditionteachenabled.h"
-/**/
-class gCInfoSystem{};
+#include "Game/ge_infosystem.h"
+#include "Game/ge_infomodule.h"
 
 #include "Game/ge_sessioncheats.h"
 #include "Game/ge_sessioninfo.h"

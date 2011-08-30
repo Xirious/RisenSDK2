@@ -14,19 +14,12 @@ enum EDifficulty
 
 class GE_DLLIMPORT Entity
 {
-protected:
-    eCEntity * m_pEngineEntity;
 public:
     static bTObjArray< Entity > ms_arrEntities;
     static bTObjArray< Entity > ms_arrNPCs;
     static GEU32                ms_u32LastFrame;
 protected:
-    static GEInt GE_CCALL   SortEntites( GELPCVoid, GELPCVoid );
-    static void  GE_STDCALL UpdateEntityLists( void );
-protected:
-    GEBool     CopyFrom( Entity const & );
-    eCEntity * GetEngineEntity( void ) const;
-    void       Invalidate( void );
+    eCEntity * m_pEngineEntity;
 public:
     static bCString                 GE_STDCALL FindNextNPC( bCString const &, bCString const & );
     static bCMatrix                 GE_STDCALL GetCameraPose( void );
@@ -81,6 +74,26 @@ public:
     static void                     GE_STDCALL StartFixCam( bCMatrix const &, bCVector const &, GEBool, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEBool );
     static void                     GE_STDCALL StartFixCam( bCMatrix const &, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEBool, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEFloat, GEBool );
     static void                     GE_STDCALL StopFixCam( void );
+public:
+    Entity( void );
+    Entity( Entity const & );
+    Entity( eCEntity const * );
+    Entity( eCEntityProxy const & );
+   ~Entity( void );
+public:
+    Entity & operator =          ( Entity const & );
+    GEBool   operator ==         ( Entity const & ) const;
+    GEBool   operator !=         ( Entity const & ) const;
+             operator eCEntity * ( void ) const;
+public:
+    template< typename T >
+    inline T & Property( void );
+    template< typename T >
+    inline T const & Property( void ) const;
+    template< typename T >
+    inline T & PropertySet( void );
+    template< typename T >
+    inline T const & PropertySet( void ) const;
 public:
     GEBool               AttachTo( eCEntity * );
     GEBool               CanEvade( Entity const &, gEDirection ) const;
@@ -243,27 +256,15 @@ public:
     GEBool               Teleport( bCString const & );
     void                 Trigger( Entity );
     void                 UnTrigger( Entity );
-public:
-             operator eCEntity * ( void ) const;
-    GEBool   operator ==         ( Entity const & ) const;
-    GEBool   operator !=         ( Entity const & ) const;
-    Entity & operator =          ( Entity const & );
-public:
-    Entity( Entity const & );
-    Entity( eCEntityProxy const & );
-    Entity( eCEntity const * );
-    Entity( void );
-   ~Entity( void );
-public:
-    template< typename T >
-    inline T & Property( void );
-    template< typename T >
-    inline T const & Property( void ) const;
-    template< typename T >
-    inline T & PropertySet( void );
-    template< typename T >
-    inline T const & PropertySet( void ) const;
+protected:
+    static GEInt GE_CCALL   SortEntites( GELPCVoid, GELPCVoid );
+    static void  GE_STDCALL UpdateEntityLists( void );
+protected:
+    GEBool     CopyFrom( Entity const & );
+    eCEntity * GetEngineEntity( void ) const;
+    void       Invalidate( void );
 };
+GE_ASSERT_SIZEOF( Entity, 0x0004 )
 
 #pragma warning( pop )
 

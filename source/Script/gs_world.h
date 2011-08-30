@@ -50,11 +50,11 @@ public:
     GEBool          SetSectorStatus( bCString const &, GEBool );
     void            TogglePause( void );
     void            UpdateScreenShot( void );
-public:
-    World & operator = ( World const & );
-public:
-    World( void );
-   ~World( void );
+private:
+    World( void );  // hide constructor
+   ~World( void );  // hide destructor
+private:
+    World & operator = ( World const & );  // hide copy assignment operator
 };
 
 GE_DLLIMPORT_EXTC World world;

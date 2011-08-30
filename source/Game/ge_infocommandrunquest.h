@@ -4,32 +4,16 @@
 class GE_DLLIMPORT gCInfoCommandRunQuest :
     public gCInfoCommand
 {
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCInfoCommandRunQuest( void );
-public: virtual gEInfoCommand              GetCommandType( void ) const;
-public: virtual GEBool                     Execute( gCRuntimeInfo &, GEBool );
-public: using             bCObjectRefBase::IsValid;
-public: virtual GEBool                     IsValid( bCString &, gCInfo const & ) const;
-private:
-    static bCPropertyObjectTypeBase thisType;
+GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandRunQuest, gCInfoCommand )
+public: virtual void           Destroy( void );
+public: virtual gEInfoCommand  GetCommandType( void ) const;
+public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );
+public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
+public: using bCObjectRefBase::IsValid;
 protected:
-    bCString m_strQuestName;
+    GE_DECLARE_PROPERTY( bCString, m_strQuestName, QuestName )
 protected:
     void Invalidate( void );
-public:
-    static bCObjectBase *             GE_STDCALL CreateObject( void );
-    static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
-    static void                       GE_STDCALL StaticConstructor( bCPropertyObjectTypeBase & );
-public:
-    bCString &       AccessQuestName( void );
-    bCString const & GetQuestName( void ) const;
-    void             SetQuestName( bCString const & );
-public:
-    gCInfoCommandRunQuest & operator = ( gCInfoCommandRunQuest const & );
-public:
-    gCInfoCommandRunQuest( gCInfoCommandRunQuest const & );
-    gCInfoCommandRunQuest( void );
 };
 GE_ASSERT_SIZEOF( gCInfoCommandRunQuest, 0x000C )
 

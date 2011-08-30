@@ -9,11 +9,11 @@ class GE_DLLIMPORT gCNPCInfoLocString :
 {
 public: virtual bCString GetPrefix( void ) const;
 public:
-    gCNPCInfoLocString & operator = ( gCNPCInfoLocString const & );
-public:
-    gCNPCInfoLocString( gCNPCInfoLocString const & );
     gCNPCInfoLocString( void );
+    gCNPCInfoLocString( gCNPCInfoLocString const & );
    ~gCNPCInfoLocString( void );
+public:
+    gCNPCInfoLocString & operator = ( gCNPCInfoLocString const & );
 };
 GE_ASSERT_SIZEOF( gCNPCInfoLocString, 0x000C )
 

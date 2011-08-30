@@ -37,11 +37,11 @@ public:
     void     SetProperty( GEInt, GEInt, GEI64 );
     GEBool   ShowAchievementsUI( GEInt );
 //  GEBool   WriteAchievements( GEInt, XUSER_ACHIEVEMENT * );
-public:
-    Achievement & operator = ( Achievement const & );
-public:
-    Achievement( void );
-   ~Achievement( void );
+private:
+    Achievement( void );  // hide constructor
+   ~Achievement( void );  // hide destructor
+private:
+    Achievement & operator = ( Achievement const & );  // hide copy signment operator
 };
 
 GE_DLLIMPORT_EXTC Achievement achievement;

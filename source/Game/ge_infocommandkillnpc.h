@@ -4,35 +4,19 @@
 class GE_DLLIMPORT gCInfoCommandKillNPC :
     public gCInfoCommand
 {
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCInfoCommandKillNPC( void );
-public: virtual gEInfoCommand              GetCommandType( void ) const;
-public: virtual eCEntityProxy &            GetEntityProxy1( gCRuntimeInfo & );
-public: virtual void                       ResetProxies( void );
-public: virtual GEBool                     Execute( gCRuntimeInfo &, GEBool );
-public: using             bCObjectRefBase::IsValid;
-public: virtual GEBool                     IsValid( bCString &, gCInfo const & ) const;
-private:
-    static bCPropertyObjectTypeBase thisType;
+GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandKillNPC, gCInfoCommand )
+public: virtual void            Destroy( void );
+public: virtual gEInfoCommand   GetCommandType( void ) const;
+public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
+public: virtual void            ResetProxies( void );
+public: virtual GEBool          Execute( gCRuntimeInfo &, GEBool );
+public: virtual GEBool          IsValid( bCString &, gCInfo const & ) const;
+public: using  bCObjectRefBase::IsValid;
 protected:
-    bCString      m_strNPC;
-    eCEntityProxy m_EntityProxy1;
+    GE_DECLARE_PROPERTY( bCString, m_strNPC, NPC )
+    eCEntityProxy                  m_EntityProxy1;
 protected:
     void Invalidate( void );
-public:
-    static bCObjectBase *             GE_STDCALL CreateObject( void );
-    static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
-    static void                       GE_STDCALL StaticConstructor( bCPropertyObjectTypeBase & );
-public:
-    bCString &       AccessNPC( void );
-    bCString const & GetNPC( void ) const;
-    void             SetNPC( bCString const & );
-public:
-    gCInfoCommandKillNPC & operator = ( gCInfoCommandKillNPC const & );
-public:
-    gCInfoCommandKillNPC( gCInfoCommandKillNPC const & );
-    gCInfoCommandKillNPC( void );
 };
 GE_ASSERT_SIZEOF( gCInfoCommandKillNPC, 0x0014 )
 

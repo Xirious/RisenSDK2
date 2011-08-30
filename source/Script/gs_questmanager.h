@@ -23,8 +23,11 @@ public:
     static GEBool GE_STDCALL RemoveQuestActor( bCString const &, bCString const &, gEQuestActor );
     static GEBool GE_STDCALL RunQuest( bCString const & );
     static GEBool GE_STDCALL SucceedQuest( bCString const & );
-public:
-    QuestManager & operator = ( QuestManager const & );
+private:
+    QuestManager( void );                  // not defined
+    QuestManager( QuestManager const & );  // not defined
+private:
+    QuestManager & operator = ( QuestManager const & );  // hide copy assignment operator
 };
 
 #endif

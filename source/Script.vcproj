@@ -125,6 +125,10 @@
 			Name="info"
 			>
 			<File
+				RelativePath=".\Script\gs_infcom.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_infcomattack.h"
 				>
 			</File>

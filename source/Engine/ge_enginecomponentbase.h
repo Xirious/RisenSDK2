@@ -24,57 +24,45 @@ struct eSEngineMessage
 class GE_DLLIMPORT eCEngineComponentBase :
     public bCObjectRefBase
 {
-public:    virtual bEResult                   Initialize( void );                      
-public:    virtual bEResult                   PostInitialize( void );                  
-public:    virtual bEResult                   PreShutdown( void );                     
-public:    virtual bEResult                   Shutdown( void );                        
-public:    virtual void                       OnAppInitialized( void );                
-public:    virtual void                       ApplyConfiguration( void );              
-protected: virtual bEResult                   WorldActivate( void );                   
-protected: virtual bEResult                   WorldDeactivate( void );                 
-protected: virtual bEResult                   AfterWorldDeactivate( void );            
-public:    virtual void                       EngineMessageProc( eSEngineMessage & );  
-public:    virtual bEResult                   ResetResources( GEBool );                
-public:    virtual bEResult                   RestoreResources( GEBool );              
-public:    virtual void                       Process( void );                         
-public:    virtual void                       OnBeginRenderSolid( void );              
-public:    virtual void                       OnEndRenderSolid( void );                
-public:    virtual void                       OnBeginRenderAlpha( void );              
-public:    virtual void                       OnEndRenderAlpha( void );                
-public:    virtual void                       OnPostRender( void );                    
-public:    virtual eCStatistic *              CreateStatistics( void ) const;          
-protected: virtual bEResult                   OnReadPreLoadData( bCIStream & );        
-protected: virtual bEResult                   OnWritePreLoadData( bCOStream & );       
-protected: virtual bEResult                   ReadSaveGame( bCIStream & );             
-protected: virtual bEResult                   WriteSaveGame( bCOStream & );            
-public:    virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;             
-public:    virtual GEU16                      GetVersion( void ) const;                
-public:    virtual bEResult                   Create( void );                          
-public:    virtual void                       Destroy( void );                         
-public:    virtual                           ~eCEngineComponentBase( void );           
-private:
-    static bCPropertyObjectTypeBase thisType;
+public:    virtual bEResult      Initialize( void );
+public:    virtual bEResult      PostInitialize( void );
+public:    virtual bEResult      PreShutdown( void );
+public:    virtual bEResult      Shutdown( void );
+public:    virtual void          OnAppInitialized( void );
+public:    virtual void          ApplyConfiguration( void );
+protected: virtual bEResult      WorldActivate( void );
+protected: virtual bEResult      WorldDeactivate( void );
+protected: virtual bEResult      AfterWorldDeactivate( void );
+public:    virtual void          EngineMessageProc( eSEngineMessage & );
+public:    virtual bEResult      ResetResources( GEBool );
+public:    virtual bEResult      RestoreResources( GEBool );
+public:    virtual void          Process( void );
+public:    virtual void          OnBeginRenderSolid( void );
+public:    virtual void          OnEndRenderSolid( void );
+public:    virtual void          OnBeginRenderAlpha( void );
+public:    virtual void          OnEndRenderAlpha( void );
+public:    virtual void          OnPostRender( void );
+public:    virtual eCStatistic * CreateStatistics( void ) const;
+protected: virtual bEResult      OnReadPreLoadData( bCIStream & );
+protected: virtual bEResult      OnWritePreLoadData( bCOStream & );
+protected: virtual bEResult      ReadSaveGame( bCIStream & );
+protected: virtual bEResult      WriteSaveGame( bCOStream & );
+GE_DECLARE_PROPERTY_OBJECT( eCEngineComponentBase, bCObjectRefBase )
+public:    virtual GEU16         GetVersion( void ) const;
+public:    virtual bEResult      Create( void );
+public:    virtual void          Destroy( void );
 protected:
     GEBool m_bEnabled;
     GEU8   __FIXME;
            GE_PADDING( 2 )
     GEInt  m_iModuleLevel;
-protected:
-    void Invalidate( void );
-public:
-    static bCObjectBase *             GE_STDCALL CreateObject( void );
-    static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
-    static void                       GE_STDCALL StaticConstructor( bCPropertyObjectTypeBase & );
 public:
     void   Enable( GEBool );
     GEInt  GetModuleLevel( void ) const;
     GEBool IsEnabled( void ) const;
     void   OnProcess( void );
-public:
-    eCEngineComponentBase & operator = ( eCEngineComponentBase const & );
-public:
-    eCEngineComponentBase( eCEngineComponentBase const & );
-    eCEngineComponentBase( void );
+protected:
+    void Invalidate( void );
 };
 GE_ASSERT_SIZEOF( eCEngineComponentBase, 0x0010 )
 

@@ -4,27 +4,15 @@
 class GE_DLLIMPORT gCInfoCondition :
     public bCObjectRefBase
 {
-public: virtual bCString                   GetConditionName( void ) const;
-public: virtual GEBool                     IsSatisfied( gCInfo const & );
-public: using             bCObjectRefBase::IsValid;
-public: virtual GEBool                     IsValid( bCString &, gCInfo const & ) const;
-public: virtual gCInfoCondition *          Clone( void ) const;
-public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
-public: virtual void                       Destroy( void );
-public: virtual                           ~gCInfoCondition( void );
-private:
-    static bCPropertyObjectTypeBase thisType;
+public: virtual bCString          GetConditionName( void ) const;
+public: virtual GEBool            IsSatisfied( gCInfo const & );
+public: virtual GEBool            IsValid( bCString &, gCInfo const & ) const;
+public: virtual gCInfoCondition * Clone( void ) const;
+GE_DECLARE_PROPERTY_OBJECT( gCInfoCondition, bCObjectRefBase )
+public: virtual void              Destroy( void );
+public: using    bCObjectRefBase::IsValid;
 protected:
     void Invalidate( void );
-public:
-    static bCObjectBase *             GE_STDCALL CreateObject( void );
-    static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
-    static void                       GE_STDCALL StaticConstructor( bCPropertyObjectTypeBase & );
-public:
-    gCInfoCondition & operator = ( gCInfoCondition const & );
-public:
-    gCInfoCondition( gCInfoCondition const & );
-    gCInfoCondition( void );
 };
 GE_ASSERT_SIZEOF( gCInfoCondition, 0x0008 )
 

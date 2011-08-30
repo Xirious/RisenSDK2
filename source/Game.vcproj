@@ -222,7 +222,7 @@
 			</File>
 		</Filter>
 		<Filter
-			Name="infos"
+			Name="info"
 			>
 			<File
 				RelativePath=".\Game\ge_info.h"
@@ -230,6 +230,14 @@
 			</File>
 			<File
 				RelativePath=".\Game\ge_infolocstring.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_infomodule.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_infosystem.h"
 				>
 			</File>
 			<File
@@ -241,7 +249,7 @@
 				>
 			</File>
 			<Filter
-				Name="commands"
+				Name="command"
 				>
 				<File
 					RelativePath=".\Game\ge_infocommand.h"
@@ -261,10 +269,6 @@
 				</File>
 				<File
 					RelativePath=".\Game\ge_infocommandaddquestactor.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandattack.h"
 					>
 				</File>
 				<File
@@ -300,10 +304,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Game\ge_infocommanddotrade.h"
-					>
-				</File>
-				<File
 					RelativePath=".\Game\ge_infocommandend.h"
 					>
 				</File>
@@ -324,23 +324,11 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Game\ge_infocommandheal.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandinfowait.h"
-					>
-				</File>
-				<File
 					RelativePath=".\Game\ge_infocommandkillnpc.h"
 					>
 				</File>
 				<File
 					RelativePath=".\Game\ge_infocommandmoveto.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandpickpocket.h"
 					>
 				</File>
 				<File
@@ -360,10 +348,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\Game\ge_infocommandrunaiscript.h"
-					>
-				</File>
-				<File
 					RelativePath=".\Game\ge_infocommandruninfo.h"
 					>
 				</File>
@@ -375,12 +359,212 @@
 					RelativePath=".\Game\ge_infocommandrunscript.h"
 					>
 				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetgameevent.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetguardstatus.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetmobenabled.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetpartyenabled.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetrelaxingpoint.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetroutine.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetslaveryenabled.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetsleepingpoint.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetteachenabled.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsettradeenabled.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsetworkingpoint.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandshowpicture.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandshowsubtitle.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandstarteffect.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandstartfixcamera.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandstarttutorial.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandstopfixcamera.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandsucceedquest.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandteach.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandteleportnpc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandtrigger.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infocommandwear.h"
+					>
+				</File>
+				<Filter
+					Name="script"
+					>
+					<File
+						RelativePath=".\Game\ge_infocommandattack.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommanddotrade.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandheal.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandinfowait.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandpickpocket.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandrunaiscript.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsay.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsayconfirm.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsayholdingposition.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsaykeepitup.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsaysound.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsaysvm.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsetsectorstatus.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandsleep.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommandthink.h"
+						>
+					</File>
+					<File
+						RelativePath=".\Game\ge_infocommanduse.h"
+						>
+					</File>
+				</Filter>
 			</Filter>
 			<Filter
-				Name="conditions"
+				Name="condition"
 				>
 				<File
 					RelativePath=".\Game\ge_infocondition.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditioncanteachskill.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionitemamount.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionnpcstatus.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionownerinarea.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionownernearentity.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionplayerknows.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionplayernotknows.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionqueststatus.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionscript.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionskillvalue.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_infoconditionteachenabled.h"
 					>
 				</File>
 			</Filter>
