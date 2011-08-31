@@ -854,6 +854,18 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_letter_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_letterlocstring.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_lock_ps.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_modifyskill.h"
 			>
 		</File>

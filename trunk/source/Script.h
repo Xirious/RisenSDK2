@@ -50,8 +50,8 @@ class Entity;
 #include "Script/gs_psinteraction.h"
 #include "Script/gs_psinventory.h"
 #include "Script/gs_psitem.h"
-// PSLetter, gCLetter_PS
-// PSLock, gCLock_PS
+#include "Script/gs_psletter.h"
+#include "Script/gs_pslock.h"
 // PSMap, gCMap_PS
 // PSMover, eCMover_PS
 // PSNavigation, gCNavigation_PS
