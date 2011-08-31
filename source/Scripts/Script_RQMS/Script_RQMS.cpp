@@ -3,10 +3,11 @@
 void AddScriptPatch( gSScriptInit & a_ScriptInit, GELPCChar a_pcOriginalFileName, GELPCChar a_pcName, GELPCChar a_pcSource, gFScript a_funcScript )
 {
     eCScriptFunctionMap & ScriptFunctionMap = eCScriptFunctionMap::GetInstance();
-    eSScriptBase * pScript = const_cast< eSScriptBase * >( ScriptFunctionMap.GetScript( a_pcName ) );
+    gSScript * pScript = static_cast< gSScript * >(
+        const_cast< eSScriptBase * >( ScriptFunctionMap.GetScript( a_pcName ) ) );
     if( pScript && pScript->m_funcFunction )
     {
-        gSScriptDLL * pScriptDLL = static_cast< gSScriptDLL * >( pScript->m_pScriptDLL );
+        gSScriptDLL * pScriptDLL = pScript->m_pScriptDLL;
         if( !pScriptDLL ||
             !pScriptDLL->m_strFileName.CompareNoCase( a_pcOriginalFileName ) ||
             g_MessageBox( 0, bCString::GetFormattedString(
