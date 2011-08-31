@@ -44,12 +44,6 @@ enum gEHudPage
     gEHudPage_ForceDWORD       = GE_FORCE_DWORD
 };
 
-enum gELockCombi
-{
-    //FIXME: gELockCombi constants.
-    gELockCombi_ForceDWORD = GE_FORCE_DWORD
-};
-
 enum gELogMessageType
 {
     gELogMessageType_Grey       = 0x00000000,
@@ -79,6 +73,10 @@ enum gEWalkMode
     gEWalkMode_Sprint     = 0x00000003,
     gEWalkMode_ForceDWORD = GE_FORCE_DWORD
 };
+
+#include "Game/ge_letterlocstring.h"
+#include "Game/ge_letter_ps.h"
+#include "Game/ge_lock_ps.h"
 
 #include "Game/ge_scriptproxyaicallback.h"
 #include "Game/ge_scriptproxyaifunction.h"

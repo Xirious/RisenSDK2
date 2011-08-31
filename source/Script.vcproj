@@ -277,6 +277,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psletter.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_pslock.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
