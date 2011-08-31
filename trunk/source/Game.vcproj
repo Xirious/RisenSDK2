@@ -866,6 +866,22 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Game\ge_map_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_mapentry.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_mapinfo_ps.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Game\ge_maplocstring.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Game\ge_modifyskill.h"
 			>
 		</File>

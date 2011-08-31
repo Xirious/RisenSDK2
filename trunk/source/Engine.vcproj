@@ -145,6 +145,30 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="mover"
+			>
+			<File
+				RelativePath=".\Engine\ge_mover_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_moveranimationbase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_moveranimationfile.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_moveranimationrotate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_moveranimationskeletal.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>
