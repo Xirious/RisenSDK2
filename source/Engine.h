@@ -6,6 +6,9 @@
 namespace EMotionFX
 {
     class ActorInstance{};
+    class Motion{};
+    class MotionInstance{};
+    class SkeletalSubMotion{};
 }
 class NxActor{};
 
@@ -45,6 +48,12 @@ protected:
 template< typename T >
 class bTRefPtrArray : public bTPtrArray< T >
 {
+};
+
+class GE_DLLIMPORT eCDeferredGuiBitmap2{};
+class GE_DLLIMPORT eCGuiBitmapProxy2
+{
+    eCDeferredGuiBitmap2 * m_pBitmap;
 };
 
 struct eSGizmoPickInfo{};
@@ -147,6 +156,19 @@ class GE_DLLIMPORT eCBodyPart_PS{};
 class eCAnimation_PS;
 #include "Engine/ge_actorattachment.h"
 #include "Engine/ge_animation_ps.h"
+
+class eCMover_PS;
+#include "Engine/ge_moveranimationbase.h"
+#include "Engine/ge_moveranimationfile.h"
+//TODO: Analyze bTInterpolator templates.
+// eCMoverAnimationKFBase: eCMoverAnimationBase
+// eCMoverAnimationBezier: eCMoverAnimationKFBase
+// eCMoverAnimationHermit: eCMoverAnimationKFBase
+// eCMoverAnimationLinear: eCMoverAnimationKFBase
+#include "Engine/ge_moveranimationrotate.h"
+#include "Engine/ge_moveranimationskeletal.h"
+// eCMoverAnimationTCB: eCMoverAnimationKFBase
+#include "Engine/ge_mover_ps.h"
 
 class eCPrimitiveWeatherZoneBox{};
 #include "Engine/ge_area_stringproperty_ps.h"

@@ -76,7 +76,13 @@ enum gEWalkMode
 
 #include "Game/ge_letterlocstring.h"
 #include "Game/ge_letter_ps.h"
+
 #include "Game/ge_lock_ps.h"
+
+#include "Game/ge_mapentry.h"
+#include "Game/ge_map_ps.h"
+#include "Game/ge_mapinfo_ps.h"
+#include "Game/ge_maplocstring.h"
 
 #include "Game/ge_scriptproxyaicallback.h"
 #include "Game/ge_scriptproxyaifunction.h"
@@ -143,11 +149,6 @@ class gCScriptRoutine_PS;
 #include "Game/ge_scriptroutine_ps.h"
 #include "Game/ge_scriptinit.h"
 #include "Game/ge_scriptadmin.h"
-
-class eCGuiBitmapProxy2
-{
-    void * m_pBitmap;  // eCDeferredGuiBitmap2 *
-};
 
 enum gESlot;
 class gCInventory_PS;

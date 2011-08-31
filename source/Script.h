@@ -52,8 +52,8 @@ class Entity;
 #include "Script/gs_psitem.h"
 #include "Script/gs_psletter.h"
 #include "Script/gs_pslock.h"
-// PSMap, gCMap_PS
-// PSMover, eCMover_PS
+#include "Script/gs_psmap.h"
+#include "Script/gs_psmover.h"
 // PSNavigation, gCNavigation_PS
 #include "Script/gs_psnpc.h"
 // PSParticle, eCParticle_PS
@@ -67,7 +67,7 @@ class Entity;
 // PSStrip, eCStrip_PS
 #include "Script/gs_questmanager.h"
 #include "Script/gs_scriptactiontimer.h"
-// ScriptCommentManager
+#include "Script/gs_scriptcommentmanager.h"
 // ScriptDestinationCollector
 #include "Script/gs_tutorial.h"
 #include "Script/gs_world.h"

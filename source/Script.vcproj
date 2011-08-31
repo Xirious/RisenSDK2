@@ -285,6 +285,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psmap.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Script\gs_psmover.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
@@ -343,6 +351,10 @@
 		</File>
 		<File
 			RelativePath=".\Script\gs_scriptactiontimer.h"
+			>
+		</File>
+		<File
+			RelativePath=".\Script\gs_scriptcommentmanager.h"
 			>
 		</File>
 		<File
