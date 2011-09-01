@@ -30,8 +30,8 @@ GEInt GE_STDCALL OnQuestChange( gCScriptProcessingUnit *, GELPVoid, GELPVoid, GE
                 if( bRetroQuestMessageSystemActivated || bPlayerIsTransformed )
                 {
                     gCSkills_PS * pPlayerEngineSkills = bPlayerIsTransformed ?
-                        OriginalPlayer.GetEnginePropertySet< PSSkills >() :
-                        Player.GetEnginePropertySet< PSSkills >();
+                        OriginalPlayer.AccessEnginePropertySet< PSSkills >() :
+                        Player.AccessEnginePropertySet< PSSkills >();
                     if( pPlayerEngineSkills )
                         pPlayerEngineSkills->ModifySkillValues( pQuest->GetModifySkillsSuccess(), GETrue );
                 }
