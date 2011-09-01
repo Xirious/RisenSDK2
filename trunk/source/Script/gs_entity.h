@@ -95,7 +95,7 @@ public:
     template< typename PSP >
     inline PSP const & GetPropertySetProperty( void ) const;
     template< typename PS >
-    inline typename PS::EnginePropertySet * GetEnginePropertySet( void );
+    inline typename PS::EnginePropertySet * AccessEnginePropertySet( void );
     template< typename PS >
     inline typename PS::EnginePropertySet const * GetEnginePropertySet( void ) const;
 public:

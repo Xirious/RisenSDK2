@@ -25,7 +25,7 @@ PSP const & Entity::GetPropertySetProperty( void ) const
 }
 
 template< typename PS >
-typename PS::EnginePropertySet * Entity::GetEnginePropertySet( void )
+typename PS::EnginePropertySet * Entity::AccessEnginePropertySet( void )
 {
     return this->AccessPropertySet< PS >().operator ->();
 }
