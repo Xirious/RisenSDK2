@@ -1,14 +1,14 @@
 #include "../Script.h"
 
-template< typename T >
-T & EntityPropertySet::Property( void )
+template< typename PSP >
+PSP & EntityPropertySet::AccessProperty( void )
 {
-    return *reinterpret_cast< T::_tProperty * >( this );
+    return *reinterpret_cast< typename PSP::PropertySetProperty * >( this );
 }
 
-template< typename T >
-T const & EntityPropertySet::Property( void ) const
+template< typename PSP >
+PSP const & EntityPropertySet::GetProperty( void ) const
 {
-    return *reinterpret_cast< T::_tProperty const * >( this );
+    return *reinterpret_cast< typename PSP::PropertySetProperty const * >( this );
 }
 

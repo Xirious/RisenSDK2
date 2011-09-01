@@ -86,14 +86,18 @@ public:
     GEBool   operator !=         ( Entity const & ) const;
              operator eCEntity * ( void ) const;
 public:
-    template< typename T >
-    inline T & Property( void );
-    template< typename T >
-    inline T const & Property( void ) const;
-    template< typename T >
-    inline T & PropertySet( void );
-    template< typename T >
-    inline T const & PropertySet( void ) const;
+    template< typename PS >
+    inline PS & AccessPropertySet( void );
+    template< typename PS >
+    inline PS const & GetPropertySet( void ) const;
+    template< typename PSP >
+    inline PSP & AccessPropertySetProperty( void );
+    template< typename PSP >
+    inline PSP const & GetPropertySetProperty( void ) const;
+    template< typename PS >
+    inline typename PS::EnginePropertySet * GetEnginePropertySet( void );
+    template< typename PS >
+    inline typename PS::EnginePropertySet const * GetEnginePropertySet( void ) const;
 public:
     GEBool               AttachTo( eCEntity * );
     GEBool               CanEvade( Entity const &, gEDirection ) const;

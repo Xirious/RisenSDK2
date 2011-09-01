@@ -1,26 +1,38 @@
 #include "../Script.h"
 
-template< typename T >
-T & Entity::Property( void )
+template< typename PS >
+PS & Entity::AccessPropertySet( void )
 {
-    return *reinterpret_cast< T::_tProperty * >( this );
+    return *reinterpret_cast< typename PS::PropertySet * >( this );
 }
 
-template< typename T >
-T const & Entity::Property( void ) const
+template< typename PS >
+PS const & Entity::GetPropertySet( void ) const
 {
-    return *reinterpret_cast< T::_tProperty const * >( this );
+    return *reinterpret_cast< typename PS::PropertySet const * >( this );
 }
 
-template< typename T >
-T & Entity::PropertySet( void )
+template< typename PSP >
+PSP & Entity::AccessPropertySetProperty( void )
 {
-    return *reinterpret_cast< T::_tPropertySet * >( this );
+    return *reinterpret_cast< typename PSP::PropertySetProperty * >( this );
 }
 
-template< typename T >
-T const & Entity::PropertySet( void ) const
+template< typename PSP >
+PSP const & Entity::GetPropertySetProperty( void ) const
 {
-    return *reinterpret_cast< T::_tPropertySet const * >( this );
+    return *reinterpret_cast< typename PSP::PropertySetProperty const * >( this );
+}
+
+template< typename PS >
+typename PS::EnginePropertySet * Entity::GetEnginePropertySet( void )
+{
+    return this->AccessPropertySet< PS >().operator ->();
+}
+
+template< typename PS >
+typename PS::EnginePropertySet const * Entity::GetEnginePropertySet( void ) const
+{
+    return this->GetPropertySet< PS >().operator ->();
 }
 
