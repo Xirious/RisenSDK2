@@ -1,77 +1,78 @@
 #ifndef GS_PROPERTYMACROS_H_INCLUDED
 #define GS_PROPERTYMACROS_H_INCLUDED
 
-class GE_DLLIMPORT EntityProperty
-{
-protected:
-    eCEntity * m_pEntity;
-private:
-    EntityProperty( void );
-private:
-    EntityProperty & operator = ( EntityProperty const & );
-};
-
-#define GS_DECLARE_PROPERTY( NAME, TYPE )                                    \
-class GE_DLLIMPORT Property##NAME :                                          \
-    public EntityProperty                                                    \
-{                                                                            \
-public:                                                                      \
-                     operator TYPE const ( void ) const;                     \
-    Property##NAME & operator =          ( TYPE const & );                   \
-protected:                                                                   \
-    typedef Property##NAME _tProperty;                                       \
-    friend Property##NAME & Entity::Property( void );                        \
-    friend Property##NAME const & Entity::Property( void ) const;            \
-    friend Property##NAME & EntityPropertySet::Property( void );             \
-    friend Property##NAME const & EntityPropertySet::Property( void ) const; \
-private:                                                                     \
-    /* suppress compiler-generated default constructor */                    \
-    Property##NAME( void );                                                  \
-    /* suppress compiler-generated default copy constructor */               \
-    Property##NAME( Property##NAME const & );                                \
-private:                                                                     \
-    /* hide compiler-generated copy assignment operator */                   \
-    Property##NAME & operator = ( Property##NAME const & );                  \
-};
+//
+// Entity PropertySet (PS*)
+//
 
 class GE_DLLIMPORT EntityPropertySet
 {
 public:
-    template< typename T >
-    inline T & Property( void );
-    template< typename T >
-    inline T const & Property( void ) const;
+    template< typename PSP >
+    inline PSP & AccessProperty( void );
+    template< typename PSP >
+    inline PSP const & GetProperty( void ) const;
 protected:
-    eCEntity * m_pEntity;
+    eCEntity * m_pEngineEntity;
 private:
-    EntityPropertySet( void );                       // not defined
-    EntityPropertySet( EntityPropertySet const & );  // not defined
-private:
+    EntityPropertySet( void );                                     // not defined
+    EntityPropertySet( EntityPropertySet const & );                // not defined
     EntityPropertySet & operator = ( EntityPropertySet const & );  // not defined
 };
 
-#define GS_DECLARE_PROPERTYSET( CLASS, ENGINE_CLASS )            \
-class GE_DLLIMPORT CLASS :                                       \
-    public EntityPropertySet                                     \
-{                                                                \
-public:                                                          \
-    ENGINE_CLASS const * operator -> ( void ) const;             \
-protected:                                                       \
-    typedef CLASS _tPropertySet;                                 \
-    friend CLASS & Entity::PropertySet( void );                  \
-    friend CLASS const & Entity::PropertySet( void ) const;      \
-protected:                                                       \
-                   operator ENGINE_CLASS *       ( void );       \
-                   operator ENGINE_CLASS const * ( void ) const; \
-    ENGINE_CLASS * operator ->                   ( void );       \
-private:                                                         \
-    /* suppress compiler-generated default constructor */        \
-    CLASS( void );                                               \
-    /* suppress compiler-generated default copy constructor */   \
-    CLASS( CLASS const & );                                      \
-private:                                                         \
-    /* hide compiler-generated copy assignment operator */       \
-    CLASS & operator = ( CLASS const & );
+#define GS_DECLARE_PROPERTYSET( T, C )     \
+class GE_DLLIMPORT T :                     \
+    public EntityPropertySet               \
+{                                          \
+public:                                    \
+    C const * operator -> ( void ) const;  \
+protected:                                 \
+    friend Entity;                         \
+    typedef T PropertySet;                 \
+    typedef C EnginePropertySet;           \
+protected:                                 \
+        operator C *       ( void );       \
+        operator C const * ( void ) const; \
+    C * operator ->        ( void );       \
+private:                                   \
+    T( void );                             \
+    T( T const & );                        \
+private:                                   \
+    /* hide copy assignment operator */    \
+    T & operator = ( T const & );
+
+//
+// Entity PropertySet Property (PS*::Property*)
+//
+
+class GE_DLLIMPORT EntityPropertySetProperty
+{
+protected:
+    eCEntity * m_pEngineEntity;
+private:
+    EntityPropertySetProperty( void );                                             // not defined
+    EntityPropertySetProperty( EntityPropertySetProperty const & );                // not defined
+    EntityPropertySetProperty & operator = ( EntityPropertySetProperty const & );  // not defined
+};
+
+#define GS_DECLARE_PROPERTY( N, T )                   \
+class GE_DLLIMPORT Property##N :                      \
+    public EntityPropertySetProperty                  \
+{                                                     \
+public:                                               \
+                  operator T const ( void ) const;    \
+    Property##N & operator =       ( T const & );     \
+protected:                                            \
+    friend Entity;                                    \
+    friend EntityPropertySet;                         \
+    typedef Property##N PropertySetProperty;          \
+private:                                              \
+    Property##N( void );                              \
+    Property##N( Property##N const & );               \
+private:                                              \
+    /* hide copy assignment operator */               \
+    Property##N & operator = ( Property##N const & ); \
+};
 
 #include "gs_propertymacros.inl"
 
