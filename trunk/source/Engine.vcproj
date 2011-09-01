@@ -178,6 +178,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\EngineManifestDependency.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_actorattachment.h"
 			>
 		</File>
