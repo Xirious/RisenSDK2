@@ -68,7 +68,7 @@ class Entity;
 #include "Script/gs_questmanager.h"
 #include "Script/gs_scriptactiontimer.h"
 #include "Script/gs_scriptcommentmanager.h"
-// ScriptDestinationCollector
+#include "Script/gs_scriptdestinationcollector.h"
 #include "Script/gs_tutorial.h"
 #include "Script/gs_world.h"
 
