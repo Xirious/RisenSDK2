@@ -142,7 +142,7 @@ class gCCharacterSensor{};
 #include "Game/ge_effectcommandsequence2.h"
 #include "Game/ge_effect.h"
 
-struct gSArgsForScriptBase{};
+#include "Game/ge_scriptargs.h"
 class gCScriptAdmin;
 class gCScriptRoutine_PS;
 #include "Game/ge_scriptprocessingunit.h"

@@ -689,6 +689,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Game\ge_scriptargs.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_scriptargs.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_scriptinit.cpp"
 				>
 			</File>
