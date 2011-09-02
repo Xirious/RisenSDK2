@@ -14,19 +14,7 @@ public:
     {
         //FIXME: eCApplication::eSHardwareEnvironmentDesc members.
     };
-public:    using          eCWindow::Create;
-protected: virtual bEResult         Create( void );
-public:    virtual void             Destroy( void );
-public:    virtual                 ~eCApplication( void );
-public:    using  eCMessageHandler::HandleMessage;
-protected: virtual GEInt            HandleMessage( HWND, GEUInt, GEUInt,GEI32 );
-protected: virtual GEInt            OnIdle( GEUInt, GEI32 );
-protected: using          eCWindow::OnQuit;
-protected: virtual GEInt            OnSize( GEUInt, GEI32 );
-protected: virtual GEInt            OnPaint( GEUInt, GEI32 );
-protected: virtual GEInt            OnKillFocus( GEUInt, GEI32 );
-protected: virtual GEInt            OnSetFocus( GEUInt, GEI32 );
-protected: virtual GEInt            OnSysCommand( GEUInt, GEI32 );
+
 public:    virtual eCEntity const * GetEditorEntity( void ) const;
 public:    virtual GEBool           IsCompilerRunning( void ) const;
 public:    virtual GEBool           IsEditorRunning( void ) const;
@@ -60,43 +48,36 @@ public:    virtual void             OnWorldDeactivate( void );
 public:    virtual void             SendEngineMessage( eSEngineMessage & );
 protected: virtual bEResult         CreateWorkspace( void );
 protected: virtual void             DestroyWorkspace( void );
-public:    using      bCObjectBase::CopyFrom;
 protected: virtual void             CopyFrom( eCApplication const & );
 protected: virtual GEBool           OnHandleMessage( GEUInt, GEUInt, GEI32, GEI32 * );
 public:    virtual GEBool           LoadConfiguration( void );
 public:    virtual GEBool           SaveConfiguration( void );
-protected:
-    static GEBool          ms_bEngineCreated;
-    static GEBool          ms_bInitialised;
-    static eCApplication * ms_pApplication;
-    static eCSplash *      ms_pSplash;
+// eCWindow
+protected: virtual bEResult         Create( void );
+public:    virtual void             Destroy( void );
+public:    virtual                 ~eCApplication( void );
+protected: virtual GEInt            HandleMessage( HWND, GEUInt, GEUInt,GEI32 );
+protected: virtual GEInt            OnIdle( GEUInt, GEI32 );
+protected: virtual GEInt            OnSize( GEUInt, GEI32 );
+protected: virtual GEInt            OnPaint( GEUInt, GEI32 );
+protected: virtual GEInt            OnKillFocus( GEUInt, GEI32 );
+protected: virtual GEInt            OnSetFocus( GEUInt, GEI32 );
+protected: virtual GEInt            OnSysCommand( GEUInt, GEI32 );
+protected: using      bCObjectBase::CopyFrom;
+protected: using  eCMessageHandler::HandleMessage;
+protected: using          eCWindow::Create;
+protected: using          eCWindow::OnQuit;
 protected:
     char __FIXME[ 0x0B98 - sizeof(eCWindow) ];
-protected:
-    static GEBool GE_STDCALL g_ErrorApplicationCall( bEErrorType, GEU32 );
-    static GEBool GE_STDCALL g_TerminateApplicationCall( bEErrorType, GEU32 );
-protected:
-    void     CalculateHardwareEnvironment( void );
-    GEBool   CheckAppStateFlags( GEU32 );
-    void     CopyTo( eCApplication & ) const;
-    bEResult CreateEngine( void );
-    bEResult CreateGraphicsSubsystem( eSSetupWindow &, GEBool );
-    bEResult CreateModules( void );
-    void     CreateSoundSubsystem( eSSetupWindow & );
-    void     DestroyEngine( void );
-    void     DestroyGraphicsSubsystem( void );
-    void     DestroyModules( void );
-    void     DestroySoundSubsystem( void );
-    void     DoRender( GEBool );
-    void     DoSnapshot( void );
-    void     Invalidate( void );
-    GEBool   Reset( void );
 public:
     static void            GE_STDCALL CreateSplashScreen( void );
     static void            GE_STDCALL DestroySplashScreen( void );
     static eCApplication & GE_STDCALL GetInstance( void );
     static GEBool          GE_STDCALL IsEngineCreated( void );
     static GEBool          GE_STDCALL IsInitialised( void );
+public:
+    eCApplication( void );
+    eCApplication( eCApplication const & );
 public:
     void                                  ConfineCursor( void );
     bEResult                              Create( HINSTANCE, bCString const &, bCString const & );
@@ -145,10 +126,31 @@ public:
     GEBool                                ToggleFullscreen( void );
     void                                  ToggleGlobalStatistics( void );
 protected:
+    static GEBool          ms_bEngineCreated;
+    static GEBool          ms_bInitialised;
+    static eCApplication * ms_pApplication;
+    static eCSplash *      ms_pSplash;
+protected:
+    static GEBool GE_STDCALL g_ErrorApplicationCall( bEErrorType, GEU32 );
+    static GEBool GE_STDCALL g_TerminateApplicationCall( bEErrorType, GEU32 );
+protected:
     eCApplication const & operator = ( eCApplication const & );
-public:
-    eCApplication( eCApplication const & );
-    eCApplication( void );
+protected:
+    void     CalculateHardwareEnvironment( void );
+    GEBool   CheckAppStateFlags( GEU32 );
+    void     CopyTo( eCApplication & ) const;
+    bEResult CreateEngine( void );
+    bEResult CreateGraphicsSubsystem( eSSetupWindow &, GEBool );
+    bEResult CreateModules( void );
+    void     CreateSoundSubsystem( eSSetupWindow & );
+    void     DestroyEngine( void );
+    void     DestroyGraphicsSubsystem( void );
+    void     DestroyModules( void );
+    void     DestroySoundSubsystem( void );
+    void     DoRender( GEBool );
+    void     DoSnapshot( void );
+    void     Invalidate( void );
+    GEBool   Reset( void );
 };
 GE_ASSERT_SIZEOF( eCApplication, 0x0B98 )
 
