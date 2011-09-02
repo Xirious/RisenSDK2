@@ -22,16 +22,16 @@ GE_ASSERT_SIZEOF( gSAIScriptArgs, 0x0018 )
 // GEBool CON_Xxx( ..., gSConScriptArgs * )
 //
 
-enum eSConScriptEvent
+enum gEConScriptEvent
 {
-    eSConScriptEvent_Help,
-    eSConScriptEvent_Complete,
-    eSConScriptEvent_Execute
+    gEConScriptEvent_Help,
+    gEConScriptEvent_Complete,
+    gEConScriptEvent_Execute
 };
 
 struct gSConScriptArgs
 {
-    eSConScriptEvent              m_enumEvent;
+    gEConScriptEvent              m_enumEvent;
     bTObjArray< bCUnicodeString > m_arrParams;
     bCUnicodeString               m_strResult;
 };
