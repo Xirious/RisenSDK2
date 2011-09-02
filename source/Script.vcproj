@@ -358,6 +358,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Script\gs_scriptdestinationcollector.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Script\gs_template.h"
 			>
 		</File>
