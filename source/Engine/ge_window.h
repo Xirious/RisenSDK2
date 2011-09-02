@@ -11,20 +11,21 @@ public:
         eEWindowMode_Sizeable   = 0x00CF0000,  // WS_OVERLAPPEDWINDOW
         eEWindowMode_FullScreen = 0x90000000   // WS_POPUP | WS_VISIBLE
     };
-public:
     struct eSCreate
     {
-        HINSTANCE    m_hInstance;       // 0000
-        HWND         m_hHandle;         // 0004
-        GELPVoid     m_funcWindowProc;  // 0008
-        eEWindowMode m_enumWindowMode;  // 000C
-        bCString     m_strCaption;      // 0010
-        bCRect       m_rectWindowSize;  // 0014
-        GEBool       m_bCenter;         // 0024
+        HINSTANCE    m_hInstance;
+        HWND         m_hHandle;
+        GELPVoid     m_funcWindowProc;
+        eEWindowMode m_enumWindowMode;
+        bCString     m_strCaption;
+        bCRect       m_rectWindowSize;
+        GEBool       m_bCenter;
                      GE_PADDING( 3 )
-        // sizeof(eCWindow::eSCreate)      0028
     };
+    GE_ASSERT_SIZEOF( eSCreate, 0x0028 )
+
 public:    virtual GEBool   Create( eSCreate const & );
+// eCMessageHandler
 protected: virtual bEResult Create( void );
 protected: virtual void     Destroy( void );
 public:    virtual         ~eCWindow( void );
@@ -33,25 +34,23 @@ protected: virtual GEInt    OnDestroy( GEUInt, GEI32 );
 protected: virtual GEInt    OnQuit( GEUInt, GEI32 );
 protected: virtual GEInt    OnPaint( GEUInt, GEI32 );
 protected:
-    static GEInt ms_iDesktopHeight;
-    static GEInt ms_iDesktopWidth;
-protected:
-    eEWindowMode m_enumWindowMode;  // 0010
-    HINSTANCE    m_hInstance;       // 0014
-    GEBool       m_bCreated;        // 0018
-    GEBool       m_bAttached;       // 0019
-    GEBool       m_bSubClassed;     // 001A
-    GEBool       m_bMinimized;      // 001B
-    GEBool       m_bActive;         // 001C
+    eEWindowMode m_enumWindowMode;
+    HINSTANCE    m_hInstance;
+    GEBool       m_bCreated;
+    GEBool       m_bAttached;
+    GEBool       m_bSubClassed;
+    GEBool       m_bMinimized;
+    GEBool       m_bActive;
                  GE_PADDING( 3 )
-    // sizeof(eCWindow)                0020
-protected:
-    static GEI32 GE_STDCALL Receive( HWND, GEUInt, GEUInt, GEI32 );
-    static void  GE_STDCALL RegisterWindow( HWND, eCWindow * );
-protected:
-    GEBool Create( HINSTANCE, GELPVoid, bCString const &, bCRect const &, eEWindowMode );
-    GEBool Create( HINSTANCE, GELPVoid, eEWindowMode );
-    void   Invalidate( void );
+public:
+    eCWindow( void );
+    eCWindow( eCWindow const & );
+public:
+    eCWindow & operator =               ( eCWindow const & );
+               operator HINSTANCE       ( void );
+               operator HINSTANCE const ( void ) const;
+               operator HWND            ( void );
+               operator HWND const      ( void ) const;
 public:
     void             AttachTo( HINSTANCE const, HDC const );
     void             AttachTo( HINSTANCE const, HWND const );
@@ -81,15 +80,17 @@ public:
     void             SetWindowMode( eEWindowMode );
     GEBool           SetWindowSize( GEInt, GEInt, GEBool );
     void             Validate( void );
-public:
-               operator HINSTANCE       ( void );
-               operator HINSTANCE const ( void ) const;
-               operator HWND            ( void );
-               operator HWND const      ( void ) const;
-    eCWindow & operator =               ( eCWindow const & );
-public:
-    eCWindow( eCWindow const & );
-    eCWindow( void );
+protected:
+    static GEInt ms_iDesktopHeight;
+    static GEInt ms_iDesktopWidth;
+protected:
+    static GEI32 GE_STDCALL Receive( HWND, GEUInt, GEUInt, GEI32 );
+    static void  GE_STDCALL RegisterWindow( HWND, eCWindow * );
+protected:
+    GEBool Create( HINSTANCE, GELPVoid, bCString const &, bCRect const &, eEWindowMode );
+    GEBool Create( HINSTANCE, GELPVoid, eEWindowMode );
+    void   Invalidate( void );
 };
+GE_ASSERT_SIZEOF( eCWindow, 0x0020 )
 
 #endif
