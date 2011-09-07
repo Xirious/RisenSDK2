@@ -1,13 +1,60 @@
 #include "ge_prototypeapp.h"
 
+void aCProtoTypeApp::Invalidate( void )
+{
+    g_FFInvalidateFileHandle( this->m_hEngineMessageLogFile );
+    this->m_iEngineMessageIndentation = 0;
+}
+
+aCProtoTypeApp::aCProtoTypeApp( void )
+{
+    this->Invalidate();
+    this->Create();
+}
+
+bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine )
+{
+    this->m_hEngineMessageLogFile = g_FFCreateFile(
+        gCGameApp::GetApplicationFileName() + ".EngineMessage.log",
+        EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
+    return gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine );
+}
+
+void aCProtoTypeApp::CopyFrom( aCProtoTypeApp const & )
+{
+}
+
+aCProtoTypeApp::aCProtoTypeApp( aCProtoTypeApp const & a_Source )
+{
+    this->Invalidate();
+    this->Create();
+    this->CopyFrom( a_Source );
+}
+
 aCProtoTypeApp const & aCProtoTypeApp::operator = ( aCProtoTypeApp const & a_Source )
 {
     this->CopyFrom( a_Source );
     return (*this);
 }
 
-void aCProtoTypeApp::CopyFrom( aCProtoTypeApp const & )
+void aCProtoTypeApp::Destroy( void )
 {
+    this->DestroyWorkspace();
+    gCGameApp::Destroy();
+    if( g_FFIsValidFileHandle( this->m_hEngineMessageLogFile ) )
+        g_FFCloseFile( this->m_hEngineMessageLogFile );
+    this->Invalidate();
+}
+
+void aCProtoTypeApp::OnDestroyWorkspace( void )
+{
+    gCGameApp::OnDestroyWorkspace();
+    gCGameApp::GetAccessToWorkspace().RemoveAll();
+}
+
+aCProtoTypeApp::~aCProtoTypeApp( void )
+{
+    this->Invalidate();
 }
 
 GEBool aCProtoTypeApp::LoadProjectFile( bCString const & a_strProject, bCString const & a_strWorld )
@@ -56,43 +103,132 @@ GEBool aCProtoTypeApp::LoadProjectFile( bCString const & a_strProject, bCString 
     return GETrue;
 }
 
-void aCProtoTypeApp::Invalidate( void )
+struct aSEngineMessageInfo {
+    GELPCChar m_pcName;
+    GEInt     m_PreIndentation;
+    GEInt     m_PostIndentation;
+} const g_arrEngineMessageInfos[ eEEngineMessage_Count ] =
 {
+    { "WorldActivate",       0,  0 },
+    { "WorldDeactivate:",    0, +1 },
+    { ":WorldDeactivate",   -1,  0 },
+    { "InsertSector",        0,  0 },
+    { "RemoveSector:",       0, +1 },
+    { ":RemoveSector",      -1,  0 },
+    { ":SectorActivate",    -1,  0 },
+    { "ProjectActivate",     0,  0 },
+    { "ProjectDeactivate:",  0, +1 },
+    { ":ProjectDeactivate", -1,  0 },
+    { "Activate",            0,  0 },
+    { "Deactivate:",         0, +1 },
+    { ":Deactivate",        -1,  0 },
+    { "Save:",               0, +1 },
+    { ":Save",              -1,  0 },
+    { "SectorDeactivate:",   0, +1 },
+    { ":SectorDeactivate",  -1,  0 },
+    { "SectorActivate:",     0, +1 },
+    { "Initialize",          0,  0 },
+    { "PostInitialize",      0,  0 },
+    { "AppInitialized",      0,  0 },
+    { "PreShutdown",         0,  0 },
+    { "Shutdown",            0,  0 },
+    { "AppStateChanged",    +1, -1 }
+};
+
+GEBool IsKnownEngineMessage( eEEngineMessage a_enumType )
+{
+    return static_cast< GEU32 >( a_enumType ) < eEEngineMessage_Count;
 }
 
-void aCProtoTypeApp::OnDestroyWorkspace( void )
+bCString GetProcessibleElementString( eCProcessibleElement * a_Element )
 {
-    gCGameApp::OnDestroyWorkspace();
-    gCGameApp::GetAccessToWorkspace().RemoveAll();
+    return !a_Element ? "<null>" :
+        bCString::GetFormattedString(
+            "(%s) %s",
+            a_Element->GetClassName(),
+            a_Element->GetFileName() );
 }
 
-aCProtoTypeApp::aCProtoTypeApp( void )
+void aCProtoTypeApp::SendEngineMessage( eSEngineMessage & a_EngineMessage )
 {
-    this->Invalidate();
-    this->Create();
-}
-
-aCProtoTypeApp::aCProtoTypeApp( aCProtoTypeApp const & a_Source )
-{
-    this->Invalidate();
-    this->Create();
-    this->CopyFrom( a_Source );
-}
-
-aCProtoTypeApp::~aCProtoTypeApp( void )
-{
-    this->Invalidate();
-}
-
-void aCProtoTypeApp::Destroy( void )
-{
-    this->DestroyWorkspace();
-    gCGameApp::Destroy();
-    this->Invalidate();
-}
-
-bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine )
-{
-    return gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine );
+    if( g_FFIsValidFileHandle( this->m_hEngineMessageLogFile ) )
+    {
+        if( IsKnownEngineMessage( a_EngineMessage.m_enumType ) )
+        {
+            this->m_iEngineMessageIndentation +=
+                g_arrEngineMessageInfos[ a_EngineMessage.m_enumType ].m_PreIndentation;
+            if( this->m_iEngineMessageIndentation < 0 )
+                this->m_iEngineMessageIndentation = 0;
+        }
+        bCString strEngineMessage = bCString( ' ', this->m_iEngineMessageIndentation ) +
+            bCString::GetFormattedString(
+                "[%s] ",
+                IsKnownEngineMessage( a_EngineMessage.m_enumType ) ?
+                    g_arrEngineMessageInfos[ a_EngineMessage.m_enumType ].m_pcName :
+                    bCString::GetFormattedString(
+                        "0x%08lX",
+                        a_EngineMessage.m_enumType ) );
+        switch( a_EngineMessage.m_enumType )
+        {
+        case eEEngineMessage_WorldActivate:
+        case eEEngineMessage_WorldDeactivate:
+        case eEEngineMessage_AfterWorldDeactivate:
+        case eEEngineMessage_ProjectActivate:
+        case eEEngineMessage_ProjectDeactivate:
+        case eEEngineMessage_AfterProjectDeactivate:
+        case eEEngineMessage_SectorDeactivate:
+        case eEEngineMessage_AfterSectorDeactivate:
+        case eEEngineMessage_SectorActivate:
+        case eEEngineMessage_AfterSectorActivate:
+        case eEEngineMessage_Activate:
+        case eEEngineMessage_Deactivate:
+        case eEEngineMessage_AfterDeactivate:
+        case eEEngineMessage_Save:
+        case eEEngineMessage_AfterSave:
+            strEngineMessage += !a_EngineMessage.m_pElement ? "<null>" :
+                GetProcessibleElementString( a_EngineMessage.m_pElement );
+            break;
+        case eEEngineMessage_InsertSector:
+        case eEEngineMessage_RemoveSector:
+        case eEEngineMessage_AfterRemoveSector:
+            strEngineMessage += !a_EngineMessage.m_pWorldSector ? "<null>" :
+                bCString::GetFormattedString(
+                    "{ %s, %s }",
+                    GetProcessibleElementString( a_EngineMessage.m_pWorldSector->m_pWorld ),
+                    GetProcessibleElementString( a_EngineMessage.m_pWorldSector->m_pSector ) );
+            break;
+        case eEEngineMessage_AppStateChanged:
+            strEngineMessage += bCString::GetFormattedString(
+                "0x%04lX -> 0x%04lX",
+                a_EngineMessage.m_AppStateChanged.m_enumOldAppState,
+                a_EngineMessage.m_AppStateChanged.m_enumNewAppState );
+            break;
+        case eEEngineMessage_Initialize:
+        case eEEngineMessage_PostInitialize:
+        case eEEngineMessage_AppInitialized:
+        case eEEngineMessage_PreShutdown:
+        case eEEngineMessage_Shutdown:
+        default:
+        case eEEngineMessage_Count:
+        case eEEngineMessage_ForceDWORD:
+            strEngineMessage += !a_EngineMessage.m_pData ? "<null>" :
+                bCString::GetFormattedString(
+                    "0x%08lX",
+                    a_EngineMessage.m_pData );
+            break;
+        }
+        if( IsKnownEngineMessage( a_EngineMessage.m_enumType ) )
+        {
+            this->m_iEngineMessageIndentation +=
+                g_arrEngineMessageInfos[ a_EngineMessage.m_enumType ].m_PostIndentation;
+            if( this->m_iEngineMessageIndentation < 0 )
+                this->m_iEngineMessageIndentation = 0;
+        }
+        strEngineMessage += "\n";
+        FFU32 u32NumberOfBytesWritten;
+        g_FFWriteFile( this->m_hEngineMessageLogFile, strEngineMessage.GetText(),
+            static_cast< FFU32 >( strEngineMessage.GetLength() ), &u32NumberOfBytesWritten );
+    }
+    gCGameApp::SendEngineMessage( a_EngineMessage );
 }
 
