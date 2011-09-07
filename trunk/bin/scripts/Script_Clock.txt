@@ -1,0 +1,12 @@
+This module adds the new console command "clock".
+It returns the current system time and game time.
+
+You can also assign a debug key to "OnDebugClock"
+in your Config ("TestMode" must also be enabled).
+"OnDebugClock" prints the information in the game
+log or displays a dialog box (no game is running,
+the game menu is opened, or the game is loading).
+
+The current version can be downloaded online from
+http://svn.nicode.net/risensdk/trunk/bin/scripts/
+
