@@ -34,6 +34,17 @@ enum EFFFileSeek
     EFFFileSeek_ForceDWORD = FF_FORCE_DWORD
 };
 
+enum EFFFileShare
+{
+    EFFFileShare_None       = 0x00000000,
+    EFFFileShare_Read       = 0x00000001,
+    EFFFileShare_Write      = 0x00000002,
+    EFFFileShare_ReadWrite  = 0x00000003,
+    EFFFileShare_Delete     = 0x00000004,
+    EFFFileShare_All        = 0x00000007,
+    EFFFileShare_ForceDWORD = FF_FORCE_DWORD
+};
+
 enum EFFSpecialFolder
 {
     EFFSpecialFolder_User         = 0x00000000,

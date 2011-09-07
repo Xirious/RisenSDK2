@@ -3,23 +3,55 @@
 
 enum eEEngineMessage
 {
-    eEEngineMessage_WorldActivate        = 0x00000000,
-    eEEngineMessage_WorldDeactivate      = 0x00000001,
-    eEEngineMessage_AfterWorldDeactivate = 0x00000002,
-    //FIXME: eEEngineMessage constants.
-    eEEngineMessage_Initialize           = 0x00000012,
-    eEEngineMessage_PostInitialize       = 0x00000013,
-    eEEngineMessage_OnAppInitialized     = 0x00000014,
-    eEEngineMessage_PreShutdown          = 0x00000015,
-    eEEngineMessage_Shutdown             = 0x00000016,
-    eEEngineMessage_ForceDWORD           = GE_FORCE_DWORD
+    eEEngineMessage_WorldActivate,           // gCWorld *
+    eEEngineMessage_WorldDeactivate,         // gCWorld *
+    eEEngineMessage_AfterWorldDeactivate,    // gCWorld *
+    eEEngineMessage_InsertSector,            // eSEngineMessage::eSWorldSector *
+    eEEngineMessage_RemoveSector,            // eSEngineMessage::eSWorldSector *
+    eEEngineMessage_AfterRemoveSector,       // eSEngineMessage::eSWorldSector *
+    eEEngineMessage_AfterSectorActivate,     // gCWorld *
+    eEEngineMessage_ProjectActivate,         //FIXME: Wild guess, no usage found.
+    eEEngineMessage_ProjectDeactivate,       // gCProject *
+    eEEngineMessage_AfterProjectDeactivate,  // gCProject *
+    eEEngineMessage_Activate,                // eCProcessibleElement *
+    eEEngineMessage_Deactivate,              // eCProcessibleElement *
+    eEEngineMessage_AfterDeactivate,         // eCProcessibleElement *
+    eEEngineMessage_Save,                    // eCProcessibleElement *
+    eEEngineMessage_AfterSave,               // eCProcessibleElement *
+    eEEngineMessage_SectorDeactivate,        // gCSector *
+    eEEngineMessage_AfterSectorDeactivate,   // gCSector *
+    eEEngineMessage_SectorActivate,          // gCSector *
+    eEEngineMessage_Initialize,
+    eEEngineMessage_PostInitialize,
+    eEEngineMessage_AppInitialized,
+    eEEngineMessage_PreShutdown,
+    eEEngineMessage_Shutdown,
+    eEEngineMessage_AppStateChanged,         // eSEngineMessage::eSAppStateChanged
+    eEEngineMessage_Count,
+    eEEngineMessage_ForceDWORD = GE_FORCE_DWORD
 };
 
 struct eSEngineMessage
 {
-    eEEngineMessage m_enumEngineMessage;
-    void *          m_EngineMessageData;
+    struct eSAppStateChanged {
+        GEU16 m_enumNewAppState;  // eEAppState
+        GEU16 m_enumOldAppState;  // eEAppState
+    };
+    struct eSWorldSector {
+        eCProcessibleElement * m_pWorld;
+        eCProcessibleElement * m_pSector;
+    };
+
+    eEEngineMessage m_enumType;
+    union
+    {
+        eSAppStateChanged      m_AppStateChanged;
+        GELPVoid               m_pData;
+        eCProcessibleElement * m_pElement;
+        eSWorldSector *        m_pWorldSector;
+    };
 };
+GE_ASSERT_SIZEOF( eSEngineMessage, 0x0008 )
 
 class GE_DLLIMPORT eCEngineComponentBase :
     public bCObjectRefBase

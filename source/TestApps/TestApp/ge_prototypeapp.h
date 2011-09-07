@@ -11,8 +11,12 @@ protected: virtual void         CopyFrom( aCProtoTypeApp const & );
 public:    virtual void         Destroy( void );
 public:    virtual             ~aCProtoTypeApp( void );
 protected: virtual void         OnDestroyWorkspace( void );
+public:    virtual void         SendEngineMessage( eSEngineMessage & );
 protected: using eCApplication::CopyFrom;
 protected: using     gCGameApp::Create;
+protected:
+    FFLPVoid          m_hEngineMessageLogFile;
+    GEInt             m_iEngineMessageIndentation;
 public:
     aCProtoTypeApp( void );
     aCProtoTypeApp( aCProtoTypeApp const & a_Source );
