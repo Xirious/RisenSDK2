@@ -10,6 +10,7 @@
 		BufferSecurityCheck="false"
 		DebugInformationFormat="3"
 		EnableEnhancedInstructionSet="2"
+		ExceptionHandling="0"
 		PreprocessorDefinitions="NDEBUG"
 		StringPooling="true"
 	/>

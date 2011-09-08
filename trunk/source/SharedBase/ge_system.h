@@ -2,6 +2,12 @@
 #define GE_SYSTEM_H_INCLUDED
 
 #pragma warning( push, 1 )
+#ifndef WINVER
+#define WINVER 0x0501
+#endif
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT WINVER
+#endif
 #include <windows.h>
 #pragma warning( pop )
 //FIXME: GetClassName macro "renames" some Genome class methods.

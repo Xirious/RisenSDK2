@@ -11,7 +11,7 @@
 		Name="VCCLCompilerTool"
 		AdditionalOptions="/Wall"
 		CallingConvention="2"
-		DisableSpecificWarnings="4505;4514;4711"
+		DisableSpecificWarnings="4505;4514;4710;4711"
 		WarningLevel="4"
 	/>
 	<Tool
