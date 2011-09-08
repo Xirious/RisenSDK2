@@ -9,6 +9,7 @@
 		Name="VCCLCompilerTool"
 		BufferSecurityCheck="false"
 		EnableEnhancedInstructionSet="2"
+		ExceptionHandling="0"
 		StringPooling="true"
 	/>
 </VisualStudioPropertySheet>
