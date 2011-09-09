@@ -36,15 +36,16 @@ class GE_DLLIMPORT eCEntity :
 public:
     enum eEInsertType
     {
-        eEInsertType_None       = 0x00000000,
-        eEInsertType_Floor      = 0x00000001,
-        eEInsertType_Ground     = 0x00000002,
-        eEInsertType_Tree       = 0x00000003,
-        eEInsertType_Wall       = 0x00000004,
-        eEInsertType_Arrow      = 0x00000005,
-        eEInsertType_Manual     = 0x00000006,
+        eEInsertType_None,
+        eEInsertType_Floor,
+        eEInsertType_Ground,
+        eEInsertType_Tree,
+        eEInsertType_Wall,
+        eEInsertType_Arrow,
+        eEInsertType_Manual,
         eEInsertType_ForceDWORD = GE_FORCE_DWORD
     };
+
 public:    virtual bCPropertyID const &     GetID( void ) const;                                                                      
 public:    virtual void                     Enable( GEBool );                                                                         
 public:    virtual void                     EnablePicking( GEBool, GEBool );                                                          
@@ -71,6 +72,7 @@ public:    virtual void                     RenderGizmo( eCCameraBase *, GEInt )
 public:    virtual void                     RenderAlphaGizmo( eCCameraBase *, GEInt );                                                
 public:    virtual GEBool                   PickGizmo( eSRayIntersectionDesc &, eSGizmoPickInfo *, GEInt );                           
 public:    virtual GEBool                   OnMoveGizmo( eSGizmoPickInfo const *, eCCameraBase *, bCPoint const &, GEFloat, GEInt );  
+// eCNode
 public:    virtual GEU16                    GetVersion( void ) const;                                                                 
 public:    virtual GEBool                   OnRead( bCIStream & );                                                                    
 public:    virtual GEBool                   OnWrite( bCOStream & );                                                                   
@@ -84,18 +86,13 @@ public:    virtual eCEntity *               QueryEntity( void );
 protected: virtual void                     OnParentChanged( eCNode * );                                                              
 protected: virtual void                     OnAttachChild( eCNode * );                                                                
 protected: virtual void                     OnDetachChild( eCNode * );                                                                
-private:
+protected:
     eSEntityFlags                          m_EntityFlags;
-    GEU8 (*                                m_pPSIndexMap) [ 0x80 ];  // eSPSIndexMap *
-    bTRefPtrArray< eCEntityPropertySet * > m_arrPropertySet;
+    eSPSIndexMap *                         m_pPSIndexMap;
+    bTRefPtrArray< eCEntityPropertySet * > m_arrPropertySets;
     bCDateTime                             m_DataChangedTimeStamp;
-protected:
-    static GEInt GE_CCALL ComparePropertySets( GELPCVoid, GELPCVoid );
-protected:
-    void Invalidate( void );
-    void KillIntern( void );
-    void SendListenerEvent( eSEntityListenerEvent const &, GEBool );
-    void SortPropertySets( void );
+public:
+    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static char s_carrAllocBuffer[];
 public:
     static void GE_STDCALL RemapEntityProxies( bTValMap< eCEntity *, eCEntity * > const &, GEBool, GEBool );
     static void GE_STDCALL RemapEntityProxiesRecursive( bCPropertyConverterPtr, bCPropertyConverterPtr, bTValMap< eCEntity *, eCEntity * > const &, GEBool, GEBool );
@@ -138,12 +135,17 @@ public:
     void                        UpdateAll( GEBool );
     void                        UpdateBoundary( void );
 protected:
-    eCEntity const & operator = ( eCEntity const & );
-public:
-    static void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );  // inline local: static char s_carrAllocBuffer[];
+    static GEInt GE_CCALL ComparePropertySets( GELPCVoid, GELPCVoid );
 protected:
-    eCEntity( eCEntity const & );
     eCEntity( void );
+    eCEntity( eCEntity const & );
+protected:
+    eCEntity const & operator = ( eCEntity const & );
+protected:
+    void Invalidate( void );
+    void KillIntern( void );
+    void SendListenerEvent( eSEntityListenerEvent const &, GEBool );
+    void SortPropertySets( void );
 };
 GE_ASSERT_SIZEOF( eCEntity, 0x0030 )
 

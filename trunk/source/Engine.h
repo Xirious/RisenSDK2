@@ -84,6 +84,7 @@ class eCGeometryEntity;
 #include "Engine/ge_entitystringproxy.h"
 #include "Engine/ge_templateentityproxy.h"
 #include "Engine/ge_entitypropertyset.h"
+#include "Engine/ge_psmap.h"
 #include "Engine/ge_entity.h"
 #include "Engine/ge_templateentity.h"
 #include "Engine/ge_frustumelementitem.h"

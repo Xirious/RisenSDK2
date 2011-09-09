@@ -169,6 +169,50 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="entity"
+			>
+			<File
+				RelativePath=".\Engine\ge_dynamicentity.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_entity.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_entitypropertyset.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_geometryentity.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_psmap.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_templateentity.h"
+				>
+			</File>
+			<Filter
+				Name="proxy"
+				>
+				<File
+					RelativePath=".\Engine\ge_entityproxy.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Engine\ge_entitystringproxy.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Engine\ge_templateentityproxy.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>
@@ -266,35 +310,11 @@
 			>
 		</File>
 		<File
-			RelativePath=".\Engine\ge_dynamicentity.h"
-			>
-		</File>
-		<File
 			RelativePath=".\Engine\ge_enginecomponentbase.h"
 			>
 		</File>
 		<File
-			RelativePath=".\Engine\ge_entity.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_entitypropertyset.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_entityproxy.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_entitystringproxy.h"
-			>
-		</File>
-		<File
 			RelativePath=".\Engine\ge_frustumelementitem.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_geometryentity.h"
 			>
 		</File>
 		<File
@@ -395,14 +415,6 @@
 		</File>
 		<File
 			RelativePath=".\Engine\ge_statisticview.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_templateentity.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_templateentityproxy.h"
 			>
 		</File>
 		<File
