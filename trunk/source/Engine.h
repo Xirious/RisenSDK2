@@ -14,6 +14,7 @@ class NxActor{};
 
 #include "Engine/EngineEnum.h"
 
+#include "Engine/ge_locadmin2.h"
 #include "Engine/ge_locstring.h"
 
 #include "Engine/ge_virtualfilesystem.h"

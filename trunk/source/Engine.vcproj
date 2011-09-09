@@ -318,6 +318,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\Engine\ge_locadmin2.h"
+			>
+		</File>
+		<File
 			RelativePath=".\Engine\ge_locstring.h"
 			>
 		</File>

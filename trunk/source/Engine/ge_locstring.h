@@ -12,8 +12,22 @@ public: virtual void     Read( bCIStream & );
 public: virtual void     Write( bCOStream & ) const;
 protected:
     CFXLocString m_LocString;
-protected:
-    GEBool          GenerateID( bCString const & );
+public:
+    friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCLocString & );
+    friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCLocString const & );
+public:
+    eCLocString( void );
+    eCLocString( eCLocString const & );
+    eCLocString( bCString const & );
+   ~eCLocString( void );
+public:
+    eCLocString & operator =               ( eCLocString const & );
+    GEBool        operator ==              ( eCLocString const & ) const;
+    GEBool        operator !=              ( eCLocString const & ) const;
+    bCIStream &   operator <<              ( bCIStream & );
+    bCOStream &   operator >>              ( bCOStream & ) const;
+                  operator bCString        ( void ) const;
+                  operator bCUnicodeString ( void ) const;
 public:
     GEBool          ExistsID( void ) const;
     GEBool          GenerateID( void );
@@ -29,23 +43,8 @@ public:
     void            SetID( bCString const & );
     GEBool          SetText( bCString const & );
     GEBool          SetText( bCUnicodeString const & );
-public:
-                  operator bCString        ( void ) const;
-                  operator bCUnicodeString ( void ) const;
-    GEBool        operator ==              ( eCLocString const & ) const;
-    GEBool        operator !=              ( eCLocString const & ) const;
-    bCIStream &   operator <<              ( bCIStream & );
-    bCOStream &   operator >>              ( bCOStream & ) const;
-    eCLocString & operator =               ( eCLocString const & );
-
-public:
-    eCLocString( bCString const & );
-    eCLocString( eCLocString const & );
-    eCLocString( void );
-   ~eCLocString( void );
-public:
-    friend GE_DLLIMPORT bCIStream & GE_STDCALL operator >> ( bCIStream &, eCLocString & );
-    friend GE_DLLIMPORT bCOStream & GE_STDCALL operator << ( bCOStream &, eCLocString const & );
+protected:
+    GEBool          GenerateID( bCString const & );
 };
 GE_ASSERT_SIZEOF( eCLocString, 0x000C )
 
