@@ -3,7 +3,7 @@
 LANGUAGE 0x0000, 0x0000
 
 1 VERSIONINFO
-  FILEVERSION    1, 1, 0, 0
+  FILEVERSION    1, 2, 0, 0
   PRODUCTVERSION 1, 0, 95642, 0
   FILEOS         0x00000004
   FILETYPE       0x00000002
@@ -14,7 +14,7 @@ BEGIN
     BEGIN
       VALUE "CompanyName",     "Nico Bendlin"
       VALUE "FileDescription", "Risen Clock"
-      VALUE "FileVersion",     "1.1"
+      VALUE "FileVersion",     "1.2"
       VALUE "LegalCopyright",  "© 2011 Nico Bendlin <nicode@gmx.net>"
       VALUE "InternalName",    "Script_Clock"
       VALUE "ProductName",     "Risen"
@@ -34,9 +34,15 @@ LANGUAGE 0x09, 0x01
 
 STRINGTABLE
 BEGIN
-  IDS_SCRIPT_CLOCK_CONHELP "Displays the system and game time."
-  IDS_SCRIPT_CLOCK_MESSAGE "System: %1, Game: %2"
+  IDS_SCRIPT_CLOCK_CONHELP "Displays the current time."
+  IDS_SCRIPT_CLOCK_SYSTIME "System time: %1!S!\n"
+  IDS_SCRIPT_CLOCK_GAMEMSG "Island time: %4!02i!:%5!02i! (day %7!i!)"
+  IDS_SCRIPT_CLOCK_MESSAGE "%2!s!"
+  IDS_SCRIPT_CLOCK_LOGTYPE "0"
+  IDS_SCRIPT_CLOCK_LOGSIZE "false"
+  IDS_SCRIPT_CLOCK_LOGXEFF ""
   IDS_SCRIPT_CLOCK_CAPTION "tick-tock"
+  IDS_SCRIPT_CLOCK_DEFAULT "This must be Thursday.\nI never could get the hang of Thursdays."
 END
 
 /* de-DE */
@@ -46,8 +52,14 @@ LANGUAGE 0x07, 0x01
 
 STRINGTABLE
 BEGIN
-  IDS_SCRIPT_CLOCK_CONHELP "Zeigt die aktuelle System- und Spielzeit an."
-  IDS_SCRIPT_CLOCK_MESSAGE "System: %1, Spiel: %2"
+  IDS_SCRIPT_CLOCK_CONHELP "Zeigt die aktuelle Uhrzeit an."
+  IDS_SCRIPT_CLOCK_SYSTIME "Systemzeit: %1!S!\n"
+  IDS_SCRIPT_CLOCK_GAMEMSG "Inselzeit: %4!02i!:%5!02i! (Tag %7!i!)"
+  IDS_SCRIPT_CLOCK_MESSAGE "%2!s!"
+  IDS_SCRIPT_CLOCK_LOGTYPE "0"
+  IDS_SCRIPT_CLOCK_LOGSIZE "false"
+  IDS_SCRIPT_CLOCK_LOGXEFF ""
   IDS_SCRIPT_CLOCK_CAPTION "Ticketacke"
+  IDS_SCRIPT_CLOCK_DEFAULT "Heute muss Donnerstag sein.\nMit Donnerstagen kam ich noch nie zu Rande."
 END
 
