@@ -1,3 +1,62 @@
+/*
+  Help message for the console.
+*/
 #define IDS_SCRIPT_CLOCK_CONHELP 1
-#define IDS_SCRIPT_CLOCK_MESSAGE 2
-#define IDS_SCRIPT_CLOCK_CAPTION 3
+
+/*
+  System time string. Arguments:
+    %1!S! System time (ANSI)
+*/
+#define IDS_SCRIPT_CLOCK_SYSTIME 2
+
+/*
+  World time string. Arguments:
+    %1!i! Year     (starts at 0)
+    %2!i! Month    (starts at 1)
+    %3!i! Day      (starts at 0)
+    %4!i! Hour     (from 0 to 23)
+    %5!i! Minute   (from 0 to 59)
+    %6!i! GameDays (starts at 0)
+    %7!i! GameDay  (starts at 1)
+*/
+#define IDS_SCRIPT_CLOCK_GAMEMSG 3
+
+/*
+  Displayed message. Arguments:
+    %1!s! IDS_SCRIPT_CLOCK_SYSTIME result
+    %2!s! IDS_SCRIPT_CLOCK_GAMEMSG result
+*/
+#define IDS_SCRIPT_CLOCK_MESSAGE 4
+
+/*
+  Log message type (integer). Values:
+    "0" Grey (default)
+    "1" Red
+    "2" Gold
+    "3" Lime
+*/
+#define IDS_SCRIPT_CLOCK_LOGTYPE 5
+
+/*
+  Log message size (boolean). Values:
+    "false" Normal (default)
+    "true"  Large
+*/
+#define IDS_SCRIPT_CLOCK_LOGSIZE 6
+
+/*
+  Log message effect (string).
+  (data/raw/effects/<*>.xeff)
+*/
+#define IDS_SCRIPT_CLOCK_LOGXEFF 7
+
+/*
+  MessageBox caption (string).
+*/
+#define IDS_SCRIPT_CLOCK_CAPTION 8
+
+/*
+  Replacement for an empty message (string).
+*/
+#define IDS_SCRIPT_CLOCK_DEFAULT 9
+
