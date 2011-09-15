@@ -789,6 +789,22 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="navigation"
+			>
+			<File
+				RelativePath=".\Game\ge_navigation_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_navpath_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_prefpath_psobj.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>

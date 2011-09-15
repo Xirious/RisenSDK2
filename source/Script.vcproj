@@ -293,6 +293,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psnavigation.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psnpc.h"
 				>
 			</File>
