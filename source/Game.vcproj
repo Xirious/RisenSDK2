@@ -793,11 +793,39 @@
 			Name="navigation"
 			>
 			<File
+				RelativePath=".\Game\ge_collisioncircle_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_collisioncircle_psobj.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_dynamiccollisioncircle_ps.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Game\ge_navigation_ps.h"
 				>
 			</File>
 			<File
 				RelativePath=".\Game\ge_navpath_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_navzone_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_negzone_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_negzone_psobj.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_prefpath_ps.h"
 				>
 			</File>
 			<File
