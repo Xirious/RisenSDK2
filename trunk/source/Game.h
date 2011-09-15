@@ -142,10 +142,17 @@ class gCCharacterSensor{};
 
 #include "Game/ge_charactermovement_ps.h"
 
-class GE_DLLIMPORT gCDynamicCollisionCircle_PS{};
-#include "Game/ge_navpath_ps.h"
+#include "Game/ge_collisioncircle_psobj.h"
+#include "Game/ge_collisioncircle_ps.h"
 #include "Game/ge_prefpath_psobj.h"
+#include "Game/ge_prefpath_ps.h"
+class gCDynamicCollisionCircle_PS;
+#include "Game/ge_navpath_ps.h"
 #include "Game/ge_navigation_ps.h"
+#include "Game/ge_negzone_psobj.h"
+#include "Game/ge_negzone_ps.h"
+#include "Game/ge_navzone_ps.h"
+#include "Game/ge_dynamiccollisioncircle_ps.h"
 
 #include "Game/ge_flightpathbase.h"
 #include "Game/ge_flightpathballistic.h"
