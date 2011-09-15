@@ -54,7 +54,7 @@ class Entity;
 #include "Script/gs_pslock.h"
 #include "Script/gs_psmap.h"
 #include "Script/gs_psmover.h"
-// PSNavigation, gCNavigation_PS
+#include "Script/gs_psnavigation.h"
 #include "Script/gs_psnpc.h"
 // PSParticle, eCParticle_PS
 // PSParty, gCParty_PS

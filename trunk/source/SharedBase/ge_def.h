@@ -4,6 +4,11 @@
 #define GE_PADDING( X ) char __padding[ X ];
 #define GE_PADDING1( X ) char __padding1[ X ];
 #define GE_PADDING2( X ) char __padding2[ X ];
+#define GE_PADDING3( X ) char __padding3[ X ];
+#define GE_PADDING4( X ) char __padding4[ X ];
+#define GE_PADDING5( X ) char __padding5[ X ];
+#define GE_PADDING6( X ) char __padding6[ X ];
+#define GE_PADDING7( X ) char __padding7[ X ];
 
 #define GE_FORCE_DWORD 0x7FFFFFFFL
 

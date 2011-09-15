@@ -54,6 +54,28 @@ enum gELogMessageType
     gELogMessageType_ForceDWORD = GE_FORCE_DWORD
 };
 
+enum gENavTestResult
+{
+    gENavTestResult_Succeeded                        = 0x00000000,
+    gENavTestResult_NavPathWithOneDeadEnd            = 0x00000001,
+    gENavTestResult_NavPathWithTwoDeadEnds           = 0x00000002,
+    gENavTestResult_NavPathBlockedByCollisionCircle  = 0x00000003,
+    gENavTestResult_NavPathIllegalBuild              = 0x00000004,
+    gENavTestResult_PrefPathOutOfNavZone             = 0x00000005,
+    gENavTestResult_PrefPathBlockedByCollisionCircle = 0x00000006,
+    gENavTestResult_PrefPathIllegalBuild             = 0x00000007,
+    gENavTestResult_NavZoneInConflict                = 0x00000008,
+    gENavTestResult_NavZoneIllegalBuild              = 0x00000009,
+    gENavTestResult_NegZoneOutOfNavZone              = 0x0000000A,
+    gENavTestResult_NegZoneIllegalBuild              = 0x0000000B,
+    gENavTestResult_FreePointOutOfNavArea            = 0x0000000C,
+    gENavTestResult_FreePointInNegZone               = 0x0000000D,
+    gENavTestResult_FreePointInCollisionCircle       = 0x0000000E,
+//  gENavTestResult_0000000F
+    gENavTestResult_NavOffsetOutOfNavArea            = 0x00000010,
+    gENavTestResult_ForceDWORD                       = GE_FORCE_DWORD
+};
+
 enum gEPageMode
 {
     gEPageMode_None       = 0x00000000,
@@ -119,6 +141,11 @@ class gCCharacterSensor{};
 #include "Game/ge_actionadmin.h"
 
 #include "Game/ge_charactermovement_ps.h"
+
+class GE_DLLIMPORT gCDynamicCollisionCircle_PS{};
+#include "Game/ge_navpath_ps.h"
+#include "Game/ge_prefpath_psobj.h"
+#include "Game/ge_navigation_ps.h"
 
 #include "Game/ge_flightpathbase.h"
 #include "Game/ge_flightpathballistic.h"
