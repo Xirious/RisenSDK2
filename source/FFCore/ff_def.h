@@ -1,9 +1,11 @@
 #ifndef FF_DEF_H_INCLUDED
 #define FF_DEF_H_INCLUDED
 
-#define FF_PADDING( X ) char __padding[ X ];
-#define FF_PADDING1( X ) char __padding1[ X ];
-#define FF_PADDING2( X ) char __padding2[ X ];
+#define __FF_PASTE_TOKENS( A, B ) A##B
+#define _FF_PASTE_TOKENS( A, B ) __FF_PASTE_TOKENS( A, B )
+#define FF_PASTE_TOKENS( A, B ) _FF_PASTE_TOKENS( A, B )
+
+#define FF_PADDING( X ) char FF_PASTE_TOKENS( __padding, __LINE__ )[ X ];
 
 #define FF_FORCE_DWORD 0x7FFFFFFFL
 

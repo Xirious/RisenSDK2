@@ -14,6 +14,14 @@ class NxActor{};
 
 #include "Engine/EngineEnum.h"
 
+//FIXME: bCImageOrMaterialResourceString is not exported and the naming convention indicates
+// that it is a SharedBase class, but the class seems to be introduced in the Engine module.
+class bCImageOrMaterialResourceString :
+    public bCString
+{
+};
+GE_ASSERT_SIZEOF( bCImageOrMaterialResourceString, 0x0004 )
+
 #include "Engine/ge_locadmin2.h"
 #include "Engine/ge_locstring.h"
 
@@ -121,6 +129,8 @@ class eCResourceCache2;
 #include "Engine/ge_collisionshape.h"
 #include "Engine/ge_collisionshapebase_ps.h"
 #include "Engine/ge_collisionshape_ps.h"
+
+#include "Engine/ge_particle_ps.h"
 
 #include "Engine/ge_portalbsp.h"
 #include "Engine/ge_portal.h"
