@@ -845,6 +845,26 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="projectile"
+			>
+			<File
+				RelativePath=".\Game\ge_flightpathballistic.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_flightpathbase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_flightpathseeking.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_projectile2_ps.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
@@ -895,18 +915,6 @@
 		</File>
 		<File
 			RelativePath=".\Game\ge_dynamiclayer.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_flightpathballistic.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_flightpathbase.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_flightpathseeking.h"
 			>
 		</File>
 		<File
