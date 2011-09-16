@@ -309,6 +309,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psprojectile.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psroutine.h"
 				>
 			</File>

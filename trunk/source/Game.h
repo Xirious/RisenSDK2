@@ -160,6 +160,7 @@ class gCDynamicCollisionCircle_PS;
 #include "Game/ge_flightpathbase.h"
 #include "Game/ge_flightpathballistic.h"
 #include "Game/ge_flightpathseeking.h"
+#include "Game/ge_projectile2_ps.h"
 
 #include "Game/ge_effectcommand.h"
 #include "Game/ge_effectcommandearthquake.h"
