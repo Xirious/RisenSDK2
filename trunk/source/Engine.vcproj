@@ -213,6 +213,14 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="particle"
+			>
+			<File
+				RelativePath=".\Engine\ge_particle_ps.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>

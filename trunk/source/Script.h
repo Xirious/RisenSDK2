@@ -56,7 +56,7 @@ class Entity;
 #include "Script/gs_psmover.h"
 #include "Script/gs_psnavigation.h"
 #include "Script/gs_psnpc.h"
-// PSParticle, eCParticle_PS
+#include "Script/gs_psparticle.h"
 // PSParty, gCParty_PS
 // PSProjectile, gCProjectile2_PS
 // PSRecipe, gCRecipe_PS

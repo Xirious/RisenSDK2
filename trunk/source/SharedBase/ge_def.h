@@ -1,14 +1,14 @@
 #ifndef GE_DEF_H_INCLUDED
 #define GE_DEF_H_INCLUDED
 
-#define GE_PADDING( X ) char __padding[ X ];
-#define GE_PADDING1( X ) char __padding1[ X ];
-#define GE_PADDING2( X ) char __padding2[ X ];
-#define GE_PADDING3( X ) char __padding3[ X ];
-#define GE_PADDING4( X ) char __padding4[ X ];
-#define GE_PADDING5( X ) char __padding5[ X ];
-#define GE_PADDING6( X ) char __padding6[ X ];
-#define GE_PADDING7( X ) char __padding7[ X ];
+#define __GE_PASTE_TOKENS( A, B ) A##B
+#define _GE_PASTE_TOKENS( A, B ) __GE_PASTE_TOKENS( A, B )
+#define GE_PASTE_TOKENS( A, B ) _GE_PASTE_TOKENS( A, B )
+
+#define GE_PADDING( X ) char GE_PASTE_TOKENS( __padding, __LINE__ )[ X ];
+//NOTE: [NicoDE] GE_PADDINGx will be removed during next code review.
+#define GE_PADDING1( X ) GE_PADDING( X )
+#define GE_PADDING2( X ) GE_PADDING( X )
 
 #define GE_FORCE_DWORD 0x7FFFFFFFL
 
@@ -20,9 +20,6 @@
 #define GE_DLLIMPORT_EXTC extern "C" GE_DLLIMPORT
 #define GE_DLLIMPORT_DATA extern "C++" GE_DLLIMPORT
 
-#define GE_PASTE_TOKENS( A, B ) GE_PASTE_TOKENS_( A, B )
-#define GE_PASTE_TOKENS_( A, B ) GE_PASTE_TOKENS__( A, B )
-#define GE_PASTE_TOKENS__( A, B ) A##B
 namespace Genome
 {
     template< bool match > struct SIZEOF_ASSERTION;

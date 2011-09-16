@@ -145,22 +145,22 @@ protected:
     GEBool                                                  __FIXME_0174;
     GEBool                                                  m_bIsInProcessingRange;
     GEBool                                                  m_bIsFloorDetectionFailed;
-    GE_PADDING3( 1 )
+    GE_PADDING( 1 )
     GEFloat                                                 m_fSimpleMovementTime;
     bCMotion                                                m_GoalPose;
     GEBool                                                  __FIXME_0198;
     GEBool                                                  __FIXME_0199;
-    GE_PADDING4( 2 )
+    GE_PADDING( 2 )
     gEDirection                                             m_enumNextAniDirection;
     GEBool                                                  __FIXME_01A0;
     GEBool                                                  m_bNewInterPose;
     GEBool                                                  m_bIsNavigateBackModusActive;
-    GE_PADDING5( 1 )
+    GE_PADDING( 1 )
     eCEntity *                                              m_pInteractObject;
     gECharMovementMode                                      m_enumWishedMovementMode;
     gEGotoStatus                                            m_enumGotoStatus;
     GEBool                                                  m_bHasFinalTarget;
-    GE_PADDING6( 3 )
+    GE_PADDING( 3 )
     gSObstacleEvadeSwitch                                   m_ObstacleEvadeSwitch;
     gSObstacleEvadeSwitch                                   m_NPCEvadeSwitch;
     GEBool                                                  m_bEnabled;
@@ -170,7 +170,7 @@ protected:
     GEBool                                                  __FIXME_01E8;
     GEBool                                                  __FIXME_01E9;
     GEBool                                                  __FIXME_01EA;
-    GE_PADDING7( 1 )
+    GE_PADDING( 1 )
     GEInt                                                   m_iWantedNetIndex;
 public:
     gEDirection &                        AccessCurrentAniDirection( void );
