@@ -305,6 +305,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psparty.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psroutine.h"
 				>
 			</File>
