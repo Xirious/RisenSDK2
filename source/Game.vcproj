@@ -833,6 +833,18 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="party"
+			>
+			<File
+				RelativePath=".\Game\ge_party_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_partyadmin.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>

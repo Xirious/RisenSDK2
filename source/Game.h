@@ -106,6 +106,9 @@ enum gEWalkMode
 #include "Game/ge_mapinfo_ps.h"
 #include "Game/ge_maplocstring.h"
 
+#include "Game/ge_party_ps.h"
+#include "Game/ge_partyadmin.h"
+
 #include "Game/ge_scriptproxyaicallback.h"
 #include "Game/ge_scriptproxyaifunction.h"
 #include "Game/ge_scriptproxyaistate.h"
