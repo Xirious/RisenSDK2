@@ -107,6 +107,7 @@ public: virtual bEResult               PostInitializeProperties( void );
 public: virtual GEBool                 OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
 public: virtual GEInt                  GetNativePropertyCount( void ) const;
 public: virtual bCPropertyConverterPtr GetNativePropertyAt( GEInt ) const;
+public: virtual                       ~eCParticle_PS( void );
 public: virtual eEPropertySetType      GetPropertySetType( void ) const;
 public: virtual GEBool                 IsEditorRelevant( void ) const;
 public: virtual GEBool                 IsTriggerable( void ) const;

@@ -9,6 +9,7 @@ class GE_DLLIMPORT gCInfoCommandSaySVM :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSaySVM, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSaySVM( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual gEInfoCommand   GetCommandTypeForScript( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );

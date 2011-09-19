@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSleep :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSleep, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSleep( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual gEInfoCommand   GetCommandTypeForScript( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );

@@ -71,6 +71,7 @@ public:    virtual GEBool                                     OnNotifyPropertyVa
 public:    virtual GEBool                                     OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
 public:    virtual GEInt                                      GetNativePropertyCount( void ) const;
 public:    virtual bCPropertyConverterPtr                     GetNativePropertyAt( GEInt ) const;
+public:    virtual                                           ~gCNavigation_PS( void );
 public:    virtual eEPropertySetType                          GetPropertySetType( void ) const;
 public:    virtual GEBool                                     IsReferencedByTemplate( void ) const;
 public:    virtual GEBool                                     IsEntityListener( void ) const;

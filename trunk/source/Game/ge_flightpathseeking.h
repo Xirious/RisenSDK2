@@ -10,6 +10,7 @@ public: virtual GEBool   OnWrite( bCOStream & );
 public: virtual bEResult Create( void );
 public: virtual void     Destroy( void );
 public: virtual bEResult PostInitializeProperties( void );
+public: virtual         ~gCFlightPathSeeking( void );
 public: virtual GEBool   MoveProjectile( bCVector &, bCVector &, GEFloat );
 public: virtual GEBool   FindInitialDirection( bCVector &, GEFloat, bCVector const &, bCVector const &, bCVector const & );
 protected:

@@ -35,6 +35,7 @@ public:    virtual bEResult     Create( void );
 public:    virtual void         Destroy( void );
 public:    virtual bEResult     PostInitializeProperties( void );
 protected: virtual GEBool       OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
+public:    virtual             ~eCRigidBody_PS( void );
 protected: virtual GEBool       IsEntityListener( void ) const;
 public:    virtual GEBool       IsPhysicRelevant( void ) const;
 public:    virtual GEBool       IsEditorRelevant( void ) const;

@@ -29,15 +29,16 @@ class GE_DLLIMPORT eCCollisionShape :
     public bCObjectRefBase
 {
 GE_DECLARE_PROPERTY_OBJECT( eCCollisionShape, bCObjectRefBase )
-public: virtual GEU16                  GetVersion( void ) const;
-public: virtual GEBool                 OnRead( bCIStream & );
-public: virtual GEBool                 OnWrite( bCOStream & );
-public: virtual bEResult               Create( void );
-public: virtual void                   Destroy( void );
-public: virtual GEBool                 OnCopyFrom( bCObjectBase const & );
-public: virtual bEResult               PostInitializeProperties( void );
-public: virtual GEInt                  GetNativePropertyCount( void ) const;
-public: virtual bCPropertyConverterPtr GetNativePropertyAt( GEInt ) const;
+public:    virtual GEU16                      GetVersion( void ) const;
+public:    virtual GEBool                     OnRead( bCIStream & );
+public:    virtual GEBool                     OnWrite( bCOStream & );
+public:    virtual bEResult                   Create( void );
+public:    virtual void                       Destroy( void );
+public:    virtual GEBool                     OnCopyFrom( bCObjectBase const & );
+public:    virtual bEResult                   PostInitializeProperties( void );
+public:    virtual GEInt                      GetNativePropertyCount( void ) const;
+public:    virtual bCPropertyConverterPtr     GetNativePropertyAt( GEInt ) const;
+protected: virtual                           ~eCCollisionShape( void );
 protected:
     GE_DECLARE_ENUMPROP( eECollisionShapeType, m_enumShapeType, ShapeType )
     GE_DECLARE_ENUMPROP( eEShapeGroup,         m_enumGroup, Group )

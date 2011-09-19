@@ -83,6 +83,7 @@ GE_DECLARE_PROPERTY_OBJECT( eCEngineComponentBase, bCObjectRefBase )
 public:    virtual GEU16         GetVersion( void ) const;
 public:    virtual bEResult      Create( void );
 public:    virtual void          Destroy( void );
+public:    virtual              ~eCEngineComponentBase( void );
 protected:
     GEBool m_bEnabled;
     GEU8   __FIXME;

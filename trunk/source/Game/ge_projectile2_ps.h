@@ -46,6 +46,7 @@ public:    virtual GEBool            OnWrite( bCOStream & );
 public:    virtual bEResult          Create( void );
 public:    virtual void              Destroy( void );
 public:    virtual bEResult          PostInitializeProperties( void );
+public:    virtual                  ~gCProjectile2_PS( void );
 public:    virtual eEPropertySetType GetPropertySetType( void ) const;
 public:    virtual GEBool            IsReferencedByTemplate( void ) const;
 public:    virtual void              GetDependencies( bTObjArray< bCString > &, bTObjArray< bCString > &, bTObjArray< eCTemplateEntityProxy > & );

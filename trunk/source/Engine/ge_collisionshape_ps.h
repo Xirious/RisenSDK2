@@ -52,6 +52,7 @@ public:    virtual bEResult                                   PostInitializeProp
 public:    virtual GEBool                                     OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
 public:    virtual GEInt                                      GetNativePropertyCount( void ) const;
 public:    virtual bCPropertyConverterPtr                     GetNativePropertyAt( GEInt ) const;
+public:    virtual                                           ~eCCollisionShape_PS( void );
 public:    virtual GEBool                                     IsReferencedByTemplate( void ) const;
 public:    virtual GEBool                                     IsEntityListener( void ) const;
 public:    virtual GEBool                                     IsPhysicRelevant( void ) const;

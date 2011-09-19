@@ -30,15 +30,16 @@ class GE_DLLIMPORT bCObjectRefBase :
     public bCObjectBase
 {
 GE_DECLARE_PROPERTY_OBJECT( bCObjectRefBase, bCObjectBase )
-public: virtual GEU16       GetVersion( void ) const;
-public: virtual GEBool      IsValid( void ) const;
-public: virtual GEBool      OnRead( bCIStream & );
-public: virtual GEBool      OnWrite( bCOStream & );
-public: virtual bEResult    Create( void );
-public: virtual void        Destroy( void );
-public: virtual GEU32       AddReference( void );
-public: virtual GEU32       ReleaseReference( void );
-public: using bCObjectBase::GetReferenceCount;
+public:    virtual GEU16       GetVersion( void ) const;
+public:    virtual GEBool      IsValid( void ) const;
+public:    virtual GEBool      OnRead( bCIStream & );
+public:    virtual GEBool      OnWrite( bCOStream & );
+public:    virtual bEResult    Create( void );
+public:    virtual void        Destroy( void );
+public:    virtual GEU32       AddReference( void );
+public:    virtual GEU32       ReleaseReference( void );
+protected: virtual            ~bCObjectRefBase( void );
+protected: using bCObjectBase::GetReferenceCount;
 protected:
     GEU32 m_u32ReferenceCount: 31;
     GEU32 m_bIsValid         :  1;

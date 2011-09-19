@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCWorkspace :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCWorkspace, eCEngineComponentBase )
 public:    virtual void                 Destroy( void );
+public:    virtual                     ~gCWorkspace(void);
 public:    virtual bEResult             PreShutdown( void );
 protected: using eCEngineComponentBase::Create;
 protected:

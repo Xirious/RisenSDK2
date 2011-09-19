@@ -9,6 +9,7 @@ class GE_DLLIMPORT gCInfoConditionNPCStatus :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionNPCStatus, gCInfoCondition )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoConditionNPCStatus( void );
 public: virtual GEBool         IsSatisfied( gCInfo const & );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public: using bCObjectRefBase::IsValid;

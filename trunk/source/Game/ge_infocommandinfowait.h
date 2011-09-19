@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandInfoWait :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandInfoWait, gCInfoCommand )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoCommandInfoWait( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual gEInfoCommand  GetCommandTypeForScript( void ) const;
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );

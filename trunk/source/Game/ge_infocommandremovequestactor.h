@@ -5,6 +5,7 @@ class GE_DLLIMPORT gCInfoCommandRemoveQuestActor :
     public gCInfoCommand
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandRemoveQuestActor, gCInfoCommand )
+public: virtual               ~gCInfoCommandRemoveQuestActor( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;

@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoConditionOwnerNearEntity :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionOwnerNearEntity, gCInfoCondition )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoConditionOwnerNearEntity( void );
 public: virtual GEBool         IsSatisfied( gCInfo const & );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public: using bCObjectRefBase::IsValid;

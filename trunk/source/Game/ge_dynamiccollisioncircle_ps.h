@@ -10,6 +10,7 @@ public: virtual GEBool            OnRead( bCIStream & );
 public: virtual GEBool            OnWrite( bCOStream & );
 public: virtual bEResult          Create( void );
 public: virtual void              Destroy( void );
+public: virtual                  ~gCDynamicCollisionCircle_PS( void );
 public: virtual eEPropertySetType GetPropertySetType( void ) const;
 public: virtual GEBool            IsEntityListener( void ) const;
 public: virtual void              OnEnterProcessingRange( void );

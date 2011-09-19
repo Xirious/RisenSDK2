@@ -9,6 +9,7 @@ public:    virtual GEU16             GetVersion( void ) const;
 protected: virtual bEResult          Create( void );
 protected: virtual void              Destroy( void );
 protected: virtual bEResult          PostInitializeProperties( void );
+public:    virtual                  ~eCMoverAnimationRotate( void );
 public:    virtual GEBool            IsAnimationValid( void ) const;
 public:    virtual void              GetBoundary( bCBox & );
 public:    virtual eEAnimationUpdate GetMotion( GEFloat, bCVector &, bCQuaternion & );

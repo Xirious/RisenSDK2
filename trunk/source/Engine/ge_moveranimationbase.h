@@ -41,6 +41,7 @@ public:    virtual GEU16             GetVersion( void ) const;
 protected: virtual bEResult          Create( void );
 protected: virtual void              Destroy( void );
 protected: virtual bEResult          PostInitializeProperties( void );
+public:    virtual                  ~eCMoverAnimationBase( void );
 protected:
     GE_DECLARE_PROPERTY( bCString,            m_strName,          Name )
     GE_DECLARE_ENUMPROP( eEMoverPlayBackMode, m_enumPlayBackMode, PlayBackMode )

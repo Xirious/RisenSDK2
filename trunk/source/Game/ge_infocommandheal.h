@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandHeal :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandHeal, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandHeal( void );
 public: virtual gEInfoCommand   GetCommandTypeForScript( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual eCEntityProxy & GetEntityProxy2( gCRuntimeInfo & );

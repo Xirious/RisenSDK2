@@ -7,6 +7,7 @@ class GE_DLLIMPORT gCInfoCommandShowSubtitle :
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandShowSubtitle, gCInfoCommand )
 public: virtual void           Destroy( void );
 public: virtual GEBool         HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );
+public: virtual               ~gCInfoCommandShowSubtitle( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual void           GetTableKeys( bTObjArray< bCString > & );
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );

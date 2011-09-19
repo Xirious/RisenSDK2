@@ -34,6 +34,7 @@ public: virtual void            FromString( bCString const & );
 public: virtual gCInfoCommand * Clone( void ) const;
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommand, bCObjectRefBase )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommand( void );
 public: using  bCObjectRefBase::IsValid;
 public:
     bCString &          AccessEntity1( void );

@@ -10,6 +10,7 @@ class GE_DLLIMPORT gCInfoCommandSay :
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSay, gCInfoCommand )
 public: virtual void            Destroy( void );
 public: virtual GEBool          HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );
+public: virtual                ~gCInfoCommandSay( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual gEInfoCommand   GetCommandTypeForScript( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );

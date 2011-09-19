@@ -94,6 +94,7 @@ public:    virtual GEBool                OnWrite( bCOStream & );
 public:    virtual bEResult              Create( void );
 public:    virtual void                  Destroy( void );
 public:    virtual GEBool                OnCopyFrom( bCObjectBase const & );
+public:    virtual                      ~eCEntityPropertySet( void );
 protected:
     eCEntity * m_pEntity;
     GEU8       m_IsRenderingEnabled      : 1;  // GEBool

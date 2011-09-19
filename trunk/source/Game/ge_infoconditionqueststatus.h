@@ -9,6 +9,7 @@ class GE_DLLIMPORT gCInfoConditionQuestStatus :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionQuestStatus, gCInfoCondition )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoConditionQuestStatus( void );
 public: virtual GEBool         IsSatisfied( gCInfo const & );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public: using bCObjectRefBase::IsValid;

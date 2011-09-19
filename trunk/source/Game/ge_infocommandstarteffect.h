@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandStartEffect :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandStartEffect, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandStartEffect( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

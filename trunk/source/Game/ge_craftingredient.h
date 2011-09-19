@@ -5,6 +5,7 @@ class GE_DLLIMPORT gCCraftIngredient :
     public bCObjectBase
 {
 GE_DECLARE_PROPERTY_OBJECT( gCCraftIngredient, bCObjectBase )
+public: virtual ~gCCraftIngredient( void );
 protected:
     GE_DECLARE_PROPERTY( eCTemplateEntityProxy, m_ItemTemplate,  ItemTemplate )
     GE_DECLARE_PROPERTY( GEU32,                 m_u32ItemAmount, ItemAmount )

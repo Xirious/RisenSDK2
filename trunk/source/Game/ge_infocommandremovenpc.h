@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandRemoveNPC :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandRemoveNPC, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandRemoveNPC( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

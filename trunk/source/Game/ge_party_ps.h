@@ -36,6 +36,7 @@ public:    virtual GEBool                                     OnRead( bCIStream 
 public:    virtual GEBool                                     OnWrite( bCOStream & );
 public:    virtual bEResult                                   Create( void );
 public:    virtual void                                       Destroy( void );
+public:    virtual                                           ~gCParty_PS( void );
 public:    virtual eEPropertySetType                          GetPropertySetType( void ) const;
 protected: virtual GEBool                                     IsReferencedByTemplate( void ) const;
 public:    virtual eCEntityPropertySet::eEPSSaveGameRelevance GetSaveGameRelevance( void ) const;

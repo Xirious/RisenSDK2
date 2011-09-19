@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSetWorkingPoint :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSetWorkingPoint, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSetWorkingPoint( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual eCEntityProxy & GetEntityProxy2( gCRuntimeInfo & );
