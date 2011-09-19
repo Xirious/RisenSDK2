@@ -59,7 +59,7 @@ class Entity;
 #include "Script/gs_psparticle.h"
 #include "Script/gs_psparty.h"
 #include "Script/gs_psprojectile.h"
-// PSRecipe, gCRecipe_PS
+#include "Script/gs_psrecipe.h"
 // PSRigidBody, eCRigidBody_PS
 #include "Script/gs_psroutine.h"
 #include "Script/gs_psskills.h"
