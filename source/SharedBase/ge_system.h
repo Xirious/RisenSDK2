@@ -8,6 +8,7 @@
 #ifndef _WIN32_WINNT
 #define _WIN32_WINNT WINVER
 #endif
+#define NOMINMAX
 #include <windows.h>
 #pragma warning( pop )
 //FIXME: GetClassName macro "renames" some Genome class methods.

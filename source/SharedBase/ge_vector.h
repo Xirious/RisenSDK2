@@ -1,8 +1,6 @@
 #ifndef GE_VECTOR_H_INCLUDED
 #define GE_VECTOR_H_INCLUDED
 
-#include "../../extern/physx281/SDKs/Foundation/include/NxVec3.h"
-
 #pragma warning( push )
 #pragma warning( disable : 4201 )  // nonstandard extension used : nameless struct/union
 

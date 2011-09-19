@@ -317,6 +317,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psrigidbody.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psroutine.h"
 				>
 			</File>
