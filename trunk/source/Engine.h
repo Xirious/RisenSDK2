@@ -3,14 +3,18 @@
 
 #include "FFC.h"
 
+// EMotion FX declarations (external)
 namespace EMotionFX
 {
-    class ActorInstance{};
-    class Motion{};
-    class MotionInstance{};
-    class SkeletalSubMotion{};
+    class ActorInstance;
+    class Motion;
+    class MotionInstance;
+    class SkeletalSubMotion;
 }
-class NxActor{};
+// PhysX declarations (external)
+class NxActor;
+class NxCCDSkeleton;
+class NxShape;
 
 #include "Engine/EngineEnum.h"
 
@@ -126,6 +130,7 @@ class eCResourceCache2;
 #include "Engine/ge_resourcecache2.h"
 #include "Engine/ge_resourcemodule2.h"
 
+class eCCollisionShape_PS;
 #include "Engine/ge_collisionshape.h"
 #include "Engine/ge_collisionshapebase_ps.h"
 #include "Engine/ge_collisionshape_ps.h"
@@ -136,6 +141,21 @@ class eCResourceCache2;
 #include "Engine/ge_portal.h"
 #include "Engine/ge_portalcell_ps.h"
 #include "Engine/ge_portalroom_ps.h"
+
+enum eEForceMode
+{
+    //FIXME: eEForceMode constants (NxForceMode?).
+    eEForceMode_ForceDWORD = GE_FORCE_DWORD
+};
+
+enum eEPhysicObjectFlag
+{
+    //FIXME: eEPhysicObjectFlag constants (NxActorFlag?).
+    eEPhysicObjectFlag_ForceDWORD = GE_FORCE_DWORD
+};
+
+#include "Engine/ge_rigidbodybase_ps.h"
+#include "Engine/ge_rigidbody_ps.h"
 
 #include "Engine/ge_messagehandler.h"
 #include "Engine/ge_window.h"

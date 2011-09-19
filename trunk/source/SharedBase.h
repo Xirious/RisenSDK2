@@ -1,6 +1,9 @@
 #ifndef SHAREDBASE_H_INCLUDED
 #define SHAREDBASE_H_INCLUDED
 
+// PhysX declarations (external)
+class NxVec3;
+
 #include "SharedBase/ge_def.h"
 #include "SharedBase/ge_types.h"
 #include "SharedBase/ge_system.h"

@@ -3,9 +3,9 @@
 
 enum eEPhysicRangeType
 {
-    eEPhysicRangeType_World           = 0x00000000,
-    eEPhysicRangeType_ProcessingRange = 0x00000001,
-    eEPhysicRangeType_VisibilityRange = 0x00000002,
+    eEPhysicRangeType_World,
+    eEPhysicRangeType_ProcessingRange,
+    eEPhysicRangeType_VisibilityRange,
     eEPhysicRangeType_ForceDWORD = GE_FORCE_DWORD
 };
 
@@ -15,17 +15,15 @@ enum eEPhysicRangeType
 class GE_DLLIMPORT eCCollisionShape_PS :
     public eCCollisionShapeBase_PS
 {
-public:    using                     eCCollisionShapeBase_PS::SetShape;
+
 public:    virtual bEResult                                   SetShape( bCString const &, GEBool );
 public:    virtual bEResult                                   AddShape( bCString const &, GEBool );
-public:    using                     eCCollisionShapeBase_PS::AddShape;
 public:    virtual bEResult                                   AddShape( eECollisionShapeType, eEShapeGroup, bCVector const &, bCVector const & );
 public:    virtual GEBool                                     AddShapesFromSpeedTreePS( void );
 public:    virtual GEBool                                     AddShapesFromSpeedTreeResource( eCSpeedTreeResource2 * );
 public:    virtual bEResult                                   AddDynamicShape( eECollisionShapeType, eEShapeGroup, eEShapeAABBAdapt, GEFloat );
 public:    virtual bEResult                                   AddPointShape( eEShapeGroup, bCVector const & );
 public:    virtual bEResult                                   AddTouchingShape( eCCollisionShape * );
-public:    using                     eCCollisionShapeBase_PS::GetShapeAtIndex;
 public:    virtual eCCollisionShape *                         GetShapeAtIndex( GEInt ) const;
 public:    virtual NxShape *                                  GetProprietaryShapeAtIndex( GEU32 ) const;
 public:    virtual void                                       RemoveShapes( void );
@@ -43,7 +41,7 @@ protected: virtual void                                       RemoveShapesIntern
 public:    virtual void                                       OnPreTouch( eCEntity *, eCContactIterator & );
 public:    virtual void                                       OnPreUntouch( eCEntity *, eCContactIterator & );
 public:    virtual void                                       OnPostTouch( eCEntity *, eCContactIterator & );
-public:    virtual bCPropertyObjectTypeBase *                 GetObjectType( void ) const;
+GE_DECLARE_PROPERTY_OBJECT( eCCollisionShape_PS, eCCollisionShapeBase_PS )
 public:    virtual GEU16                                      GetVersion( void ) const;
 public:    virtual GEBool                                     OnRead( bCIStream & );
 public:    virtual GEBool                                     OnWrite( bCOStream & );
@@ -54,7 +52,6 @@ public:    virtual bEResult                                   PostInitializeProp
 public:    virtual GEBool                                     OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
 public:    virtual GEInt                                      GetNativePropertyCount( void ) const;
 public:    virtual bCPropertyConverterPtr                     GetNativePropertyAt( GEInt ) const;
-public:    virtual                                           ~eCCollisionShape_PS( void );
 public:    virtual GEBool                                     IsReferencedByTemplate( void ) const;
 public:    virtual GEBool                                     IsEntityListener( void ) const;
 public:    virtual GEBool                                     IsPhysicRelevant( void ) const;
@@ -81,22 +78,46 @@ public:    virtual GEBool                                     OnListenEntityEven
 protected: virtual void                                       OnCacheIn( void );
 protected: virtual void                                       OnCacheOut( void );
 protected: virtual void                                       OnPrefetch( bCVector const & );
+public:    virtual bEResult                                   SetShape( eCCollisionShape * );
+public:    virtual bEResult                                   AddShape( eCCollisionShape * );
+public:    virtual GEU32                                      GetNumShapes( void ) const;
+protected: using                     eCCollisionShapeBase_PS::AddShape;
+protected: using                     eCCollisionShapeBase_PS::GetShapeAtIndex;
+protected: using                     eCCollisionShapeBase_PS::SetShape;
 protected:
-    bTPropertyContainer< eECollisionGroup >  m_Group;
-    bTPropertyContainer< eEPhysicRangeType > m_Range;
-    GEBool                                   m_bDisableCollision;
-    GEBool                                   m_bDisableResponse;
-    GEBool                                   m_bIgnoredByTraceRay;
-    GEBool                                   m_bIsUnique;
-    GEBool                                   m_bIsClimbable;
-    GEBool                                   m_bHitByProjectile;
-                                             GE_PADDING( 2 )
-    bTRefPtrArray< eCCollisionShape * >      m_arrShapes;
-    bTRefPtrArray< eCCollisionShape * >      m_arrTouchingShapes;
-    GEBool                                   __FIXME_0040;  // IsRootRemoved? HasTouchingShapes?
-                                             GE_PADDING1( 3 )
-    eEPropertySetType                        m_enuTouchType;
-    bCString                                 m_strTouchingBone;
+    GE_DECLARE_ENUMPROP( eECollisionGroup,  m_enumGroup,          Group )
+    GE_DECLARE_ENUMPROP( eEPhysicRangeType, m_enumRange,          Range )
+    GE_DECLARE_PROPERTY( GEBool,            m_bDisableCollision,  DisableCollision )
+    GE_DECLARE_PROPERTY( GEBool,            m_bDisableResponse,   DisableResponse )
+    GE_DECLARE_PROPERTY( GEBool,            m_bIgnoredByTraceRay, IgnoredByTraceRay )
+    GE_DECLARE_PROPERTY( GEBool,            m_bIsUnique,          IsUnique )
+    GE_DECLARE_PROPERTY( GEBool,            m_bIsClimbable,       IsClimbable )
+    GE_DECLARE_PROPERTY( GEBool,            m_bHitByProjectile,   HitByProjectile )
+    GE_PADDING( 2 )
+    bTRefPtrArray< eCCollisionShape * >     m_arrShapes;
+    bTRefPtrArray< eCCollisionShape * >     m_arrTouchingShapes;
+    GEBool                                  m_bTouchingShapesDirty;
+    GE_PADDING( 3 )
+    eEPropertySetType                       m_enumTouchType;
+    bCString                                m_strTouchingBone;
+public:
+    void                                        ClearTouchingShapes( void );
+    void                                        EnableShapeGroupCollision( eEShapeGroup, GEBool, GEInt );
+    GEU32                                       GetNumTouchingShapes( void ) const;
+    NxShape *                                   GetProprietaryTouchingShape( GEU32 ) const;
+    bTRefPtrArray< eCCollisionShape * > const & GetShapes( void ) const;
+    bCString const &                            GetTouchingBone( void ) const;
+    eCCollisionShape *                          GetTouchingShapeAtIndex( GEU32 ) const;
+    eEPropertySetType                           GetTouchType( void ) const;
+    GEBool const                                HasConvexMesh( void ) const;
+    GEBool const                                HasGroup( eEShapeGroup ) const;
+    GEBool const                                HasScalableMesh( void ) const;
+    GEBool const                                HasTriangleMesh( void ) const;
+    GEBool                                      IsClimbable( void ) const;
+    void                                        SetShapeGroup( eEShapeGroup, eEShapeGroup );
+    void                                        SetShapes( bTRefPtrArray< eCCollisionShape * > const & );
+    void                                        SetTouchingShapesDirty( void );
+    GEBool                                      TraceRayFirstHit( bCRay & );
 protected:
     void    GetGizmoData( eCCollisionShape *, GELPVoid );
     GEFloat GetGizmoScaling( eCCameraBase * ) const;
@@ -107,57 +128,6 @@ protected:
     void    SetGizmoData( eCCollisionShape *, GELPVoid );
     void    SetProprietaryShapes( void );
     void    ShrinkTouchingShapes( void );
-public:
-    static bCObjectBase *             CreateObject( void );
-    static bCPropertyObjectTypeBase & GetThisType( void );
-    static void                       StaticConstructor( bCPropertyObjectTypeBase & );
-public:
-    GEBool &                                         AccessDisableCollision( void );
-    GEBool &                                         AccessDisableResponse( void );
-    bTPropertyContainer< eECollisionGroup > &        AccessGroup( void );
-    GEBool &                                         AccessHitByProjectile( void );
-    GEBool &                                         AccessIgnoredByTraceRay( void );
-    GEBool &                                         AccessIsClimbable( void );
-    GEBool &                                         AccessIsUnique( void );
-    bTPropertyContainer< eEPhysicRangeType > &       AccessRange( void );
-    void                                             ClearTouchingShapes( void );
-    void                                             EnableShapeGroupCollision( eEShapeGroup, GEBool, GEInt );
-    GEBool const &                                   GetDisableCollision( void ) const;
-    GEBool const &                                   GetDisableResponse( void ) const;
-    bTPropertyContainer< eECollisionGroup > const &  GetGroup( void ) const;
-    GEBool const &                                   GetHitByProjectile( void ) const;
-    GEBool const &                                   GetIgnoredByTraceRay( void ) const;
-    GEBool const &                                   GetIsClimbable( void ) const;
-    GEBool const &                                   GetIsUnique( void ) const;
-    GEU32                                            GetNumTouchingShapes( void ) const;
-    NxShape *                                        GetProprietaryTouchingShape( GEU32 ) const;
-    bTPropertyContainer< eEPhysicRangeType > const & GetRange( void ) const;
-    bTRefPtrArray< eCCollisionShape * > const &      GetShapes( void ) const;
-    bCString const &                                 GetTouchingBone( void ) const;
-    eCCollisionShape *                               GetTouchingShapeAtIndex( GEU32 ) const;
-    eEPropertySetType                                GetTouchType( void ) const;
-    GEBool const                                     HasConvexMesh( void ) const;
-    GEBool const                                     HasGroup( eEShapeGroup ) const;
-    GEBool const                                     HasScalableMesh( void ) const;
-    GEBool const                                     HasTriangleMesh( void ) const;
-    GEBool                                           IsClimbable( void ) const;
-    void                                             SetDisableCollision( GEBool const & );
-    void                                             SetDisableResponse( GEBool const & );
-    void                                             SetGroup( bTPropertyContainer< eECollisionGroup > const & );
-    void                                             SetHitByProjectile( GEBool const & );
-    void                                             SetIgnoredByTraceRay( GEBool const & );
-    void                                             SetIsClimbable( GEBool const & );
-    void                                             SetIsUnique( GEBool const & );
-    void                                             SetRange( bTPropertyContainer< eEPhysicRangeType > const & );
-    void                                             SetShapeGroup( eEShapeGroup, eEShapeGroup );
-    void                                             SetShapes( bTRefPtrArray< eCCollisionShape * > const & );
-    void                                             SetTouchingShapesDirty( void );
-    GEBool                                           TraceRayFirstHit( bCRay & );
-public:
-    eCCollisionShape_PS & operator = ( eCCollisionShape_PS const & );
-public:
-    eCCollisionShape_PS( eCCollisionShape_PS const & );
-    eCCollisionShape_PS( void );
 };
 GE_ASSERT_SIZEOF( eCCollisionShape_PS, 0x004C )
 

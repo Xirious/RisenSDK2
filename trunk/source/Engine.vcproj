@@ -221,6 +221,18 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="physic"
+			>
+			<File
+				RelativePath=".\Engine\ge_rigidbody_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_rigidbodybase_ps.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>
