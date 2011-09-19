@@ -38,7 +38,7 @@ inline void GE_CCALL operator delete( void *, void * )
 
 GE_DLLIMPORT_EXTC void * GE_STDCALL operator new( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );
 
-#define GE_NEW( T ) new( 0, 0, 0, 0 ) T
+#define GE_NEW( T ) new( 0, 0, 0, -1 ) T
 
 //
 // delete

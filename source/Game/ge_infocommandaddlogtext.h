@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandAddLogText :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandAddLogText, gCInfoCommand )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoCommandAddLogText( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual void           GetTableKeys( bTObjArray< bCString> & );
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );

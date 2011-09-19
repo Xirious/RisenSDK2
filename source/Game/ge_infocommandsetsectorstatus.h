@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSetSectorStatus :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSetSectorStatus, gCInfoCommand )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoCommandSetSectorStatus( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual gEInfoCommand  GetCommandTypeForScript( void ) const;
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );

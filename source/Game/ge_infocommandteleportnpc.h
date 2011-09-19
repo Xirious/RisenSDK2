@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandTeleportNPC :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandTeleportNPC, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandTeleportNPC( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual eCEntityProxy & GetEntityProxy2( gCRuntimeInfo & );

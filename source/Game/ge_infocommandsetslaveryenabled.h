@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSetSlaveryEnabled :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSetSlaveryEnabled, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSetSlaveryEnabled( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

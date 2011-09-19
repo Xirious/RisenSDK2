@@ -11,6 +11,7 @@ GE_DECLARE_PROPERTY_OBJECT( gCPartyAdmin, eCEngineComponentBase )
 public: virtual GEBool   IsValid( void ) const;
 public: virtual bEResult Create( void );
 public: virtual void     Destroy( void );
+public: virtual         ~gCPartyAdmin( void );
 public: virtual bEResult Initialize( void );
 public: virtual bEResult PostInitialize( void );
 public: virtual bEResult Shutdown( void );

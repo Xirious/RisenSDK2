@@ -205,6 +205,7 @@ public: virtual GEBool                 OnCopyFrom( bCObjectBase const & );
 public: virtual bEResult               PostInitializeProperties( void );
 public: virtual GEInt                  GetNativePropertyCount( void ) const;
 public: virtual bCPropertyConverterPtr GetNativePropertyAt( GEInt ) const;
+public: virtual                       ~gCInfo( void );
 public: virtual bCString               GetRawExt( void ) const;
 public: virtual bCString               GetRawPath( void ) const;
 protected:

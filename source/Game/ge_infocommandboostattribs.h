@@ -17,6 +17,7 @@ class GE_DLLIMPORT gCInfoCommandBoostAttribs :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandBoostAttribs, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandBoostAttribs( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

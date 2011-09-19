@@ -30,6 +30,7 @@ protected: virtual void              Destroy( void );
 public:    virtual GEBool            OnCopyFrom( bCObjectBase const & );
 public:    virtual GEBool            OnCopyPatchableOnly( bCObjectBase const & );
 protected: virtual bEResult          PostInitializeProperties( void );
+public:    virtual                  ~eCMover_PS( void );
 public:    virtual eEPropertySetType GetPropertySetType( void ) const;
 public:    virtual GEBool            IsReferencedByTemplate( void ) const;
 public:    virtual void              GetDependencies( bTObjArray< bCString > &, bTObjArray< bCString > &, bTObjArray< eCTemplateEntityProxy > & );

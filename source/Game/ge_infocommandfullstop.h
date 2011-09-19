@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandFullStop :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandFullStop, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandFullStop( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

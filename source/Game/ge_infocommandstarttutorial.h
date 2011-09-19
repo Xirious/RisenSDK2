@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandStartTutorial :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandStartTutorial, gCInfoCommand )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoCommandStartTutorial( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;

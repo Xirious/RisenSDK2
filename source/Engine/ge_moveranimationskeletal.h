@@ -10,6 +10,7 @@ protected: virtual bEResult Create( void );
 protected: virtual void     Destroy( void );
 protected: virtual bEResult PostInitializeProperties( void );
 protected: virtual GEBool   OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
+public:    virtual         ~eCMoverAnimationSkeletal( void );
 public:    virtual GEBool   IsAnimationValid( void ) const;
 public:    virtual void     Prefetch( void );
 public:    virtual GEBool   UpdateTime( void );

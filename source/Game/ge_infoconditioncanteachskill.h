@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoConditionCanTeachSkill :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionCanTeachSkill, gCInfoCondition )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoConditionCanTeachSkill( void );
 public: virtual GEBool         IsSatisfied( gCInfo const & );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public: using bCObjectRefBase::IsValid;

@@ -18,6 +18,7 @@ public: virtual void              Destroy( void );
 public: virtual bEResult          PostInitializeProperties( void );
 public: virtual GEBool            HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );
 public: virtual GEBool            OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
+public: virtual                  ~gCCollisionCircle_PS( void );
 public: virtual eEPropertySetType GetPropertySetType( void ) const;
 public: virtual GEBool            IsReferencedByTemplate( void ) const;
 public: virtual GEBool            IsEntityListener( void ) const;

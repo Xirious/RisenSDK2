@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSayConfirm :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSayConfirm, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSayConfirm( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual gEInfoCommand   GetCommandTypeForScript( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );

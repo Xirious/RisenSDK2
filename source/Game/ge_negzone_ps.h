@@ -16,6 +16,7 @@ public:    virtual bEResult          Create( void );
 public:    virtual void              Destroy( void );
 protected: virtual GEBool            HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );
 protected: virtual GEBool            OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
+public:    virtual                  ~gCNegZone_PS( void );
 public:    virtual eEPropertySetType GetPropertySetType( void ) const;
 public:    virtual GEBool            IsReferencedByTemplate( void ) const;
 public:    virtual GEBool            IsEntityListener( void ) const;

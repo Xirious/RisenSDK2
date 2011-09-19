@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSetTeachEnabled :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSetTeachEnabled, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSetTeachEnabled( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

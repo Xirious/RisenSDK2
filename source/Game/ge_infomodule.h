@@ -21,6 +21,7 @@ protected:
     GE_ASSERT_SIZEOF( CProcessor, 0x0010 )
 
 GE_DECLARE_PROPERTY_OBJECT( gCInfoModule, eCEngineComponentBase )
+public:    virtual              ~gCInfoModule( void );
 public:    virtual bEResult      Initialize( void );
 public:    virtual bEResult      PostInitialize( void );
 public:    virtual bEResult      Shutdown( void );

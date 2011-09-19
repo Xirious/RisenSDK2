@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoCommandSetMobEnabled :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandSetMobEnabled, gCInfoCommand )
 public: virtual void            Destroy( void );
+public: virtual                ~gCInfoCommandSetMobEnabled( void );
 public: virtual gEInfoCommand   GetCommandType( void ) const;
 public: virtual eCEntityProxy & GetEntityProxy1( gCRuntimeInfo & );
 public: virtual void            ResetProxies( void );

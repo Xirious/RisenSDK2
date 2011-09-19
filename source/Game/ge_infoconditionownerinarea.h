@@ -6,6 +6,7 @@ class GE_DLLIMPORT gCInfoConditionOwnerInArea :
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionOwnerInArea, gCInfoCondition )
 public: virtual void           Destroy( void );
+public: virtual               ~gCInfoConditionOwnerInArea( void );
 public: virtual GEBool         IsSatisfied( gCInfo const & );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public: using bCObjectRefBase::IsValid;

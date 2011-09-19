@@ -8,6 +8,7 @@ class GE_DLLIMPORT gCInfoCommandAddNPCInfo :
     public gCInfoCommand
 {
 GE_DECLARE_PROPERTY_OBJECT( gCInfoCommandAddNPCInfo, gCInfoCommand )
+public: virtual               ~gCInfoCommandAddNPCInfo( void );
 public: virtual gEInfoCommand  GetCommandType( void ) const;
 public: virtual GEBool         Execute( gCRuntimeInfo &, GEBool );
 public: virtual GEBool         IsValid( bCString &, gCInfo const & ) const;

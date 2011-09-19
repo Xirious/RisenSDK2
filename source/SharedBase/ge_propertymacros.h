@@ -7,7 +7,6 @@
 
 #define GE_DECLARE_PROPERTY_OBJECT( CLASS, BASECLASS )                                            \
 public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;                           \
-public: virtual                           ~CLASS( void );                                         \
 public:                                                                                           \
     static bCObjectBase *             GE_STDCALL CreateObject( void );                            \
     static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );                             \

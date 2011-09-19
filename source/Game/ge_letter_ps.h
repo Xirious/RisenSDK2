@@ -12,6 +12,7 @@ public: virtual bEResult          Create( void );
 public: virtual void              Destroy( void );
 public: virtual bEResult          PostInitializeProperties( void );
 public: virtual GEBool            HandleDeprecatedProperty( bCString const &, bCString const &, bCIStream & );
+public: virtual                  ~gCLetter_PS( void );
 public: virtual eEPropertySetType GetPropertySetType( void ) const;
 protected:
     GE_DECLARE_PROPERTY( gCLetterLocString, m_locHeader, Header )

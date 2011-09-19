@@ -7,6 +7,7 @@ class GE_DLLIMPORT gCInfoConditionPlayerNotKnows :
 GE_DECLARE_PROPERTY_OBJECT( gCInfoConditionPlayerNotKnows, gCInfoCondition )
 public:    virtual void           Destroy( void );
 protected: virtual GEBool         OnNotifyPropertyValueChangedExitEx( GELPCChar, GEBool );
+public:    virtual               ~gCInfoConditionPlayerNotKnows( void );
 public:    virtual GEBool         IsSatisfied( gCInfo const & );
 public:    virtual GEBool         IsValid( bCString &, gCInfo const & ) const;
 public:    using bCObjectRefBase::IsValid;
