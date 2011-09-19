@@ -119,6 +119,9 @@ enum gEWalkMode
 #include "Game/ge_modifyskill.h"
 #include "Game/ge_skills_ps.h"
 
+#include "Game/ge_craftingredient.h"
+#include "Game/ge_recipe_ps.h"
+
 class gCInteraction_PS;
 #include "Game/ge_interaction.h"
 #include "Game/ge_interactionslot.h"

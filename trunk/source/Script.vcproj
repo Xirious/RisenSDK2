@@ -313,6 +313,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\Script\gs_psrecipe.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Script\gs_psroutine.h"
 				>
 			</File>

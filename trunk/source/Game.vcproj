@@ -865,6 +865,18 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="craft"
+			>
+			<File
+				RelativePath=".\Game\ge_craftingredient.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_recipe_ps.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Game.h"
 			>
