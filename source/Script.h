@@ -64,7 +64,7 @@ class Entity;
 #include "Script/gs_psroutine.h"
 #include "Script/gs_psskills.h"
 #include "Script/gs_psstategraph.h"
-// PSStrip, eCStrip_PS
+#include "Script/gs_psstrip.h"
 #include "Script/gs_questmanager.h"
 #include "Script/gs_scriptactiontimer.h"
 #include "Script/gs_scriptcommentmanager.h"

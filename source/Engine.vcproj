@@ -220,6 +220,10 @@
 				RelativePath=".\Engine\ge_particle_ps.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Engine\ge_strip_ps.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="physic"
