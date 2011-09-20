@@ -233,6 +233,18 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="effect"
+			>
+			<File
+				RelativePath=".\Engine\ge_effectmodulebase.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Engine\ge_effectsystembase.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\Engine.h"
 			>
