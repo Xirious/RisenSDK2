@@ -26,6 +26,7 @@ bCUnicodeString GetFormattedResourceString( GEUInt a_uID, ... )
             if( pwResult )
                 ::LocalFree( reinterpret_cast< HLOCAL >( pwResult ) );
         }
+        va_end( Arguments );
     }
     return strResult;
 }
