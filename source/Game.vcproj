@@ -132,6 +132,14 @@
 				RelativePath=".\Game\ge_effect_ps.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Game\ge_effectmodule.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_effectsystem.h"
+				>
+			</File>
 			<Filter
 				Name="command"
 				>
@@ -876,6 +884,114 @@
 				RelativePath=".\Game\ge_recipe_ps.h"
 				>
 			</File>
+		</Filter>
+		<Filter
+			Name="stategraph"
+			>
+			<File
+				RelativePath=".\Game\ge_stategraph_ps.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_stategraphstate.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Game\ge_stategraphtransition.h"
+				>
+			</File>
+			<Filter
+				Name="filter"
+				>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilter.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfiltercollisionshape.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilterdamageamount.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilterisentity.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilterisnpc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilterisplayer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfilterscript.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategrapheventfiltertemplate.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="action"
+				>
+				<File
+					RelativePath=".\Game\ge_stategraphaction.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactioncallscript.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactioneventdispatcher.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionfollowstate.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionpauseani.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionplayani.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionstarteffect.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionstop.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactiontrigger.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactiontriggerstate.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionuntrigger.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionvisibility.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Game\ge_stategraphactionwait.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath=".\Game.h"

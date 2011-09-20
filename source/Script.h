@@ -63,7 +63,7 @@ class Entity;
 #include "Script/gs_psrigidbody.h"
 #include "Script/gs_psroutine.h"
 #include "Script/gs_psskills.h"
-// PSStateGraph, gCStateGraph_PS
+#include "Script/gs_psstategraph.h"
 // PSStrip, eCStrip_PS
 #include "Script/gs_questmanager.h"
 #include "Script/gs_scriptactiontimer.h"

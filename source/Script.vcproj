@@ -328,6 +328,10 @@
 				RelativePath=".\Script\gs_psskills.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Script\gs_psstategraph.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="effect"

@@ -182,6 +182,8 @@ class gCDynamicCollisionCircle_PS;
 #include "Game/ge_effectcommandspawnentityswitch.h"
 #include "Game/ge_effectcommandsequence2.h"
 #include "Game/ge_effect.h"
+#include "Game/ge_effectsystem.h"
+#include "Game/ge_effectmodule.h"
 
 #include "Game/ge_scriptargs.h"
 class gCScriptAdmin;
@@ -329,6 +331,33 @@ class gCInfoCondition;
 class gCSector;
 #include "Game/ge_layerbase.h"
 #include "Game/ge_dynamiclayer.h"
+
+#include "Game/ge_stategrapheventfilter.h"
+#include "Game/ge_stategrapheventfiltercollisionshape.h"
+#include "Game/ge_stategrapheventfilterdamageamount.h"
+#include "Game/ge_stategrapheventfilterisentity.h"
+#include "Game/ge_stategrapheventfilterisnpc.h"
+#include "Game/ge_stategrapheventfilterisplayer.h"
+#include "Game/ge_stategrapheventfilterscript.h"
+#include "Game/ge_stategrapheventfiltertemplate.h"
+class gCStateGraphState;
+class gCStateGraph_PS;
+#include "Game/ge_stategraphaction.h"
+#include "Game/ge_stategraphactioncallscript.h"
+#include "Game/ge_stategraphactioneventdispatcher.h"
+#include "Game/ge_stategraphactionfollowstate.h"
+#include "Game/ge_stategraphactionpauseani.h"
+#include "Game/ge_stategraphactionplayani.h"
+#include "Game/ge_stategraphactionstop.h"
+#include "Game/ge_stategraphactiontrigger.h"
+#include "Game/ge_stategraphactiontriggerstate.h"
+#include "Game/ge_stategraphactionuntrigger.h"
+#include "Game/ge_stategraphactionvisibility.h"
+#include "Game/ge_stategraphactionwait.h"
+#include "Game/ge_stategraphtransition.h"
+#include "Game/ge_stategraphstate.h"
+#include "Game/ge_stategraph_ps.h"
+
 //FIXME: gSSaveGameConflict
 class gCWorld;
 #include "Game/ge_sector.h"

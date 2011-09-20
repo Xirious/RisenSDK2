@@ -115,6 +115,9 @@ class eCStatisticView;
 #include "Engine/ge_enginecomponentbase.h"
 #include "Engine/ge_moduleadmin.h"
 
+#include "Engine/ge_effectsystembase.h"
+#include "Engine/ge_effectmodulebase.h"
+
 #include "Engine/ge_resourceinputstream2.h"
 #include "Engine/ge_resourceoutputstream2.h"
 class GE_DLLIMPORT eCCollisionMeshResource2{};
@@ -202,7 +205,10 @@ class eCMover_PS;
 // eCMoverAnimationTCB: eCMoverAnimationKFBase
 #include "Engine/ge_mover_ps.h"
 
-class eCPrimitiveWeatherZoneBox{};
+class GE_DLLIMPORT eCPrimitiveStateGraphArrow{};
+class GE_DLLIMPORT eCPrimitiveStateGraphLine{};
+class GE_DLLIMPORT eCPrimitiveWeatherZoneBox{};
+
 #include "Engine/ge_area_stringproperty_ps.h"
 
 #endif
