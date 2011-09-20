@@ -139,6 +139,7 @@ class eCCollisionShape_PS;
 #include "Engine/ge_collisionshape_ps.h"
 
 #include "Engine/ge_particle_ps.h"
+#include "Engine/ge_strip_ps.h"
 
 #include "Engine/ge_portalbsp.h"
 #include "Engine/ge_portal.h"
