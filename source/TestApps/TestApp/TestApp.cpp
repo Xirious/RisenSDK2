@@ -75,10 +75,7 @@ static int __stdcall ProtoTypeMain( HINSTANCE a_hInstance, bCString const & a_st
 
             if( GETrue == a_CommandLine.GetOptions().IsValidKey( "devmode" ) )
             {
-                gCSession * pSession = g_GetModule< gCSession >();
-                pSession->SetTestMode( GETrue );
-                // Allows OnDebugToggleFreeFlyCam usage:
-                pSession->SetAdvancedTestMode( GETrue );
+                g_GetModule< gCSession >()->SetAdvancedTestMode( GETrue );
             }
 
             ProtoTypeApp.Run();

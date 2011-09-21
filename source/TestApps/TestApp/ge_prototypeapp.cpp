@@ -4,6 +4,7 @@ void aCProtoTypeApp::Invalidate( void )
 {
     g_FFInvalidateFileHandle( this->m_hEngineMessageLogFile );
     this->m_iEngineMessageIndentation = 0;
+    g_FFInvalidateFileHandle( this->m_hMessageCallbackLogFile );
 }
 
 aCProtoTypeApp::aCProtoTypeApp( void )
@@ -17,6 +18,12 @@ bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strCo
     this->m_hEngineMessageLogFile = g_FFCreateFile(
         gCGameApp::GetApplicationFileName() + ".EngineMessage.log",
         EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
+    this->m_hMessageCallbackLogFile = g_FFCreateFile(
+        gCGameApp::GetApplicationFileName() + ".MessageCallback.log",
+        EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
+    bCMessageAdmin::GetInstance().RegisterCallback(
+        aCProtoTypeApp::g_MessageCallback, bEMessageCallbackPriority_Normal,
+        reinterpret_cast< GEU32 >( this ) );
     return gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine );
 }
 
@@ -43,6 +50,8 @@ void aCProtoTypeApp::Destroy( void )
     gCGameApp::Destroy();
     if( g_FFIsValidFileHandle( this->m_hEngineMessageLogFile ) )
         g_FFCloseFile( this->m_hEngineMessageLogFile );
+    if( g_FFIsValidFileHandle( this->m_hMessageCallbackLogFile ) )
+        g_FFCloseFile( this->m_hMessageCallbackLogFile );
     this->Invalidate();
 }
 
@@ -232,3 +241,28 @@ void aCProtoTypeApp::SendEngineMessage( eSEngineMessage & a_EngineMessage )
     gCGameApp::SendEngineMessage( a_EngineMessage );
 }
 
+GEBool GE_STDCALL aCProtoTypeApp::g_MessageCallback( bEMessageTypes a_enumType, GELPCChar a_pcMessage, GELPCChar a_pcReserved, GEU32 a_u32Parameter, GELPCChar a_pcFile, GEInt a_iLine, GEInt a_iPriority )
+{
+    aCProtoTypeApp * pProtoTypeApp = reinterpret_cast< aCProtoTypeApp * >( a_u32Parameter );
+    if( pProtoTypeApp )
+        return pProtoTypeApp->OnMessageCallback( a_enumType, a_pcMessage, a_pcReserved, a_pcFile, a_iLine, a_iPriority );
+    return GEFalse;
+}
+
+GEBool aCProtoTypeApp::OnMessageCallback( bEMessageTypes a_enumType, GELPCChar a_pcMessage, GELPCChar a_pcReserved, GELPCChar a_pcFile, GEInt a_iLine, GEInt a_iPriority )
+{
+    if( g_FFIsValidFileHandle( this->m_hMessageCallbackLogFile ) )
+    {
+        bCString strMessage = bCString::GetFormattedString( "{%d,%d} ", a_enumType, a_iPriority );
+        if( a_pcReserved )
+            strMessage += bCString::GetFormattedString( "[%s] ", a_pcReserved );
+        strMessage += a_pcMessage;
+        if( a_pcFile )
+            strMessage += bCString::GetFormattedString( " (%s,%d)", a_pcFile, a_iLine );
+        strMessage += "\n";
+        FFU32 u32NumberOfBytesWritten;
+        return g_FFWriteFile( this->m_hMessageCallbackLogFile, strMessage.GetText(),
+            static_cast< FFU32 >( strMessage.GetLength() ), &u32NumberOfBytesWritten );
+    }   
+    return GEFalse;
+}
