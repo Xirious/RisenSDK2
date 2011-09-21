@@ -17,6 +17,7 @@ protected: using     gCGameApp::Create;
 protected:
     FFLPVoid          m_hEngineMessageLogFile;
     GEInt             m_iEngineMessageIndentation;
+    FFLPVoid          m_hMessageCallbackLogFile;
 public:
     aCProtoTypeApp( void );
     aCProtoTypeApp( aCProtoTypeApp const & a_Source );
@@ -26,6 +27,10 @@ public:
     bEResult Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine );
     void     Invalidate( void );
     GEBool   LoadProjectFile( bCString const & a_strProject, bCString const & a_strWorld );
+protected:
+    static GEBool GE_STDCALL g_MessageCallback( bEMessageTypes a_enumType, GELPCChar a_pcMessage, GELPCChar a_pcReserved, GEU32 a_u32Parameter, GELPCChar a_pcFile, GEInt a_iLine, GEInt a_iPriority );
+protected:
+    GEBool OnMessageCallback( bEMessageTypes a_enumType, GELPCChar a_pcMessage, GELPCChar a_pcReserved, GELPCChar a_pcFile, GEInt a_iLine, GEInt a_iPriority );
 };
 
 #endif
