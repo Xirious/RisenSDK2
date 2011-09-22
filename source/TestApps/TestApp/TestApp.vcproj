@@ -40,15 +40,15 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
 				AdditionalIncludeDirectories="..\..\"
-				PreprocessorDefinitions="WIN32;NDEBUG"
-				ExceptionHandling="0"
+				AdditionalOptions="/Wall"
 				BufferSecurityCheck="false"
-				WarningLevel="4"
-				DebugInformationFormat="3"
 				CallingConvention="2"
-				DisableSpecificWarnings="4505;4514;4711"
+				DebugInformationFormat="3"
+				DisableSpecificWarnings="4505;4514;4710;4711"
+				ExceptionHandling="0"
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				WarningLevel="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -61,13 +61,13 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalOptions="/STACK:0x00800000"
 				AdditionalDependencies="user32.lib comctl32.lib"
+				AdditionalOptions="/STACK:0x00800000"
 				EnableCOMDATFolding="2"
 				GenerateDebugInformation="true"
 				OptimizeReferences="2"
-				SubSystem="2"
 				SetChecksum="true"
+				SubSystem="2"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -119,15 +119,15 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Wall"
-				Optimization="0"
 				AdditionalIncludeDirectories="..\..\"
+				AdditionalOptions="/Wall"
+				CallingConvention="2"
+				DebugInformationFormat="4"
+				DisableSpecificWarnings="4505;4514;4710;4711"
 				ExceptionHandling="0"
+				Optimization="0"
 				RuntimeLibrary="1"
 				WarningLevel="4"
-				DebugInformationFormat="4"
-				CallingConvention="2"
-				DisableSpecificWarnings="4505;4514;4711"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -140,10 +140,10 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalOptions="/STACK:0x00800000"
 				AdditionalDependencies="user32.lib comctl32.lib"
-				LinkIncremental="2"
+				AdditionalOptions="/STACK:0x00800000"
 				GenerateDebugInformation="true"
+				LinkIncremental="2"
 				SubSystem="2"
 			/>
 			<Tool
@@ -176,6 +176,14 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="Hooks"
+			>
+			<File
+				RelativePath="..\..\Hooks\ge_messagehooks.cpp"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\ge_prototypeapp.cpp"
 			>
