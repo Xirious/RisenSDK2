@@ -19,6 +19,7 @@
 #define GE_DLLIMPORT __declspec( dllimport )
 #define GE_DLLIMPORT_EXTC extern "C" GE_DLLIMPORT
 #define GE_DLLIMPORT_DATA extern "C++" GE_DLLIMPORT
+#define GE_THREAD_LOCAL __declspec( thread )
 
 namespace Genome
 {
