@@ -15,15 +15,22 @@ aCProtoTypeApp::aCProtoTypeApp( void )
 
 bEResult aCProtoTypeApp::Create( HINSTANCE a_hInstance, bCString const & a_strConfig, bCString const & a_strCmdLine )
 {
-    this->m_hEngineMessageLogFile = g_FFCreateFile(
-        gCGameApp::GetApplicationFileName() + ".EngineMessage.log",
-        EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
-    this->m_hMessageCallbackLogFile = g_FFCreateFile(
-        gCGameApp::GetApplicationFileName() + ".MessageCallback.log",
-        EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
-    bCMessageAdmin::GetInstance().RegisterCallback(
-        aCProtoTypeApp::g_MessageCallback, bEMessageCallbackPriority_Normal,
-        reinterpret_cast< GEU32 >( this ) );
+    bCCommandLine CommandLine( a_strCmdLine );
+    if( GETrue == CommandLine.GetOptions().IsValidKey( "enginelog" ) )
+    {
+        this->m_hEngineMessageLogFile = g_FFCreateFile(
+            gCGameApp::GetApplicationFileName() + ".engine.log",
+            EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
+    }
+    if( GETrue == CommandLine.GetOptions().IsValidKey( "messagelog" ) )
+    {
+        this->m_hMessageCallbackLogFile = g_FFCreateFile(
+            gCGameApp::GetApplicationFileName() + ".message.log",
+            EFFFileCreate_CreateAlways, EFFFileAccess_Write, EFFFileShare_Read, 0, 0 );
+        bCMessageAdmin::GetInstance().RegisterCallback(
+            aCProtoTypeApp::g_MessageCallback, bEMessageCallbackPriority_Normal,
+            reinterpret_cast< GEU32 >( this ) );
+    }
     return gCGameApp::Create( a_hInstance, a_strConfig, a_strCmdLine );
 }
 
@@ -61,6 +68,18 @@ void aCProtoTypeApp::OnDestroyWorkspace( void )
     gCGameApp::GetAccessToWorkspace().RemoveAll();
 }
 
+bEResult aCProtoTypeApp::OnCreateWindow( eCWindow::eSCreate & a_WindowSetup )
+{
+    bEResult enumResult = gCGameApp::OnCreateWindow( a_WindowSetup );
+    if( (bEResult_Ok == enumResult) &&
+        (eCWindow::eEWindowMode_FullScreen == a_WindowSetup.m_enumWindowMode) &&
+        (GETrue == bCCommandLine( this->GetCommandLineA() ).GetOptions().IsValidKey( "window" )) )
+    {
+        a_WindowSetup.m_enumWindowMode = eCWindow::eEWindowMode_Sizeable;
+    }
+    return enumResult;
+};
+
 aCProtoTypeApp::~aCProtoTypeApp( void )
 {
     this->Invalidate();
@@ -68,45 +87,25 @@ aCProtoTypeApp::~aCProtoTypeApp( void )
 
 GEBool aCProtoTypeApp::LoadProjectFile( bCString const & a_strProject, bCString const & a_strWorld )
 {
-    gCProject * pProject = gCWorkspace::GetInstance().GetProject( a_strProject );
+    gCWorkspace & Workspace = gCWorkspace::GetInstance();
+    gCProject * pProject = Workspace.GetProject( a_strProject );
+    if( 0 == pProject )
+    {
+        pProject = Workspace.GetCurrentProject();
+        if( 0 == pProject )
+            pProject = Workspace.InsertNewProject( a_strProject, GEFalse );
+    }
     if( pProject )
     {
-        if( !pProject->IsActive() )
-        {
+        if( GEFalse == pProject->IsActive() )
             pProject->Load();
-        }
         {
             gCWorld * pWorld = pProject->GetWorld( a_strWorld );
-            if( !pWorld )
-            {
+            if( 0 == pWorld )
                 pWorld = pProject->InsertNewWorld( a_strWorld, GEFalse );
-            }
             if( pWorld )
-            {
                 pProject->SetActiveWorld( pWorld->GetFileBaseName() );
-            }
-        }
-    }
-    else
-    {
-        pProject = gCWorkspace::GetInstance().GetCurrentProject();
-        if( !pProject )
-        {
-            pProject = gCWorkspace::GetInstance().InsertNewProject( "Temp", GEFalse );
-        }
-    }
-    if( pProject )
-    {
-        if( !pProject->IsActive() )
-        {
-            pProject->Load();
-        }
-        {
-            gCWorld * pWorld = pProject->GetWorld( pProject->GetActiveWorld() );
-            if( pWorld && !pWorld->IsActive() )
-            {
-                pWorld->Activate();
-            }
+            //NOTE: [NicoDE] World will be activated by the game (avoid +75% startup time).
         }
     }
     return GETrue;
