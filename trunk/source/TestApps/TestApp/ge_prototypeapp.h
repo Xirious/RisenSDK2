@@ -11,6 +11,7 @@ protected: virtual void         CopyFrom( aCProtoTypeApp const & );
 public:    virtual void         Destroy( void );
 public:    virtual             ~aCProtoTypeApp( void );
 protected: virtual void         OnDestroyWorkspace( void );
+protected: virtual bEResult     OnCreateWindow( eCWindow::eSCreate & );
 public:    virtual void         SendEngineMessage( eSEngineMessage & );
 protected: using eCApplication::CopyFrom;
 protected: using     gCGameApp::Create;
