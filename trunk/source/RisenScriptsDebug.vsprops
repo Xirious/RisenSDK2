@@ -8,7 +8,9 @@
 	<Tool
 		Name="VCCLCompilerTool"
 		BasicRuntimeChecks="3"
+		DebugInformationFormat="4"
+		EnableFunctionLevelLinking="true"
 		Optimization="0"
-		RuntimeLibrary="3"
+		RuntimeLibrary="1"
 	/>
 </VisualStudioPropertySheet>
