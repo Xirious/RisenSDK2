@@ -49,6 +49,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -100,6 +101,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -119,6 +121,14 @@
 		</Configuration>
 	</Configurations>
 	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{2C7005B8-6B02-4104-BC98-E3A8372DFEEB}"
+			RelativePathToProject=".\FileSystem2.vcproj"
+		/>
+		<ProjectReference
+			ReferencedProjectIdentifier="{8CD94F60-C9B4-434B-ACA9-68C651310F24}"
+			RelativePathToProject=".\GUI2.vcproj"
+		/>
 	</References>
 	<Files>
 		<Filter
