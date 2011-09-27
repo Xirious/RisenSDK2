@@ -49,8 +49,8 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				GenerateManifest="true"
 				AdditionalManifestDependencies="type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; processorArchitecture=&apos;x86&apos; publicKeyToken=&apos;6595b64144ccf1df&apos;"
+				GenerateManifest="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -113,8 +113,8 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				GenerateManifest="true"
 				AdditionalManifestDependencies="type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; processorArchitecture=&apos;x86&apos; publicKeyToken=&apos;6595b64144ccf1df&apos;"
+				GenerateManifest="true"
 				SetChecksum="false"
 			/>
 			<Tool
@@ -144,10 +144,6 @@
 		</Configuration>
 	</Configurations>
 	<References>
-		<ProjectReference
-			ReferencedProjectIdentifier="{901FDD87-0AAA-4006-808D-8F52478007F7}"
-			RelativePathToProject="..\..\Script.vcproj"
-		/>
 	</References>
 	<Files>
 		<File

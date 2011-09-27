@@ -5,7 +5,6 @@
 	Name="SharedBase"
 	ProjectGUID="{F385328B-69B2-4E58-B520-9562EFD53AD8}"
 	RootNamespace="SharedBase"
-	AssemblyReferenceSearchPaths="&quot;..\..\..\source&quot;"
 	>
 	<Platforms>
 		<Platform
@@ -50,7 +49,6 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -102,7 +100,6 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"

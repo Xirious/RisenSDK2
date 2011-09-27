@@ -49,7 +49,6 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -101,7 +100,6 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
-				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -121,10 +119,6 @@
 		</Configuration>
 	</Configurations>
 	<References>
-		<ProjectReference
-			ReferencedProjectIdentifier="{3388FF8A-25A4-4378-A870-824C174F3982}"
-			RelativePathToProject=".\Game.vcproj"
-		/>
 	</References>
 	<Files>
 		<File
