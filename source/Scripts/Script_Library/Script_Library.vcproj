@@ -138,6 +138,10 @@
 		</Configuration>
 	</Configurations>
 	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{901FDD87-0AAA-4006-808D-8F52478007F7}"
+			RelativePathToProject="..\..\Script.vcproj"
+		/>
 	</References>
 	<Files>
 		<File

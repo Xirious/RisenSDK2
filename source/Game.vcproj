@@ -49,6 +49,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -100,6 +101,7 @@
 			/>
 			<Tool
 				Name="VCLibrarianTool"
+				LinkLibraryDependencies="true"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -119,6 +121,14 @@
 		</Configuration>
 	</Configurations>
 	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{92C8B6A4-3E64-4D3E-B79C-9C5C32F95E46}"
+			RelativePathToProject=".\Engine.vcproj"
+		/>
+		<ProjectReference
+			ReferencedProjectIdentifier="{5477D925-E130-4280-90ED-BDE7E7807884}"
+			RelativePathToProject=".\Music.vcproj"
+		/>
 	</References>
 	<Files>
 		<Filter
