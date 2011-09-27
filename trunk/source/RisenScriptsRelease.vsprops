@@ -8,9 +8,9 @@
 	<Tool
 		Name="VCCLCompilerTool"
 		BufferSecurityCheck="false"
-		DebugInformationFormat="3"
-		EnableEnhancedInstructionSet="2"
+		EnableFunctionLevelLinking="true"
 		ExceptionHandling="0"
+		Optimization="2"
 		PreprocessorDefinitions="NDEBUG"
 		StringPooling="true"
 	/>
