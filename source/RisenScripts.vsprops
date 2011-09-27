@@ -12,10 +12,7 @@
 		AdditionalIncludeDirectories="..\..\"
 		AdditionalOptions="/Wall"
 		CallingConvention="2"
-		DebugInformationFormat="3"
 		DisableSpecificWarnings="4505;4514;4710;4711"
-		EnableEnhancedInstructionSet="2"
-		ExceptionHandling="2"
 		WarningLevel="4"
 	/>
 	<Tool

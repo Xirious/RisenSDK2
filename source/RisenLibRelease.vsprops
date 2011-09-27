@@ -8,8 +8,8 @@
 	<Tool
 		Name="VCCLCompilerTool"
 		BufferSecurityCheck="false"
-		EnableFunctionLevelLinking="true"
-		Optimization="2"
+		EnableEnhancedInstructionSet="2"
+		ExceptionHandling="0"
 		StringPooling="true"
 	/>
 </VisualStudioPropertySheet>
