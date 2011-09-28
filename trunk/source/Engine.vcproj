@@ -1,467 +1,131 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
-	ProjectType="Visual C++"
-	Version="8,00"
 	Name="Engine"
 	ProjectGUID="{92C8B6A4-3E64-4D3E-B79C-9C5C32F95E46}"
-	RootNamespace="Engine"
+	ProjectType="Visual C++"
+	Version="8.00"
 	>
 	<Platforms>
-		<Platform
-			Name="Win32"
-		/>
+		<Platform Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebug.vsprops"
+			/>
+		<Configuration
+			Name="DebugCLR|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebugCLR.vsprops"
+			ManagedExtensions="1"
+			/>
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\RisenLibRelease.vsprops"
 			WholeProgramOptimization="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="ReleaseCLR|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLibDebug.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
+			InheritedPropertySheets=".\RisenLibReleaseCLR.vsprops"
+			ManagedExtensions="1"
+			WholeProgramOptimization="1"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
-		<Filter
-			Name="resource"
-			>
-			<File
-				RelativePath=".\Engine\ge_resource2.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_resourcecache2.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_resourceinputstream2.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_resourcemodule2.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_resourceoutputstream2.h"
-				>
-			</File>
+		<Filter Name="effect">
+			<File RelativePath=".\Engine\ge_effectmodulebase.h"/>
+			<File RelativePath=".\Engine\ge_effectsystembase.h"/>
 		</Filter>
-		<Filter
-			Name="mover"
-			>
-			<File
-				RelativePath=".\Engine\ge_mover_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_moveranimationbase.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_moveranimationfile.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_moveranimationrotate.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_moveranimationskeletal.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="entity"
-			>
-			<File
-				RelativePath=".\Engine\ge_dynamicentity.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_entity.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_entitypropertyset.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_geometryentity.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_psmap.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_templateentity.h"
-				>
-			</File>
-			<Filter
-				Name="proxy"
-				>
-				<File
-					RelativePath=".\Engine\ge_entityproxy.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Engine\ge_entitystringproxy.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Engine\ge_templateentityproxy.h"
-					>
-				</File>
+		<Filter Name="entity">
+			<Filter Name="proxy">
+				<File RelativePath=".\Engine\ge_entityproxy.h"/>
+				<File RelativePath=".\Engine\ge_entitystringproxy.h"/>
+				<File RelativePath=".\Engine\ge_templateentityproxy.h"/>
 			</Filter>
+			<File RelativePath=".\Engine\ge_dynamicentity.h"/>
+			<File RelativePath=".\Engine\ge_entity.h"/>
+			<File RelativePath=".\Engine\ge_entitypropertyset.h"/>
+			<File RelativePath=".\Engine\ge_geometryentity.h"/>
+			<File RelativePath=".\Engine\ge_psmap.h"/>
+			<File RelativePath=".\Engine\ge_templateentity.h"/>
 		</Filter>
-		<Filter
-			Name="particle"
-			>
-			<File
-				RelativePath=".\Engine\ge_particle_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_strip_ps.h"
-				>
-			</File>
+		<Filter Name="mover">
+			<File RelativePath=".\Engine\ge_mover_ps.h"/>
+			<File RelativePath=".\Engine\ge_moveranimationbase.h"/>
+			<File RelativePath=".\Engine\ge_moveranimationfile.h"/>
+			<File RelativePath=".\Engine\ge_moveranimationrotate.h"/>
+			<File RelativePath=".\Engine\ge_moveranimationskeletal.h"/>
 		</Filter>
-		<Filter
-			Name="physic"
-			>
-			<File
-				RelativePath=".\Engine\ge_rigidbody_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_rigidbodybase_ps.h"
-				>
-			</File>
+		<Filter Name="particle">
+			<File RelativePath=".\Engine\ge_particle_ps.h"/>
+			<File RelativePath=".\Engine\ge_strip_ps.h"/>
 		</Filter>
-		<Filter
-			Name="effect"
-			>
-			<File
-				RelativePath=".\Engine\ge_effectmodulebase.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Engine\ge_effectsystembase.h"
-				>
-			</File>
+		<Filter Name="physic">
+			<File RelativePath=".\Engine\ge_rigidbody_ps.h"/>
+			<File RelativePath=".\Engine\ge_rigidbodybase_ps.h"/>
 		</Filter>
-		<File
-			RelativePath=".\Engine.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\EngineEnum.h"
-			>
-		</File>
-		<File
-			RelativePath=".\EngineManifestDependency.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_actorattachment.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_actorwrapper.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_animation_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_animshared.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_apitexture.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_application.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_archivefile.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_archivemanager.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_area_stringproperty_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_camerabase.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_collisionshape.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_collisionshape_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_collisionshapebase_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_configadmin.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_configfile.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_console2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_debugoptions.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_docarchive.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_docarchive.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_docobject.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_docobjectmap.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_enginecomponentbase.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_frustumelementitem.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_gfximagedata.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_gfxobject.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_gfxshared.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_guiresource2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_inputadmin.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_locadmin2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_locstring.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_messagehandler.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_moduleadmin.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_moduleadmin.inl"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_node.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_portal.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_portalbsp.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_portalcell_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_portalroom_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_processible.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_processibleelement.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_processor.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_scriptadminbase.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_scriptfunctionmap.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_scriptproxy.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_scriptproxyscript.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_splash.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_statistic.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_statisticview.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_virtualfilesystem.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Engine\ge_window.h"
-			>
-		</File>
+		<Filter Name="resource">
+			<File RelativePath=".\Engine\ge_resource2.h"/>
+			<File RelativePath=".\Engine\ge_resourcecache2.h"/>
+			<File RelativePath=".\Engine\ge_resourceinputstream2.h"/>
+			<File RelativePath=".\Engine\ge_resourcemodule2.h"/>
+			<File RelativePath=".\Engine\ge_resourceoutputstream2.h"/>
+		</Filter>
+		<File RelativePath=".\Engine.h"/>
+		<File RelativePath=".\EngineManifestDependency.h"/>
+		<File RelativePath=".\Engine\EngineEnum.h"/>
+		<File RelativePath=".\Engine\ge_actorattachment.h"/>
+		<File RelativePath=".\Engine\ge_actorwrapper.h"/>
+		<File RelativePath=".\Engine\ge_animation_ps.h"/>
+		<File RelativePath=".\Engine\ge_animshared.h"/>
+		<File RelativePath=".\Engine\ge_apitexture.h"/>
+		<File RelativePath=".\Engine\ge_application.h"/>
+		<File RelativePath=".\Engine\ge_archivefile.h"/>
+		<File RelativePath=".\Engine\ge_archivemanager.h"/>
+		<File RelativePath=".\Engine\ge_area_stringproperty_ps.h"/>
+		<File RelativePath=".\Engine\ge_camerabase.h"/>
+		<File RelativePath=".\Engine\ge_collisionshape.h"/>
+		<File RelativePath=".\Engine\ge_collisionshape_ps.h"/>
+		<File RelativePath=".\Engine\ge_collisionshapebase_ps.h"/>
+		<File RelativePath=".\Engine\ge_configadmin.h"/>
+		<File RelativePath=".\Engine\ge_configfile.h"/>
+		<File RelativePath=".\Engine\ge_console2.h"/>
+		<File RelativePath=".\Engine\ge_debugoptions.h"/>
+		<File RelativePath=".\Engine\ge_docarchive.cpp"/>
+		<File RelativePath=".\Engine\ge_docarchive.h"/>
+		<File RelativePath=".\Engine\ge_docobject.h"/>
+		<File RelativePath=".\Engine\ge_docobjectmap.h"/>
+		<File RelativePath=".\Engine\ge_enginecomponentbase.h"/>
+		<File RelativePath=".\Engine\ge_frustumelementitem.h"/>
+		<File RelativePath=".\Engine\ge_gfximagedata.h"/>
+		<File RelativePath=".\Engine\ge_gfxobject.h"/>
+		<File RelativePath=".\Engine\ge_gfxshared.h"/>
+		<File RelativePath=".\Engine\ge_guiresource2.h"/>
+		<File RelativePath=".\Engine\ge_inputadmin.h"/>
+		<File RelativePath=".\Engine\ge_locadmin2.h"/>
+		<File RelativePath=".\Engine\ge_locstring.h"/>
+		<File RelativePath=".\Engine\ge_messagehandler.h"/>
+		<File RelativePath=".\Engine\ge_moduleadmin.h"/>
+		<File RelativePath=".\Engine\ge_moduleadmin.inl"/>
+		<File RelativePath=".\Engine\ge_node.h"/>
+		<File RelativePath=".\Engine\ge_portal.h"/>
+		<File RelativePath=".\Engine\ge_portalbsp.h"/>
+		<File RelativePath=".\Engine\ge_portalcell_ps.h"/>
+		<File RelativePath=".\Engine\ge_portalroom_ps.h"/>
+		<File RelativePath=".\Engine\ge_processible.h"/>
+		<File RelativePath=".\Engine\ge_processibleelement.h"/>
+		<File RelativePath=".\Engine\ge_processor.h"/>
+		<File RelativePath=".\Engine\ge_scriptadminbase.h"/>
+		<File RelativePath=".\Engine\ge_scriptfunctionmap.h"/>
+		<File RelativePath=".\Engine\ge_scriptproxy.h"/>
+		<File RelativePath=".\Engine\ge_scriptproxyscript.h"/>
+		<File RelativePath=".\Engine\ge_splash.h"/>
+		<File RelativePath=".\Engine\ge_statistic.h"/>
+		<File RelativePath=".\Engine\ge_statisticview.h"/>
+		<File RelativePath=".\Engine\ge_virtualfilesystem.h"/>
+		<File RelativePath=".\Engine\ge_window.h"/>
 	</Files>
-	<Globals>
-	</Globals>
 </VisualStudioProject>

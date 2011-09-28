@@ -1,791 +1,232 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
-	ProjectType="Visual C++"
-	Version="8,00"
 	Name="SharedBase"
 	ProjectGUID="{F385328B-69B2-4E58-B520-9562EFD53AD8}"
-	RootNamespace="SharedBase"
+	ProjectType="Visual C++"
+	Version="8.00"
 	>
 	<Platforms>
-		<Platform
-			Name="Win32"
-		/>
+		<Platform Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebug.vsprops"
+			/>
+		<Configuration
+			Name="DebugCLR|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebugCLR.vsprops"
+			ManagedExtensions="1"
+			/>
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\RisenLibRelease.vsprops"
 			WholeProgramOptimization="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="ReleaseCLR|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLibDebug.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
+			InheritedPropertySheets=".\RisenLibReleaseCLR.vsprops"
+			ManagedExtensions="1"
+			WholeProgramOptimization="1"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
-		<Filter
-			Name="container"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_bitfield.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_trackbitfield.h"
-				>
-			</File>
-			<Filter
-				Name="array"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_arraybase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_arraybase.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_arraymap.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_arraymap.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_autoptrarray.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_autoptrarray.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_objarray.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_objarray.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_ptrarray.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_ptrarray.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valarray.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valarray.inl"
-					>
-				</File>
+		<Filter Name="color">
+			<File RelativePath=".\SharedBase\ge_bytealphacolor.h"/>
+			<File RelativePath=".\SharedBase\ge_bytecolor.h"/>
+			<File RelativePath=".\SharedBase\ge_colorbase.h"/>
+			<File RelativePath=".\SharedBase\ge_floatalphacolor.h"/>
+			<File RelativePath=".\SharedBase\ge_floatcolor.h"/>
+			<File RelativePath=".\SharedBase\ge_floatcolorhsv.h"/>
+		</Filter>
+		<Filter Name="container">
+			<Filter Name="array">
+				<File RelativePath=".\SharedBase\ge_arraybase.h"/>
+				<File RelativePath=".\SharedBase\ge_arraybase.inl"/>
+				<File RelativePath=".\SharedBase\ge_arraymap.h"/>
+				<File RelativePath=".\SharedBase\ge_arraymap.inl"/>
+				<File RelativePath=".\SharedBase\ge_autoptrarray.h"/>
+				<File RelativePath=".\SharedBase\ge_autoptrarray.inl"/>
+				<File RelativePath=".\SharedBase\ge_objarray.h"/>
+				<File RelativePath=".\SharedBase\ge_objarray.inl"/>
+				<File RelativePath=".\SharedBase\ge_ptrarray.h"/>
+				<File RelativePath=".\SharedBase\ge_ptrarray.inl"/>
+				<File RelativePath=".\SharedBase\ge_valarray.h"/>
+				<File RelativePath=".\SharedBase\ge_valarray.inl"/>
 			</Filter>
-			<Filter
-				Name="map"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_mapbase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_objmap.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_stringmap.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valmap.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valmap.inl"
-					>
-				</File>
+			<Filter Name="map">
+				<File RelativePath=".\SharedBase\ge_mapbase.h"/>
+				<File RelativePath=".\SharedBase\ge_objmap.h"/>
+				<File RelativePath=".\SharedBase\ge_stringmap.h"/>
+				<File RelativePath=".\SharedBase\ge_valmap.h"/>
+				<File RelativePath=".\SharedBase\ge_valmap.inl"/>
 			</Filter>
-			<Filter
-				Name="queue"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_queuebase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_queuebase.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valqueue.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_valqueue.inl"
-					>
-				</File>
+			<Filter Name="queue">
+				<File RelativePath=".\SharedBase\ge_queuebase.h"/>
+				<File RelativePath=".\SharedBase\ge_queuebase.inl"/>
+				<File RelativePath=".\SharedBase\ge_valqueue.h"/>
+				<File RelativePath=".\SharedBase\ge_valqueue.inl"/>
 			</Filter>
-			<Filter
-				Name="stack"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_objstack.h"
-					>
-				</File>
+			<Filter Name="stack">
+				<File RelativePath=".\SharedBase\ge_objstack.h"/>
+			</Filter>
+			<File RelativePath=".\SharedBase\ge_bitfield.h"/>
+			<File RelativePath=".\SharedBase\ge_trackbitfield.h"/>
+		</Filter>
+		<Filter Name="io">
+			<Filter Name="streams">
+				<File RelativePath=".\SharedBase\ge_iostream.h"/>
+				<File RelativePath=".\SharedBase\ge_istream.h"/>
+				<File RelativePath=".\SharedBase\ge_memorystream.h"/>
+				<File RelativePath=".\SharedBase\ge_nullstream.h"/>
+				<File RelativePath=".\SharedBase\ge_ostream.h"/>
+				<File RelativePath=".\SharedBase\ge_postream.h"/>
+			</Filter>
+			<File RelativePath=".\SharedBase\ge_commandline.h"/>
+			<File RelativePath=".\SharedBase\ge_file.h"/>
+			<File RelativePath=".\SharedBase\ge_filesystem.h"/>
+			<File RelativePath=".\SharedBase\ge_xmlparser.h"/>
+			<File RelativePath=".\SharedBase\ge_xmlparsernode.h"/>
+		</Filter>
+		<Filter Name="kernel">
+			<Filter Name="error">
+				<File RelativePath=".\SharedBase\ge_enginedialogs.h"/>
+				<File RelativePath=".\SharedBase\ge_error.h"/>
+				<File RelativePath=".\SharedBase\ge_erroradmin.h"/>
+			</Filter>
+			<Filter Name="event">
+				<File RelativePath=".\SharedBase\ge_event.h"/>
+			</Filter>
+			<Filter Name="memory">
+				<File RelativePath=".\SharedBase\ge_gcmem.h"/>
+				<File RelativePath=".\SharedBase\ge_gcmemgeneration.h"/>
+				<File RelativePath=".\SharedBase\ge_memory.h"/>
+				<File RelativePath=".\SharedBase\ge_memoryadmin.h"/>
+				<File RelativePath=".\SharedBase\ge_memoryguard.h"/>
+				<File RelativePath=".\SharedBase\ge_memorysubsystemstack.h"/>
+				<File RelativePath=".\SharedBase\ge_mempool.h"/>
+				<File RelativePath=".\SharedBase\ge_validatememory.h"/>
+			</Filter>
+			<Filter Name="message">
+				<File RelativePath=".\SharedBase\ge_message.cpp"/>
+				<File RelativePath=".\SharedBase\ge_message.h"/>
+				<File RelativePath=".\SharedBase\ge_messageadmin.h"/>
+			</Filter>
+			<Filter Name="object">
+				<File RelativePath=".\SharedBase\ge_classname.h"/>
+				<File RelativePath=".\SharedBase\ge_classname.inl"/>
+				<File RelativePath=".\SharedBase\ge_classnamebase.h"/>
+				<File RelativePath=".\SharedBase\ge_objectbase.h"/>
+				<File RelativePath=".\SharedBase\ge_objectrefbase.h"/>
+				<File RelativePath=".\SharedBase\ge_obsoleteclass.h"/>
+			</Filter>
+			<Filter Name="system">
+				<File RelativePath=".\SharedBase\ge_clock.h"/>
+				<File RelativePath=".\SharedBase\ge_fpuadmin.h"/>
+				<File RelativePath=".\SharedBase\ge_timer.h"/>
+			</Filter>
+			<Filter Name="thread">
+				<File RelativePath=".\SharedBase\ge_criticalsection.h"/>
+				<File RelativePath=".\SharedBase\ge_locksystem.h"/>
+				<File RelativePath=".\SharedBase\ge_thread.h"/>
+				<File RelativePath=".\SharedBase\ge_threadex.h"/>
+				<File RelativePath=".\SharedBase\ge_threadobjectrefbase.h"/>
 			</Filter>
 		</Filter>
-		<Filter
-			Name="kernel"
-			>
-			<Filter
-				Name="memory"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_gcmem.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_gcmemgeneration.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_memory.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_memoryadmin.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_memoryguard.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_memorysubsystemstack.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_mempool.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_validatememory.h"
-					>
-				</File>
+		<Filter Name="math">
+			<Filter Name="2d">
+				<File RelativePath=".\SharedBase\ge_matrix2.h"/>
+				<File RelativePath=".\SharedBase\ge_point.h"/>
+				<File RelativePath=".\SharedBase\ge_rect.h"/>
+				<File RelativePath=".\SharedBase\ge_vector2.h"/>
+				<File RelativePath=".\SharedBase\ge_zoneraster.h"/>
 			</Filter>
-			<Filter
-				Name="thread"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_criticalsection.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_locksystem.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_thread.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_threadex.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_threadobjectrefbase.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="error"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_enginedialogs.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_error.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_erroradmin.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="message"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_message.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_message.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_messageadmin.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="system"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_clock.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_fpuadmin.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_timer.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="object"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_classname.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_classname.inl"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_classnamebase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_objectbase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_objectrefbase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_obsoleteclass.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="event"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_event.h"
-					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
-			Name="io"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_commandline.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_file.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_filesystem.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_xmlparser.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_xmlparsernode.h"
-				>
-			</File>
-			<Filter
-				Name="streams"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_iostream.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_istream.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_memorystream.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_nullstream.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_ostream.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_postream.h"
-					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
-			Name="types"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_datetime.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_datetime.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_def.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_guid.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_string.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_string.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_system.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_types.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_unicodestring.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_unicodestring.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_variant.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="propertysystem"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_accessorcreator.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_accessorproperty.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_accessorpropertyobject.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_md5.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertycontainer.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertycontainer.inl"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertyconverter.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertyconverterptr.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertyid.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertymacros.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertyobjecttypebase.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_propertytypebase.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="color"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_bytealphacolor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_bytecolor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_colorbase.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_floatalphacolor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_floatcolor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_floatcolorhsv.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="math"
-			>
-			<Filter
-				Name="2d"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_matrix2.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_point.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_rect.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_vector2.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_zoneraster.h"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="3d"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_axisangle.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_eigenvector.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_eulerangles.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_matrix.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_matrix3.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_motion.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_octtree.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_quaternion.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_sphericalrotation.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_vector.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_vector4.h"
-					>
-				</File>
-				<Filter
-					Name="vertex"
-					>
-					<File
-						RelativePath=".\SharedBase\ge_flexiblevertexformat.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_flexiblevertexptr.h"
-						>
-					</File>
+			<Filter Name="3d">
+				<Filter Name="geometry">
+					<File RelativePath=".\SharedBase\ge_box.h"/>
+					<File RelativePath=".\SharedBase\ge_capsule.h"/>
+					<File RelativePath=".\SharedBase\ge_frustum.h"/>
+					<File RelativePath=".\SharedBase\ge_infcylinder.h"/>
+					<File RelativePath=".\SharedBase\ge_infdoublecylinder.h"/>
+					<File RelativePath=".\SharedBase\ge_line.h"/>
+					<File RelativePath=".\SharedBase\ge_orientedbox.h"/>
+					<File RelativePath=".\SharedBase\ge_plane.h"/>
+					<File RelativePath=".\SharedBase\ge_ray.h"/>
+					<File RelativePath=".\SharedBase\ge_sphere.h"/>
+					<File RelativePath=".\SharedBase\ge_stretch.h"/>
+					<File RelativePath=".\SharedBase\ge_triangle.h"/>
+					<File RelativePath=".\SharedBase\ge_unitedray.h"/>
+					<File RelativePath=".\SharedBase\ge_volume.h"/>
+					<File RelativePath=".\SharedBase\ge_volume.inl"/>
 				</Filter>
-				<Filter
-					Name="geometry"
-					>
-					<File
-						RelativePath=".\SharedBase\ge_box.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_capsule.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_frustum.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_infcylinder.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_infdoublecylinder.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_line.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_orientedbox.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_plane.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_ray.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_sphere.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_stretch.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_triangle.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_unitedray.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_volume.h"
-						>
-					</File>
-					<File
-						RelativePath=".\SharedBase\ge_volume.inl"
-						>
-					</File>
+				<Filter Name="vertex">
+					<File RelativePath=".\SharedBase\ge_flexiblevertexformat.h"/>
+					<File RelativePath=".\SharedBase\ge_flexiblevertexptr.h"/>
 				</Filter>
+				<File RelativePath=".\SharedBase\ge_axisangle.h"/>
+				<File RelativePath=".\SharedBase\ge_eigenvector.h"/>
+				<File RelativePath=".\SharedBase\ge_eulerangles.h"/>
+				<File RelativePath=".\SharedBase\ge_matrix.h"/>
+				<File RelativePath=".\SharedBase\ge_matrix3.h"/>
+				<File RelativePath=".\SharedBase\ge_motion.h"/>
+				<File RelativePath=".\SharedBase\ge_octtree.h"/>
+				<File RelativePath=".\SharedBase\ge_quaternion.h"/>
+				<File RelativePath=".\SharedBase\ge_sphericalrotation.h"/>
+				<File RelativePath=".\SharedBase\ge_vector.h"/>
+				<File RelativePath=".\SharedBase\ge_vector4.h"/>
 			</Filter>
-			<Filter
-				Name="random"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_mersennetwister.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_random.h"
-					>
-				</File>
+			<Filter Name="noise">
+				<File RelativePath=".\SharedBase\ge_ebertnoise.h"/>
+				<File RelativePath=".\SharedBase\ge_noise.h"/>
+				<File RelativePath=".\SharedBase\ge_peacheynoise.h"/>
+				<File RelativePath=".\SharedBase\ge_perlinnoise.h"/>
 			</Filter>
-			<Filter
-				Name="noise"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_ebertnoise.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_noise.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_peacheynoise.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_perlinnoise.h"
-					>
-				</File>
+			<Filter Name="random">
+				<File RelativePath=".\SharedBase\ge_mersennetwister.h"/>
+				<File RelativePath=".\SharedBase\ge_random.h"/>
 			</Filter>
-			<Filter
-				Name="range"
-				>
-				<File
-					RelativePath=".\SharedBase\ge_range1.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_range2.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_range3.h"
-					>
-				</File>
-				<File
-					RelativePath=".\SharedBase\ge_range4.h"
-					>
-				</File>
+			<Filter Name="range">
+				<File RelativePath=".\SharedBase\ge_range1.h"/>
+				<File RelativePath=".\SharedBase\ge_range2.h"/>
+				<File RelativePath=".\SharedBase\ge_range3.h"/>
+				<File RelativePath=".\SharedBase\ge_range4.h"/>
 			</Filter>
 		</Filter>
-		<Filter
-			Name="profile"
-			>
-			<File
-				RelativePath=".\SharedBase\ge_profilemanager.h"
-				>
-			</File>
-			<File
-				RelativePath=".\SharedBase\ge_profilenode.h"
-				>
-			</File>
+		<Filter Name="profile">
+			<File RelativePath=".\SharedBase\ge_profilemanager.h"/>
+			<File RelativePath=".\SharedBase\ge_profilenode.h"/>
 		</Filter>
-		<File
-			RelativePath=".\SharedBase.h"
-			>
-		</File>
+		<Filter Name="propertysystem">
+			<File RelativePath=".\SharedBase\ge_accessorcreator.h"/>
+			<File RelativePath=".\SharedBase\ge_accessorproperty.h"/>
+			<File RelativePath=".\SharedBase\ge_accessorpropertyobject.h"/>
+			<File RelativePath=".\SharedBase\ge_md5.h"/>
+			<File RelativePath=".\SharedBase\ge_propertycontainer.h"/>
+			<File RelativePath=".\SharedBase\ge_propertycontainer.inl"/>
+			<File RelativePath=".\SharedBase\ge_propertyconverter.h"/>
+			<File RelativePath=".\SharedBase\ge_propertyconverterptr.h"/>
+			<File RelativePath=".\SharedBase\ge_propertyid.h"/>
+			<File RelativePath=".\SharedBase\ge_propertymacros.h"/>
+			<File RelativePath=".\SharedBase\ge_propertyobjecttypebase.h"/>
+			<File RelativePath=".\SharedBase\ge_propertytypebase.h"/>
+		</Filter>
+		<Filter Name="types">
+			<File RelativePath=".\SharedBase\ge_datetime.cpp"/>
+			<File RelativePath=".\SharedBase\ge_datetime.h"/>
+			<File RelativePath=".\SharedBase\ge_def.h"/>
+			<File RelativePath=".\SharedBase\ge_guid.h"/>
+			<File RelativePath=".\SharedBase\ge_string.cpp"/>
+			<File RelativePath=".\SharedBase\ge_string.h"/>
+			<File RelativePath=".\SharedBase\ge_system.h"/>
+			<File RelativePath=".\SharedBase\ge_types.h"/>
+			<File RelativePath=".\SharedBase\ge_unicodestring.cpp"/>
+			<File RelativePath=".\SharedBase\ge_unicodestring.h"/>
+			<File RelativePath=".\SharedBase\ge_variant.h"/>
+		</Filter>
+		<File RelativePath=".\SharedBase.h"/>
 	</Files>
-	<Globals>
-	</Globals>
 </VisualStudioProject>

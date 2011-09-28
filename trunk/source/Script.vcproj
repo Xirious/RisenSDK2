@@ -1,419 +1,115 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
-	ProjectType="Visual C++"
-	Version="8,00"
 	Name="Script"
 	ProjectGUID="{901FDD87-0AAA-4006-808D-8F52478007F7}"
-	RootNamespace="Script"
+	ProjectType="Visual C++"
+	Version="8.00"
 	>
 	<Platforms>
-		<Platform
-			Name="Win32"
-		/>
+		<Platform Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebug.vsprops"
+			/>
+		<Configuration
+			Name="DebugCLR|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebugCLR.vsprops"
+			ManagedExtensions="1"
+			/>
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\RisenLibRelease.vsprops"
 			WholeProgramOptimization="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="ReleaseCLR|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLibDebug.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
+			InheritedPropertySheets=".\RisenLibReleaseCLR.vsprops"
+			ManagedExtensions="1"
+			WholeProgramOptimization="1"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
-		<Filter
-			Name="info"
-			>
-			<File
-				RelativePath=".\Script\gs_infcom.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomattack.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomheal.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcominfowait.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcompickpocket.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomrunaiscript.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsay.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsayconfirm.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsayholdingposition.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsaykeepitup.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsaysound.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsaysvm.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsetsectorstatus.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomsleep.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomthink.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infcomuse.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_infosystem.h"
-				>
-			</File>
+		<Filter Name="effect">
+			<File RelativePath=".\Script\gs_effect.h"/>
+			<File RelativePath=".\Script\gs_effectsystem.h"/>
 		</Filter>
-		<Filter
-			Name="propertyset"
-			>
-			<File
-				RelativePath=".\Script\gs_propertymacros.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_propertymacros.inl"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psaizone.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psanchor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psanimation.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psarea.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psarena.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psbook.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pscastinfo.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pscharactermovement.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psclock.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pscollisionshape.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pscombatsystem.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psdamage.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psdialog.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psdoor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pseffect.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psinteraction.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psinventory.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psitem.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psletter.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_pslock.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psmap.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psmover.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psnavigation.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psnpc.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psparticle.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psparty.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psprojectile.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psrecipe.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psrigidbody.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psroutine.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psskills.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psstategraph.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_psstrip.h"
-				>
-			</File>
+		<Filter Name="info">
+			<File RelativePath=".\Script\gs_infcom.h"/>
+			<File RelativePath=".\Script\gs_infcomattack.h"/>
+			<File RelativePath=".\Script\gs_infcomheal.h"/>
+			<File RelativePath=".\Script\gs_infcominfowait.h"/>
+			<File RelativePath=".\Script\gs_infcompickpocket.h"/>
+			<File RelativePath=".\Script\gs_infcomrunaiscript.h"/>
+			<File RelativePath=".\Script\gs_infcomsay.h"/>
+			<File RelativePath=".\Script\gs_infcomsayconfirm.h"/>
+			<File RelativePath=".\Script\gs_infcomsayholdingposition.h"/>
+			<File RelativePath=".\Script\gs_infcomsaykeepitup.h"/>
+			<File RelativePath=".\Script\gs_infcomsaysound.h"/>
+			<File RelativePath=".\Script\gs_infcomsaysvm.h"/>
+			<File RelativePath=".\Script\gs_infcomsetsectorstatus.h"/>
+			<File RelativePath=".\Script\gs_infcomsleep.h"/>
+			<File RelativePath=".\Script\gs_infcomthink.h"/>
+			<File RelativePath=".\Script\gs_infcomuse.h"/>
+			<File RelativePath=".\Script\gs_infosystem.h"/>
 		</Filter>
-		<Filter
-			Name="effect"
-			>
-			<File
-				RelativePath=".\Script\gs_effect.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Script\gs_effectsystem.h"
-				>
-			</File>
+		<Filter Name="propertyset">
+			<File RelativePath=".\Script\gs_propertymacros.h"/>
+			<File RelativePath=".\Script\gs_propertymacros.inl"/>
+			<File RelativePath=".\Script\gs_psaizone.h"/>
+			<File RelativePath=".\Script\gs_psanchor.h"/>
+			<File RelativePath=".\Script\gs_psanimation.h"/>
+			<File RelativePath=".\Script\gs_psarea.h"/>
+			<File RelativePath=".\Script\gs_psarena.h"/>
+			<File RelativePath=".\Script\gs_psbook.h"/>
+			<File RelativePath=".\Script\gs_pscastinfo.h"/>
+			<File RelativePath=".\Script\gs_pscharactermovement.h"/>
+			<File RelativePath=".\Script\gs_psclock.h"/>
+			<File RelativePath=".\Script\gs_pscollisionshape.h"/>
+			<File RelativePath=".\Script\gs_pscombatsystem.h"/>
+			<File RelativePath=".\Script\gs_psdamage.h"/>
+			<File RelativePath=".\Script\gs_psdialog.h"/>
+			<File RelativePath=".\Script\gs_psdoor.h"/>
+			<File RelativePath=".\Script\gs_pseffect.h"/>
+			<File RelativePath=".\Script\gs_psinteraction.h"/>
+			<File RelativePath=".\Script\gs_psinventory.h"/>
+			<File RelativePath=".\Script\gs_psitem.h"/>
+			<File RelativePath=".\Script\gs_psletter.h"/>
+			<File RelativePath=".\Script\gs_pslock.h"/>
+			<File RelativePath=".\Script\gs_psmap.h"/>
+			<File RelativePath=".\Script\gs_psmover.h"/>
+			<File RelativePath=".\Script\gs_psnavigation.h"/>
+			<File RelativePath=".\Script\gs_psnpc.h"/>
+			<File RelativePath=".\Script\gs_psparticle.h"/>
+			<File RelativePath=".\Script\gs_psparty.h"/>
+			<File RelativePath=".\Script\gs_psprojectile.h"/>
+			<File RelativePath=".\Script\gs_psrecipe.h"/>
+			<File RelativePath=".\Script\gs_psrigidbody.h"/>
+			<File RelativePath=".\Script\gs_psroutine.h"/>
+			<File RelativePath=".\Script\gs_psskills.h"/>
+			<File RelativePath=".\Script\gs_psstategraph.h"/>
+			<File RelativePath=".\Script\gs_psstrip.h"/>
 		</Filter>
-		<File
-			RelativePath=".\Script\gs_achievement.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_entity.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_entity.inl"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_focus.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_gui2.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_input.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_music.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_questmanager.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_scriptactiontimer.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_scriptcommentmanager.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_scriptdestinationcollector.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_template.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_tutorial.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script\gs_world.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Script.cpp"
-			>
-		</File>
-		<File
-			RelativePath=".\Script.h"
-			>
-		</File>
+		<File RelativePath=".\Script.cpp"/>
+		<File RelativePath=".\Script.h"/>
+		<File RelativePath=".\Script\gs_achievement.h"/>
+		<File RelativePath=".\Script\gs_entity.h"/>
+		<File RelativePath=".\Script\gs_entity.inl"/>
+		<File RelativePath=".\Script\gs_focus.h"/>
+		<File RelativePath=".\Script\gs_gui2.h"/>
+		<File RelativePath=".\Script\gs_input.h"/>
+		<File RelativePath=".\Script\gs_music.h"/>
+		<File RelativePath=".\Script\gs_questmanager.h"/>
+		<File RelativePath=".\Script\gs_scriptactiontimer.h"/>
+		<File RelativePath=".\Script\gs_scriptcommentmanager.h"/>
+		<File RelativePath=".\Script\gs_scriptdestinationcollector.h"/>
+		<File RelativePath=".\Script\gs_template.h"/>
+		<File RelativePath=".\Script\gs_tutorial.h"/>
+		<File RelativePath=".\Script\gs_world.h"/>
 	</Files>
-	<Globals>
-	</Globals>
 </VisualStudioProject>

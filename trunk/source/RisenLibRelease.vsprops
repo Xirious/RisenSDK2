@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioPropertySheet
-	ProjectType="Visual C++"
-	Version="8.00"
 	Name="Risen SDK Library - Release"
 	InheritedPropertySheets=".\RisenLib.vsprops"
+	ProjectType="Visual C++"
+	Version="8.00"
 	>
 	<Tool
 		Name="VCCLCompilerTool"
 		BufferSecurityCheck="false"
-		EnableEnhancedInstructionSet="2"
 		ExceptionHandling="0"
+		Optimization="2"
+		PreprocessorDefinitions="NDEBUG"
 		StringPooling="true"
-	/>
+		/>
 </VisualStudioPropertySheet>

@@ -30,6 +30,8 @@ namespace detail
     }
 }
 
+#pragma managed( push, off )
+
 void GE_MESSAGEF_OK( GELPCChar a_pcFormat, ... )
 {
     va_list pArgs;
@@ -78,3 +80,4 @@ void GE_MESSAGEF_WARN_EX( GELPCChar a_pcMethod, GELPCChar a_pcFormat, ... )
     va_end( pArgs );
 }
 
+#pragma managed( pop )
