@@ -1,1123 +1,308 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
-	ProjectType="Visual C++"
-	Version="8,00"
 	Name="Game"
 	ProjectGUID="{3388FF8A-25A4-4378-A870-824C174F3982}"
-	RootNamespace="Game"
+	ProjectType="Visual C++"
+	Version="8.00"
 	>
 	<Platforms>
-		<Platform
-			Name="Win32"
-		/>
+		<Platform Name="Win32"/>
 	</Platforms>
-	<ToolFiles>
-	</ToolFiles>
 	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebug.vsprops"
+			/>
+		<Configuration
+			Name="DebugCLR|Win32"
+			ConfigurationType="4"
+			InheritedPropertySheets=".\RisenLibDebugCLR.vsprops"
+			ManagedExtensions="1"
+			/>
 		<Configuration
 			Name="Release|Win32"
 			ConfigurationType="4"
 			InheritedPropertySheets=".\RisenLibRelease.vsprops"
 			WholeProgramOptimization="1"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 		<Configuration
-			Name="Debug|Win32"
+			Name="ReleaseCLR|Win32"
 			ConfigurationType="4"
-			InheritedPropertySheets=".\RisenLibDebug.vsprops"
-			>
-			<Tool
-				Name="VCPreBuildEventTool"
+			InheritedPropertySheets=".\RisenLibReleaseCLR.vsprops"
+			ManagedExtensions="1"
+			WholeProgramOptimization="1"
 			/>
-			<Tool
-				Name="VCCustomBuildTool"
-			/>
-			<Tool
-				Name="VCXMLDataGeneratorTool"
-			/>
-			<Tool
-				Name="VCWebServiceProxyGeneratorTool"
-			/>
-			<Tool
-				Name="VCMIDLTool"
-			/>
-			<Tool
-				Name="VCCLCompilerTool"
-			/>
-			<Tool
-				Name="VCManagedResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCResourceCompilerTool"
-			/>
-			<Tool
-				Name="VCPreLinkEventTool"
-			/>
-			<Tool
-				Name="VCLibrarianTool"
-			/>
-			<Tool
-				Name="VCALinkTool"
-			/>
-			<Tool
-				Name="VCXDCMakeTool"
-			/>
-			<Tool
-				Name="VCBscMakeTool"
-			/>
-			<Tool
-				Name="VCFxCopTool"
-			/>
-			<Tool
-				Name="VCPostBuildEventTool"
-			/>
-		</Configuration>
 	</Configurations>
-	<References>
-	</References>
 	<Files>
-		<Filter
-			Name="effect"
-			>
-			<File
-				RelativePath=".\Game\ge_effect.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_effect_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_effectmodule.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_effectsystem.h"
-				>
-			</File>
-			<Filter
-				Name="command"
-				>
-				<File
-					RelativePath=".\Game\ge_effectcommand.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandearthquake.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandkillentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandkillentityrange.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandmodifyentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandplaysound.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandplayvoice.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandrunscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandsaysvm.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandsequence2.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandspawnentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandspawnentitylist.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandspawnentityswitch.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandstartimageeffect.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_effectcommandtriggerentity.h"
-					>
-				</File>
+		<Filter Name="combat">
+			<File RelativePath=".\Game\ge_combatadmin.h"/>
+			<File RelativePath=".\Game\ge_combatai.h"/>
+			<File RelativePath=".\Game\ge_combataimelee.h"/>
+			<File RelativePath=".\Game\ge_combatairanged.h"/>
+			<File RelativePath=".\Game\ge_combatmove.h"/>
+			<File RelativePath=".\Game\ge_combatmoveaim.h"/>
+			<File RelativePath=".\Game\ge_combatmovecomboswitch.h"/>
+			<File RelativePath=".\Game\ge_combatmovefinishing.h"/>
+			<File RelativePath=".\Game\ge_combatmovemelee.h"/>
+			<File RelativePath=".\Game\ge_combatmoveoverlaystumble.h"/>
+			<File RelativePath=".\Game\ge_combatmoveparade.h"/>
+			<File RelativePath=".\Game\ge_combatmovereload.h"/>
+			<File RelativePath=".\Game\ge_combatmovescriptstate.h"/>
+			<File RelativePath=".\Game\ge_combatmoveshoot.h"/>
+			<File RelativePath=".\Game\ge_combatmovestumble.h"/>
+			<File RelativePath=".\Game\ge_combatobject.h"/>
+			<File RelativePath=".\Game\ge_combatspecies.h"/>
+			<File RelativePath=".\Game\ge_combatstyle.h"/>
+			<File RelativePath=".\Game\ge_combatstyleanipose.h"/>
+			<File RelativePath=".\Game\ge_combatstylemelee.h"/>
+			<File RelativePath=".\Game\ge_combatstyleranged.h"/>
+			<File RelativePath=".\Game\ge_combatstyleweaponconfig.h"/>
+			<File RelativePath=".\Game\ge_combatsystem_ps.h"/>
+			<File RelativePath=".\Game\ge_combatweaponconfig.h"/>
+		</Filter>
+		<Filter Name="craft">
+			<File RelativePath=".\Game\ge_craftingredient.h"/>
+			<File RelativePath=".\Game\ge_recipe_ps.h"/>
+		</Filter>
+		<Filter Name="effect">
+			<Filter Name="command">
+				<File RelativePath=".\Game\ge_effectcommand.h"/>
+				<File RelativePath=".\Game\ge_effectcommandearthquake.h"/>
+				<File RelativePath=".\Game\ge_effectcommandentity.h"/>
+				<File RelativePath=".\Game\ge_effectcommandkillentity.h"/>
+				<File RelativePath=".\Game\ge_effectcommandkillentityrange.h"/>
+				<File RelativePath=".\Game\ge_effectcommandmodifyentity.h"/>
+				<File RelativePath=".\Game\ge_effectcommandplaysound.h"/>
+				<File RelativePath=".\Game\ge_effectcommandplayvoice.h"/>
+				<File RelativePath=".\Game\ge_effectcommandrunscript.h"/>
+				<File RelativePath=".\Game\ge_effectcommandsaysvm.h"/>
+				<File RelativePath=".\Game\ge_effectcommandsequence2.h"/>
+				<File RelativePath=".\Game\ge_effectcommandspawnentity.h"/>
+				<File RelativePath=".\Game\ge_effectcommandspawnentitylist.h"/>
+				<File RelativePath=".\Game\ge_effectcommandspawnentityswitch.h"/>
+				<File RelativePath=".\Game\ge_effectcommandstartimageeffect.h"/>
+				<File RelativePath=".\Game\ge_effectcommandtriggerentity.h"/>
 			</Filter>
+			<File RelativePath=".\Game\ge_effect.h"/>
+			<File RelativePath=".\Game\ge_effect_ps.h"/>
+			<File RelativePath=".\Game\ge_effectmodule.h"/>
+			<File RelativePath=".\Game\ge_effectsystem.h"/>
 		</Filter>
-		<Filter
-			Name="quest"
-			>
-			<File
-				RelativePath=".\Game\ge_quest.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_questactor.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_questlocstring.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_questmanager.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="info"
-			>
-			<File
-				RelativePath=".\Game\ge_info.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_infolocstring.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_infomodule.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_infosystem.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_npcinfolocstring.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_runtimeinfo.h"
-				>
-			</File>
-			<Filter
-				Name="command"
-				>
-				<File
-					RelativePath=".\Game\ge_infocommand.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandaddinfosystemendscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandaddlogtext.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandaddnpcinfo.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandaddquestactor.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandback.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandboostattribs.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandcleargameevent.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandclosequest.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandcreateitem.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommanddescription.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommanddestroyitem.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommanddoloot.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandend.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandendgame.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandfullstop.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandgive.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandgivexp.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandkillnpc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandmoveto.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandplaymusic.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandremovenpc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandremovenpcinfo.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandremovequestactor.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandruninfo.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandrunquest.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandrunscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetgameevent.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetguardstatus.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetmobenabled.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetpartyenabled.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetrelaxingpoint.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetroutine.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetslaveryenabled.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetsleepingpoint.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetteachenabled.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsettradeenabled.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsetworkingpoint.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandshowpicture.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandshowsubtitle.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandstarteffect.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandstartfixcamera.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandstarttutorial.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandstopfixcamera.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandsucceedquest.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandteach.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandteleportnpc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandtrigger.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infocommandwear.h"
-					>
-				</File>
-				<Filter
-					Name="script"
-					>
-					<File
-						RelativePath=".\Game\ge_infocommandattack.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommanddotrade.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandheal.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandinfowait.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandpickpocket.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandrunaiscript.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsay.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsayconfirm.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsayholdingposition.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsaykeepitup.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsaysound.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsaysvm.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsetsectorstatus.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandsleep.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommandthink.h"
-						>
-					</File>
-					<File
-						RelativePath=".\Game\ge_infocommanduse.h"
-						>
-					</File>
+		<Filter Name="info">
+			<Filter Name="command">
+				<Filter Name="script">
+					<File RelativePath=".\Game\ge_infocommandattack.h"/>
+					<File RelativePath=".\Game\ge_infocommanddotrade.h"/>
+					<File RelativePath=".\Game\ge_infocommandheal.h"/>
+					<File RelativePath=".\Game\ge_infocommandinfowait.h"/>
+					<File RelativePath=".\Game\ge_infocommandpickpocket.h"/>
+					<File RelativePath=".\Game\ge_infocommandrunaiscript.h"/>
+					<File RelativePath=".\Game\ge_infocommandsay.h"/>
+					<File RelativePath=".\Game\ge_infocommandsayconfirm.h"/>
+					<File RelativePath=".\Game\ge_infocommandsayholdingposition.h"/>
+					<File RelativePath=".\Game\ge_infocommandsaykeepitup.h"/>
+					<File RelativePath=".\Game\ge_infocommandsaysound.h"/>
+					<File RelativePath=".\Game\ge_infocommandsaysvm.h"/>
+					<File RelativePath=".\Game\ge_infocommandsetsectorstatus.h"/>
+					<File RelativePath=".\Game\ge_infocommandsleep.h"/>
+					<File RelativePath=".\Game\ge_infocommandthink.h"/>
+					<File RelativePath=".\Game\ge_infocommanduse.h"/>
 				</Filter>
+				<File RelativePath=".\Game\ge_infocommand.h"/>
+				<File RelativePath=".\Game\ge_infocommandaddinfosystemendscript.h"/>
+				<File RelativePath=".\Game\ge_infocommandaddlogtext.h"/>
+				<File RelativePath=".\Game\ge_infocommandaddnpcinfo.h"/>
+				<File RelativePath=".\Game\ge_infocommandaddquestactor.h"/>
+				<File RelativePath=".\Game\ge_infocommandback.h"/>
+				<File RelativePath=".\Game\ge_infocommandboostattribs.h"/>
+				<File RelativePath=".\Game\ge_infocommandcleargameevent.h"/>
+				<File RelativePath=".\Game\ge_infocommandclosequest.h"/>
+				<File RelativePath=".\Game\ge_infocommandcreateitem.h"/>
+				<File RelativePath=".\Game\ge_infocommanddescription.h"/>
+				<File RelativePath=".\Game\ge_infocommanddestroyitem.h"/>
+				<File RelativePath=".\Game\ge_infocommanddoloot.h"/>
+				<File RelativePath=".\Game\ge_infocommandend.h"/>
+				<File RelativePath=".\Game\ge_infocommandendgame.h"/>
+				<File RelativePath=".\Game\ge_infocommandfullstop.h"/>
+				<File RelativePath=".\Game\ge_infocommandgive.h"/>
+				<File RelativePath=".\Game\ge_infocommandgivexp.h"/>
+				<File RelativePath=".\Game\ge_infocommandkillnpc.h"/>
+				<File RelativePath=".\Game\ge_infocommandmoveto.h"/>
+				<File RelativePath=".\Game\ge_infocommandplaymusic.h"/>
+				<File RelativePath=".\Game\ge_infocommandremovenpc.h"/>
+				<File RelativePath=".\Game\ge_infocommandremovenpcinfo.h"/>
+				<File RelativePath=".\Game\ge_infocommandremovequestactor.h"/>
+				<File RelativePath=".\Game\ge_infocommandruninfo.h"/>
+				<File RelativePath=".\Game\ge_infocommandrunquest.h"/>
+				<File RelativePath=".\Game\ge_infocommandrunscript.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetgameevent.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetguardstatus.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetmobenabled.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetpartyenabled.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetrelaxingpoint.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetroutine.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetslaveryenabled.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetsleepingpoint.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetteachenabled.h"/>
+				<File RelativePath=".\Game\ge_infocommandsettradeenabled.h"/>
+				<File RelativePath=".\Game\ge_infocommandsetworkingpoint.h"/>
+				<File RelativePath=".\Game\ge_infocommandshowpicture.h"/>
+				<File RelativePath=".\Game\ge_infocommandshowsubtitle.h"/>
+				<File RelativePath=".\Game\ge_infocommandstarteffect.h"/>
+				<File RelativePath=".\Game\ge_infocommandstartfixcamera.h"/>
+				<File RelativePath=".\Game\ge_infocommandstarttutorial.h"/>
+				<File RelativePath=".\Game\ge_infocommandstopfixcamera.h"/>
+				<File RelativePath=".\Game\ge_infocommandsucceedquest.h"/>
+				<File RelativePath=".\Game\ge_infocommandteach.h"/>
+				<File RelativePath=".\Game\ge_infocommandteleportnpc.h"/>
+				<File RelativePath=".\Game\ge_infocommandtrigger.h"/>
+				<File RelativePath=".\Game\ge_infocommandwear.h"/>
 			</Filter>
-			<Filter
-				Name="condition"
-				>
-				<File
-					RelativePath=".\Game\ge_infocondition.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditioncanteachskill.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionitemamount.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionnpcstatus.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionownerinarea.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionownernearentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionplayerknows.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionplayernotknows.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionqueststatus.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionskillvalue.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_infoconditionteachenabled.h"
-					>
-				</File>
+			<Filter Name="condition">
+				<File RelativePath=".\Game\ge_infocondition.h"/>
+				<File RelativePath=".\Game\ge_infoconditioncanteachskill.h"/>
+				<File RelativePath=".\Game\ge_infoconditionitemamount.h"/>
+				<File RelativePath=".\Game\ge_infoconditionnpcstatus.h"/>
+				<File RelativePath=".\Game\ge_infoconditionownerinarea.h"/>
+				<File RelativePath=".\Game\ge_infoconditionownernearentity.h"/>
+				<File RelativePath=".\Game\ge_infoconditionplayerknows.h"/>
+				<File RelativePath=".\Game\ge_infoconditionplayernotknows.h"/>
+				<File RelativePath=".\Game\ge_infoconditionqueststatus.h"/>
+				<File RelativePath=".\Game\ge_infoconditionscript.h"/>
+				<File RelativePath=".\Game\ge_infoconditionskillvalue.h"/>
+				<File RelativePath=".\Game\ge_infoconditionteachenabled.h"/>
 			</Filter>
+			<File RelativePath=".\Game\ge_info.h"/>
+			<File RelativePath=".\Game\ge_infolocstring.h"/>
+			<File RelativePath=".\Game\ge_infomodule.h"/>
+			<File RelativePath=".\Game\ge_infosystem.h"/>
+			<File RelativePath=".\Game\ge_npcinfolocstring.h"/>
+			<File RelativePath=".\Game\ge_runtimeinfo.h"/>
 		</Filter>
-		<Filter
-			Name="input"
-			>
-			<File
-				RelativePath=".\Game\ge_actionadmin.h"
-				>
-			</File>
+		<Filter Name="input">
+			<File RelativePath=".\Game\ge_actionadmin.h"/>
 		</Filter>
-		<Filter
-			Name="combat"
-			>
-			<File
-				RelativePath=".\Game\ge_combatadmin.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatai.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combataimelee.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatairanged.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmove.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmoveaim.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovecomboswitch.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovefinishing.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovemelee.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmoveoverlaystumble.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmoveparade.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovereload.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovescriptstate.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmoveshoot.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatmovestumble.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatobject.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatspecies.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatstyle.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatstyleanipose.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatstylemelee.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatstyleranged.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatstyleweaponconfig.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatsystem_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_combatweaponconfig.h"
-				>
-			</File>
+		<Filter Name="interaction">
+			<File RelativePath=".\Game\ge_interaction.h"/>
+			<File RelativePath=".\Game\ge_interaction_ps.h"/>
+			<File RelativePath=".\Game\ge_interactionadmin.h"/>
+			<File RelativePath=".\Game\ge_interactionslot.h"/>
 		</Filter>
-		<Filter
-			Name="script"
-			>
-			<File
-				RelativePath=".\Game\ge_scriptadmin.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptadmin.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptargs.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptargs.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptinit.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptinit.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptprocessingunit.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptproxyaicallback.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptproxyaifunction.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptproxyaistate.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_scriptroutine_ps.h"
-				>
-			</File>
+		<Filter Name="inventory">
+			<File RelativePath=".\Game\ge_inventory_ps.h"/>
+			<File RelativePath=".\Game\ge_inventorylistener.h"/>
+			<File RelativePath=".\Game\ge_inventoryslot.h"/>
+			<File RelativePath=".\Game\ge_inventorystack.h"/>
+			<File RelativePath=".\Game\ge_item_ps.h"/>
 		</Filter>
-		<Filter
-			Name="skill"
-			>
-			<File
-				RelativePath=".\Game\ge_skillrange.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_skills_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_skillvalue.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_skillvaluebase.h"
-				>
-			</File>
+		<Filter Name="navigation">
+			<File RelativePath=".\Game\ge_collisioncircle_ps.h"/>
+			<File RelativePath=".\Game\ge_collisioncircle_psobj.h"/>
+			<File RelativePath=".\Game\ge_dynamiccollisioncircle_ps.h"/>
+			<File RelativePath=".\Game\ge_navigation_ps.h"/>
+			<File RelativePath=".\Game\ge_navpath_ps.h"/>
+			<File RelativePath=".\Game\ge_navzone_ps.h"/>
+			<File RelativePath=".\Game\ge_negzone_ps.h"/>
+			<File RelativePath=".\Game\ge_negzone_psobj.h"/>
+			<File RelativePath=".\Game\ge_prefpath_ps.h"/>
+			<File RelativePath=".\Game\ge_prefpath_psobj.h"/>
 		</Filter>
-		<Filter
-			Name="interaction"
-			>
-			<File
-				RelativePath=".\Game\ge_interaction.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_interaction_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_interactionadmin.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_interactionslot.h"
-				>
-			</File>
+		<Filter Name="party">
+			<File RelativePath=".\Game\ge_party_ps.h"/>
+			<File RelativePath=".\Game\ge_partyadmin.h"/>
 		</Filter>
-		<Filter
-			Name="inventory"
-			>
-			<File
-				RelativePath=".\Game\ge_inventory_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_inventorylistener.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_inventoryslot.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_inventorystack.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_item_ps.h"
-				>
-			</File>
+		<Filter Name="projectile">
+			<File RelativePath=".\Game\ge_flightpathballistic.h"/>
+			<File RelativePath=".\Game\ge_flightpathbase.h"/>
+			<File RelativePath=".\Game\ge_flightpathseeking.h"/>
+			<File RelativePath=".\Game\ge_projectile2_ps.h"/>
 		</Filter>
-		<Filter
-			Name="navigation"
-			>
-			<File
-				RelativePath=".\Game\ge_collisioncircle_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_collisioncircle_psobj.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_dynamiccollisioncircle_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_navigation_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_navpath_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_navzone_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_negzone_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_negzone_psobj.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_prefpath_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_prefpath_psobj.h"
-				>
-			</File>
+		<Filter Name="quest">
+			<File RelativePath=".\Game\ge_quest.h"/>
+			<File RelativePath=".\Game\ge_questactor.h"/>
+			<File RelativePath=".\Game\ge_questlocstring.h"/>
+			<File RelativePath=".\Game\ge_questmanager.h"/>
 		</Filter>
-		<Filter
-			Name="party"
-			>
-			<File
-				RelativePath=".\Game\ge_party_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_partyadmin.h"
-				>
-			</File>
+		<Filter Name="script">
+			<File RelativePath=".\Game\ge_scriptadmin.cpp"/>
+			<File RelativePath=".\Game\ge_scriptadmin.h"/>
+			<File RelativePath=".\Game\ge_scriptargs.cpp"/>
+			<File RelativePath=".\Game\ge_scriptargs.h"/>
+			<File RelativePath=".\Game\ge_scriptinit.cpp"/>
+			<File RelativePath=".\Game\ge_scriptinit.h"/>
+			<File RelativePath=".\Game\ge_scriptprocessingunit.h"/>
+			<File RelativePath=".\Game\ge_scriptproxyaicallback.h"/>
+			<File RelativePath=".\Game\ge_scriptproxyaifunction.h"/>
+			<File RelativePath=".\Game\ge_scriptproxyaistate.h"/>
+			<File RelativePath=".\Game\ge_scriptroutine_ps.h"/>
 		</Filter>
-		<Filter
-			Name="projectile"
-			>
-			<File
-				RelativePath=".\Game\ge_flightpathballistic.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_flightpathbase.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_flightpathseeking.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_projectile2_ps.h"
-				>
-			</File>
+		<Filter Name="skill">
+			<File RelativePath=".\Game\ge_skillrange.h"/>
+			<File RelativePath=".\Game\ge_skills_ps.h"/>
+			<File RelativePath=".\Game\ge_skillvalue.h"/>
+			<File RelativePath=".\Game\ge_skillvaluebase.h"/>
 		</Filter>
-		<Filter
-			Name="craft"
-			>
-			<File
-				RelativePath=".\Game\ge_craftingredient.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_recipe_ps.h"
-				>
-			</File>
-		</Filter>
-		<Filter
-			Name="stategraph"
-			>
-			<File
-				RelativePath=".\Game\ge_stategraph_ps.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_stategraphstate.h"
-				>
-			</File>
-			<File
-				RelativePath=".\Game\ge_stategraphtransition.h"
-				>
-			</File>
-			<Filter
-				Name="filter"
-				>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilter.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfiltercollisionshape.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilterdamageamount.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilterisentity.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilterisnpc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilterisplayer.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfilterscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategrapheventfiltertemplate.h"
-					>
-				</File>
+		<Filter Name="stategraph">
+			<Filter Name="action">
+				<File RelativePath=".\Game\ge_stategraphaction.h"/>
+				<File RelativePath=".\Game\ge_stategraphactioncallscript.h"/>
+				<File RelativePath=".\Game\ge_stategraphactioneventdispatcher.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionfollowstate.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionpauseani.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionplayani.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionstarteffect.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionstop.h"/>
+				<File RelativePath=".\Game\ge_stategraphactiontrigger.h"/>
+				<File RelativePath=".\Game\ge_stategraphactiontriggerstate.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionuntrigger.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionvisibility.h"/>
+				<File RelativePath=".\Game\ge_stategraphactionwait.h"/>
 			</Filter>
-			<Filter
-				Name="action"
-				>
-				<File
-					RelativePath=".\Game\ge_stategraphaction.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactioncallscript.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactioneventdispatcher.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionfollowstate.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionpauseani.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionplayani.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionstarteffect.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionstop.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactiontrigger.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactiontriggerstate.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionuntrigger.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionvisibility.h"
-					>
-				</File>
-				<File
-					RelativePath=".\Game\ge_stategraphactionwait.h"
-					>
-				</File>
+			<Filter Name="filter">
+				<File RelativePath=".\Game\ge_stategrapheventfilter.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfiltercollisionshape.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfilterdamageamount.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfilterisentity.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfilterisnpc.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfilterisplayer.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfilterscript.h"/>
+				<File RelativePath=".\Game\ge_stategrapheventfiltertemplate.h"/>
 			</Filter>
+			<File RelativePath=".\Game\ge_stategraph_ps.h"/>
+			<File RelativePath=".\Game\ge_stategraphstate.h"/>
+			<File RelativePath=".\Game\ge_stategraphtransition.h"/>
 		</Filter>
-		<File
-			RelativePath=".\Game.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_aizone_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_anchor_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_arena_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_book_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_castinfo_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_charactermovement_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_clock_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_damage_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_database.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_dialog_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_door_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_dynamiclayer.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_gameapp.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_layerbase.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_letter_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_letterlocstring.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_lock_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_map_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_mapentry.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_mapinfo_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_maplocstring.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_modifyskill.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_npc_ps.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_project.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_sector.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_session.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_sessioncheats.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_sessioninfo.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_workspace.h"
-			>
-		</File>
-		<File
-			RelativePath=".\Game\ge_world.h"
-			>
-		</File>
+		<File RelativePath=".\Game.h"/>
+		<File RelativePath=".\Game\ge_aizone_ps.h"/>
+		<File RelativePath=".\Game\ge_anchor_ps.h"/>
+		<File RelativePath=".\Game\ge_arena_ps.h"/>
+		<File RelativePath=".\Game\ge_book_ps.h"/>
+		<File RelativePath=".\Game\ge_castinfo_ps.h"/>
+		<File RelativePath=".\Game\ge_charactermovement_ps.h"/>
+		<File RelativePath=".\Game\ge_clock_ps.h"/>
+		<File RelativePath=".\Game\ge_damage_ps.h"/>
+		<File RelativePath=".\Game\ge_database.h"/>
+		<File RelativePath=".\Game\ge_dialog_ps.h"/>
+		<File RelativePath=".\Game\ge_door_ps.h"/>
+		<File RelativePath=".\Game\ge_dynamiclayer.h"/>
+		<File RelativePath=".\Game\ge_gameapp.h"/>
+		<File RelativePath=".\Game\ge_layerbase.h"/>
+		<File RelativePath=".\Game\ge_letter_ps.h"/>
+		<File RelativePath=".\Game\ge_letterlocstring.h"/>
+		<File RelativePath=".\Game\ge_lock_ps.h"/>
+		<File RelativePath=".\Game\ge_map_ps.h"/>
+		<File RelativePath=".\Game\ge_mapentry.h"/>
+		<File RelativePath=".\Game\ge_mapinfo_ps.h"/>
+		<File RelativePath=".\Game\ge_maplocstring.h"/>
+		<File RelativePath=".\Game\ge_modifyskill.h"/>
+		<File RelativePath=".\Game\ge_npc_ps.h"/>
+		<File RelativePath=".\Game\ge_project.h"/>
+		<File RelativePath=".\Game\ge_sector.h"/>
+		<File RelativePath=".\Game\ge_session.h"/>
+		<File RelativePath=".\Game\ge_sessioncheats.h"/>
+		<File RelativePath=".\Game\ge_sessioninfo.h"/>
+		<File RelativePath=".\Game\ge_workspace.h"/>
+		<File RelativePath=".\Game\ge_world.h"/>
 	</Files>
-	<Globals>
-	</Globals>
 </VisualStudioProject>

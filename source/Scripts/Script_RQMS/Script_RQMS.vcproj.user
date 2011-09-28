@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioUserFile
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="8.00"
 	>
 	<Configurations>
 		<Configuration
@@ -10,7 +10,7 @@
 			<DebugSettings
 				Command="..\..\..\bin\Risen.exe"
 				WorkingDirectory="..\..\..\bin"
-			/>
+				/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
@@ -18,7 +18,7 @@
 			<DebugSettings
 				Command="..\..\..\bin\Risen.exe"
 				WorkingDirectory="..\..\..\bin"
-			/>
+				/>
 		</Configuration>
 	</Configurations>
 </VisualStudioUserFile>

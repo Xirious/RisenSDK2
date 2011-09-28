@@ -20,14 +20,16 @@ GE_DLLIMPORT_EXTC GEInt const g_iDefaultMessagePriority;
 #define GE_MESSAGE_WARN( TEXT ) GE_MESSAGE_WARN_EX( 0, TEXT )
 #endif
 
-//FIXME: In Debug builds this functions are implemented (and exported?).
-//TODO: Fix the function names if they are exported from the SharedBase.
+// #pragma managed( push, off )
+
 void GE_MESSAGEF_OK( GELPCChar a_pcFormat, ... );
 void GE_MESSAGEF_OK_EX( GELPCChar a_pcMethod, GELPCChar a_pcFormat, ... );
 void GE_MESSAGEF_INFO( GEInt a_iPriority, GELPCChar a_pcFormat, ... );
 void GE_MESSAGEF_INFO_EX( GEInt a_iPriority, GELPCChar a_pcMethod, GELPCChar a_pcFormat, ... );
 void GE_MESSAGEF_WARN( GELPCChar a_pcFormat, ... );
 void GE_MESSAGEF_WARN_EX( GELPCChar a_pcMethod, GELPCChar a_pcFormat, ... );
+
+// #pragma managed( pop )
 
 #define GE_OBSOLETE_METHOD_EX( METHOD, DETAIL ) GE_MESSAGEF_WARN( "The obsolete method %s was called! %s", METHOD, DETAIL );
 #define GE_OBSOLETE_METHOD( DETAIL ) GE_OBSOLETE_METHOD_EX( __FUNCTION__, DETAIL )

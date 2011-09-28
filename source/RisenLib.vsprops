@@ -1,21 +1,24 @@
-<?xml version="1.0" encoding="Windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioPropertySheet
+	Name="Risen SDK Library - All"
+	CharacterSet="2"
+	IntermediateDirectory="..\build\$(ConfigurationName)\$(ProjectName)"
+	OutputDirectory="..\build\$(ConfigurationName)"
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="Risen SDK Library - All"
-	OutputDirectory="..\build\$(ConfigurationName)"
-	IntermediateDirectory="..\build\$(ConfigurationName)\$(ProjectName)"
-	CharacterSet="2"
 	>
 	<Tool
 		Name="VCCLCompilerTool"
 		AdditionalOptions="/Wall"
 		CallingConvention="2"
+		DebugInformationFormat="3"
 		DisableSpecificWarnings="4505;4514;4710;4711"
+		EnableEnhancedInstructionSet="2"
+		EnableFunctionLevelLinking="true"
 		WarningLevel="4"
-	/>
+		/>
 	<Tool
 		Name="VCLibrarianTool"
 		AdditionalDependencies="..\lib\$(ProjectName).lib"
-	/>
+		/>
 </VisualStudioPropertySheet>
