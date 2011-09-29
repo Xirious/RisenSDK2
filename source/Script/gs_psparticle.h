@@ -1,7 +1,7 @@
 #ifndef GS_PSPARTICLE_H_INCLUDED
 #define GS_PSPARTICLE_H_INCLUDED
 
-//NOTE: PSParticle::PropertyAutoKill hasn’t been declared as script property.
+//NOTE: PSParticle::PropertyAutoKill hasn't been declared as script property.
 // Only the copy assignment operator is exported (the other two are missing).
 
 GS_DECLARE_PROPERTYSET( PSParticle, eCParticle_PS )
