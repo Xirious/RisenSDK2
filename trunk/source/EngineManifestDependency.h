@@ -12,6 +12,6 @@
         #include <crtassem.h>
         #define __OPENMP_ASSEMBLY_VERSION _CRT_ASSEMBLY_VERSION
     #endif
-    #pragma message( "warning: Please verify that your OpenMP version (" __OPENMP_ASSEMBLY_VERSION ") matches Risen’s Engine.dll (" __RISEN_OPENMP_ASSEMBLY_VERSION ")" )
+    #pragma message( "warning: Please verify that your OpenMP version (" __OPENMP_ASSEMBLY_VERSION ") matches Risen's Engine.dll (" __RISEN_OPENMP_ASSEMBLY_VERSION ")" )
 #endif
 

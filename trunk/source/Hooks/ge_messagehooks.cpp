@@ -141,7 +141,7 @@ void InstallHooks( void )
     {
         //NOTE: Avoid C Run-Time Error "R6002 - floating point support not loaded".
         // The compiler might not load the floating-point routines to minimizes the
-        // program’s size if your application does not use floating-point arguments
+        // program's size if your application does not use floating-point arguments
         // or assignments. But if our hooks capture a format string that includes a
         // floating-point field (aAeEfgG) the CRT would show a R6002 error message.
         if( (g_f2PI - g_fPI * 2) > g_fEpsilon )

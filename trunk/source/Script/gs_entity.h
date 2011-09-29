@@ -272,7 +272,7 @@ GE_ASSERT_SIZEOF( Entity, 0x0004 )
 
 #pragma warning( pop )
 
-//NOTE: None isn’t const, but it shouldn’t be modified.
+//NOTE: None isn't const, but it shouldn't be modified.
 GE_DLLIMPORT_EXTC Entity const None;
 
 #include "gs_entity.inl"

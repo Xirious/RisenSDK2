@@ -49,7 +49,7 @@ public:
     void       StopOutput( void );
 };
 
-//NOTE: The strings are not const, but they shouldn’t be modified.
+//NOTE: The strings are not const, but they shouldn't be modified.
 GE_DLLIMPORT_EXTC bCString const g_strAction_Aim;
 GE_DLLIMPORT_EXTC bCString const g_strAction_Alchemy;
 GE_DLLIMPORT_EXTC bCString const g_strAction_Altar;
@@ -184,7 +184,7 @@ GE_DLLIMPORT_EXTC bCString const g_strAction_WinchRelease;
 GE_DLLIMPORT_EXTC bCString const g_strAction_WinchSpin;
 GE_DLLIMPORT_EXTC bCString const g_strAction_WriteScroll;
 
-//NOTE: The strings are not const, but they shouldn’t be modified.
+//NOTE: The strings are not const, but they shouldn't be modified.
 GE_DLLIMPORT_EXTC bCString const g_strPhase_Aim;
 GE_DLLIMPORT_EXTC bCString const g_strPhase_Ambient;
 GE_DLLIMPORT_EXTC bCString const g_strPhase_Angry;

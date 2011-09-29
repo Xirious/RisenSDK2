@@ -13,7 +13,7 @@ public:                                          \
 public:                                          \
     CLASS & operator = ( CLASS const & );        \
 public:                                          \
-    /* InfComXxx::SetCommand doesn’t validate */ \
+    /* InfComXxx::SetCommand doesn't validate */ \
     /* if the parameter is an ENGINE_CLASS *. */ \
     void SetCommand( gCInfoCommand * );
 

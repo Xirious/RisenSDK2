@@ -2,7 +2,7 @@
                      Compile/Export Risen document archives
                      (data/compiled/library/compiled_*.bin)
 
-This script module adds the new command "library" to Risen’s console.
+This script module adds the new command "library" to Risen's console.
 (see http://www.worldofrisen.de/english/article_273.htm for details)
 The console command supports help (library help) and auto-completion
 for both parameters (press the tabulator key to complete the params).

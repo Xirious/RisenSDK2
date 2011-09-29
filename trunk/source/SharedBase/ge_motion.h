@@ -1,7 +1,7 @@
 #ifndef GE_MOTION_H_INCLUDED
 #define GE_MOTION_H_INCLUDED
 
-//FIXME: bCMotion isn’t exported from SharedBase.
+//FIXME: bCMotion isn't exported from SharedBase.
 class bCMotion
 {
 public:

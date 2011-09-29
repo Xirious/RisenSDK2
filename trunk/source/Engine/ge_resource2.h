@@ -46,7 +46,7 @@ enum eEResourceType
     eEResourceType_ForceDWORD    = GE_FORCE_DWORD
 };
 
-//NOTE: g_ppszResourceTypes isn’t const, but it shouldn’t be modified.
+//NOTE: g_ppszResourceTypes isn't const, but it shouldn't be modified.
 GE_DLLIMPORT_EXTC GELPCChar const g_ppszResourceTypes[ eEResourceType_Count ];
 
 struct eSResourceFileHeader
