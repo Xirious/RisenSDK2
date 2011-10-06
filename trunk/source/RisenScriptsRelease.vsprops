@@ -11,6 +11,7 @@
 		ExceptionHandling="0"
 		Optimization="2"
 		PreprocessorDefinitions="NDEBUG"
+		RuntimeLibrary="0"
 		StringPooling="true"
 		/>
 	<Tool

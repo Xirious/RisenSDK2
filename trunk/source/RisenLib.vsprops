@@ -12,6 +12,7 @@
 		AdditionalOptions="/Wall"
 		CallingConvention="2"
 		DebugInformationFormat="3"
+		Detect64BitPortabilityProblems="false"
 		DisableSpecificWarnings="4505;4514;4710;4711"
 		EnableEnhancedInstructionSet="2"
 		EnableFunctionLevelLinking="true"
