@@ -21,9 +21,9 @@ struct eSEntityFlags
     GEU32 __FIXME_18          : 1;  // 00040000 18
     GEU32 m_IsSaveGameRelevant: 1;  // 00080000 19
     GEU32 m_IsTemporary       : 1;  // 00100000 20
-    GEU32 __FIXME_21          : 1;  // 00200000 21
-    GEU32 __FIXME_22          : 1;  // 00400000 22
-    GEU32 __FIXME_23          : 1;  // 00800000 23
+    GEU32 m_IsFrozen          : 1;  // 00200000 21
+    GEU32 m_IsBurned          : 1;  // 00400000 22
+    GEU32 m_IsHighlighted     : 1;  // 00800000 23
     GEU32 __FIXME             : 8;  // FF000000 24..31
 };
 

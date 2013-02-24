@@ -37,11 +37,11 @@ T & bTValMap< K, T >::AccessAt( K const & _k )
         _p = GE_NEW( bSNode );
         _p->m_Key = _k;
         _p->m_u32Hash = _h;
-        _p->m_pNext = this->m_arrNodes[ _h ];
-        this->m_arrNodes[ _h ] = _p;
+        _p->m_pNext = this->m_arrNodes[ static_cast< GEInt >( _h ) ];
+        this->m_arrNodes[ static_cast< GEInt >( _h ) ] = _p;
         this->m_u32Count++;
     }
-    return pNode->m_Element;
+    return _p->m_Element;
 }
 
 template< typename K, typename T >
@@ -51,8 +51,9 @@ typename bTValMap< K, T >::bCConstIterator bTValMap< K, T >::Begin( void ) const
         return this->End();
     bSNode const * _p;
     GEInt          _h;
-    for( _p = 0, _h = 0; !_p && (_h < this->m_arrNodes.GetCount()); _h++ )
-        _p = this->m_arrNodes[ _h ];
+    for( _p = 0, _h = 0; _h < this->m_arrNodes.GetCount(); _h++ )
+        if ( ( _p = this->m_arrNodes[ _h ] ) != 0 )
+            break;
     return bCConstIterator( &this->m_arrNodes, _h, _p );
 }
 
@@ -63,8 +64,9 @@ typename bTValMap< K, T >::bCIterator bTValMap< K, T >::Begin( void )
         return this->End();
     bSNode * _p;
     GEInt    _h;
-    for( _p = 0, _h = 0 ; !_p && (_h < this->m_arrNodes.GetCount()); _h++ )
-        _p = this->m_arrNodes[ _h ];
+    for( _p = 0, _h = 0 ; _h < this->m_arrNodes.GetCount(); _h++ )
+        if ( ( _p = this->m_arrNodes[ _h ] ) != 0 )
+            break;
     return bCIterator( &this->m_arrNodes, _h, _p );
 }
 
@@ -157,7 +159,8 @@ template< typename K, typename T >
 void bTValMap< K, T >::InitHashTable( GEU32 _n )
 {
     this->m_arrNodes.Clear();
-    this->m_arrNodes.SetCount( _n );
+    this->m_arrNodes.SetCount( static_cast< GEInt >( _n ) );
+    memset( this->m_arrNodes.AccessArray(), 0, sizeof( *this->m_arrNodes.AccessArray() ) * _n );
 }
 
 template< typename K, typename T >
@@ -183,14 +186,14 @@ template< typename K, typename T >
 GEBool bTValMap< K, T >::RemoveAt( K const & _k )
 {
     GEU32 _h = ::g_GetHashValue< K >( _k ) % this->m_arrNodes.GetCount();
-    if( _h < this->m_arrNodes.GetCount() )
+    if( static_cast< GEInt >( _h ) < this->m_arrNodes.GetCount() )
     {
-        bSNode * _p = this->m_arrNodes[ _h ];
+        bSNode * _p = this->m_arrNodes[ static_cast< GEInt >( _h ) ];
         if( _p )
         {
             if( _k == _p->m_Key )
             {
-                this->m_arrNodes[ _h ] = _p->m_pNext;
+                this->m_arrNodes[ static_cast< GEInt >( _h ) ] = _p->m_pNext;
                 GE_DELETE< bSNode >( _p );
                 this->m_u32Count--;
                 return GETrue;

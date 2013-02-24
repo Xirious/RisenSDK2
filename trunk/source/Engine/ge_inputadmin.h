@@ -128,6 +128,7 @@ enum eEScanCode
     eEScanCode_Mouse_Button5      = 0x00000204,
     eEScanCode_Mouse_WheelUp      = 0x00000205,
     eEScanCode_Mouse_WheelDown    = 0x00000206,
+    eEScanCode_Count              = 0x00000207,
     eEScanCode_ForceDWORD         = GE_FORCE_DWORD
 };
 
@@ -139,5 +140,58 @@ public: virtual void AnalogInput( GEU32, GEInt ) = 0;
 public: virtual void DebugKeyPressed( GEU32 )    = 0;
 public: virtual void DebugKeyReleased( GEU32 )   = 0;
 };
+
+#pragma warning( push )
+#pragma warning( disable : 4251 )  // class 'bTValArray<T>' needs to have dll-interface to be used by clients of class 'eCInputAdmin'
+
+class GE_DLLIMPORT eCInputAdmin :
+    public eCEngineComponentBase
+{
+public: virtual bCPropertyObjectTypeBase * GetObjectType( void ) const;
+public: virtual GEBool                     IsValid( void ) const;
+public: virtual bEResult                   Create( void );
+public: virtual void                       Destroy( void );
+public: virtual                           ~eCInputAdmin( void );
+public: virtual bEResult                   Initialize( void );
+public: virtual bEResult                   Shutdown( void );
+public:
+    static bCObjectBase *             GE_STDCALL CreateObject( void );
+    static bCPropertyObjectTypeBase & GE_STDCALL GetThisType( void );
+    static void                       GE_STDCALL StaticConstructor( bCPropertyObjectTypeBase & );
+public:
+    eCInputAdmin( eCInputAdmin const & );
+    eCInputAdmin( void );
+public:
+    eCInputAdmin & operator = ( eCInputAdmin const & );
+public:
+    void   AddAxisAction( GEU32, GEU32 );
+    void   AddKeyAction( GEU32, GEU32, GEU8 );
+    void   AddKeyDebug( GEU32, GEU32, GEU32 );
+    void   ChangeKeyAction( GEU32, GEU32, GEU32 );
+    void   ClearActions( void );
+    GEBool DispatchAnalogInput( GEU32, GEU32 );
+    GEBool DispatchKeyPressed( GEU32 );
+    GEBool DispatchKeyReleased( GEU32 );
+    GEU32  GetActionKey( eEScanCode ) const;
+    GEBool GetRawKeyState( eEScanCode );
+    GEU8   GetUseIndex( eEScanCode ) const;
+    void   Invalidate( void );
+    GEBool OnHandleMessage( GEUInt, GEUInt, long );
+    void   ResetBufferedInput( void );
+    void   SetInputReceiver( eIInputReceiver * );
+private:
+    static bCPropertyObjectTypeBase thisType;
+protected:
+    GEBool              m_arrRawKeyStates[ eEScanCode_Count ];
+                        GE_PADDING( 1 )
+    GEU32               m_arrKeyEntries[ eEScanCode_Count ];
+    GEU32               m_arrAxisActions[ eERawInputAxis_Count ];
+    bTValArray< GEU32 > m_arrSecondaryDebugScanCodeArrays[ eEScanCode_Count ];
+    bTValArray< GEU32 > m_arrSecondaryDebugScanCodes;
+    eIInputReceiver *   m_pInputReceiver;
+};
+GE_ASSERT_SIZEOF( eCInputAdmin, 0x22B4 );
+
+#pragma warning( pop )
 
 #endif

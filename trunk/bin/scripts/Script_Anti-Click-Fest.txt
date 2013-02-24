@@ -1,0 +1,13 @@
+This script module modifies Risen's combat system so that the user, 
+in order to complete combos, must place his or her mouse clicks at 
+proper points in time. That way it prevents from click-fests.
+
+Installation:
+
+  Put Script_Anti-Click-Fest.dll in your Risen\bin\scripts folder.
+
+Support:
+
+  baltram-lielb@web.de
+
+The idea comes from Kuchenschlachter, thanks to him!

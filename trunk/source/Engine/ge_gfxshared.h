@@ -138,6 +138,11 @@ namespace eCGfxShared
         eEPoolType_ForceDWORD = GE_FORCE_DWORD
     };
 
+    enum eECmpFunc
+    {
+        eECmpFunc_ForceDWORD = GE_FORCE_DWORD
+    };
+
     struct eSGfxLayersDesc
     {
         GEUInt        m_uiWidth;         // 0000

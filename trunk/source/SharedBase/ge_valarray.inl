@@ -100,8 +100,8 @@ void bTValArray< T >::Reserve( GEInt _n )
     if( _n > this->GetCapacity() )
     {
         this->m_pArray = static_cast< T * >( GE_REALLOC( this->m_pArray, _n * sizeof( T ) ) );
-        g_ZeroMemory( this->m_pArray + this->GetCapacity(), _n - this->GetCapacity() );
-        this->m_u32Capacity = _n;
+        g_ZeroMemory( this->m_pArray + this->GetCapacity(), sizeof( T ) * static_cast< GEU32 >( _n - this->GetCapacity() ) );
+        this->m_u32Capacity = static_cast< GEU32 >( _n );
     }
 }
 
@@ -123,12 +123,12 @@ void bTValArray< T >::SetCount( GEInt _n )
         if( _n > _c )
         {
             this->Reserve( _n );
-            this->m_u32Count = _n;
+            this->m_u32Count = static_cast< GEU32 >( _n );
         }
         else if( _n < _c )
         {
-            g_ZeroMemory( this->m_pArray + _n, _c - _n );
-            this->m_u32Count = _n;
+            g_ZeroMemory( this->m_pArray + _n, static_cast< GEU32 >( _c - _n ) );
+            this->m_u32Count = static_cast< GEU32 >( _n );
         }
     }
 }

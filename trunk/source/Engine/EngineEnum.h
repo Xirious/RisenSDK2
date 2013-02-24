@@ -260,4 +260,9 @@ enum eEShapeMaterial
     eEShapeMaterial_ForceDWORD       = GE_FORCE_DWORD
 };
 
+enum eETransformSpace
+{
+    eETransformSpace_ForceDWORD = GE_FORCE_DWORD
+};
+
 #endif

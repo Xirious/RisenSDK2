@@ -1,0 +1,27 @@
+LANGUAGE 0x0000, 0x0000
+
+1 VERSIONINFO
+FILEVERSION    1, 0, 0, 0
+PRODUCTVERSION 1, 0, 95642, 0
+FILEOS         0x00000004
+FILETYPE       0x00000002
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "000004b0"
+    BEGIN
+      VALUE "CompanyName",     "Baltram"
+      VALUE "FileDescription", "No more click-fests in Risen"
+      VALUE "FileVersion",     "1.0"
+      VALUE "LegalCopyright",  "© 2011 Baltram <baltram-lielb@web.de>"
+      VALUE "InternalName",    "Script_Anti-Click-Fest"
+      VALUE "ProductName",     "Risen"
+      VALUE "ProductVersion",  "1.0.95642 (Rev. 0)"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0x0000 0x04B0
+  END
+END
+

@@ -4,8 +4,8 @@
 template< typename K, typename T >
 struct bSArrayMapPair
 {
-    K m_strKey;
-    T m_strValue;
+    K m_Key;
+    T m_Value;
 };
 
 #pragma warning( push )

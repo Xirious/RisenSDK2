@@ -1,0 +1,11 @@
+This script module modifies Risen's damage calculation system so that 
+it is DEX-based (instead of STR-based) for melee weapons that require 
+a certain amount of dexterity to be equipped.
+
+Installation:
+
+  Put Script_Dex_Melee.dll in your Risen\bin\scripts folder.
+
+Support:
+
+  baltram-lielb@web.de
