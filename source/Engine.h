@@ -71,13 +71,15 @@ class GE_DLLIMPORT eCGuiBitmapProxy2
 
 struct eSGizmoPickInfo{};
 struct eSRayIntersectionDesc{};
+struct eCPrimitiveCollisionDesc{};
 class GE_DLLIMPORT eCCollisionDesc{};
 class GE_DLLIMPORT eCContactIterator{};
-class GE_DLLIMPORT eCContextBase{};
 class GE_DLLIMPORT eCGfxCamera{};
 class GE_DLLIMPORT eCFrustumDatabase{
 public:
     struct eSRenderTargetDesc{};
+public:
+    void Execute( eSRenderTargetDesc * );
 protected:
     char __FIXME[ 0x0B1C ];
 };
@@ -98,12 +100,14 @@ class eCGeometryEntity;
 #include "Engine/ge_entitypropertyset.h"
 #include "Engine/ge_psmap.h"
 #include "Engine/ge_entity.h"
+#include "Engine/ge_contextbase.h"
 #include "Engine/ge_templateentity.h"
 #include "Engine/ge_frustumelementitem.h"
 #include "Engine/ge_geometryentity.h"
 #include "Engine/ge_processible.h"
 #include "Engine/ge_processor.h"
 #include "Engine/ge_dynamicentity.h"
+#include "Engine/ge_entitydynamiccontext.h"
 
 class GE_DLLIMPORT eCGuiWindow2{};
 class GE_DLLIMPORT eCGuiFrame2{};
@@ -114,6 +118,8 @@ class eCStatisticView;
 
 #include "Engine/ge_enginecomponentbase.h"
 #include "Engine/ge_moduleadmin.h"
+
+#include "Engine/ge_entityadmin.h"
 
 #include "Engine/ge_effectsystembase.h"
 #include "Engine/ge_effectmodulebase.h"
@@ -145,6 +151,42 @@ class eCCollisionShape_PS;
 #include "Engine/ge_portal.h"
 #include "Engine/ge_portalcell_ps.h"
 #include "Engine/ge_portalroom_ps.h"
+
+#include "Engine/ge_iteratorprimitive.h"
+class GE_DLLIMPORT eCIteratorPrimitiveMoveEdge;
+class GE_DLLIMPORT eCIteratorPrimitiveMoveArrow;
+class GE_DLLIMPORT eCIteratorPrimitiveMoveLine;
+class GE_DLLIMPORT eCIteratorPrimitiveScale;
+class GE_DLLIMPORT eCIteratorPrimitiveBox;
+class GE_DLLIMPORT eCIteratorPrimitiveRotateBox;
+class GE_DLLIMPORT eCIteratorPrimitiveSphere;
+class GE_DLLIMPORT eCIteratorPrimitiveCapsuleCap;
+class GE_DLLIMPORT eCIteratorPrimitiveCapsuleCylinder;
+class GE_DLLIMPORT eCIteratorPrimitiveBackArea;
+class GE_DLLIMPORT eCIteratorPrimitiveBottomArea;
+class GE_DLLIMPORT eCIteratorPrimitiveFrontArea;
+class GE_DLLIMPORT eCIteratorPrimitiveLeftArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRightArea;
+class GE_DLLIMPORT eCIteratorPrimitiveTopArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusBackArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusBottomArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusFrontArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusLeftArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusRightArea;
+class GE_DLLIMPORT eCIteratorPrimitiveRadiusTopArea;
+
+#include "Engine/ge_gizmobase.h"
+#include "Engine/ge_gizmotranslateandscale.h"
+#include "Engine/ge_gizmotranslateandscalebox.h"
+#include "Engine/ge_gizmotranslateandscalesphere.h"
+#include "Engine/ge_gizmotransform.h"
+#include "Engine/ge_gizmotransformcapsule.h"
+#include "Engine/ge_gizmotransformcapsulecollisionshape.h"
+#include "Engine/ge_gizmotransformobb.h"
+#include "Engine/ge_gizmotransformobbcollisionshape.h"
+#include "Engine/ge_gizmotransformsphere.h"
+#include "Engine/ge_gizmotransformspherecollisionshape.h"
 
 enum eEForceMode
 {
@@ -182,7 +224,6 @@ class eCPropertyEditFrame2{};
 
 #include "Engine/ge_configfile.h"
 #include "Engine/ge_application.h"
-class GE_DLLIMPORT eCEntityDynamicContext{};
 
 #include "Engine/ge_inputadmin.h"
 

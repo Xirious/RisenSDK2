@@ -45,7 +45,7 @@ public:
     void                           SetEntityID( bCPropertyID const & );
     void                           SetNavTestResult( gENavTestResult const & );
     void                           SetNavZoneEntityID( bCPropertyID const & );
-    void                           SetPointRadius( bTValArray< GEFloat> const & );
+    void                           SetPointRadius( bTValArray< GEFloat > const & );
     void                           SetRadius( GEFloat const & );
     void                           SetRegIndex( GEInt );
     void                           SetWorldPoint( bTValArray< bCVector > const & );

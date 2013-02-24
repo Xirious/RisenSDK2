@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <VisualStudioProject
 	Name="Engine"
 	ProjectGUID="{92C8B6A4-3E64-4D3E-B79C-9C5C32F95E46}"
@@ -52,6 +52,19 @@
 			<File RelativePath=".\Engine\ge_psmap.h"/>
 			<File RelativePath=".\Engine\ge_templateentity.h"/>
 		</Filter>
+		<Filter Name="gizmo">
+			<File RelativePath=".\Engine\ge_gizmobase.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransform.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformcapsule.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformcapsulecollisionshape.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformobb.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformobbcollisionshape.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformsphere.h"/>
+			<File RelativePath=".\Engine\ge_gizmotransformspherecollisionshape.h"/>
+			<File RelativePath=".\Engine\ge_gizmotranslateandscale.h"/>
+			<File RelativePath=".\Engine\ge_gizmotranslateandscalebox.h"/>
+			<File RelativePath=".\Engine\ge_gizmotranslateandscalesphere.h"/>
+		</Filter>
 		<Filter Name="mover">
 			<File RelativePath=".\Engine\ge_mover_ps.h"/>
 			<File RelativePath=".\Engine\ge_moveranimationbase.h"/>
@@ -93,18 +106,22 @@
 		<File RelativePath=".\Engine\ge_configadmin.h"/>
 		<File RelativePath=".\Engine\ge_configfile.h"/>
 		<File RelativePath=".\Engine\ge_console2.h"/>
+		<File RelativePath=".\Engine\ge_contextbase.h"/>
 		<File RelativePath=".\Engine\ge_debugoptions.h"/>
 		<File RelativePath=".\Engine\ge_docarchive.cpp"/>
 		<File RelativePath=".\Engine\ge_docarchive.h"/>
 		<File RelativePath=".\Engine\ge_docobject.h"/>
 		<File RelativePath=".\Engine\ge_docobjectmap.h"/>
 		<File RelativePath=".\Engine\ge_enginecomponentbase.h"/>
+		<File RelativePath=".\Engine\ge_entityadmin.h"/>
+		<File RelativePath=".\Engine\ge_entitydynamiccontext.h"/>
 		<File RelativePath=".\Engine\ge_frustumelementitem.h"/>
 		<File RelativePath=".\Engine\ge_gfximagedata.h"/>
 		<File RelativePath=".\Engine\ge_gfxobject.h"/>
 		<File RelativePath=".\Engine\ge_gfxshared.h"/>
 		<File RelativePath=".\Engine\ge_guiresource2.h"/>
 		<File RelativePath=".\Engine\ge_inputadmin.h"/>
+		<File RelativePath=".\Engine\ge_iteratorprimitive.h"/>
 		<File RelativePath=".\Engine\ge_locadmin2.h"/>
 		<File RelativePath=".\Engine\ge_locstring.h"/>
 		<File RelativePath=".\Engine\ge_messagehandler.h"/>

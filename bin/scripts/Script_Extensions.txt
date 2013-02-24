@@ -1,0 +1,75 @@
+This script module introduces variables for the Risen console, aswell as
+several new commands (each having multiple sub-commands) which provide
+access to the Genome Engine's classes and functions. Additionally, 
+Script_Mod_Extensions provides some new info scripts.
+
+Using the parameter auto-completion which has been extended for the new 
+commands, a lot of typing effort can be saved. It includes switching 
+between previously used parameters and recent results. This is 
+particularly useful when dealing with commands that take GUIDs as
+parameters (these can be retrieved and "recorded" via GetEntityGuid).
+
+Operations on console variables support basic wildcards ('*' at begin
+or end of a variable name). Also, variables can be executed. This
+makes it is possible to set up console macros that, for example,
+invoke multiple console commands at once. Console variables are
+persistent (stored on the hard drive) and a variable can only be 
+removed by setting it to '$'. #c is a special variable that provides
+access to the clipboard. #r1, #r2, #r3, #r4 and #r5 hold recent results.
+
+Usage:
+
+  <Command> help
+    (Display help for command and list sub-commands)
+
+  <Command> <Sub-command> help
+    (Display help for sub-command)
+
+  <Command> <Sub-command> <Parameters>
+    (Execute sub-command)
+
+  <Command> <Sub-command> #<Variable name>
+    (Execute sub-command, passing a variable as parameter)
+
+  #<Variable name, may contain wildcards>
+    (Display one or more variables)
+
+  #<Variable name, may contain wildcards> = <Parameters>
+    (Set one or more variables)
+
+  #<Variable name, may contain wildcards> += <Parameters>
+    (Append text to one or more variables)
+
+  #<Variable name, may contain wildcards> !
+    (Execute one or more variables)
+
+Commands:
+
+  ColShape      (Access to a dynamic entity's collision property set)
+  DynEntity     (Management of the current world's dynamic entities)
+  Session       (Allows operations on the current game session)
+  Tools         (General utilities)
+  World         (Management of worlds, sectors and layers)
+
+New info scripts (required info parameters):
+
+  OnTradeInfo_ClearTradeInventory
+    (Self: Trader)
+  OnTradeInfo_CreateTradeItems
+    (Self: Trader, Other: Item template, Param: Item Count)
+  OnTradeInfo_RemoveTradeItems
+    (Self: Trader, Other: Item template, Param: Item Count)
+
+Installation:
+
+  Put Script_Mod_Extensions.dll in your Risen\bin\scripts folder.
+
+General information about Risen's console:
+
+  http://www.worldofrisen.de/english/article_273.htm
+
+Support:
+
+  baltram-lielb@web.de
+
+Thanks to NicoDE!
