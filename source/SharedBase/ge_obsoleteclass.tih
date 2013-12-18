@@ -1,3 +1,0 @@
-typedef bCObjectRefBase bCObsoleteClass;
-
-bCString DLLIMPORT g_strObsoletClassName;

@@ -1,3 +1,0 @@
-#define GE_PADDING( X ) __int8 __alignment[ X ];
-#define GE_PADDING1( X ) __int8 __alignment1[ X ];
-#define GE_PADDING2( X ) __int8 __alignment2[ X ];

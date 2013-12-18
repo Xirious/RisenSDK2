@@ -1,1 +1,0 @@
-@call "%~dp0TILib.cmd" Music

@@ -1,8 +1,0 @@
-struct bCClassNameBase
-{
-    __int8 __empty;
-};
-// ??4bCClassNameBase@@QAEAAV0@ABV0@@Z public: bCClassNameBase & __thiscall bCClassNameBase::operator=(bCClassNameBase const &)
-bCClassNameBase * __thiscall __4bCClassNameBase__QAEAAV0_ABV0__Z( bCClassNameBase *, bCClassNameBase const * );
-// ?UnMangle@bCClassNameBase@@SG?AVbCString@@PBD@Z public: static bCString __stdcall bCClassNameBase::UnMangle(char const *)
-bCString * __stdcall _UnMangle_bCClassNameBase__SG_AVbCString__PBD_Z( bCString *, GELPCChar );

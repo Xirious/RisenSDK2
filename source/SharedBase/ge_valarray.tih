@@ -1,4 +1,0 @@
-#define bTValArray( T ) bTArrayBase( bTValArray, T, )
-
-bTValArray( GEU8 )
-bTValArray( GEU32 )
