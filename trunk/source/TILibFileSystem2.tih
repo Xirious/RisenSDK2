@@ -1,6 +1,0 @@
-#ifndef TILIB_RISENFILESYSTEM2
-#define TILIB_RISENFILESYSTEM2
-
-#include "FileSystem2/ff_filemapping2.tih"
-
-#endif

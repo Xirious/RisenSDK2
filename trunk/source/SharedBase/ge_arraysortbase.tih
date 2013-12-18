@@ -1,6 +1,0 @@
-typedef GEInt (__cdecl * GEFCompare)( GELPCVoid, GELPCVoid );
-
-// ?g_ArrayInsertionSort@@YAXPAXIIP6AHPBX1@Z_N@Z void __cdecl g_ArrayInsertionSort(void *,unsigned int,unsigned int,int (__cdecl*)(void const *,void const *),bool)
-void __cdecl _g_ArrayInsertionSort__YAXPAXIIP6AHPBX1_Z_N_Z( GELPVoid, GEUInt, GEUInt, GEFCompare, GEBool );
-// ?g_ArraySortDefaultCompare@@YAHPBX0@Z int __cdecl g_ArraySortDefaultCompare(void const *,void const *)
-GEInt __cdecl _g_ArraySortDefaultCompare__YAHPBX0_Z( GELPCVoid, GELPCVoid );

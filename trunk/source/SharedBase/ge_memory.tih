@@ -1,2 +1,0 @@
-//FIXME: TILib v1.20 does not like "new" as symbol name.
-void * __stdcall GE_NEW( unsigned int, GELPCChar, GELPCChar, GELPCChar, GEInt );

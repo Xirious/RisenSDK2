@@ -1,5 +1,0 @@
-struct bCMotion
-{
-    bCVector     m_vecTranslation;
-    bCQuaternion m_qatRotation;
-};
